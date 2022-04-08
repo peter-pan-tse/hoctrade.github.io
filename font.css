@@ -25,47 +25,50 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.ht-info:before {
+.ht-f-forward:before {
   content: "\e900";
 }
-.ht-verified:before {
+.ht-info:before {
   content: "\e901";
 }
-.ht-logo-yt:before {
+.ht-verified:before {
   content: "\e902";
 }
-.ht-logo-in:before {
+.ht-logo-yt:before {
   content: "\e903";
 }
-.ht-logo-twitter:before {
+.ht-logo-in:before {
   content: "\e904";
 }
-.ht-logo-fb:before {
+.ht-logo-twitter:before {
   content: "\e905";
 }
-.ht-video:before {
+.ht-logo-fb:before {
   content: "\e906";
 }
-.ht-medal:before {
+.ht-video:before {
   content: "\e907";
 }
-.ht-dots-h:before {
+.ht-medal:before {
   content: "\e908";
 }
-.ht-triangle:before {
+.ht-dots-h:before {
   content: "\e909";
 }
-.ht-arrow:before {
+.ht-triangle:before {
   content: "\e90a";
 }
-.ht-search:before {
+.ht-arrow:before {
   content: "\e90b";
 }
-.ht-logout:before {
+.ht-search:before {
   content: "\e90c";
 }
-.ht-support:before {
+.ht-logout:before {
   content: "\e90d";
+}
+.ht-support:before {
+  content: "\e91b";
 }
 .ht-moon:before {
   content: "\e90e";
@@ -107,22 +110,22 @@
   content: "\e91a";
 }
 .ht-wallet-add:before {
-  content: "\e91b";
-}
-.ht-wallet:before {
   content: "\e91c";
 }
-.ht-bell:before {
+.ht-wallet:before {
   content: "\e91d";
 }
-.ht-bar-chart:before {
+.ht-bell:before {
   content: "\e91e";
 }
-.ht-dashboard:before {
+.ht-bar-chart:before {
   content: "\e91f";
 }
-.ht-three-strips:before {
+.ht-dashboard:before {
   content: "\e920";
+}
+.ht-three-strips:before {
+  content: "\e922";
 }
 .ht-logo:before {
   content: "\e921";
