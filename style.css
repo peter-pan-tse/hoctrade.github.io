@@ -204,10 +204,10 @@ a.btn-info {
 a.btn-info:hover {
 	color:#06AFC9;
 }
-a.btn-general {
+a.btn-general, a.btn-ff, a.btn-page {
 	display:inline-block;
-	width:auto;
 	height:20px;
+	width:auto;
 	padding:2px 5px;
 	background-color: #D9D0BF;
 	text-align: center;
@@ -219,13 +219,51 @@ a.btn-general {
 	border-radius:6px;
 	transition: all 0.3s ease;
 }
+a.btn-ff {
+	margin-left:5px;
+}
 a.btn-general > span {
 	font-size:20px;
 	vertical-align:middle;
 }
-a.btn-general:hover {
+a.btn-ff > span, a.btn-page > span  {
+	font-size:16px;
+	vertical-align:middle;
+}
+.btn-prev {
+	display:inline-block;
+	transform: rotate(90deg);
+}
+.btn-next {
+	display:inline-block;
+	transform: rotate(270deg);
+}
+.btn-rw {
+	transform:scaleX(-1);
+	margin-right:5px;
+}
+a.btn-general:hover, a.btn-ff:hover, a.btn-page:hover {
 	background-color: #06AFC9;
 	color:#FFFFFF;
+}
+a.btn-page-num {
+	display:inline-block;
+	height:24px;
+	min-width:24px;
+	margin:0;
+	background-color:#999999;
+	color:#FFFFFF;
+	text-decoration: none;
+	font-size:14px;
+	line-height: 24px;
+	font-weight: bold;
+	text-align:center;
+}
+a.btn-page-num:hover {
+	background-color: #06AFC9;
+}
+a.btn-page-num.active {
+	background-color:#047F92;
 }
 .box-po {
 	background-color:#009245;
