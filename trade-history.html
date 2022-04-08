@@ -1,0 +1,540 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="jquery-3.6.0.min.js" language="javascript"></script>
+<link href="https://fonts.googleapis.com/css?family=Noto Sans:400,700,900" rel="stylesheet">
+<link href="font.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+<link href="chart.css" rel="stylesheet">
+<link href="menu.css" rel="stylesheet">
+<link rel="icon" href="favicon.svg">
+<title>hoc-trade trade history</title>
+<script>
+	$(function(){
+		$('.open-btn').on('click', function(){
+			$(this).toggleClass('close-btn')
+		});
+	});
+</script>
+<style>
+	.breadcrumb {
+		margin-bottom: 20px !important;
+	}
+	table.trade-history {
+		padding:0;
+		width:100%;
+		margin:0 0 20px 0;
+		font-size:12px;
+		line-height: 1.5em;
+		border:none;
+		border-spacing: 0;
+		background-color:#9AB8BD;
+	}
+	table.trade-history tbody tr:nth-child(odd) {
+		background-color:#B3C4C8;
+	}
+	table.trade-history thead tr th, table.trade-history tbody tr td {
+		position:relative;
+		padding:5px 5px 5px 20px;
+		text-align: left;
+		vertical-align: top;
+	}
+	table.trade-history thead tr th {
+		color:#033C45;
+		font-weight: bold;
+		background-color: #05AFC9;
+		cursor: default;
+	}
+	.btn-sorting {
+		display:block;
+		position: absolute;
+		top:6px;
+		left:4px;
+		font-size:10px;
+		line-height: 10px;
+	}
+	.btn-sorting > .btn-sort-up, .btn-sorting > .btn-sort-down {
+		display:block;
+		margin-bottom:-3px;
+		cursor: default;
+	}
+	.btn-sorting > .btn-sort-up {
+		transform: scaleY(-1);
+	}
+	.btn-sorting > .btn-sort-up > span.off, .btn-sorting > .btn-sort-down > span.off {
+		color:#05AFC9;
+	}
+	.btn-sorting > .btn-sort-up > span.on, .btn-sorting > .btn-sort-down > span.on {
+		color:#999999;
+	}
+	.btn-sorting > .btn-sort-up > span.active, .btn-sorting > .btn-sort-down > span.active {
+		color:#047F92;
+	}
+	.trade-type-box {
+		display: inline-block;
+		padding:0 2px;
+		border-radius:2px;
+		background-color: #033C45;
+		color:#FFFFFF;
+		line-height:1em;
+	}
+	/* high low pip bar */
+	.pip-bar {
+		display:flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		position:relative;
+		width:130px;
+		font-size:12px;
+		line-height: 1em;
+		border-spacing: 0;
+	}
+	.pip-bar > .red-side, .pip-bar > .green-side {
+		display:inline-block;
+		height:20px;
+		padding:0;
+		vertical-align: center;
+	}
+	.pip-bar > .red-side {
+		background-image: url("hl-pip-bar-red.png");
+		background-repeat: no-repeat;
+		background-position:left center;
+	}
+	.pip-bar > .green-side {
+		background-image: url("hl-pip-bar-green.png");
+		background-repeat: no-repeat;
+		background-position:right center;
+	}
+	.pip-bar > .red-text, .pip-bar > .green-text {
+		display:inline-block;
+		width: 35px;
+		line-height:20px;
+		padding:0;
+	}
+	.pip-bar > .red-text {
+		text-align: right;
+		padding-right:5px;
+		color:#C1272D;
+	}
+	.pip-bar > .green-text {
+		text-align: left;
+		padding-left:5px;
+		color:#009245;
+	}
+	div.pip-bar-line {
+		position:absolute;
+		width:1px;
+		height:20px;
+		top:0;
+		padding:0;
+		margin:0;
+		background-color: #FFFFFF;
+		z-index: 800;
+	}
+	div.pip-bar-dot {
+		position:absolute;
+		width:8px;
+		height:8px;
+		top:4px;
+		padding:0;
+		margin:0;
+		border:2px solid #FFFFFF;
+		border-radius:50%;
+		box-shadow: 1px 1px 3px rgb(0 0 0 / 0.5);
+		z-index: 801;
+	}
+</style>
+</head>
+<body>
+	<!--header and menu -->
+	<div class="header">
+		<div style="display:flex; flex-direction:row; justify-content: flex-start;">
+			<div class="logo"><span class="ht-logo"></span></div>
+			<div class="p-menu">
+				<a class="menu-item active" href="#">Dashboard</a>
+				<a class="menu-item" href="#">Scoreboard</a>
+			</div>
+		</div>
+		<div class="right-menu">
+			<a class="right-menu-item" href="#"><span class="ht-bell"></span><div class="ico-number">5</div></a>
+			<a class="right-menu-item" href="#"><span class="ht-search"></span></a>
+			<div class="member-menu">
+				<div class="profile-pic"></div>
+				<div class="user-profile"><span class="ht-wallet"><div class="ico-verified"><span class="ht-verified"></span></div></span>Winnie-fx-demo</div>
+				<div class="open-btn"><label for="member-menu-toggle"><span class="ht-triangle"></span></label></div>
+				<input type="checkbox" id="member-menu-toggle"/>
+				<ul id="member-menu-dropdown">
+					<hr class="dropmenu-separator" />
+					<li class="switch-menu">Switch wallet</li>
+					<li>
+						<a class="active" href="#"><span class="ht-wallet icon"><div class="ico-verified"><span class="ht-verified"></span></div></span>Winnie-fx-demo</a>
+					</li>
+					<li>
+						<a href="#"><span class="ht-wallet icon"><div class="ico-verified"><span class="ht-verified"></span></div></span>Winnie-fx-live</a>
+					</li>
+					<li>
+						<a href="#"><span class="ht-wallet icon"></span>Winnie-fx-open</a>
+					</li>
+					<hr class="dropmenu-separator" />
+					<li>
+						<a href="#"><span class="ht-wallet-setting icon"></span>Wallet setting</a>
+					</li>
+					<li>
+						<a href="#"><span class="ht-wallet-add icon"></span>Add new wallet</a>
+					</li>
+					<hr class="dropmenu-separator" />
+					<li class="switch-menu">
+						<div><span class="ht-moon icon"></span>Dark mode</div>
+						<label class="switch">
+						  <input type="checkbox">
+						  <span class="slider round"></span>
+						</label>
+					</li>
+					<li>
+						<a href="#"><span class="ht-support icon"></span>Help &amp; support</a>
+					</li>
+					<li>
+						<a href="#"><span class="ht-logout icon"></span>Logout</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<nav class="vertical">
+		<ul>
+			<li class="active">
+				<a href="#"><span class="ht-dashboard"></span></a>
+				<ul>
+					<li class="submenu-title">Overview</li>
+					<li><a href="account-overview.html"><span class="ht-profile"></span>Account overview</a></li>
+					<li><a href="basic-stat.html"><span class="ht-pie-chart"></span>Basic statistics</a></li>
+					<li><a href="advanced=stat.html"><span class="ht-cluster-chart"></span>Advanced statistics</a></li>
+					<li><a class="active" href="trade-history.html"><span class="ht-clipboard"></span>Trade history</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#"><span class="ht-bar-chart"></span></a>
+				<ul>
+					<li class="submenu-title">Analysis</li>
+					<li><a href="ta-general.html"><span class="ht-star"></span>General</a></li>
+					<li><a href="ta-behavioral.html"><span class="ht-coffee"></span>Behavioral</a></li>
+					<li><a href="ta-timing.html"><span class="ht-timing"></span>Timing</a></li>
+					<li><a href="ta-risk-mgt.html"><span class="ht-alert"></span>Risk management</a></li>
+					<li><a href="ta-strategy.html"><span class="ht-chess-castle"></span>Strategy</a></li>
+					<li><a href="ta-costs.html"><span class="ht-coins"></span>Costs</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="alert.html"><span class="ht-bell"></span></a>
+			</li>
+		</ul>
+	</nav>
+	
+	<!-- main content area -->
+	<!-- breadcrumb -->
+	<div class="breadcrumb">Dashboard / Overview / <span class="active">Trade history</span></div>
+	<!-- breadcrumb ended -->
+	<div class="main-content-container">
+		<div class="top-btn-group" style="display:block; clear:both;">
+			<a class="btn-duration" href="#">3m</a><a class="btn-duration" href="#">6m</a><a class="btn-duration duration-on" href="#">1yr</a><a class="btn-duration" href="#">all</a>
+		</div>
+		<table class="trade-history">
+			<thead>
+				<tr>
+					<th>
+						<div class="btn-sorting">
+							<div class="btn-sort-up"><span class="ht-triangle on"></span></div>
+							<div class="btn-sort-down"><span class="ht-triangle active"></span></div>
+						</div>
+						Order
+					</th>
+					<th>
+						<div class="btn-sorting">
+							<div class="btn-sort-up"><span class="ht-triangle off"></span></div>
+							<div class="btn-sort-down"><span class="ht-triangle off"></span></div>
+						</div>
+						Open/close
+					</th>
+					<th>
+						<div class="btn-sorting">
+							<div class="btn-sort-up"><span class="ht-triangle off"></span></div>
+							<div class="btn-sort-down"><span class="ht-triangle off"></span></div>
+						</div>
+						Length
+					</th>
+					<th>
+						<div class="btn-sorting">
+							<div class="btn-sort-up"><span class="ht-triangle off"></span></div>
+							<div class="btn-sort-down"><span class="ht-triangle off"></span></div>
+						</div>
+						Symbol
+					</th>
+					<th>
+						<div class="btn-sorting">
+							<div class="btn-sort-up"><span class="ht-triangle off"></span></div>
+							<div class="btn-sort-down"><span class="ht-triangle off"></span></div>
+						</div>
+						Lots
+					</th>
+					<th>
+						<div class="btn-sorting">
+							<div class="btn-sort-up"><span class="ht-triangle off"></span></div>
+							<div class="btn-sort-down"><span class="ht-triangle off"></span></div>
+						</div>
+						Price open/close
+					</th>
+					<th>
+						<div class="btn-sorting">
+							<div class="btn-sort-up"><span class="ht-triangle off"></span></div>
+							<div class="btn-sort-down"><span class="ht-triangle off"></span></div>
+						</div>
+						High/low (pips)
+					</th>
+					<th>
+						<div class="btn-sorting">
+							<div class="btn-sort-up"><span class="ht-triangle off"></span></div>
+							<div class="btn-sort-down"><span class="ht-triangle off"></span></div>
+						</div>
+						Commission
+					</th>
+					<th>
+						<div class="btn-sorting">
+							<div class="btn-sort-up"><span class="ht-triangle off"></span></div>
+							<div class="btn-sort-down"><span class="ht-triangle off"></span></div>
+						</div>
+						Swap
+					</th>
+					<th>
+						<div class="btn-sorting">
+							<div class="btn-sort-up"><span class="ht-triangle off"></span></div>
+							<div class="btn-sort-down"><span class="ht-triangle off"></span></div>
+						</div>
+						Profit
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1234567890</td>
+					<td>25/03/2022 19:56:02<br>25/03/2022 20:06:13</td>
+					<td>0h10m11s</td>
+					<td>EUR/USD <span class="trade-type-box">BUY</span></td>
+					<td>0.05</td> 
+					<td>1.23564<br>1.23859</td>
+					<td style="padding-left:0;">
+						<div class="pip-bar">
+							<div class="red-text">-12</div>
+							<div class="red-side" style="width:25px;"></div>
+							<div class="pip-bar-line" style="left:calc(40px + 25px);"></div>
+							<div class="pip-bar-dot" style="left:calc(34px + 33px);"></div>
+							<div class="green-side" style="width:25px;"></div>
+							<div class="green-text">+12</div>
+						</div>
+					</td>
+					<td class="text-ng">0.35USD</td>
+					<td class="text-nu">0.00USD</td>
+					<td class="text-po"><strong>+4.23USD</strong><br><strong>+41Pips</strong></td>
+				</tr>
+				<tr>
+					<td>1234568876</td>
+					<td>24/03/2022 19:56:02<br>24/03/2022 20:06:13</td>
+					<td>0h10m11s</td>
+					<td>EUR/USD <span class="trade-type-box">SELL</span></td>
+					<td>0.05</td> 
+					<td>1.23564<br>1.23859</td>
+					<td style="padding-left:0;">
+						<div class="pip-bar">
+							<div class="red-text">-18</div>
+							<div class="red-side" style="width:18px;"></div>
+							<div class="pip-bar-line" style="left:calc(40px + 18px);"></div>
+							<div class="pip-bar-dot" style="left:calc(34px + 17px);"></div>
+							<div class="green-side" style="width:32px;"></div>
+							<div class="green-text">+30</div>
+						</div>
+					</td>
+					<td class="text-ng">0.35USD</td>
+					<td class="text-ng">0.10USD</td>
+					<td class="text-ng"><strong>-0.22USD</strong><br><strong>-6Pips</strong></td>
+				</tr>
+				<tr>
+					<td>1234567890</td>
+					<td>25/03/2022 19:56:02<br>25/03/2022 20:06:13</td>
+					<td>0h10m11s</td>
+					<td>EUR/USD <span class="trade-type-box">BUY</span></td>
+					<td>0.05</td> 
+					<td>1.23564<br>1.23859</td>
+					<td style="padding-left:0;">
+						<div class="pip-bar">
+							<div class="red-text">-2</div>
+							<div class="red-side" style="width:2px;"></div>
+							<div class="pip-bar-line" style="left:calc(40px + 2px);"></div>
+							<div class="pip-bar-dot" style="left:calc(34px + 4px);"></div>
+							<div class="green-side" style="width:48px;"></div>
+							<div class="green-text">+43</div>
+						</div>
+					</td>
+					<td class="text-ng">0.35USD</td>
+					<td class="text-nu">0.00USD</td>
+					<td class="text-po"><strong>+4.23USD</strong><br><strong>+41Pips</strong></td>
+				</tr>
+				<tr>
+					<td>1234568876</td>
+					<td>24/03/2022 19:56:02<br>24/03/2022 20:06:13</td>
+					<td>0h10m11s</td>
+					<td>EUR/USD <span class="trade-type-box">SELL</span></td>
+					<td>0.05</td> 
+					<td>1.23564<br>1.23859</td>
+					<td style="padding-left:0;">
+						<div class="pip-bar">
+							<div class="red-text">-18</div>
+							<div class="red-side" style="width:45px;"></div>
+							<div class="pip-bar-line" style="left:calc(40px + 45px);"></div>
+							<div class="pip-bar-dot" style="left:calc(34px + 47px);"></div>
+							<div class="green-side" style="width:5px;"></div>
+							<div class="green-text">+3</div>
+						</div>
+					</td>
+					<td class="text-ng">0.35USD</td>
+					<td class="text-ng">0.10USD</td>
+					<td class="text-po"><strong>+0.22USD</strong><br><strong>+6Pips</strong></td>
+				</tr>
+				<tr>
+					<td>1234567890</td>
+					<td>25/03/2022 19:56:02<br>25/03/2022 20:06:13</td>
+					<td>0h10m11s</td>
+					<td>EUR/USD <span class="trade-type-box">BUY</span></td>
+					<td>0.05</td> 
+					<td>1.23564<br>1.23859</td>
+					<td style="padding-left:0;">
+						<div class="pip-bar">
+							<div class="red-text">-6</div>
+							<div class="red-side" style="width:33px;"></div>
+							<div class="pip-bar-line" style="left:calc(40px + 33px);"></div>
+							<div class="pip-bar-dot" style="left:calc(34px + 31px);"></div>
+							<div class="green-side" style="width:27px;"></div>
+							<div class="green-text">+3</div>
+						</div>
+					</td>
+					<td class="text-ng">0.35USD</td>
+					<td class="text-nu">0.00USD</td>
+					<td class="text-ng"><strong>-0.03USD</strong><br><strong>-1Pips</strong></td>
+				</tr>
+				<tr>
+					<td>1234568876</td>
+					<td>24/03/2022 19:56:02<br>24/03/2022 20:06:13</td>
+					<td>0h10m11s</td>
+					<td>EUR/USD <span class="trade-type-box">SELL</span></td>
+					<td>0.05</td> 
+					<td>1.23564<br>1.23859</td>
+					<td style="padding-left:0;">
+						<div class="pip-bar">
+							<div class="red-text">-12</div>
+							<div class="red-side" style="width:25px;"></div>
+							<div class="pip-bar-line" style="left:calc(40px + 25px);"></div>
+							<div class="pip-bar-dot" style="left:calc(34px + 25px);"></div>
+							<div class="green-side" style="width:25px;"></div>
+							<div class="green-text">+12</div>
+						</div>
+					</td>
+					<td class="text-ng">0.35USD</td>
+					<td class="text-nu">0.00USD</td>
+					<td class="text-nu"><strong>0.00USD</strong><br><strong>0Pips</strong></td>
+				</tr>
+				<tr>
+					<td>1234567890</td>
+					<td>25/03/2022 19:56:02<br>25/03/2022 20:06:13</td>
+					<td>0h10m11s</td>
+					<td>EUR/USD <span class="trade-type-box">BUY</span></td>
+					<td>0.05</td> 
+					<td>1.23564<br>1.23859</td>
+					<td style="padding-left:0;">
+						<div class="pip-bar">
+							<div class="red-text">-12</div>
+							<div class="red-side" style="width:25px;"></div>
+							<div class="pip-bar-line" style="left:calc(40px + 25px);"></div>
+							<div class="pip-bar-dot" style="left:calc(34px + 33px);"></div>
+							<div class="green-side" style="width:25px;"></div>
+							<div class="green-text">+12</div>
+						</div>
+					</td>
+					<td class="text-ng">0.35USD</td>
+					<td class="text-nu">0.00USD</td>
+					<td class="text-po"><strong>+4.23USD</strong><br><strong>+41Pips</strong></td>
+				</tr>
+				<tr>
+					<td>1234568876</td>
+					<td>24/03/2022 19:56:02<br>24/03/2022 20:06:13</td>
+					<td>0h10m11s</td>
+					<td>EUR/USD <span class="trade-type-box">SELL</span></td>
+					<td>0.05</td> 
+					<td>1.23564<br>1.23859</td>
+					<td style="padding-left:0;">
+						<div class="pip-bar">
+							<div class="red-text">-1</div>
+							<div class="red-side" style="width:25px;"></div>
+							<div class="pip-bar-line" style="left:calc(40px + 25px);"></div>
+							<div class="pip-bar-dot" style="left:calc(34px + 50px);"></div>
+							<div class="green-side" style="width:25px;"></div>
+							<div class="green-text">+1</div>
+						</div>
+					</td>
+					<td class="text-ng">0.35USD</td>
+					<td class="text-nu">0.00USD</td>
+					<td class="text-po"><strong>+0.50USD</strong><br><strong>+1Pips</strong></td>
+				</tr>
+				<tr>
+					<td>1234567890</td>
+					<td>25/03/2022 19:56:02<br>25/03/2022 20:06:13</td>
+					<td>0h10m11s</td>
+					<td>EUR/USD <span class="trade-type-box">BUY</span></td>
+					<td>0.05</td> 
+					<td>1.23564<br>1.23859</td>
+					<td style="padding-left:0;">
+						<div class="pip-bar">
+							<div class="red-text">-12</div>
+							<div class="red-side" style="width:25px;"></div>
+							<div class="pip-bar-line" style="left:calc(40px + 25px);"></div>
+							<div class="pip-bar-dot" style="left:calc(34px + 33px);"></div>
+							<div class="green-side" style="width:25px;"></div>
+							<div class="green-text">+12</div>
+						</div>
+					</td>
+					<td class="text-ng">0.35USD</td>
+					<td class="text-nu">0.00USD</td>
+					<td class="text-po"><strong>+4.23USD</strong><br><strong>+41Pips</strong></td>
+				</tr>
+				<tr>
+					<td>1234568876</td>
+					<td>24/03/2022 19:56:02<br>24/03/2022 20:06:13</td>
+					<td>0h10m11s</td>
+					<td>EUR/USD <span class="trade-type-box">SELL</span></td>
+					<td>0.05</td> 
+					<td>1.23564<br>1.23859</td>
+					<td style="padding-left:0;">
+						<div class="pip-bar">
+							<div class="red-text">-18</div>
+							<div class="red-side" style="width:18px;"></div>
+							<div class="pip-bar-line" style="left:calc(40px + 18px);"></div>
+							<div class="pip-bar-dot" style="left:calc(34px + 17px);"></div>
+							<div class="green-side" style="width:32px;"></div>
+							<div class="green-text">+30</div>
+						</div>
+					</td>
+					<td class="text-ng">0.35USD</td>
+					<td class="text-ng">0.10USD</td>
+					<td class="text-ng"><strong>-0.22USD</strong><br><strong>-6Pips</strong></td>
+				</tr>
+			</tbody>
+		</table>
+	</div><!-- main-content-container -->
+	<!-- main content area end -->
+	
+	<div class="footer">
+		<span class="ht-logo"></span><strong>hoc-trade</strong>&nbsp;&nbsp;&nbsp; copy; 2022 hoc-trade limited, all rights reserved<span class="separator">|</span><a href="#">Terms &amp; conditions</a><span class="separator">|</span><a href="#">Privacy policy</a><span class="separator">|</span><a href="#">advertise with us</a><span class="separator">|</span><a href="#">About us</a><span class="separator">|</span><a class="social" href="#"><span class="ht-logo-fb"></span></a><a class="social" href="#"><span class="ht-logo-twitter"></span></a><a class="social" href="#"><span class="ht-logo-in"></span></a><a class="social" href="#"><span class="ht-logo-yt"></span></a>
+		<p class="disclaimer">HIGH RISK WARNING: Foreign exchange and other CFD trading carries a high level of risk and may not be suitable for everyone. The usage of leverage creates additional risk and loss exposure. Your investment objectives, experience level and risk tolerance have to be taken into consideration before you decide to trade foreign exchange or other CFD products. You could lose some or all of your entire investment. Do not invest money that you cannot afford to lose and always use an appropriate risk management. It’s important to educate yourself on the risks associated with foreign exchange trading, and seek professional advice from an independent financial or tax advisor in case of any questions. Any data and information is provided ‘as is’ solely for informational purposes, and is not intended for trading purposes or advice. Past performance, which are presented on this website or you find somewhere else, is not indicative of future results.</p>
+	</div>	
+</body>
+</html>

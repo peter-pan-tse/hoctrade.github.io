@@ -1,0 +1,316 @@
+﻿@charset "UTF-8";
+/* CSS Document */
+/* row which contains charts */
+.chart-row {
+	display:flex;
+	position:relative;
+	flex-direction:row;
+	flex-wrap: wrap;
+	align-items: stretch;
+	justify-content: space-between;
+	/*width: calc(100% - 460px);*/
+	padding: 0 15px;
+}
+.chart-container {
+	display:flex;
+	flex-direction: column;
+	width:99.99%;
+	margin:0 0 10px 0;
+}
+@media only screen and (min-width: 768px) {
+	.chart-container {
+		width:calc(49.99% - 30px);
+		margin:0 15px 30px 15px;
+	}
+}
+/*@media only screen and (min-width: 1340px) {
+	.chart-container {
+		width:calc(33.33% - 30px);
+		margin:0 15px 30px 15px;
+	}
+}*/
+/* chart styling */
+.chart-header-dark, .chart-header-light {
+	display:flex;
+	position:relative;
+	height:30px;
+	padding:10px;
+	font-size: 14px;
+	line-height: 1em;
+	font-weight: 700;
+	border-radius: 20px 20px 0 0;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: space-between;
+}
+.chart-header-dark {
+	background-color: #000000;
+	color: #FFFFFF;
+}
+.chart-header-light {
+	background-color: #FFFFFF;
+	color: #000000;
+}
+.chart-bg-dark, .chart-bg-light {
+	display:flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding:10px;
+	border-radius:0 0 20px 20px;
+	height:100%;
+	min-height:350px;
+}
+@media only screen and (max-width: 480px) {
+	.chart-bg-dark, .chart-bg-light {
+		min-height:calc(100vw - 90px);
+	}
+}
+.chart-bg-dark {
+	background-color: #00333B;
+}
+.chart-bg-light {
+	background-color: #EEE4D2;
+}
+/* solid bars */
+.bar-green {
+	border:1px solid #56A07E;
+	background: #56A07E;
+}
+.bar-green:hover {
+	border:1px solid #009245;
+	background: #009245;
+}
+.bar-red {
+	border:1px solid #C15357;
+	background: #C15357;
+}
+.bar-red:hover {
+	border:1px solid #C1272D;
+	background: #C1272D;
+}
+/* strip bars */
+/* dark */
+.bar-grey-strip-dark {
+	border:1px solid #CCCCCC;
+	background: repeating-linear-gradient(-45deg,#CCCCCC,#CCCCCC 1.5px,#00333B 1.5px,#00333B 4px);
+}
+.bar-grey-strip-dark:hover {
+	border:1px solid #999999;
+	background: repeating-linear-gradient(-45deg,#999999,#999999 1.5px,#00333B 1.5px,#00333B 4px);
+}
+.bar-green-strip-dark {
+	border:1px solid #56A07E;
+	background: repeating-linear-gradient(-45deg,#56A07E,#56A07E 1.5px,#00333B 1.5px,#00333B 4px);
+}
+.bar-green-strip-dark:hover {
+	border:1px solid #009245;
+	background: repeating-linear-gradient(-45deg,#009245,#009245 1.5px,#00333B 1.5px,#00333B 4px);
+}
+.bar-red-strip-dark {
+	border:1px solid #C15357;
+	background: repeating-linear-gradient(-45deg,#C15357,#C15357 1.5px,#00333B 1.5px,#00333B 4px);
+}
+.bar-red-strip-dark:hover {
+	border:1px solid #C1272D;
+	background: repeating-linear-gradient(-45deg,#C1272D,#C1272D 1.5px,#00333B 1.5px,#00333B 4px);
+}
+/* light */
+.bar-grey-strip-light {
+	border:1px solid #CCCCCC;
+	background: repeating-linear-gradient(-45deg,#CCCCCC,#CCCCCC 1.5px,#EEE4D2 1.5px,#EEE4D2 4px);
+}
+.bar-grey-strip-light:hover {
+	border:1px solid #999999;
+	background: repeating-linear-gradient(-45deg,#999999,#999999 1.5px,#EEE4D2 1.5px,#EEE4D2 4px);
+}
+.bar-green-strip-light {
+	border:1px solid #56A07E;
+	background: repeating-linear-gradient(-45deg,#56A07E,#56A07E 1.5px,#EEE4D2 1.5px,#EEE4D2 4px);
+}
+.bar-green-strip-light:hover {
+	border:1px solid #009245;
+	background: repeating-linear-gradient(-45deg,#009245,#009245 1.5px,#EEE4D2 1.5px,#EEE4D2 4px);
+}
+.bar-red-strip-light {
+	border:1px solid #C15357;
+	background: repeating-linear-gradient(-45deg,#C15357,#C15357 1.5px,#EEE4D2 1.5px,#EEE4D2 4px);
+}
+.bar-red-strip-light:hover {
+	border:1px solid #C1272D;
+	background: repeating-linear-gradient(-45deg,#C1272D,#C1272D 1.5px,#EEE4D2 1.5px,#EEE4D2 4px);
+}
+/* common for dark and light */
+.bar-grey-strip-dark, 
+.bar-green-strip-dark, 
+.bar-red-strip-dark,
+.bar-grey-strip-light, 
+.bar-green-strip-light, 
+.bar-red-strip-light,  
+.bar-green, 
+.bar-red {
+	display:inline-block;
+	margin:0 11px 0 11px; /* width of the left right margins = 50% width of the bar */
+	width:20px; /* width of the bar varies depending on the width of the chart */
+	height:100px; /* just for example height will vary */
+	border-bottom:none;
+	border-radius:4px 4px 0 0;
+	transition: all 0.3s ease;
+}
+.bar-grey-strip-dark:hover, 
+.bar-green-strip-dark:hover, 
+.bar-red-strip-dark:hover,
+.bar-grey-strip-light:hover, 
+.bar-green-strip-light:hover, 
+.bar-red-strip-light:hover, 
+.bar-green:hover, 
+.bar-red:hover {
+	border-bottom:none;
+	box-shadow: 3px 0 3px rgb(0 0 0 / 0.5);
+	cursor:crosshair;
+}
+.bar-flip-v {
+	transform: rotate(180deg);
+}
+.bar-flip-v:hover {
+	box-shadow: -3px 0 3px rgb(0 0 0 / 0.5) !important;
+}
+/* info outside chart area */
+.chart-info-group {
+	display:flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items:flex-start;
+	justify-content:space-between;
+}
+.top-btn-group {
+	height:40px;
+}
+/* chart top buttons */
+div.pill-box {
+	display:flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content:flex-start;
+}
+a.pill-left {
+	border-radius:6px 0 0 6px;
+}
+a.pill-right {
+	border-radius:0 6px 6px 0;
+}
+a.pill-left, a.pill-right {
+	font-size: 14px;
+	min-width:20px;
+	line-height: 20px;
+	font-weight: 700;
+	color:#FFFFFF;
+	height:24px;
+	padding:0 5px;
+	text-align: center;
+	text-decoration: none;
+}
+.pill-off {
+	background-color: #999999;
+	transition: all 0.3s ease;
+}
+.pill-off:hover {
+	background-color: #06AFC9;
+}
+.pill-on {
+	background-color: #047F92;
+}
+a.btn-duration {
+	display: inline-block;
+	width:30px;
+	height:24px;
+	background-color: #999999;
+	color:#FFFFFF;
+	font-weight: 700;
+	font-size:14px;
+	line-height: 20px;
+	text-align:center;
+	border-radius:6px;
+	margin-left:5px;
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+a.btn-duration:hover {
+	background-color: #06AFC9;
+}
+a.duration-on {
+	background-color: #047F92;
+}
+div.right-btn-box {
+	display:flex;
+	flex-direction:row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content:flex-end;
+}
+/* chart bottom info */
+.chart-bottom-info-dark, .chart-bottom-info-light {
+	display: inline-block;
+	font-size:12px;
+	line-height:1.25em;
+	margin-right:10px;
+}
+.chart-bottom-info-dark {
+	color:#FFFFFF;
+}
+.chart-bottom-info-light {
+	color:#000000;
+}
+.chart-bottom-info-right {
+	text-align:right;
+	margin-left:10px;
+	margin-right:0 !important;
+}
+.chart-bottom-info-title {
+	font-size:10px;
+	color:#06AFC9;
+}
+.num-box {
+	display:inline-block;
+	padding:2px 4px;
+	border-radius:4px;
+	font-size:10px;
+	color:#FFFFFF !important;
+}
+/* Tooltip container */
+.tooltip {
+	position: relative;
+}
+/* Tooltip text */
+.tooltip .tooltiptext {
+	display: none;
+	width:auto;
+	/*max-width: 33vw;*/
+	background-color: #047F92;
+	color: #fff;
+	font-size:12px;
+	font-weight: normal;
+	padding: 2px 4px;
+	border-radius: 4px;
+	transition: all 0.3s ease;
+	/* Position the tooltip text - see examples below! */
+	position: absolute;
+	bottom: calc(100% + 5px);
+	z-index: 1;
+}
+.tooltip .tooltiptext::after {
+	content: " ";
+	position: absolute;
+	top: 100%; /* At the bottom of the tooltip */
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #047F92 transparent transparent transparent;
+}
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+	cursor:default;
+	display: block;
+}
