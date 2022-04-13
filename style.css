@@ -39,8 +39,13 @@ body {
 }
 .main-content-container {
 	position:relative;
-	padding: 0 30px;
+	padding: 0 15px;
 	min-height: calc(100vh - 260px);
+}
+@media only screen and (max-width: 480px) {
+	.main-content-container {
+		padding: 0 10px;
+	}
 }
 .right-column {
 	display:flex;
