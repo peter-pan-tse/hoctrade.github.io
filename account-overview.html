@@ -9,6 +9,7 @@
 <link href="style.css" rel="stylesheet">
 <link href="chart.css" rel="stylesheet">
 <link href="menu.css" rel="stylesheet">
+<link href="burger-menu.css" rel="stylesheet">
 <link rel="icon" href="favicon.svg">
 <title>hoc-trade account overview</title>
 <script>
@@ -83,7 +84,7 @@
 					<li class="submenu-title">Overview</li>
 					<li><a class="active" href="account-overview.html"><span class="ht-profile"></span>Account overview</a></li>
 					<li><a href="basic-stat.html"><span class="ht-pie-chart"></span>Basic statistics</a></li>
-					<li><a href="advanced=stat.html"><span class="ht-cluster-chart"></span>Advanced statistics</a></li>
+					<li><a href="advanced-stat.html"><span class="ht-cluster-chart"></span>Advanced statistics</a></li>
 					<li><a href="trade-history.html"><span class="ht-clipboard"></span>Trade history</a></li>
 				</ul>
 			</li>
@@ -105,6 +106,53 @@
 			</li>
 		</ul>
 	</nav>
+	
+	<!-- mobile menu -->
+	<nav role="navigation">
+		<div id="mobileMenuToggle">
+			<!--A fake / hidden checkbox is used as click reciever, so you can use the :checked selector on it.-->
+			<input type="checkbox" />
+			<!--Some spans to act as a hamburger. They are acting like a real hamburger, not that McDonalds stuff.-->
+			<span></span>
+			<span></span>
+			<span></span>
+			<!-- Too bad the menu has to be inside of the button but hey, it's pure CSS magic.-->
+			<ul id="mobileMenu">
+				<li>
+					<div class="p-menu-mobile">
+						<a class="active" href="#">Dashboard</a>
+						<a href="#">Scoreboard</a>
+					</div>
+				</li>
+				<li>
+					<div class="s-menu-title active"><div><span class="ht-dashboard"></span></div>Dashboard</div>
+					<div class="s-menu-group">
+						<a class="s-menu-item active" href="account-overview.html"><span class="ht-profile"></span>Account overview</a>
+						<a class="s-menu-item" href="basic-atat.html"><span class="ht-pie-chart"></span>Basic statistics</a>
+						<a class="s-menu-item" href="advanced-stat.html"><span class="ht-cluster-chart"></span>Advanced statistics</a>
+						<a class="s-menu-item" href="trade-history.html"><span class="ht-clipboard"></span>Trade history</a>
+					</div>
+				</li>
+				<li>
+					<div class="s-menu-title"><div><span class="ht-bar-chart"></span></div>Analysis</div>
+					<div class="s-menu-group">
+						<a class="s-menu-item" href="ta-customized.html"><span class="ht-star"></span>Customized</a>
+						<a class="s-menu-item" href="ta-general.html"><span class="ht-bar-chart"></span>General</a>
+						<a class="s-menu-item" href="ta-behavioral.html"><span class="ht-coffee"></span>Behavioral</a>
+						<a class="s-menu-item" href="ta-timing.html"><span class="ht-timing"></span>Timing</a>
+						<a class="s-menu-item" href="ta-risk-mgt.html"><span class="ht-alert"></span>Risk management</a>
+						<a class="s-menu-item" href="ta-strategy.html"><span class="ht-chess-castle"></span>Strategy</a>
+						<a class="s-menu-item" href="ta-costs.html"><span class="ht-coins"></span>Costs</a>
+					</div>
+				</li>
+				<li>
+					<div class="s-menu-title"><div><span class="ht-bell"></span></div>Alerts</div>
+				</li>
+			</ul>
+			<div class="mobileMenuMask"></div>
+		</div>
+	</nav>
+	<!-- mobile menu ended -->
 	
 	<!-- main content area -->
 	<div class="main-container">

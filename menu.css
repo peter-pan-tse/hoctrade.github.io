@@ -7,6 +7,11 @@
 	justify-content:flex-start;
 	position:relative;
 }
+@media only screen and (max-width: 480px) {
+	.p-menu {
+		display:none;
+	}
+}
 .p-menu > a.menu-item {
 	display:inline-block;
 	font-size:18px;
@@ -118,6 +123,14 @@ a.right-menu-item:hover {
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+@media only screen and (max-width: 768px) {
+	.member-menu > .open-btn, .member-menu > .close-btn, .member-menu > .user-profile {
+		display:none;
+	}
+	.member-menu > .profile-pic {
+		position:relative;
+	}
+}
 label {
 	cursor: pointer;
 }
@@ -227,13 +240,38 @@ hr.dropmenu-separator {
 	height:50px;
 	margin-bottom: 30px;
 }
+@media only screen and (max-width: 768px) {
+	.breadcrumb {
+		line-height:40px;
+		padding:0 20px;
+		height:40px;
+		margin-bottom: 20px;
+	}
+}
 .breadcrumb > span.active {
+	display:inline-block;
 	color:#000000;
 	font-weight:bold;
 }
+@media only screen and (max-width: 480px) {
+	.breadcrumb > span.active {
+		color:#FFFFFF;
+	}
+	.breadcrumb {
+		position:fixed;
+		width:100%;
+		top:60px;
+		background-color: #033C45;
+		color:#06AFC9;
+		line-height:40px;
+		padding:0 20px 0 50px;
+		height:40px;
+		margin-bottom: 10px;
+		z-index:1000;
+	}
+}
 /*VERTICAL MENU*/
 nav.vertical{
-	position:relative;
 	display:block;
 	position: fixed;
 	flex-direction:column;
@@ -245,6 +283,11 @@ nav.vertical{
 	left:0;
 	background-color: #033C45;
 	z-index: 900;
+}
+@media only screen and (max-width: 480px) {
+	nav.vertical{
+		display:none;
+	}
 }
 /* ALL UL */
 nav.vertical ul{
