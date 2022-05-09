@@ -10,6 +10,7 @@
 <link href="chart.css" rel="stylesheet">
 <link href="menu.css" rel="stylesheet">
 <link href="burger-menu.css" rel="stylesheet">
+<link href="modal.css" rel="stylesheet">
 <link rel="icon" href="favicon.svg">
 <title>hoc-trade account overview</title>
 <script>
@@ -165,7 +166,7 @@
 					<div class="chart-header-dark">
 						<div class="tooltip">Title for dark mode<span class="tooltiptext">Title for dark mode</span></div>
 						<div class="right-btn-box">
-							<a class="btn-action on" href="#"><span class="ht-star"></span></a><a class="btn-action" href="#"><span class="ht-bell"></span></a><a class="btn-action" href="#"><span class="ht-globe"></span></a><a class="btn-info" href="#"><span class="ht-info"></span></a>
+							<a class="btn-action on" href="#"><span class="ht-star"></span></a><a class="btn-action" href="#"><span class="ht-bell"></span></a><a class="btn-action" href="#"><span class="ht-globe"></span></a><a class="btn-info" id="modalinfo1"><span class="ht-info"></span></a>
 						</div>
 					</div>
 					<div class="chart-bg-dark">
@@ -209,7 +210,7 @@
 					<div class="chart-header-light">
 						<div class="tooltip">If the title is longer than 2 lines use ... and hover tooltip to sh...<span class="tooltiptext">This is the tooltip text which display the complete meaning of the long title without ...</span></div>
 						<div class="right-btn-box">
-							<a class="btn-info" href="#"><span class="ht-dots-h"></span></a>
+							<a class="btn-info" id="modalinfo2"><span class="ht-dots-h"></span></a>
 						</div>
 					</div>
 					<div class="chart-bg-light">
@@ -253,7 +254,7 @@
 					<div class="chart-header-light">
 						<div class="tooltip">Title 3<span class="tooltiptext">Title 3</span></div>
 						<div class="right-btn-box">
-							<a class="btn-info" href="#"><span class="ht-dots-h"></span></a>
+							<a class="btn-info" id="modalinfo3"><span class="ht-dots-h"></span></a>
 						</div>
 					</div>
 					<div class="chart-bg-light">
@@ -298,7 +299,7 @@
 					<div class="chart-header-dark">
 						<div class="tooltip">Title 4<span class="tooltiptext">Title 4</span></div>
 						<div class="right-btn-box">
-							<a class="btn-action on" href="#"><span class="ht-star"></span></a><a class="btn-action" href="#"><span class="ht-bell"></span></a><a class="btn-action" href="#"><span class="ht-globe"></span></a><a class="btn-info" href="#"><span class="ht-info"></span></a>
+							<a class="btn-action on" href="#"><span class="ht-star"></span></a><a class="btn-action" href="#"><span class="ht-bell"></span></a><a class="btn-action" href="#"><span class="ht-globe"></span></a><a class="btn-info" id="modalinfo4"><span class="ht-info"></span></a>
 						</div>
 					</div>
 					<div class="chart-bg-dark">
@@ -442,5 +443,38 @@
 		<span class="ht-logo"></span><strong>hoc-trade</strong>&nbsp;&nbsp;&nbsp; copy; 2022 hoc-trade limited, all rights reserved<span class="separator">|</span><a href="#">Terms &amp; conditions</a><span class="separator">|</span><a href="#">Privacy policy</a><span class="separator">|</span><a href="#">advertise with us</a><span class="separator">|</span><a href="#">About us</a><span class="separator">|</span><a class="social" href="#"><span class="ht-logo-fb"></span></a><a class="social" href="#"><span class="ht-logo-twitter"></span></a><a class="social" href="#"><span class="ht-logo-in"></span></a><a class="social" href="#"><span class="ht-logo-yt"></span></a>
 		<p class="disclaimer">HIGH RISK WARNING: Foreign exchange and other CFD trading carries a high level of risk and may not be suitable for everyone. The usage of leverage creates additional risk and loss exposure. Your investment objectives, experience level and risk tolerance have to be taken into consideration before you decide to trade foreign exchange or other CFD products. You could lose some or all of your entire investment. Do not invest money that you cannot afford to lose and always use an appropriate risk management. It’s important to educate yourself on the risks associated with foreign exchange trading, and seek professional advice from an independent financial or tax advisor in case of any questions. Any data and information is provided ‘as is’ solely for informational purposes, and is not intended for trading purposes or advice. Past performance, which are presented on this website or you find somewhere else, is not indicative of future results.</p>
 	</div>	
+	
+	<!-- The Modal -->
+	<div id="modalInfoBox" class="modal">
+		<!-- Modal content -->
+
+	  <div class="modal-content">
+		<div class="modal-header">
+			<span class="close"><span class="ht-cross"></span></span>
+			<span class="action-btn-modal"><span class="ht-star"></span></span>
+			<span class="action-btn-modal"><span class="ht-bell"></span></span>
+			<span class="action-btn-modal active"><span class="ht-globe"></span></span>
+		</div>
+		<div class="modal-body">
+			<p><strong>Chart legend</strong></p>
+			<div class="legend-container">
+				<div class="legend-item"><img src="legend-benchmark.svg" height="20" />Benchmark</div>
+				<div class="legend-item"><img src="legend-profit.svg" height="20" />Profit</div>
+				<div class="legend-item"><img src="legend-loss.svg" height="20" />Loss</div>
+				<div class="legend-item"><img src="legend-not-so-significant.svg" height="20" />Limited significance</div>
+				<div class="legend-item"><img src="legend-insignificant.svg" height="20" />Insignificant</div>
+			</div>
+			<p><strong>Profit if TP closer/further away</strong></p>
+			<p>The average payoff (PIPS or % return) per trade in case the trades the Stop Loss (SL) would have been a few pips closer for further away from compared to the actual SL level set in the trade.</p>
+			<p><strong>Watch tutorial</strong></p>
+			<div class="modal-video-box">
+				<iframe class="modal-video" src="https://www.youtube.com/embed/LemZIhFS9QI" title="27 Profit of conflicting symbols VV" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+			<a class="btn-general" href="#" style="margin-top:20px;" target="_blank"><span class="ht-video"></span><span class="btn-general-text"></span> See all videos</a>
+		</div>
+	  </div>
+
+	</div>
 </body>
+<script src="modal.js" language="javascript"></script>
 </html>

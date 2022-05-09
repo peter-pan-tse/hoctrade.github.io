@@ -1,0 +1,225 @@
+﻿@charset "UTF-8";
+/* CSS Document */
+/* table for desktop */
+ul.trade-history {
+	list-style: none;
+	font-size:12px;
+	line-height: 1.5em;
+	margin:0;
+	padding:0;
+	background-color:#9AB8BD;
+}
+ul.trade-history li.table-title {
+	display:flex;
+	font-weight: bold;
+	color:#033C45;
+	background-color: #06AFC9 !important;
+}
+ul.trade-history li {
+	display:flex;
+	position: relative;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+}
+ul.trade-history li:nth-child(even) {
+	background-color:#B3C4C8;
+}
+ul.trade-history li > .th-item {
+	display:flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	position:relative;
+	width:calc(10% - 20px);
+	padding:5px 5px 5px 15px;
+}
+ul.trade-history li > .th-item > span.th-title {
+	display:none;
+}
+.narrower {
+	width:calc(8% - 25px) !important;
+}
+.wider {
+	width:calc(15% - 25px) !important;
+}
+a.btn-th-details {
+	display:none;
+}
+/* table for ipad */
+@media only screen and (max-width: 1023px) {
+	ul.trade-history li.table-title {
+		display:none;
+	}
+	ul.trade-history li {
+		flex-direction: column;
+		flex-wrap:wrap;
+		justify-content: flex-start;
+		max-height: 160px;
+    	padding: 5px 0;
+	}
+	ul.trade-history li > .th-item {
+		width:calc(50% - 20px);
+		padding:2px 5px 2px 15px;
+	}
+	ul.trade-history li > .th-item > span.th-title {
+		display:inline-block;
+		width:18vw;
+		color: #047F92;
+	}
+	.narrower {
+		width:auto !important;
+	}
+	.wider {
+		width:auto !important;
+	}
+}
+/* table for mobile */
+.only-mobile {
+	display:none !important;
+}
+.not-mobile {
+	display:flex !important;
+}
+@media only screen and (max-width: 580px) {
+	.only-mobile {
+		display:flex !important;
+	}
+	.not-mobile {
+		display:none !important;
+	}
+	ul.trade-history {
+		margin:0 -10px;
+		padding: 0 0 0 10px;
+		overflow-x: hidden;
+	}
+	ul.trade-history li {
+		flex-wrap:nowrap;
+		max-height: 135px;
+		height: 135px;
+		margin: 0 -10px;
+		padding:5px 10px;
+	}
+	ul.trade-history li > .th-item {
+		width:calc(100% - 60px);
+	}
+	ul.trade-history li > .th-item > span.th-title {
+		width:30vw;
+	}
+	a.btn-th-details {
+		display:block;
+		position:absolute;
+		top: 0;
+    	right: 0px;
+    	width: 40px;
+    	height: 135px;
+		font-size:24px;
+		line-height: 135px;
+		color:#047F92;
+		text-decoration: none;
+	}
+}
+/* table end */
+.btn-sorting {
+	display:block;
+	position: absolute;
+	top:6px;
+	left:3px;
+	font-size:10px;
+	line-height: 10px;
+}
+@media only screen and (max-width: 1023px) {
+	.btn-sorting {
+		top:0px;
+	}
+}
+.btn-sorting > .btn-sort-up, .btn-sorting > .btn-sort-down {
+	display:block;
+	margin-bottom:-3px;
+	cursor: default;
+}
+.btn-sorting > .btn-sort-up {
+	transform: scaleY(-1);
+}
+.btn-sorting > .btn-sort-up > span.off, .btn-sorting > .btn-sort-down > span.off {
+	color:transparent;
+}
+.btn-sorting > .btn-sort-up > span.on, .btn-sorting > .btn-sort-down > span.on {
+	color:#999999;
+}
+.btn-sorting > .btn-sort-up > span.active, .btn-sorting > .btn-sort-down > span.active {
+	color:#047F92;
+}
+.trade-type-box {
+	display: inline-block;
+	padding:0 2px;
+	border-radius:2px;
+	background-color: #033C45;
+	color:#FFFFFF;
+	line-height:1em;
+	margin: 3px 0 0 3px;
+}
+/* high low pip bar */
+.pip-bar {
+	display:flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	position:relative;
+	width:130px;
+	font-size:12px;
+	line-height: 1em;
+	border-spacing: 0;
+}
+.pip-bar > .red-side, .pip-bar > .green-side {
+	display:inline-block;
+	height:20px;
+	padding:0;
+	vertical-align: center;
+}
+.pip-bar > .red-side {
+	background-image: url("hl-pip-bar-red.png");
+	background-repeat: no-repeat;
+	background-position:left center;
+}
+.pip-bar > .green-side {
+	background-image: url("hl-pip-bar-green.png");
+	background-repeat: no-repeat;
+	background-position:right center;
+}
+.pip-bar > .red-text, .pip-bar > .green-text {
+	display:inline-block;
+	width: 35px;
+	line-height:20px;
+	padding:0;
+}
+.pip-bar > .red-text {
+	text-align: right;
+	padding-right:5px;
+	color:#C1272D;
+}
+.pip-bar > .green-text {
+	text-align: left;
+	padding-left:5px;
+	color:#009245;
+}
+div.pip-bar-line {
+	position:absolute;
+	width:1px;
+	height:20px;
+	top:0;
+	padding:0;
+	margin:0;
+	background-color: #FFFFFF;
+	z-index: 800;
+}
+div.pip-bar-dot {
+	position:absolute;
+	width:8px;
+	height:8px;
+	top:4px;
+	padding:0;
+	margin:0;
+	border:2px solid #FFFFFF;
+	border-radius:50%;
+	box-shadow: 1px 1px 3px rgb(0 0 0 / 0.5);
+	z-index: 801;
+}

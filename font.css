@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'ht-font';
-  src:  url('fonts/ht-font.eot?p7vyw4');
-  src:  url('fonts/ht-font.eot?p7vyw4#iefix') format('embedded-opentype'),
-    url('fonts/ht-font.ttf?p7vyw4') format('truetype'),
-    url('fonts/ht-font.woff?p7vyw4') format('woff'),
-    url('fonts/ht-font.svg?p7vyw4#ht-font') format('svg');
+  src:  url('fonts/ht-font.eot?dwlhxb');
+  src:  url('fonts/ht-font.eot?dwlhxb#iefix') format('embedded-opentype'),
+    url('fonts/ht-font.ttf?dwlhxb') format('truetype'),
+    url('fonts/ht-font.woff?dwlhxb') format('woff'),
+    url('fonts/ht-font.svg?dwlhxb#ht-font') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,8 +25,38 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ht-triangle-right:before {
+  content: "\e93c";
+}
 .ht-options:before {
   content: "\e923";
+}
+.ht-down-chart:before {
+  content: "\e928";
+}
+.ht-up-chart:before {
+  content: "\e929";
+}
+.ht-cross:before {
+  content: "\e92a";
+}
+.ht-envelope:before {
+  content: "\e92e";
+}
+.ht-neg-chart:before {
+  content: "\e930";
+}
+.ht-pencil:before {
+  content: "\e934";
+}
+.ht-eye-opened:before {
+  content: "\e936";
+}
+.ht-chain:before {
+  content: "\e937";
+}
+.ht-eye-closed:before {
+  content: "\e939";
 }
 .ht-hori-line:before {
   content: "\e924";
@@ -40,15 +70,6 @@
 .ht-bookmark:before {
   content: "\e927";
 }
-.ht-down-chart:before {
-  content: "\e928";
-}
-.ht-up-chart:before {
-  content: "\e929";
-}
-.ht-cross:before {
-  content: "\e92a";
-}
 .ht-check-2:before {
   content: "\e92b";
 }
@@ -58,14 +79,8 @@
 .ht-trash:before {
   content: "\e92d";
 }
-.ht-envelope:before {
-  content: "\e92e";
-}
 .ht-alert-chart:before {
   content: "\e92f";
-}
-.ht-neg-chart:before {
-  content: "\e930";
 }
 .ht-speedometer:before {
   content: "\e931";
@@ -76,23 +91,11 @@
 .ht-check:before {
   content: "\e933";
 }
-.ht-pencil:before {
-  content: "\e934";
-}
 .ht-logo-ig:before {
   content: "\e935";
 }
-.ht-eye-opened:before {
-  content: "\e936";
-}
-.ht-eye-closed:before {
-  content: "\e937";
-}
 .ht-delete:before {
   content: "\e938";
-}
-.ht-chain:before {
-  content: "\e939";
 }
 .ht-minus:before {
   content: "\e93a";
