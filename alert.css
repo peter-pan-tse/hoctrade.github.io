@@ -1,0 +1,244 @@
+﻿@charset "UTF-8";
+/* CSS Document */
+/* table for desktop */
+ul.alert {
+	list-style: none;
+	font-size:12px;
+	line-height: 1.5em;
+	margin:0;
+	padding:0;
+	background-color:#9AB8BD;
+}
+ul.alert li.table-title {
+	display:flex;
+	font-weight: bold;
+	color:#033C45;
+	background-color: #06AFC9 !important;
+}
+ul.alert li, ul.alert a > li {
+	display:flex;
+	position: relative;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: flex-start;
+	transition: all 0.3s ease;
+}
+ul.alert a:nth-child(even) > li {
+	background-color:#B3C4C8;
+}
+ul.alert a:hover > li {
+		background-color:#047F92;
+		color:#FFFFFF;
+	}
+ul.alert li > .alert-item {
+	display:flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	position:relative;
+	/*width:calc(10% - 20px);*/
+	padding:10px 5px 10px 15px;
+}
+ul.alert li > .alert-item.time {
+	width:calc(18% - 20px);
+}
+ul.alert li > .alert-item.area {
+	width:calc(25% - 20px);
+}
+ul.alert li > .alert-item.category {
+	width:calc(10% - 20px);
+}
+ul.alert li > .alert-item.reason {
+	width:calc(22% - 20px);
+}
+ul.alert li > .alert-item.order {
+	width:calc(10% - 20px);
+}
+ul.alert li > .alert-item.action {
+	width:calc(15% - 20px);
+	justify-content: flex-end !important;
+}
+ul.alert li > .alert-item > span.alert-title {
+	display:none;
+}
+a.btn-alert-details {
+	display:none;
+}
+.alert-number {
+	display:inline-block;
+	float:right;
+	height:32px;
+	width:auto;
+	padding:0 16px;
+	border-radius:16px;
+	background-color:#B8C8CA;
+	font-size:12px;
+	line-height:32px;
+}
+/* table for ipad */
+@media only screen and (max-width: 1023px) {
+	ul.alert li.table-title {
+		display:none;
+	}
+	ul.alert li, ul.alert a > li {
+		flex-wrap:wrap;
+		justify-content: flex-start;
+		max-height: 160px;
+    	padding:5px 5px 5px 15px;
+	}
+	ul.alert li > .alert-item.time {
+		width:calc(50% - 82px);
+		padding:5px 5px 5px 15px;
+	}
+	ul.alert li > .alert-item.area {
+		width:calc(50% - 82px);
+		padding:5px 5px 5px 15px;
+	}
+	ul.alert li > .alert-item.category {
+		width:calc(50% - 82px);
+		padding:5px 5px 5px 15px;
+	}
+	ul.alert li > .alert-item.reason {
+		width:calc(50% - 82px);
+		padding:5px 5px 5px 15px;
+	}
+	ul.alert li > .alert-item.order {
+		width:calc(50% - 82px);
+		padding:5px 5px 5px 15px;
+	}
+	ul.alert li > .alert-item.action {
+		width:100px;
+		position: absolute;
+    	right: 0;
+    	top: 0;
+		padding:5px 5px 5px 15px;
+	}
+	ul.alert li > .alert-item > span.alert-title {
+		display:inline-block;
+		width:10vw;
+		color: #047F92;
+	}
+}
+/* table for mobile */
+@media only screen and (max-width: 580px) {
+	ul.alert {
+		margin:0 -10px;
+		padding: 0 0 0 10px;
+		overflow-x: hidden;
+	}
+	ul.alert li, ul.alert a > li {
+		flex-wrap:wrap;
+		max-height: auto;
+		height: auto;
+		margin: 0 -10px;
+		padding:5px 10px;
+	}
+	/*ul.alert li > .alert-item {
+		width:calc(100% - 84px);
+	}*/
+	ul.alert li > .alert-item.time {
+		width:calc(100% - 82px);
+	}
+	ul.alert li > .alert-item.area {
+		width:calc(100% - 82px);
+	}
+	ul.alert li > .alert-item.category {
+		width:calc(100% - 82px);
+	}
+	ul.alert li > .alert-item.reason {
+		width:calc(100% - 82px);
+	}
+	ul.alert li > .alert-item.order {
+		width:calc(100% - 82px);
+	}
+	ul.alert li > .alert-item.action {
+		width:60px;
+		right: -10px;
+		flex-direction:column;
+	}
+	ul.alert li > .alert-item > span.alert-title {
+		width:20vw;
+	}
+	.alert-number {
+		float:none;
+		position:absolute;
+		top:-29px;
+		right:0px;
+	}
+}
+/* table end */
+.btn-sorting {
+	display:block;
+	position: absolute;
+	top:6px;
+	left:3px;
+	font-size:10px;
+	line-height: 10px;
+}
+@media only screen and (max-width: 1023px) {
+	.btn-sorting {
+		top:5px;
+	}
+}
+.btn-sorting > .btn-sort-up, .btn-sorting > .btn-sort-down {
+	display:block;
+	margin-bottom:-3px;
+	cursor: default;
+}
+.btn-sorting > .btn-sort-up {
+	transform: scaleY(-1);
+}
+.btn-sorting > .btn-sort-up > span.off, .btn-sorting > .btn-sort-down > span.off {
+	color:transparent;
+}
+.btn-sorting > .btn-sort-up > span.on, .btn-sorting > .btn-sort-down > span.on {
+	color:#999999;
+}
+.btn-sorting > .btn-sort-up > span.active, .btn-sorting > .btn-sort-down > span.active {
+	color:#047F92;
+}
+.btn-alert-action, .btn-alert-action-grey {
+	display:inline-block;
+	height:32px;
+	width:32px;
+	font-size:24px;
+	text-align:center;
+	text-decoration: none;
+	line-height:32px;
+	background-color:#F2F2F2;
+	color:#047F92;
+	border-radius:6px;
+	margin-left:5px;
+	margin-bottom:0px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+.btn-alert-action {
+	color:#047F92;
+}
+.btn-alert-action-grey {
+	color:#CCCCCC;
+}
+.btn-alert-action:hover, .btn-alert-action-grey:hover {
+	color:#FFFFFF;
+	background-color: #06AFC9;
+}
+.ico-alert-list {
+	display:inline-block;
+	font-size:18px;
+	margin-right:5px;
+	
+	vertical-align: middle;
+}
+@media only screen and (max-width: 580px) {
+	.btn-alert-action, .btn-alert-action-grey {
+		margin-left:0px;
+		margin-bottom:5px;
+	}
+}
+.unread {
+	font-weight: bold;
+}
+.read {
+	font-weight: normal;
+}

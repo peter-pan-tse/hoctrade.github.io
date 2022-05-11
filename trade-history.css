@@ -21,6 +21,7 @@ ul.trade-history li {
 	flex-direction: row;
 	flex-wrap: nowrap;
 	justify-content: flex-start;
+	transition: all 0.3s ease;
 }
 ul.trade-history li:nth-child(even) {
 	background-color:#B3C4C8;

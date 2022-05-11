@@ -1,0 +1,785 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="jquery-3.6.0.min.js" language="javascript"></script>
+<link href="https://fonts.googleapis.com/css?family=Noto Sans:400,700,900" rel="stylesheet">
+<link href="font.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+<link href="chart.css" rel="stylesheet">
+<link href="menu.css" rel="stylesheet">
+<link href="alert.css" rel="stylesheet">
+<link href="burger-menu.css" rel="stylesheet">
+<link href="modal-alert.css" rel="stylesheet">
+<link rel="icon" href="favicon.svg">
+<title>hoc-trade alerts</title>
+<script>
+	$(function(){
+		$('.open-btn').on('click', function(){
+			$(this).toggleClass('close-btn')
+		});
+	});
+</script>
+<style>
+	.breadcrumb {
+		margin-bottom: 20px !important;
+	}
+	.desktop {
+		display:block;
+	}
+	.mobile {
+		display:none;
+	}
+	@media only screen and (max-width: 580px) {
+		.desktop {
+		display:none;
+		}
+		.mobile {
+			display:block;
+		}
+	}
+	.pagination {
+		display:inline-block;
+		height:24px;
+		min-width:25px;
+		padding:0 10px;
+		background-color: #06AFC9;
+		border-radius:6px 0 0 6px;
+		color:#FFFFFF;
+		font-size: 12px;
+		line-height: 24px;
+		font-weight: bold;
+	}
+	.open-btn-page {
+		display:inline-block;
+		width:24px;
+		height:24px;
+		text-align: center;
+		border-radius:0 6px 6px 0;
+		font-size:16px;
+		text-decoration:none;
+		transition: all 0.3s ease;
+		cursor:pointer;
+	}
+	.open-btn-page {
+		background-color: #D9D0BF;
+		color: #047F92;
+	}
+	.open-btn-page:hover {
+		background-color: #06AFC9;
+		color: #FFFFFF;
+	}
+	.modal-content {
+		padding:60px 0 0 0;
+		border-radius:20px 20px 0 0;
+	}
+</style>
+</head>
+<body>
+	<!--header and menu -->
+	<div class="header">
+		<div style="display:flex; flex-direction:row; justify-content: flex-start;">
+			<div class="logo"><span class="ht-logo"></span></div>
+			<div class="p-menu">
+				<a class="menu-item active" href="#">Dashboard</a>
+				<a class="menu-item" href="#">Scoreboard</a>
+			</div>
+		</div>
+		<div class="right-menu">
+			<a class="right-menu-item" href="#"><span class="ht-bell"></span><div class="ico-number">5</div></a>
+			<a class="right-menu-item" href="#"><span class="ht-search"></span></a>
+			<div class="member-menu">
+				<div class="profile-pic"></div>
+				<div class="user-profile"><span class="ht-wallet"><div class="ico-verified"><span class="ht-verified"></span></div></span>Winnie-fx-demo</div>
+				<div class="open-btn"><label for="member-menu-toggle"><span class="ht-triangle"></span></label></div>
+				<input type="checkbox" id="member-menu-toggle"/>
+				<ul id="member-menu-dropdown">
+					<hr class="dropmenu-separator" />
+					<li class="switch-menu">Switch trade account</li>
+					<li>
+						<a class="active" href="#"><span class="ht-wallet icon"><div class="ico-verified"><span class="ht-verified"></span></div></span>Winnie-fx-demo</a>
+					</li>
+					<li>
+						<a href="#"><span class="ht-wallet icon"><div class="ico-verified"><span class="ht-verified"></span></div></span>Winnie-fx-live</a>
+					</li>
+					<li>
+						<a href="#"><span class="ht-wallet icon"></span>Winnie-fx-open</a>
+					</li>
+					<hr class="dropmenu-separator" />
+					<li>
+						<a href="#"><span class="ht-wallet-setting icon"></span>Trade account setting</a>
+					</li>
+					<li>
+						<a href="#"><span class="ht-wallet-add icon"></span>Add trade account</a>
+					</li>
+					<hr class="dropmenu-separator" />
+					<li class="switch-menu">
+						<div><span class="ht-moon icon"></span>Dark mode</div>
+						<label class="switch">
+						  <input type="checkbox">
+						  <span class="slider round"></span>
+						</label>
+					</li>
+					<li>
+						<a href="#"><span class="ht-support icon"></span>Help &amp; support</a>
+					</li>
+					<li>
+						<a href="#"><span class="ht-logout icon"></span>Logout</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<nav class="vertical">
+		<ul>
+			<li>
+				<a href="#"><span class="ht-dashboard"></span></a>
+				<ul>
+					<li class="submenu-title">Overview</li>
+					<li><a href="account-overview.html"><span class="ht-wallet"></span>Account overview</a></li>
+					<li><a href="basic-stat.html"><span class="ht-pie-chart"></span>Basic statistics</a></li>
+					<li><a href="advanced-stat.html"><span class="ht-cluster-chart"></span>Advanced statistics</a></li>
+					<li><a href="trade-history.html"><span class="ht-clipboard"></span>Trade history</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#"><span class="ht-bar-chart"></span></a>
+				<ul>
+					<li class="submenu-title">Analysis</li>
+					<li><a href="ta-customized.html"><span class="ht-star"></span>Customized</a></li>
+					<li><a href="ta-general.html"><span class="ht-bar-chart"></span>General</a></li>
+					<li><a href="ta-behavioral.html"><span class="ht-coffee"></span>Behavioral</a></li>
+					<li><a href="ta-timing.html"><span class="ht-timing"></span>Timing</a></li>
+					<li><a href="ta-risk-mgt.html"><span class="ht-alert"></span>Risk management</a></li>
+					<li><a href="ta-strategy.html"><span class="ht-chess-castle"></span>Strategy</a></li>
+					<li><a href="ta-costs.html"><span class="ht-coins"></span>Costs</a></li>
+				</ul>
+			</li>
+			<li class="active">
+				<a href="alert.html"><span class="ht-bell"></span></a>
+			</li>
+		</ul>
+	</nav>  
+	<!-- mobile menu -->
+	<nav role="navigation">
+		<div id="mobileMenuToggle">
+			<!--A fake / hidden checkbox is used as click reciever, so you can use the :checked selector on it.-->
+			<input type="checkbox" />
+			<!--Some spans to act as a hamburger. They are acting like a real hamburger, not that McDonalds stuff.-->
+			<span></span>
+			<span></span>
+			<span></span>
+			<!-- Too bad the menu has to be inside of the button but hey, it's pure CSS magic.-->
+			<ul id="mobileMenu">
+				<li>
+					<div class="p-menu-mobile">
+						<a class="active" href="#">Dashboard</a>
+						<a href="#">Scoreboard</a>
+					</div>
+				</li>
+				<li>
+					<div class="s-menu-title"><div><span class="ht-dashboard"></span></div>Dashboard</div>
+					<div class="s-menu-group">
+						<a class="s-menu-item" href="account-overview.html"><span class="ht-wallet"></span>Account overview</a>
+						<a class="s-menu-item" href="basic-atat.html"><span class="ht-pie-chart"></span>Basic statistics</a>
+						<a class="s-menu-item" href="advanced-stat.html"><span class="ht-cluster-chart"></span>Advanced statistics</a>
+						<a class="s-menu-item" href="trade-history.html"><span class="ht-clipboard"></span>Trade history</a>
+					</div>
+				</li>
+				<li>
+					<div class="s-menu-title"><div><span class="ht-bar-chart"></span></div>Analysis</div>
+					<div class="s-menu-group">
+						<a class="s-menu-item" href="ta-customized.html"><span class="ht-star"></span>Customized</a>
+						<a class="s-menu-item" href="ta-general.html"><span class="ht-bar-chart"></span>General</a>
+						<a class="s-menu-item" href="ta-behavioral.html"><span class="ht-coffee"></span>Behavioral</a>
+						<a class="s-menu-item" href="ta-timing.html"><span class="ht-timing"></span>Timing</a>
+						<a class="s-menu-item" href="ta-risk-mgt.html"><span class="ht-alert"></span>Risk management</a>
+						<a class="s-menu-item" href="ta-strategy.html"><span class="ht-chess-castle"></span>Strategy</a>
+						<a class="s-menu-item" href="ta-costs.html"><span class="ht-coins"></span>Costs</a>
+					</div>
+				</li>
+				<li>
+					<a href="alert.html"><div class="s-menu-title active"><div><span class="ht-bell"></span></div>Alerts</div></a>
+				</li>
+			</ul>
+			<div class="mobileMenuMask"></div>
+		</div>
+	</nav>
+	<!-- mobile menu ended -->
+	
+	<!-- main content area -->
+	<!-- breadcrumb -->
+	<div class="breadcrumb">Dashboard / <span class="active">Alerts</span></div>
+	<!-- breadcrumb ended -->
+	<div class="main-content-container">
+		
+		<!--<div class="desktop">-->
+			<div class="top-btn-group" style="display:block; clear:both; height:29px;">
+				<a class="btn-icon on" href="#" style="font-size:14px; vertical-align: top;">All</a><a class="btn-icon" href="#"><span class="ht-neg-chart"></span></a><a class="btn-icon" href="#"><span class="ht-speedometer"></span></a><a class="btn-icon" href="#"><span class="ht-alert-chart"></span></a>
+			</div>
+			<div class="top-btn-group" style="display:block; clear:both; position:relative;">
+				<a class="btn-icon on" href="#" style="font-size:14px; vertical-align: top;">All</a><a class="btn-icon" href="#"><span class="ht-coffee"></span></a><a class="btn-icon" href="#"><span class="ht-timing"></span></a><a class="btn-icon" href="#"><span class="ht-alert"></span></a><a class="btn-icon" href="#"><span class="ht-chess-castle"></span></a><a class="btn-icon" href="#"><span class="ht-coins"></span></a>
+				<div class="alert-number"><strong>5 new alerts</strong> / Total: 554</div>
+			</div>
+		<!--</div>-->
+
+		<!--<div class="mobile">
+			<div style="display: flex; flex-direction: row; justify-content: space-between; margin:20px 0;">
+				<div class="top-btn-group" style="display:block; clear:both; height:29px;">
+					<a class="btn-icon on" href="#" style="font-size:14px; vertical-align: top;">All</a><a class="btn-icon" href="#"><span class="ht-neg-chart"></span></a><a class="btn-icon" href="#"><span class="ht-speedometer"></span></a><a class="btn-icon" href="#"><span class="ht-alert-chart"></span></a>
+				</div>
+				<div>
+					<div class="btn-prev"><a class="btn-page" href="#" style="padding:2px 4px;"><span class="ht-triangle"></span></a></div>
+					<div class="pagination">1</div><div class="open-btn-page"><label for="page-menu-toggle"><span class="ht-triangle"></span></label></div>
+					<div class="btn-next"><a class="btn-page" href="#" style="padding:2px 4px;"><span class="ht-triangle"></span></a></div>
+				</div>	
+			</div>
+			<div class="top-btn-group" style="display:block; clear:both;">
+				<a class="btn-icon on" href="#" style="font-size:14px; vertical-align: top;">All</a><a class="btn-icon" href="#"><span class="ht-coffee"></span></a><a class="btn-icon" href="#"><span class="ht-timing"></span></a><a class="btn-icon" href="#"><span class="ht-alert"></span></a><a class="btn-icon" href="#"><span class="ht-chess-castle"></span></a><a class="btn-icon" href="#"><span class="ht-coins"></span></a>
+				<div class="alert-number"><strong>5 new alerts</strong> / Total: 554</div>
+			</div>
+		</div>-->
+		<!-- table -->
+		<ul class="alert">
+			<!--table title -->
+			<li class="table-title">
+				<div class="alert-item time">
+					<div class="btn-sorting">
+						<div class="btn-sort-up"><span class="ht-triangle on"></span></div>
+						<div class="btn-sort-down"><span class="ht-triangle active"></span></div>
+					</div>
+					Time
+				</div>
+				<div class="alert-item area">
+					<div class="btn-sorting">
+						<div class="btn-sort-up"><span class="ht-triangle off"></span></div>
+						<div class="btn-sort-down"><span class="ht-triangle off"></span></div>
+					</div>
+					<span style="color:#033C45;">Area</span>
+				</div>
+				<div class="alert-item category">
+					<div class="btn-sorting">
+						<div class="btn-sort-up"><span class="ht-triangle off"></span></div>
+						<div class="btn-sort-down"><span class="ht-triangle off"></span></div>
+					</div>
+					Category
+				</div>
+				<div class="alert-item reason">
+					<div class="btn-sorting">
+						<div class="btn-sort-up"><span class="ht-triangle off"></span></div>
+						<div class="btn-sort-down"><span class="ht-triangle off"></span></div>
+					</div>
+					Reason
+				</div>
+				<div class="alert-item order">
+					<div class="btn-sorting">
+						<div class="btn-sort-up"><span class="ht-triangle off"></span></div>
+						<div class="btn-sort-down"><span class="ht-triangle off"></span></div>
+					</div>
+					Order
+				</div>
+				<div class="alert-item action">
+					<a class="btn-general" href="#" target="_blank"><span class="ht-video"></span> All videos</a>
+				</div>
+			</li>
+			<!--table title end -->
+			<a id="modalinfo1">
+				<li class="unread">
+					<div class="alert-item time">
+						<span class="alert-title">
+							<div class="btn-sorting">
+								<div class="btn-sort-up"><span class="ht-triangle on"></span></div>
+								<div class="btn-sort-down"><span class="ht-triangle active"></span></div>
+							</div>
+							Time:
+						</span>
+						Mar-25-2022 19:56:02
+					</div>
+					<div class="alert-item area">
+						<span class="alert-title">
+							<div class="btn-sorting">
+								<div class="btn-sort-up"><span class="ht-triangle off"></span></div>
+								<div class="btn-sort-down"><span class="ht-triangle off"></span></div>
+							</div>
+							Area:
+						</span>
+						<span class="ico-alert-list ht-alert"></span><span>Risk after losing trade(s)</span>
+					</div>
+					<div class="alert-item category">
+						<span class="alert-title">
+							<div class="btn-sorting">
+								<div class="btn-sort-up"><span class="ht-triangle off"></span></div>
+								<div class="btn-sort-down"><span class="ht-triangle off"></span></div>
+							</div>
+							Category:
+						</span>
+						4-6 trades
+					</div>
+					<div class="alert-item reason">
+						<span class="alert-title">
+							<div class="btn-sorting">
+								<div class="btn-sort-up"><span class="ht-triangle off"></span></div>
+								<div class="btn-sort-down"><span class="ht-triangle off"></span></div>
+							</div>
+							Reason:
+						</span>
+						<span class="ico-alert-list ht-neg-chart"></span><span>New loss making pattern</span>
+					</div>
+					<div class="alert-item order">
+						<span class="alert-title">
+							<div class="btn-sorting">
+								<div class="btn-sort-up"><span class="ht-triangle off"></span></div>
+								<div class="btn-sort-down"><span class="ht-triangle off"></span></div>
+							</div>
+							Order:
+						</span>
+						1234567890
+					</div>
+					<div class="alert-item action">
+						<div class="btn-alert-action"><span class="ht-trash"></span></div>
+						<div class="btn-alert-action"><span class="ht-envelope"></span></div>
+					</div>
+				</li>
+			</a>
+			
+			<a id="modalinfo2">
+				<li class="unread">
+					<div class="alert-item time">
+						<span class="alert-title">
+							<div class="btn-sorting">
+								<div class="btn-sort-up"><span class="ht-triangle on"></span></div>
+								<div class="btn-sort-down"><span class="ht-triangle active"></span></div>
+							</div>
+							Time:
+						</span>
+						Mar-24-2022 09:00:00
+					</div>
+					<div class="alert-item area">
+						<span class="alert-title">
+							<div class="btn-sorting">
+								<div class="btn-sort-up"><span class="ht-triangle off"></span></div>
+								<div class="btn-sort-down"><span class="ht-triangle off"></span></div>
+							</div>
+							Area:
+						</span>
+						<span class="ico-alert-list ht-timing"></span><span>Profit if trade close earlier/later</span>
+					</div>
+					<div class="alert-item category">
+						<span class="alert-title">
+							<div class="btn-sorting">
+								<div class="btn-sort-up"><span class="ht-triangle off"></span></div>
+								<div class="btn-sort-down"><span class="ht-triangle off"></span></div>
+							</div>
+							Category:
+						</span>
+						-5m
+					</div>
+					<div class="alert-item reason">
+						<span class="alert-title">
+							<div class="btn-sorting">
+								<div class="btn-sort-up"><span class="ht-triangle off"></span></div>
+								<div class="btn-sort-down"><span class="ht-triangle off"></span></div>
+							</div>
+							Reason:
+						</span>
+						<span class="ico-alert-list ht-speedometer"></span><span>Risky behavior</span>
+					</div>
+					<div class="alert-item order">
+						<span class="alert-title">
+							<div class="btn-sorting">
+								<div class="btn-sort-up"><span class="ht-triangle off"></span></div>
+								<div class="btn-sort-down"><span class="ht-triangle off"></span></div>
+							</div>
+							Order:
+						</span>
+						1234567890
+					</div>
+					<div class="alert-item action">
+						<div class="btn-alert-action"><span class="ht-trash"></span></div>
+						<div class="btn-alert-action"><span class="ht-envelope"></span></div>
+					</div>
+				</li>
+			</a>
+			<a id="modalinfo3">
+				<li class="unread">
+					<div class="alert-item time">
+						<span class="alert-title">
+							<div class="btn-sorting">
+								<div class="btn-sort-up"><span class="ht-triangle on"></span></div>
+								<div class="btn-sort-down"><span class="ht-triangle active"></span></div>
+							</div>
+							Time:
+						</span>
+						Mar-25-2022 19:56:02
+					</div>
+					<div class="alert-item area">
+						<span class="alert-title">
+							<div class="btn-sorting">
+								<div class="btn-sort-up"><span class="ht-triangle off"></span></div>
+								<div class="btn-sort-down"><span class="ht-triangle off"></span></div>
+							</div>
+							Area:
+						</span>
+						<span class="ico-alert-list ht-timing"></span><span>% of trades stopped early in profit</span>
+					</div>
+					<div class="alert-item category">
+						<span class="alert-title">
+							<div class="btn-sorting">
+								<div class="btn-sort-up"><span class="ht-triangle off"></span></div>
+								<div class="btn-sort-down"><span class="ht-triangle off"></span></div>
+							</div>
+							Category:
+						</span>
+						Stopped early
+					</div>
+					<div class="alert-item reason">
+						<span class="alert-title">
+							<div class="btn-sorting">
+								<div class="btn-sort-up"><span class="ht-triangle off"></span></div>
+								<div class="btn-sort-down"><span class="ht-triangle off"></span></div>
+							</div>
+							Reason:
+						</span>
+						<span class="ico-alert-list ht-alert-chart"></span><span>Action in pattern</span>
+					</div>
+					<div class="alert-item order">
+						<span class="alert-title">
+							<div class="btn-sorting">
+								<div class="btn-sort-up"><span class="ht-triangle off"></span></div>
+								<div class="btn-sort-down"><span class="ht-triangle off"></span></div>
+							</div>
+							Order:
+						</span>
+						1234567890
+					</div>
+					<div class="alert-item action">
+						<div class="btn-alert-action"><span class="ht-trash"></span></div>
+						<div class="btn-alert-action"><span class="ht-envelope"></span></div>
+					</div>
+				</li>
+			</a>
+			<a id="modalinfo4">
+				<li class="unread">
+					<div class="alert-item time">
+						<span class="alert-title">
+							<div class="btn-sorting">
+								<div class="btn-sort-up"><span class="ht-triangle on"></span></div>
+								<div class="btn-sort-down"><span class="ht-triangle active"></span></div>
+							</div>
+							Time:
+						</span>
+						Mar-25-2022 19:56:02
+					</div>
+					<div class="alert-item area">
+						<span class="alert-title">
+							<div class="btn-sorting">
+								<div class="btn-sort-up"><span class="ht-triangle off"></span></div>
+								<div class="btn-sort-down"><span class="ht-triangle off"></span></div>
+							</div>
+							Area:
+						</span>
+						<span class="ico-alert-list ht-chess-castle"></span><span>Profit during overbought/oversold market</span>
+					</div>
+					<div class="alert-item category">
+						<span class="alert-title">
+							<div class="btn-sorting">
+								<div class="btn-sort-up"><span class="ht-triangle off"></span></div>
+								<div class="btn-sort-down"><span class="ht-triangle off"></span></div>
+							</div>
+							Category:
+						</span>
+						oversold
+					</div>
+					<div class="alert-item reason">
+						<span class="alert-title">
+							<div class="btn-sorting">
+								<div class="btn-sort-up"><span class="ht-triangle off"></span></div>
+								<div class="btn-sort-down"><span class="ht-triangle off"></span></div>
+							</div>
+							Reason:
+						</span>
+						<span class="ico-alert-list ht-speedometer"></span><span>Risky behavior</span>
+					</div>
+					<div class="alert-item order">
+						<span class="alert-title">
+							<div class="btn-sorting">
+								<div class="btn-sort-up"><span class="ht-triangle off"></span></div>
+								<div class="btn-sort-down"><span class="ht-triangle off"></span></div>
+							</div>
+							Order:
+						</span>
+						1234567890
+					</div>
+					<div class="alert-item action">
+						<div class="btn-alert-action"><span class="ht-trash"></span></div>
+						<div class="btn-alert-action"><span class="ht-envelope"></span></div>
+					</div>
+				</li>
+			</a>
+			<a id="modalinfo5">
+				<li class="unread">
+					<div class="alert-item time">
+						<span class="alert-title">
+							<div class="btn-sorting">
+								<div class="btn-sort-up"><span class="ht-triangle on"></span></div>
+								<div class="btn-sort-down"><span class="ht-triangle active"></span></div>
+							</div>
+							Time:
+						</span>
+						Mar-25-2022 19:56:02
+					</div>
+					<div class="alert-item area">
+						<span class="alert-title">
+							<div class="btn-sorting">
+								<div class="btn-sort-up"><span class="ht-triangle off"></span></div>
+								<div class="btn-sort-down"><span class="ht-triangle off"></span></div>
+							</div>
+							Area:
+						</span>
+						<span class="ico-alert-list ht-coffee"></span><span>Open different symbols</span>
+					</div>
+					<div class="alert-item category">
+						<span class="alert-title">
+							<div class="btn-sorting">
+								<div class="btn-sort-up"><span class="ht-triangle off"></span></div>
+								<div class="btn-sort-down"><span class="ht-triangle off"></span></div>
+							</div>
+							Category:
+						</span>
+						5 symbols
+					</div>
+					<div class="alert-item reason">
+						<span class="alert-title">
+							<div class="btn-sorting">
+								<div class="btn-sort-up"><span class="ht-triangle off"></span></div>
+								<div class="btn-sort-down"><span class="ht-triangle off"></span></div>
+							</div>
+							Reason:
+						</span>
+						<span class="ico-alert-list ht-speedometer"></span><span>Risky behavior</span>
+					</div>
+					<div class="alert-item order">
+						<span class="alert-title">
+							<div class="btn-sorting">
+								<div class="btn-sort-up"><span class="ht-triangle off"></span></div>
+								<div class="btn-sort-down"><span class="ht-triangle off"></span></div>
+							</div>
+							Order:
+						</span>
+						1234567890
+					</div>
+					<div class="alert-item action">
+						<div class="btn-alert-action"><span class="ht-trash"></span></div>
+						<div class="btn-alert-action"><span class="ht-envelope"></span></div>
+					</div>
+				</li>
+			</a>
+			<a id="modalinfo6">
+				<li class="read">
+					<div class="alert-item time">
+						<span class="alert-title">
+							<div class="btn-sorting">
+								<div class="btn-sort-up"><span class="ht-triangle on"></span></div>
+								<div class="btn-sort-down"><span class="ht-triangle active"></span></div>
+							</div>
+							Time:
+						</span>
+						Mar-24-2022 09:00:00
+					</div>
+					<div class="alert-item area">
+						<span class="alert-title">
+							<div class="btn-sorting">
+								<div class="btn-sort-up"><span class="ht-triangle off"></span></div>
+								<div class="btn-sort-down"><span class="ht-triangle off"></span></div>
+							</div>
+							Area:
+						</span>
+						<span class="ico-alert-list ht-coins"></span><span>Profit, secured, payoff from reverting trades</span>
+					</div>
+					<div class="alert-item category">
+						<span class="alert-title">
+							<div class="btn-sorting">
+								<div class="btn-sort-up"><span class="ht-triangle off"></span></div>
+								<div class="btn-sort-down"><span class="ht-triangle off"></span></div>
+							</div>
+							Category:
+						</span>
+						Revert trade
+					</div>
+					<div class="alert-item reason">
+						<span class="alert-title">
+							<div class="btn-sorting">
+								<div class="btn-sort-up"><span class="ht-triangle off"></span></div>
+								<div class="btn-sort-down"><span class="ht-triangle off"></span></div>
+							</div>
+							Reason:
+						</span>
+						<span class="ico-alert-list ht-speedometer"></span><span>Risky behavior</span>
+					</div>
+					<div class="alert-item order">
+						<span class="alert-title">
+							<div class="btn-sorting">
+								<div class="btn-sort-up"><span class="ht-triangle off"></span></div>
+								<div class="btn-sort-down"><span class="ht-triangle off"></span></div>
+							</div>
+							Order:
+						</span>
+						1234567890
+					</div>
+					<div class="alert-item action">
+						<div class="btn-alert-action"><span class="ht-trash"></span></div>
+						<div class="btn-alert-action-grey"><span class="ht-envelope-open"></span></div>
+					</div>
+				</li>
+			</a>
+			<a id="modalinfo7">
+				<li class="read">
+					<div class="alert-item time">
+						<span class="alert-title">
+							<div class="btn-sorting">
+								<div class="btn-sort-up"><span class="ht-triangle on"></span></div>
+								<div class="btn-sort-down"><span class="ht-triangle active"></span></div>
+							</div>
+							Time:
+						</span>
+						Mar-25-2022 19:56:02
+					</div>
+					<div class="alert-item area">
+						<span class="alert-title">
+							<div class="btn-sorting">
+								<div class="btn-sort-up"><span class="ht-triangle off"></span></div>
+								<div class="btn-sort-down"><span class="ht-triangle off"></span></div>
+							</div>
+							Area:
+						</span>
+						<span class="ico-alert-list ht-coffee"></span><span>Open different symbols</span>
+					</div>
+					<div class="alert-item category">
+						<span class="alert-title">
+							<div class="btn-sorting">
+								<div class="btn-sort-up"><span class="ht-triangle off"></span></div>
+								<div class="btn-sort-down"><span class="ht-triangle off"></span></div>
+							</div>
+							Category:
+						</span>
+						5 symbols
+					</div>
+					<div class="alert-item reason">
+						<span class="alert-title">
+							<div class="btn-sorting">
+								<div class="btn-sort-up"><span class="ht-triangle off"></span></div>
+								<div class="btn-sort-down"><span class="ht-triangle off"></span></div>
+							</div>
+							Reason:
+						</span>
+						<span class="ico-alert-list ht-alert-chart"></span><span>Action in pattern</span>
+					</div>
+					<div class="alert-item order">
+						<span class="alert-title">
+							<div class="btn-sorting">
+								<div class="btn-sort-up"><span class="ht-triangle off"></span></div>
+								<div class="btn-sort-down"><span class="ht-triangle off"></span></div>
+							</div>
+							Order:
+						</span>
+						9685741203
+					</div>
+					<div class="alert-item action">
+						<div class="btn-alert-action"><span class="ht-trash"></span></div>
+						<div class="btn-alert-action-grey"><span class="ht-envelope-open"></span></div>
+					</div>
+				</li>
+			</a>
+		</ul>
+		<!-- table end -->
+		<div class="desktop">
+			<div style="display: flex; flex-direction: row; justify-content: flex-end; margin:20px 0;">
+				<a class="btn-ff btn-rw" href="#"><span class="ht-f-forward"></span></a>
+				<div class="btn-prev"><a class="btn-page" href="#" style="border-radius: 0 0 6px 6px; padding:2px 4px;"><span class="ht-triangle"></span></a></div>
+				<a class="btn-page-num active" href="#">1</a><a class="btn-page-num" href="#">2</a><a class="btn-page-num" href="#">3</a><a class="btn-page-num" href="#">4</a><a class="btn-page-num" href="#">5</a><a class="btn-page-num" href="#">6</a><a class="btn-page-num" href="#">7</a><a class="btn-page-num" href="#">8</a><a class="btn-page-num" href="#">9</a><a class="btn-page-num" href="#">10</a>
+				<div class="btn-next"><a class="btn-page" href="#" style="border-radius: 0 0 6px 6px; padding:2px 4px;"><span class="ht-triangle"></span></a></div>
+				<a class="btn-ff" href="#"><span class="ht-f-forward"></span></a>
+			</div>
+		</div>
+	</div><!-- main-content-container -->
+	<!-- main content area end -->
+	
+	<div class="footer">
+		<span class="ht-logo"></span><strong>hoc-trade</strong>&nbsp;&nbsp;&nbsp; copy; 2022 hoc-trade limited, all rights reserved<span class="separator">|</span><a href="#">Terms &amp; conditions</a><span class="separator">|</span><a href="#">Privacy policy</a><span class="separator">|</span><a href="#">advertise with us</a><span class="separator">|</span><a href="#">About us</a><span class="separator">|</span><a class="social" href="#"><span class="ht-logo-fb"></span></a><a class="social" href="#"><span class="ht-logo-twitter"></span></a><a class="social" href="#"><span class="ht-logo-in"></span></a><a class="social" href="#"><span class="ht-logo-yt"></span></a>
+		<p class="disclaimer">HIGH RISK WARNING: Foreign exchange and other CFD trading carries a high level of risk and may not be suitable for everyone. The usage of leverage creates additional risk and loss exposure. Your investment objectives, experience level and risk tolerance have to be taken into consideration before you decide to trade foreign exchange or other CFD products. You could lose some or all of your entire investment. Do not invest money that you cannot afford to lose and always use an appropriate risk management. It’s important to educate yourself on the risks associated with foreign exchange trading, and seek professional advice from an independent financial or tax advisor in case of any questions. Any data and information is provided ‘as is’ solely for informational purposes, and is not intended for trading purposes or advice. Past performance, which are presented on this website or you find somewhere else, is not indicative of future results.</p>
+	</div>
+	
+	<!-- The Modal -->
+	<div id="modalInfoBox" class="modal">
+		<!-- Modal content -->
+
+	  <div class="modal-content">
+		<div class="modal-header">
+			<span class="close"><span class="ht-cross"></span></span>
+		</div>
+		<div class="modal-body">
+			<ul class="alert">
+				<li style="max-height:calc(100vh - 10px); height: auto; background-color:#E9F3F5;">
+					<div class="alert-item">
+						<span class="alert-title">Order:</span>
+						1234567890
+					</div>
+					<div class="alert-item">
+						<span class="alert-title">Open:</span>
+						<div style="display: inline-block;">24/03/2022 19:56:02</div>
+					</div>
+					<div class="alert-item">
+						<span class="alert-title">Close:</span>
+						<div style="display: inline-block;">24/03/2022 20:06:13</div>
+					</div>
+					<div class="alert-item">
+						<span class="alert-title">Length:</span>
+						0h10m11s
+					</div>
+					<div class="alert-item">
+						<span class="alert-title">Symbol:</span>
+						EUR/USD <div class="not-mobile"></div>
+					</div>
+					<div class="alert-item">
+						<span class="alert-title">Type:</span>
+						<span class="trade-type-box">BUY</span>
+					</div>
+					<div class="alert-item">
+						<span class="alert-title">Lot:</span>
+						0.05
+					</div>
+					<div class="alert-item">
+						<span class="alert-title">Price open:</span>
+						1.23564
+					</div>
+					<div class="alert-item">
+						<span class="alert-title">Price close:</span>
+						1.23859
+					</div>
+					<div class="alert-item">
+						<span class="alert-title">commission:</span>
+						<span class="text-ng">0.35USD</span>
+					</div>
+					<div class="alert-item">
+						<span class="alert-title">Swap:</span>
+						<span class="text-nu">0.00USD</span>
+					</div>
+					<div class="alert-item">
+						<span class="alert-title">Profit:</span>
+						<span class="text-po"><strong>+4.23USD</strong></span>
+					</div>
+					<div class="alert-item">
+						<span class="alert-title">Profit (pips):</span>
+						<span class="text-po"><strong>+41Pips</strong></span>
+					</div>
+				</li>
+			</ul>
+		</div>
+	  </div>
+
+	</div>
+</body>
+<script src="modal-alert.js" language="javascript"></script>
+</html>

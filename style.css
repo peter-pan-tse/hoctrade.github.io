@@ -262,7 +262,22 @@ a.btn-ff > span, a.btn-page > span  {
 	transform:scaleX(-1);
 	margin-right:5px;
 }
-a.btn-general:hover, a.btn-ff:hover, a.btn-page:hover {
+a.btn-icon {
+	display:inline-block;
+	height:24px;
+	width:24px;
+	background-color: #D9D0BF;
+	text-align: center;
+	text-decoration:none;
+	font-size:22px;
+	font-weight: bold;
+	line-height:24px;
+	color:#047F92;
+	border-radius:6px;
+	transition: all 0.3s ease;
+	margin-right:5px;
+}
+a.btn-general:hover, a.btn-ff:hover, a.btn-page:hover, a.btn-icon.on {
 	background-color: #06AFC9;
 	color:#FFFFFF;
 }
