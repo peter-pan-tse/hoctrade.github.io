@@ -71,8 +71,7 @@
 		color: #FFFFFF;
 	}
 	.modal-content {
-		padding:60px 0 0 0;
-		border-radius:20px 20px 0 0;
+		padding:60px 0 20px 0;
 	}
 </style>
 </head>
@@ -715,70 +714,36 @@
 	<div id="modalInfoBox" class="modal">
 		<!-- Modal content -->
 
-	  <div class="modal-content">
-		<div class="modal-header">
-			<span class="close"><span class="ht-cross"></span></span>
+		<div class="modal-content">
+			<div class="modal-header">
+				<span class="close"><span class="ht-cross"></span></span>
+			</div>
+			<div class="modal-body">
+				We have identified an action in pattern which may cause loss making from <strong>“% of trade stopped early in profit”</strong>. 
+				<br><strong>Category:</strong> Loss trade before
+				<p></p>
+				<div class="alert-details-box">
+					<div class="alert-chart">
+						<div class="alert-chart-container">
+							<div class="chart-header-dark">
+								<div class="tooltip">Chart 3<span class="tooltiptext">Chart 3 tooltip</span></div>
+								<div class="right-btn-box">
+									<a class="btn-action on" href="#"><span class="ht-star"></span></a><a class="btn-action" href="#"><span class="ht-bell"></span></a><a class="btn-action" href="#"><span class="ht-globe"></span></a><a class="btn-info" id="modalinfo3"><span class="ht-info"></span></a>
+								</div>
+							</div>
+							<div class="chart-bg-dark"></div>
+						</div><!-- chart-container -->
+						<a class="btn-general" href="ta-timing.html" style="margin-top:10px;"><span class="ht-timing"></span> Go to Analysis / Timing</a>
+					</div>
+					<div class="alert-video">
+						<div class="modal-video-box">
+							<iframe class="modal-video" src="https://www.youtube.com/embed/LemZIhFS9QI" title="27 Profit of conflicting symbols VV" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+						<a class="btn-general" href="#" style="margin-top:10px;" target="_blank"><span class="ht-video"></span><span class="btn-general-text"></span> See all videos</a>
+					</div>
+				</div>
+			</div>
 		</div>
-		<div class="modal-body">
-			<ul class="alert">
-				<li style="max-height:calc(100vh - 10px); height: auto; background-color:#E9F3F5;">
-					<div class="alert-item">
-						<span class="alert-title">Order:</span>
-						1234567890
-					</div>
-					<div class="alert-item">
-						<span class="alert-title">Open:</span>
-						<div style="display: inline-block;">24/03/2022 19:56:02</div>
-					</div>
-					<div class="alert-item">
-						<span class="alert-title">Close:</span>
-						<div style="display: inline-block;">24/03/2022 20:06:13</div>
-					</div>
-					<div class="alert-item">
-						<span class="alert-title">Length:</span>
-						0h10m11s
-					</div>
-					<div class="alert-item">
-						<span class="alert-title">Symbol:</span>
-						EUR/USD <div class="not-mobile"></div>
-					</div>
-					<div class="alert-item">
-						<span class="alert-title">Type:</span>
-						<span class="trade-type-box">BUY</span>
-					</div>
-					<div class="alert-item">
-						<span class="alert-title">Lot:</span>
-						0.05
-					</div>
-					<div class="alert-item">
-						<span class="alert-title">Price open:</span>
-						1.23564
-					</div>
-					<div class="alert-item">
-						<span class="alert-title">Price close:</span>
-						1.23859
-					</div>
-					<div class="alert-item">
-						<span class="alert-title">commission:</span>
-						<span class="text-ng">0.35USD</span>
-					</div>
-					<div class="alert-item">
-						<span class="alert-title">Swap:</span>
-						<span class="text-nu">0.00USD</span>
-					</div>
-					<div class="alert-item">
-						<span class="alert-title">Profit:</span>
-						<span class="text-po"><strong>+4.23USD</strong></span>
-					</div>
-					<div class="alert-item">
-						<span class="alert-title">Profit (pips):</span>
-						<span class="text-po"><strong>+41Pips</strong></span>
-					</div>
-				</li>
-			</ul>
-		</div>
-	  </div>
-
 	</div>
 </body>
 <script src="modal-alert.js" language="javascript"></script>
