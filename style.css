@@ -318,6 +318,43 @@ a.btn-page-num.active {
 .text-nu {
 	color:#999999;
 }
+/* Tooltip container */
+.tooltip {
+	position: relative;
+}
+/* Tooltip text */
+.tooltip .tooltiptext {
+	display: none;
+	width:auto;
+	/*max-width: 33vw;*/
+	background-color: #047F92;
+	color: #fff;
+	font-size:12px;
+	font-weight: normal;
+	padding: 2px 4px;
+	border-radius: 4px;
+	transition: all 0.3s ease;
+	/* Position the tooltip text - see examples below! */
+	position: absolute;
+	bottom: calc(100% + 5px);
+	z-index: 1;
+	white-space: nowrap;
+}
+.tooltip .tooltiptext::after {
+	content: " ";
+	position: absolute;
+	top: 100%; /* At the bottom of the tooltip */
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #047F92 transparent transparent transparent;
+}
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+	cursor:default;
+	display: block;
+}
 /* footer */
 .footer {
 	display:block;

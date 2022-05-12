@@ -9,6 +9,7 @@ var btn3 = document.getElementById("modalinfo3");
 var btn4 = document.getElementById("modalinfo4");
 var btn5 = document.getElementById("modalinfo5");
 var btn6 = document.getElementById("modalinfo6");
+var btn7 = document.getElementById("modalinfo7");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
@@ -30,6 +31,9 @@ btn5.onclick = function() {
   modal.style.display = "block";
 }
 btn6.onclick = function() {
+  modal.style.display = "block";
+}
+btn7.onclick = function() {
   modal.style.display = "block";
 }
 

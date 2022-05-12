@@ -316,7 +316,7 @@ nav.vertical a{
 nav.vertical li:hover > a{
 	color: #06AFC9;
 }
-nav.vertical li.active >a {
+nav.vertical li.active > a {
 	color: #FFFFFF;
 	background-color: #000000;
 }

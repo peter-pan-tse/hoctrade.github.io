@@ -278,39 +278,293 @@ div.right-btn-box {
 	font-size:10px;
 	color:#FFFFFF !important;
 }
-/* Tooltip container */
-.tooltip {
+/* top 5 chart */
+.top-five-chart-box {
+	display:block;
+	margin: 0 15px 30px;
+}
+.top-5-header {
+	display:block;
+	position:relative;
+	background-color:#C0D2D4;
+	color:#033C45;
+	font-size: 14px;
+	font-weight:bold;
+	height:50px;
+	line-height: 50px;
+	padding:0 10px;
+	border-radius:20px 20px 0 0;
+}
+.top-5-body {
+	display:block;
+	padding:10px 30px 60px;
+	height:100px;
+	background-color: #B8C8CA;
+	border-radius:0 0 20px 20px;
+}
+@media only screen and (max-width: 1023px) {
+	.top-5-body {
+		padding:10px 10px 60px;
+	}
+}
+@media only screen and (max-width: 580px) {
+	.top-five-chart-box {
+		margin: 0 0px 10px;
+	}
+	.top-5-body {
+		padding:10px;
+		height: auto;
+	}
+}
+ul.top-5-bar {
+	display:flex;
+	flex-direction:row;
+	justify-content: space-between;
+	align-items: flex-end;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+ul.top-5-bar li.top-5-profit, ul.top-5-bar li.top-5-loss {
+	display:inline-block;
 	position: relative;
-}
-/* Tooltip text */
-.tooltip .tooltiptext {
-	display: none;
-	width:auto;
-	/*max-width: 33vw;*/
-	background-color: #047F92;
-	color: #fff;
-	font-size:12px;
-	font-weight: normal;
-	padding: 2px 4px;
-	border-radius: 4px;
+	border-radius:10px 10px 0 0;
+	cursor:pointer;
 	transition: all 0.3s ease;
-	/* Position the tooltip text - see examples below! */
-	position: absolute;
-	bottom: calc(100% + 5px);
-	z-index: 1;
 }
-.tooltip .tooltiptext::after {
-	content: " ";
-	position: absolute;
-	top: 100%; /* At the bottom of the tooltip */
-	left: 50%;
-	margin-left: -5px;
-	border-width: 5px;
-	border-style: solid;
-	border-color: #047F92 transparent transparent transparent;
+@media only screen and (max-width: 580px) {
+	ul.top-5-bar {
+		flex-direction:column;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+	ul.top-5-bar li.top-5-profit, ul.top-5-bar li.top-5-loss {
+		display:block;
+		border-radius: 0 3px 3px 0;
+		margin:25px 0 0 0;
+	}
 }
-/* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover .tooltiptext {
-	cursor:default;
-	display: block;
+ul.top-5-bar li.top-5-profit {
+	background-color:#56A07E;
+}
+ul.top-5-bar li.top-5-loss {
+	background-color:#C15357;
+}
+ul.top-5-bar li.top-5-profit:hover {
+	background-color:#009245;
+	box-shadow: 3px 3px 3px rgb(0 0 0 / 0.5);
+}
+ul.top-5-bar li.top-5-loss:hover {
+	background-color:#ED1C24;
+	box-shadow: -3px 3px 3px rgb(0 0 0 / 0.5);
+}
+@media only screen and (max-width: 580px) {
+	ul.top-5-bar li.top-5-profit:hover {
+		box-shadow: none;
+	}
+	ul.top-5-bar li.top-5-loss:hover {
+		box-shadow: none;
+	}
+}
+.top-5-title-profit, .top-5-title-loss {
+	display:flex;
+	position:absolute;
+	width:calc(100% - 10px);
+	left:5px;
+	height:40px;
+	font-size:12px;
+	line-height:1em;
+}
+.top-5-title-profit {
+	text-align: left;
+}
+.top-5-title-loss {
+	text-align: right;
+}
+.top-5-title-profit.top-half, .top-5-title-loss.top-half {
+	color:#FFFFFF;
+	top:5px;
+}
+.top-5-title-profit.bottom-half, .top-5-title-loss.bottom-half {
+	color:#00333B;
+	top:-45px;
+	align-items: flex-end;
+}
+@media only screen and (max-width: 580px) {
+	.top-5-title-profit, .top-5-title-loss {
+		width:auto;
+		left:0px;
+		height:auto;
+		white-space: nowrap;
+	}
+	.top-5-title-loss {
+		text-align: left;
+	}
+	.top-5-title-profit.top-half, .top-5-title-loss.top-half {
+		color:#00333B;
+		top:auto;
+		bottom:15px;
+	}
+	.top-5-title-profit.bottom-half, .top-5-title-loss.bottom-half {
+		color:#00333B;
+		top:auto;
+		bottom:15px;
+		align-items: flex-start;
+	}
+}
+ul.top-5-bar ul.profit-details, ul.top-5-bar ul.loss-details {
+	position:absolute;
+	display:block;
+	height:50px;
+	padding:0;
+	margin: 0;
+	visibility:hidden;
+	opacity:0;
+	transition: opacity 0.3s ease;
+	z-index:700;
+}
+ul.top-5-bar ul.profit-details {
+	left:0px;
+	bottom:-50px;
+}
+ul.top-5-bar ul.loss-details {
+	right:0px;
+	bottom:-50px;
+}
+@media only screen and (max-width: 580px) {
+	ul.top-5-bar ul.profit-details, ul.top-5-bar ul.loss-details {
+		height:auto;
+	}
+	ul.top-5-bar ul.profit-details {
+		left:0px;
+		bottom:auto;
+		top:0px;
+	}
+	ul.top-5-bar ul.loss-details {
+		right:auto;
+		left:0px;
+		bottom:auto;
+		top:0px;
+	}
+}
+ul.top-5-bar ul.profit-details li, ul.top-5-bar ul.loss-details li {
+	display:block;
+	padding:10px;
+	font-size: 12px;
+	line-height: 1em;
+	white-space: nowrap;
+	color:#FFFFFF;
+}
+ul.top-5-bar ul.profit-details li {
+	text-align: left;
+	background-color: #009245;
+	border-radius:0 10px 10px 10px;
+	box-shadow: 3px 3px 3px rgb(0 0 0 / 0.5);
+}
+ul.top-5-bar ul.loss-details li {
+	text-align: right;
+	background-color: #ED1C24;
+	border-radius: 10px 0 10px 10px;
+	box-shadow: -3px 3px 3px rgb(0 0 0 / 0.5);
+}
+@media only screen and (max-width: 580px) {
+	ul.top-5-bar ul.profit-details li, ul.top-5-bar ul.loss-details li {
+		padding:5px;
+		width: calc(100vw - 50px);
+	}
+	ul.top-5-bar ul.profit-details li {
+		border-radius:0 0 6px 6px;
+	}
+	ul.top-5-bar ul.loss-details li {
+		text-align: left;
+		border-radius:0 0 6px 6px;
+		box-shadow: 3px 3px 3px rgb(0 0 0 / 0.5);
+	}
+}
+ul.top-5-bar li:hover > ul{
+	visibility:visible;
+	opacity:1;
+}
+.top-1-p-value {
+	height:100px;
+	width:8%;
+}
+.top-2-p-value {
+	height:51px;
+	width:8%;
+}
+.top-3-p-value {
+	height:25px;
+	width:8%;
+}
+.top-4-p-value {
+	height:15px;
+	width:8%;
+}
+.top-5-p-value {
+	height:8px;
+	width:8%;
+}
+.top-1-l-value {
+	height:90px;
+	width:8%;
+}
+.top-2-l-value {
+	height:77px;
+	width:8%;
+}
+.top-3-l-value {
+	height:52px;
+	width:8%;
+}
+.top-4-l-value {
+	height:30px;
+	width:8%;
+}
+.top-5-l-value {
+	height:10px;
+	width:8%;
+}
+@media only screen and (max-width: 580px) {
+	.top-1-p-value {
+		height:10px;
+		width:100%;
+	}
+	.top-2-p-value {
+		height:10px;
+		width:51%;
+	}
+	.top-3-p-value {
+		height:10px;
+		width:25%;
+	}
+	.top-4-p-value {
+		height:10px;
+		width:15%;
+	}
+	.top-5-p-value {
+		height:10px;
+		width:8%;
+	}
+	.top-1-l-value {
+		height:10px;
+		width:90%;
+	}
+	.top-2-l-value {
+		height:10px;
+		width:77%;
+	}
+	.top-3-l-value {
+		height:10px;
+		width:52%;
+	}
+	.top-4-l-value {
+		height:10px;
+		width:30%;
+	}
+	.top-5-l-value {
+		height:10px;
+		width:10%;
+	}
 }
