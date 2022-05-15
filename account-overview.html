@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="jquery-3.6.0.min.js" language="javascript"></script>
+<script src="jquery-3.6.0.min.js" language="javascript"></script>	
 <link href="https://fonts.googleapis.com/css?family=Noto Sans:400,700,900" rel="stylesheet">
 <link href="font.css" rel="stylesheet">
 <link href="style.css" rel="stylesheet">
@@ -157,10 +157,116 @@
 	
 	<!-- main content area -->
 	<div class="main-container">
-		<div><!-- container for left content -->
+		<div class="left-column"><!-- container for left content -->
 			<!-- breadcrumb -->
-			<div class="breadcrumb">Dashboard / Overview / <span class="active">Account overview</span></div>
-			<!-- breadcrumb ended -->
+			<div class="breadcrumb breadcrumb-acc-overview">
+				Dashboard / Overview / <span class="active">Account overview</span>
+			</div>
+			<div class="general-info-box">	
+				<div class="general-info-header">
+					General Info <a class="btn-info" id="modalinfo3" style="position:absolute; top:10px; right:10px;"><span class="ht-info"></span></a>
+				</div>
+				<div class="general-info-body">
+					<div class="general-info-item">
+						<div><strong>Profit</strong><br><span class="text-po" style="font-size:24px; font-weight: bold;">+0.54%</span></div>
+						<div style="text-align:right;"><span class="text-po"><strong>+1,232Pips<br>+733.00USD</strong></span></div>
+					</div>
+					<div class="general-info-separator"></div>
+					<table class="general-info-table">
+						<tr>
+							<td>Last 30 days</td>
+							<td align="right"><span class="text-po"><strong>+1%</strong></span></td>
+						</tr>
+						<tr>
+							<td>Drawdown</td>
+							<td align="right"><span class="text-ng"><strong>-5.00%</strong></span></td>
+						</tr>
+						<tr>
+							<td>Balance</td>
+							<td align="right"><span style="color:#333;"><strong>223,560.55USD</strong></span></td>
+						</tr>
+					</table>
+					<div class="general-info-separator"></div><table class="general-info-table">
+						<tr>
+							<td>Trades</td>
+							<td align="right"><span style="color:#333;"><strong>430</strong></span></td>
+						</tr>
+						<tr>
+							<td>Pips/trade</td>
+							<td align="right"><span style="color:#333;"><strong>2.90</strong></span></td>
+						</tr>
+						<tr>
+							<td>Since</td>
+							<td align="right"><span style="color:#333;"><strong>Mar-03-2021</strong></span></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<!-- account overview chart -->
+			<div class="ao-chart-box">
+				<div class="chart-header-dark">
+					<div class="tooltip">Trades made in profit/loss making patterns<span class="tooltiptext">Trades made in profit/loss making patterns</span></div>
+					<div class="right-btn-box">
+						<a class="btn-info" id="modalinfo4"><span class="ht-info"></span></a>
+					</div>
+				</div>
+				<div class="ao-chart-body">
+					<div class="ao-chart-bg">
+						<div class="pill-box">
+							<a style="width:50%;" class="pill-left pill-on" href="#">Trades</a><a style="width:50%;" class="pill-right pill-off" href="#">Lots</a>
+						</div>
+						<div class="right-btn-box">
+							<a class="btn-duration" href="#">3m</a><a class="btn-duration" href="#">6m</a><a class="btn-duration duration-on" href="#">1yr</a><a class="btn-duration" href="#">all</a>
+						</div>
+						<!-- for temporary display purpose -->
+						<span style="width:100%; margin-top:10px;"><img class="img-responsive" src="ao-chart.png" /></span>
+					</div>
+					<div class="ao-rank-bg">
+						<div class="rank-box">
+							<div class="insignificant-box"><span style="font-size:24px; font-weight: bold;">39</span><br>Insignificant</div>
+							<div class="donut-chart-block block"> 
+								<div class="donut-chart">
+									<div id="part1p" class="portion-block"><div class="circle"></div></div>
+									<div id="part2p" class="portion-block"><div class="circle"></div></div>
+									<div id="part3p" class="portion-block"><div class="circle"></div></div>
+									<p class="center"><span style="color:#56A07E;" class="ht-up-chart"></span></p>        
+								</div>
+							</div>
+							<div style="text-align: center; color: #FFFFFF;  font-size:12px; margin-bottom:10px;">
+								<span style="font-size:32px; font-weight:bold;">84</span><br>
+								Profit making patterns<br>
+								<strong>+3,431Pips / 2,877.00USD</strong>
+							</div>
+							<a class="donut-rank-bar-p" style="background-size:100% 20px;" href="#">Profit by daytime</a>
+							<a class="donut-rank-bar-p" style="background-size:74% 20px;" href="#">Risk per trade</a>
+							<a class="donut-rank-bar-p" style="background-size:42% 20px;" href="#">Profit by symbol</a>
+							<a class="donut-rank-bar-p" style="background-size:25% 20px;" href="#">% of positions with SL</a>
+							<a class="donut-rank-bar-p" style="background-size:11% 20px;" href="#">Profit if trade open earlier/later</a>
+						</div><!-- rank-box end -->
+						<div class="rank-box">
+							<div class="donut-chart-block block"> 
+								<div class="donut-chart">
+									<div id="part1l" class="portion-block"><div class="circle"></div></div>
+									<div id="part2l" class="portion-block"><div class="circle"></div></div>
+									<div id="part3l" class="portion-block"><div class="circle"></div></div>
+									<p class="center"><span style="color:#C15357;" class="ht-down-chart"></span></p>        
+								</div>
+							</div>
+							<div style="text-align: center; color: #FFFFFF;  font-size:12px; margin-bottom:10px;">
+								<span style="font-size:32px; font-weight:bold;">42</span><br>
+								Loss making patterns<br>
+								<strong>-2,466Pips / 1,991.00USD</strong>
+							</div>
+							<a class="donut-rank-bar-l" style="background-size:95% 20px;" href="#">Profit by daytime</a>
+							<a class="donut-rank-bar-l" style="background-size:88% 20px;" href="#">Risk per trade</a>
+							<a class="donut-rank-bar-l" style="background-size:65% 20px;" href="#">Profit by symbol</a>
+							<a class="donut-rank-bar-l" style="background-size:32% 20px;" href="#">% of positions with SL</a>
+							<a class="donut-rank-bar-l" style="background-size:5% 20px;" href="#">Profit if trade open earlier/later</a>
+						</div><!-- rank-box end -->
+					</div>
+				</div>
+			</div>
+			<!-- account overview chart end -->
 			<div class="chart-row">
 				<div class="chart-container">
 					<div class="chart-header-dark">
@@ -207,99 +313,10 @@
 					</div>
 				</div><!-- chart-container -->
 				<div class="chart-container">
-					<div class="chart-header-light">
-						<div class="tooltip">If the title is longer than 2 lines use ... and hover tooltip to sh...<span class="tooltiptext">This is the tooltip text which display the complete meaning of the long title without ...</span></div>
-						<div class="right-btn-box">
-							<a class="btn-info" id="modalinfo2"><span class="ht-dots-h"></span></a>
-						</div>
-					</div>
-					<div class="chart-bg-light">
-						<div class="chart-info-group top-btn-group">
-							<div class="pill-box">
-								<a class="pill-left pill-off" href="#">pips</a><a class="pill-right pill-on" href="#">%</a>
-							</div>
-							<div class="right-btn-box">
-								<a class="btn-duration duration-on" href="#">3m</a><a class="btn-duration" href="#">6m</a><a class="btn-duration" href="#">1yr</a><a class="btn-duration" href="#">all</a>
-							</div>
-						</div>
-						<div><!-- container for the whole chart -->
-							<div class="bar-green-strip-light"></div><div class="bar-grey-strip-light"></div><div class="bar-red-strip-light bar-flip-v"></div><div class="bar-grey-strip-light bar-flip-v"></div><div class="bar-green"></div><div class="bar-red bar-flip-v"></div>
-						</div><!-- container for the whole chart ended -->
-						<div><!-- container for the whole bottom elements -->
-							<div class="chart-info-group">
-								<div>
-									<div class="chart-bottom-info-light">
-									<span class="chart-bottom-info-title">Performance</span><br>
-									+360.25%<br>
-									<span class="num-box box-po">+5065Pips</span>
-									</div>
-									<div class="chart-bottom-info-light">
-										<span class="chart-bottom-info-title">Equity</span><br>
-										263,560.55USD<br>
-										<span class="num-box box-po"><span style="font-size:12px;">&uarr;</span> 258.25USD</span>
-									</div>
-								</div>
-								<div class="chart-bottom-info-light chart-bottom-info-right">
-									<span class="chart-bottom-info-title">Age</span><br>
-									11m28d
-								</div>
-							</div>
-							<div style="width:100%; margin-top:10px; text-align:right;">
-								<a class="btn-general" href="#"><span class="ht-medal"></span> Scoreboard</a>
-							</div>
-						</div><!-- container for the whole bottom elements ended -->
-					</div>
-				</div><!-- chart-container -->
-				<div class="chart-container">
-					<div class="chart-header-light">
-						<div class="tooltip">Title 3<span class="tooltiptext">Title 3</span></div>
-						<div class="right-btn-box">
-							<a class="btn-info" id="modalinfo3"><span class="ht-dots-h"></span></a>
-						</div>
-					</div>
-					<div class="chart-bg-light">
-						<div class="chart-info-group top-btn-group">
-							<div class="pill-box">
-								<a class="pill-left pill-off" href="#">pips</a><a class="pill-right pill-on" href="#">%</a>
-							</div>
-							<div class="right-btn-box">
-								<a class="btn-duration duration-on" href="#">3m</a><a class="btn-duration" href="#">6m</a><a class="btn-duration" href="#">1yr</a><a class="btn-duration" href="#">all</a>
-							</div>
-						</div>
-						<div><!-- container for the whole chart -->
-							<div class="bar-green-strip-light"></div><div class="bar-grey-strip-light"></div><div class="bar-red-strip-light bar-flip-v"></div><div class="bar-grey-strip-light bar-flip-v"></div><div class="bar-green"></div><div class="bar-red bar-flip-v"></div>
-						</div><!-- container for the whole chart ended -->
-						<div style="height: 150px;"></div>
-						<div><!-- container for the whole bottom elements -->
-							<div class="chart-info-group">
-								<div>
-									<div class="chart-bottom-info-light">
-									<span class="chart-bottom-info-title">Performance</span><br>
-									+360.25%<br>
-									<span class="num-box box-po">+5065Pips</span>
-									</div>
-									<div class="chart-bottom-info-light">
-										<span class="chart-bottom-info-title">Equity</span><br>
-										263,560.55USD<br>
-										<span class="num-box box-po"><span style="font-size:12px;">&uarr;</span> 258.25USD</span>
-									</div>
-								</div>
-								<div class="chart-bottom-info-light chart-bottom-info-right">
-									<span class="chart-bottom-info-title">Age</span><br>
-									11m28d
-								</div>
-							</div>
-							<div style="width:100%; margin-top:10px; text-align:right;">
-								<a class="btn-general" href="#"><span class="ht-medal"></span> Scoreboard</a>
-							</div>
-						</div><!-- container for the whole bottom elements ended -->
-					</div>
-				</div><!-- chart-container -->
-				<div class="chart-container">
 					<div class="chart-header-dark">
 						<div class="tooltip">Title 4<span class="tooltiptext">Title 4</span></div>
 						<div class="right-btn-box">
-							<a class="btn-action on" href="#"><span class="ht-star"></span></a><a class="btn-action" href="#"><span class="ht-bell"></span></a><a class="btn-action" href="#"><span class="ht-globe"></span></a><a class="btn-info" id="modalinfo4"><span class="ht-info"></span></a>
+							<a class="btn-action on" href="#"><span class="ht-star"></span></a><a class="btn-action" href="#"><span class="ht-bell"></span></a><a class="btn-action" href="#"><span class="ht-globe"></span></a><a class="btn-info" id="modalinfo2"><span class="ht-info"></span></a>
 						</div>
 					</div>
 					<div class="chart-bg-dark">
@@ -340,7 +357,13 @@
 					</div>
 				</div><!-- chart-container -->
 			</div><!-- chart-row -->
+			<!-- carousell -->
+			<div class="carousel-header">
+				<div><span class="ht-logo" style="font-size:24px; vertical-align:middle;"></span> hoc-trade editor’s pick</div> <a class="btn-general" href="#">Read more <span class="ht-arrow"></span></a>
+			</div>
+			<!-- carousell ended -->
 		</div><!-- container for left content ended -->
+		
 		<div class="right-column"><!-- container for right content ended -->
 			<!-- alert -->
 			<div class="alert-container">
@@ -354,7 +377,7 @@
 					<li class="alert-item">
 						<table class="info-table">
 							<tr>
-								<td><div class="ico-red-bell"><span class="ht-bell"></span></div></td>
+								<td><div class="ico-red-bell"><span class="ht-neg-chart"></span></div></td>
 								<td><strong>New loss-making pattern</strong><br><span style="color:#CCCCCC; font-size:11px;">Mar-17-2022 16:45  Order ID:9876564</span></td>
 							</tr>
 						</table>
@@ -368,7 +391,7 @@
 					<li class="alert-item">
 						<table class="info-table">
 							<tr>
-								<td><div class="ico-red-bell"><span class="ht-bell"></span></div></td>
+								<td><div class="ico-red-bell"><span class="ht-speedometer"></span></div></td>
 								<td><strong>New loss-making pattern</strong><br><span style="color:#CCCCCC; font-size:11px;">Mar-15-2022 12:54  Order ID:1235647</span></td>
 							</tr>
 						</table>
@@ -382,7 +405,7 @@
 					<li class="alert-item">
 						<table class="info-table">
 							<tr>
-								<td><div class="ico-red-bell"><span class="ht-bell"></span></div></td>
+								<td><div class="ico-red-bell"><span class="ht-alert-chart"></span></div></td>
 								<td><strong>New loss-making pattern</strong><br><span style="color:#CCCCCC; font-size:11px;">Mar-02-2022 09:03  Order ID:7858412</span></td>
 							</tr>
 						</table>
