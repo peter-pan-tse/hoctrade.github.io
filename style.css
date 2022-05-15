@@ -543,22 +543,6 @@ a.btn-page-num.active {
 	cursor:default;
 	display: block;
 }
-/* carousell */
-.carousel-header {
-	display: flex;
-    position: relative;
-	justify-content: space-between;
-	align-items: center;
-    background-color: #C0D2D4;
-    color: #033C45;
-    font-size: 14px;
-    font-weight: bold;
-    height: 50px;
-    line-height: 50px;
-	padding:0 10px;
-	margin:0 15px;
-    border-radius: 10px;
-}
 /* footer */
 .footer {
 	display:block;
