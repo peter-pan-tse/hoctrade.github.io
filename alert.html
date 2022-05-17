@@ -81,12 +81,12 @@
 		<div style="display:flex; flex-direction:row; justify-content: flex-start;">
 			<div class="logo"><span class="ht-logo"></span></div>
 			<div class="p-menu">
-				<a class="menu-item active" href="#">Dashboard</a>
-				<a class="menu-item" href="#">Scoreboard</a>
+				<a class="menu-item active" href="account-overview.html">Dashboard</a>
+				<a class="menu-item" href="scoreboard.html">Scoreboard</a>
 			</div>
 		</div>
 		<div class="right-menu">
-			<a class="right-menu-item" href="#"><span class="ht-bell"></span><div class="ico-number">5</div></a>
+			<a class="right-menu-item" id="modalAlert"><span class="ht-bell"></span><div class="ico-number">5</div></a>
 			<a class="right-menu-item" href="#"><span class="ht-search"></span></a>
 			<div class="member-menu">
 				<div class="profile-pic"></div>
@@ -401,7 +401,7 @@
 					</div>
 				</li>
 			</a>
-			<a id="modalinfo3">
+			<a>
 				<li class="unread">
 					<div class="alert-item time">
 						<span class="alert-title">
@@ -459,7 +459,7 @@
 					</div>
 				</li>
 			</a>
-			<a id="modalinfo4">
+			<a>
 				<li class="unread">
 					<div class="alert-item time">
 						<span class="alert-title">
@@ -517,7 +517,7 @@
 					</div>
 				</li>
 			</a>
-			<a id="modalinfo5">
+			<a>
 				<li class="unread">
 					<div class="alert-item time">
 						<span class="alert-title">
@@ -575,7 +575,7 @@
 					</div>
 				</li>
 			</a>
-			<a id="modalinfo6">
+			<a>
 				<li class="read">
 					<div class="alert-item time">
 						<span class="alert-title">
@@ -633,7 +633,7 @@
 					</div>
 				</li>
 			</a>
-			<a id="modalinfo7">
+			<a>
 				<li class="read">
 					<div class="alert-item time">
 						<span class="alert-title">
@@ -713,7 +713,7 @@
 	<!-- The Modal -->
 	<div id="modalInfoBox" class="modal">
 		<!-- Modal content -->
-
+		<!-- content 1 -->
 		<div class="modal-content">
 			<div class="modal-header">
 				<span class="close"><span class="ht-cross"></span></span>
@@ -727,9 +727,6 @@
 						<div class="alert-chart-container">
 							<div class="chart-header-dark">
 								<div class="tooltip">Chart 3<span class="tooltiptext">Chart 3 tooltip</span></div>
-								<div class="right-btn-box">
-									<a class="btn-action on" href="#"><span class="ht-star"></span></a><a class="btn-action" href="#"><span class="ht-bell"></span></a><a class="btn-action" href="#"><span class="ht-globe"></span></a><a class="btn-info" id="modalinfo3"><span class="ht-info"></span></a>
-								</div>
 							</div>
 							<div class="chart-bg-dark"></div>
 						</div><!-- chart-container -->
@@ -745,6 +742,278 @@
 			</div>
 		</div>
 	</div>
+	<!-- the modal end -->
+	<!-- The Modal -->
+	<div id="modalAlertBox" class="modal">
+		<!-- Modal content -->
+		<!--- content 1 -->
+		<div class="modal-content" id="content1" style="display:block;">
+			<div class="modal-header">
+				New alerts
+				<span class="close"><span class="ht-cross"></span></span>
+			</div>
+			<div class="modal-body">
+				<ul class="alert">
+					<!--table title -->
+					<li class="table-title">
+						<div class="alert-item time">
+							Time
+						</div>
+						<div class="alert-item area">
+							Area
+						</div>
+						<div class="alert-item category">
+							Category
+						</div>
+						<div class="alert-item reason">
+							Reason
+						</div>
+						<div class="alert-item order">
+							Order
+						</div>
+						<div class="alert-item action">
+						</div>
+					</li>
+					<!--table title end -->
+					<a onClick="replaceNext()">
+						<li class="unread">
+							<div class="alert-item time">
+								<span class="alert-title">
+									Time:
+								</span>
+								Mar-25-2022 19:56:02
+							</div>
+							<div class="alert-item area">
+								<span class="alert-title">
+									Area:
+								</span>
+								<span class="ico-alert-list ht-alert"></span><span>Risk after losing trade(s)</span>
+							</div>
+							<div class="alert-item category">
+								<span class="alert-title">
+									Category:
+								</span>
+								4-6 trades
+							</div>
+							<div class="alert-item reason">
+								<span class="alert-title">
+									Reason:
+								</span>
+								<span class="ico-alert-list ht-neg-chart"></span><span>New loss making pattern</span>
+							</div>
+							<div class="alert-item order">
+								<span class="alert-title">
+									Order:
+								</span>
+								1234567890
+							</div>
+							<div class="alert-item action">
+								<div class="btn-alert-action"><span class="ht-trash"></span></div>
+								<div class="btn-alert-action"><span class="ht-envelope"></span></div>
+							</div>
+						</li>
+					</a>
+
+					<a>
+						<li class="unread">
+							<div class="alert-item time">
+								<span class="alert-title">
+									Time:
+								</span>
+								Mar-24-2022 09:00:00
+							</div>
+							<div class="alert-item area">
+								<span class="alert-title">
+									Area:
+								</span>
+								<span class="ico-alert-list ht-timing"></span><span>Profit if trade close earlier/later</span>
+							</div>
+							<div class="alert-item category">
+								<span class="alert-title">
+									Category:
+								</span>
+								-5m
+							</div>
+							<div class="alert-item reason">
+								<span class="alert-title">
+									<div class="btn-sorting">
+										<div class="btn-sort-up"><span class="ht-triangle off"></span></div>
+										<div class="btn-sort-down"><span class="ht-triangle off"></span></div>
+									</div>
+									Reason:
+								</span>
+								<span class="ico-alert-list ht-speedometer"></span><span>Risky behavior</span>
+							</div>
+							<div class="alert-item order">
+								<span class="alert-title">
+									Order:
+								</span>
+								1234567890
+							</div>
+							<div class="alert-item action">
+								<div class="btn-alert-action"><span class="ht-trash"></span></div>
+								<div class="btn-alert-action"><span class="ht-envelope"></span></div>
+							</div>
+						</li>
+					</a>
+					<a>
+						<li class="unread">
+							<div class="alert-item time">
+								<span class="alert-title">
+									Time:
+								</span>
+								Mar-25-2022 19:56:02
+							</div>
+							<div class="alert-item area">
+								<span class="alert-title">
+									Area:
+								</span>
+								<span class="ico-alert-list ht-timing"></span><span>% of trades stopped early in profit</span>
+							</div>
+							<div class="alert-item category">
+								<span class="alert-title">
+									Category:
+								</span>
+								Stopped early
+							</div>
+							<div class="alert-item reason">
+								<span class="alert-title">
+									Reason:
+								</span>
+								<span class="ico-alert-list ht-alert-chart"></span><span>Action in pattern</span>
+							</div>
+							<div class="alert-item order">
+								<span class="alert-title">
+									Order:
+								</span>
+								1234567890
+							</div>
+							<div class="alert-item action">
+								<div class="btn-alert-action"><span class="ht-trash"></span></div>
+								<div class="btn-alert-action"><span class="ht-envelope"></span></div>
+							</div>
+						</li>
+					</a>
+					<a>
+						<li class="unread">
+							<div class="alert-item time">
+								<span class="alert-title">
+									Time:
+								</span>
+								Mar-25-2022 19:56:02
+							</div>
+							<div class="alert-item area">
+								<span class="alert-title">
+									Area:
+								</span>
+								<span class="ico-alert-list ht-chess-castle"></span><span>Profit during overbought/oversold market</span>
+							</div>
+							<div class="alert-item category">
+								<span class="alert-title">
+									Category:
+								</span>
+								oversold
+							</div>
+							<div class="alert-item reason">
+								<span class="alert-title">
+									Reason:
+								</span>
+								<span class="ico-alert-list ht-speedometer"></span><span>Risky behavior</span>
+							</div>
+							<div class="alert-item order">
+								<span class="alert-title">
+									Order:
+								</span>
+								1234567890
+							</div>
+							<div class="alert-item action">
+								<div class="btn-alert-action"><span class="ht-trash"></span></div>
+								<div class="btn-alert-action"><span class="ht-envelope"></span></div>
+							</div>
+						</li>
+					</a>
+					<a>
+						<li class="unread">
+							<div class="alert-item time">
+								<span class="alert-title">
+									Time:
+								</span>
+								Mar-25-2022 19:56:02
+							</div>
+							<div class="alert-item area">
+								<span class="alert-title">
+									Area:
+								</span>
+								<span class="ico-alert-list ht-coffee"></span><span>Open different symbols</span>
+							</div>
+							<div class="alert-item category">
+								<span class="alert-title">
+									Category:
+								</span>
+								5 symbols
+							</div>
+							<div class="alert-item reason">
+								<span class="alert-title">
+									Reason:
+								</span>
+								<span class="ico-alert-list ht-speedometer"></span><span>Risky behavior</span>
+							</div>
+							<div class="alert-item order">
+								<span class="alert-title">
+									Order:
+								</span>
+								1234567890
+							</div>
+							<div class="alert-item action">
+								<div class="btn-alert-action"><span class="ht-trash"></span></div>
+								<div class="btn-alert-action"><span class="ht-envelope"></span></div>
+							</div>
+						</li>
+					</a>
+				</ul>
+			</div>
+		</div>
+		<!-- content 2 -->
+		<div class="modal-content" id="content2" style="display:none;">
+			<div class="modal-header">
+				<a onclick="replaceBack()"><span class="back"><span class="ht-back-arrow"></span></span></a>
+				<span class="close"><span class="ht-cross"></span></span>
+			</div>
+			<div class="modal-body">
+				We have identified an action in pattern which may cause loss making from <strong>“% of trade stopped early in profit”</strong>. 
+				<br><strong>Category:</strong> Loss trade before
+				<p></p>
+				<div class="alert-details-box">
+					<div class="alert-chart">
+						<div class="alert-chart-container">
+							<div class="chart-header-dark">
+								<div class="tooltip">Chart 3<span class="tooltiptext">Chart 3 tooltip</span></div>
+							</div>
+							<div class="chart-bg-dark"></div>
+						</div><!-- chart-container -->
+						<a class="btn-general" href="ta-timing.html" style="margin-top:10px;"><span class="ht-timing"></span> Go to Analysis / Timing</a>
+					</div>
+					<div class="alert-video">
+						<div class="modal-video-box">
+							<iframe class="modal-video" src="https://www.youtube.com/embed/LemZIhFS9QI" title="27 Profit of conflicting symbols VV" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+						<a class="btn-general" href="#" style="margin-top:10px;" target="_blank"><span class="ht-video"></span><span class="btn-general-text"></span> See all videos</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- the modal end -->
 </body>
 <script src="modal-alert.js" language="javascript"></script>
+<script>
+	function replaceNext() {
+		document.getElementById("content1").style.display="none";
+		document.getElementById("content2").style.display="block";
+	}
+	function replaceBack() {
+		document.getElementById("content1").style.display="block";
+		document.getElementById("content2").style.display="none";
+	}
+</script>
 </html>

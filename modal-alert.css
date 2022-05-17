@@ -21,10 +21,11 @@
 .modal-content {
 	position: fixed;
 	background-color: #E9F3F5;
-	width: calc(100% - 40px);
+	width: calc(80%);
+	/*max-width:1000px;*/
 	max-height:calc(100vh - 60px);
-	margin:20px;
-	bottom:0px;
+	margin:20px 10%;
+	top:0px;
 	padding:100px 0 20px 0;
 	color:#333333;
 	border-radius:20px 20px 20px 20px;
@@ -37,6 +38,8 @@
 	.modal-content {
 		width:100%;
 		margin:20px 0 0 0;
+		top:auto;
+		bottom:0px;
 		padding:100px 0 0 0;
 		border-radius:20px 20px 0 0;
 	}
@@ -47,6 +50,10 @@
 	width: calc(100% - 40px);
 	top:0;
 	padding: 20px 20px 0;
+	font-size:14px;
+	line-height:30px;
+	font-weight:bold;
+	color:#033C45;
 }
 
 .modal-body {
@@ -71,13 +78,13 @@
 }
 /* Add Animation */
 @-webkit-keyframes slideIn {
-	from {bottom: -100vh; opacity: 0} 
-	to {bottom: 0px; opacity: 1}
+	from {top: 0px; opacity: 0} 
+	to {top: 0px; opacity: 1}
 }
 
 @keyframes slideIn {
-	from {bottom: -100vh; opacity: 0} 
-	to {bottom: 0px; opacity: 1}
+	from {top: 0px; opacity: 0} 
+	to {top: 0px; opacity: 1}
 }
 
 @-webkit-keyframes fadeIn {
@@ -89,25 +96,33 @@
 	from {opacity: 0} 
 	to {opacity: 1}
 }
-@-webkit-keyframes slideOut {
-	from {bottom: 0px; opacity: 1} 
-	to {bottom: -100vh; opacity: 0}
-}
+@media only screen and (max-width: 768px) {
+	@-webkit-keyframes slideIn {
+		from {bottom: -100vh; opacity: 0} 
+		to {bottom: 0px; opacity: 1}
+	}
 
-@keyframes slideOut {
-	from {bottom: 0px; opacity: 1} 
-	to {bottom: -100vh; opacity: 0}
-}
-@-webkit-keyframes fadeOut {
-	from {opacity: 1} 
-	to {opacity: 0}
-}
-
-@keyframes fadeOut {
-	from {opacity: 1} 
-	to {opacity: 0}
+	@keyframes slideIn {
+		from {bottom: -100vh; opacity: 0} 
+		to {bottom: 0px; opacity: 1}
+	}
 }
 /* The Close Button */
+.back {
+	display:inline-block;
+	width:32px;
+	height:32px;
+	text-align:center;
+	background-color:#FFFFFF;
+	border-radius:6px;
+	margin:0 10px 0 0;
+	color: #047F92;
+	float: left;
+	font-size: 28px;
+	line-height:34px;
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
 .close {
 	display:inline-block;
 	width:32px;
@@ -139,7 +154,7 @@
 		transition: none;
 	}
 }
-.close:hover, .close:focus {
+.close:hover, .close:focus, .back:hover, .back:focus {
 	color: #FFFFFF;
 	background-color:#06AFC9;
 	cursor: pointer;

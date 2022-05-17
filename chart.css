@@ -239,9 +239,6 @@
 	align-items:flex-start;
 	justify-content:space-between;
 }
-.top-btn-group {
-	height:40px;
-}
 /* chart top buttons */
 div.pill-box {
 	display:flex;

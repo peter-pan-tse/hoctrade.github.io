@@ -20,11 +20,10 @@
 /* Modal Content */
 .modal-content {
 	position: fixed;
-	background-color: #E9F3F5;
-	width: calc(80%);
-	/*max-width:1000px;*/
+	background-color: #ABBEC2;
+	width: 340px;
 	max-height:calc(100vh - 60px);
-	margin:20px 10%;
+	margin:20px calc(50vw - 170px);
 	top:0px;
 	padding:100px 0 20px 0;
 	color:#333333;
@@ -74,13 +73,13 @@
 }
 /* Add Animation */
 @-webkit-keyframes slideIn {
-	from {bottom: -100vh; opacity: 0} 
-	to {bottom: 0px; opacity: 1}
+	from {top: 0px; opacity: 0} 
+	to {top: 0px; opacity: 1}
 }
 
 @keyframes slideIn {
-	from {bottom: -100vh; opacity: 0} 
-	to {bottom: 0px; opacity: 1}
+	from {top: 0px; opacity: 0} 
+	to {top: 0px; opacity: 1}
 }
 
 @-webkit-keyframes fadeIn {
@@ -92,23 +91,16 @@
 	from {opacity: 0} 
 	to {opacity: 1}
 }
-@-webkit-keyframes slideOut {
-	from {bottom: 0px; opacity: 1} 
-	to {bottom: -100vh; opacity: 0}
-}
+@media only screen and (max-width: 768px) {
+	@-webkit-keyframes slideIn {
+		from {bottom: -100vh; opacity: 0} 
+		to {bottom: 0px; opacity: 1}
+	}
 
-@keyframes slideOut {
-	from {bottom: 0px; opacity: 1} 
-	to {bottom: -100vh; opacity: 0}
-}
-@-webkit-keyframes fadeOut {
-	from {opacity: 1} 
-	to {opacity: 0}
-}
-
-@keyframes fadeOut {
-	from {opacity: 1} 
-	to {opacity: 0}
+	@keyframes slideIn {
+		from {bottom: -100vh; opacity: 0} 
+		to {bottom: 0px; opacity: 1}
+	}
 }
 /* The Close Button */
 .close {

@@ -116,7 +116,7 @@ a.btn-alert-details {
 	ul.alert li > .alert-item > span.alert-title {
 		display:inline-block;
 		width:10vw;
-		color: #047F92;
+		/*color: #047F92;*/
 	}
 }
 /* table for mobile */

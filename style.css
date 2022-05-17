@@ -58,15 +58,31 @@ body {
 	padding: 0 15px;
 	min-height: calc(100vh - 260px);
 }
+.main-content-container-wide {
+	position:relative;
+	padding: 0 30px;
+	min-height: calc(100vh - 260px);
+}
+@media only screen and (max-width: 768px) {
+	.main-content-container-wide {
+		padding: 0 20px;
+	}
+}
 @media only screen and (max-width: 767px) {
 	.main-content-container {
 		padding: 0 10px;
 	}
 }
 @media only screen and (max-width: 480px) {
-	.main-content-container {
+	.main-content-container, .main-content-container-wide {
 		padding: 0 10px;
 	}
+}
+.top-btn-group {
+	height:40px;
+}
+.top-btn-group-wide {
+	margin-bottom:10px;
 }
 .general-info-box {
 	display:block;
@@ -465,7 +481,23 @@ a.btn-icon {
 	transition: all 0.3s ease;
 	margin-right:5px;
 }
-a.btn-general:hover, a.btn-ff:hover, a.btn-page:hover, a.btn-icon.on {
+a.btn-icon-l {
+	display:inline-block;
+	height:32px;
+	width:32px;
+	background-color: #F2F2F2;
+	text-align: center;
+	text-decoration:none;
+	font-size:22px;
+	font-weight: bold;
+	line-height:32px;
+	color:#047F92;
+	border-radius:6px;
+	transition: all 0.3s ease;
+	margin-right:5px;
+	cursor:pointer;
+}
+a.btn-general:hover, a.btn-ff:hover, a.btn-page:hover, a.btn-icon.on, a.btn-icon-l:hover {
 	background-color: #06AFC9;
 	color:#FFFFFF;
 }
@@ -488,6 +520,107 @@ a.btn-page-num:hover {
 a.btn-page-num.active {
 	background-color:#047F92;
 }
+/* form styles */
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #CCCCCC;
+  opacity: 1; /* Firefox */
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #CCCCCC;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #CCCCCC;
+}
+input.search-box {
+	display:inline-block;
+	height:28px;
+	width:90px;
+	position:relative;
+	padding:2px 32px;
+	background-color:#F2F2F2;
+	border:none;
+	border-radius:6px;
+	font-size:14px;
+	color:#333333;
+	background-image: url("search.svg");
+	background-repeat: no-repeat;
+	background-position:left center;
+	background-size:32px 32px;
+	margin-bottom:5px;
+}
+a.clear-content-btn {
+	display:block;
+	position:absolute;
+	top:4px;
+	right:4px;
+	font-size:24px;
+	color:#ED1C24;
+	text-decoration:none;
+	cursor:pointer;
+}
+.custom-select {
+	position: relative;
+	display:inline-block;
+	min-width:120px;
+	height:28px;
+	padding:2px 32px 2px 0px;
+	background-color:#F2F2F2;
+	border:none;
+	border-radius:6px;
+	font-size:14px;
+	color:#333333;
+	margin:0 0 5px 5px;
+}
+.custom-select select {
+	display: none; /*hide original SELECT element:*/
+}
+.select-selected {
+  background-color: transparent;
+}
+/*style the arrow inside the select element:*/
+.select-selected:after {
+	position: absolute;
+	content: url(dropmenu-open.svg);
+	width:32px;
+	height:32px;
+	top: 0px;
+	right: 0px;
+}
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+	content: url(dropmenu-close.svg);
+}
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+	color: #333333;
+	padding: 4px 10px;
+	border: none;
+	cursor: pointer;
+	user-select: none;
+}
+/*style items (options):*/
+.select-items {
+	position: absolute;
+	background-color:#F6F6F6;
+	top: 100%;
+	left: 0;
+	right: 0;
+	z-index: 99;
+}
+.select-items:nth-child(1) {
+	border-radius:6px 6px 0 0;
+}
+.select-items:last-child {
+	border-radius:0 0 6px 6px;
+}
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
 .box-po {
 	background-color:#009245;
 }
@@ -554,9 +687,15 @@ a.btn-page-num.active {
 	line-height: 20px;
 	z-index: 10001;
 }
+.footer-wide {
+	padding-left:30px;
+}
 @media only screen and (max-width: 480px) {
 	.footer {
 		padding:10px 10px 10px 10px;
+	}
+	.footer-wide {
+		padding-left:10px;
 	}
 }
 .footer > span.ht-logo {
