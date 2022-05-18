@@ -192,6 +192,9 @@ a.s-menu-item > span {
 a.s-menu-item.active {
 	color:#FFFFFF;
 }
+a.s-menu-item.disabled {
+	color:#999999;
+}
 /* And let's slide it in from the left */
 #mobileMenuToggle input:checked ~ ul {
 	transform: none;

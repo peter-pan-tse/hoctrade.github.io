@@ -341,6 +341,14 @@ nav.vertical li.active > a {
 	color: #FFFFFF;
 	background-color: #000000;
 }
+nav.vertical li.disabled > a {
+	color:#999999;
+	cursor:default;
+}
+nav.vertical li.disabled:hover > a {
+	color:#999999;
+	background-color:transparent;
+}
 /* INNER UL HIDE */
 .submenu-title {
 	padding:15px 20px; 

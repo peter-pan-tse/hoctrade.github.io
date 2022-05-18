@@ -123,6 +123,12 @@ a.score-box:hover {
 	font-size:48px;
 	cursor:pointer;
 }
+.score-bookmark-s {
+	position:absolute;
+	right:0;
+	top:-5px;
+	font-size:24px;
+}
 .followed {
 	color:#C15357;
 }
@@ -249,6 +255,38 @@ a.score-box:hover {
 	right:10px;
 	bottom:10px;
 }
+.score-other-info-box {
+	display:flex;
+	position:relative;
+	height:120px;
+	width:auto;
+	font-size:12px;
+	line-height:1em;
+	border-left:none;
+	border-top:none;
+	padding:0 8px;
+}
+table.other-info-table {
+	width:30%;
+	margin:0px;
+	line-height: 1em;
+	color:#FFFFFF;
+}
+table.other-info-table td {
+	padding:0 2px;
+}
+@media only screen and (max-width: 820px) {
+	.score-other-info-box {
+		border-left:1px dotted #06AFC9;
+	}
+}
+@media only screen and (max-width: 480px) {
+	.score-other-info-box {
+		width:calc(50% - 16px);
+		border-left:none;
+		border-top:1px dotted #06AFC9;
+	}
+}
 .filter-box {
 	display:flex;
 	flex-direction:row;
@@ -280,4 +318,20 @@ a.score-box:hover {
 	right:0px;
 	top:0px;
 	cursor:pointer;
+}
+.trader-breadcrumb {
+	display:inline-block;
+	position:relative;
+	padding:4px 24px 4px 8px;
+	color:#06AFC9;
+	background-color:#033C45;
+	border-radius:6px;
+	margin:0px 5px;
+	line-height:18px;
+	height:22px
+}
+@media only screen and (max-width: 480px) {
+	.trader-breadcrumb {
+		background-color:#F6F6F6;
+	}
 }
