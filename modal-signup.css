@@ -22,7 +22,6 @@
 	position: fixed;
 	width:360px;
 	height:480px;
-	margin:calc(50vh - 290px) calc(50vw - 180px);;
 	padding:0;
 	color:#666666;
 	-webkit-animation-name: slideIn;
@@ -33,10 +32,10 @@
 	line-height:1.25em;
 }
 .modal-content {
-	margin:calc(50vh - 290px) calc(50vw - 180px);;
+	margin:calc(50vh - 290px) calc(50vw - 180px);
 }
 .modal-content-2 {
-	margin:20px calc(50vw - 180px);;
+	margin:20px calc(50vw - 180px);
 }
 @media only screen and (max-width: 480px) {
 	.modal-content, .modal-content-2 {
@@ -67,14 +66,15 @@ iframe.modal-body, iframe.modal-body-2 {
 	position: relative;
 	flex-direction:column;
 	justify-content: space-between;
-	width:260px;
+	width:360px;
 	background-color: #ABBEC2;
 	border-radius:0 0 20px 20px;
 	border:none;
 }
 iframe.modal-body {
 	height:calc(100vh - 320px);
-	padding:40px 50px;
+	/*padding:40px 50px;*/
+	padding:0 0 40px 0;
 }
 .extra-top-padding {
 	display:block;
@@ -83,11 +83,13 @@ iframe.modal-body {
 }
 iframe.modal-body-2 {
 	height:calc(100vh - 180px);
-	padding:0px 50px 40px;
+	/*padding:0px 50px 40px;*/
+	padding:0 0 40px 0;
 }
 @media only screen and (max-width: 480px) {
 	iframe.modal-body, iframe.modal-body-2 {
-		width:calc(100% - 100px);
+		/*width:calc(100% - 100px);*/
+		width:100%;
 		height: calc(100vh - 240px);
 		border-radius:0 0 0 0;
 	}
@@ -147,6 +149,7 @@ iframe.modal-body-2 {
 .input-area {
 	text-align: left;
 	display:block;
+	padding:0 50px;
 }
 a.btn-login-google, a.btn-signup-google, a.btn-login-fb, a.btn-signup-email, a.btn-signup-trade-acc {
 	display:flex;
@@ -251,11 +254,12 @@ a.btn-login-google:hover, a.btn-signup-google:hover, a.btn-login-fb:hover, a.btn
 }
 .bottom-btn-group {
 	position:absolute;
-	width:100%;
+	width:calc(100% - 100px);
 	bottom:0px;
 	display:flex;
 	flex-direction:column;
 	justify-content: space-between;
+	padding:0 50px;
 }
 .bottom-btn-group-btns {
 	display:flex;
@@ -319,11 +323,31 @@ a.btn-form span {
 	line-height: 128px;
 	border-radius:50%;
 }
-a.btn-profile-pic-edit {
+.current-profile-pic {
+	display:block;
+	position: relative;
+	height:340px;
+	width:100%;
+	background-color: deeppink;
+	color:#FFFFFF;
+	font-size:100px;
+	font-weight:bold;
+	text-align: center;
+	line-height: 340px;
+}
+.profile-pic-mask {
+	display:block;
+	position:absolute;
+	top:0px;
+	height:340px;
+	width:100%;
+	background-image: url("profile-pic-mask.png");
+	background-position: center;
+	background-repeat: no-repeat;
+}
+a.btn-profile-pic-edit, a.btn-profile-pic-browse {
 	display:block;
 	position: absolute;
-	right:0;
-	bottom:0;
 	width:32px;
 	height:32px;
 	font-size:24px;
@@ -333,7 +357,15 @@ a.btn-profile-pic-edit {
 	color:#FFFFFF;
 	text-decoration: none;
 }
-a.btn-profile-pic-edit:hover {
+a.btn-profile-pic-edit {
+	right:0;
+	bottom:0;
+}
+a.btn-profile-pic-browse {
+	left:calc(50% - 16px);
+	bottom:34px;
+}
+a.btn-profile-pic-edit:hover, a.btn-profile-pic-browse:hover {
 	background-color:#06AFC9;
 }
 .interest-pill-box {
