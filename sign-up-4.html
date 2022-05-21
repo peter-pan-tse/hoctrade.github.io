@@ -1,0 +1,97 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="jquery-3.6.0.min.js" language="javascript"></script>
+<link href="https://fonts.googleapis.com/css?family=Noto Sans:400,700,900" rel="stylesheet">
+<link href="font.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+<link href="modal-signup.css" rel="stylesheet">
+<link rel="icon" href="favicon.svg">
+<title>hoc-trade</title>
+<style>
+body {
+	margin:0px auto;
+	padding:0px;
+	background-color:transparent;
+	font-size:14px;
+}
+@media only screen and (max-width: 480px) {
+	body {
+		padding:0 0 0 0;
+	}
+}
+	.confirm-code-box {
+		display:flex;
+		flex-direction:row;
+		justify-content:space-between;
+		margin:20px 0;
+	}
+	input.confirmation-code {
+		display:inline-block;
+		height:60px;
+		padding:4px;
+		border:1px solid #F2F2F2;
+		background-color:#F2F2F2;
+		font-size:32px;
+		font-weight:bold;
+		text-align:center;
+		width:18%;
+		border-radius:10px;
+	}
+	/* Chrome, Safari, Edge, Opera */
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+	  -webkit-appearance: none;
+	  margin: 0;
+	}
+	/* Firefox */
+	input[type=number] {
+	  -moz-appearance: textfield;
+}
+</style>
+	<script>
+	var timeleft = 30;
+	var downloadTimer = setInterval(function(){
+	  if(timeleft <= 0){
+		clearInterval(downloadTimer);
+		document.getElementById("countdown").innerHTML = "Confirmation code expired.<br>Please <a href='forgot-password-1.html'><strong>get a new one</strong></a>.";
+		document.getElementById("countdown2").innerHTML = "<a href='forgot-password-1.html'><strong>Get a new one</strong></a>.";
+	  } else {
+		document.getElementById("countdown").innerHTML = "We have sent you email with confirmation code, please enter in <br><strong>" + timeleft + "</strong> seconds.";
+		document.getElementById("countdown2").innerHTML = "<span style='color:#999999;'>Get a new code in <strong>" + timeleft + "</strong> seconds.</span>";
+	  }
+	  timeleft -= 1;
+	}, 1000);
+</script>
+</head>
+<body>
+	<div class="step-box">
+		<div class="step-bullet active"></div>
+		<div class="step-bullet active"></div>
+		<div class="step-bullet active"></div>
+		<div class="step-bullet"></div>
+		<div class="step-bullet"></div>
+		<div class="step-bullet"></div>
+		<div class="step-bullet"></div>
+	</div>
+	<div class="input-area">
+		<div class="input-area">
+		<p style="height:60px;" id="countdown"></p>
+		<div class="confirm-code-box">
+			<input class="confirmation-code" maxlength="1" type="number" min="0" />
+			<input class="confirmation-code" maxlength="1" type="number" min="0" />
+			<input class="confirmation-code" maxlength="1" type="number" min="0" />
+			<input class="confirmation-code" maxlength="1" type="number" min="0" />
+		</div>
+		<div class="error-msg-box"></div>
+	</div>
+	<div class="bottom-btn-group" style="align-items: self-end;">
+		<div align="right">Did not receive the code?<br><span id="countdown2"></span><br><br></div>
+		<div class="bottom-btn-group-btns">
+			<a class="btn-form" href="sign-up-5.html" style="display: inline-block; width:auto;">Confirm email <span class="ht-next-arrow" style="vertical-align: middle;"></span></a>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'ht-font';
-  src:  url('fonts/ht-font.eot?1pvxnr');
-  src:  url('fonts/ht-font.eot?1pvxnr#iefix') format('embedded-opentype'),
-    url('fonts/ht-font.ttf?1pvxnr') format('truetype'),
-    url('fonts/ht-font.woff?1pvxnr') format('woff'),
-    url('fonts/ht-font.svg?1pvxnr#ht-font') format('svg');
+  src:  url('fonts/ht-font.eot?1w7e9');
+  src:  url('fonts/ht-font.eot?1w7e9#iefix') format('embedded-opentype'),
+    url('fonts/ht-font.ttf?1w7e9') format('truetype'),
+    url('fonts/ht-font.woff?1w7e9') format('woff'),
+    url('fonts/ht-font.svg?1w7e9#ht-font') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -27,6 +27,9 @@
 
 .ht-lock:before {
   content: "\e93e";
+}
+.ht-login:before {
+  content: "\e93f";
 }
 .ht-envelope-open:before {
   content: "\e93d";
