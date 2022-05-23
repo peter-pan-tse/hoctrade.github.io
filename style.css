@@ -56,17 +56,17 @@ a:hover, a:focus {
 	justify-content: space-between;
 	margin: 0;
 	padding: 0;
-	/*min-height: calc(100vh - 260px);*/
+	min-height: calc(100vh - 260px);
 }
 .main-content-container {
 	position:relative;
 	padding: 0 15px;
-	/*min-height: calc(100vh - 260px);*/
+	min-height: calc(100vh - 260px);
 }
 .main-content-container-wide {
 	position:relative;
 	padding: 0 30px;
-	/*min-height: calc(100vh - 260px);*/
+	min-height: calc(100vh - 260px);
 }
 @media only screen and (max-width: 768px) {
 	.main-content-container-wide {
