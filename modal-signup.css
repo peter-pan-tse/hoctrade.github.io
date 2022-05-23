@@ -147,6 +147,7 @@ iframe.modal-body-2 {
 }
 /* form elements */
 .input-area {
+	color:#505050;
 	text-align: left;
 	display:block;
 	padding:0 50px;

@@ -250,15 +250,15 @@ hr.dropmenu-separator {
 }
 @media only screen and (max-width: 1023px) {
 	.breadcrumb {
-		margin-bottom: 20px;
+		margin-bottom: 30px;
 	}
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
 	.breadcrumb {
 		line-height:40px;
 		padding:0 20px;
 		height:40px;
-		margin-bottom: 10px;
+		margin-bottom: 20px;
 	}
 	.breadcrumb-acc-overview {
 		margin-left: -15px;

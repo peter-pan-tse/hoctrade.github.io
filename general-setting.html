@@ -1,0 +1,536 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="jquery-3.6.0.min.js" language="javascript"></script>
+<link href="https://fonts.googleapis.com/css?family=Noto Sans:400,700,900" rel="stylesheet">
+<link href="font.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+<link href="chart.css" rel="stylesheet">
+<link href="menu.css" rel="stylesheet">
+<link href="burger-menu.css" rel="stylesheet">
+<link href="setting.css" rel="stylesheet">
+<link href="modal-signup.css" rel="stylesheet">
+<link rel="icon" href="favicon.svg">
+<title>hoc-trade general setting</title>
+<script>
+	$(function(){
+		$('.open-btn').on('click', function(){
+			$(this).toggleClass('close-btn')
+		});
+	});
+</script>
+<style>
+	body {
+		background-color: white;
+	}
+	.desktop {
+		display:block;
+	}
+	.mobile {
+		display:none;
+	}
+	@media only screen and (max-width: 580px) {
+		.desktop {
+		display:none;
+		}
+		.mobile {
+			display:block;
+		}
+	}
+	.interest-pill {
+		background-color:#FFFFFF;
+	}
+	input.general, input.password, textarea.general {
+		background-color: #FFFFFF;
+		border:1px solid #FFFFFF;
+	}
+	textarea.general {
+		margin-bottom:0px;
+	}
+	.custom-select {
+		margin:0 0 10px 0px; 
+		width:calc(208px); 
+		background-color:#FFFFFF;
+	}
+	.profile-pic-box {
+		margin:0;
+	}
+	ul.password-format li.custom-width {
+			width:100%;
+		}
+	@media only screen and (max-width: 979px) {
+		input.general, textarea.general {
+			width:calc(100% - 10px);
+		}
+		input.password {
+			width:calc(100% - 70px);
+		}
+		.custom-select {
+			width:calc(100% - 32px); 
+		}
+		ul.password-format li.custom-width {
+			width:45%;
+		}
+	}
+</style>
+</head>
+<body style="padding-left:0px;">
+	<!--header and menu -->
+	<div class="header">
+		<div style="display:flex; flex-direction:row; justify-content: flex-start;">
+			<div class="logo"><span class="ht-logo"></span></div>
+			<div class="p-menu">
+				<a class="menu-item" href="account-overview.html">Dashboard</a>
+				<a class="menu-item" href="scoreboard.html">Scoreboard</a>
+			</div>
+		</div>
+		<div class="right-menu">
+			<a class="right-menu-item" id="modalAlert"><span class="ht-bell"></span><div class="ico-number">5</div></a>
+			<a class="right-menu-item" href="#"><span class="ht-search"></span></a>
+			<div class="member-menu">
+				<div class="profile-pic"></div>
+				<div class="user-profile"><span class="ht-wallet"><div class="ico-verified"><span class="ht-verified"></span></div></span>Winnie-fx-demo</div>
+				<div class="open-btn"><label for="member-menu-toggle"><span class="ht-triangle"></span></label></div>
+				<input type="checkbox" id="member-menu-toggle"/>
+				<ul id="member-menu-dropdown">
+					<hr class="dropmenu-separator" />
+					<li class="switch-menu">Switch account</li>
+					<li>
+						<a class="active" href="#"><span class="ht-wallet icon"><div class="ico-verified"><span class="ht-verified"></span></div></span>Winnie-fx-demo</a>
+					</li>
+					<li>
+						<a href="#"><span class="ht-wallet icon"><div class="ico-verified"><span class="ht-verified"></span></div></span>Winnie-fx-live</a>
+					</li>
+					<li>
+						<a href="#"><span class="ht-wallet icon"></span>Winnie-fx-open</a>
+					</li>
+					<hr class="dropmenu-separator" />
+					<li>
+						<a id="modalTradeAcc" style="cursor:pointer;"><span class="ht-wallet-setting icon"></span>Account setting</a>
+					</li>
+					<li>
+						<a href="#"><span class="ht-wallet-add icon"></span>Add account</a>
+					</li>
+					<hr class="dropmenu-separator" />
+					<li>
+						<a class="active" href="general-setting.html"><span class="ht-gear icon"></span>Settings</a>
+					</li>
+					<li class="switch-menu">
+						<div><span class="ht-moon icon"></span>Dark mode</div>
+						<label class="switch">
+						  <input type="checkbox">
+						  <span class="slider round"></span>
+						</label>
+					</li>
+					<li>
+						<a href="support.html"><span class="ht-support icon"></span>Help &amp; support</a>
+					</li>
+					<li>
+						<a href="#"><span class="ht-logout icon"></span>Logout</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- mobile menu -->
+	<nav role="navigation">
+		<div id="mobileMenuToggle">
+			<input type="checkbox" />
+			<span></span>
+			<span></span>
+			<span></span>
+			<ul id="mobileMenu">
+				<li>
+					<div class="p-menu-mobile">
+						<a class="" href="#">Dashboard</a>
+						<a href="#">Scoreboard</a>
+					</div>
+				</li>
+				<li>
+					<div class="s-menu-title"><div><span class="ht-dashboard"></span></div>Dashboard</div>
+					<div class="s-menu-group">
+						<a class="s-menu-item" href="account-overview.html"><span class="ht-wallet"></span>Account overview</a>
+						<a class="s-menu-item" href="basic-atat.html"><span class="ht-pie-chart"></span>Basic statistics</a>
+						<a class="s-menu-item" href="advanced-stat.html"><span class="ht-cluster-chart"></span>Advanced statistics</a>
+						<a class="s-menu-item" href="trade-history.html"><span class="ht-clipboard"></span>Trade history</a>
+					</div>
+				</li>
+				<li>
+					<div class="s-menu-title"><div><span class="ht-bar-chart"></span></div>Analysis</div>
+					<div class="s-menu-group">
+						<a class="s-menu-item" href="ta-customized.html"><span class="ht-star"></span>Customized</a>
+						<a class="s-menu-item" href="ta-general.html"><span class="ht-bar-chart"></span>General</a>
+						<a class="s-menu-item" href="ta-behavioral.html"><span class="ht-coffee"></span>Behavioral</a>
+						<a class="s-menu-item" href="ta-timing.html"><span class="ht-timing"></span>Timing</a>
+						<a class="s-menu-item" href="ta-risk-mgt.html"><span class="ht-alert"></span>Risk management</a>
+						<a class="s-menu-item" href="ta-strategy.html"><span class="ht-chess-castle"></span>Strategy</a>
+						<a class="s-menu-item" href="ta-costs.html"><span class="ht-coins"></span>Costs</a>
+					</div>
+				</li>
+				<li>
+					<a href="alert.html"><div class="s-menu-title active"><div><span class="ht-bell"></span></div>Alerts</div></a>
+				</li>
+			</ul>
+			<div class="mobileMenuMask"></div>
+		</div>
+	</nav>
+	<!-- mobile menu ended -->
+	
+	<!-- main content area -->
+	<!-- breadcrumb -->
+	<div class="breadcrumb breadcrumb-wide"><span class="active">General setting</span></div>
+	<!-- breadcrumb ended -->
+	<div class="main-content-container">
+		<!-- left column -->
+		<div class="content-column">
+			<!-- fixed module -->
+			<div class="module-header">Profile</div>
+			<div class="module-panel">
+				<div class="field-profile-box">
+					<div class="field-profile-pic">
+						<div class="profile-pic-box" style="background-image: url('profile-pic-1.jpg'); background-repeat: no-repeat; background-position: center; background-size: 128px 128px;">
+							<a class="btn-profile-pic-edit" href="#"><span class="ht-pencil"></span></a>
+						</div>
+					</div>
+					<div class="field-profile-input">
+						<!-- input module -->
+						<div class="label-box">
+							<div class="labels">
+								<span>Username</span>
+								<span>10/25</span>
+							</div>
+							<input class="general" placeholder="Username" value="@Winnie-wu"/>
+						</div>
+						<div class="error-msg-box-narrow"></div>
+						<!-- input module end -->
+						<!-- input module -->
+						<div class="label-box">
+							<div class="labels">
+								<span>Email</span>
+							</div>
+							<input class="general" placeholder="Email" value="winniewu@gmail.com"/>
+						</div>
+						<div class="error-msg-box-narrow"></div>
+						<!-- input module end -->
+						<div class="label-box">
+							<div class="labels">
+								<span>Location</span>
+							</div>
+							<div class="custom-select">
+								<select>
+									<option value="Taiwan">Taiwan</option>
+									<option value="USA">United States of America</option>
+									<option value="UK">United Kingdom</option>
+									<option value="Germany">Germany</option>
+									<option value="Japan">Japan</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div><!-- field profile box end -->
+				<p><strong>Social media</strong><br>
+				Links to your social media are visible in your profile.</p>
+				<!-- input module -->
+				<div class="label-box">
+					<div class="labels" style="display:none;">
+						<span>Facebook</span>
+					</div>
+					<input class="social" placeholder="Facebook" value="" style="background-image:url('logo-fb-blue.svg');" />
+				</div>
+				<!-- input module end -->
+				<!-- input module -->
+				<div class="label-box">
+					<div class="labels" style="display:none;">
+						<span>Twitter</span>
+					</div>
+					<input class="social" placeholder="Twitter" value="" style="background-image:url('logo-twitter-blue.svg');" />
+				</div>
+				<!-- input module end -->
+				<!-- input module -->
+				<div class="label-box">
+					<div class="labels" style="display:none;">
+						<span>Instagram</span>
+					</div>
+					<input class="social" placeholder="Instagram" value="" style="background-image:url('logo-ig-blue.svg');" />
+				</div>
+				<!-- input module end -->
+				<!-- input module -->
+				<div class="label-box">
+					<div class="labels" style="display:none;">
+						<span>Youtube</span>
+					</div>
+					<input class="social" placeholder="Youtube" value="" style="background-image:url('logo-yt-blue.svg');" />
+				</div>
+				<!-- input module end -->
+				<!-- input module -->
+				<div class="label-box">
+					<div class="labels" style="display:none;">
+						<span>Website</span>
+					</div>
+					<input class="social" placeholder="Website" value="" style="background-image:url('globe-blue.svg');" />
+				</div>
+				<!-- input module end -->
+				<!-- input module -->
+				<div class="label-box">
+					<div class="labels">
+						<span>Introduce yourself</span><span>120/160</span>
+					</div>
+					<textarea class="general" placeholder="Write something here to introduce yourself to other traders" rows="4">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</textarea>
+				</div>
+				<!-- input module end -->
+			</div>
+			<!-- fixed module end -->
+			<!-- fixed module -->
+			<div class="module-header">Change password</div>
+			<div class="module-panel">
+				<div class="field-profile-box">
+					<div class="field-profile-format">
+						Your password MUST includes:<br>
+						<ul class="password-format">
+							<li class="checked custom-width"><span class="ht-check"></span>at least 8 characters</li>
+							<li class="checked custom-width"><span class="ht-check"></span>uppercase</li>
+							<li class="checked custom-width"><span class="ht-check"></span>lowercase</li>
+							<li class="checked custom-width"><span class="ht-check"></span>number</li>
+							<li style="width:100%;" class="checked"><span class="ht-check"></span>any following symbol: @  #  $  %</li>
+						</ul>
+					</div>
+					<div class="field-profile-input">
+						<!-- input module -->
+						<div class="label-box">
+							<div class="labels">
+								<span>Current password</span>
+							</div>
+							<input class="password hidden" placeholder="Current password" value="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" />
+						</div>
+						<div class="error-msg-box-narrow"></div>
+						<!-- input module end -->
+						<!-- input module -->
+						<div class="label-box">
+							<div class="labels">
+								<span>New password</span>
+							</div>
+							<input class="password visible-checked" placeholder="New password" value="Winn1e@HT" />
+						</div>
+						<div class="error-msg-box-narrow"></div>
+						<!-- input module end -->
+						<!-- input module -->
+						<div class="label-box">
+							<div class="labels">
+								<span>Re-enter new password</span>
+							</div>
+							<input class="password  visible-checked" placeholder="Re-enter new password"  value="Winn1e@HT" />
+						</div>
+						<div class="error-msg-box-narrow"></div>
+						<!-- input module end -->
+					</div>
+				</div><!-- field profile box end -->
+				<div class="bottom-btn-group-btns">
+					<a class="btn-form" href="#" style="display: inline-block; width:auto;">SAVE</a>
+				</div>
+			</div>
+			<!-- fixed module end -->
+		</div>
+		<!-- left column end -->
+		<!-- right column -->
+		<div class="content-column">
+			<!-- accordion -->
+			<button class="accordion">
+				<div class="accordionheader">What topics are you interested in?</div>
+				<div class="accordionintro">We would select content which fits your interest and provide customized experience.</div>
+			</button>
+			<div class="panel">
+				<div class="panel-content">
+					<p><strong>Trading symbols</strong></p>
+					<div class="interest-pill-box">
+						<div class="interest-pill on">USD</div>
+						<div class="interest-pill on">EUR</div>
+						<div class="interest-pill on">GBP</div>
+						<div class="interest-pill on">JPY</div>
+						<div class="interest-pill">AUD</div>
+						<div class="interest-pill">NZD</div>
+						<div class="interest-pill">CAD</div>
+						<div class="interest-pill">CNY</div>
+						<div class="interest-pill">HKD</div>
+						<div class="interest-pill">SGD</div>
+						<div class="interest-pill on">BTC</div>
+					</div>
+					<p><strong>Technical analysis</strong></p>
+					<div class="interest-pill-box">
+						<div class="interest-pill on">Trend analysis</div>
+						<div class="interest-pill">Harmonic patterns</div>
+						<div class="interest-pill">GANN</div>
+						<div class="interest-pill on">Fundamental analysis</div>
+						<div class="interest-pill">Wave analysis</div>
+					</div>
+					<p><strong>Technical indicator</strong></p>
+					<div class="interest-pill-box">
+						<div class="interest-pill">MACD</div>
+						<div class="interest-pill on">Bollinger Bands</div>
+						<div class="interest-pill on">Stochastic</div>
+						<div class="interest-pill on">Ichimoku Kinko Hyo</div>
+						<div class="interest-pill">Fibonacci</div>
+						<div class="interest-pill on">Pivot Point</div>
+					</div>
+					<a href="#">See more</a>
+				</div>	
+			</div>
+			<!-- accordion end -->
+			<!-- accordion -->
+			<button class="accordion">
+				<div class="accordionheader">News &amp; notification setting</div>
+				<div class="accordionintro">Decide what kind of messages and notification you would/would not like to receive.</div>
+			</button>
+			<div class="panel">
+				<div class="panel-content">
+					<p><strong>News, advertisement &amp; marketing materials</strong></p>
+					<label class="check-box">
+						<span style="font-size:14px;">Subscribe news and marketing materials from hoc-trade</span>
+						<input type="checkbox" checked="checked">
+						<span class="checkmark checked"></span>
+					</label>
+					<label class="check-box">
+						<span style="font-size:14px;">Receive email communication from hoc-trade (advertisement, weekly newsletter, etc.)</span>
+						<input type="checkbox" checked="checked">
+						<span class="checkmark"></span>
+					</label>
+				</div>
+			</div>
+			<!-- accordion end -->
+			<!-- accordion -->
+			<button class="accordion">
+				<div class="accordionheader">Privacy &amp; security setting</div>
+				<div class="accordionintro">Manage and update privacy and terms &amp; conditions.</div>
+			</button>
+			<div class="panel">
+				<div class="panel-content">
+					<div class="module-item-row">
+						<div>
+							Terms &amp; conditions<br><span>Our terms &amp; conditions has been updated in  Apr-20-2020. Please update your acceptance.</span>
+						</div>
+						<a class="btn-module-item" href="#"><span class="ht-alert" style="color:orange; font-size:18px; vertical-align: middle;"></span> Update</a>
+					</div>
+					<div class="module-item-row">
+						<div>
+							Privacy
+						</div>
+						<a class="btn-module-item" href="#">View</a>
+					</div>
+				</div>	
+			</div>
+			<!-- accordion end -->
+			<!-- fixed module -->
+			<div class="module-header">Deactivate user account</div>
+			<div class="module-panel">
+				To deactivate your account, download or archive your data, please contact us at <a href="mailto:info@hoc-trade.com">info@hoc-trade.com</a>. We will do our best to process your request as quick as possible.
+			</div>
+			<!-- fixed module end -->
+		</div>
+		<!-- right column end -->
+
+	</div><!-- main-content-container -->
+	<!-- main content area end -->
+	
+	<div class="footer footer-wide">
+		<span class="ht-logo"></span><strong>hoc-trade</strong>&nbsp;&nbsp;&nbsp; copy; 2022 hoc-trade limited, all rights reserved<span class="separator">|</span><a href="#">Terms &amp; conditions</a><span class="separator">|</span><a href="#">Privacy policy</a><span class="separator">|</span><a href="#">advertise with us</a><span class="separator">|</span><a href="#">About us</a><span class="separator">|</span><a class="social" href="#"><span class="ht-logo-fb"></span></a><a class="social" href="#"><span class="ht-logo-twitter"></span></a><a class="social" href="#"><span class="ht-logo-in"></span></a><a class="social" href="#"><span class="ht-logo-yt"></span></a>
+		<p class="disclaimer">HIGH RISK WARNING: Foreign exchange and other CFD trading carries a high level of risk and may not be suitable for everyone. The usage of leverage creates additional risk and loss exposure. Your investment objectives, experience level and risk tolerance have to be taken into consideration before you decide to trade foreign exchange or other CFD products. You could lose some or all of your entire investment. Do not invest money that you cannot afford to lose and always use an appropriate risk management. It’s important to educate yourself on the risks associated with foreign exchange trading, and seek professional advice from an independent financial or tax advisor in case of any questions. Any data and information is provided ‘as is’ solely for informational purposes, and is not intended for trading purposes or advice. Past performance, which are presented on this website or you find somewhere else, is not indicative of future results.</p>
+	</div>
+</body>
+<script>
+	var x, i, j, l, ll, selElmnt, a, b, c;
+	/*look for any elements with the class "custom-select":*/
+	x = document.getElementsByClassName("custom-select");
+	l = x.length;
+	for (i = 0; i < l; i++) {
+	  selElmnt = x[i].getElementsByTagName("select")[0];
+	  ll = selElmnt.length;
+	  /*for each element, create a new DIV that will act as the selected item:*/
+	  a = document.createElement("DIV");
+	  a.setAttribute("class", "select-selected");
+	  a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+	  x[i].appendChild(a);
+	  /*for each element, create a new DIV that will contain the option list:*/
+	  b = document.createElement("DIV");
+	  b.setAttribute("class", "select-items select-hide");
+	  for (j = 1; j < ll; j++) {
+		/*for each option in the original select element,
+		create a new DIV that will act as an option item:*/
+		c = document.createElement("DIV");
+		c.innerHTML = selElmnt.options[j].innerHTML;
+		c.addEventListener("click", function(e) {
+			/*when an item is clicked, update the original select box,
+			and the selected item:*/
+			var y, i, k, s, h, sl, yl;
+			s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+			sl = s.length;
+			h = this.parentNode.previousSibling;
+			for (i = 0; i < sl; i++) {
+			  if (s.options[i].innerHTML == this.innerHTML) {
+				s.selectedIndex = i;
+				h.innerHTML = this.innerHTML;
+				y = this.parentNode.getElementsByClassName("same-as-selected");
+				yl = y.length;
+				for (k = 0; k < yl; k++) {
+				  y[k].removeAttribute("class");
+				}
+				this.setAttribute("class", "same-as-selected");
+				break;
+			  }
+			}
+			h.click();
+		});
+		b.appendChild(c);
+	  }
+	  x[i].appendChild(b);
+	  a.addEventListener("click", function(e) {
+		  /*when the select box is clicked, close any other select boxes,
+		  and open/close the current select box:*/
+		  e.stopPropagation();
+		  closeAllSelect(this);
+		  this.nextSibling.classList.toggle("select-hide");
+		  this.classList.toggle("select-arrow-active");
+		});
+	}
+	function closeAllSelect(elmnt) {
+	  /*a function that will close all select boxes in the document,
+	  except the current select box:*/
+	  var x, y, i, xl, yl, arrNo = [];
+	  x = document.getElementsByClassName("select-items");
+	  y = document.getElementsByClassName("select-selected");
+	  xl = x.length;
+	  yl = y.length;
+	  for (i = 0; i < yl; i++) {
+		if (elmnt == y[i]) {
+		  arrNo.push(i)
+		} else {
+		  y[i].classList.remove("select-arrow-active");
+		}
+	  }
+	  for (i = 0; i < xl; i++) {
+		if (arrNo.indexOf(i)) {
+		  x[i].classList.add("select-hide");
+		}
+	  }
+	}
+	/*if the user clicks anywhere outside the select box,
+	then close all select boxes:*/
+	document.addEventListener("click", closeAllSelect);
+</script>
+<script>
+	var acc = document.getElementsByClassName("accordion");
+	var i;
+
+	for (i = 0; i < acc.length; i++) {
+	  acc[i].addEventListener("click", function() {
+		//this.classList.toggle("accordionheaderactive");
+		var panel = this.nextElementSibling;
+		if (panel.style.maxHeight) {
+		  panel.style.maxHeight = null;
+		} else {
+		  panel.style.maxHeight = panel.scrollHeight + "px";
+		} 
+	  });
+	}
+</script>
+</html>
