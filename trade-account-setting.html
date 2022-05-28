@@ -21,6 +21,35 @@
 		});
 	});
 </script>
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script>
 <style>
 	body {
 		background-color: #E6E6E6;
@@ -186,151 +215,69 @@
 		<!-- left column -->
 		<div class="content-column">
 			<!-- fixed module -->
-			<div class="module-header trade-acc-header">Profile</div>
+			<div class="module-header trade-acc-header">Change investor password <span class="ht-info" style="color:#047F92; font-size:24px; vertical-align: middle;"></span></div>
 			<div class="module-panel">
-				<div class="field-profile-box">
-					<div class="field-profile-pic">
-						<div class="profile-pic-box" style="background-image: url('profile-pic-1.jpg'); background-repeat: no-repeat; background-position: center; background-size: 128px 128px;">
-							<a class="btn-profile-pic-edit" href="#"><span class="ht-pencil"></span></a>
+				We recommend to use a strong password that you are not using elsewhere.<br><br>
+				<div class="field-profile-input">
+					<!-- input module -->
+					<div class="label-box">
+						<div class="labels">
+							<span>Current password</span>
 						</div>
+						<input class="password hidden" placeholder="Current password" value="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" />
 					</div>
-					<div class="field-profile-input">
-						<!-- input module -->
-						<div class="label-box">
-							<div class="labels">
-								<span>Username</span>
-								<span>10/25</span>
-							</div>
-							<input class="general" placeholder="Username" value="@Winnie-wu"/>
+					<div class="error-msg-box-narrow"></div>
+					<!-- input module end -->
+					<!-- input module -->
+					<div class="label-box">
+						<div class="labels" style="display:none;">
+							<span>New password</span>
 						</div>
-						<div class="error-msg-box-narrow"></div>
-						<!-- input module end -->
-						<!-- input module -->
-						<div class="label-box">
-							<div class="labels">
-								<span>Email</span>
-							</div>
-							<input class="general" placeholder="Email" value="winniewu@gmail.com"/>
+						<input class="password visible" placeholder="New password" value="" />
+					</div>
+					<div class="error-msg-box-narrow"></div>
+					<!-- input module end -->
+					<!-- input module -->
+					<div class="label-box">
+						<div class="labels" style="display:none;">
+							<span>Re-enter new password</span>
 						</div>
-						<div class="error-msg-box-narrow"></div>
-						<!-- input module end -->
-						<div class="label-box">
-							<div class="labels">
-								<span>Location</span>
-							</div>
-							<div class="custom-select">
-								<select>
-									<option value="Taiwan">Taiwan</option>
-									<option value="USA">United States of America</option>
-									<option value="UK">United Kingdom</option>
-									<option value="Germany">Germany</option>
-									<option value="Japan">Japan</option>
-								</select>
-							</div>
-						</div>
+						<input class="password  visible" placeholder="Re-enter new password"  value="" />
 					</div>
-				</div><!-- field profile box end -->
-				<p><strong>Social media</strong><br>
-				Links to your social media are visible in your profile.</p>
-				<!-- input module -->
-				<div class="label-box">
-					<div class="labels" style="display:none;">
-						<span>Facebook</span>
-					</div>
-					<input class="social" placeholder="Facebook" value="" style="background-image:url('logo-fb-blue.svg');" />
+					<div class="error-msg-box-narrow"></div>
+					<!-- input module end -->
 				</div>
-				<!-- input module end -->
-				<!-- input module -->
-				<div class="label-box">
-					<div class="labels" style="display:none;">
-						<span>Twitter</span>
-					</div>
-					<input class="social" placeholder="Twitter" value="" style="background-image:url('logo-twitter-blue.svg');" />
+				<div class="bottom-btn-group-btns">
+					<a class="btn-form disabled" href="#" style="display: inline-block; width:auto;">SAVE</a>
 				</div>
-				<!-- input module end -->
-				<!-- input module -->
-				<div class="label-box">
-					<div class="labels" style="display:none;">
-						<span>Instagram</span>
-					</div>
-					<input class="social" placeholder="Instagram" value="" style="background-image:url('logo-ig-blue.svg');" />
-				</div>
-				<!-- input module end -->
-				<!-- input module -->
-				<div class="label-box">
-					<div class="labels" style="display:none;">
-						<span>Youtube</span>
-					</div>
-					<input class="social" placeholder="Youtube" value="" style="background-image:url('logo-yt-blue.svg');" />
-				</div>
-				<!-- input module end -->
-				<!-- input module -->
-				<div class="label-box">
-					<div class="labels" style="display:none;">
-						<span>Website</span>
-					</div>
-					<input class="social" placeholder="Website" value="" style="background-image:url('globe-blue.svg');" />
-				</div>
-				<!-- input module end -->
-				<!-- input module -->
-				<div class="label-box">
-					<div class="labels">
-						<span>Introduce yourself</span><span>120/160</span>
-					</div>
-					<textarea class="general" placeholder="Write something here to introduce yourself to other traders" rows="4">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</textarea>
-				</div>
-				<!-- input module end -->
 			</div>
 			<!-- fixed module end -->
 			<!-- fixed module -->
-			<div class="module-header trade-acc-header">Change password</div>
+			<div class="module-header trade-acc-header">Account verification</div>
 			<div class="module-panel">
-				<div class="field-profile-box">
-					<div class="field-profile-format">
-						Your password MUST includes:<br>
-						<ul class="password-format">
-							<li class="checked custom-width"><span class="ht-check"></span>at least 8 characters</li>
-							<li class="checked custom-width"><span class="ht-check"></span>uppercase</li>
-							<li class="checked custom-width"><span class="ht-check"></span>lowercase</li>
-							<li class="checked custom-width"><span class="ht-check"></span>number</li>
-							<li style="width:100%;" class="checked"><span class="ht-check"></span>any following symbol: @  #  $  %</li>
-						</ul>
+				<strong>This account has not been verified</strong><br><br>
+				We recommend to verify your trading account if you wish to promote yourself on hoc-trade as a public trader. Once the verification is success, we will add a verified icon next to your account. You can freely change your investor password after verification.<br><br>
+				<div class="field-profile-input">
+					<!-- input module -->
+					<div class="field-label">Login</div>
+					<input class="general" placeholder="" value="980765645" disabled />
+					<!-- input module end -->
+					<div class="field-label">Server</div>
+					<div class="custom-select">
+						<select>
+							<option value="MetaTradeInternational">MetaTradeInternational</option>
+						</select>
 					</div>
-					<div class="field-profile-input">
-						<!-- input module -->
-						<div class="label-box">
-							<div class="labels">
-								<span>Current password</span>
-							</div>
-							<input class="password hidden" placeholder="Current password" value="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" />
-						</div>
-						<div class="error-msg-box-narrow"></div>
-						<!-- input module end -->
-						<!-- input module -->
-						<div class="label-box">
-							<div class="labels">
-								<span>New password</span>
-							</div>
-							<input class="password visible-checked" placeholder="New password" value="Winn1e@HT" />
-						</div>
-						<div class="error-msg-box-narrow"></div>
-						<!-- input module end -->
-						<!-- input module -->
-						<div class="label-box">
-							<div class="labels">
-								<span>Re-enter new password</span>
-							</div>
-							<input class="password  visible-checked" placeholder="Re-enter new password"  value="Winn1e@HT" />
-						</div>
-						<div class="error-msg-box-narrow"></div>
-						<!-- input module end -->
-					</div>
+					<!-- input module -->
+					<div class="field-label">Authorization password <span class="ht-info" style="color:#047F92; font-size:24px; vertical-align: middle;"></span></div>
+					<input class="general investor" placeholder="" value="vgty@78!dd78FdTT" />
+					<!-- input module end -->
+					<a class="btn-form" href="#" style="display: inline-block; width:auto;">Verify</a>
+					<div include-html="verify-1.html"></div>
 				</div><!-- field profile box end -->
-				<div class="bottom-btn-group-btns">
-					<a class="btn-form" href="#" style="display: inline-block; width:auto;">SAVE</a>
-				</div>
 			</div>
 			<!-- fixed module end -->
+			
 		</div>
 		<!-- left column end -->
 		<!-- right column -->
@@ -592,6 +539,9 @@
 		} 
 	  });
 	}
+</script>
+<script>
+includeHTML();
 </script>
 <script src="modal-trade-acc.js" language="javascript"></script>
 </html>

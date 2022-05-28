@@ -291,6 +291,10 @@ a.btn-form:hover {
 a.btn-form span {
 	font-size:20px;
 }
+a.btn-form.disabled, a.btn-form.disabled:hover {
+	background-color:#999999;
+	cursor:default;
+}
 .step-box {
 	display:flex;
 	width:100%;

@@ -548,6 +548,10 @@ a.btn-page-num.active {
 	justify-content: space-between;
 	z-index:1;
 }
+.field-label {
+	display:block;
+	margin:0 0 5px 0;
+}
 input.search-box {
 	display:inline-block;
 	height:28px;
@@ -593,6 +597,15 @@ input.social {
 	background-size:24px 24px;
 	margin-bottom:10px;
 	border:1px solid #FFFFFF;
+}
+input.general:disabled, input.search-box:disabled, input.social:disabled {
+	background-color: #E6E6E6;
+	border:1px solid #E6E6E6;
+}
+input.general.investor {
+	color:#FFFFFF;
+	background-color:#06AFC9;
+	border:1px solid #06AFC9;
 }
 @media only screen and (max-width: 979px) {
 	input.social {
