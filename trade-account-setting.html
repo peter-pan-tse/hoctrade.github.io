@@ -21,35 +21,6 @@
 		});
 	});
 </script>
-<script>
-function includeHTML() {
-  var z, i, elmnt, file, xhttp;
-  /*loop through a collection of all HTML elements:*/
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    /*search for elements with a certain atrribute:*/
-    file = elmnt.getAttribute("include-html");
-    if (file) {
-      /*make an HTTP request using the attribute value as the file name:*/
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4) {
-          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-          /*remove the attribute, and call this function once more:*/
-          elmnt.removeAttribute("include-html");
-          includeHTML();
-        }
-      }      
-      xhttp.open("GET", file, true);
-      xhttp.send();
-      /*exit the function:*/
-      return;
-    }
-  }
-};
-</script>
 <style>
 	body {
 		background-color: #E6E6E6;
@@ -272,7 +243,7 @@ function includeHTML() {
 					<div class="field-label">Authorization password <span class="ht-info" style="color:#047F92; font-size:24px; vertical-align: middle;"></span></div>
 					<input class="general investor" placeholder="" value="vgty@78!dd78FdTT" />
 					<!-- input module end -->
-					<div id="verification" include-html="verify-1.html"></div>
+					<a class="btn-form" href="#" style="display: inline-block; width:auto;">Verify</a>
 				</div><!-- field profile box end -->
 			</div>
 			<!-- fixed module end -->
@@ -538,9 +509,6 @@ function includeHTML() {
 		} 
 	  });
 	}
-</script>
-<script>
-includeHTML();
 </script>
 <script src="modal-trade-acc.js" language="javascript"></script>
 </html>
