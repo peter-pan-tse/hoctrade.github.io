@@ -468,14 +468,3 @@ ul.select-acc li:nth-child(odd) {
 	right:20px;
 	top:15px;
 }
-.setting-table {
-	width:100%;
-	font-size:12px;
-	margin-bottom:20px;
-}
-.setting-table td {
-	padding:5px;
-}
-.setting-table tr:nth-child(even) {
-	background-color:#FFFFFF;
-}

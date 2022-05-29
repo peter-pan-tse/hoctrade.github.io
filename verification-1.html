@@ -108,7 +108,7 @@
 					</li>
 					<hr class="dropmenu-separator" />
 					<li>
-						<a class="active" id="modalSelectAcc" style="cursor:pointer;"><span class="ht-wallet-setting icon"></span>Account setting</a>
+						<a class="active" href="#" style="cursor:pointer;"><span class="ht-wallet-setting icon"></span>Account setting</a>
 					</li>
 					<li>
 						<a href="#"><span class="ht-wallet-add icon"></span>Add account</a>
@@ -246,7 +246,11 @@
 					<div class="field-label">Authorization password <span class="ht-info" style="color:#047F92; font-size:24px; vertical-align: middle;"></span></div>
 					<input class="general investor" placeholder="" value="vgty@78!dd78FdTT" />
 					<!-- input module end -->
-					<a class="btn-form" href="verification-1.html" style="display: inline-block; width:auto;">Start verify</a>
+					<div class="verification-guide">
+						<strong>Authorization password has been copied to clipboard!</strong><br>
+						Now go to <strong>MetaTrade</strong> and login to your account <strong>980765645</strong>. Change the investor password to <strong>vgty@78!dd78fdTT</strong>. After that, come back here to click the “Verify this account” button below.
+					</div>
+					<a class="btn-form" id="modalSelectAcc" style="display: inline-block; width:auto; cursor: pointer;"><span class="ht-verified" style="font-size:20px; vertical-align: middle;"></span> Verify this account</a>
 				</div><!-- field profile box end -->
 			</div>
 			<!-- fixed module end -->
@@ -465,6 +469,31 @@
 		<span class="ht-logo"></span><strong>hoc-trade</strong>&nbsp;&nbsp;&nbsp; copy; 2022 hoc-trade limited, all rights reserved<span class="separator">|</span><a href="#">Terms &amp; conditions</a><span class="separator">|</span><a href="#">Privacy policy</a><span class="separator">|</span><a href="#">advertise with us</a><span class="separator">|</span><a href="#">About us</a><span class="separator">|</span><a class="social" href="#"><span class="ht-logo-fb"></span></a><a class="social" href="#"><span class="ht-logo-twitter"></span></a><a class="social" href="#"><span class="ht-logo-in"></span></a><a class="social" href="#"><span class="ht-logo-yt"></span></a>
 		<p class="disclaimer">HIGH RISK WARNING: Foreign exchange and other CFD trading carries a high level of risk and may not be suitable for everyone. The usage of leverage creates additional risk and loss exposure. Your investment objectives, experience level and risk tolerance have to be taken into consideration before you decide to trade foreign exchange or other CFD products. You could lose some or all of your entire investment. Do not invest money that you cannot afford to lose and always use an appropriate risk management. It’s important to educate yourself on the risks associated with foreign exchange trading, and seek professional advice from an independent financial or tax advisor in case of any questions. Any data and information is provided ‘as is’ solely for informational purposes, and is not intended for trading purposes or advice. Past performance, which are presented on this website or you find somewhere else, is not indicative of future results.</p>
 	</div>
+	
+	<!-- The Modal -->
+	<div id="modalTradeAcc" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content">
+			<div class="modal-header">
+				<span>Verify account</span>
+				<span class="close"><span class="ht-cross"></span></span>
+			</div>
+			<div class="modal-body-trade-acc" style="height:300px; padding-bottom:20px;">
+				<div class="input-area">
+					<p>Enter the new investor password to verify this account.</p>
+					<!-- input module -->
+					<div class="field-label">Investor password <span class="ht-info" style="color:#047F92; font-size:24px; vertical-align: middle;"></span></div>
+					<input class="password visible-checked" placeholder="" value="vgty@78!dd78FdTT" />
+					<div class="error-msg-box-narrow"></div>
+					<!-- input module end -->
+				</div>
+				<div class="bottom-btn-group" style="bottom:40px;">
+					<a class="btn-form" href="verification-2.html">Verify</a>
+				</div>
+			</div>
+	  </div>
+	</div>
+	
 </body>
 <script>
 	var x, i, j, l, ll, selElmnt, a, b, c;
