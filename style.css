@@ -502,9 +502,38 @@ a.btn-icon-l {
 	margin-right:5px;
 	cursor:pointer;
 }
+a.btn-delete-acc {
+	display:inline-block;
+	height:24px;
+	width:auto;
+	padding:2px 10px 2px 5px;
+	margin: 10px 0;
+	background-color: #E6E6E6;
+	text-align: center;
+	text-decoration:none;
+	font-size:14px;
+	font-weight: bold;
+	line-height:24px;
+	color:#C15357;
+	border-radius:6px;
+	transition: all 0.3s ease;
+}
+@media only screen and (max-width: 768px) {
+	a.btn-delete-acc {
+		margin: 6px 0;
+	}
+}
+a.btn-delete-acc span {
+	font-size: 24px;
+	vertical-align: middle;
+}
 a.btn-general:hover, a.btn-ff:hover, a.btn-page:hover, a.btn-icon.on, a.btn-icon-l:hover {
 	background-color: #06AFC9;
 	color:#FFFFFF;
+}
+a.btn-delete-acc:hover {
+	background-color: #C15357;
+	color:#E6E6E6;
 }
 a.btn-page-num {
 	display:inline-block;

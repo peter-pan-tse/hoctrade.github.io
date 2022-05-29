@@ -276,7 +276,7 @@ hr.dropmenu-separator {
 	}
 	.breadcrumb {
 		position:fixed;
-		width:100%;
+		width: calc(100% - 60px);
 		top:60px;
 		background-color: #033C45;
 		font-size:12px;
