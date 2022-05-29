@@ -518,6 +518,24 @@ a.btn-delete-acc {
 	border-radius:6px;
 	transition: all 0.3s ease;
 }
+a.btn-form-l {
+	display:block;
+	height:50px;
+	text-align:center;
+	font-size: 24px;
+	font-weight:bold;
+	color: #FFFFFF;
+	background-color:#047F92;
+	text-decoration: none;
+	line-height:50px;
+	border-radius:10px;
+	margin-bottom:30px;
+}
+@media only screen and (max-width: 480px) {
+	a.btn-form-l {
+		margin-bottom:10px;
+	}
+}
 @media only screen and (max-width: 768px) {
 	a.btn-delete-acc {
 		margin: 6px 0;
@@ -527,7 +545,7 @@ a.btn-delete-acc span {
 	font-size: 24px;
 	vertical-align: middle;
 }
-a.btn-general:hover, a.btn-ff:hover, a.btn-page:hover, a.btn-icon.on, a.btn-icon-l:hover {
+a.btn-general:hover, a.btn-ff:hover, a.btn-page:hover, a.btn-icon.on, a.btn-icon-l:hover, a.btn-form-l:hover {
 	background-color: #06AFC9;
 	color:#FFFFFF;
 }

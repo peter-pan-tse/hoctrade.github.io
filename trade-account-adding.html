@@ -181,283 +181,110 @@
 	<!-- main content area -->
 	<!-- breadcrumb -->
 	<div class="breadcrumb breadcrumb-wide" style="display:flex; justify-content: space-between;">
-		<div>Trade account setting / <span style="color: #000000; font-weight: bold;">Winnie-fx-live</span></div>
-		<a class="btn-delete-acc" href="#"><span class="ht-trash"></span> Delete account</a>
+		<span class="active">Add new trade account</span>
+		<a class="btn-delete-acc" href="#"><span class="ht-cross"></span> Cancel</a>
 	</div>
 	<!-- breadcrumb ended -->
 	<div class="main-content-container">
 		<!-- left column -->
 		<div class="content-column">
 			<!-- fixed module -->
-			<div class="module-header trade-acc-header">Change investor password <span class="ht-info" style="color:#047F92; font-size:24px; vertical-align: middle;"></span></div>
+			<div class="module-header trade-acc-header">Trading account</div>
 			<div class="module-panel">
-				We recommend to use a strong password that you are not using elsewhere.<br><br>
 				<div class="field-profile-input">
 					<!-- input module -->
-					<div class="label-box">
-						<div class="labels">
-							<span>Current password</span>
-						</div>
-						<input class="password hidden" placeholder="Current password" value="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" />
+					<div class="field-label">Your trading software <span class="ht-info" style="color:#047F92; font-size:24px; vertical-align: middle;"></span></div>
+					<div class="custom-select">
+						<select>
+							<option value="">Please select</option>
+							<option value="Metatrader4">Metatrader 4</option>
+							<option value="Metatrader5">Metatrader 5</option>
+							<option value="Binance">Binance</option>
+						</select>
 					</div>
-					<div class="error-msg-box-narrow"></div>
 					<!-- input module end -->
 					<!-- input module -->
-					<div class="label-box">
-						<div class="labels" style="display:none;">
-							<span>New password</span>
-						</div>
-						<input class="password visible" placeholder="New password" value="" />
+					<div class="field-label">Your broker <span class="ht-info" style="color:#047F92; font-size:24px; vertical-align: middle;"></span></div>
+					<div class="custom-select">
+						<select>
+							<option value="">Please select</option>
+							<option value="icmarket">IC Market</option>
+							<option value="exness">Exness</option>
+							<option value="fxpro">FX Pro</option>
+						</select>
 					</div>
-					<div class="error-msg-box-narrow"></div>
 					<!-- input module end -->
 					<!-- input module -->
-					<div class="label-box">
-						<div class="labels" style="display:none;">
-							<span>Re-enter new password</span>
-						</div>
-						<input class="password  visible" placeholder="Re-enter new password"  value="" />
+					<div class="field-label">Your server <span class="ht-info" style="color:#047F92; font-size:24px; vertical-align: middle;"></span></div>
+					<div class="custom-select">
+						<select>
+							<option value="">Please select</option>
+							<option value="icmarketlive">IC Market Live</option>
+							<option value="icmarketdemo">IC Market Demo</option>
+						</select>
 					</div>
-					<div class="error-msg-box-narrow"></div>
 					<!-- input module end -->
-				</div>
-				<div class="bottom-btn-group-btns">
-					<a class="btn-form disabled" href="#" style="display: inline-block; width:auto;">Save</a>
 				</div>
 			</div>
 			<!-- fixed module end -->
 			<!-- fixed module -->
-			<div class="module-header trade-acc-header">Account verification</div>
-			<div class="module-panel">
-				<strong>This account has not been verified</strong><br><br>
-				We recommend to verify your trading account if you wish to promote yourself on hoc-trade as a public trader. Once the verification is success, we will add a verified icon next to your account. You can freely change your investor password after verification.<br><br>
-				<div class="field-profile-input">
-					<!-- input module -->
-					<div class="field-label">Login</div>
-					<input class="general" placeholder="" value="980765645" disabled />
-					<!-- input module end -->
-					<div class="field-label">Server</div>
-					<div class="custom-select">
-						<select>
-							<option value="MetaTradeInternational">MetaTradeInternational</option>
-						</select>
+			<div class="module-header trade-acc-header">Portfolio</div>
+				<div class="module-panel">
+					<div class="field-profile-input">
+						<!-- input module -->
+						<div class="field-label">Portfolio name <span class="ht-info" style="color:#047F92; font-size:24px; vertical-align: middle;"></span></div>
+						<input class="general" placeholder="" value="" />
+						<!-- input module end -->
 					</div>
-					<!-- input module -->
-					<div class="field-label">Authorization password <span class="ht-info" style="color:#047F92; font-size:24px; vertical-align: middle;"></span></div>
-					<input class="general investor" placeholder="" value="vgty@78!dd78FdTT" />
-					<!-- input module end -->
-					<a class="btn-form" href="verification-1.html" style="display: inline-block; width:auto;">Start verify</a>
-				</div><!-- field profile box end -->
-			</div>
-			<!-- fixed module end -->
-			
-		</div>
-		<!-- left column end -->
-		<!-- right column -->
-		<div class="content-column">
-			<!-- accordion -->
-			<button class="accordion">
-				<div class="accordionheader trade-acc-header">Main account setting</div>
-				<div class="accordionintro"><strong>This is your main account</strong>. When you choose this account as your main account, the analytical charts based on the account will default show when you land at hoc-trade analytics pages.</div>
-			</button>
-			<div class="panel">
-				<div class="panel-content">
-					<label class="check-box">
-						<span style="font-size:14px; color:#047F92; font-weight:bold;">Choose this account as my main account</span>
-						<input type="checkbox" checked="checked">
-						<span class="checkmark checked"></span>
-					</label>
-					<div class="bottom-btn-group-btns">
-						<a class="btn-form" href="#" style="display: inline-block; width:auto;">Save</a>
-					</div>
-				</div>
-			</div>
-			<!-- accordion end -->
-			<!-- accordion -->
-			<button class="accordion">
-				<div class="accordionheader trade-acc-header">Notification setting</div>
-				<div class="accordionintro">Decide what kind of alerts and notifications you would/would not like to receive.</div>
-			</button>
-			<div class="panel">
-				<div class="panel-content">
-					<table class="setting-table" cellpadding="0" cellspacing="0">
-						<tr>
-							<td width="70%"><span style="color:#047F92; font-weight:bold;">I wish to receive alert and notification when...</span></td>
-							<td width="15%" align="center"><span style="color:#047F92; font-weight:bold;">Push</span></td>
-							<td width="15%" align="center"><span style="color:#047F92; font-weight:bold;">Email</span></td>
-						</tr>
-						<tr>
-							<td>a new risk pattern is identified for me</td>
-							<td align="center">
-								<label class="check-box">
-									<input type="checkbox" checked="checked">
-									<span class="checkmark checked" style="top:0px; left:calc(50% - 6px);"></span>
-								</label>
-							</td>
-							<td align="center">
-								<label class="check-box">
-									<input type="checkbox">
-									<span class="checkmark" style="top:0px; left:calc(50% - 6px);"></span>
-								</label>
-							</td>
-						</tr>
-						<tr>
-							<td>a trade based on a pattern is executed</td>
-							<td align="center">
-								<label class="check-box">
-									<input type="checkbox" checked="checked">
-									<span class="checkmark checked" style="top:0px; left:calc(50% - 6px);"></span>
-								</label>
-							</td>
-							<td align="center">
-								<label class="check-box">
-									<input type="checkbox">
-									<span class="checkmark" style="top:0px; left:calc(50% - 6px);"></span>
-								</label>
-							</td>
-						</tr>
-						<tr>
-							<td>a risky trading behavior is identified</td>
-							<td align="center">
-								<label class="check-box">
-									<input type="checkbox" checked="checked">
-									<span class="checkmark checked" style="top:0px; left:calc(50% - 6px);"></span>
-								</label>
-							</td>
-							<td align="center">
-								<label class="check-box">
-									<input type="checkbox" checked="checked">
-									<span class="checkmark checked" style="top:0px; left:calc(50% - 6px);"></span>
-								</label>
-							</td>
-						</tr>
-					</table>
-					<div class="bottom-btn-group-btns">
-						<a class="btn-form" href="#" style="display: inline-block; width:auto;">Save</a>
-					</div>
-				</div>
-			</div>
-			<!-- accordion end -->
-			<!-- accordion -->
-			<button class="accordion">
-				<div class="accordionheader trade-acc-header">Visibility setting</div>
-				<div class="accordionintro">Choose what should be public to other traders.</div>
-			</button>
-			<div class="panel">
-				<div class="panel-content">
 					<!-- switch item -->
 					<div class="module-item-row" style="margin:10px 0;">
 						<div>
 							Account public?<br><span>When your account is public, other traders will be able<br> to see your trading performance.</span>
 						</div>
 						<label class="switch">
-						  <input type="checkbox">
-						  <span class="slider round"></span>
+							 <input type="checkbox">
+							 <span class="slider round"></span>
 						</label>
 					</div>
 					<!-- switch item end -->
-					<span style="font-size:14px; color:#047F92; font-weight:bold;">Overview public?</span>
-					<!-- switch item -->
-					<div class="module-item-row" style="margin:10px 0;">
-						<div style="color:#666666; font-weight:normal;">Basic statistics</div>
-						<label class="switch">
-						  <input type="checkbox">
-						  <span class="slider round"></span>
-						</label>
-					</div>
-					<!-- switch item end -->
-					<!-- switch item -->
-					<div class="module-item-row" style="margin:10px 0;">
-						<div style="color:#666666; font-weight:normal;">Advanced statistics</div>
-						<label class="switch">
-						  <input type="checkbox">
-						  <span class="slider round"></span>
-						</label>
-					</div>
-					<!-- switch item end -->
-					<!-- switch item -->
-					<div class="module-item-row" style="margin:10px 0;">
-						<div style="color:#666666; font-weight:normal;">Trade history</div>
-						<label class="switch">
-						  <input type="checkbox">
-						  <span class="slider round"></span>
-						</label>
-					</div>
-					<!-- switch item end -->
-					<span style="font-size:14px; color:#047F92; font-weight:bold;">Analysis public?</span>
-					<!-- switch item -->
-					<div class="module-item-row" style="margin:10px 0;">
-						<div style="color:#666666; font-weight:normal;">Customized section</div>
-						<label class="switch">
-						  <input type="checkbox">
-						  <span class="slider round"></span>
-						</label>
-					</div>
-					<!-- switch item end -->
-					<!-- switch item -->
-					<div class="module-item-row" style="margin:10px 0;">
-						<div style="color:#666666; font-weight:normal;">General section</div>
-						<label class="switch">
-						  <input type="checkbox">
-						  <span class="slider round"></span>
-						</label>
-					</div>
-					<!-- switch item end -->
-					<!-- switch item -->
-					<div class="module-item-row" style="margin:10px 0;">
-						<div style="color:#666666; font-weight:normal;">Behavioral section</div>
-						<label class="switch">
-						  <input type="checkbox">
-						  <span class="slider round"></span>
-						</label>
-					</div>
-					<!-- switch item end -->
-					<!-- switch item -->
-					<div class="module-item-row" style="margin:10px 0;">
-						<div style="color:#666666; font-weight:normal;">Timing section</div>
-						<label class="switch">
-						  <input type="checkbox">
-						  <span class="slider round"></span>
-						</label>
-					</div>
-					<!-- switch item end -->
-					<!-- switch item -->
-					<div class="module-item-row" style="margin:10px 0;">
-						<div style="color:#666666; font-weight:normal;">Risk management section</div>
-						<label class="switch">
-						  <input type="checkbox">
-						  <span class="slider round"></span>
-						</label>
-					</div>
-					<!-- switch item end -->
-					<!-- switch item -->
-					<div class="module-item-row" style="margin:10px 0;">
-						<div style="color:#666666; font-weight:normal;">Strategic section</div>
-						<label class="switch">
-						  <input type="checkbox">
-						  <span class="slider round"></span>
-						</label>
-					</div>
-					<!-- switch item end -->
-					<!-- switch item -->
-					<div class="module-item-row" style="margin:10px 0;">
-						<div style="color:#666666; font-weight:normal;">Costs section</div>
-						<label class="switch">
-						  <input type="checkbox">
-						  <span class="slider round"></span>
-						</label>
-					</div>
-					<!-- switch item end -->
-					<br>
-					<div class="bottom-btn-group-btns">
-						<a class="btn-form" href="#" style="display: inline-block; width:auto;">Save</a>
-					</div>
-				</div>	
+				</div><!-- field profile box end -->
 			</div>
-			<!-- accordion end -->
-		</div>
+			<!-- fixed module end -->
+		<!-- left column end -->
+		<!-- right column -->
+		<div class="content-column">
+			<!-- fixed module -->
+			<div class="module-header trade-acc-header">Experience &amp; type</div>
+			<div class="module-panel">
+				<div class="field-profile-input">
+					<!-- input module -->
+					<div class="field-label">Level of experience in trading <span class="ht-info" style="color:#047F92; font-size:24px; vertical-align: middle;"></span><br><span style="font-size:12px; color:#666666;">This information will not be public</span></div>
+					<div class="custom-select">
+						<select>
+							<option value="">Please select</option>
+							<option value="less than 6 months">Less than 6 months</option>
+							<option value="6-12 months">6-12 months</option>
+							<option value="12-36 months">12-36 months</option>
+							<option value="more than 36 months">More than 36 months</option>
+						</select>
+					</div>
+					<!-- input module end -->
+					<!-- input module -->
+					<div class="field-label">Trading system <span class="ht-info" style="color:#047F92; font-size:24px; vertical-align: middle;"></span></div>
+					<div class="custom-select">
+						<select>
+							<option value="">Please select</option>
+							<option value="manual">Manual</option>
+							<option value="robot">Robot (Expert Advisor)</option>
+						</select>
+					</div>
+					<!-- input module end -->
+				</div>
+			</div>
+			<!-- fixed module end -->
+			<a class="btn-form-l" href="account-overview.html"><span class="ht-chain" style="font-size:36px; vertical-align: middle;"></span> CONNECT</a>
 		<!-- right column end -->
-
+		</div>
 	</div><!-- main-content-container -->
 	<!-- main content area end -->
 	
