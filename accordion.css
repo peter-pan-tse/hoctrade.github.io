@@ -81,6 +81,7 @@ input.accordion:checked ~ .tab-content {
 .faq-anchor {
 	display: flex;
 	justify-content: flex-start;
+	flex-wrap: wrap;
 	width:calc(100% - 20px);
 	background-color: #FFFFFF;
 	font-size:14px;
