@@ -1,0 +1,104 @@
+﻿@charset "UTF-8";
+/* CSS Document */
+input.accordion {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.row {
+  display: flex;
+}
+.row .col {
+  flex: 1;
+}
+.row .col:last-child {
+  margin-left: 1em;
+}
+
+/* Accordion styles */
+.tabs {
+  border-radius:0 0 20px 20px;
+  overflow: hidden;
+}
+
+.tab {
+  width: 100%;
+  color: #666666;
+  overflow: hidden;
+}
+.tab-label {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  background: #F2F2F2;
+  font-weight: bold;
+  cursor: pointer;
+	border-top: 1px solid #E6E6E6;
+  /* Icon */
+}
+.tab-label:hover {
+  background: #EEEEEE;
+}
+.tab-label::after {
+ /* content: "❯";*/
+	content: "❯";
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  transition: all 0.3s;
+}
+.tab-content {
+  max-height: 0;
+  padding: 0 20px 0px 20px;
+  color: #666666;
+  background: #E0EBED;
+  transition: all 0.3s;
+}
+.tab-close {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1em 20px 1em 1em;
+  font-size: 0.75em;
+  background: #E6E6E6;
+  cursor: pointer;
+}
+.tab-close:hover {
+  background: #F2F2F2;
+}
+
+input.accordion:checked + .tab-label {
+  background: #E0EBED;
+}
+input.accordion:checked + .tab-label::after {
+  transform: rotate(90deg);
+}
+input.accordion:checked ~ .tab-content {
+  max-height: 100vh;
+  padding: 0 20px 10px 20px;
+}
+
+.faq-anchor {
+	display: flex;
+	justify-content: flex-start;
+	width:calc(100% - 20px);
+	background-color: #FFFFFF;
+	font-size:14px;
+	padding:10px;
+	margin-bottom:30px;
+}
+a.btn-anchor {
+	display:inline-block;
+	font-size: 12px;
+	color:#047F92;
+	background-color:#F2F2F2;
+	padding:0 4px;
+	border-radius:4px;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	margin:0 5px;
+}
+a.btn-anchor:hover {
+	background-color: #06AFC9;
+	color:#FFFFFF;
+}

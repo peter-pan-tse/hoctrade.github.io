@@ -1,0 +1,603 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="jquery-3.6.0.min.js" language="javascript"></script>
+<link href="https://fonts.googleapis.com/css?family=Noto Sans:400,700,900" rel="stylesheet">
+<link href="font.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+<link href="chart.css" rel="stylesheet">
+<link href="menu.css" rel="stylesheet">
+<link href="burger-menu.css" rel="stylesheet">
+<link href="setting.css" rel="stylesheet">
+<link href="accordion.css" rel="stylesheet">
+<link href="modal-signup.css" rel="stylesheet">
+<link rel="icon" href="favicon.svg">
+<title>hoc-trade help &amp; support</title>
+<script>
+	$(function(){
+		$('.open-btn').on('click', function(){
+			$(this).toggleClass('close-btn')
+		});
+	});
+</script>
+<script>
+	const offsetAnchor = () => {
+	  if (location.hash.length !== 0) {
+		window.scrollTo(window.scrollX, window.scrollY - 70);
+	  }
+	}
+
+	const anchors = document.querySelectorAll('a[href^="#"]')
+
+	for (const a of anchors) {
+	  a.addEventListener('click', (event) => {
+		window.setTimeout(() => {
+		  offsetAnchor();
+		}, 0);
+	  });
+	}
+
+	document.addEventListener('click', (event) => {
+	  window.setTimeout(() => {
+		offsetAnchor();
+	  }, 0);
+	});
+
+	window.setTimeout(offsetAnchor, 0);
+</script>
+<style>
+	body {
+		background-color: white;
+	}
+	.desktop {
+		display:block;
+	}
+	.mobile {
+		display:none;
+	}
+	@media only screen and (max-width: 580px) {
+		.desktop {
+		display:none;
+		}
+		.mobile {
+			display:block;
+		}
+	}
+	.breadcrumb {
+		margin-bottom: 0px;
+	}
+	.interest-pill {
+		background-color:#FFFFFF;
+	}
+	input.general, input.password, textarea.general {
+		background-color: #FFFFFF;
+		border:1px solid #FFFFFF;
+	}
+	textarea.general {
+		margin-bottom:0px;
+	}
+	.custom-select {
+		margin:0 0 10px 0px; 
+		width:calc(208px); 
+		background-color:#FFFFFF;
+	}
+	.profile-pic-box {
+		margin:0;
+	}
+	ul.password-format li.custom-width {
+			width:100%;
+		}
+	@media only screen and (max-width: 979px) {
+		input.general, textarea.general {
+			width:calc(100% - 10px);
+		}
+		input.password {
+			width:calc(100% - 70px);
+		}
+		.custom-select {
+			width:calc(100% - 32px); 
+		}
+		ul.password-format li.custom-width {
+			width:45%;
+		}
+	}
+.module-panel {
+    padding: 0;
+}
+</style>
+</head>
+<body style="padding-left:0px;">
+	<!--header and menu -->
+	<div class="header">
+		<div style="display:flex; flex-direction:row; justify-content: flex-start;">
+			<div class="logo"><span class="ht-logo"></span></div>
+			<div class="p-menu">
+				<a class="menu-item" href="account-overview.html">Dashboard</a>
+				<a class="menu-item" href="scoreboard.html">Scoreboard</a>
+			</div>
+		</div>
+		<div class="right-menu">
+			<a class="right-menu-item" id="modalAlert"><span class="ht-bell"></span><div class="ico-number">5</div></a>
+			<a class="right-menu-item" href="#"><span class="ht-search"></span></a>
+			<div class="member-menu">
+				<div class="profile-pic"></div>
+				<div class="user-profile"><span class="ht-wallet"><div class="ico-verified"><span class="ht-verified"></span></div></span>Winnie-fx-demo</div>
+				<div class="open-btn"><label for="member-menu-toggle"><span class="ht-triangle"></span></label></div>
+				<input type="checkbox" id="member-menu-toggle"/>
+				<ul id="member-menu-dropdown">
+					<hr class="dropmenu-separator" />
+					<li class="switch-menu">Switch account</li>
+					<li>
+						<a class="active" href="#"><span class="ht-wallet icon"><div class="ico-verified"><span class="ht-verified"></span></div></span>Winnie-fx-demo</a>
+					</li>
+					<li>
+						<a href="#"><span class="ht-wallet icon"><div class="ico-verified"><span class="ht-verified"></span></div></span>Winnie-fx-live</a>
+					</li>
+					<li>
+						<a href="#"><span class="ht-wallet icon"></span>Winnie-fx-open</a>
+					</li>
+					<hr class="dropmenu-separator" />
+					<li>
+						<a id="modalSelectAcc" style="cursor:pointer;"><span class="ht-wallet-setting icon"></span>Account setting</a>
+					</li>
+					<li>
+						<a href="trade-account-adding.html"><span class="ht-wallet-add icon"></span>Add account</a>
+					</li>
+					<hr class="dropmenu-separator" />
+					<li>
+						<a href="general-setting.html"><span class="ht-gear icon"></span>Settings</a>
+					</li>
+					<li class="switch-menu">
+						<div><span class="ht-moon icon"></span>Dark mode</div>
+						<label class="switch">
+						  <input type="checkbox">
+						  <span class="slider round"></span>
+						</label>
+					</li>
+					<li>
+						<a class="active" href="support.html"><span class="ht-support icon"></span>Help &amp; support</a>
+					</li>
+					<li>
+						<a href="#"><span class="ht-logout icon"></span>Logout</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- mobile menu -->
+	<nav role="navigation">
+		<div id="mobileMenuToggle">
+			<input type="checkbox" />
+			<span></span>
+			<span></span>
+			<span></span>
+			<ul id="mobileMenu">
+				<li>
+					<div class="p-menu-mobile">
+						<a class="" href="#">Dashboard</a>
+						<a href="#">Scoreboard</a>
+					</div>
+				</li>
+				<li>
+					<div class="s-menu-title"><div><span class="ht-dashboard"></span></div>Dashboard</div>
+					<div class="s-menu-group">
+						<a class="s-menu-item" href="account-overview.html"><span class="ht-wallet"></span>Account overview</a>
+						<a class="s-menu-item" href="basic-atat.html"><span class="ht-pie-chart"></span>Basic statistics</a>
+						<a class="s-menu-item" href="advanced-stat.html"><span class="ht-cluster-chart"></span>Advanced statistics</a>
+						<a class="s-menu-item" href="trade-history.html"><span class="ht-clipboard"></span>Trade history</a>
+					</div>
+				</li>
+				<li>
+					<div class="s-menu-title"><div><span class="ht-bar-chart"></span></div>Analysis</div>
+					<div class="s-menu-group">
+						<a class="s-menu-item" href="ta-customized.html"><span class="ht-star"></span>Customized</a>
+						<a class="s-menu-item" href="ta-general.html"><span class="ht-bar-chart"></span>General</a>
+						<a class="s-menu-item" href="ta-behavioral.html"><span class="ht-coffee"></span>Behavioral</a>
+						<a class="s-menu-item" href="ta-timing.html"><span class="ht-timing"></span>Timing</a>
+						<a class="s-menu-item" href="ta-risk-mgt.html"><span class="ht-alert"></span>Risk management</a>
+						<a class="s-menu-item" href="ta-strategy.html"><span class="ht-chess-castle"></span>Strategy</a>
+						<a class="s-menu-item" href="ta-costs.html"><span class="ht-coins"></span>Costs</a>
+					</div>
+				</li>
+				<li>
+					<a href="alert.html"><div class="s-menu-title active"><div><span class="ht-bell"></span></div>Alerts</div></a>
+				</li>
+			</ul>
+			<div class="mobileMenuMask"></div>
+		</div>
+	</nav>
+	<!-- mobile menu ended -->
+	
+	<!-- main content area -->
+	<!-- breadcrumb -->
+	<div class="breadcrumb breadcrumb-wide"><span class="active">Help &amp; support</span></div>
+	<div class="faq-anchor">
+		Go to 
+		<a class="btn-anchor" href="#general">General</a>
+		<a class="btn-anchor" href="#account">Connecting an account</a>
+		<a class="btn-anchor" href="#analytics">Analytics related</a>
+		<a class="btn-anchor" href="#function">Functionalities</a>
+		<a class="btn-anchor" href="#form">Feedback form</a>
+	</div>
+	<!-- breadcrumb ended -->
+	<div class="main-content-container">
+		<!-- left column -->
+		<div class="content-column">
+			<!-- fixed module -->
+			<a id="general"></a>
+			<div class="module-header">General</div>
+			<div class="module-panel">
+				<div class="tabs">
+					<div class="tab">
+						<input class="accordion" type="radio" id="faq11" name="hs">
+						<label class="tab-label" for="faq11">Pricing for hoc-trade?</label>
+						<div class="tab-content">
+							All the current service is for free! 
+						</div>
+					</div>
+					<div class="tab">
+						<input class="accordion" type="radio" id="faq12" name="hs">
+						<label class="tab-label" for="faq12">Is my information safe here?</label>
+						<div class="tab-content">
+							Your privacy is our priority one. We leverage SSL certificates to encrypt the community websites and analytical tool. What’s more, we handle your personal information under GDPR. If you have any concern about privacy, please contact us at: <a href="mailto:support@hoc-trade.com">support@hoc-trade.com</a> or visit our privacy statement.
+						</div>
+					</div>
+					<div class="tab">
+						<input class="accordion" type="radio" id="faq13" name="hs">
+						<label class="tab-label" for="faq13">How often do you update the data?</label>
+						<div class="tab-content">
+							We seek to update your analytical charts and alerts close to real-time, when you have a new position open, close or modify. However, please keep in mind that an increased server workload or other technical issue might delay the information shown for a bit. In case you have questions on your trading data, please contact us at <a href="mailto:support@hoc-trade.com">support@hoc-trade.com</a>.
+						</div>
+					</div>
+					<div class="tab">
+						<input class="accordion" type="radio" id="faq14" name="hs">
+						<label class="tab-label" for="faq14">How long does it take to add my new account and update the analytical charts?</label>
+						<div class="tab-content">
+							Once a new account is connected to hoc-trade successfully, we seek finish within 2 minutes to retrieve historical trade data and update the analytical charts. If the connection does not succeed, error message and potential reasons will be shown on the website within a short time.
+						</div>
+					</div>
+					<div class="tab">
+						<input class="accordion" type="radio" id="faq15" name="hs">
+						<label class="tab-label" for="faq15">Until how long ago will my historical trade be retrieved?</label>
+						<div class="tab-content">
+							There is no limit on the traceability of historical trade data, however please keep in mind that price related analyses may be limited in the timeframe, as we do not hold indefinite pricing data to perform the analyses.
+						</div>
+					</div>
+					<div class="tab">
+						<input class="accordion" type="radio" id="faq16" name="hs">
+						<label class="tab-label" for="faq16">Is there a limit on the number of trading accounts one trader can connect?</label>
+						<div class="tab-content">
+							No, one trader can have multiple accounts.
+						</div>
+					</div>
+					<div class="tab">
+						<input class="accordion" type="radio" id="faq17" name="hs">
+						<label class="tab-label" for="faq17">Will all of my trades serve as input for my trade analytics output?</label>
+						<div class="tab-content">
+							In general, all of the account’s trades will serve as an input for the analyses in your hoc-trade analytics. In some instances, it might be the case that trades will not be used as input for the analyses, e.g. if the symbol is not among the supported ones, if there has been no Stopp Loss or Take Profit set (will not be part of the related analyses then), or if no price value can be found for that trade (will not be part of the related analyses then). We seek that all your trades will serve as input for your analytics, and there will not be any manual exclusion, etc. be performed from our side.
+						</div>
+					</div>
+					<div class="tab">
+						<input class="accordion" type="radio" id="faq18" name="hs">
+						<label class="tab-label" for="faq18">Is there a limitation on the symbols which are supported in the analyses by hoc-trade?</label>
+						<div class="tab-content">
+							Yes, at hoc-trade we currently support the major Forex currency pairs, the most frequently traded commodities, indices, cryptocurrencies and stocks. In case you would require additional symbols to be added, please reach out to <a href="mailto:support@hoc-trade.com">support@hoc-trade.com</a> and we will try our best to add those symbols as soon as possible.<br><br>
+							Please find below the total list of symbols supported.<br><br>
+							AUDCAD, AUDCHF, AUDJPY, AUDNZD, AUDUSD, CADCHF, CADJPY, CHFJPY, EURAUD, EURCAD, EURCHF, EURGBP, EURJPY, EURNZD, EURUSD, GBPAUD, GBPCAD, GBPCHF, GBPJPY, GBPNZD, GBPUSD, NZDCAD, NZDCHF, NZDJPY, NZDUSD, USDCAD, USDCHF, USDJPY, XAGUSD, XAUUSD, XBRUSD, XTIUSD, AUS200, Bitcoin, CN50, EUSTX50, Ethereum, GER30, JPN225, NAS100, UK100, US30, US500, AAPL, AMZN, FB, GOOGL, MSFT, TSLA
+						</div>
+					</div>
+					<div class="tab">
+						<input class="accordion" type="radio" id="faq19" name="hs">
+						<label for="faq19" class="tab-close">Close &times;</label>
+					</div>
+				</div>
+			</div>
+			<!-- fixed module end -->
+			<!-- fixed module -->
+			<a id="account"></a>
+			<div class="module-header">Connecting an account</div>
+			<div class="module-panel">
+				<div class="tabs">
+					<div class="tab">
+						<input class="accordion" type="radio" id="faq21" name="hs">
+						<label class="tab-label" for="faq21">How do I delete my trading account?</label>
+						<div class="tab-content">
+							To delete your trading account, please send a request to <a href="mailto:info@hoc-trade.com">info@hoc-trade.com</a>. In your email, please provide your trading account ID and the investor password. We will delete the account as soon as possible and notify you by email as soon as the account is deleted. 
+						</div>
+					</div>
+					<div class="tab">
+						<input class="accordion" type="radio" id="faq22" name="hs">
+						<label class="tab-label" for="faq22">How do I change the server of my trading account?</label>
+						<div class="tab-content">
+							To change the server of your trading account , please send a request to <a href="mailto:info@hoc-trade.com">info@hoc-trade.com</a>. In your email, please provide your trading account ID, the investor password and the new server name. We will adjust the server as soon as possible and notify you by email as soon as the server is changed.
+						</div>
+					</div>
+					<div class="tab">
+						<input class="accordion" type="radio" id="faq23" name="hs">
+						<label class="tab-label" for="faq23">My broker/trading server is not listed when connecting my account, what should I do?</label>
+						<div class="tab-content">
+							Please send an email to <a href="mailto:info@hoc-trade.com">info@hoc-trade.com</a>, and state the broker/server which you would like to add. We will do our best to add the broker/server as soon as possible.
+						</div>
+					</div>
+					<div class="tab">
+						<input class="accordion" type="radio" id="faq24" name="hs">
+						<label for="faq24" class="tab-close">Close &times;</label>
+					</div>
+				</div>
+			</div>
+			<!-- fixed module end -->
+		</div>
+		<!-- left column end -->
+		<!-- right column -->
+		<div class="content-column">
+			<!-- fixed module -->
+			<a id="analytics"></a>
+			<div class="module-header">Analytic related</div>
+			<div class="module-panel">
+				<div class="tabs">
+					<div class="tab">
+						<input class="accordion" type="radio" id="faq31" name="hs">
+						<label class="tab-label" for="faq31">How is benchmark defined?</label>
+						<div class="tab-content">
+							The benchmark will be defined based on the profitable traders listed on hoc-trade that show a similar trading style compared to yours. You will see the overall performance in the different categories of those traders. The benchmark will be updated on a regular basis based on the trading performance of the traders in your benchmark group and will not be manually adjusted from hoc-trade. 
+						</div>
+					</div>
+					<div class="tab">
+						<input class="accordion" type="radio" id="faq32" name="hs">
+						<label class="tab-label" for="faq32">What’s the difference of pips and return?</label>
+						<div class="tab-content">
+							For most of the charts, you can choose whether to present the result in pips or return. For pips, we will calculate the pip value based on the price difference and the point multiplier as presented by your broker. For the calculation of return, we will calculate the return based on your profit of that specific trade and your balance at the time of entering the trade. You will be presented the average performance per trade in your output chart.
+						</div>
+					</div>
+					<div class="tab">
+						<input class="accordion" type="radio" id="faq33" name="hs">
+						<label class="tab-label" for="faq33">How is significance level presented?</label>
+						<div class="tab-content">
+							In order to help you judging, whether the presented outputs show a level of significance, we will present you with the number of trades underlying the calculation of the presented value. The higher the number of trades, in general the higher the reliability of the output. Additionally, the color of the bars presented in the charts may differ depending on how many trades are underlying to that result. However, please note that we do not apply a calculation for the statistical significance of the output presented. You should always keep in mind, that prior performance may not represent future results and you will use that information at your own risk. We will and cannot take any responsibility for your performance if using that information for your trading.
+						</div>
+					</div>
+					<div class="tab">
+						<input class="accordion" type="radio" id="faq34" name="hs">
+						<label class="tab-label" for="faq34">What do different color mean in the chart?</label>
+						<div class="tab-content">
+							The different colors in the chart are meant to support you with the interpretation of the charts. The color may vary based on the value presented as well as the number of underlying trades to calculate that value.
+						</div>
+					</div>
+					<div class="tab">
+						<input class="accordion" type="radio" id="faq35" name="hs">
+						<label class="tab-label" for="faq35">Open and close time of trade</label>
+						<div class="tab-content">
+							We will store your data in GMT time zone, however transfer the data output to your time zone depending on where you access our tool. For classifying your trades into a specific date, we will however use GMT time zone. Most of the analyses are based on the opening time of your trade, however for some analyses we may also choose the closing time of your trade in case feel this is better applicable for the specific analysis.
+						</div>
+					</div>
+					<div class="tab">
+						<input class="accordion" type="radio" id="faq36" name="hs">
+						<label class="tab-label" for="faq36">Overall performance/ return</label>
+						<div class="tab-content">
+							When presenting the overall return of a trading account, we will use the time-weighted rate of return (TWR) in our calculation. By using the TWR, the timing of deposits or withdrawals from your account do not have an influence on the performance presented.
+						</div>
+					</div>
+					<div class="tab">
+						<input class="accordion" type="radio" id="faq37" name="hs">
+						<label class="tab-label" for="faq37">Further explanation on the analyses</label>
+						<div class="tab-content">
+							In case you have further questions or problems understanding the analyses, please also visit the explanation videos related to each analysis. We will have an in-depth explanation on the background, the structure, and potential interpretation of each analysis.
+						</div>
+					</div>
+					<div class="tab">
+						<input class="accordion" type="radio" id="faq38" name="hs">
+						<label for="faq38" class="tab-close">Close &times;</label>
+					</div>
+				</div>
+			</div>
+			<!-- fixed module end -->
+			<!-- fixed module -->
+			<a id="function"></a>
+			<div class="module-header">Functionalities</div>
+			<div class="module-panel">
+				<div class="tabs">
+					<div class="tab">
+						<input class="accordion" type="radio" id="faq41" name="hs">
+						<label class="tab-label" for="faq41">Bookmark</label>
+						<div class="tab-content">
+							The bookmark function allows you to have the chart listed in your customized tab in your hoc-trade analytics. Once the bookmark is activated, the chart will be shown in that customized tab, and if the bookmark is de-selected, the chart will not be part of that customized tab anymore.
+						</div>
+					</div>
+					<div class="tab">
+						<input class="accordion" type="radio" id="faq42" name="hs">
+						<label class="tab-label" for="faq42">Notification &amp; Alerts</label>
+						<div class="tab-content">
+							You may choose whether or not to receive notifications from us, in case we identify a new loss-making pattern, when you identify a trade that fits in a loss-making pattern or when we identify a high risk-taking. You can choose the way you wish to receive the notification from us. Additionally, you may select and de-select to receive notifications on specific output charts depending on your preferences.
+						</div>
+					</div>
+					<div class="tab">
+						<input class="accordion" type="radio" id="faq43" name="hs">
+						<label class="tab-label" for="faq43">Public setting</label>
+						<div class="tab-content">
+							You may choose to have your trading performance public, thereby allowing other users of the website to see your trading performance and discuss with them. You may choose to only have certain parts of your trading output public, thereby limiting the amount of information publicly presented to other users. We always seek to act in line with your personal privacy preferences, therefore you at any time choose to change to public/ private setting. Please note, for the calculation of the benchmark data, we may use the trading data in an anonymized independent of the public/ private setting.
+						</div>
+					</div>
+					<div class="tab">
+						<input class="accordion" type="radio" id="faq44" name="hs">
+						<label class="tab-label" for="faq44">Share</label>
+						<div class="tab-content">
+							You may choose to share your trade analytics outputs with the community and your friends. If your trade analytics profile is set as public, other traders will be able to visit your profile and see your charts. Additionally, your trade performance will be part of the trader scoreboard and may be presented in the trader carousel in the community.
+						</div>
+					</div>
+					<div class="tab">
+						<input class="accordion" type="radio" id="faq45" name="hs">
+						<label class="tab-label" for="faq45">Discuss</label>
+						<div class="tab-content">
+							Once a trading account is connect, a thread under forum will be automatically generated. Upon clicking the button “Discuss here” on the left top of the dashboard, you will be directed to this specific thread where people can discuss freely about the trading strategy about this trading account.
+						</div>
+					</div>
+					<div class="tab">
+						<input class="accordion" type="radio" id="faq46" name="hs">
+						<label class="tab-label" for="faq46">Timeframe</label>
+						<div class="tab-content">
+							When analyzing your trades, you can choose to present the data in different timeframes. This will allow you to inspect certain changes in the trading behavior over time. Please keep in mind, that a shorter timeframe may also mean, that the results are calculated on less trades per category, thereby limiting the significance level of the outputs. When choosing a certain timeframe, only the trades opened and closed during this timeframe will be taken as input for the analyses.
+						</div>
+					</div>
+					<div class="tab">
+						<input class="accordion" type="radio" id="faq47" name="hs">
+						<label for="faq47" class="tab-close">Close &times;</label>
+					</div>
+				</div>
+			</div>
+			<!-- fixed module end -->
+			<!-- fixed module -->
+			<a id="form"></a>
+			<div class="module-header">Other questions, problems or recommendations</div>
+			<div class="module-panel" style="padding:20px;">
+				<div class="field-profile-input">
+					<!-- input module -->
+					<div class="field-label"><strong>Topic</strong></div>
+					<div class="custom-select">
+						<select>
+							<option value="">Please select</option>
+							<option value="general question">General question</option>
+							<option value="report problem">Report a problem</option>
+							<option value="recommendation">Recommendation</option>
+						</select>
+					</div>
+					<!-- input module end -->
+					<!-- input module -->
+					<div class="field-label"><strong>Area</strong></div>
+					<div class="custom-select">
+						<select>
+							<option value="">Choose an area</option>
+							<option value="trade analytics">Trade analytics</option>
+							<option value="ht academy">hoc-trade academy</option>
+							<option value="technical">Technical</option>
+							<option value="others">Others</option>
+						</select>
+					</div>
+					<!-- input module end -->
+				</div>
+				<!-- input module -->
+				<div class="field-label"><strong>Details</strong></div>
+				<textarea class="general" placeholder="" rows="4"></textarea>
+				<!-- input module end -->
+				<div class="upload-file-box">
+					<a class="btn-general" href="#"><span class="ht-chain" style="font-size:20px; vertical-align:middle;"></span>Add screenshot or video to help us understand more</a>
+					<div style="font-size:10px; color:#999999;">For each file, JPG, PNG or MP4 format. Maximum 1MB.</div>
+					<div class="filter-box">
+						<div class="filter-item">screencap-01.jpg<span class="ht-delete"></span></div>
+					</div>
+				</div>
+				<div class="bottom-btn-group-btns" style="justify-content:flex-end; flex-direction:row;">
+					<a class="btn-form-clear" href="#" style="display: inline-block; width:auto;">Clear</a>
+					<a class="btn-form" href="#" style="display: inline-block; width:auto;">Submit</a>
+				</div>
+			</div>
+			<!-- fixed module end -->
+		</div>
+		<!-- right column end -->
+
+	</div><!-- main-content-container -->
+	<!-- main content area end -->
+	
+	<div class="footer footer-wide">
+		<span class="ht-logo"></span><strong>hoc-trade</strong>&nbsp;&nbsp;&nbsp; copy; 2022 hoc-trade limited, all rights reserved<span class="separator">|</span><a href="#">Terms &amp; conditions</a><span class="separator">|</span><a href="#">Privacy policy</a><span class="separator">|</span><a href="#">advertise with us</a><span class="separator">|</span><a href="#">About us</a><span class="separator">|</span><a class="social" href="#"><span class="ht-logo-fb"></span></a><a class="social" href="#"><span class="ht-logo-twitter"></span></a><a class="social" href="#"><span class="ht-logo-in"></span></a><a class="social" href="#"><span class="ht-logo-yt"></span></a>
+		<p class="disclaimer">HIGH RISK WARNING: Foreign exchange and other CFD trading carries a high level of risk and may not be suitable for everyone. The usage of leverage creates additional risk and loss exposure. Your investment objectives, experience level and risk tolerance have to be taken into consideration before you decide to trade foreign exchange or other CFD products. You could lose some or all of your entire investment. Do not invest money that you cannot afford to lose and always use an appropriate risk management. It’s important to educate yourself on the risks associated with foreign exchange trading, and seek professional advice from an independent financial or tax advisor in case of any questions. Any data and information is provided ‘as is’ solely for informational purposes, and is not intended for trading purposes or advice. Past performance, which are presented on this website or you find somewhere else, is not indicative of future results.</p>
+	</div>
+</body>
+<script>
+	var x, i, j, l, ll, selElmnt, a, b, c;
+	/*look for any elements with the class "custom-select":*/
+	x = document.getElementsByClassName("custom-select");
+	l = x.length;
+	for (i = 0; i < l; i++) {
+	  selElmnt = x[i].getElementsByTagName("select")[0];
+	  ll = selElmnt.length;
+	  /*for each element, create a new DIV that will act as the selected item:*/
+	  a = document.createElement("DIV");
+	  a.setAttribute("class", "select-selected");
+	  a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+	  x[i].appendChild(a);
+	  /*for each element, create a new DIV that will contain the option list:*/
+	  b = document.createElement("DIV");
+	  b.setAttribute("class", "select-items select-hide");
+	  for (j = 1; j < ll; j++) {
+		/*for each option in the original select element,
+		create a new DIV that will act as an option item:*/
+		c = document.createElement("DIV");
+		c.innerHTML = selElmnt.options[j].innerHTML;
+		c.addEventListener("click", function(e) {
+			/*when an item is clicked, update the original select box,
+			and the selected item:*/
+			var y, i, k, s, h, sl, yl;
+			s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+			sl = s.length;
+			h = this.parentNode.previousSibling;
+			for (i = 0; i < sl; i++) {
+			  if (s.options[i].innerHTML == this.innerHTML) {
+				s.selectedIndex = i;
+				h.innerHTML = this.innerHTML;
+				y = this.parentNode.getElementsByClassName("same-as-selected");
+				yl = y.length;
+				for (k = 0; k < yl; k++) {
+				  y[k].removeAttribute("class");
+				}
+				this.setAttribute("class", "same-as-selected");
+				break;
+			  }
+			}
+			h.click();
+		});
+		b.appendChild(c);
+	  }
+	  x[i].appendChild(b);
+	  a.addEventListener("click", function(e) {
+		  /*when the select box is clicked, close any other select boxes,
+		  and open/close the current select box:*/
+		  e.stopPropagation();
+		  closeAllSelect(this);
+		  this.nextSibling.classList.toggle("select-hide");
+		  this.classList.toggle("select-arrow-active");
+		});
+	}
+	function closeAllSelect(elmnt) {
+	  /*a function that will close all select boxes in the document,
+	  except the current select box:*/
+	  var x, y, i, xl, yl, arrNo = [];
+	  x = document.getElementsByClassName("select-items");
+	  y = document.getElementsByClassName("select-selected");
+	  xl = x.length;
+	  yl = y.length;
+	  for (i = 0; i < yl; i++) {
+		if (elmnt == y[i]) {
+		  arrNo.push(i)
+		} else {
+		  y[i].classList.remove("select-arrow-active");
+		}
+	  }
+	  for (i = 0; i < xl; i++) {
+		if (arrNo.indexOf(i)) {
+		  x[i].classList.add("select-hide");
+		}
+	  }
+	}
+	/*if the user clicks anywhere outside the select box,
+	then close all select boxes:*/
+	document.addEventListener("click", closeAllSelect);
+</script>
+<script>
+	var acc = document.getElementsByClassName("accordion");
+	var i;
+
+	for (i = 0; i < acc.length; i++) {
+	  acc[i].addEventListener("click", function() {
+		//this.classList.toggle("accordionheaderactive");
+		var panel = this.nextElementSibling;
+		if (panel.style.maxHeight) {
+		  panel.style.maxHeight = null;
+		} else {
+		  panel.style.maxHeight = panel.scrollHeight + "px";
+		} 
+	  });
+	}
+</script>
+</html>
