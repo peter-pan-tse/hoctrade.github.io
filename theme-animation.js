@@ -3669,7 +3669,7 @@ if (reversed == null) { reversed = false; }
 
 	// charts
 	this.instance_8 = new lib.charts();
-	this.instance_8.setTransform(637,381.75);
+	this.instance_8.setTransform(637,213.75);
 	this.instance_8.alpha = 0.1914;
 	this.instance_8._off = true;
 
@@ -3678,7 +3678,7 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(601.5,-275.5,717,1661.3);
+p.nominalBounds = new cjs.Rectangle(601.5,-340.2,717,1622.7);
 // library properties:
 lib.properties = {
 	id: '98145A8702D1466298816CCD4C4A8647',
@@ -3688,10 +3688,10 @@ lib.properties = {
 	color: "#047F92",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/Group_0.png?1657166148726", id:"Group_0"},
-		{src:"images/Group_1_0.png?1657166148726", id:"Group_1_0"},
-		{src:"images/Group_2_0.png?1657166148726", id:"Group_2_0"},
-		{src:"images/Group_3.png?1657166148726", id:"Group_3"}
+		{src:"images/Group_0.png?1657166412392", id:"Group_0"},
+		{src:"images/Group_1_0.png?1657166412392", id:"Group_1_0"},
+		{src:"images/Group_2_0.png?1657166412392", id:"Group_2_0"},
+		{src:"images/Group_3.png?1657166412392", id:"Group_3"}
 	],
 	preloads: []
 };
