@@ -22,6 +22,14 @@
 			width:1280px; 
 			  height:900px;
 		  }
+		#animation_container2 {
+			position:relative;
+			margin:auto;
+			left:0;right:0;
+			background-color:#c1dee3;
+			width:1280px; 
+			  height:1000px;
+		  }
 		.theme-container {
 			display:block;
 			position:relative;
@@ -35,7 +43,7 @@
 	<script>
 	var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 	function init() {
-		canvas = document.getElementById("canvas");
+		canvas = document.getElementById("theme");
 		anim_container = document.getElementById("animation_container");
 		dom_overlay_container = document.getElementById("dom_overlay_container");
 		var comp=AdobeAn.getComposition("98145A8702D1466298816CCD4C4A8647");
@@ -78,9 +86,15 @@
 	<body onload="init();">
 		<div class="theme-container">
 			<div id="animation_container">
-				<canvas id="canvas" width="1280" height="900" style="position: absolute; display: block; background-color:rgba(4, 127, 146, 1.00);"></canvas>
+				<canvas id="theme" width="1280" height="900" style="position: absolute; display: block; background-color:rgba(4, 127, 146, 1.00);"></canvas>
 				<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:1280px; height:900px; position: absolute; left: 0px; top: 0px; display: block;">
 				</div>
+			</div>
+		</div>
+		<p><br><br><br><br><br><br></p>
+		<div id="animation_container2">
+			<canvas id="howto" width="1280" height="1000" style="position: absolute; display: block; background-color:rgba(193, 222, 227, 1.00);"></canvas>
+			<div id="dom_overlay_container2" style="pointer-events:none; overflow:hidden; width:1280px; height:1000px; position: absolute; left: 0px; top: 0px; display: block;">
 			</div>
 		</div>
 	</body>

@@ -3700,8 +3700,8 @@ lib.properties = {
 
 // bootstrap callback support:
 
-(lib.Stage = function(canvas) {
-	createjs.Stage.call(this, canvas);
+(lib.Stage = function(canvas1) {
+	createjs.Stage.call(this, canvas1);
 }).prototype = p = new createjs.Stage();
 
 p.setAutoPlay = function(autoPlay) {
