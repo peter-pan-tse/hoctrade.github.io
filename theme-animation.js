@@ -3688,10 +3688,10 @@ lib.properties = {
 	color: "#047F92",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/Group_0.png?1657166412392", id:"Group_0"},
-		{src:"images/Group_1_0.png?1657166412392", id:"Group_1_0"},
-		{src:"images/Group_2_0.png?1657166412392", id:"Group_2_0"},
-		{src:"images/Group_3.png?1657166412392", id:"Group_3"}
+		{src:"images/Group_0.png?1657250005184", id:"Group_0"},
+		{src:"images/Group_1_0.png?1657250005184", id:"Group_1_0"},
+		{src:"images/Group_2_0.png?1657250005184", id:"Group_2_0"},
+		{src:"images/Group_3.png?1657250005184", id:"Group_3"}
 	],
 	preloads: []
 };
