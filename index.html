@@ -43,7 +43,7 @@
 	<script>
 	var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 	function init() {
-		canvas = document.getElementById("theme");
+		canvas = document.getElementById("firstCanvas");
 		anim_container = document.getElementById("animation_container");
 		dom_overlay_container = document.getElementById("dom_overlay_container");
 		var comp=AdobeAn.getComposition("98145A8702D1466298816CCD4C4A8647");
@@ -98,4 +98,28 @@
 			</div>
 		</div>
 	</body>
+	<script>
+	$(document).ready(function () {
+
+        var canvas, stage, exportRoot;
+        // First movie
+        canvas = document.getElementById("firstCanvas");
+        exportRoot = new libFirst.first();
+        stage = new createjs.Stage(canvas);
+        stage.addChild(exportRoot);
+        stage.update();
+        createjs.Ticker.setFPS(libFirst.properties.fps);
+        createjs.Ticker.addEventListener("tick", stage);
+
+        // Second movie
+        canvas = document.getElementById("secondCanvas");
+        exportRoot = new libSecond.second();
+        stage = new createjs.Stage(canvas);
+        stage.addChild(exportRoot);
+        stage.update();
+        createjs.Ticker.setFPS(libSecond.properties.fps);
+        createjs.Ticker.addEventListener("tick", stage);
+
+	});
+	</script>
 </html>

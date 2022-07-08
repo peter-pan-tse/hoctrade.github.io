@@ -3688,10 +3688,10 @@ lib.properties = {
 	color: "#047F92",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/Group_0.png?1657250005184", id:"Group_0"},
-		{src:"images/Group_1_0.png?1657250005184", id:"Group_1_0"},
-		{src:"images/Group_2_0.png?1657250005184", id:"Group_2_0"},
-		{src:"images/Group_3.png?1657250005184", id:"Group_3"}
+		{src:"images/Group_0.png?1657273002070", id:"Group_0"},
+		{src:"images/Group_1_0.png?1657273002070", id:"Group_1_0"},
+		{src:"images/Group_2_0.png?1657273002070", id:"Group_2_0"},
+		{src:"images/Group_3.png?1657273002070", id:"Group_3"}
 	],
 	preloads: []
 };
@@ -3700,8 +3700,8 @@ lib.properties = {
 
 // bootstrap callback support:
 
-(lib.Stage = function(canvas1) {
-	createjs.Stage.call(this, canvas1);
+(lib.Stage = function(canvas) {
+	createjs.Stage.call(this, canvas);
 }).prototype = p = new createjs.Stage();
 
 p.setAutoPlay = function(autoPlay) {
