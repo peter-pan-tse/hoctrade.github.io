@@ -542,3 +542,26 @@ img.scoreboard-img {
 .slider .slide.forex {
 	color:#047f92;
 }
+/* viewport fade in */
+.wrapper {
+  width: 100%;
+  margin: 0;
+}
+.elem {
+	
+}
+.to-fade-in {
+  opacity: 0;
+  &.fade-in {
+    animation: fade-in 3s forwards;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
