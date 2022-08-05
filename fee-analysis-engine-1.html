@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Noto Sans:400,700,900" rel="stylesheet">
+	<link href="font.css" rel="stylesheet">
+	<link href="landing-drfee.css" rel="stylesheet">
+	<link rel="icon" href="img/favicon-drfee.svg">
+	<title>dr.fee</title>
+	<!-- write your code here -->
+	<style>
+		body {
+			background-color:#4d4d4d;
+			color:#ffffff;
+		}
+		.step-container {
+			display:flex;
+			position:relative;
+			width:300px;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: flex-end;
+			margin:40px auto;
+		}
+		.step-box {
+			display:flex;
+			position:relative;
+			width:50%;
+			height:80px;
+		}
+		.stepline {
+			display:block;
+			position:absolute;
+			height:6px;width:150px;
+			background-color:#b3b3b3;
+			left:0;
+			bottom:6px;
+		}
+	</style>
+	<!-- scroll smoothly to anchor -->
+	<script>
+		// Select all links with hashes
+		$('a[href*="#"]')
+		  // Remove links that don't actually link to anything
+		  .not('[href="#"]')
+		  .not('[href="#0"]')
+		  .click(function(event) {
+			// On-page links
+			if (
+			  location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+			  && 
+			  location.hostname == this.hostname
+			) {
+			  // Figure out element to scroll to
+			  var target = $(this.hash);
+			  target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+			  // Does a scroll target exist?
+			  if (target.length) {
+				// Only prevent default if animation is actually gonna happen
+				event.preventDefault();
+				$('html, body').animate({
+				  scrollTop: target.offset().top
+				}, 1000, function() {
+				  // Callback after animation
+				  // Must change focus!
+				  var $target = $(target);
+				  $target.focus();
+				  if ($target.is(":focus")) { // Checking if the target was focused
+					return false;
+				  } else {
+					$target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+					$target.focus(); // Set focus again
+				  };
+				});
+			  }
+			}
+		  });
+	</script>
+	</head>
+	<body>
+		<div class="header">
+			<div class="header-container">
+				<a href="index-drfee.html"><div class="logo"><img src="img/logo-drfree-1.svg" /></div></a>
+				<ul class="menu">
+					<li><a class="engine active" href="#">Fee analysis engine</a></li>
+					<li><a href="exchange-list.html">Exchange list</a></li>
+					<li><a href="promotions-drfee.html">Promotions</a></li>
+					<li><a href="blog-drfee.html">Blog</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="step-container">
+			<div class="step-box">
+				<div class="stepline"></div>
+			</div>
+			<div class="step-box">
+				<div class="stepline"></div>
+			</div>
+		</div>
+		<!-- how to diagram -->
+		<div class="module-block">
+			<div class="main-container">
+				<div class="content-block-l">
+					<h1>How does hoc-trade behavioral trading analytics work</h1>
+				</div>
+				<div>
+					<img class="img-responsive" src="img/howto-diagram.png" />
+				</div>
+			</div>
+		</div>
+		<!-- footer -->
+		<div class="module-block bg-footer">
+			<div class="main-container" style="padding:30px 0;">
+				<div class="footer">
+					<img class="footer-logo" src="img/logo-drfree-2.svg" />&copy; 2022 hoc-trade limited, all rights reserved<span class="separator">|</span><a href="#">Terms &amp; conditions</a><span class="separator">|</span><a href="#">Privacy policy</a><span class="separator">|</span><a href="#">About</a><span class="separator">|</span><a class="social" href="#"><span class="ht-logo-fb"></span></a><a class="social" href="#"><span class="ht-logo-twitter"></span></a><a class="social" href="#"><span class="ht-logo-in"></span></a><a class="social" href="#"><span class="ht-logo-yt"></span></a>
+					<p class="disclaimer">HIGH RISK WARNING: Foreign exchange and other CFD trading carries a high level of risk and may not be suitable for everyone. The usage of leverage creates additional risk and loss exposure. Your investment objectives, experience level and risk tolerance have to be taken into consideration before you decide to trade foreign exchange or other CFD products. You could lose some or all of your entire investment. Do not invest money that you cannot afford to lose and always use an appropriate risk management. It’s important to educate yourself on the risks associated with foreign exchange trading, and seek professional advice from an independent financial or tax advisor in case of any questions. Any data and information is provided ‘as is’ solely for informational purposes, and is not intended for trading purposes or advice. Past performance, which are presented on this website or you find somewhere else, is not indicative of future results.</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

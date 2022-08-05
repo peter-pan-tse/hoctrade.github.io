@@ -70,6 +70,7 @@
 		fnStartAnimation();
 	}
 	</script>
+	<!-- scroll smoothly to anchor -->
 	<script>
 		// Select all links with hashes
 		$('a[href*="#"]')
@@ -108,6 +109,29 @@
 			}
 		  });
 	</script>
+	<!-- viewport fade in -->
+	<script>
+		function checkElementLocation() {
+		  var $window = $(window);
+		  var bottom_of_window = $window.scrollTop() + $window.height();
+
+		  $('.elem').each(function(i) {
+			var $that = $(this);
+			var bottom_of_object = $that.position().top + $that.outerHeight();
+
+			//if element is in viewport, add the animate class
+			if (bottom_of_window > bottom_of_object) {
+			  $(this).addClass('fade-in');
+			}
+		  });
+		}
+		// if in viewport, show the animation
+		checkElementLocation();
+
+		$(window).on('scroll', function() {
+		  checkElementLocation();
+		});
+	</script>
 	<!-- write your code here -->
 	</head>
 	<body onload="init();">
@@ -129,6 +153,7 @@
 			</div>
 		</div>
 		<div class="header-bg"></div>
+		
 		<!-- alex -->
 		<div class="module-block bg-red">
 			<div class="main-container" style=" align-items:flex-end;">
@@ -513,6 +538,7 @@
 				</div>
 			</div>
 		</div><!-- module-block end -->
+		</div><!-- wrapper -->
 		<!-- footer -->
 		<div class="module-block bg-footer">
 			<div class="main-container" style="padding:30px 0;">
