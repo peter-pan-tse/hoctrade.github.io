@@ -1,0 +1,328 @@
+﻿@charset "UTF-8";
+/* CSS Document */
+/* row which contains charts */
+.chart-row {
+	display:flex;
+	position:relative;
+	flex-direction:row;
+	flex-wrap: wrap;
+	align-items: stretch;
+	justify-content: flex-start;
+	/*width: calc(100% - 460px);*/
+	padding: 0;
+}
+.chart-container {
+	display:flex;
+	flex-direction: column;
+	width:99.99%;
+	margin:0 0 10px 0;
+}
+@media only screen and (min-width: 768px) {
+	.chart-container {
+		width:calc(49.99% - 20px);
+		margin:0 10px 20px 10px;
+	}
+}
+@media only screen and (min-width: 1280px) {
+	.chart-container {
+		width:calc(33.33% - 30px);
+		margin:0 15px 30px 15px;
+	}
+}
+/* chart styling */
+/* account overview chart */
+.fee-chart-box {
+	display:block;
+	position:relative;
+	margin:0 0 30px 0;
+}
+.fee-chart-body {
+	display:flex;
+	flex-direction:row;
+	align-items:stretch;
+	justify-content: space-between;
+	border-radius:0 0 20px 20px;
+	background-color:#383120;
+}
+.fee-chart-bg {
+	display:flex;
+	flex-direction:row;
+	flex-wrap: wrap;
+	align-items:flex-start;
+	justify-content:space-between;
+	padding:10px;
+	width:60%;
+	border-radius:0 0 0 20px;
+}
+.fee-exchange-bg {
+	display:flex;
+	flex-direction:column;
+	align-items:flex-start;
+	padding:10px;
+	width:40%;
+	border-radius:0 0 20px 0;
+}
+@media only screen and (max-width: 580px) {
+	.fee-chart-box {
+		margin:0 0px 10px 0px;
+	}
+	.fee-chart-body {
+		flex-direction:column;
+	}
+	.fee-chart-bg {
+		width:calc(100% - 20px);
+		border-radius:0 0 0 0;
+	}
+	.fee-rank-bg {
+		width:calc(100% - 20px);
+		border-radius:0 0 20px 20px;
+	}
+}
+.exchange-pill-box {
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	width:100%;
+	justify-content: space-between;
+	align-items:flex-start;
+}
+.exchange-pill-intro {
+	display:block;
+	width:100%;
+	margin:0 0 10px 0;
+}
+.exchange-pill {
+	display:inline-block;
+	width:calc(50% - 22.5px);
+	height:40px;
+	padding:0 10px;
+	color:#666666;
+	margin:0 0 5px 0;
+	background-color:transparent;
+	border-radius:10px;
+	cursor:pointer;
+	line-height: 40px;
+}
+.exchange-pill > span {
+	font-size:32px;
+	vertical-align: middle;
+}
+.exchange-pill.active {
+	background-color: #000000;
+	color:#FFFFFF;
+	broder-radius:10px;
+}
+/* general chart styling */
+.chart-header-dark, .chart-header-light {
+	display:flex;
+	position:relative;
+	height:30px;
+	padding:10px;
+	font-size: 14px;
+	line-height: 1em;
+	font-weight: 700;
+	border-radius: 20px 20px 0 0;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: space-between;
+}
+.chart-header-dark {
+	background-color: #000000;
+	color: #FFFFFF;
+}
+.chart-header-light {
+	background-color: #FFFFFF;
+	color: #000000;
+}
+.chart-bg-dark, .chart-bg-light {
+	display:flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding:10px;
+	border-radius:0 0 20px 20px;
+	height:100%;
+	min-height:350px;
+}
+@media only screen and (max-width: 480px) {
+	.chart-bg-dark, .chart-bg-light {
+		min-height:calc(100vw - 90px);
+	}
+}
+.chart-bg-dark {
+	background-color: #00333B;
+}
+.chart-bg-light {
+	background-color: #EEE4D2;
+}
+/* solid bars */
+.bar-green {
+	border:1px solid #56A07E;
+	background: #56A07E;
+}
+.bar-green:hover {
+	border:1px solid #009245;
+	background: #009245;
+}
+.bar-red {
+	border:1px solid #C15357;
+	background: #C15357;
+}
+.bar-red:hover {
+	border:1px solid #C1272D;
+	background: #C1272D;
+}
+div.right-btn-box {
+	display:flex;
+	flex-direction:row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content:flex-end;
+}
+/* table */
+ul.ex-rank-table {
+	list-style: none;
+	padding:0;
+	margin:0 0 10px 0;
+}
+ul.ex-rank-table li {
+	display:flex;
+	flex-direction:column;
+	justify-content: center;
+	width:100%;
+	height:60px;
+	position:relative;
+	padding: 0;
+	margin: 0;
+}
+.text-deselected {
+	color:#999999;
+}
+ul.ex-rank-table li:nth-child(odd) {
+	background-color:#5e5e5e;
+}
+ul.ex-rank-table li:nth-child(even) {
+	background-color:#595959;
+}
+ul.ex-rank-table li:first-child {
+	background-color:#000000;
+	color:#edc45c;
+	justify-content:flex-end;
+	font-weight:bold;
+	border-radius:20px 20px 0 0;
+}
+ul.ex-rank-table li:nth-child(2) {
+	background-color:#ba9a48;
+	font-weight:bold;
+}
+ul.ex-rank-table li:nth-child(3), ul.ex-rank-table li:nth-child(5) {
+	background-color:#333333;
+	font-weight:bold;
+}
+ul.ex-rank-table li:nth-child(4) {
+	background-color:#474747;
+	font-weight:bold;
+}
+ul.ex-rank-table li:last-child {
+	border-radius:0 0 20px 20px;
+}
+.ex-rank-row {
+	display:flex;
+	flex-direction:row;
+	flex-wrap:nowrap;
+	justify-content: space-between;
+	align-items:flex-end;
+	width: calc(100vw - 40px);
+    max-width: 1024px;
+}
+.ex-rank-item {
+	display:flex;
+	align-items: center;
+	padding:5px;
+	height:50px;
+}
+.item-no, .item-reg, .item-details {
+	width:calc(7.5% - 10px);
+	justify-content:center;
+}
+.item-fee {
+	width:calc(10.5% - 10px);
+	justify-content:center;
+}
+.item-name, .item-bonus, .item-diff {
+	width:calc(15% - 10px);
+	justify-content:flex-start;
+}
+.item-saving-1, .item-saving-2 {
+	width:calc(11% - 12px);
+	justify-content:center;
+}
+.item-saving-1 {
+	border-left:2px solid #edc45c;
+}
+.item-saving-2 {
+	border-right:2px solid #edc45c;
+}
+.item-saving-1.last-item {
+	border-bottom:2px solid #edc45c;
+	border-radius:0 0 0 10px;
+}
+.item-saving-2.last-item {
+	border-bottom:2px solid #edc45c;
+	border-radius:0 0 10px 0;
+}
+.item-saving {
+	width:calc(22% - 14px);
+	height:48px;
+	justify-content:space-between;
+	flex-direction:column;
+	border-width:2px 2px 0 2px;
+	border-style:solid;
+	border-color:#edc45c;
+	border-radius:10px 10px 0 0;
+}
+.item-dot {
+	display:inline-block;
+	width:12px;
+	height:12px;
+	border-radius:50%;
+	margin-right:4px;
+}
+.green {
+	background-color:#56a07e;
+}
+.red {
+	background-color:#c15357;
+}
+.text-green {
+	color:#56a07e;
+}
+.text-red {
+	color:#c15357;
+}
+a.ex-rank-btn {
+	display:inline-block;
+	width:24px;
+	height:24px;
+	background-color:#edc45c;
+	color:#333333;
+	border-radius:50%;
+	font-size:24px;
+	line-height:24px;
+	text-decoration:none;
+	cursor:pointer;
+	transition:all ease 0.3s;
+}
+a.ex-rank-btn:hover {
+	color:#333333;
+	background-color:#06afc9;
+}
+.bonus-pill {
+	display:block;
+	width:100%;
+	Background-color:#edc45c;
+	color:#000000;
+	font-size:12px;
+	padding:2px 5px;
+	border-radius:6px;
+}

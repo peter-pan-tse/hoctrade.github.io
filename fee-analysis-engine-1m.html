@@ -32,7 +32,7 @@
 			<div class="step-box">
 				<div class="stepline"></div>
 				<div class="stepdot step1 active"></div>
-				<div class="steptext step1 active">Connect account</div>
+				<div class="steptext step1 active">Insert data</div>
 				<div class="stepdot step2"></div>
 			</div>
 			<div class="step-box">
@@ -41,7 +41,7 @@
 				<div class="steptext step3">Result</div>
 			</div>
 		</div>
-		<p class="intro">We use the read-only API access to retrieve your past trades as basis to simulate your fees for other exchanges</p>
+		<p class="intro">We use your inputs as basis to analyse your current fees and simulate fees for other exchanges</p>
 		<!-- form -->
 		<div class="main-container">
 			<div class="content-block">
@@ -68,29 +68,8 @@
 						<option value="OKX">OKX</option>
 					</select>
 				</div>
-				<!-- API info -->
-				<div class="multi-input-block">
-					<div class="multi-input-l">
-						<div class="labels">API key <a class="btn-info" href="#" id="infomodal"><span class="ht-info"></span></a></div>
-						<input class="general" placeholder="" value=""/>
-					</div>
-					<div class="multi-input-m">
-						<div class="labels">API Secret <a class="btn-info" href="#" id="infomodal"><span class="ht-info"></span></a></div>
-						<input class="general" placeholder="" value=""/>
-					</div>
-					<div class="multi-input-r">
-						<div class="labels">API Passphase <a class="btn-info" href="#" id="infomodal"><span class="ht-info"></span></a></div>
-						<input class="general" placeholder="" value=""/>
-					</div>
-				</div>
-				<label class="check-box">
-					I confirm that the API info I entered are read-only access
-					<input type="checkbox">
-					<span class="checkmark"></span>
-				</label>
-				<div class="error-msg-box"></div>
 				<!-- select country -->
-				<div class="labels">Country of residence <a class="btn-info" href="#" id="infomodal"><span class="ht-info"></span></a></div>
+				<div class="labels">Country of residence <a class="btn-info" id="infomodal1"><span class="ht-info"></span></a></div>
 				<div class="custom-select" style="width:calc(100% - 32px);">
 					<select>
 						<option value="null">Select or type keyword</option>
@@ -105,69 +84,76 @@
 						<option value="FTX US">France</option>
 					</select>
 				</div>
-				<!-- currency -->
-				<div class="labels">Additional <u>base currencies</u> (e.g. BTC/<u>EUR</u> or BTC/<u>ETH</u>) used during last 30 days (optional) <a class="btn-info" href="#" id="infomodal"><span class="ht-info"></span></a></div>
-				<div>
-					<label class="check-box-l">
-						BUSD<input type="checkbox" checked><span class="checkmark"></span>
-					</label>
-					<label class="check-box-l">
-						USDT<input type="checkbox" checked><span class="checkmark"></span>
-					</label>
-					<label class="check-box-l">
-						USDC<input type="checkbox" checked><span class="checkmark"></span>
-					</label>
-					<label class="check-box-l">
-						USD<input type="checkbox" checked><span class="checkmark"></span>
-					</label>
-					<label class="check-box-l">
-						BTC<input type="checkbox"><span class="checkmark"></span>
-					</label>
-					<label class="check-box-l">
-						ETH<input type="checkbox"><span class="checkmark"></span>
-					</label>
-					<label class="check-box-l">
-						BNB<input type="checkbox"><span class="checkmark"></span>
-					</label>
-					<label class="check-box-l">
-						KCS<input type="checkbox"><span class="checkmark"></span>
-					</label>
-					<label class="check-box-l">
-						HT<input type="checkbox"><span class="checkmark"></span>
-					</label>
-					<label class="check-box-l">
-						EUR<input type="checkbox"><span class="checkmark"></span>
-					</label>
-					<label class="check-box-l">
-						JPY<input type="checkbox"><span class="checkmark"></span>
-					</label>
-					<label class="check-box-l">
-						TRY<input type="checkbox"><span class="checkmark"></span>
-					</label>
-					<label class="check-box-l">
-						GBP<input type="checkbox"><span class="checkmark"></span>
-					</label>
-					<label class="check-box-l">
-						AUD<input type="checkbox"><span class="checkmark"></span>
-					</label>
-					<label class="check-box-l">
-						RUB<input type="checkbox"><span class="checkmark"></span>
-					</label>
-					<label class="check-box-l">
-						HUS<input type="checkbox"><span class="checkmark"></span>
-					</label>
+				<!-- average spot trade -->
+				<div class="labels">Average SPOT trading volume (per month) <a class="btn-info" id="infomodal2"><span class="ht-info"></span></a></div>
+				<div class="currency-unit-box">
+					<input class="currency" placeholder="" value=""/>
+					<div class="currency-label">SPOT</div>
+					<div class="currency-unit">USD</div>
 				</div>
+				<!-- average perpectual trade -->
+				<div class="labels">Average perpectual trading volume (per month) <a class="btn-info" id="infomodal2"><span class="ht-info"></span></a></div>
+					<div class="multi-input-block">
+						<div class="multi-input-l2">
+							<div class="currency-unit-box">
+								<input class="currency" placeholder="" value=""/>
+								<div class="currency-label">USD-based</div>
+								<div class="currency-unit">USD</div>
+							</div>
+						</div>
+						<div class="multi-input-r2">
+							<div class="currency-unit-box">
+								<input class="currency" placeholder="" value=""/>
+								<div class="currency-label">Coin-based</div>
+								<div class="currency-unit">USD</div>
+							</div>
+						</div>
+					</div>
 			</div><!-- content block -->
 			<div class="content-block">
-				<div class="labels">How to find API info? <a class="btn-info" href="#" id="infomodal"><span class="ht-info"></span></a></div>
-				<div class="video-box">
-					<iframe class="video" src="https://www.youtube.com/embed/LemZIhFS9QI" title="hoc-trade academy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<!-- % of trades -->
+				<div class="labels">% of trades executed as maker vs. taker <a class="btn-info" id="infomodal2"><span class="ht-info"></span></a></div>
+				<div class="multi-input-block">
+					<div class="multi-input-l2">
+						<div class="currency-unit-box">
+							<input class="currency" placeholder="" value=""/>
+							<div class="currency-label">Maker</div>
+							<div class="currency-unit">%</div>
+						</div>
+					</div>
+					<div class="multi-input-r2">
+						<div class="currency-unit-box">
+							<input class="currency" placeholder="" value=""/>
+							<div class="currency-label">Taker</div>
+							<div class="currency-unit">%</div>
+						</div>
+					</div>
+				</div>
+				<!-- balance -->
+				<div class="labels">Your account balance <a class="btn-info" id="infomodal2"><span class="ht-info"></span></a></div>
+				<div class="multi-input-block">
+					<div class="multi-input-l2">
+						<div class="currency-unit-box">
+							<input class="currency2" placeholder="" value=""/>
+							<div class="currency-unit">USD</div>
+						</div>
+					</div>
+				</div>
+				<!-- holding -->
+				<div class="labels">Holding of native exchange token (in % of account balance) <a class="btn-info" id="infomodal2"><span class="ht-info"></span></a></div>
+				<div class="multi-input-block">
+					<div class="multi-input-l2">
+						<div class="currency-unit-box">
+							<input class="currency2" placeholder="" value=""/>
+							<div class="currency-unit">%</div>
+						</div>
+					</div>
 				</div>
 			</div><!-- content block -->	
 		</div>
 		<div class="btn-container">
 			<a class="btn-submit" href="fee-analysis-engine-2.html">NEXT</a><br>
-			<a href="fee-analysis-engine-1m.html">I prefer to manually enter my trading information</a>
+			<a href="fee-analysis-engine-1a.html">Go to automated data retrival</a>
 		</div>
 		<!-- footer -->
 		<div class="module-block bg-footer">

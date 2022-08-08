@@ -1,9 +1,9 @@
-// JavaScript Document
+<link href="modal-verify-email.css" rel="stylesheet">modalVerifyEmailBoxmodalVerifyEmailBoxmodalVerifyEmailBoxmodalVerifyEmailBoxmodalVerifyEmailBoxmodalVerifyEmailBoxmodalVerifyEmailBox// JavaScript Document
 // Get the modal
-var modal = document.getElementById("modalSignUpBox");
+var modal = document.getElementById("modalVerifyBox");
 
 // Get the button that opens the modal
-var btn = document.getElementById("modalSignUp");
+var btn = document.getElementById("modalVerifyEmail");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
