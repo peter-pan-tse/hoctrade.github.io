@@ -62,7 +62,7 @@
 	width:40%;
 	border-radius:0 0 20px 0;
 }
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 480px) {
 	.fee-chart-box {
 		margin:0 0px 10px 0px;
 	}
@@ -73,9 +73,8 @@
 		width:calc(100% - 20px);
 		border-radius:0 0 0 0;
 	}
-	.fee-rank-bg {
-		width:calc(100% - 20px);
-		border-radius:0 0 20px 20px;
+	.fee-exchange-bg {
+		display:none;
 	}
 }
 .exchange-pill-box {
@@ -307,9 +306,10 @@ a.ex-rank-btn {
 	background-color:#edc45c;
 	color:#333333;
 	border-radius:50%;
-	font-size:24px;
+	font-size:20px;
 	line-height:24px;
 	text-decoration:none;
+	text-align:center;
 	cursor:pointer;
 	transition:all ease 0.3s;
 }

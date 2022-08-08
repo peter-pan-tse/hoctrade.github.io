@@ -6,6 +6,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Noto Sans:400,700,900" rel="stylesheet">
 	<link href="font.css" rel="stylesheet">
 	<link href="landing-drfee.css" rel="stylesheet">
+	<link href="burger-menu-drfee.css" rel="stylesheet">
 	<link rel="icon" href="img/favicon-drfee.svg">
 	<title>dr.fee</title>
 	<!-- write your code here -->
@@ -28,6 +29,52 @@
 				</ul>
 			</div>
 		</div>
+		
+		<!-- mobile menu -->
+		<nav role="navigation">
+			<div class="recent-cat">Fee analysis engine</div>
+			<div id="mobileMenuToggle">
+				<!--A fake / hidden checkbox is used as click reciever, so you can use the :checked selector on it.-->
+				<input type="checkbox" />
+				<!--Some spans to act as a hamburger. They are acting like a real hamburger, not that McDonalds stuff.-->
+				<span></span>
+				<span></span>
+				<span></span>
+				<!-- Too bad the menu has to be inside of the button but hey, it's pure CSS magic.-->
+				<ul id="mobileMenu">
+					<li>
+						<a href="fee-analysis-engine-1.html">
+							<div class="s-menu-title active">Fee analysis engine</div>
+						</a>
+						<!--<div class="s-menu-title active"><div><span class="ht-dashboard"></span></div>Dashboard</div>
+						<div class="s-menu-group">
+							<a class="s-menu-item active" href="account-overview.html"><span class="ht-wallet"></span>Account overview</a>
+							<a class="s-menu-item" href="basic-atat.html"><span class="ht-pie-chart"></span>Basic statistics</a>
+							<a class="s-menu-item" href="advanced-stat.html"><span class="ht-cluster-chart"></span>Advanced statistics</a>
+							<a class="s-menu-item" href="trade-history.html"><span class="ht-clipboard"></span>Trade history</a>
+						</div>-->
+					</li>
+					<li>
+						<a href="exchange-list.html">
+							<div class="s-menu-title">Exchange list</div>
+						</a>
+					</li>
+					<li>
+						<a href="promotions-drfee.html">
+							<div class="s-menu-title">Promotions</div>
+						</a>
+					</li>
+					<li>
+						<a href="blog-drfee.html">
+							<div class="s-menu-title">Blog</div>
+						</a>
+					</li>
+				</ul>
+				<div class="mobileMenuMask"></div>
+			</div>
+		</nav>
+		<!-- mobile menu ended -->
+		
 		<div class="step-container">
 			<div class="step-box">
 				<div class="stepline"></div>
@@ -156,13 +203,9 @@
 			<a href="fee-analysis-engine-1a.html">Go to automated data retrival</a>
 		</div>
 		<!-- footer -->
-		<div class="module-block bg-footer">
-			<div class="main-container" style="padding:30px 0;">
-				<div class="footer">
-					<img class="footer-logo" src="img/logo-drfree-2.svg" />&copy; 2022 hoc-trade limited, all rights reserved<span class="separator">|</span><a href="#">Terms &amp; conditions</a><span class="separator">|</span><a href="#">Privacy policy</a><span class="separator">|</span><a href="#">About</a><span class="separator">|</span><a class="social" href="#"><span class="ht-logo-fb"></span></a><a class="social" href="#"><span class="ht-logo-twitter"></span></a><a class="social" href="#"><span class="ht-logo-in"></span></a><a class="social" href="#"><span class="ht-logo-yt"></span></a>
-					<p class="disclaimer">HIGH RISK WARNING: Foreign exchange and other CFD trading carries a high level of risk and may not be suitable for everyone. The usage of leverage creates additional risk and loss exposure. Your investment objectives, experience level and risk tolerance have to be taken into consideration before you decide to trade foreign exchange or other CFD products. You could lose some or all of your entire investment. Do not invest money that you cannot afford to lose and always use an appropriate risk management. It’s important to educate yourself on the risks associated with foreign exchange trading, and seek professional advice from an independent financial or tax advisor in case of any questions. Any data and information is provided ‘as is’ solely for informational purposes, and is not intended for trading purposes or advice. Past performance, which are presented on this website or you find somewhere else, is not indicative of future results.</p>
-				</div>
-			</div>
+		<div class="footer">
+			<img class="footer-logo" src="img/logo-drfree-2.svg" />&copy; 2022 hoc-trade limited, all rights reserved<span class="separator">|</span><a href="#">Terms &amp; conditions</a><span class="separator">|</span><a href="#">Privacy policy</a><span class="separator">|</span><a href="#">About</a><span class="separator">|</span><div class="social-box"><a class="social" href="#"><span class="ht-logo-fb"></span></a><a class="social" href="#"><span class="ht-logo-twitter"></span></a><a class="social" href="#"><span class="ht-logo-in"></span></a><a class="social" href="#"><span class="ht-logo-yt"></span></a></div>
+			<p class="disclaimer">HIGH RISK WARNING: Foreign exchange and other CFD trading carries a high level of risk and may not be suitable for everyone. The usage of leverage creates additional risk and loss exposure. Your investment objectives, experience level and risk tolerance have to be taken into consideration before you decide to trade foreign exchange or other CFD products. You could lose some or all of your entire investment. Do not invest money that you cannot afford to lose and always use an appropriate risk management. It’s important to educate yourself on the risks associated with foreign exchange trading, and seek professional advice from an independent financial or tax advisor in case of any questions. Any data and information is provided ‘as is’ solely for informational purposes, and is not intended for trading purposes or advice. Past performance, which are presented on this website or you find somewhere else, is not indicative of future results.</p>
 		</div>
 	</body>
 	<script>

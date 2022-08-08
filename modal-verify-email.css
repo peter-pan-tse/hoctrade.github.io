@@ -37,6 +37,11 @@
 .modal-content-2 {
 	margin:20px calc(50vw - 180px);
 }
+@media only screen and (max-width: 768px) {
+	.modal-content, .modal-content-2 {
+		margin:20vh calc(50vw - 180px);
+	}
+}
 @media only screen and (max-width: 480px) {
 	.modal-content, .modal-content-2 {
 		width:100%;
@@ -85,6 +90,12 @@ iframe.modal-body-2 {
 	height:calc(100vh - 180px);
 	/*padding:0px 50px 40px;*/
 	padding:0 0 40px 0;
+}
+@media only screen and (max-width: 768px) {
+	iframe.modal-body, iframe.modal-body-2 {
+		/*width:calc(100% - 100px);*/
+		height:50vh;
+	}
 }
 @media only screen and (max-width: 480px) {
 	iframe.modal-body, iframe.modal-body-2 {
