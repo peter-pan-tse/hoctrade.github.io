@@ -209,12 +209,12 @@ div.right-btn-box {
 		display:block;
 	}
 }
-ul.ex-rank-table {
+ul.ex-rank-table, ul.compare-table {
 	list-style: none;
 	padding:0;
 	margin:0 0 10px 0;
 }
-ul.ex-rank-table li {
+ul.ex-rank-table li, ul.compare-table li {
 	display:flex;
 	flex-direction:column;
 	justify-content: center;
@@ -224,6 +224,9 @@ ul.ex-rank-table li {
 	padding: 0;
 	margin: 0;
 }
+ul.compare-table li {
+	font-weight:bold;
+}
 @media only screen and (max-width: 480px) {
 	ul.ex-rank-table li {
 		padding: 10px 0;
@@ -232,10 +235,10 @@ ul.ex-rank-table li {
 .text-deselected {
 	color:#999999;
 }
-ul.ex-rank-table li:nth-child(odd) {
+ul.ex-rank-table li:nth-child(odd), ul.compare-table li:nth-child(odd) {
 	background-color:#5e5e5e;
 }
-ul.ex-rank-table li:nth-child(even) {
+ul.ex-rank-table li:nth-child(even), ul.compare-table li:nth-child(even) {
 	background-color:#595959;
 }
 ul.ex-rank-table li:first-child {
@@ -273,7 +276,14 @@ ul.ex-rank-table li:nth-child(4) {
 ul.ex-rank-table li:last-child {
 	border-radius:0 0 20px 20px;
 }
-
+span.compare-logo {
+	font-size:32px;
+	color:#edc45c;
+}
+.text-you {
+	color:#cccccc;
+	font-weight: normal;
+}
 .ex-rank-row {
 	display:flex;
 	flex-direction:row;
@@ -311,7 +321,7 @@ ul.ex-rank-table li:last-child {
 }
 @media only screen and (max-width: 480px) {
 	.item-no {
-		border-right:2px solid #edc45c;
+		border-right:1px solid #edc45c;
 		width:calc(15% - 11px);
 		flex-direction:column;
 		justify-content:flex-start;
@@ -324,7 +334,7 @@ ul.ex-rank-table li:last-child {
 }
 @media only screen and (max-width: 480px) {
 	.item-fee {
-		border-right:2px solid #edc45c;
+		border-right:1px solid #edc45c;
 		width:calc(20% - 11px);
 		flex-direction: column;
 		justify-content: flex-start;
@@ -337,7 +347,7 @@ ul.ex-rank-table li:last-child {
 }
 @media only screen and (max-width: 480px) {
 	.item-name {
-		border-right:2px solid #edc45c;
+		border-right:1px solid #edc45c;
 		width:calc(20% - 11px);
 		flex-direction: column;
 		justify-content: flex-start;
@@ -357,8 +367,24 @@ ul.ex-rank-table li:last-child {
 @media only screen and (max-width: 480px) {
 	.item-saving-2 {
 		width:calc(30% - 11px);
+		border-right:1px solid #edc45c;
 		flex-direction: column;
 		justify-content: flex-start;
+		align-items:center;
+		text-align: center;
+	}
+	.item-compare-label {
+		width:calc(40% - 11px);
+		border-right:1px solid #999999;
+		flex-direction: column;
+		justify-content:center;
+		align-items:flex-start;
+		font-weight:normal;
+	}
+	.item-compare {
+		width:calc(30% - 10px);
+		flex-direction: column;
+		justify-content: center;
 		align-items:center;
 		text-align: center;
 	}
@@ -424,9 +450,27 @@ a.ex-rank-btn:hover {
 	color:#333333;
 	background-color:#06afc9;
 }
+@media only screen and (max-width: 480px) {
+	a.ex-rank-btn {
+		display:flex;
+		flex-direction:row;
+		justify-content: center;
+		align-items:center;
+		width:calc(50% - 5px);
+		height:40px;
+		border-radius:10px;
+		font-size:14px;
+		font-weight:bold;
+		line-height:40px;
+	}
+	a.ex-rank-btn > span {
+		font-size:24px;
+		line-height:40px;
+	}
+}
 .bonus-pill {
 	display:block;
-	width:100%;
+	width:85%;
 	Background-color:#edc45c;
 	color:#000000;
 	font-size:12px;
@@ -475,4 +519,22 @@ a.btn-ex-list, a.btn-exchange-details {
 		text-align:center;
 		text-decoration:none;
 	}
+}
+a.btn-back {
+	display:inline-block;
+	color:#000000;
+	font-weight: bold;
+	text-decoration:none;
+	line-height:32px;
+	cursor:pointer;
+}
+a.btn-back > span {
+	font-size:24px;
+	vertical-align: middle;
+}
+.btn-compare-container {
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	width:100%;
 }

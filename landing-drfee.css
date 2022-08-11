@@ -678,6 +678,7 @@ ul.list li {
 	.btn-container {
 		width:100%;
 		align-items: center;
+		justify-content:center;
 	}
 }
 a.btn-submit {
@@ -816,9 +817,11 @@ a.btn-info > span {
 @media only screen and (max-width: 480px) {
 	.footer {
 		position:relative;
+		padding:10px 10px 20px 10px;
 	}
 }
 .footer > span.ht-logo {
+	display:inline;
 	font-size:24px;
 	vertical-align: middle;
 	margin-right: 5px;
@@ -829,6 +832,12 @@ a.btn-info > span {
 	font-weight:bold;
 	transition: all 0.3s ease;
 }
+.footer-logo-box {
+	display:inline;
+}
+.footer-link-box {
+	display:inline;
+}
 .social-box {
 	display:inline;
 }
@@ -837,6 +846,19 @@ a.btn-info > span {
 		display:block;
 		width:100%;
 		text-align:center;
+	}
+}
+@media only screen and (max-width: 480px) {
+	.footer-logo-box {
+		display:block;
+		width:100%;
+		text-align:center;
+	}
+	.footer-link-box {
+		display:block;
+		width:100%;
+		text-align:center;
+		margin:10px 0;
 	}
 }
 .footer a.social {
@@ -850,9 +872,14 @@ a.btn-info > span {
 .footer a:hover, .footer a.social:hover {
 	color:#FFFFFF;
 }
-.footer > span.separator {
+.footer > .footer-link-box > span.separator {
 	display:inline-block;
 	padding:0 10px;
+}
+@media only screen and (max-width: 480px) {
+	.footer > .footer-link-box > span.separator {
+		padding:0 10px;
+	}
 }
 .footer p.disclaimer {
 	font-size:10px;
@@ -860,10 +887,21 @@ a.btn-info > span {
 	color:#edc45c;
 	margin:20px 0 0 0;
 }
+@media only screen and (max-width: 480px) {
+	.footer p.disclaimer {
+		margin:5px 0 0 0;
+	}
+}
 .footer-logo {
 	height:40px;
 	margin-right: 20px;
 	vertical-align: middle;
+}
+@media only screen and (max-width: 480px) {
+	.footer-logo {
+		height:30px;
+		margin-right: 10px;
+	}
 }
 /* infinite logo slide */
 @-webkit-keyframes scroll {
