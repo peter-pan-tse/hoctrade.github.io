@@ -7,6 +7,7 @@
 	<link href="font.css" rel="stylesheet">
 	<link href="landing-drfee.css" rel="stylesheet">
 	<link href="burger-menu-drfee.css" rel="stylesheet">
+	<link href="modal-select-exchange.css" rel="stylesheet">
 	<link rel="icon" href="img/favicon-drfee.svg">
 	<title>dr.fee</title>
 	<style>
@@ -92,7 +93,7 @@
 		<div class="main-container">
 			<div class="content-block">
 				<!-- select exchange -->
-				<div class="labels">Your exchange <a class="btn-info" href="#" id="infomodal"><span class="ht-info"></span></a></div>
+				<div class="labels">Your exchange <a class="btn-info" href="#" id="modalinfo1"><span class="ht-info"></span></a></div>
 				<div class="custom-select" style="width:calc(100% - 32px);">
 					<select>
 						<option value="null">Please select</option>
@@ -132,12 +133,12 @@
 				<label class="check-box">
 					I confirm that the API info I entered are read-only access
 					<input type="checkbox">
-					<span class="checkmark"></span>
+					<span class="checkmark error"></span>
 				</label>
-				<div class="error-msg-box"></div>
+				<div class="error-msg-box">Please check the disclaimer</div>
 				<!-- select country -->
 				<div class="labels">Country of residence <a class="btn-info" href="#" id="infomodal"><span class="ht-info"></span></a></div>
-				<div class="custom-select" style="width:calc(100% - 32px);">
+				<div class="custom-select error" style="width:calc(100% - 32px);">
 					<select>
 						<option value="null">Select or type keyword</option>
 						<option value="Binance">USA</option>
@@ -151,6 +152,7 @@
 						<option value="FTX US">France</option>
 					</select>
 				</div>
+				<div class="error-msg-box">You must select country of residence</div>
 				<!-- currency -->
 				<div class="labels">Additional <u>base currencies</u> (e.g. BTC/<u>EUR</u> or BTC/<u>ETH</u>) used during last 30 days (optional) <a class="btn-info" href="#" id="infomodal"><span class="ht-info"></span></a></div>
 				<div>
@@ -228,6 +230,23 @@
 			</div>
 			<p class="disclaimer">HIGH RISK WARNING: Foreign exchange and other CFD trading carries a high level of risk and may not be suitable for everyone. The usage of leverage creates additional risk and loss exposure. Your investment objectives, experience level and risk tolerance have to be taken into consideration before you decide to trade foreign exchange or other CFD products. You could lose some or all of your entire investment. Do not invest money that you cannot afford to lose and always use an appropriate risk management. It’s important to educate yourself on the risks associated with foreign exchange trading, and seek professional advice from an independent financial or tax advisor in case of any questions. Any data and information is provided ‘as is’ solely for informational purposes, and is not intended for trading purposes or advice. Past performance, which are presented on this website or you find somewhere else, is not indicative of future results.</p>
 		</div>
+		
+		<!-- The Modal -->
+		<div id="modalInfoBox" class="modal">
+			<!-- Modal content -->
+
+		  <div class="modal-content">
+			<div class="modal-header">
+				<span class="close"><span class="ht-cross"></span></span>
+				<strong>Your exchange</strong>
+			</div>
+			<div class="modal-body">
+				<p>Please select the exchange you currently use for trading.</p>
+				<p>If your exchange is not listed in the dropdown menu, it is currently not supported by Dr.fee.</p>
+			</div>
+		  </div>
+		</div>
+		
 	</body>
 	<script>
 		var x, i, j, l, ll, selElmnt, a, b, c;
@@ -309,4 +328,5 @@
 		then close all select boxes:*/
 		document.addEventListener("click", closeAllSelect);
 	</script>
+	<script src="modal.js" language="javascript"></script>
 </html>

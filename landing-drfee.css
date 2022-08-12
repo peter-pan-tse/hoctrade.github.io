@@ -450,6 +450,11 @@ input.general {
 	margin-bottom:10px;
 	border:1px solid #FFFFFF;
 }
+input.general.error {
+	background-color:#ffc4c4;
+	color:#ff5e5e;
+	border:1px solid #ff5e5e;
+}
 .currency-unit-box {
 	display:block;
 	position:relative;
@@ -514,10 +519,15 @@ input.currency2 {
 	height:28px;
 	padding:2px 32px 2px 0px;
 	background-color:#FFFFFF;
-	border:none;
+	border:1px solid transparent;
 	border-radius:6px;
 	color:#333333;
 	margin:0 0 20px 0px;
+}
+.custom-select.error {
+	background-color:#ffc4c4;
+	color:#ff5e5e;
+	border:1px solid #ff5e5e;
 }
 .custom-select select {
 	display: none; /*hide original SELECT element:*/
@@ -615,6 +625,11 @@ input.currency2 {
 	width: 12px;
 	background-color: #999999;
 	border-radius:2px;
+	border:1px solid transparent;
+}
+.checkmark.error {
+	background-color:#ffc4c4;
+	border:1px solid #ff5e5e;
 }
 /* On mouse-over, add a background color */
 .container:hover input ~ .checkmark {
