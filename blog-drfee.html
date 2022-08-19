@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="jquery-3.6.0.min.js" language="javascript"></script>
+	<link href="https://fonts.googleapis.com/css?family=Noto Sans:400,700,900" rel="stylesheet">
+	<link href="font.css" rel="stylesheet">
+	<link href="chart-crypto.css" rel="stylesheet">
+	<link href="landing-drfee.css" rel="stylesheet">
+	<link href="burger-menu-drfee.css" rel="stylesheet">
+	<link rel="icon" href="img/favicon-drfee.svg">
+	<title>dr.fee - Blog</title>
+	<!-- write your code here -->
+	<style>
+		body {
+			padding-bottom:0px;
+		}
+		@media only screen and (max-width: 480px) {
+			body {
+				padding-bottom:50px;
+			}
+		}
+		.footer {
+			position:relative;
+		}
+	</style>
+	</head>
+	<body>
+		<div class="header">
+			<div class="header-container">
+				<a href="index-drfee.html"><div class="logo"><img src="img/logo-drfree-1.svg" /></div></a>
+				<ul class="menu">
+					<li><a class="engine" href="fee-analysis-engine-1.html"><span class="ht-switch"></span> START<br>Fee analysis engine</a></li>
+					<li><a href="exchange-list.html">Exchange list</a></li>
+					<li><a href="promotions-drfee.html">Promotions</a></li>
+					<li><a class="active" href="blog-drfee.html">Blog</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<!-- mobile menu -->
+		<nav role="navigation">
+			<div class="recent-cat">Blog</div>
+			<div id="mobileMenuToggle">
+				<!--A fake / hidden checkbox is used as click reciever, so you can use the :checked selector on it.-->
+				<input type="checkbox" />
+				<!--Some spans to act as a hamburger. They are acting like a real hamburger, not that McDonalds stuff.-->
+				<span></span>
+				<span></span>
+				<span></span>
+				<!-- Too bad the menu has to be inside of the button but hey, it's pure CSS magic.-->
+				<ul id="mobileMenu">
+					<li>
+						<a href="fee-analysis-engine-1.html">
+							<div class="s-menu-title">Fee analysis engine</div>
+						</a>
+						<!--<div class="s-menu-title active"><div><span class="ht-dashboard"></span></div>Dashboard</div>
+						<div class="s-menu-group">
+							<a class="s-menu-item active" href="account-overview.html"><span class="ht-wallet"></span>Account overview</a>
+							<a class="s-menu-item" href="basic-atat.html"><span class="ht-pie-chart"></span>Basic statistics</a>
+							<a class="s-menu-item" href="advanced-stat.html"><span class="ht-cluster-chart"></span>Advanced statistics</a>
+							<a class="s-menu-item" href="trade-history.html"><span class="ht-clipboard"></span>Trade history</a>
+						</div>-->
+					</li>
+					<li>
+						<a href="exchange-list.html">
+							<div class="s-menu-title">Exchange list</div>
+						</a>
+					</li>
+					<li>
+						<a href="promotions-drfee.html">
+							<div class="s-menu-title">Promotions</div>
+						</a>
+					</li>
+					<li>
+						<a href="blog-drfee.html">
+							<div class="s-menu-title active">Blog</div>
+						</a>
+					</li>
+				</ul>
+				<div class="mobileMenuMask"></div>
+			</div>
+		</nav>
+		<!-- mobile menu ended -->
+		<div class="main-container">
+			<ul class="blog">
+				<li>
+					<div class="thumbnail" style="background-image:url('img/blog-thumnail-1.jpg');"></div>
+					<div class="intro">
+						<div class="blog-header">
+							<a class="btn-share" href="#"><span class="ht-share"></span></a>
+						</div>
+						<h1>Bitcoin mining to harness onsite natural gas emissions: Ark Invest</h1>
+						<p>Data from a recent Ark Invest report highlights another utility for Bitcoin (BTC) mining in the realm of sustainability and energy.</p>
+						<div class="hash">
+							<span>#Bitcoin</span><span>#mining</span><span>#harness</span><span>#onsite</span><span>#natural</span><span>#gas</span><span>#emissions</span> <span>#Ark</span><span>#Invest</span>
+						</div>
+						<div class="blog-footer">
+							<div class="blog-date">26-Jul-2022 20:48:55</div>
+							<a class="btn-general" href="blog-details.html">Read more <span class="ht-arrow"></span></a>
+						</div>
+					</div>
+				</li><!-- blog item end -->
+				<li>
+					<div class="thumbnail" style="background-image:url('img/blog-thumnail-2.jpg');"></div>
+					<div class="intro">
+						<div class="blog-header">
+							<a class="btn-share" href="#"><span class="ht-share"></span></a>
+						</div>
+						<h1>TikTok data policy debacle: Is user’s crypto at risk?</h1>
+						<p>TikTok continues to gather a head of steam, with the popular social media application surpassing one billion users in 2022. While daily users blissfully swipe through the latest videos from their favorite content creators, data security...</p>
+						<div class="hash">
+							<span>#Bitcoin</span><span>#mining</span><span>#harness</span><span>#onsite</span><span>#natural</span><span>#gas</span><span>#emissions</span> <span>#Ark</span><span>#Invest</span>
+						</div>
+						<div class="blog-footer">
+							<div class="blog-date">26-Jul-2022 20:48:55</div>
+							<a class="btn-general" href="blog-details.html">Read more <span class="ht-arrow"></span></a>
+						</div>
+					</div>
+				</li><!-- blog item end -->
+				<li>
+					<div class="thumbnail" style="background-image:url('img/blog-thumnail-3.jpg');"></div>
+					<div class="intro">
+						<div class="blog-header">
+							<a class="btn-share" href="#"><span class="ht-share"></span></a>
+						</div>
+						<h1>Texas a Bitcoin ‘hot spot’ even as heat waves affect crypto miners</h1>
+						<p>Record-breaking heat waves are being documented across the world as extreme weather is worsening due to climate change. States throughout America are continuing to see temperatures rise above 100 degrees Fahrenheit (38...</p>
+						<div class="hash">
+							<span>#Bitcoin</span><span>#mining</span><span>#harness</span><span>#onsite</span><span>#natural</span><span>#gas</span><span>#emissions</span> <span>#Ark</span><span>#Invest</span>
+						</div>
+						<div class="blog-footer">
+							<div class="blog-date">26-Jul-2022 20:48:55</div>
+							<a class="btn-general" href="blog-details.html">Read more <span class="ht-arrow"></span></a>
+						</div>
+					</div>
+				</li><!-- blog item end -->
+			</ul>
+		</div><!-- main container end -->
+		<a class="btn-fee-engine" href="fee-analysis-engine-1.html">
+			<div class="text-start"><span class="ht-switch"></span> START</div>
+			<span>fee analysis engine</span>
+		</a>
+		<!-- footer -->
+		<div class="footer">
+			<div class="footer-logo-box">
+				<img class="footer-logo" src="img/logo-drfree-2.svg" />&copy; 2022 hoc-trade technology limited, all rights reserved
+			</div>
+			<div class="footer-link-box">
+				<span class="separator">|</span><a href="#">Terms &amp; conditions</a><span class="separator">|</span><a href="#">Privacy policy</a><span class="separator">|</span><a href="#">About</a><span class="separator">|</span>
+			</div>
+			<div class="social-box">
+				<a class="social" href="#"><span class="ht-logo-fb"></span></a><a class="social" href="#"><span class="ht-logo-twitter"></span></a><a class="social" href="#"><span class="ht-logo-in"></span></a><a class="social" href="#"><span class="ht-logo-yt"></span></a>
+			</div>
+			<p class="disclaimer">HIGH RISK WARNING: Foreign exchange and other CFD trading carries a high level of risk and may not be suitable for everyone. The usage of leverage creates additional risk and loss exposure. Your investment objectives, experience level and risk tolerance have to be taken into consideration before you decide to trade foreign exchange or other CFD products. You could lose some or all of your entire investment. Do not invest money that you cannot afford to lose and always use an appropriate risk management. It’s important to educate yourself on the risks associated with foreign exchange trading, and seek professional advice from an independent financial or tax advisor in case of any questions. Any data and information is provided ‘as is’ solely for informational purposes, and is not intended for trading purposes or advice. Past performance, which are presented on this website or you find somewhere else, is not indicative of future results.</p>
+		</div>
+	</body>
+</html>
