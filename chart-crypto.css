@@ -259,6 +259,7 @@ ul.compare-table li {
 }
 @media only screen and (max-width: 480px) {
 	ul.ex-rank-table li {
+		font-size:12px;
 		padding: 10px 0;
 	}
 }
@@ -390,7 +391,7 @@ span.compare-logo {
 }*/
 @media only screen and (max-width: 480px) {
 	.item-details {
-		width:calc(15% - 10px);
+		width:calc(10% - 10px);
 		justify-content:center;
 	}
 	.list-since {
@@ -516,7 +517,7 @@ span.compare-logo {
 @media only screen and (max-width: 480px) {
 	.item-name {
 		border-right:1px solid #edc45c;
-		width:calc(20% - 11px);
+		width:calc(25% - 11px);
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items:flex-start;
@@ -564,7 +565,7 @@ span.compare-logo {
 		align-items:center;
 		text-align: center;
 	}
-	.item-details {
+	.item-details-2 {
 		width:calc(60% - 10px);
 		flex-direction: column;
 		justify-content: center;
