@@ -506,7 +506,7 @@ span.compare-logo {
 	}
 }
 .item-name, .item-bonus, .item-diff {
-	width:calc(12% - 10px);
+	width:calc(14% - 10px);
 	justify-content:flex-start;
 }
 .list-name, .list-bonus, .list-diff {
@@ -531,7 +531,7 @@ span.compare-logo {
 	}
 }
 .item-saving-1, .item-saving-2 {
-	width:calc(11% - 12px);
+	width:calc(12.5% - 12px);
 	justify-content:center;
 }
 .item-saving-1 {
@@ -581,7 +581,7 @@ span.compare-logo {
 	border-radius:0 0 10px 0;
 }
 .item-saving {
-	width:calc(22% - 14px);
+	width:calc(25% - 14px);
 	height:48px;
 	justify-content:space-between;
 	flex-direction:column;
