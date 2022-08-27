@@ -1581,3 +1581,23 @@ span.topcount::after {
     margin-left:-200%;
   }
 }
+/* exchange icons */
+.exchange-bg {
+	width:100vw;
+	background-color:#F2F2F2;
+	padding:40px 0;
+}
+.exchange-box {
+	display:flex;
+	height:160px;
+	width:16.6%;
+	flex-direction:column;
+	align-items:center;
+	color:#047f92;
+	font-weight:bold;
+}
+.exchange-box span {
+	display:block;
+	font-size:72px;
+	color:#f8c648;
+}
