@@ -8,57 +8,29 @@
 	<link href="font.css" rel="stylesheet">
 	<link href="landing-drfee.css" rel="stylesheet">
 	<link href="burger-menu-drfee.css" rel="stylesheet">
+	<link href="carousel-drfee.css" rel="stylesheet">
+	<link href="accordion-drfee.css" rel="stylesheet">
 	<link rel="icon" href="img/favicon-drfee.svg">
-	<title>dr.fee</title>
+	<title>dr-fee</title>
 	<!-- write your code here -->
 	<style>
+		body {
+			font-size:18px;
+		}
+		.main-container {
+			margin-top:40px;
+		}
+		h1 {
+			font-size:48px;
+		}
 	</style>
-	<!-- scroll smoothly to anchor -->
-	<script>
-		// Select all links with hashes
-		$('a[href*="#"]')
-		  // Remove links that don't actually link to anything
-		  .not('[href="#"]')
-		  .not('[href="#0"]')
-		  .click(function(event) {
-			// On-page links
-			if (
-			  location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-			  && 
-			  location.hostname == this.hostname
-			) {
-			  // Figure out element to scroll to
-			  var target = $(this.hash);
-			  target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-			  // Does a scroll target exist?
-			  if (target.length) {
-				// Only prevent default if animation is actually gonna happen
-				event.preventDefault();
-				$('html, body').animate({
-				  scrollTop: target.offset().top
-				}, 1000, function() {
-				  // Callback after animation
-				  // Must change focus!
-				  var $target = $(target);
-				  $target.focus();
-				  if ($target.is(":focus")) { // Checking if the target was focused
-					return false;
-				  } else {
-					$target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-					$target.focus(); // Set focus again
-				  };
-				});
-			  }
-			}
-		  });
-	</script>
 	</head>
 	<body>
 		<div class="header">
 			<div class="header-container">
 				<a href="index-drfee.html"><div class="logo"><img src="img/logo-drfree-1.svg" /></div></a>
 				<ul class="menu">
-					<li><a class="engine" href="fee-analysis-engine-1.html"><span class="ht-switch"></span> START<br>Fee analysis engine</a></li>
+					<li><a class="engine" href="fee-analysis-engine-1.html">Fee analysis engine</a></li>
 					<li><a href="exchange-list.html">Exchange list</a></li>
 					<li><a href="promotions-drfee.html">Promotions</a></li>
 					<li><a href="blog-drfee.html">Blog</a></li>
@@ -104,391 +76,236 @@
 		</nav>
 		<!-- mobile menu ended -->
 		
-		<!-- alex -->
-		<div class="module-block bg-red">
-			<div class="main-container" style=" align-items:flex-end;">
-				<div class="content-block-l">
-					<h1>Our analytics identifies your loss-making trading patterns</h1>
-					<p>Just like Alex, many traders face multiple loss-making behaviours, often times leading to an overall negative performance.</p>
-					<p><strong>ALEX</strong></p>
+		<!-- saving counter -->
+		<div class="saving-counter">
+			<h2>483,873,485 USD</h2>
+			fee saving potential already identified
+		</div>
+		<!-- topbanner -->
+		<div class="topbanner">
+			<div class="topbanner-headlines">
+				<div class="headline-box">
+					<h2>Save up to</h2>
+					<h1><span id="topcount">0</span>%</h1>
+					<h3>of your crypto trading fee!</h3>
+				</div>
+				<div class="headline-box">
+					<p>Our fee analysis engine identifies how much fees you would pay at different exchanges based on your actual trades:</p>
 					<ul class="list">
-						<li>daytrading Forex &amp; Crypto</li>
-						<li>applied different technical trading strategies</li>
-						<li>shows overall negative trading performance, however has many days and weeks in profit</li>
+						<li>Your trading volume &amp; order type</li>
+						<li>Your balance &amp; holdings</li>
+						<li>Your products (SPOT, perpetuals, futures)</li>
 					</ul>
 				</div>
-				<div class="content-block-r">
-					<img class="img-responsive" src="img/alex.png" />
+			</div>
+			<div class="topbanner-pictures">
+				<img class="laptop" src="img/top-theme-desktop.png" />
+				<img class="mobilephone" src="img/top-theme-mobile.png" />
+			</div>
+			<div class="topbanner-fg-1"><img src="img/top-theme-foregd-1.png" /></div>
+			<div class="topbanner-fg-2"><img src="img/top-theme-foregd-2.png" /></div>
+		</div>
+		<!-- problem -->
+		<div class="main-container">
+			<h1>What is the problem</h1>
+			<div class="full-content-block">
+				<div class="half-content-block half-left">
+					<h2>Manually comparing crypto trading fees is painful</h2>
+					<p>The highly complex fee structures among different crypto exchanges makes it so difficult to compare.</p>
+					<div class="mobile">
+						<img class="img-responsive" src="img/problem-1.png" />
+					</div>
 				</div>
-				<div class="content-block-w">
-					<p>Alex heard about the importance of psychology &amp; managing emotions in trading and now uses hoc-trade for tailored and automated behavioral analytics.</p>
-					<p><strong>See some of Alex's trading patterns and improvement potentials below!</strong></p>
+				<div class="half-content-block half-right">
+					<h2>Fees among exchanges differ greatly</h2>
+					<p>You may only pay a fraction of your current fees at other exchanges</p>
+					<div class="mobile">
+						<img class="img-responsive" src="img/problem-2.png" />
+					</div>
 				</div>
 			</div>
-		</div>
-		<!-- problem & solution -->
-		<div class="module-block bg-red">
-			<h2 align="center" style="color:#c15457;">Alex's problems</h2>
-			<div class="tabs effect-1"><!-- tab label -->
-					<!-- tab-title -->
-					<input type="radio" id="tab-1" name="tab-effect-1" checked="checked"><span>Behavioral</span>
-					<input type="radio" id="tab-2" name="tab-effect-1"><span>Timing</span>
-					<input type="radio" id="tab-3" name="tab-effect-1"><span>Risk</span>
-					<input type="radio" id="tab-4" name="tab-effect-1"><span>Strategic</span>
-					<input type="radio" id="tab-5" name="tab-effect-1"><span>Costs</span>
-				<!-- tab-content -->
-				<div class="tab-content">
-					<section id="tab-item-1">
-						<div class="main-container" style="padding-top:0px; z-index:1;">
-							<div class="content-block-l">
-								<p style="color:#c15457;"><strong>Break after loss trade</strong></p>
-								<p style="color:#c15457;">Alex appears to emotionally re-enter the market very quick after closing a loss trade.</p>
-								<p>Alex trades quickly after a loss trade show a significantly negative performance. If Alex takes the time to analyze the market, the trades show a profitable result on average.</p>
-							</div>
-							<div class="content-block-r">
-								<img class="img-responsive" style="margin-bottom:-80px;" src="img/chart-behavioral.png" />
-							</div>
-						</div>
-						<div class="module-block bg-blue">
-							<div class="main-container" style="padding:40px 0 20px;">
-								<div class="content-block-w">
-									<p style="color:#047f92;"><strong>At hoc-trade, we believe the trader itself is the source of a competitive edge. We strive to enable continuous improvement by powerful data-driven &amp; personalised analytics.</strong></p>
-								</div>
-							</div>
-						</div>
-						<div class="module-block">
-							<div class="main-container" style="padding:0;">
-								<div class="bottom-tab active">
-									<span class="ht-coffee"></span><br>
-									Behavioral
-								</div>
-								<div class="bottom-tab">
-									<span class="ht-timing"></span><br>
-									Timing
-								</div>
-								<div class="bottom-tab">
-									<span class="ht-alert"></span><br>
-									Risk
-								</div>
-								<div class="bottom-tab">
-									<span class="ht-chess-castle"></span><br>
-									Strategic
-								</div>
-								<div class="bottom-tab">
-									<span class="ht-coins"></span><br>
-									Costs
-								</div>
-							</div>
-						</div>
-					</section><!-- item 1 -->
-					<section id="tab-item-2">
-						<div class="main-container" style="padding-top:0px; z-index:1;">
-							<div class="content-block-l">
-								<p style="color:#c15457;"><strong>Trade closed earlier/ later</strong></p>
-								<p style="color:#c15457;">Alex closes winning trades very early, missing out on further profit.</p>
-								<p>Alex could increase performance if closing winning trades min. 5min later. It appears Alex is not fully following one of the major trading principles of cutting losing trades early &amp; letting winning trades run.</p>
-							</div>
-							<div class="content-block-r">
-								<img class="img-responsive" style="margin-bottom:-80px;" src="img/chart-behavioral.png" />
-							</div>
-						</div>
-						<div class="module-block bg-blue">
-							<div class="main-container" style="padding:40px 0 20px;">
-								<div class="content-block-w">
-									<p style="color:#047f92;"><strong>At hoc-trade, we believe the trader itself is the source of a competitive edge. We strive to enable continuous improvement by powerful data-driven &amp; personalised analytics.</strong></p>
-								</div>
-							</div>
-						</div>
-						<div class="module-block">
-							<div class="main-container" style="padding:0;">
-								<div class="bottom-tab">
-									<span class="ht-coffee"></span><br>
-									Behavioral
-								</div>
-								<div class="bottom-tab active">
-									<span class="ht-timing"></span><br>
-									Timing
-								</div>
-								<div class="bottom-tab">
-									<span class="ht-alert"></span><br>
-									Risk
-								</div>
-								<div class="bottom-tab">
-									<span class="ht-chess-castle"></span><br>
-									Strategic
-								</div>
-								<div class="bottom-tab">
-									<span class="ht-coins"></span><br>
-									Costs
-								</div>
-							</div>
-						</div>
-					</section><!-- item 2 -->
-					<section id="tab-item-3">
-						<div class="main-container" style="padding-top:0px; z-index:1;">
-							<div class="content-block-l">
-								<p style="color:#c15457;"><strong>Adding to a loss trade</strong></p>
-								<p style="color:#c15457;">Alex does not early cut losing trades early, but adds additional positions to it.</p>
-								<p>Alex would have higher profits if not applying a DCA (dollar-cost-average) strategy. Adding positions to a loss trade shows a negative result on average for Alex.</p>
-							</div>
-							<div class="content-block-r">
-								<img class="img-responsive" style="margin-bottom:-80px;" src="img/chart-behavioral.png" />
-							</div>
-						</div>
-						<div class="module-block bg-blue">
-							<div class="main-container" style="padding:40px 0 20px;">
-								<div class="content-block-w">
-									<p style="color:#047f92;"><strong>At hoc-trade, we believe the trader itself is the source of a competitive edge. We strive to enable continuous improvement by powerful data-driven &amp; personalised analytics.</strong></p>
-								</div>
-							</div>
-						</div>
-						<div class="module-block">
-							<div class="main-container" style="padding:0;">
-								<div class="bottom-tab">
-									<span class="ht-coffee"></span><br>
-									Behavioral
-								</div>
-								<div class="bottom-tab">
-									<span class="ht-timing"></span><br>
-									Timing
-								</div>
-								<div class="bottom-tab active">
-									<span class="ht-alert"></span><br>
-									Risk
-								</div>
-								<div class="bottom-tab">
-									<span class="ht-chess-castle"></span><br>
-									Strategic
-								</div>
-								<div class="bottom-tab">
-									<span class="ht-coins"></span><br>
-									Costs
-								</div>
-							</div>
-						</div>
-					</section><!-- item 3 -->
-					<section id="tab-item-4">
-						<div class="main-container" style="padding-top:0px; z-index:1;">
-							<div class="content-block-l">
-								<p style="color:#c15457;"><strong>Profit in high vs. low volatility</strong></p>
-								<p style="color:#c15457;">Alex tries to make profits during volatile times, however ends up losing.</p>
-								<p>Alex's trading performance is significantly better during low volatile markets. When trading during fast and large price movements, Alex in total lost 2,000USD.</p>
-							</div>
-							<div class="content-block-r">
-								<img class="img-responsive" style="margin-bottom:-80px;" src="img/chart-behavioral.png" />
-							</div>
-						</div>
-						<div class="module-block bg-blue">
-							<div class="main-container" style="padding:40px 0 20px;">
-								<div class="content-block-w">
-									<p style="color:#047f92;"><strong>At hoc-trade, we believe the trader itself is the source of a competitive edge. We strive to enable continuous improvement by powerful data-driven &amp; personalised analytics.</strong></p>
-								</div>
-							</div>
-						</div>
-						<div class="module-block">
-							<div class="main-container" style="padding:0;">
-								<div class="bottom-tab">
-									<span class="ht-coffee"></span><br>
-									Behavioral
-								</div>
-								<div class="bottom-tab">
-									<span class="ht-timing"></span><br>
-									Timing
-								</div>
-								<div class="bottom-tab">
-									<span class="ht-alert"></span><br>
-									Risk
-								</div>
-								<div class="bottom-tab active">
-									<span class="ht-chess-castle"></span><br>
-									Strategic
-								</div>
-								<div class="bottom-tab">
-									<span class="ht-coins"></span><br>
-									Costs
-								</div>
-							</div>
-						</div>
-					</section><!-- item 4 -->
-					<section id="tab-item-5">
-						<div class="main-container" style="padding-top:0px; z-index:1;">
-							<div class="content-block-l">
-								<p style="color:#c15457;"><strong>Spread &amp; commission</strong></p>
-								<p style="color:#c15457;">Alex could save lots of fees for the exact same trades if using a different broker.</p>
-								<p>Large fees paid for spreads &amp; commission significantly hurt Alex's trading performance. Alex would be able to save a majority of those fees if trading with another broker</p>
-							</div>
-							<div class="content-block-r">
-								<img class="img-responsive" style="margin-bottom:-80px;" src="img/chart-behavioral.png" />
-							</div>
-						</div>
-						<div class="module-block bg-blue">
-							<div class="main-container" style="padding:40px 0 20px;">
-								<div class="content-block-w">
-									<p style="color:#047f92;"><strong>At hoc-trade, we believe the trader itself is the source of a competitive edge. We strive to enable continuous improvement by powerful data-driven &amp; personalised analytics.</strong></p>
-								</div>
-							</div>
-						</div>
-						<div class="module-block">
-							<div class="main-container" style="padding:0;">
-								<div class="bottom-tab">
-									<span class="ht-coffee"></span><br>
-									Behavioral
-								</div>
-								<div class="bottom-tab">
-									<span class="ht-timing"></span><br>
-									Timing
-								</div>
-								<div class="bottom-tab">
-									<span class="ht-alert"></span><br>
-									Risk
-								</div>
-								<div class="bottom-tab">
-									<span class="ht-chess-castle"></span><br>
-									Strategic
-								</div>
-								<div class="bottom-tab active">
-									<span class="ht-coins"></span><br>
-									Costs
-								</div>
-							</div>
-						</div>
-					</section><!-- item 5 -->
-				</div>
-			</div><!-- tab label end -->
+			<div class="desktop">
+				<img class="img-responsive" src="img/problem-full.png" />
+			</div>
 		</div>
 		<!-- solutions -->
-		<div class="module-block">
-			<h2 align="center" style="color:#047f92; margin-top:10px;">Our solutions</h2>
-		</div>
-		<!-- counter -->
-		<div class="module-block">
-			<div class="main-container" style="padding:20px 0 80px 0;">
-				<div class="counter-block counter-separator-v counter-separator-h">
-					<h3>100%</h3>
-					Data-driven behavioral &amp; statistical analysis
-				</div>
-				<div class="counter-block counter-separator-v2 counter-separator-h">
-					<h3>40+</h3>
-					Trading patterns analytics
-				</div>
-				<div class="counter-block counter-separator-v">
-					<h3>20+</h3>
-					Real-time alerts for loss-making patterns &amp; excessive risk
-				</div>
-				<div class="counter-block">
-					<h3>$0</h3>
-					Costs
-				</div>
-			</div>
-		</div>
-		<!-- how to diagram -->
-		<div class="module-block bg-howto">
-			<div class="main-container">
-				<div class="content-block-l">
-					<h1>How does hoc-trade behavioral trading analytics work</h1>
-				</div>
-				<div>
-					<img class="img-responsive" src="img/howto-diagram.png" />
-				</div>
-			</div>
-		</div>
-		<!-- sandbox -->
-		<div class="module-block bg-sandbox" id="sandbox">
-			<div class="main-container" style="padding-bottom:60px;">
-				<div class="content-block-w">
-					<h1 style="margin-bottom:0px;">Create a sandbox to experience how hoc-trade analytics helps improve your trading performance</h1>
-				</div>
-				<div class="content-block-l">
-					<p>hoc-trade analytics sandbox is a fully functional environmnet which allows you to surf around to experience the powerful functionalities of the application.</p>
-					<p>
-						<strong>Just drop your email and try it right away!</strong><br><br>
-						<input class="sandbox-input" type="email"><br>
-						<span class="disclaimer">By clicking on the START button, you agree to the terms &amp; conditions of hoc-trade and the use of your email address for marketing and promotional purposes.</span>
-					</p>
-					<a class="btn-submit" href="#">START</a>
-				</div>
-				<div class="content-block-r">
-					<img class="img-responsive" src="img/sandbox-screenshot.png" />
-				</div>
-			</div>
-		</div>
-		<!-- academy -->
-		<div class="module-block bg-grey">
-			<div class="main-container" style="padding-bottom:60px;">
-				<div class="content-block-l">
-					<h1>Learn in our academy</h1>
-					<p>From Beginner to Professional: Our academy covers detailed background, explanation &amp; interpretation of the analytics charts, as well as beginner-friendly trading basics</p>
-					<a class="btn-blue" href="#" target="_blank">View all videos</a>
-				</div>
-				<div class="content-block-r">
-					<div class="video-box">
-						<iframe class="video" src="https://www.youtube.com/embed/LemZIhFS9QI" title="hoc-trade academy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<br><br>
+		<h1 align="center">Our solution &amp; approach</h1>
+		<div class="solution-bg">
+			<div class="main-container" style="padding-bottom:0px;">
+				<div class="full-content-block" style="align-items:flex-end;">
+					<div class="half-content-block half-left">
+						<img src="img/logo-drfree-1.svg" width="300" />
+						<h2>Our fee analysis engine makes fee comparison fast &amp; easy</h2>
+						<p>Find your SPOT &amp; Perpetuals fee saving potential in less than 5 min.</p>
+						<p>Just connect your read-only crypto exchange API to get a detailed fee report. We find your fee saving potential by analysing your current fees and simulate your fees for the same trades at other exchanges.</p>
+					</div>
+					<div class="half-content-block half-right" style="margin-bottom:0px;">
+						<!-- Slider -->
+						<div id="slidertwo">
+							<div class="drfee-slides">
+						    	<div class="drfee-slider">
+									<div class="drfee-image"><img src="img/dr-fee-screenshot-1.png"></div>
+						    	</div>
+						    	<div class="drfee-slider">
+									<div class="drfee-image"><img src="img/dr-fee-screenshot-2.png"></div>
+						    	</div>
+						    	<div class="drfee-slider">
+									<div class="drfee-image"><img src="img/dr-fee-screenshot-3.png"></div>
+						    	</div>
+							</div>
+						</div>
+
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- scoreboard -->
-		<div class="module-block">
-			<div class="main-container" style="padding-bottom:60px;">
-				<div class="content-block-l">
-					<h1>Learn from your peers</h1>
-					<ul class="list">
-						<li>Visit profitable traders' analytical charts &amp; discuss with them.</li>
-						<li>Share your own analytics output and receive feedback from peers.</li>
-						<li>Analyse the built-in benchmark to profitable traders in your analytics output.</li>
-					</ul>
+		
+		<!-- testimonial -->
+		<br><br><br>
+		<h1 align="center">What people are saying</h1>
+		<br>
+		<div class="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item">
+					<div>
+						<img src="img/yellow-quote.png" /><br>
+						dr-fee provided us the ability to track unique events and segment who the users are and what each user is doing Google Analytics doesn’t allow that.
+					</div>
+					<div class="name-box"><img src="img/profile-pic-1.jpg" />Alex Acker</div>
 				</div>
-				<div class="content-block-r" style="position:relative;">
-					<img class="scoreboard-img" src="img/scoreboard.png" />
+				<div class="carousel-item">
+					<div>
+						<img src="img/yellow-quote.png" /><br>
+						dr-fee provided us the ability to track unique events and segment who the users are and what each user is doing Google Analytics doesn’t allow that.
+					</div>
+					<div class="name-box"><img src="https://dl.memuplay.com/new_market/img/com.vicman.newprofilepic.icon.2022-06-07-21-33-07.png" />David Shackelford</div>
+				</div>
+				<div class="carousel-item">
+					<div>
+						<img src="img/yellow-quote.png" /><br>
+						dr-fee provided us the ability to track unique events and segment who the users are and what each user is doing Google Analytics doesn’t allow that.
+					</div>
+					<div class="name-box"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcgV1Zo4h6oyjQ_ZBTAxrM6xrPviTy2f7D5g&usqp=CAU" />Spenser Mann</div>
+				</div>
+				<div class="carousel-item">
+					<div>
+						<img src="img/yellow-quote.png" /><br>
+						dr-fee provided us the ability to track unique events and segment who the users are and what each user is doing Google Analytics doesn’t allow that.
+					</div>
+					<div class="name-box"><img src="https://static-cse.canva.com/blob/931214/1600w-EW4cggXkgbc.jpg" />Winnie Wu</div>
+				</div>
+				<div class="carousel-item">
+					<div>
+						<img src="img/yellow-quote.png" /><br>
+						dr-fee provided us the ability to track unique events and segment who the users are and what each user is doing Google Analytics doesn’t allow that.
+					</div>
+					<div class="name-box"><img src="https://images.unsplash.com/photo-1594751543129-6701ad444259?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGFyayUyMHByb2ZpbGV8ZW58MHx8MHx8&w=1000&q=80" />Jonas</div>
+				</div>
+				<div class="carousel-item">
+					<div>
+						<img src="img/yellow-quote.png" /><br>
+						dr-fee provided us the ability to track unique events and segment who the users are and what each user is doing Google Analytics doesn’t allow that.
+					</div>
+					<div class="name-box"><img src="https://cdn.trendhunterstatic.com/thumbs/profile-picture-nft.jpeg?auto=webp" />Peter</div>
+				</div>
+				<div class="carousel-item">
+					<div>
+						<img src="img/yellow-quote.png" /><br>
+						dr-fee provided us the ability to track unique events and segment who the users are and what each user is doing Google Analytics doesn’t allow that.
+					</div>
+					<div class="name-box"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPjkW6L6Fi2RYRQtGGPZeDA_Qt0qADmENA6A&usqp=CAU" />Cheyi Kung</div>
+				</div>
+				<div class="carousel-item">
+					<div>
+						<img src="img/yellow-quote.png" /><br>
+						dr-fee provided us the ability to track unique events and segment who the users are and what each user is doing Google Analytics doesn’t allow that.
+					</div>
+					<div class="name-box"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzeppCoxZPiVk60lL_9s7zbbzfwAKp0aLLKQ&usqp=CAU" />Justin Tseng</div>
 				</div>
 			</div>
+			<div class="carousel-controls">
+				<span class="prev"></span>
+				<span class="next"></span>
+			</div>
+			<div class="carousel-indicators"></div>
+			</div>
+			<!-- carousell ended -->
+		<!-- FAQ -->
+		<div class="main-container">
+			<br>
+			<h1 align="center">FAQ</h1>
+			<br><br>
+			<div class="tabs">
+					<div class="tab">
+						<input class="accordion" type="radio" id="faq11" name="hs">
+						<label class="tab-label" for="faq11">Is it safe to connect my trading account through the API to 
+Dr.fee?</label>
+						<div class="tab-content">
+							Yes, Dr.fee is using the APIs provided by the exchanges to read your trading account history as input for the analysis. Make sure that you provide a <strong>read-only</strong> API to Dr.fee, hence no form of transactions could even be executed through the API. There are detailed explanation videos available to safely create the read-only API connection.<br><br>
+							In order to further reduce any type of risks, you may want to delete the API after using it at Dr.fee. We currently do not offer any designated IP address to limit the API usage.In case you do not want to connect your trading account to Dr.fee, you are still able use the full power of the fee analysis engine by using the function to manually input the trading information.
+						</div>
+					</div>
+					<div class="tab">
+						<input class="accordion" type="radio" id="faq12" name="hs">
+						<label class="tab-label" for="faq12">Is it free to use the fee analysis engine by Dr.fee?</label>
+						<div class="tab-content">
+							Yes, it is completely free to use the fee analysis engine by Dr.fee.
+						</div>
+					</div>
+					<div class="tab">
+						<input class="accordion" type="radio" id="faq13" name="hs">
+						<label class="tab-label" for="faq13">How does Dr.fee derive the results of the fee analysis engine?</label>
+						<div class="tab-content">
+							At Dr.fee, we collect the requirements for different tiers at exchanges and the associated fees. We analyse your trading (such as trading volume, balance), match you in the respective tiers of different exchanges and simulate and extrapolate the fees you would have paid for your trades at the other exchanges based on your trading in the last 30days. Moreover, we may apply additional saving potentials we can offer if signing up through the presented link.<br><br>
+							We believe this automated and personalized fee comparison is extremely powerful because there may be hundreds of combinations of requirements and associated fees for a single exchange, making a manual comparison very complex.
+						</div>
+					</div>
+					<div class="tab">
+						<input class="accordion" type="radio" id="faq14" name="hs">
+						<label class="tab-label" for="faq14">I am new to Crypto trading – can I still use the fee analysis engine by Dr.fee?</label>
+						<div class="tab-content">
+							Yes, you can certainly benefit from using the fee analysis engine! We got you covered through the function to manually input the trading information and not connect your existing account through the API. Just fill in the information with your expected data (e.g. how much trading volume do you anticipate) and find out which exchange will offer you the lowest fees.
+						</div>
+					</div>
+					<div class="tab">
+						<input class="accordion" type="radio" id="faq15" name="hs">
+						<label class="tab-label" for="faq15">Are the results presented 100% accurate?</label>
+						<div class="tab-content">
+							We strive to deliver results as close to reality as possible and have taken many measures to deliver as accurate as possible results. Nevertheless, we face certain limitations, such as assumptions on your future trading volume, products and order types used, etc. (note: we use your last 30days of trading behavior to extrapolate in order to ensure we cover your most recent trading behavior), temporary promotions by exchanges which cannot fully be covered, sudden changes in tiers or fees charged by exchanges. Please note, we cannot be held liable for the results presented in any way.<br><br>
+							In our analysis, we cover the most important cryptocurrencies and base currencies (70+) to analyse your volume, balance, fees, etc., however trading in certain cryptocurrencies or base currencies may not be recognized.
+						</div>
+					</div>
+					<div class="tab">
+						<input class="accordion" type="radio" id="faq16" name="hs">
+						<label class="tab-label" for="faq16">Is there a limit on the number of trading accounts one trader can connect?</label>
+						<div class="tab-content">
+							No, one trader can have multiple accounts.
+						</div>
+					</div>
+					<div class="tab">
+						<input class="accordion" type="radio" id="faq17" name="hs">
+						<label class="tab-label" for="faq17">Will all of my trades serve as input for my trade analytics output?</label>
+						<div class="tab-content">
+							In general, all of the account’s trades will serve as an input for the analyses in your hoc-trade analytics. In some instances, it might be the case that trades will not be used as input for the analyses, e.g. if the symbol is not among the supported ones, if there has been no Stopp Loss or Take Profit set (will not be part of the related analyses then), or if no price value can be found for that trade (will not be part of the related analyses then). We seek that all your trades will serve as input for your analytics, and there will not be any manual exclusion, etc. be performed from our side.
+						</div>
+					</div>
+					<div class="tab">
+						<input class="accordion" type="radio" id="faq18" name="hs">
+						<label class="tab-label" for="faq18">Is there a limitation on the symbols which are supported in the analyses by hoc-trade?</label>
+						<div class="tab-content  tab-label-last">
+							Yes, at hoc-trade we currently support the major Forex currency pairs, the most frequently traded commodities, indices, cryptocurrencies and stocks. In case you would require additional symbols to be added, please reach out to <a href="mailto:support@hoc-trade.com">support@hoc-trade.com</a> and we will try our best to add those symbols as soon as possible.<br><br>
+							Please find below the total list of symbols supported.<br><br>
+							AUDCAD, AUDCHF, AUDJPY, AUDNZD, AUDUSD, CADCHF, CADJPY, CHFJPY, EURAUD, EURCAD, EURCHF, EURGBP, EURJPY, EURNZD, EURUSD, GBPAUD, GBPCAD, GBPCHF, GBPJPY, GBPNZD, GBPUSD, NZDCAD, NZDCHF, NZDJPY, NZDUSD, USDCAD, USDCHF, USDJPY, XAGUSD, XAUUSD, XBRUSD, XTIUSD, AUS200, Bitcoin, CN50, EUSTX50, Ethereum, GER30, JPN225, NAS100, UK100, US30, US500, AAPL, AMZN, FB, GOOGL, MSFT, TSLA
+						</div>
+					</div>
+				<!--<div class="tab">
+					<input class="accordion" type="radio" id="faq19" name="hs">
+					<label for="faq19" class="tab-close">Close &times;</label>
+				</div>-->
+			</div><!-- tabs -->
 		</div>
-		<!-- platforms -->
-		<div class="module-block bg-grey">
-			<div class="main-container" style="padding-bottom:40px;">
-				<div class="content-block-w">
-					<h1>Easy &amp; Secure<br>Simply connect your trading platform to hoc-trade</h1>
-					<p>We will utilize a read-only access to your trading account. We will at no times be able to interfere with your trading.</p>
-					<a class="btn-submit" href="#">REGISTER NOW</a>
-				</div>
-			</div>
-			<!-- logo slider -->
-			<div class="slider">
-				<div class="slide-track">
-					<div class="slide forex">
-						<img src="img/platform-logo-metatrader.svg" /><br>MetaTrader 4
-					</div>
-					<div class="slide">
-						<img src="img/platform-logo-binance.svg" /><br>Binance
-					</div>
-					<div class="slide">
-						<img src="img/platform-logo-coinbase.svg" /><br>Coinbase
-					</div>
-					<div class="slide">
-						<img src="img/platform-logo-uphold.svg" /><br>Uphold
-					</div>
-					<div class="slide">
-						<img src="img/platform-logo-hodlnaut.svg" /><br>Hodlnaut
-					</div>
-					<div class="slide forex">
-						<img src="img/platform-logo-metatrader.svg" /><br>MetaTrader 4
-					</div>
-					<div class="slide">
-						<img src="img/platform-logo-binance.svg" /><br>Binance
-					</div>
-					<div class="slide">
-						<img src="img/platform-logo-coinbase.svg" /><br>Coinbase
-					</div>
-					<div class="slide">
-						<img src="img/platform-logo-uphold.svg" /><br>Uphold
-					</div>
-					<div class="slide">
-						<img src="img/platform-logo-hodlnaut.svg" /><br>Hodlnaut
-					</div>
-				</div>
-			</div>
-		</div><!-- module-block end -->
-		</div><!-- wrapper -->
+		<!-- action button -->
 		<a class="btn-fee-engine" href="fee-analysis-engine-1.html">
 			<div class="text-start"><span class="ht-switch"></span> START</div>
 			<span>fee analysis engine</span>
@@ -502,9 +319,30 @@
 				<span class="separator">|</span><a href="#">Terms &amp; conditions</a><span class="separator">|</span><a href="#">Privacy policy</a><span class="separator">|</span><a href="#">About</a><span class="separator">|</span>
 			</div>
 			<div class="social-box">
-				<a class="social" href="#"><span class="ht-logo-fb"></span></a><a class="social" href="#"><span class="ht-logo-twitter"></span></a><a class="social" href="#"><span class="ht-logo-in"></span></a><a class="social" href="#"><span class="ht-logo-yt"></span></a>
+				<a class="social" href="#"><span class="ht-logo-fb"></span></a><a class="social" href="#"><span class="ht-logo-ig"></span></a><a class="social" href="#"><span class="ht-logo-twitter"></span></a>
 			</div>
 			<p class="disclaimer">HIGH RISK WARNING: Foreign exchange and other CFD trading carries a high level of risk and may not be suitable for everyone. The usage of leverage creates additional risk and loss exposure. Your investment objectives, experience level and risk tolerance have to be taken into consideration before you decide to trade foreign exchange or other CFD products. You could lose some or all of your entire investment. Do not invest money that you cannot afford to lose and always use an appropriate risk management. It’s important to educate yourself on the risks associated with foreign exchange trading, and seek professional advice from an independent financial or tax advisor in case of any questions. Any data and information is provided ‘as is’ solely for informational purposes, and is not intended for trading purposes or advice. Past performance, which are presented on this website or you find somewhere else, is not indicative of future results.</p>
 		</div>
 	</body>
+<!-- counter -->
+	<script>
+		function animateValue(id, start, end, duration) {
+			if (start === end) return;
+			var range = end - start;
+			var current = start;
+			var increment = end < start? 1 : +1;
+			var stepTime = Math.abs(Math.floor(duration / range));
+			var obj = document.getElementById(id);
+			var timer = setInterval(function() {
+				current += increment;
+				obj.innerHTML = current;
+				if (current == end) {
+					clearInterval(timer);
+				}
+			}, stepTime);
+		}
+
+		animateValue("topcount", 38, 99, 2000);
+	</script>
+	<script src="carousel.js" language="javascript"></script>
 </html>
