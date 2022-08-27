@@ -32,7 +32,7 @@
 .carousel-inner{
     height: 100%;
 	position:absolute;
-	left:-336px;
+	left:-50vw;
     overflow-x:hidden;
     display: flex;
 	justify-content: space-around;

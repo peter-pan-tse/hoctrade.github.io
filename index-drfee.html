@@ -16,12 +16,18 @@
 	<style>
 		body {
 			font-size:18px;
+			padding-bottom:0px;
 		}
 		.main-container {
 			margin-top:40px;
 		}
 		h1 {
 			font-size:48px;
+		}
+		@media only screen and (max-width: 768px) {
+			.footer {
+				position:relative;
+			}
 		}
 	</style>
 	</head>
@@ -89,6 +95,22 @@
 					<h1><span id="topcount">0</span>%</h1>
 					<h3>of your crypto trading fee!</h3>
 				</div>
+				<div class="desktop">
+					<div class="headline-box">
+						<p>Our fee analysis engine identifies how much fees you would pay at different exchanges based on your actual trades:</p>
+						<ul class="list">
+							<li>Your trading volume &amp; order type</li>
+							<li>Your balance &amp; holdings</li>
+							<li>Your products (SPOT, perpetuals, futures)</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="topbanner-pictures">
+				<img class="laptop" src="img/top-theme-desktop.png" />
+				<img class="mobilephone" src="img/top-theme-mobile.png" />
+			</div>
+			<div class="mobile">
 				<div class="headline-box">
 					<p>Our fee analysis engine identifies how much fees you would pay at different exchanges based on your actual trades:</p>
 					<ul class="list">
@@ -97,10 +119,6 @@
 						<li>Your products (SPOT, perpetuals, futures)</li>
 					</ul>
 				</div>
-			</div>
-			<div class="topbanner-pictures">
-				<img class="laptop" src="img/top-theme-desktop.png" />
-				<img class="mobilephone" src="img/top-theme-mobile.png" />
 			</div>
 			<div class="topbanner-fg-1"><img src="img/top-theme-foregd-1.png" /></div>
 			<div class="topbanner-fg-2"><img src="img/top-theme-foregd-2.png" /></div>
@@ -240,30 +258,30 @@
 					<div class="tab">
 						<input class="accordion" type="radio" id="faq11" name="hs">
 						<label class="tab-label" for="faq11">Is it safe to connect my trading account through the API to 
-Dr.fee?</label>
+Dr-fee?</label>
 						<div class="tab-content">
-							Yes, Dr.fee is using the APIs provided by the exchanges to read your trading account history as input for the analysis. Make sure that you provide a <strong>read-only</strong> API to Dr.fee, hence no form of transactions could even be executed through the API. There are detailed explanation videos available to safely create the read-only API connection.<br><br>
-							In order to further reduce any type of risks, you may want to delete the API after using it at Dr.fee. We currently do not offer any designated IP address to limit the API usage.In case you do not want to connect your trading account to Dr.fee, you are still able use the full power of the fee analysis engine by using the function to manually input the trading information.
+							Yes, Dr-fee is using the APIs provided by the exchanges to read your trading account history as input for the analysis. Make sure that you provide a <strong>read-only</strong> API to Dr-fee, hence no form of transactions could even be executed through the API. There are detailed explanation videos available to safely create the read-only API connection.<br><br>
+							In order to further reduce any type of risks, you may want to delete the API after using it at Dr-fee. We currently do not offer any designated IP address to limit the API usage.In case you do not want to connect your trading account to Dr-fee, you are still able use the full power of the fee analysis engine by using the function to manually input the trading information.
 						</div>
 					</div>
 					<div class="tab">
 						<input class="accordion" type="radio" id="faq12" name="hs">
-						<label class="tab-label" for="faq12">Is it free to use the fee analysis engine by Dr.fee?</label>
+						<label class="tab-label" for="faq12">Is it free to use the fee analysis engine by Dr-fee?</label>
 						<div class="tab-content">
-							Yes, it is completely free to use the fee analysis engine by Dr.fee.
+							Yes, it is completely free to use the fee analysis engine by Dr-fee.
 						</div>
 					</div>
 					<div class="tab">
 						<input class="accordion" type="radio" id="faq13" name="hs">
-						<label class="tab-label" for="faq13">How does Dr.fee derive the results of the fee analysis engine?</label>
+						<label class="tab-label" for="faq13">How does Dr-fee derive the results of the fee analysis engine?</label>
 						<div class="tab-content">
-							At Dr.fee, we collect the requirements for different tiers at exchanges and the associated fees. We analyse your trading (such as trading volume, balance), match you in the respective tiers of different exchanges and simulate and extrapolate the fees you would have paid for your trades at the other exchanges based on your trading in the last 30days. Moreover, we may apply additional saving potentials we can offer if signing up through the presented link.<br><br>
+							At Dr-fee, we collect the requirements for different tiers at exchanges and the associated fees. We analyse your trading (such as trading volume, balance), match you in the respective tiers of different exchanges and simulate and extrapolate the fees you would have paid for your trades at the other exchanges based on your trading in the last 30days. Moreover, we may apply additional saving potentials we can offer if signing up through the presented link.<br><br>
 							We believe this automated and personalized fee comparison is extremely powerful because there may be hundreds of combinations of requirements and associated fees for a single exchange, making a manual comparison very complex.
 						</div>
 					</div>
 					<div class="tab">
 						<input class="accordion" type="radio" id="faq14" name="hs">
-						<label class="tab-label" for="faq14">I am new to Crypto trading – can I still use the fee analysis engine by Dr.fee?</label>
+						<label class="tab-label" for="faq14">I am new to Crypto trading – can I still use the fee analysis engine by Dr-fee?</label>
 						<div class="tab-content">
 							Yes, you can certainly benefit from using the fee analysis engine! We got you covered through the function to manually input the trading information and not connect your existing account through the API. Just fill in the information with your expected data (e.g. how much trading volume do you anticipate) and find out which exchange will offer you the lowest fees.
 						</div>
@@ -280,7 +298,7 @@ Dr.fee?</label>
 						<input class="accordion" type="radio" id="faq16" name="hs">
 						<label class="tab-label" for="faq16">What is your business model?</label>
 						<div class="tab-content">
-							We strive to enable users to reduce their trading fees and want to offer this service for free to all users. Links presented on Dr.fee may be affiliate links. When a new account is created through those links, we may receive a commission from the exchanges. This comes at no cost for you and often times even entitles you for additional benefits by the broker. Moreover, you support us and allow us to continue build, improve and offer the Dr.fee services for free.
+							We strive to enable users to reduce their trading fees and want to offer this service for free to all users. Links presented on Dr-fee may be affiliate links. When a new account is created through those links, we may receive a commission from the exchanges. This comes at no cost for you and often times even entitles you for additional benefits by the broker. Moreover, you support us and allow us to continue build, improve and offer the Dr-fee services for free.
 						</div>
 					</div>
 					<div class="tab">
@@ -288,7 +306,7 @@ Dr.fee?</label>
 						<label class="tab-label" for="faq17">I encounter an error/issue in the fee analysis engine – what do I 
 do?</label>
 						<div class="tab-content  tab-label-last">
-							In case you encounter an issue with the fee analysis result, e.g. due to a large share of trades in cryptocurrencies not covered by Dr.fee or becauseyou do not want to hold any native exchange coins to gain a new tier, you can refer to our manual approach to input your trading information instead of an automated retrieval through the API. Through this approach, you can specify the information input to the fee analysis engine by yourself.<br><br>
+							In case you encounter an issue with the fee analysis result, e.g. due to a large share of trades in cryptocurrencies not covered by Dr-fee or becauseyou do not want to hold any native exchange coins to gain a new tier, you can refer to our manual approach to input your trading information instead of an automated retrieval through the API. Through this approach, you can specify the information input to the fee analysis engine by yourself.<br><br>
 							For other issues or errors, please <a href="mailto:info@hoc-trade.com">reach out to us</a> and we will support  you as soon as possible.
 						</div>
 					</div>
@@ -331,10 +349,10 @@ do?</label>
 				<img class="footer-logo" src="img/logo-drfree-2.svg" />&copy; 2022 hoc-trade technology limited, all rights reserved
 			</div>
 			<div class="footer-link-box">
-				<span class="separator">|</span><a href="#">Terms &amp; conditions</a><span class="separator">|</span><a href="#">Privacy policy</a><span class="separator">|</span><a href="#">About</a><span class="separator">|</span>
+				<span class="separator">|</span><a href="terms.html">Terms &amp; conditions</a><span class="separator">|</span><a href="privacy.html">Privacy policy</a><span class="separator">|</span><a href="about.html">About</a><span class="separator">|</span>
 			</div>
 			<div class="social-box">
-				<a class="social" href="#"><span class="ht-logo-fb"></span></a><a class="social" href="#"><span class="ht-logo-ig"></span></a><a class="social" href="#"><span class="ht-logo-twitter"></span></a>
+				<a class="social" href="https://www.facebook.com/drfeecrypto" target="_blank"><span class="ht-logo-fb"></span></a><a class="social" href="https://www.instagram.com/drfeecrypto/" target="_blank"><span class="ht-logo-ig"></span></a><a class="social" href="https://twitter.com/drfeecrypto" target="_blank"><span class="ht-logo-twitter"></span></a>
 			</div>
 			<p class="disclaimer">HIGH RISK WARNING: Foreign exchange and other CFD trading carries a high level of risk and may not be suitable for everyone. The usage of leverage creates additional risk and loss exposure. Your investment objectives, experience level and risk tolerance have to be taken into consideration before you decide to trade foreign exchange or other CFD products. You could lose some or all of your entire investment. Do not invest money that you cannot afford to lose and always use an appropriate risk management. It’s important to educate yourself on the risks associated with foreign exchange trading, and seek professional advice from an independent financial or tax advisor in case of any questions. Any data and information is provided ‘as is’ solely for informational purposes, and is not intended for trading purposes or advice. Past performance, which are presented on this website or you find somewhere else, is not indicative of future results.</p>
 		</div>
