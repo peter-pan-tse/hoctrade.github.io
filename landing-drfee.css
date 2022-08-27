@@ -1596,8 +1596,8 @@ span.topcount::after {
 	color:#047f92;
 	font-weight:bold;
 }
-.exchange-box span {
+.exchange-box img {
 	display:block;
-	font-size:72px;
-	color:#f8c648;
+	height:60px;
+	width:60px;
 }
