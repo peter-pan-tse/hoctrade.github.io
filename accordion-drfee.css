@@ -19,6 +19,7 @@ input.accordion {
 /* Accordion styles */
 .tabs {
   overflow: hidden;
+	margin-bottom:60px;
 }
 
 .tab {
