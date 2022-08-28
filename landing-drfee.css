@@ -1355,6 +1355,16 @@ a.btn-share:hover {
 	background-position: center;
 	background-size:cover;
 }
+@media only screen and (min-width: 1281px) {
+	.topbanner {
+		padding:150px 0 0 0;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.topbanner {
+		padding:120px 0 0 0;
+	}
+}
 @media only screen and (max-width: 480px) {
 	.topbanner {
 		flex-direction:column;
@@ -1369,6 +1379,13 @@ a.btn-share:hover {
 	width:calc(50vw - 20px);
 	margin-left:20px;
 	padding: 0 0 0 calc(50vw - 500px);
+}
+@media only screen and (min-width: 1281px) {
+	.topbanner-headlines {
+		width:40vw;
+		margin-left:0px;
+		padding: 0 0 0 calc(50vw - 512px);
+	}
 }
 @media only screen and (max-width: 480px) {
 	.topbanner-headlines {
@@ -1620,6 +1637,18 @@ span.topcount::after {
 	background-image: url("img/bg-solution.png");
 	background-position: center;
 	background-size: cover;
+}
+img.step1 {
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	width:auto;
+}
+img.step3 {
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	width:auto;
 }
 /* exchange icons */
 .exchange-bg {
