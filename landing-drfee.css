@@ -946,8 +946,8 @@ a.btn-info > span {
 	}
 }
 .footer-logo {
-	height:24px;
-	margin-right: 20px;
+	height:60px;
+	margin-right: 10px;
 	vertical-align: middle;
 }
 @media only screen and (max-width: 480px) {
@@ -1539,88 +1539,49 @@ span.topcount::after {
 	}
 }
 /* landing page content blocks */
-.full-content-block-1, .full-content-block-2 {
+.full-content-block-1 {
 	display:flex;
 	width:100vw;
 	flex-direction:row;
 	justify-content:space-between;
 	align-items:flex-start;
 }
-.half-content-block-1, .half-content-block-2 {
+.half-content-block-1 {
 	position:relative;
 	display:inline-block;
 	width:50%;
 }
-.half-left-1, .half-left-2 {
-	margin:20px 20px 20px 0;
+.half-left-1 {
+	margin:0px 20px 20px 0;
 }
-.half-right-1, .half-right-2 {
-	margin:20px 0px 20px 20px;
+.half-right-1 {
+	margin:0px 0px 20px 20px;
 }
-/*@media only screen and (max-width: 1024px) {
-	.half-left-1, .half-left-2 {
-		margin:20px;
+.half-left-1 h2, .half-right-1 h2 {
+	margin: 0 0 10px 0;
+}
+@media only screen and (max-width: 480px) {
+	.full-content-block-1 {
+		flex-direction:column;
 	}
-	.half-right-1, .half-right-2 {
-		margin:20px;
+	.half-content-block-1 {
+		width:100%;
 	}
-}*/
+	.half-left-1 {
+		margin:0 0 20px 0;
+		text-align: center;
+	}
+	.half-right-1 {
+		margin:0 0 20px 0;
+		text-align: center;
+	}
+}
 /* solutions and approach */
 .solution-bg {
 	width:100%;
 	background-image: url("img/bg-solution.png");
 	background-position: center;
 	background-size: cover;
-}
-/* Slider */
-#slidertwo {
-  width:100%;
-  height:auto;
-  position:relative;
-  overflow:hidden;
-}
-@keyframes load{
-  from{left:-100%;}
-  to{left:0;}
-}
-.drfee-slides{
-  width:300%;
-  height:auto;
-  position:relative;
-  animation:slide 24s infinite;
-}
-.drfee-slider{
-  width:33.3%;
-  height:auto;
-  float:left;
-  position:relative;
-  z-index:1;
-  overflow:hidden;
-	vertical-align: bottom;
-}
-.drfee-image img{
-  width:100%;
-  height:auto;
-}
-@keyframes slide{
-  0%,100%{
-    margin-left:0%;
-  }
-  30%{
-    margin-left:0%;
-  }
-  33.3%{
-    margin-left:-100%;
-  }
-  63.3%{
-    margin-left:-100%;
-  }
-  66.6%{
-    margin-left:-200%;
-  }
-  96.6%{
-    margin-left:-200%;
-  }
 }
 /* exchange icons */
 .exchange-bg {
