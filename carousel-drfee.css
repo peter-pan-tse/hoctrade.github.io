@@ -60,6 +60,8 @@
 	}
 	.carousel-item {
 		margin:0 5px;
+		background-color: #333333;
+		color:#ffffff;
 	}
 }
 .carousel-controls .prev{
@@ -129,4 +131,9 @@
 	background-color:chocolate;
 	border-radius:50%;
 	margin-right:10px;
+}
+@media only screen and (max-width:480px) {
+	.name-box {
+		color:#ffffff;
+	}
 }
