@@ -1361,13 +1361,8 @@ a.btn-share:hover {
 	justify-content: flex-end;
 	align-items: flex-start;
 	width:calc(50vw - 20px);
-	padding: 0 20px 0 calc(50vw - 500px);
-}
-@media only screen and (max-width: 768px) {
-	.topbanner-headlines {
-		width:calc(50vw - 20px);
-		padding: 0 0 0 20px;
-	}
+	margin-left:20px;
+	padding: 0 0 0 calc(50vw - 500px);
 }
 .headline-box h1, .headline-box h2, .headline-box h3, .headline-box p {
 	margin:0 0 10px 0;

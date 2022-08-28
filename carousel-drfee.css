@@ -49,14 +49,14 @@
 	background-color: #FAFAFA;
 	text-decoration:none;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width:768px) {
 	.carousel-inner{
-		left:-320px;
+		left:-340px;
 	}
 }
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width:480px) {
 	.carousel-inner{
-		left:-455px;
+		left:0px;
 	}
 	.carousel-item {
 		margin:0 5px;
