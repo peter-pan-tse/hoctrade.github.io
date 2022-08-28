@@ -145,7 +145,7 @@ ul.menu {
 		display:none;
 	}
 }
-ul.menu li a {
+ul.menu li a, ul.menu li a.engine {
 	display:inline-block;
 	margin:0;
 	height:65px;
@@ -175,22 +175,6 @@ ul.menu li a.active {
 	color:#047f92;
 	background-color: #ffffff;
 	/*box-shadow: 5px -3px 5px rgba(0, 0, 0, 0.3);*/
-}
-ul.menu li a.engine {
-	display:inline-block;
-	margin:0;
-	height:65px;
-	padding:20px 30px 0 30px;
-	/*background-color:#047f92;*/
-	background-color:transparent;
-	border-radius:20px 20px 0 0;
-	/*color:#edc45c;*/
-	font-size:18px;
-	line-height:1.25em;
-	font-weight:bold;
-	text-decoration: none;
-	cursor: pointer;
-	transition:all ease 0.3s;
 }
 @media only screen and (max-width: 768px) {
 	ul.menu li a.engine {
