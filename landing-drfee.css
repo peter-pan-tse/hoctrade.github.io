@@ -1341,7 +1341,7 @@ a.btn-share:hover {
 	justify-content:space-between;
 	align-items:flex-end;
 	position:relative;
-	padding:80px 0 0 0;
+	padding:90px 0 0 0;
 	/*height:calc(100vh - 100px);*/
 	width:100vw;
 	background-image: url("img/top-theme-bg.png");
@@ -1363,7 +1363,7 @@ a.btn-share:hover {
 	}
 }
 .headline-box h1, .headline-box h2, .headline-box h3, .headline-box p {
-	margin:0 40px 10px 0;
+	margin:0 0 10px 0;
 	font-weight:bold;
 	color:#FFFFFF;
 }
@@ -1384,19 +1384,16 @@ a.btn-share:hover {
 	line-height: 1.25em;
 }
 @media only screen and (max-width: 768px) {
-	.headline-box h1, .headline-box h2, .headline-box h3, .headline-box p {
-		margin:0 20px 10px 0;
-	}
 	.headline-box h1 {
 		font-size:10vw;
 		line-height:0.75em;
 	}
 	.headline-box h2 {
-		font-size:3vw;
+		font-size:18px;
 		line-height: 1em;
 	}
 	.headline-box h3 {
-		font-size:18px;
+		font-size:14px;
 		line-height: 1.25em;
 	}
 	.headline-box p {
@@ -1463,7 +1460,7 @@ img.mobilephone {
 }
 ul.list {
 	list-style-image: url("img/triangle-bullet-white.png");
-	margin:0 40px 40px 0;
+	margin:0 0 20px 0;
 	padding:0 0 0 15px;
 }
 ul.list li {
@@ -1507,7 +1504,7 @@ span.topcount::after {
 	position:absolute;
 	width:320px;
 	top:100px;
-	left:calc(50vw - 180px);
+	left:calc(50vw - 170px);
 	background-color:#033c45;
 	color:#FFFFFF;
 	border-radius:0 0 20px 20px;
