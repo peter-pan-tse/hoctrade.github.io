@@ -158,7 +158,7 @@ ul.menu li a, ul.menu li a.engine {
 	background-color:transparent;
 	cursor: pointer;
 	transition:all ease 0.3s;
-	text-align:center;
+	/*text-align:center;*/
 }
 @media only screen and (max-width: 768px) {
 	ul.menu li a {
