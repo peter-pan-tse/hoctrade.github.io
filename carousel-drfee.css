@@ -56,7 +56,7 @@
 }
 @media only screen and (max-width:480px) {
 	.carousel-inner{
-		left:0px;
+		left:-340px;
 	}
 	.carousel-item {
 		margin:0 5px;

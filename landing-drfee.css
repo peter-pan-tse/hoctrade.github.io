@@ -1527,6 +1527,17 @@ span.topcount::after {
 		top:70px;
 	}
 }
+@media only screen and (max-width: 480px) {
+	.saving-counter {
+		width:calc(100% - 20px);
+		top:45px;
+		left:0px;
+		border-radius:0;
+	}
+	.saving-counter h2 {
+		font-size:20px;
+	}
+}
 /* landing page content blocks */
 .full-content-block-1, .full-content-block-2 {
 	display:flex;
@@ -1615,16 +1626,26 @@ span.topcount::after {
 .exchange-bg {
 	width:100vw;
 	background-color:#F2F2F2;
-	padding:40px 0;
+	padding:40px 0 0 0;
 }
 .exchange-box {
 	display:flex;
-	height:160px;
+	height:140px;
 	width:16.6%;
 	flex-direction:column;
 	align-items:center;
 	color:#047f92;
 	font-weight:bold;
+}
+@media only screen and (max-width: 768px) {
+	.exchange-box {
+		width:25%;
+	}
+}
+@media only screen and (max-width: 480px) {
+	.exchange-box {
+		width:33.3%;
+	}
 }
 .exchange-box img {
 	display:block;
