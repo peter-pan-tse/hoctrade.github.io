@@ -1601,11 +1601,13 @@ span.topcount::after {
 	width:100vw;
 	flex-direction:row;
 	justify-content:space-between;
-	align-items:flex-start;
+	align-items:stretch;
 }
 .half-content-block-1 {
 	position:relative;
-	display:inline-block;
+	display:flex;
+	flex-direction:column;
+	justify-content: space-between;
 	width:50%;
 }
 .half-left-1 {
