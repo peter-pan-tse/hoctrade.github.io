@@ -1643,12 +1643,44 @@ img.step1 {
 	left:0px;
 	bottom:0px;
 	width:auto;
+	opacity: 0;
+	animation-name: step1;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+}
+img.step2 {
+	opacity: 0;
+	animation-name: step2;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
 }
 img.step3 {
 	position:absolute;
 	right:0px;
 	bottom:0px;
 	width:auto;
+	opacity: 0;
+	animation-name: step3;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+}
+@keyframes step1 {
+	0%   {bottom: 50px; opacity: 0;}
+	10%   {bottom: 0px; opacity: 1;}
+	85%  {bottom: 0px; opacity: 1;}
+	90%  {bottom: 0px; opacity: 0;}
+}
+@keyframes step2 {
+	20%  {opacity: 0;}
+	30%  {opacity: 1;}
+	85%  {opacity: 1;}
+	90%  {opacity: 0;}
+}
+@keyframes step3 {
+	40%   {bottom: 50px; opacity: 0;}
+	50%   {bottom: 0px; opacity: 1;}
+	85%  {bottom: 0px; opacity: 1;}
+	90%  {bottom: 0px; opacity: 0;}
 }
 /* exchange icons */
 .exchange-bg {
