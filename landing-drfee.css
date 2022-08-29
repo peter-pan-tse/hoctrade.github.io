@@ -241,7 +241,7 @@ p.disclaimer {
 	color:#edc45c;
 	margin:20px 0;
 	text-align: left;
-	width:calc(100% - 120px);
+	
 	text-align: justify;
 }
 @media only screen and (max-width: 480px) {
@@ -939,10 +939,12 @@ a.btn-info > span {
 	line-height: 1.25em;
 	color:#edc45c;
 	margin:20px 0 0 0;
+	width:calc(100% - 120px);
 }
 @media only screen and (max-width: 480px) {
 	.footer p.disclaimer {
 		margin:5px 0 0 0;
+		width:100%;
 	}
 }
 .footer-logo {
@@ -1348,7 +1350,7 @@ a.btn-share:hover {
 	justify-content:space-between;
 	align-items:flex-end;
 	position:relative;
-	padding:90px 0 0 0;
+	padding:90px 0 40px 0;
 	/*height:calc(100vh - 100px);*/
 	width:100vw;
 	background-image: url("img/top-theme-bg.png");
@@ -1357,12 +1359,12 @@ a.btn-share:hover {
 }
 @media only screen and (min-width: 1281px) {
 	.topbanner {
-		padding:150px 0 0 0;
+		padding:150px 0 40px 0;
 	}
 }
 @media only screen and (max-width: 768px) {
 	.topbanner {
-		padding:120px 0 0 0;
+		padding:120px 0 40px 0;
 	}
 }
 @media only screen and (max-width: 480px) {
