@@ -1378,15 +1378,22 @@ a.btn-share:hover {
 	flex-direction:column;
 	justify-content: flex-end;
 	align-items: flex-start;
-	width:calc(50vw - 20px);
-	margin-left:20px;
-	padding: 0 0 0 calc(50vw - 500px);
+	width:35vw;
+	margin-left:0px;
+	padding: 0 0 0 calc(50vw - 512px);
 }
-@media only screen and (min-width: 1281px) {
+@media only screen and (max-width: 1430px) {
 	.topbanner-headlines {
 		width:40vw;
 		margin-left:0px;
 		padding: 0 0 0 calc(50vw - 512px);
+	}
+}
+@media only screen and (max-width: 1184px) {
+	.topbanner-headlines {
+		width:calc(50vw - 20px);
+		margin-left:20px;
+		padding: 0 0 0 calc(50vw - 500px);
 	}
 }
 @media only screen and (max-width: 480px) {
