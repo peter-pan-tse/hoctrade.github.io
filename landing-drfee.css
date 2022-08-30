@@ -1528,7 +1528,7 @@ ul.list li {
 	font-size:18px;
 	color:#FFFFFF;
 	line-height: 1.25em;
-	font-weight:bold;
+	font-weight:normal;
 }
 @media only screen and (max-width: 768px) {
 	ul.list li {
@@ -1655,15 +1655,9 @@ img.step1 {
 	bottom:0px;
 	width:auto;
 	opacity: 0;
-	animation-name: step1;
-	animation-duration: 10s;
-	animation-iteration-count: infinite;
 }
 img.step2 {
 	opacity: 0;
-	animation-name: step2;
-	animation-duration: 10s;
-	animation-iteration-count: infinite;
 }
 img.step3 {
 	position:absolute;
@@ -1671,27 +1665,39 @@ img.step3 {
 	bottom:0px;
 	width:auto;
 	opacity: 0;
+}
+.step1-animation {
+	animation-name: step1;
+	animation-duration: 6s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+.step2-animation {
+	animation-name: step2;
+	animation-duration: 6s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+.step3-animation {
 	animation-name: step3;
-	animation-duration: 10s;
-	animation-iteration-count: infinite;
+	animation-duration: 6s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
 }
 @keyframes step1 {
 	0%   {bottom: 50px; opacity: 0;}
 	10%   {bottom: 0px; opacity: 1;}
-	85%  {bottom: 0px; opacity: 1;}
-	90%  {bottom: 0px; opacity: 0;}
+	100%  {bottom: 0px; opacity: 1;}
 }
 @keyframes step2 {
 	20%  {opacity: 0;}
 	30%  {opacity: 1;}
-	85%  {opacity: 1;}
-	90%  {opacity: 0;}
+	100% {opacity: 1;}
 }
 @keyframes step3 {
 	40%   {bottom: 50px; opacity: 0;}
 	50%   {bottom: 0px; opacity: 1;}
-	85%  {bottom: 0px; opacity: 1;}
-	90%  {bottom: 0px; opacity: 0;}
+	100%  {bottom: 0px; opacity: 1;}
 }
 /* exchange icons */
 .exchange-bg {

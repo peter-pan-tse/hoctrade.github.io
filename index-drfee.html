@@ -169,7 +169,7 @@
 			<div class="main-container" style="margin-top:20px;">
 				<p>Just connect your read-only crypto exchange API. We find your fee saving potential by simulating your fees for the same trades at other exchanges.</p>
 			</div>
-			<div style="margin:0 auto; position:relative; text-align: center; max-width:600px;">
+			<div class="steps-wrapper" style="margin:0 auto; position:relative; text-align: center; max-width:800px;">
 				<img class="step2 img-responsive" src="img/dr-fee-screenshot-2.png" />
 				<img class="step1 img-responsive" src="img/dr-fee-screenshot-1.png" />
 				<img class="step3 img-responsive" src="img/dr-fee-screenshot-3.png" />
@@ -322,7 +322,7 @@ do?</label>
 		<!-- footer -->
 		<div class="footer">
 			<div class="footer-logo-box">
-				<img class="footer-logo" src="img/logo-drfree-2.svg" />&copy; 2022 hoc-trade technology limited, all rights reserved
+				<img class="footer-logo" src="img/logo-drfree-2.svg" />&copy; 2022 Hoc Trade Ltd. All Rights Reserved
 			</div>
 			<div class="footer-link-box">
 				<span class="separator">|</span><a href="terms.html">Terms &amp; conditions</a><span class="separator">|</span><a href="privacy.html">Privacy policy</a><span class="separator">|</span><a href="about.html">About</a><span class="separator">|</span>
@@ -330,7 +330,7 @@ do?</label>
 			<div class="social-box">
 				<a class="social" href="https://www.facebook.com/drfeecrypto" target="_blank"><span class="ht-logo-fb"></span></a><a class="social" href="https://www.instagram.com/drfeecrypto/" target="_blank"><span class="ht-logo-ig"></span></a><a class="social" href="https://twitter.com/drfeecrypto" target="_blank"><span class="ht-logo-twitter"></span></a>
 			</div>
-			<p class="disclaimer">HIGH RISK WARNING: Foreign exchange and other CFD trading carries a high level of risk and may not be suitable for everyone. The usage of leverage creates additional risk and loss exposure. Your investment objectives, experience level and risk tolerance have to be taken into consideration before you decide to trade foreign exchange or other CFD products. You could lose some or all of your entire investment. Do not invest money that you cannot afford to lose and always use an appropriate risk management. It’s important to educate yourself on the risks associated with foreign exchange trading, and seek professional advice from an independent financial or tax advisor in case of any questions. Any data and information is provided ‘as is’ solely for informational purposes, and is not intended for trading purposes or advice. Past performance, which are presented on this website or you find somewhere else, is not indicative of future results.</p>
+			<p class="disclaimer">HIGH RISK WARNING: Foreign exchange, cryptocurrencies, and other CFDtrading carries a high level of risk and may not be suitable for everyone. The usage of leverage creates additional risk and loss exposure. Your investment objectives, experience level, and risk tolerance have to be taken into consideration before you decide to trade foreign exchange, cryptocurrencies, or other CFD products. You could lose some or all of your investment. Do not invest money that you cannot afford to lose and always use an appropriate risk management. It’s important to educate yourself on the risks associated with foreign exchange trading, and seek professional advice from an independent financial or tax advisor in case of any questions. Any data and information is provided 'as is' solely for informational purposes, and is not intended for trading purposes or advice. Past performance, including fees, which are presented on this website or you find somewhere else, is not indicative of future results.</p>
 		</div>
 	</body>
 <!-- counter -->
@@ -352,6 +352,29 @@ do?</label>
 		}
 
 		animateValue("topcount", 38, 99, 2000);
+	</script>
+	<script>
+		const observer = new IntersectionObserver(entries => {
+		  entries.forEach(entry => {
+			  const step1 = entry.target.querySelector('.step1');
+			  const step2 = entry.target.querySelector('.step2');
+			  const step3 = entry.target.querySelector('.step3');
+
+			if (entry.isIntersecting) {
+			    step1.classList.add('step1-animation');
+				step2.classList.add('step2-animation');
+				step3.classList.add('step3-animation');
+			  return; // if we added the class, exit the function
+			}
+
+			  // We're not intersecting, so remove the class!
+			  step1.classList.remove('step1-animation');
+			  step2.classList.remove('step2-animation');
+			  step3.classList.remove('step3-animation');
+		  });
+		});
+
+		observer.observe(document.querySelector('.steps-wrapper'));
 	</script>
 	<script src="carousel.js" language="javascript"></script>
 	<script src="animateViewport.js" language="javascript"></script>
