@@ -296,7 +296,7 @@ ul.ex-rank-table li:nth-child(2) {
 	background-color:#ba9a48;
 	font-weight:bold;
 }
-ul.ex-list-table li:nth-child(2), ul.ex-list-table li:nth-child(4), ul.ex-list-table li:nth-child(6) {
+/*ul.ex-list-table li:nth-child(2), ul.ex-list-table li:nth-child(4), ul.ex-list-table li:nth-child(6) {
 	background-color:#333333;
 	color:#FFFFFF;
 	font-weight:bold;
@@ -305,7 +305,7 @@ ul.ex-list-table li:nth-child(3), ul.ex-list-table li:nth-child(5) {
 	background-color:#474747;
 	color:#FFFFFF;
 	font-weight:bold;
-}
+}*/
 @media only screen and (max-width: 480px) {
 	ul.ex-rank-table li:first-child, ul.ex-list-table li:first-child {
 		height:0px;
@@ -470,15 +470,24 @@ span.compare-logo {
 	align-items:center;
 	padding:0 5px;
 }
-.list-fee-spot-2, .list-fee-maker-2 {
+.list-fee-spot-2 {
 	display:flex;
 	border-right:1px solid #ba9a48;
 	width:calc(50% - 11px);
-	height:50%;
 	flex-direction:row;
 	justify-content:center;
 	align-items:center;
 	padding:0 5px;
+}
+.list-fee-maker-2 {
+	display:flex;
+	border-right:1px solid #ba9a48;
+	width:calc(50% - 11px);
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+	padding:0 5px;
+	text-align: center;
 }
 .list-fee-futures, .list-fee-taker {
 	display:flex;
@@ -488,14 +497,22 @@ span.compare-logo {
 	align-items:center;
 	padding:0 5px;
 }
-.list-fee-futures-2, .list-fee-taker-2 {
+.list-fee-futures-2 {
 	display:flex;
 	width:calc(50% - 10px);
-	height:50%;
 	flex-direction:row;
 	justify-content:center;
 	align-items:center;
 	padding:0 5px;
+}
+.list-fee-taker-2 {
+	display:flex;
+	width:calc(50% - 10px);
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+	padding:0 5px;
+	text-align: center;
 }
 @media only screen and (max-width: 480px) {
 	.item-fee {
