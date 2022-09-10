@@ -46,17 +46,26 @@
 			width:100%;
 			margin:0 0 30px;
 		}
-		.table td, .table th {
+		.table td {
 			text-align: left;
-			padding:4px;
+			padding:10px 4px;
 			margin:0;
 			border-left:1px solid #cccccc;
 		}
 		.table th {
-			border-top:1px solid #cccccc;
+			text-align:left;
+			padding:10px 4px;
+			margin:0;
+			color:#edc45c;
+			background-color:#333333;
+			border-top:1px solid #333333;
+			border-left:1px solid #444444;
 		}
-		.table td:last-child, .table th:last-child {
+		.table td:last-child {
 			border-right:1px solid #cccccc;
+		}
+		.table th:last-child {
+			border-right:1px solid #333333;
 		}
 		a.btn {
 			display:inline-block;
@@ -73,15 +82,18 @@
 	</style>
 	</head>
 	<body>
+		<img src="img/logo-h.png" height="40"/>
 		<p>You would save  <strong>50% / 40 USD p.a.</strong> in trading fees if choosing Kraken as an exchange<sup style="color:#edc45c;">1</sup></p>
+		<p>Dear user, thank you for using <a href="https://dr-fee.com" target="_blank">dr-fee</a> to analyse your fee saving potential! Please see the output of your analysis below.</p>
 		<strong>Yearly trading fee comparison (USD)</strong><br>
 		<img class="chart-img" src="img/chart-email.png" />
+		<p>Please note: There are exclusive discounts included in the analysis output, which you can receive if signing up through the links in the table below.</p>
 		<table class="table" cellspacing="0">
 			<tr style="background-color: #f6f6f6;">
-				<th style="border-bottom:2px solid #cccccc;">No.</th>
-				<th style="border-bottom:2px solid #cccccc;">Exchange</th>
-				<th style="border-bottom:2px solid #cccccc;">Fee (USD/yr)</th>
-				<th style="border-bottom:2px solid #cccccc;">Saving potential (USD)</th>
+				<th style="border-bottom:2px solid #333333; border-radius:16px 0 0 0;">No.</th>
+				<th style="border-bottom:2px solid #333333;">Exchange</th>
+				<th style="border-bottom:2px solid #333333;">Fee (USD/yr)</th>
+				<th style="border-bottom:2px solid #333333; border-radius:0 16px 0 0;">Saving potential (USD)</th>
 			</tr>
 			<tr>
 				<td style="background-color:#dbd3ba; padding:10px 4px;">You</td>
@@ -145,14 +157,14 @@
 				<td style="color:#c15357;">+88.00</td>
 			</tr>
 			<tr>
-				<td colspan="4" style="text-align:right; padding-bottom:10px; border-bottom:1px solid #cccccc;">
+				<td colspan="4" style="text-align:right; padding-bottom:10px; border-bottom:1px solid #cccccc; border-radius:0 0 16px 16px;">
 					<a class="btn" href="#" target="_blank">Register<span><img src="img/ico-pencil.png" width="20" /></span></a> <a class="btn" href="#" target="_blank">Details <span><img src="img/ico-search.png" width="20" /></span></a>
 				</td>
 			</tr>
 		</table>
 		<p style="font-size:11px; color:#999999;">1. Note: Filter for location &amp; order types has been applied. We cannot held liable for any of the outputs presented.</p>
-		<p>Best Regards,<br>dr-fee team<br><br>
-		<img src="img/logo-h.png" height="40"/></p>
+		<p>Best Regards,<br>dr-fee team</p>
+		<p>We are constantly upgrading dr-fee and develop many additional analyses designed for traders. Follow our social media accounts to not miss any news.</p>
 		<div class="social-box">
 			<a class="social" href="https://dr-fee.com" target="_blank"><img src="img/logo-globe-yellow.svg" /></a><a class="social" href="https://www.facebook.com/drfeecrypto" target="_blank"><img src="img/logo-fb-yellow.svg" /></a><a class="social" href="https://www.instagram.com/drfeecrypto/" target="_blank"><img src="img/logo-ig-yellow.svg" /></a><a class="social" href="https://twitter.com/drfeecrypto" target="_blank"><img src="img/logo-twitter-yellow.svg" /></a>
 		</div>
