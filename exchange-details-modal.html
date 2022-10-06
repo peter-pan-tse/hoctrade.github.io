@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="jquery-3.6.0.min.js" language="javascript"></script>
+	<link href="https://fonts.googleapis.com/css?family=Noto Sans:400,700,900" rel="stylesheet">
+	<link href="font.css" rel="stylesheet">
+	<link href="chart-crypto.css" rel="stylesheet">
+	<link href="landing-drfee.css" rel="stylesheet">
+	<link href="modal-select-exchange.css" rel="stylesheet">
+	<link rel="icon" href="img/favicon-drfee.svg">
+	<title>dr-fee - Exchange list: details of Crypto.com</title>
+	<!-- write your code here -->
+	<style>
+		body {
+			background-color:#4d4d4d;
+			color:#ffffff;
+			padding-bottom:0px;
+		}
+		.modal {
+			display:block;
+		}
+		.table-mobile {
+			display:block;
+		}
+		.modal-body {
+			display: block;
+			max-height: calc(100vh - 160px);
+			overflow: hidden;
+			padding: 0 20px;
+		}
+		.modal-content {
+			position: fixed;
+			background-color: #4d4d4d;
+			width: calc(80%);
+			max-width: 768px;
+			max-height: calc(100vh - 60px);
+			margin: 20px 10%;
+			top: 0px;
+			padding: 100px 0 20px 0;
+			color: #ffffff;
+			border-radius: 20px 20px 20px 20px;
+		}
+		.ex-rank-row {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+			align-items: flex-end;
+			width: 100%;
+			/* max-width: 1024px; */
+		}.btn-compare-container {
+			display: flex;
+			flex-direction: row;
+			justify-content:center;
+			width: 100%;
+		}
+		a.ex-rank-btn {
+			display: inline-block;
+			width:40%;
+			height:32px;
+			background-color: #edc45c;
+			color: #333333;
+			border-radius: 6px;
+			font-size: 18px;
+			line-height: 32px;
+			text-decoration: none;
+			text-align: center;
+			cursor: pointer;
+			transition: all ease 0.3s;
+			margin:0 5px;
+		}
+		.item-details-2 {
+			width:calc(60% - 10px);
+			flex-direction: column;
+			justify-content: center;
+			align-items:center;
+			text-align: center;
+		}
+	</style>
+	</head>
+	<body>
+		
+		<!-- The Modal -->
+		<div id="modalExchangeDetails" class="modal">
+			<!-- Modal content -->
+
+		  <div class="modal-content">
+			<div class="modal-header">
+				<span class="close"><span class="ht-cross"></span></span>
+				<strong>Exchange list - Crypto.com</strong>
+			</div>
+			<div class="modal-body">
+				<!-- table mobile -->
+				<div class="table-mobile">
+					<ul class="compare-table">
+						<li>
+							<div class="ex-rank-row">
+								<div class="ex-rank-item item-compare-label">Exchange</div>
+								<div class="ex-rank-item item-details-2"><span class="compare-logo ht-cryptocom"></span>Crypto.com</div>
+							</div>
+						</li>
+						<li>
+							<div class="ex-rank-row">
+								<div class="ex-rank-item item-compare-label">Since</div>
+								<div class="ex-rank-item item-details-2">2019</div>
+							</div>
+						</li>
+						<li>
+							<div class="ex-rank-row">
+								<div class="ex-rank-item item-compare-label">US trader allowed?</div>
+								<div class="ex-rank-item item-details-2">Yes</div>
+							</div>
+						</li>
+						<li>
+							<div class="ex-rank-row">
+								<div class="ex-rank-item item-compare-label">Fee</div>
+								<div class="ex-rank-item item-details-2" style="flex-direction:row; font-weight:normal; font-size:12px;">
+									<div class="list-fee-spot">
+										<div>SPOT</div>
+										<div class="list-fee-container">
+											<div class="list-fee-spot">Maker<br><strong>0.1%</strong></div>
+											<div class="list-fee-futures">Taker<br><strong>0.03%</strong></div>
+										</div>
+									</div>
+									<div class="list-fee-futures">
+										<div>Futures</div>
+										<div class="list-fee-container">
+											<div class="list-fee-spot">Maker<br><strong>0.1%</strong></div>
+											<div class="list-fee-futures">Taker<br><strong>0.03%</strong></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="ex-rank-row">
+								<div class="ex-rank-item item-compare-label">Differentiator</div>
+								<div class="ex-rank-item item-details-2">Blue chip</div>
+							</div>
+						</li>
+						<li>
+							<div class="ex-rank-row">
+								<div class="ex-rank-item item-compare-label">Exclusive bonus</div>
+								<div class="ex-rank-item item-details-2"><div class="bonus-pill">5% rebate</div></div>
+							</div>
+						</li>
+					</ul>
+				</div><!-- table mobile end -->
+				<div class="btn-compare-container">
+					<a class="ex-rank-btn" href="#"><span class="ht-pencil"></span> Register</a>
+					<a class="ex-rank-btn" href="#"><span class="ht-search"></span> Details</a>
+				</div>
+			</div><!-- modal body end -->
+		  </div>
+		</div>
+	</body>
+</html>
