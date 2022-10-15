@@ -14,8 +14,8 @@
 	<!-- write your code here -->
 	<style>
 		body {
-			background-color:#4d4d4d;
-			color:#ffffff;
+			background-color:#FFFFFF;
+			color:#333333;
 			padding-bottom:0px;
 		}
 		.modal {
@@ -32,15 +32,21 @@
 		}
 		.modal-content {
 			position: fixed;
-			background-color: #4d4d4d;
+			background-color: #f6f6f6;
 			width: calc(80%);
 			max-width: 768px;
 			max-height: calc(100vh - 60px);
 			margin: 20px 10%;
 			top: 0px;
 			padding: 100px 0 20px 0;
-			color: #ffffff;
+			color: #333333;
 			border-radius: 20px 20px 20px 20px;
+		}
+		ul.compare-table li:nth-child(odd) {
+			background-color: #ffffff;
+		}
+		ul.compare-table li:nth-child(even) {
+			background-color: #fafafa;
 		}
 		.ex-rank-row {
 			display: flex;
@@ -98,7 +104,7 @@
 						<li>
 							<div class="ex-rank-row">
 								<div class="ex-rank-item item-compare-label">Exchange</div>
-								<div class="ex-rank-item item-details-2"><span class="compare-logo ht-cryptocom"></span>Crypto.com</div>
+								<div class="ex-rank-item item-details-2"><img src="img/logo-cryptocom.svg" height="32" /><span>Crypto.com</span></div>
 							</div>
 						</li>
 						<li>
