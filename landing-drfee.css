@@ -1699,6 +1699,41 @@ img.step3 {
 	50%   {bottom: 0px; opacity: 1;}
 	100%  {bottom: 0px; opacity: 1;}
 }
+/* explainer video */
+.explainer-bg {
+	width:100vw;
+	background-color:#edc45c;
+	padding:40px 0;
+}
+.explainer-box {
+	display:flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: flex-start;
+}
+.explainer-item-l {
+	display:block;
+	width:35%;
+}
+.explainer-item-r {
+	display:block;
+	width:60%;
+	padding-top:30px;
+}
+@media only screen and (max-width: 480px) {
+	.explainer-box {
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: flex-start;
+	}
+	.explainer-item-l {
+		width:100%;
+	}
+	.explainer-item-r {
+		width:100%;
+		padding-top:0;
+	}
+}
 /* exchange icons */
 .exchange-bg {
 	width:100vw;
