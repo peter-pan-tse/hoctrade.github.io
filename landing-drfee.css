@@ -1829,3 +1829,25 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+/* 1 click */
+.oneclick img {
+	position:absolute;
+	display:block;
+	width:140px;
+	height:auto;
+	bottom:120px;
+	right:0;
+}
+@media only screen and (max-width: 912px) {
+	.oneclick img {
+		bottom:50%;
+		right:0;
+	}
+}
+@media only screen and (max-width: 480px) {
+	.oneclick img {
+		bottom:22.5%;
+		right:0;
+	}
+}
+	
