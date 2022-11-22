@@ -1705,33 +1705,24 @@ img.step3 {
 	background-color:#edc45c;
 	padding:40px 0;
 }
+
 .explainer-box {
-	display:flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: space-around;
 	align-items: flex-start;
 }
 .explainer-item-l {
-	display:block;
-	width:35%;
+	width:100%;
+	text-align: center;
 }
 .explainer-item-r {
-	display:block;
 	width:60%;
-	padding-top:30px;
+	margin:0 20%;
 }
 @media only screen and (max-width: 480px) {
-	.explainer-box {
-		flex-direction: column;
-		justify-content: space-around;
-		align-items: flex-start;
-	}
-	.explainer-item-l {
-		width:100%;
-	}
 	.explainer-item-r {
 		width:100%;
-		padding-top:0;
+		margin:0 0;
 	}
 }
 /* exchange icons */
@@ -1776,9 +1767,9 @@ img.step3 {
 .switch {
   position: relative;
   display: inline-block;
-  width: 38px;
+  width: 28px;
   height: 16px;
-	margin-left:16px;
+	margin-left:8px;
 	margin-top:4px;
 }
 .switch input { 
