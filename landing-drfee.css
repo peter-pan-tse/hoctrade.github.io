@@ -83,7 +83,7 @@ a.btn-general > span {
 	left:0;
 	z-index: 1001;
 }
-.header-container {
+.header-container-common, .header-container {
 	display:flex;
 	flex-direction:row;
 	justify-content: space-between;
@@ -92,17 +92,22 @@ a.btn-general > span {
 	padding: 15px 20px 0 10px;
 	width: calc(100vw - 30px);
 	height:85px;
+}
+.header-container-common {
+	background-color: #4d4d4d;
+}
+.header-container {
 	background-color: #edc45c;
 }
 @media only screen and (max-width: 768px) {
-	.header-container {
+	.header-container, .header-container-common {
 		padding: 10px 10px 0 10px;
 		width: calc(100vw - 20px);
 		height:60px;
 	}
 }
 @media only screen and (max-width: 480px) {
-	.header-container {
+	.header-container, .header-container-common {
 		padding: 5px 10px 0 10px;
 		height:40px;
 	}
@@ -145,7 +150,7 @@ ul.menu {
 		display:none;
 	}
 }
-ul.menu li a, ul.menu li a.engine {
+ul.menu li a, ul.menu li a.engine, ul.menu li a.crypto, ul.menu li a.forex {
 	display:inline-block;
 	margin:0;
 	height:65px;
@@ -184,6 +189,20 @@ ul.menu li a.active {
 		border-radius:15px 15px 0 0;
 		font-size:14px;
 	}
+}
+ul.menu li a.crypto {
+	color:#edc45c;
+}
+ul.menu li a.crypto:hover {
+	color:#ffffff;
+	background-color:#edc45c;
+}
+ul.menu li a.forex {
+	color:#07c3e0;
+}
+ul.menu li a.forex:hover {
+	color:#ffffff;
+	background-color:#07c3e0;
 }
 ul.menu li a.engine:hover {
 	color:#edc45c;
@@ -234,11 +253,23 @@ h2 {
 .bg-footer {
 	background-color:#806a31;
 }
+.bg-footer-common {
+	background-color:#4d4d4d;
+}
 p.disclaimer {
 	display:block;
 	font-size:10px;
 	line-height: 1.25em;
 	color:#edc45c;
+	margin:20px 0;
+	text-align: left;
+	
+	text-align: justify;
+}p.disclaimer-common {
+	display:block;
+	font-size:10px;
+	line-height: 1.25em;
+	color:#cccccc;
 	margin:20px 0;
 	text-align: left;
 	
@@ -851,6 +882,15 @@ a.btn-info > span {
 	}
 }
 /* footer */
+.footer-common {
+	display:block;
+	position:relative;
+	background-color: #4d4d4d;
+	padding:20px 10px;
+	color:#cccccc;
+	font-size: 12px;
+	line-height: 20px;
+}
 .footer {
 	display:block;
 	position:relative;
@@ -861,19 +901,19 @@ a.btn-info > span {
 	line-height: 20px;
 }
 @media only screen and (max-width: 768px) {
-	.footer {
+	.footer, .footer-common {
 		position:fixed;
 		bottom:0;
 		z-index:10001;
 	}
 }
 @media only screen and (max-width: 480px) {
-	.footer {
+	.footer, .footer-common {
 		position:relative;
 		padding:10px 10px 20px 10px;
 	}
 }
-.footer > span.ht-logo {
+.footer > span.ht-logo, .footer-common > span.ht-logo {
 	display:inline;
 	font-size:24px;
 	vertical-align: middle;
@@ -881,6 +921,12 @@ a.btn-info > span {
 }
 .footer a {
 	color:#edc45c;
+	text-decoration: none;
+	font-weight:bold;
+	transition: all 0.3s ease;
+}
+.footer-common a {
+	color:#07c3e0;
 	text-decoration: none;
 	font-weight:bold;
 	transition: all 0.3s ease;
@@ -922,15 +968,23 @@ a.btn-info > span {
 	padding:0 10px;
 	transition: all 0.3s ease;
 }
-.footer a:hover, .footer a.social:hover {
+.footer-common a.social {
+	color:#07c3e0;
+	font-size:18px;
+	vertical-align: middle;
+	text-decoration: none;
+	padding:0 10px;
+	transition: all 0.3s ease;
+}
+.footer a:hover, .footer a.social:hover, .footer-common a:hover, .footer-common a.social:hover {
 	color:#FFFFFF;
 }
-.footer > .footer-link-box > span.separator {
+.footer > .footer-link-box > span.separator, .footer-common > .footer-link-box > span.separator {
 	display:inline-block;
 	padding:0 10px;
 }
 @media only screen and (max-width: 480px) {
-	.footer > .footer-link-box > span.separator {
+	.footer > .footer-link-box > span.separator, .footer-common > .footer-link-box > span.separator {
 		padding:0 10px;
 	}
 }
@@ -941,8 +995,15 @@ a.btn-info > span {
 	margin:20px 0 0 0;
 	width:calc(100% - 120px);
 }
+.footer-common p.disclaimer {
+	font-size:10px;
+	line-height: 1.25em;
+	color:#cccccc;
+	margin:20px 0 0 0;
+	width:calc(100% - 120px);
+}
 @media only screen and (max-width: 480px) {
-	.footer p.disclaimer {
+	.footer p.disclaimer, .footer-common p.disclaimer {
 		margin:5px 0 0 0;
 		width:100%;
 	}
@@ -1293,6 +1354,315 @@ a.btn-share:hover {
 	margin-bottom:20px;
 }
 /* topbanner */
+.commontop {
+	display:block;
+	position:relative;
+	height:calc(100vh - 200px);
+	padding:0;
+	margin:0;
+	width:100vw;
+	background-image: linear-gradient(to right, #ba9a48, #047f92);
+}
+.commontop-devices {
+	position:relative;
+	display:flex;
+	padding-top:90px;
+	height:calc(60vh - 200px);
+	width:100%;
+	max-width:1280px;
+	margin:0px auto;
+}
+@media only screen and (max-width: 1024px) {
+	.commontop {
+		height:calc(100vh - 200px);
+	}
+	.commontop-devices {
+		height:calc(60vh - 180px);
+	}
+}
+@media only screen and (max-width: 960px) {
+	.commontop {
+		height:50vh;
+	}
+	.commontop-devices {
+		height:25vh;
+	}
+}
+@media only screen and (max-width: 600px) {
+	.commontop {
+		height:32vh;
+	}
+	.commontop-devices {
+		height:8vh;
+	}
+}
+img.commontop-laptop {
+	position:absolute;
+	top:90px;
+	left:25%;
+	height:calc(60vh - 180px);
+}
+img.commontop-mobile {
+	position:absolute;
+	top:calc(90px + 17%);
+	left:20%;
+	height:calc(55vh - 180px);
+}
+img.commontop-tablet {
+	position:absolute;
+	top:calc(90px + 8%);
+	right:15%;
+	height:calc(58vh - 180px);
+}
+@media only screen and (max-width: 1280px) {
+	img.commontop-laptop {
+		left:16%;
+		height:calc(60vh - 180px);
+	}
+	img.commontop-mobile {
+		left:12%;
+		height:calc(55vh - 180px);
+	}
+	img.commontop-tablet {
+		right:13%;
+		height:calc(58vh - 180px);
+	}
+}
+@media only screen and (max-width: 1023px) {
+	img.commontop-laptop {
+		left:10%;
+		height:25vh;
+	}
+	img.commontop-mobile {
+		left:3%;
+		height:20vh;
+	}
+	img.commontop-tablet {
+		right:2%;
+		height:23vh;
+	}
+}
+@media only screen and (max-width: 600px) {
+	img.commontop-laptop {	
+		top:30px;
+		left:9%;
+		height:16vh;
+	}
+	img.commontop-mobile {
+		top:calc(30px + 17%);
+		left:1%;
+		height:14vh;
+	}
+	img.commontop-tablet {
+		top:calc(30px + 8%);
+		right:1%;
+		height:15vh;
+	}
+}
+.commontop-headlines {
+	position:relative;
+	display:flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width:100%;
+	max-width:1280px;
+	margin:0px auto;
+	padding: 20px 0 5px 0;
+	z-index:999;
+}
+.headline-1 h2 {
+	color:#FFFFFF;
+	margin: 0;
+	line-height: 1em;
+	font-size:8vh;
+	text-align: right;
+	padding:0 10px;
+}
+.headline-2 h1 {
+	color:#FFFFFF;
+	margin: 0;
+	line-height: 1em;
+	font-size:25vh;
+}
+.headline-3 h3 {
+	color:#FFFFFF;
+	margin: 0;
+	line-height: 1.25em;
+	font-size:6vh;
+	padding:0 10px;
+}
+@media only screen and (max-width: 1024px) {
+	.headline-1 h2 {
+		font-size:6vh;
+	}
+	.headline-2 h1 {
+		font-size:18vh;
+	}
+	.headline-3 h3 {
+		font-size:4vh;
+	}
+}
+@media only screen and (max-width: 960px) {
+	.headline-1 h2 {
+		font-size:4vh;
+	}
+	.headline-2 h1 {
+		font-size:12vh;
+	}
+	.headline-3 h3 {
+		font-size:3vh;
+	}
+}
+@media only screen and (max-width: 600px) {
+	.headline-1 h2 {
+		font-size:4vh;
+	}
+	.headline-2 h1 {
+		font-size:9vh;
+	}
+	.headline-3 h3 {
+		font-size:2vh;
+	}
+}
+.commontop-bg-1 {
+	position:absolute;
+	left:12.5vw;
+	top:0;
+}
+.commontop-bg-1 img {
+	width:37.5vw;
+}
+.commontop-bg-2 {
+	position:absolute;
+	right:0;
+	top:0;
+}
+.commontop-bg-2 img {
+	width:50vw;
+}
+.commontop-bg-3 {
+	position:absolute;
+	left:0;
+	bottom:0;
+	z-index:997;
+}
+.commontop-bg-3 img {
+	width:75vw;
+}
+.commontop-bg-4 {
+	position:absolute;
+	right:0;
+	bottom:0;
+}
+.commontop-bg-4 img {
+	width:100vw;
+}
+.commontop-bg-5 {
+	position:absolute;
+	right:0;
+	bottom:0;
+	z-index:998;
+}
+.commontop-bg-5 img {
+	width:50vw;
+}
+/* action button to crypto or forex */
+.split-container {
+	position:fixed;
+	bottom:0;
+	display:flex;
+	flex-direction:row;
+	justify-content: space-between;
+	align-items: stretch;
+	width:100vw;
+	background-color:#edc45c;
+	z-index: 10002;
+}
+.gotocrypto-container, .gotoforex-container {
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	width:50%;
+	height:120px;
+}
+.gotocrypto-container {
+	background-color:#edc45c;
+}
+.gotoforex-container {
+	background-color:#06afc9;
+}
+a.btn-go-crypto, a.btn-go-forex {
+	display:flex;
+	height:60px;
+	padding:10px;
+	width:70%;
+	flex-direction:row;
+	justify-content: space-between;
+	align-items: center;
+	border-radius:16px;
+	color:#FFFFFF;
+	text-decoration:none;
+	transition: all 0.3s ease;
+}
+a.btn-go-crypto img, a.btn-go-forex img {
+	width:60px;
+}
+a.btn-go-crypto span, a.btn-go-forex span {
+	width:calc(100% - 64px);
+	text-align: center;
+	line-height: 1.5em;
+}
+a.btn-go-crypto {
+	background-color: #8f6f1b;
+}
+a.btn-go-forex {
+	background-color: #103456;
+}
+a.btn-go-crypto:hover {
+	background-color: #5c4711;
+}
+a.btn-go-forex:hover {
+	background-color: #071624;
+}
+/* exchange brofer list in common landing */
+.crypto-logo-container, .forex-logo-container {
+	display:flex;
+	flex-direction:row;
+	flex-wrap: wrap;
+	align-items: stretch;
+	justify-content: center;
+	padding:0 20px;
+	width:calc(50% - 40px);
+}
+@media only screen and (max-width: 600px) {
+	.crypto-logo-container, .forex-logo-container {
+		width:calc(100% - 40px);
+	}
+}
+.crypto-logo-container h2, .forex-logo-container h2 {
+	display:block;
+	width:100%;
+	margin-bottom: 40px;
+	text-align: center;
+}
+.exchange-broker-box {
+	display:flex;
+	height:140px;
+	width:33.3%;
+	flex-direction:column;
+	align-items:center;
+	color:#666666;
+	font-weight:bold;
+	font-size:14px;
+	text-align: center;
+}
+.exchange-broker-box img {
+    display: block;
+    height: 48px;
+    width: 48px;
+}
+/* crypto top banner */
 .topbanner {
 	display:flex;
 	justify-content:space-between;

@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="jquery-3.6.0.min.js" language="javascript"></script>
+	<link href="https://fonts.googleapis.com/css?family=Noto Sans:400,700,900" rel="stylesheet">
+	<link href="font.css" rel="stylesheet">
+	<link href="landing-drfee.css" rel="stylesheet">
+	<link href="burger-menu-drfee.css" rel="stylesheet">
+	<link href="carousel-drfee.css" rel="stylesheet">
+	<link href="accordion-drfee.css" rel="stylesheet">
+	<link rel="icon" href="img/favicon-drfee.svg">
+	<title>dr-fee</title>
+	<!-- write your code here -->
+	<style>
+		body {
+			padding-bottom:120px;
+			}
+		@media only screen and (min-width: 1024px) {
+			body {
+				font-size:18px;
+			}
+		}
+		@media only screen and (max-width: 480px) {
+			body {
+				padding-top:105px;
+				padding-bottom:120px;
+			}
+		}
+		.main-container {
+			margin-top:40px;
+		}
+		.footer-common {
+			position:relative;
+		}
+	</style>
+	</head>
+	<body>
+		<div class="header">
+			<div class="header-container-common">
+				<a href="dr-fee-crypto.html"><div class="logo"><img src="img/logo-drfree-1-white.svg" /></div></a>
+				<ul class="menu">
+					<li><a class="crypto" href="dr-fee-crypto.html">Crypto trader</a></li>
+					<li><a class="forex" href="dr-fee-forex.html">Forex trader</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<!-- mobile menu -->
+		<nav role="navigation">
+			<div class="recent-cat"></div>
+			<div id="mobileMenuToggle">
+				<!--A fake / hidden checkbox is used as click reciever, so you can use the :checked selector on it.-->
+				<input type="checkbox" />
+				<!--Some spans to act as a hamburger. They are acting like a real hamburger, not that McDonalds stuff.-->
+				<span></span>
+				<span></span>
+				<span></span>
+				<!-- Too bad the menu has to be inside of the button but hey, it's pure CSS magic.-->
+				<ul id="mobileMenu">
+					<li>
+						<a href="dr-fee-crypto.html">
+							<div class="s-menu-title">Crypto trader</div>
+						</a>
+					</li>
+					<li>
+						<a href="dr-fee-forex.html">
+							<div class="s-menu-title">Forex trader</div>
+						</a>
+					</li>
+				</ul>
+				<div class="mobileMenuMask"></div>
+			</div>
+		</nav>
+		<!-- mobile menu ended -->
+		
+		<!-- saving counter -->
+		<div class="saving-counter">
+			<h2>483,873,485 USD</h2>
+			saving potential already identified
+		</div>
+		<!-- topbanner -->
+		<div class="commontop">
+			<div class="commontop-bg-1"><img src="img/dr-fee-landing-top-bg-1.png" /></div>
+			<div class="commontop-bg-2"><img src="img/dr-fee-landing-top-bg-2.png" /></div>
+			<div class="commontop-bg-3"><img src="img/dr-fee-landing-top-bg-3.png" /></div>
+			<div class="commontop-bg-4"><img src="img/dr-fee-landing-top-bg-4.png" /></div>
+			<div class="commontop-bg-5"><img src="img/dr-fee-landing-top-bg-5.png" /></div>
+			<div class="commontop-devices">
+				<img class="commontop-laptop" src="img/dr-fee-landing-top-laptop.png" />
+				<img class="commontop-mobile" src="img/dr-fee-landing-top-mobile.png" />
+				<img class="commontop-tablet" src="img/dr-fee-landing-top-tablet.png" />
+			</div>
+			<div class="commontop-headlines">
+				<div class="headline-1"><h2><span style="font-size:larger;">Save</span><br>up to</h2></div>
+				<div class="headline-2"><h1><span id="topcount">0</span>%</h1></div>
+				<div class="headline-3"><h3>of your<br>trading fees/costs!</h3></div>
+			</div>
+		</div>
+		<!-- problem -->
+		<div class="main-container">
+			<h1>Connect, compare, save</h1>
+			<p style="font-size: larger;">Whether you are crypto-currency traders or forex traders, our robust comparison &amp; analysis engine gives you detailed analytic report in <strong>5 minutes</strong>.</p>
+			<p style="font-size: larger;">Just connect you trading account to our secured &amp; read-only interface. We will analyse your trading fee/cost and simulate with other crypto exchanges and forex brokers. And present you <strong>fee/cost comparison &amp; saving potential report</strong>.</p>
+		</div>
+		<!-- exchange broker icons -->
+		<div class="exchange-bg">
+			<div class="main-container" style="align-items: flex-start;">
+				<div class="crypto-logo-container">
+					<h2>Exchanges</h2>
+					<div class="exchange-broker-box"><img src="img/logo-binance.svg" />Binance</div>
+					<div class="exchange-broker-box"><img src="img/logo-binance.svg" />Binance US</div>
+					<div class="exchange-broker-box"><img src="img/logo-bitfinex.svg" />Bitfinex</div>
+					<div class="exchange-broker-box"><img src="img/logo-bitstamp.svg" />BitStamp</div>
+					<div class="exchange-broker-box"><img src="img/logo-bybit.svg" />ByBit</div>
+					<div class="exchange-broker-box"><img src="img/logo-coinbase.svg" />Coinbase Pro</div>
+					<div class="exchange-broker-box"><img src="img/logo-cryptocom.svg" />Crypto.com</div>
+					<div class="exchange-broker-box"><img src="img/logo-gateio.svg" />Gate.io</div>
+					<div class="exchange-broker-box"><img src="img/logo-gemini.svg" />Gemini</div>
+					<div class="exchange-broker-box"><img src="img/logo-huobi.svg" />Huobi</div>
+					<div class="exchange-broker-box"><img src="img/logo-kraken.svg" />Kraken</div>
+					<div class="exchange-broker-box"><img src="img/logo-kucoin.svg" />KuCoin</div>
+					<div class="exchange-broker-box"><img src="img/logo-mexc.svg" />MEXC</div>
+					<div class="exchange-broker-box"><img src="img/logo-okx.svg" />OKX</div>
+				</div>
+				<div class="forex-logo-container">
+					<h2>Brokers</h2>
+					<div class="exchange-broker-box"><img src="img/logo-cmc-c.svg" />CMC Markets</div>
+					<div class="exchange-broker-box"><img src="img/logo-etoro-c.svg" />eToro</div>
+					<div class="exchange-broker-box"><img src="img/logo-forexcom-c.svg" />Forex.com</div>
+					<div class="exchange-broker-box"><img src="img/logo-ig-c.svg" />IG</div>
+					<div class="exchange-broker-box"><img src="img/logo-city-c.svg" />Index City</div>
+					<div class="exchange-broker-box"><img src="img/logo-ib-c.svg" />Interactive Brokers</div>
+					<div class="exchange-broker-box"><img src="img/logo-roboforex-c.svg" />RoboForex</div>
+					<div class="exchange-broker-box"><img src="img/logo-saxo-c.svg" />SAXO Bank</div>
+					<div class="exchange-broker-box"><img src="img/logo-td-c.svg" />TD</div>
+					<div class="exchange-broker-box"><img src="img/logo-vantage-c.svg" />Vantage</div>
+					<div class="exchange-broker-box"><img src="img/logo-xtb-c.svg" />XTB</div>
+					<div class="exchange-broker-box"><img src="img/logo-xm-c.svg" />XM</div>
+				</div>
+			</div>
+		</div>
+		<!-- footer -->
+		<div class="footer-common">
+			<div class="footer-logo-box">
+				<img class="footer-logo" src="img/logo-drfree-2.svg" />&copy;2022 Hoc Trade Technology Co. Ltd. All Rights Reserved
+			</div>
+			<div class="footer-link-box">
+				<span class="separator">|</span><a href="terms.html">Terms &amp; conditions</a><span class="separator">|</span><a href="privacy.html">Privacy policy</a><span class="separator">|</span><a href="about.html">About</a><span class="separator">|</span>
+			</div>
+			<div class="social-box">
+				<a class="social" href="https://www.facebook.com/drfeecrypto" target="_blank"><span class="ht-logo-fb"></span></a><a class="social" href="https://www.instagram.com/drfeecrypto/" target="_blank"><span class="ht-logo-ig"></span></a><a class="social" href="https://twitter.com/drfeecrypto" target="_blank"><span class="ht-logo-twitter"></span></a>
+			</div>
+			<p class="disclaimer-common">HIGH RISK WARNING: Foreign exchange, cryptocurrencies, and other CFDtrading carries a high level of risk and may not be suitable for everyone. The usage of leverage creates additional risk and loss exposure. Your investment objectives, experience level, and risk tolerance have to be taken into consideration before you decide to trade foreign exchange, cryptocurrencies, or other CFD products. You could lose some or all of your investment. Do not invest money that you cannot afford to lose and always use an appropriate risk management. It’s important to educate yourself on the risks associated with foreign exchange trading, and seek professional advice from an independent financial or tax advisor in case of any questions. Any data and information is provided 'as is' solely for informational purposes, and is not intended for trading purposes or advice. Past performance, including fees, which are presented on this website or you find somewhere else, is not indicative of future results.</p>
+		</div>
+		<!-- split buttons -->
+		<div class="split-container">
+			<div class="gotocrypto-container">
+				<a class="btn-go-crypto" href="dr-fee-crypto.html">
+					<img src="img/ico-crypto.png" />
+					<span>
+						Crypto exchange fees<br><strong>START HERE</strong>
+					</span>
+				</a>
+			</div>
+			<div class="gotoforex-container">
+				<a class="btn-go-forex" href="dr-fee-forex.html">
+					<img src="img/ico-forex.png" />
+					<span>
+						Forex spreads &amp; commissions<br><strong>START HERE</strong>
+					</span>
+				</a>
+			</div>
+		</div>
+	</body>
+<!-- counter -->
+	<script>
+		function animateValue(id, start, end, duration) {
+			if (start === end) return;
+			var range = end - start;
+			var current = start;
+			var increment = end < start? 1 : +1;
+			var stepTime = Math.abs(Math.floor(duration / range));
+			var obj = document.getElementById(id);
+			var timer = setInterval(function() {
+				current += increment;
+				obj.innerHTML = current;
+				if (current == end) {
+					clearInterval(timer);
+				}
+			}, stepTime);
+		}
+
+		animateValue("topcount", 38, 99, 2000);
+	</script>
+</html>
