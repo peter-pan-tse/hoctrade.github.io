@@ -1625,6 +1625,27 @@ a.btn-go-crypto:hover {
 a.btn-go-forex:hover {
 	background-color: #071624;
 }
+/* features */
+.feature-box {
+	display:flex;
+	flex-direction:column;
+	align-items: center;
+	margin:10px;
+	width:calc(33% - 20px);
+}
+.feature-box img {
+	width:150px;
+}
+.feature-box p {
+	text-align: center;
+	font-size: larger;
+	margin: 0 30px 30px;
+}
+@media only screen and (max-width: 600px) {
+	.feature-box {
+		width:calc(50% - 20px);
+	}
+}
 /* exchange brofer list in common landing */
 .crypto-logo-container, .forex-logo-container {
 	display:flex;
