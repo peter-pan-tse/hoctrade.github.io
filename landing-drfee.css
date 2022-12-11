@@ -1569,22 +1569,28 @@ img.commontop-tablet {
 }
 /* action button to crypto or forex */
 .split-container {
-	position:fixed;
-	bottom:0;
+	position:sticky;
+	position: -webkit-sticky;
+	top:100px;
 	display:flex;
 	flex-direction:row;
 	justify-content: space-between;
 	align-items: stretch;
 	width:100vw;
 	background-color:#edc45c;
-	z-index: 10002;
+	z-index: 9999;
+}
+@media only screen and (max-width: 600px) {
+	.split-container {
+		top:45px;
+	}
 }
 .gotocrypto-container, .gotoforex-container {
 	display:flex;
 	justify-content: center;
 	align-items: center;
 	width:50%;
-	height:120px;
+	height:100px;
 }
 .gotocrypto-container {
 	background-color:#edc45c;
