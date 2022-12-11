@@ -1393,7 +1393,7 @@ a.btn-share:hover {
 		height:32vh;
 	}
 	.commontop-devices {
-		height:10vh;
+		height:8vh;
 	}
 }
 img.commontop-laptop {
@@ -1428,10 +1428,10 @@ img.commontop-tablet {
 		height:calc(58vh - 180px);
 	}
 }
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 960px) {
 	img.commontop-laptop {
 		left:10%;
-		height:25vh;
+		height:28vh;
 	}
 	img.commontop-mobile {
 		left:3%;
