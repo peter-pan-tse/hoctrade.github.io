@@ -108,6 +108,7 @@
 	display: block;
 	padding: 0;
 	margin:0;
+	border-bottom: 1px solid #047F92;
 }
 .recent-cat {
 	display:none;
@@ -171,7 +172,7 @@
 	flex-direction:row;
 	align-items: center;
 	justify-content: flex-start;
-	color:#047F92;
+	color:#033c45;
 	font-weight: bold;
 	height: 60px;
 	font-size:18px;
@@ -182,10 +183,15 @@
 	font-size:24px;
 	line-height:24px;
 	display:inline-block;
-	margin:-12px 10px 0 0;
+	margin:0;
+}
+.s-menu-title > div.s-menu-ico {
+	font-size:40px;
+	margin-right:10px;
 }
 .s-menu-title.active {
 	color:#FFFFFF;
+	background-color: #047F92;
 }
 a.s-menu-item {
 	display:flex;

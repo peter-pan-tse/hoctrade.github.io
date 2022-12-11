@@ -1393,7 +1393,7 @@ a.btn-share:hover {
 		height:32vh;
 	}
 	.commontop-devices {
-		height:8vh;
+		height:10vh;
 	}
 }
 img.commontop-laptop {
@@ -1516,13 +1516,13 @@ img.commontop-tablet {
 }
 @media only screen and (max-width: 600px) {
 	.headline-1 h2 {
-		font-size:4vh;
+		font-size:3vh;
 	}
 	.headline-2 h1 {
-		font-size:9vh;
+		font-size:8vh;
 	}
 	.headline-3 h3 {
-		font-size:2vh;
+		font-size:1.5vh;
 	}
 }
 .commontop-bg-1 {
@@ -1641,9 +1641,17 @@ a.btn-go-forex:hover {
 	font-size: larger;
 	margin: 0 30px 30px;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 960px) {
 	.feature-box {
 		width:calc(50% - 20px);
+	}
+}
+@media only screen and (max-width: 600px) {
+	.feature-box {
+		width:calc(100% - 20px);
+	}
+	.feature-box p {
+		margin: 0 10px 30px;
 	}
 }
 /* exchange brofer list in common landing */
