@@ -1446,7 +1446,7 @@ img.commontop-tablet {
 	img.commontop-laptop {	
 		top:30px;
 		left:9%;
-		height:18vh;
+		height:20vh;
 	}
 	img.commontop-mobile {
 		top:calc(30px + 17%);
