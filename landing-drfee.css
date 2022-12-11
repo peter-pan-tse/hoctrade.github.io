@@ -1390,7 +1390,7 @@ a.btn-share:hover {
 }
 @media only screen and (max-width: 600px) {
 	.commontop {
-		height:32vh;
+		height:33vh;
 	}
 	.commontop-devices {
 		height:7vh;
