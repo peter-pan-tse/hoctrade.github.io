@@ -145,7 +145,7 @@ ul.menu {
 	padding:0;
 	transition:all ease 0.3s;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 600px) {
 	ul.menu {
 		display:none;
 	}
@@ -1579,6 +1579,11 @@ img.commontop-tablet {
 	width:100vw;
 	background-color:#edc45c;
 	z-index: 9999;
+}
+@media only screen and (max-width: 960px) {
+	.split-container {
+		top:70px;
+	}
 }
 @media only screen and (max-width: 600px) {
 	.split-container {
