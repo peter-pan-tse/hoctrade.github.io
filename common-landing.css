@@ -22,23 +22,146 @@
 	width:50%;
 }
 .top-crypto-block {
-	background-image:linear-gradient(to bottom, rgba(237,196,92,0.75), rgba(237,196,92,0.5));
-	padding:5% 10% 0 5%;
+	background-image:linear-gradient(to right, rgba(237,196,92,0.75), rgba(237,196,92,0));
+	padding:0 5%;
 }
 .top-forex-block {
-	background-image:linear-gradient(to bottom, rgba(6,175,201,0.75), rgba(6,175,201,0.5));
-	padding:5% 5% 0 10%;
+	background-image:linear-gradient(to left, rgba(6,175,201,0.75), rgba(6,175,201,0));
+	padding:0 5%;
+}
+.top-crypto-block h2, .top-forex-block h2 {
+	margin:0 0 5px 0;
+	font-size:4vh;
+	text-align: center;
+	color:#FFFFFF;
+}
+.top-crypto-block h3, .top-forex-block h3 {
+	margin:0 0 5px 0;
+	font-size:18px;
+	text-align: center;
+	color:#FFFFFF;
+	font-weight:normal;
+}
+.top-crypto-block a, .top-forex-block a {
+	color:#ffffff;
+	text-decoration:none;
+	font-size:14px;
+	font-weight:bold;
+}
+.top-crypto-block a > span, .top-forex-block a > span {
+	font-size:20px;
+	vertical-align: middle;
+}
+.top-crypto-block a:hover, .top-forex-block a:hover {
+	color:orangered;
+}
+.img-top-banner {
+	height:50vh;
+	width:auto;
+}
+a.btn-start-crypto, a.btn-start-forex {
+	display:inline-block;
+	padding:10px 20px;
+	margin:5px 0;
+	border-radius:10px;
+	font-size:18px;
+	font-weight:bold;
+	color:#FFFFFF;
+	text-decoration:none;
+	transition: all ease 0.3s;
+}
+a.btn-start-crypto {
+	background-color:#8f6f1b;
+}
+a.btn-start-forex {
+	background-color:#103456;
+}
+a.btn-start-crypto:hover {
+	color:#FFFFFF;
+	background-color:#edc45c;
+}
+a.btn-start-forex:hover {
+	color:#FFFFFF;
+	background-color:#06afc9;
+}
+.top-screenshot-container {
+	position:relative;
+	display:flex;
+	flex-direction:column;
+	align-items: center;
+	background-image: linear-gradient(to right, #8f6f1b, #103456);
+	width:100%;
+	padding:80px 0 0 0;
+	margin:0;
 }
 /* split buttons */
 #split-btn-container {
 	position:sticky;
 	top:100px;
 	display:flex;
+	flex-direction:row;
+	justify-content: center;
+	align-items: stretch;
 	width:100%;
-	height:100px;
 	z-index:999;
-	background-color:red;
+	background-color:#8f6f1b;
 	transition: 0.5s;
+}
+.split-btn-crypto-block, .split-btn-forex-block {
+	display:flex;
+	width:50%;
+	flex-direction:column;
+	padding:0 0 20px 0;
+	margin:0;
+	align-items: center;
+	justify-content: center;
+}
+.split-btn-crypto-block {
+	background-image: linear-gradient(to top, #d5ab3f, #d5ab3f, #8f6f1b);
+	/*background-color:#8f6f1b;*/
+}
+.split-btn-forex-block {
+	background-image: linear-gradient(to top, #2094ae, #2094ae, #103456);
+	/*background-color:#103456;*/
+}
+a.split-btn-crypto, a.split-btn-forex {
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	width:100%;
+	padding:20px 0;
+	color:#FFFFFF;
+	font-weight: bold;
+	font-size:18px;
+	text-decoration: none;
+	transition: all ease 0.3s;
+}
+a.split-btn-crypto:hover {
+	color:#FFFFFF;
+	background-color:#edc45c;
+	/*background-image:linear-gradient(to bottom, rgba(237,196,92,1), rgba(237,196,92,0));*/
+}
+a.split-btn-forex:hover {
+	color:#FFFFFF;
+	background-color:#06afc9;
+	/*background-image:linear-gradient(to bottom, rgba(6,175,201,1), rgba(6,175,201,0));*/
+}
+a.split-btn-crypto img, a.split-btn-forex img {
+	width:60px;
+}
+.split-btn-crypto-block a.learn, .split-btn-forex-block a.learn {
+	color:#ffffff;
+	text-decoration:none;
+	font-size:14px;
+	font-weight:normal;
+}
+.split-btn-crypto-block a.learn:hover, .split-btn-forex-block a.learn:hover {
+	color:orangered;
+}
+.split-btn-crypto-block a.learn > span, .split-btn-forex-block a.learn > span {
+	font-size:20px;
+	vertical-align: middle;
 }
 /* potential saving counter */
 .saving-counter-common {
@@ -65,6 +188,29 @@
 	top:20vh;
 	left:40%;
 	color:#FFFFFF;
+}
+.headline-1a h2 {
+	color:#FFFFFF;
+	margin: 0;
+	line-height: 1em;
+	font-size:4.5vh;
+	text-align: center;
+	text-shadow: 0px 0px 20px rgba(128, 243, 255, 1.0);
+}
+.headline-2a h1 {
+	color:#FFFFFF;
+	margin: 0;
+	line-height: 1em;
+	font-size:13vh;
+	text-shadow: 0px 0px 20px rgba(128, 243, 255, 1.0);
+}
+.headline-3a h3 {
+	color:#FFFFFF;
+	margin: 0;
+	line-height: 1.5em;
+	font-size:3.2vh;
+	text-align: center;
+	text-shadow: 0px 0px 20px rgba(128, 243, 255, 1.0);
 }
 
 @media only screen and (max-width: 480px) {

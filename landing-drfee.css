@@ -1665,7 +1665,6 @@ img.commontop-tablet {
 	position:absolute;
 	left:0;
 	bottom:0;
-	z-index:997;
 }
 .commontop-bg-3 img {
 	width:75vw;
@@ -1682,7 +1681,6 @@ img.commontop-tablet {
 	position:absolute;
 	right:0;
 	bottom:0;
-	z-index:998;
 }
 .commontop-bg-5 img {
 	width:50vw;

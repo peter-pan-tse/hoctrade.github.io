@@ -55,28 +55,48 @@
 			<div class="commontop-bg-4"><img src="img/dr-fee-landing-top-bg-4.png" /></div>
 			<div class="commontop-bg-5"><img src="img/dr-fee-landing-top-bg-5.png" /></div>
 			<div class="top-crypto-block">
-					<div class="top-crypto-block-bg"></div>
+				<div class="top-crypto-block-bg"></div>
+				<img class="img-top-banner" src="img/dr-fee-top-pic-crypto.png" />
+				<h2>I am a crypto trader</h2>
+				<h3>I hope dr-fee can help me to save my trading fee</h3>
+				<a class="btn-start-crypto" href="fee-analysis-engine-1.html">Start analyze trading fees</a>
+				<a href="dr-fee-crypto.html">I want to learn more about dr-fee crypto<span class="ht-arrow"></span></a>
 			</div>
 			<div class="top-forex-block">
-					<div class="top-forex-block-bg"></div>
+				<div class="top-forex-block-bg"></div>
+				<img class="img-top-banner" src="img/dr-fee-top-pic-forex.png" />
+				<h2>I am a forex trader</h2>
+				<h3>I hope dr-fee can help me to save my spread and commission</h3>
+				<a class="btn-start-forex" href="cost-analysis-engine-1.html">Start analyze spreads &amp; commissions</a>
+				<a href="dr-fee-forex.html">I want to learn more about dr-fee forex<span class="ht-arrow"></span></a>
 			</div>
 		</div>
 		<div class="saving-headline-container">
-			<div class="headline-1"><h2><span style="font-size:larger;">Save</span><br>up to</h2></div>
-			<div class="headline-2"><h1><span id="topcount">0</span>%</h1></div>
-			<div class="headline-3"><h3>of your trading<br>fees / costs!</h3></div>
+			<div class="headline-1a"><h2>Save up to</h2></div>
+			<div class="headline-2a"><h1><span id="topcount">0</span>%</h1></div>
+			<div class="headline-3a"><h3>of your trading<br>fees / costs</h3></div>
+		</div>
+		<!-- device screenshot -->
+		<div class="top-screenshot-container">
+			<div class="main-container" style="margin:0 0 40px 0; padding-top:0px;">
+				<img class="img-responsive" src="img/dr-fee-landing-devices.png" />
+				<h1 style="color:#FFFFFF;">Connect, compare, save</h1>
+				<p style="font-size:larger; color:#FFFFFF;">Just connect, and find your cheapest exchange / broker in 1-click. dr-fee simulates your fees / costs at all major exchanges / brokers. <strong>Try it now, find your best exchange / broker and start saving!</strong> For both Crypto and Forex Traders!</p>
+			</div>
 		</div>
 		<!-- split btn -->
-		<div id="split-btn-container"></div>
-		<!-- overview -->
-		<div class="main-container" style="justify-content: flex-start;">
-			<h1>Connect, compare, save</h1>
-			<p style="font-size:larger;">Just connect, and find your cheapest exchange / broker in 1-click.</p>
-			<p style="font-size:larger;">dr-fee simulates your fees / costs at all major exchanges / brokers.</p> 
-			<p style="font-size:larger;">Try it now, find your best exchange / broker and start saving! For both Crypto and Forex Traders!</p>
+		<div id="split-btn-container">
+			<div class="split-btn-crypto-block">
+				<a class="split-btn-crypto" href="fee-analysis-engine-1.html"><img src="img/ico-crypto-half.png" /><span>Start analyze trading fees</span></a>
+				<a class="learn" href="dr-fee-crypto.html">Learn more<span class="ht-arrow"></span></a>
+			</div>
+			<div class="split-btn-forex-block">
+				<a class="split-btn-forex" href="cost-analysis-engine-1.html"><img src="img/ico-forex-half.png" /><span>Start analyze spreads &amp; commissions</span></a>
+				<a class="learn" href="dr-fee-forex.html">Learn more<span class="ht-arrow"></span></a>
+			</div>
 		</div>
 		<!-- features -->
-		<div class="main-container" style="margin-bottom:60px;">
+		<div class="main-container" style="margin:100px auto 80px;">
 			<div class="feature-box">
 				<img src="img/ico-feature-auto.png">
 				<h2>Fully automated</h2>
@@ -180,15 +200,15 @@
 		animateValue("topcount", 38, 99, 2000);
 
 	// When the user scrolls down 50px from the top of the document, resize the header's font size
-	window.onscroll = function() {scrollFunction()};
+	//window.onscroll = function() {scrollFunction()};
 
-	function scrollFunction() {
-		var scrolldistance = window.innerHeight - 110;
-	  if (document.body.scrollTop > scrolldistance || document.documentElement.scrollTop > scrolldistance) {
-		document.getElementById("split-btn-container").style.opacity = "1";
-	  } else {
-		document.getElementById("split-btn-container").style.opacity = "0";
-	  }
-	}
+	//function scrollFunction() {
+	//	var scrolldistance = window.innerHeight - 110;
+	//  if (document.body.scrollTop > scrolldistance || document.documentElement.scrollTop > scrolldistance) {
+	//	document.getElementById("split-btn-container").style.opacity = "1";
+	//  } else {
+	//	document.getElementById("split-btn-container").style.opacity = "0";
+	//  }
+	//}
 	</script>
 </html>
