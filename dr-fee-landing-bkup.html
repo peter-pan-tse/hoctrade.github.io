@@ -10,7 +10,6 @@
 	<link href="burger-menu-drfee.css" rel="stylesheet">
 	<link href="carousel-drfee.css" rel="stylesheet">
 	<link href="accordion-drfee.css" rel="stylesheet">
-	<link href="common-landing.css" rel="stylesheet">
 	<link rel="icon" href="img/favicon-drfee.svg">
 	<title>dr-fee</title>
 	<!-- write your code here -->
@@ -41,34 +40,95 @@
 		<div class="header">
 			<div class="header-container-common">
 				<a href="dr-fee-landing.html"><div class="logo"><img src="img/logo-drfree-1-white.svg" /></div></a>
-				<!-- saving counter -->
-				<div class="saving-counter-common">
-					<h2>483,873,485 USD</h2>
-					saving potential already identified
-				</div>
+				<ul class="menu">
+					<li><a class="crypto" href="dr-fee-crypto.html">Crypto trader</a></li>
+					<li><a class="forex" href="dr-fee-forex.html">Forex trader</a></li>
+				</ul>
 			</div>
 		</div>
+		
+		<!-- mobile menu -->
+		<nav role="navigation">
+			<div class="recent-cat"></div>
+			<div id="mobileMenuToggle">
+				<!--A fake / hidden checkbox is used as click reciever, so you can use the :checked selector on it.-->
+				<input type="checkbox" />
+				<!--Some spans to act as a hamburger. They are acting like a real hamburger, not that McDonalds stuff.-->
+				<span></span>
+				<span></span>
+				<span></span>
+				<!-- Too bad the menu has to be inside of the button but hey, it's pure CSS magic.-->
+				<ul id="mobileMenu">
+					<li>
+						<a href="dr-fee-crypto.html">
+							<div class="s-menu-title"><div class="s-menu-ico ht-crypto-coin"></div>Crypto trader</div>
+						</a>
+					</li>
+					<li>
+						<a href="dr-fee-forex.html">
+							<div class="s-menu-title"><div class="s-menu-ico ht-forex-coin"></div>Forex trader</div>
+						</a>
+					</li>
+				</ul>
+				<div class="mobileMenuMask"></div>
+			</div>
+		</nav>
+		<!-- mobile menu ended -->
+		
+		<!-- saving counter -->
+		<div class="saving-counter">
+			<h2>483,873,485 USD</h2>
+			saving potential already identified
+		</div>
 		<!-- topbanner -->
-		<div id="top-split-container">
+		<div class="commontop">
+			<div class="commontop-bg-1"><img src="img/dr-fee-landing-top-bg-1.png" /></div>
 			<div class="commontop-bg-2"><img src="img/dr-fee-landing-top-bg-2.png" /></div>
 			<div class="commontop-bg-3"><img src="img/dr-fee-landing-top-bg-3.png" /></div>
 			<div class="commontop-bg-4"><img src="img/dr-fee-landing-top-bg-4.png" /></div>
 			<div class="commontop-bg-5"><img src="img/dr-fee-landing-top-bg-5.png" /></div>
-			<div class="top-crypto-block">
-					<div class="top-crypto-block-bg"></div>
+			<div class="commontop-devices">
+				<img class="commontop-laptop" src="img/dr-fee-landing-top-laptop.png" />
+				<img class="commontop-mobile" src="img/dr-fee-landing-top-mobile.png" />
+				<img class="commontop-tablet" src="img/dr-fee-landing-top-tablet.png" />
 			</div>
-			<div class="top-forex-block">
-					<div class="top-forex-block-bg"></div>
+			<div class="commontop-headlines">
+				<div class="headline-1"><h2><span style="font-size:larger;">Save</span><br>up to</h2></div>
+				<div class="headline-2"><h1><span id="topcount">0</span>%</h1></div>
+				<div class="headline-3"><h3>of your trading<br>fees / costs!</h3></div>
 			</div>
 		</div>
-		<!-- split btn -->
-		<div id="split-btn-container"></div>
+		<!-- split buttons -->
+		<div class="split-container">
+			<div class="gotocrypto-container">
+				<a class="btn-go-crypto" href="fee-analysis-engine-1.html">
+					<img src="img/ico-crypto.png" />
+					<span class="desktop">
+						Crypto exchange fees<br><strong>START HERE</strong>
+					</span>
+					<span class="mobile">
+						Crypto<br><strong>START HERE</strong>
+					</span>
+				</a>
+			</div>
+			<div class="gotoforex-container">
+				<a class="btn-go-forex" href="fee-analysis-engine-1.html">
+					<img src="img/ico-forex.png" />
+					<span class="desktop">
+						Forex spreads &amp; commissions<br><strong>START HERE</strong>
+					</span>
+					<span class="mobile">
+						Forex<br><strong>START HERE</strong>
+					</span>
+				</a>
+			</div>
+		</div>
 		<!-- overview -->
-		<div class="main-container" style="justify-content: flex-start;">
+		<div class="main-container">
 			<h1>Connect, compare, save</h1>
-			<p style="font-size:larger;">Just connect, and find your cheapest exchange / broker in 1-click.</p>
-			<p style="font-size:larger;">dr-fee simulates your fees / costs at all major exchanges / brokers.</p> 
-			<p style="font-size:larger;">Try it now, find your best exchange / broker and start saving! For both Crypto and Forex Traders!</p>
+			<p style="font-size: larger;">Just connect, and find your cheapest exchange / broker in 1-click.</p>
+			<p style="font-size: larger;">dr-fee simulates your fees / costs at all major exchanges / brokers.</p> 
+			<p style="font-size: larger;">Try it now, find your best exchange / broker and start saving! For both Crypto and Forex Traders!</p>
 		</div>
 		<!-- features -->
 		<div class="main-container" style="margin-bottom:60px;">
@@ -173,17 +233,5 @@
 		}
 
 		animateValue("topcount", 38, 99, 2000);
-
-	// When the user scrolls down 50px from the top of the document, resize the header's font size
-	window.onscroll = function() {scrollFunction()};
-
-	function scrollFunction() {
-		var scrolldistance = window.innerHeight - 100;
-	  if (document.body.scrollTop > scrolldistance || document.documentElement.scrollTop > scrolldistance) {
-		document.getElementById("split-btn-container").style.opacity = "1";
-	  } else {
-		document.getElementById("split-btn-container").style.opacity = "0";
-	  }
-	}
 	</script>
 </html>
