@@ -20,13 +20,14 @@
 	justify-content: flex-start;
 	align-items: center;
 	width:50%;
-	padding:5% 10% 0 5%;
 }
 .top-crypto-block {
 	background-image:linear-gradient(to bottom, rgba(237,196,92,0.75), rgba(237,196,92,0.5));
+	padding:5% 10% 0 5%;
 }
 .top-forex-block {
 	background-image:linear-gradient(to bottom, rgba(6,175,201,0.75), rgba(6,175,201,0.5));
+	padding:5% 5% 0 10%;
 }
 /* split buttons */
 #split-btn-container {
@@ -53,6 +54,16 @@
 .saving-counter-common h2 {
 	margin:0;
 	font-size:28px;
+	color:#FFFFFF;
+}
+.saving-headline-container {
+	position:absolute;
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	width:20%;
+	top:20vh;
+	left:40%;
 	color:#FFFFFF;
 }
 

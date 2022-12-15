@@ -61,6 +61,11 @@
 					<div class="top-forex-block-bg"></div>
 			</div>
 		</div>
+		<div class="saving-headline-container">
+			<div class="headline-1"><h2><span style="font-size:larger;">Save</span><br>up to</h2></div>
+			<div class="headline-2"><h1><span id="topcount">0</span>%</h1></div>
+			<div class="headline-3"><h3>of your trading<br>fees / costs!</h3></div>
+		</div>
 		<!-- split btn -->
 		<div id="split-btn-container"></div>
 		<!-- overview -->
@@ -178,7 +183,7 @@
 	window.onscroll = function() {scrollFunction()};
 
 	function scrollFunction() {
-		var scrolldistance = window.innerHeight - 100;
+		var scrolldistance = window.innerHeight - 110;
 	  if (document.body.scrollTop > scrolldistance || document.documentElement.scrollTop > scrolldistance) {
 		document.getElementById("split-btn-container").style.opacity = "1";
 	  } else {
