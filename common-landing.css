@@ -111,17 +111,17 @@ a.btn-start-forex:hover {
 	display:flex;
 	width:50%;
 	flex-direction:column;
-	padding:0 0 20px 0;
+	padding:0;
 	margin:0;
 	align-items: center;
 	justify-content: center;
 }
 .split-btn-crypto-block {
-	background-image: linear-gradient(to top, #d5ab3f, #d5ab3f, #8f6f1b);
+	background-image: linear-gradient(to top, #d5ab3f, #8f6f1b);
 	/*background-color:#8f6f1b;*/
 }
 .split-btn-forex-block {
-	background-image: linear-gradient(to top, #2094ae, #2094ae, #103456);
+	background-image: linear-gradient(to top, #2094ae, #103456);
 	/*background-color:#103456;*/
 }
 a.split-btn-crypto, a.split-btn-forex {
@@ -130,7 +130,7 @@ a.split-btn-crypto, a.split-btn-forex {
 	align-items: center;
 	justify-content: flex-start;
 	width:100%;
-	padding:20px 0;
+	padding:10px 0 20px 0;
 	color:#FFFFFF;
 	font-weight: bold;
 	font-size:18px;
