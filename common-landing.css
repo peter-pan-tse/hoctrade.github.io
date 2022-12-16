@@ -380,8 +380,8 @@ a.split-btn-crypto img, a.split-btn-forex img {
 		justify-content: center;
 		padding:10px;
 		width:calc(100% - 40px);
-		background-color: black;
-		border-radius:20px;
+		background-image: linear-gradient(to right, #8f6f1b, #103456);
+		border-radius:10px;
 		top:0px;
 		left:0px;
 	}
