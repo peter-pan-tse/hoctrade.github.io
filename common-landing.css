@@ -13,6 +13,65 @@
 	margin:0;
 	transition: 0.2s;
 }
+@media only screen and (max-width: 960px) {
+	#top-split-container {
+		height:50vh;
+	}
+}
+@media only screen and (max-width: 600px) {
+	#top-split-container {
+		flex-direction:column;
+		justify-content: space-between;
+		align-items: center;
+		background-image: linear-gradient(to bottom, #ba9a48, #047f92);
+		height:auto
+	}
+}
+.commontop-bg-1 {
+	position:absolute;
+	left:12.5vw;
+	top:0;
+}
+.commontop-bg-1 img {
+	width:37.5vw;
+}
+.commontop-bg-2 {
+	position:absolute;
+	right:0;
+	top:0;
+}
+.commontop-bg-2 img {
+	width:50vw;
+}
+.commontop-bg-3 {
+	position:absolute;
+	left:0;
+	bottom:0;
+}
+.commontop-bg-3 img {
+	width:75vw;
+}
+.commontop-bg-4 {
+	position:absolute;
+	right:0;
+	bottom:0;
+}
+.commontop-bg-4 img {
+	width:100vw;
+}
+.commontop-bg-5 {
+	position:absolute;
+	right:0;
+	bottom:0;
+}
+.commontop-bg-5 img {
+	width:50vw;
+}
+@media only screen and (max-width: 600px) {
+	.commontop-bg-2 img, .commontop-bg-3 img, .commontop-bg-5 img {
+		width:100vw;
+	}
+}
 .top-crypto-block, .top-forex-block {
 	display:flex;
 	position:relative;
@@ -35,6 +94,28 @@
 	text-align: center;
 	color:#FFFFFF;
 }
+@media only screen and (max-width: 960px) {
+	.top-crypto-block, .top-forex-block {
+		padding:0px 5% 0 5%;
+	}
+	.top-crypto-block h2, .top-forex-block h2 {
+		font-size:3vh;
+	}
+}
+@media only screen and (max-width: 600px) {
+	.top-crypto-block, .top-forex-block {
+		justify-content: center;
+		width:calc(100% - 10px);
+	}
+	.top-crypto-block {
+		background-image:linear-gradient(to bottom, rgba(237,196,92,0.75), rgba(237,196,92,0));
+		padding:0 5px 20px 5px;
+	}
+	.top-forex-block {
+		background-image:linear-gradient(to top, rgba(6,175,201,0.75), rgba(6,175,201,0));
+		padding:0 5px 20px 5px;
+	}
+}
 .top-crypto-block h3, .top-forex-block h3 {
 	margin:0 0 5px 0;
 	font-size:18px;
@@ -56,16 +137,40 @@
 	color:orangered;
 }
 .img-top-banner {
-	height:50vh;
-	width:auto;
+	height:auto;
+	width:80%;
+}
+@media only screen and (max-width: 600px) {
+	.img-top-banner {
+		height:auto;
+		width:40%;
+	}
+	.top-crypto-block h3, .top-forex-block h3 {
+		font-size:14px;
+	}
+	.top-crypto-block a, .top-forex-block a {
+		font-size:12px;
+	}
+	.top-crypto-block a > span, .top-forex-block a > span {
+		font-size:16px;
+	}
+}
+@media only screen and (min-width: 1280px) {
+	.img-top-banner {
+		height:auto;
+		width:60%;
+	}
 }
 a.btn-start-crypto, a.btn-start-forex {
-	display:inline-block;
+	display:flex;
+	align-items:center;
 	padding:10px 20px;
+	min-height:50px;
 	margin:5px 0;
 	border-radius:10px;
 	font-size:18px;
 	font-weight:bold;
+	text-align: center;
 	color:#FFFFFF;
 	text-decoration:none;
 	transition: all ease 0.3s;
@@ -84,6 +189,13 @@ a.btn-start-forex:hover {
 	color:#FFFFFF;
 	background-color:#06afc9;
 }
+@media only screen and (max-width: 600px) {
+	a.btn-start-crypto, a.btn-start-forex {
+		padding:10px 10px;
+		min-height:20px;
+		font-size:14px;
+	}
+}
 .top-screenshot-container {
 	position:relative;
 	display:flex;
@@ -93,6 +205,11 @@ a.btn-start-forex:hover {
 	width:100%;
 	padding:80px 0 0 0;
 	margin:0;
+}
+@media only screen and (max-width: 960px) {
+	.top-screenshot-container {
+		padding:60px 0 0 0;
+	}
 }
 /* split buttons */
 #split-btn-container {
@@ -107,6 +224,16 @@ a.btn-start-forex:hover {
 	background-color:#8f6f1b;
 	transition: 0.5s;
 }
+@media only screen and (max-width: 960px) {
+	#split-btn-container {
+		top:70px;
+	}
+}
+@media only screen and (max-width: 600px) {
+	#split-btn-container {
+		top:45px;
+	}
+}
 .split-btn-crypto-block, .split-btn-forex-block {
 	display:flex;
 	width:50%;
@@ -114,7 +241,7 @@ a.btn-start-forex:hover {
 	padding:0;
 	margin:0;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
 }
 .split-btn-crypto-block {
 	background-image: linear-gradient(to top, #d5ab3f, #8f6f1b);
@@ -136,6 +263,7 @@ a.split-btn-crypto, a.split-btn-forex {
 	font-size:18px;
 	text-decoration: none;
 	transition: all ease 0.3s;
+	text-align: center;
 }
 a.split-btn-crypto:hover {
 	color:#FFFFFF;
@@ -149,6 +277,17 @@ a.split-btn-forex:hover {
 }
 a.split-btn-crypto img, a.split-btn-forex img {
 	width:60px;
+}
+@media only screen and (max-width: 600px) {
+	a.split-btn-crypto, a.split-btn-forex {
+		font-size:12px;
+		line-height: 1em;
+		width:calc(100% - 40px);
+		padding:10px 20px;
+	}
+	a.split-btn-crypto img, a.split-btn-forex img {
+		width:30px;
+	}
 }
 .split-btn-crypto-block a.learn, .split-btn-forex-block a.learn {
 	color:#ffffff;
@@ -166,7 +305,7 @@ a.split-btn-crypto img, a.split-btn-forex img {
 /* potential saving counter */
 .saving-counter-common {
 	display:block;
-	width:40%;
+	width:60%;
 	color:#FFFFFF;
 	text-align: right;
 	padding:0 10px;
@@ -179,13 +318,23 @@ a.split-btn-crypto img, a.split-btn-forex img {
 	font-size:28px;
 	color:#FFFFFF;
 }
+@media only screen and (max-width: 600px) {
+	.saving-counter-common {
+		padding:0;
+		line-height: 1em;
+		font-size:11px;
+	}
+	.saving-counter-common h2 {
+		font-size:16px;
+	}
+}
 .saving-headline-container {
 	position:absolute;
 	display:flex;
 	flex-direction: column;
 	align-items: center;
 	width:20%;
-	top:20vh;
+	top:20px;
 	left:40%;
 	color:#FFFFFF;
 }
@@ -212,7 +361,86 @@ a.split-btn-crypto img, a.split-btn-forex img {
 	text-align: center;
 	text-shadow: 0px 0px 20px rgba(128, 243, 255, 1.0);
 }
-
-@media only screen and (max-width: 480px) {
-
+@media only screen and (max-width: 960px) {
+	.headline-1a h2 {
+		font-size:2.25vh;
+	}
+	.headline-2a h1 {
+		font-size:7vh;
+	}
+	.headline-3a h3 {
+		font-size:1.6vh;
+	}
+}
+/* features */
+.feature-box {
+	display:flex;
+	flex-direction:column;
+	align-items: center;
+	margin:10px;
+	width:calc(33% - 20px);
+}
+.feature-box img {
+	width:150px;
+}
+.feature-box h2 {
+	text-align: center;
+	margin: 20px 0 5px 0;
+}
+.feature-box p {
+	text-align: center;
+	margin: 0 30px 30px;
+}
+@media only screen and (max-width: 960px) {
+	.feature-box {
+		width:calc(50% - 20px);
+	}
+}
+@media only screen and (max-width: 600px) {
+	.feature-box {
+		width:calc(100% - 20px);
+	}
+	.feature-box p {
+		margin: 0 10px 30px;
+	}
+}
+/* exchange brofer list in common landing */
+.crypto-logo-container, .forex-logo-container {
+	display:flex;
+	flex-direction:row;
+	flex-wrap: wrap;
+	align-items: stretch;
+	justify-content: center;
+	padding:0 20px;
+	width:calc(50% - 40px);
+}
+@media only screen and (max-width: 600px) {
+	.crypto-logo-container, .forex-logo-container {
+		width:calc(100% - 40px);
+	}
+}
+.crypto-logo-container h2, .forex-logo-container h2 {
+	display:block;
+	width:100%;
+	margin-bottom: 40px;
+	text-align: center;
+}
+.exchange-broker-box {
+	display:flex;
+	height:140px;
+	width:33.3%;
+	flex-direction:column;
+	align-items:center;
+	color:#666666;
+	font-weight:bold;
+	font-size:14px;
+	text-align: center;
+}
+.exchange-broker-box img {
+    display: block;
+    height: 48px;
+    width: 48px;
+	background-color: #FFFFFF;
+	border-radius:50%;
+	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.15);
 }
