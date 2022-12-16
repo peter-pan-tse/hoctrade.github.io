@@ -109,11 +109,11 @@
 		width:calc(100% - 10px);
 	}
 	.top-crypto-block {
-		background-image:linear-gradient(to bottom, rgba(237,196,92,0.75), rgba(237,196,92,0));
+		background-image:linear-gradient(to top, rgba(237,196,92,0.75), rgba(237,196,92,0));
 		padding:0 5px 20px 5px;
 	}
 	.top-forex-block {
-		background-image:linear-gradient(to top, rgba(6,175,201,0.75), rgba(6,175,201,0));
+		background-image:linear-gradient(to bottom, rgba(6,175,201,0.75), rgba(6,175,201,0));
 		padding:0 5px 20px 5px;
 	}
 }
@@ -124,17 +124,20 @@
 	color:#FFFFFF;
 	font-weight:normal;
 }
-.top-crypto-block a, .top-forex-block a {
+.top-crypto-block a.txtlink, .top-forex-block a.txtlink {
 	color:#ffffff;
 	text-decoration:none;
 	font-size:14px;
 	font-weight:bold;
+	padding:2px 4px;
+	border:1px solid #FFFFFF;
+	border-radius:6px;
 }
-.top-crypto-block a > span, .top-forex-block a > span {
+.top-crypto-block a.txtlink > span, .top-forex-block a.txtlink > span {
 	font-size:20px;
 	vertical-align: middle;
 }
-.top-crypto-block a:hover, .top-forex-block a:hover {
+.top-crypto-block a.txtlink:hover, .top-forex-block a.txtlink:hover {
 	color:orangered;
 }
 .img-top-banner {
@@ -149,10 +152,10 @@
 	.top-crypto-block h3, .top-forex-block h3 {
 		font-size:14px;
 	}
-	.top-crypto-block a, .top-forex-block a {
+	.top-crypto-block a.txtlink, .top-forex-block a.txtlink {
 		font-size:12px;
 	}
-	.top-crypto-block a > span, .top-forex-block a > span {
+	.top-crypto-block a.txtlink > span, .top-forex-block a.txtlink > span {
 		font-size:16px;
 	}
 }
@@ -378,24 +381,23 @@ a.split-btn-crypto img, a.split-btn-forex img {
 		position:relative;
 		flex-direction: row;
 		justify-content: center;
-		padding:10px;
-		width:calc(100% - 40px);
-		background-image: linear-gradient(to right, #8f6f1b, #103456);
-		border-radius:10px;
+		padding:5px 0;
+		width:100%;
+		background-color:#666666;
 		top:0px;
 		left:0px;
 	}
 	.headline-1a h2 {
-		font-size:18px;
+		font-size:16px;
 		text-align: right;
 		margin:0 10px 0 0;
 	}
 	.headline-2a h1 {
-		font-size:48px;
+		font-size:36px;
 		text-align: center;
 	}
 	.headline-3a h3 {
-		font-size:14px;
+		font-size:12px;
 		text-align: left;
 		margin:0 0 0 10px;
 	}
