@@ -24,7 +24,8 @@
 		justify-content: space-between;
 		align-items: center;
 		background-image: linear-gradient(to bottom, #ba9a48, #047f92);
-		height:auto
+		height:auto;
+		min-height:calc(100vh - 45px);
 	}
 }
 .commontop-bg-1 {
@@ -370,6 +371,33 @@ a.split-btn-crypto img, a.split-btn-forex img {
 	}
 	.headline-3a h3 {
 		font-size:1.6vh;
+	}
+}
+@media only screen and (max-width: 600px) {
+	.saving-headline-container {
+		position:relative;
+		flex-direction: row;
+		justify-content: center;
+		padding:10px;
+		width:calc(100% - 40px);
+		background-color: black;
+		border-radius:20px;
+		top:0px;
+		left:0px;
+	}
+	.headline-1a h2 {
+		font-size:18px;
+		text-align: right;
+		margin:0 10px 0 0;
+	}
+	.headline-2a h1 {
+		font-size:48px;
+		text-align: center;
+	}
+	.headline-3a h3 {
+		font-size:14px;
+		text-align: left;
+		margin:0 0 0 10px;
 	}
 }
 /* features */
