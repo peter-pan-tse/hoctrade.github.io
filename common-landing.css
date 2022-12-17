@@ -7,7 +7,7 @@
 	background-image: linear-gradient(to right, #ba9a48, #047f92);
 	justify-content: space-between;
 	align-items: stretch;
-	height:calc(100vh - 100px);
+	min-height:calc(100vh - 100px);
 	width:100%;
 	padding:0;
 	margin:0;
@@ -15,7 +15,7 @@
 }
 @media only screen and (max-width: 960px) {
 	#top-split-container {
-		height:50vh;
+		min-height:50vh;
 	}
 }
 @media only screen and (max-width: 600px) {
