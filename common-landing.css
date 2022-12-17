@@ -100,7 +100,7 @@
 		padding:0px 5% 0 5%;
 	}
 	.top-crypto-block h2, .top-forex-block h2 {
-		font-size:3vh;
+		font-size:2.5vh;
 	}
 }
 @media only screen and (max-width: 600px) {
@@ -146,7 +146,13 @@
 }
 .img-top-banner {
 	height:auto;
-	width:80%;
+	width:60%;
+}
+@media only screen and (max-width: 1280px) {
+	.img-top-banner {
+		height:auto;
+		width:80%;
+	}
 }
 @media only screen and (max-width: 600px) {
 	.img-top-banner {
@@ -161,12 +167,6 @@
 	}
 	.top-crypto-block a.txtlink > span, .top-forex-block a.txtlink > span {
 		font-size:16px;
-	}
-}
-@media only screen and (min-width: 1280px) {
-	.img-top-banner {
-		height:auto;
-		width:60%;
 	}
 }
 a.btn-start-crypto, a.btn-start-forex {
