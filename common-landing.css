@@ -107,6 +107,7 @@
 	.top-crypto-block, .top-forex-block {
 		justify-content: center;
 		width:calc(100% - 10px);
+		min-height:calc(50vh - 45px);
 	}
 	.top-crypto-block {
 		background-image:linear-gradient(to top, rgba(237,196,92,0.75), rgba(237,196,92,0));
