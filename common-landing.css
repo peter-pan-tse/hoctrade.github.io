@@ -129,17 +129,20 @@
 	color:#ffffff;
 	text-decoration:none;
 	font-size:14px;
-	font-weight:bold;
-	padding:2px 4px;
+	font-weight:normal;
+	margin:5px 0;
+	padding:1px 3px;
 	border:1px solid #FFFFFF;
 	border-radius:6px;
+	text-align: center;
 }
 .top-crypto-block a.txtlink > span, .top-forex-block a.txtlink > span {
 	font-size:20px;
 	vertical-align: middle;
 }
 .top-crypto-block a.txtlink:hover, .top-forex-block a.txtlink:hover {
-	color:orangered;
+	color:darkslategrey;
+	background-color: #FFFFFF;
 }
 .img-top-banner {
 	height:auto;
