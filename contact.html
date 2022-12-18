@@ -1,0 +1,331 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="jquery-3.6.0.min.js" language="javascript"></script>
+	<link href="https://fonts.googleapis.com/css?family=Noto Sans:400,700,900" rel="stylesheet">
+	<link href="font.css" rel="stylesheet">
+	<link href="landing-drfee.css" rel="stylesheet">
+	<link href="burger-menu-drfee.css" rel="stylesheet">
+	<link href="carousel-drfee.css" rel="stylesheet">
+	<link href="accordion-drfee.css" rel="stylesheet">
+	<link href="setting.css" rel="stylesheet">
+	<link rel="icon" href="img/favicon-drfee.svg">
+	<title>dr-fee</title>
+	<!-- write your code here -->
+	<style>
+		h1, h2, h3 {
+			margin-top:30px;
+		}
+		.main-container {
+			display:block;
+		}
+		@media only screen and (min-width: 1024px) {
+			body {
+				font-size:18px;
+			}
+		}
+		@media only screen and (max-width: 960px) {
+			.footer {
+				position:relative;
+			}
+			body {
+				padding-bottom:0;
+				
+			}
+			.main-container {
+				min-height:calc(100vh - 350px);
+			}
+		}
+		@media only screen and (max-width: 600px) {
+			.footer {
+				position:relative;
+			}
+			body {
+				padding-bottom:120px;
+			}
+		}
+		.contact {
+			display:flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: flex-start;
+			width:100%;
+		}
+		.contact-cell {
+			display:inline-block;
+			width:40%;
+		}
+		@media only screen and (max-width: 480px) {
+			.contact {
+				flex-direction: column;
+			}
+			.contact-cell {
+				width:100%;
+			}
+		}
+		.custom-select {
+			background-color:#f9f9f9;
+		}
+		.select-items {
+			background-color:#eeeeee;
+		}
+		.field-label, .custom-select {
+			font-size:14px;
+		}
+	</style>
+	</head>
+	<body>
+		<div class="header">
+			<div class="header-container">
+				<a href="dr-fee-crypto.html"><div class="logo"><img src="img/logo-drfree-1.svg" /></div></a>
+				<ul class="menu">
+					<li><a class="engine" href="fee-analysis-engine-1.html">Fee analysis engine</a></li>
+					<li><a href="dr-fee-exchange-list.html">Exchange list</a></li>
+					<li><a href="dr-fee-crypto-promotion.html">Promotions</a></li>
+					<li><a href="dr-fee-crypto-blog.html">Blog</a></li>
+					<li class="switch-to-forex"><a href="dr-fee-forex.html"><span class="ht-forex-coin"></span>Forex</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<!-- mobile menu -->
+		<nav role="navigation">
+			<div class="recent-cat"></div>
+			<div id="mobileMenuToggle">
+				<!--A fake / hidden checkbox is used as click reciever, so you can use the :checked selector on it.-->
+				<input type="checkbox" />
+				<!--Some spans to act as a hamburger. They are acting like a real hamburger, not that McDonalds stuff.-->
+				<span></span>
+				<span></span>
+				<span></span>
+				<!-- Too bad the menu has to be inside of the button but hey, it's pure CSS magic.-->
+				<ul id="mobileMenu">
+					<li>
+						<a href="fee-analysis-engine-1.html">
+							<div class="s-menu-title"><div class="s-menu-ico ht-bar-chart"></div>Fee analysis engine</div>
+						</a>
+					</li>
+					<li>
+						<a href="dr-fee-exchange-list.html">
+							<div class="s-menu-title"><div class="s-menu-ico ht-clipboard"></div>Exchange list</div>
+						</a>
+					</li>
+					<li>
+						<a href="dr-fee-crypto-promotion.html">
+							<div class="s-menu-title"><div class="s-menu-ico ht-star"></div>Promotions</div>
+						</a>
+					</li>
+					<li>
+						<a href="dr-fee-crypto-blog.html">
+							<div class="s-menu-title"><div class="s-menu-ico ht-blog"></div>Blog</div>
+						</a>
+					</li>
+					<li>
+						<a href="dr-fee-forex.html">
+							<div class="s-menu-title"><div class="s-menu-ico ht-forex-coin"></div>Swtich to dr-fee forex</div>
+						</a>
+					</li>
+				</ul>
+				<div class="mobileMenuMask"></div>
+			</div>
+		</nav>
+		<!-- mobile menu ended -->
+
+
+		<!-- exchange icons -->
+		<div class="main-container">
+			<h1>Contact &amp; support</h1>
+			<p>Your feedbacks and recommendations are invaluable. Please tell us what is your problem and/or any suggestions by filling up the feedback form below. We will get back to you in no time.</p>
+			<div class="feedback-container">
+					<!-- input module -->
+					<div class="field-label"><strong>Topic</strong></div>
+					<div class="custom-select" style="width:calc(100% - 32px);">
+						<select>
+							<option value="null">Please select</option>
+							<option value="general">General question</option>
+							<option value="problem">Report a problem</option>
+							<option value="recommendation">Recommendation</option>
+						</select>
+					</div>
+					<!-- input module end -->
+					<!-- input module -->
+					<div class="field-label"><strong>Area</strong></div>
+					<div class="custom-select" style="width:calc(100% - 32px);">
+						<select>
+							<option value="null">Please select</option>
+							<option value="dr-fee-general">dr-fee general</option>
+							<option value="dr-fee crypto">dr-fee crypto</option>
+							<option value="dr-fee forex">dr-fee-forex</option>
+						</select>
+					</div>
+					<!-- input module end -->
+				<!-- input module -->
+				<div class="field-label"><strong>Details</strong></div>
+				<textarea class="general" placeholder="" rows="4"></textarea>
+				<!-- input module end -->
+				<div class="upload-file-box">
+					<a class="btn-general" href="#"><span class="ht-chain" style="font-size:20px; vertical-align:middle;"></span>Attach file(s) to help us understand more</a>
+					<div style="font-size:10px; color:#999999;">For each file, JPG, PNG or MP4 format. Maximum 1MB.</div>
+					<div class="filter-box">
+						<div class="filter-item">screencap-01.jpg<span class="ht-delete"></span></div>
+					</div>
+				</div>
+				<div class="bottom-btn-group-btns" style="justify-content:flex-end; flex-direction:row;">
+					<a class="btn-form-clear" href="#" style="display: inline-block; width:auto;">Clear</a>
+					<a class="btn-form" href="#" style="display: inline-block; width:auto;">Submit</a>
+				</div>
+			</div><!-- feedback container end -->
+		</div>
+		<!-- 1 click badge -->
+		<div class="oneclick">
+			<span>Get result in</span><div class="text-start">&nbsp;1 CLICK</div>
+		</div>
+		<!-- action button -->
+		<a class="btn-fee-engine" href="fee-analysis-engine-1.html">
+			<div class="text-start"><span class="ht-switch"></span> START</div>
+			<span>fee analysis engine</span>
+		</a>
+		<!-- footer -->
+		<div class="footer">
+			<div class="footer-top-group">
+				<div class="footer-logo-box">
+					<img class="footer-logo" src="img/logo-drfree-2.svg" />&copy;2022 Hoc Trade Technology Co. Ltd. All Rights Reserved
+				</div>
+				<div class="footer-link-box">
+					<span class="separator">|</span><a href="terms.html">Terms &amp; conditions</a><span class="separator">|</span><a href="privacy.html">Privacy policy</a><span class="separator">|</span><a href="about.html">About</a><span class="separator">|</span><a href="contact.html">Contact</a><span class="separator">|</span>
+				</div>
+				<div class="social-box">
+					<a class="social" href="https://www.facebook.com/drfeecrypto" target="_blank"><span class="ht-logo-fb"></span></a><a class="social" href="https://www.instagram.com/drfeecrypto/" target="_blank"><span class="ht-logo-ig"></span></a><a class="social" href="https://twitter.com/drfeecrypto" target="_blank"><span class="ht-logo-twitter"></span></a>
+				</div>
+			</div>
+			<p class="disclaimer">HIGH RISK WARNING: Foreign exchange, cryptocurrencies, and other CFDtrading carries a high level of risk and may not be suitable for everyone. The usage of leverage creates additional risk and loss exposure. Your investment objectives, experience level, and risk tolerance have to be taken into consideration before you decide to trade foreign exchange, cryptocurrencies, or other CFD products. You could lose some or all of your investment. Do not invest money that you cannot afford to lose and always use an appropriate risk management. It’s important to educate yourself on the risks associated with foreign exchange trading, and seek professional advice from an independent financial or tax advisor in case of any questions. Any data and information is provided 'as is' solely for informational purposes, and is not intended for trading purposes or advice. Past performance, including fees, which are presented on this website or you find somewhere else, is not indicative of future results.</p>
+		</div>
+	</body>
+<!-- counter -->
+	<script>
+		function animateValue(id, start, end, duration) {
+			if (start === end) return;
+			var range = end - start;
+			var current = start;
+			var increment = end < start? 1 : +1;
+			var stepTime = Math.abs(Math.floor(duration / range));
+			var obj = document.getElementById(id);
+			var timer = setInterval(function() {
+				current += increment;
+				obj.innerHTML = current;
+				if (current == end) {
+					clearInterval(timer);
+				}
+			}, stepTime);
+		}
+
+		animateValue("topcount", 38, 99, 2000);
+	</script>
+	<script>
+		const observer = new IntersectionObserver(entries => {
+		  entries.forEach(entry => {
+			  const step1 = entry.target.querySelector('.step1');
+			  const step2 = entry.target.querySelector('.step2');
+			  const step3 = entry.target.querySelector('.step3');
+
+			if (entry.isIntersecting) {
+			    step1.classList.add('step1-animation');
+				step2.classList.add('step2-animation');
+				step3.classList.add('step3-animation');
+			  return; // if we added the class, exit the function
+			}
+
+			  // We're not intersecting, so remove the class!
+			  step1.classList.remove('step1-animation');
+			  step2.classList.remove('step2-animation');
+			  step3.classList.remove('step3-animation');
+		  });
+		});
+
+		observer.observe(document.querySelector('.steps-wrapper'));
+	</script>
+	<script>
+		var x, i, j, l, ll, selElmnt, a, b, c;
+		/*look for any elements with the class "custom-select":*/
+		x = document.getElementsByClassName("custom-select");
+		l = x.length;
+		for (i = 0; i < l; i++) {
+		  selElmnt = x[i].getElementsByTagName("select")[0];
+		  ll = selElmnt.length;
+		  /*for each element, create a new DIV that will act as the selected item:*/
+		  a = document.createElement("DIV");
+		  a.setAttribute("class", "select-selected");
+		  a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+		  x[i].appendChild(a);
+		  /*for each element, create a new DIV that will contain the option list:*/
+		  b = document.createElement("DIV");
+		  b.setAttribute("class", "select-items select-hide");
+		  for (j = 1; j < ll; j++) {
+			/*for each option in the original select element,
+			create a new DIV that will act as an option item:*/
+			c = document.createElement("DIV");
+			c.innerHTML = selElmnt.options[j].innerHTML;
+			c.addEventListener("click", function(e) {
+				/*when an item is clicked, update the original select box,
+				and the selected item:*/
+				var y, i, k, s, h, sl, yl;
+				s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+				sl = s.length;
+				h = this.parentNode.previousSibling;
+				for (i = 0; i < sl; i++) {
+				  if (s.options[i].innerHTML == this.innerHTML) {
+					s.selectedIndex = i;
+					h.innerHTML = this.innerHTML;
+					y = this.parentNode.getElementsByClassName("same-as-selected");
+					yl = y.length;
+					for (k = 0; k < yl; k++) {
+					  y[k].removeAttribute("class");
+					}
+					this.setAttribute("class", "same-as-selected");
+					break;
+				  }
+				}
+				h.click();
+			});
+			b.appendChild(c);
+		  }
+		  x[i].appendChild(b);
+		  a.addEventListener("click", function(e) {
+			  /*when the select box is clicked, close any other select boxes,
+			  and open/close the current select box:*/
+			  e.stopPropagation();
+			  closeAllSelect(this);
+			  this.nextSibling.classList.toggle("select-hide");
+			  this.classList.toggle("select-arrow-active");
+			});
+		}
+		function closeAllSelect(elmnt) {
+		  /*a function that will close all select boxes in the document,
+		  except the current select box:*/
+		  var x, y, i, xl, yl, arrNo = [];
+		  x = document.getElementsByClassName("select-items");
+		  y = document.getElementsByClassName("select-selected");
+		  xl = x.length;
+		  yl = y.length;
+		  for (i = 0; i < yl; i++) {
+			if (elmnt == y[i]) {
+			  arrNo.push(i)
+			} else {
+			  y[i].classList.remove("select-arrow-active");
+			}
+		  }
+		  for (i = 0; i < xl; i++) {
+			if (arrNo.indexOf(i)) {
+			  x[i].classList.add("select-hide");
+			}
+		  }
+		}
+		/*if the user clicks anywhere outside the select box,
+		then close all select boxes:*/
+		document.addEventListener("click", closeAllSelect);
+	</script>
+	<script src="carousel.js" language="javascript"></script>
+	<script src="animateViewport.js" language="javascript"></script>
+</html>
