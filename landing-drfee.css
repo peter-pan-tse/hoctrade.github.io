@@ -187,8 +187,8 @@ ul.menu li.switch-to-forex a, ul.menu li.switch-to-crypto a, ul.menu-forex li.sw
 	display:inline-block;
 	height:30px;
 	padding:20px;
-	margin:0 0 0 10px;
-	border-radius:16px;
+	margin:0 -10px 0 10px;
+	border-radius:16px 0 0 16px;
 	font-size:18px;
 	font-weight:bold;
 	text-decoration: none;
@@ -1733,7 +1733,7 @@ a.btn-go-forex:hover {
 }
 
 /* crypto top banner */
-.topbanner {
+.topbanner, .topbanner-forex {
 	display:flex;
 	justify-content:space-between;
 	align-items:flex-end;
@@ -1741,22 +1741,27 @@ a.btn-go-forex:hover {
 	padding:90px 0 40px 0;
 	/*height:calc(100vh - 100px);*/
 	width:100vw;
-	background-image: url("img/top-theme-bg.png");
 	background-position: center;
 	background-size:cover;
 }
+.topbanner {
+	background-image: url("img/top-theme-bg.png");
+}
+.topbanner-forex {
+	background-image: url("img/top-theme-bg-forex.png");
+}
 @media only screen and (min-width: 1281px) {
-	.topbanner {
+	.topbanner, .topbanner-forex {
 		padding:150px 0 40px 0;
 	}
 }
-@media only screen and (max-width: 768px) {
-	.topbanner {
+@media only screen and (max-width: 960px) {
+	.topbanner, .topbanner-forex {
 		padding:120px 0 40px 0;
 	}
 }
-@media only screen and (max-width: 480px) {
-	.topbanner {
+@media only screen and (max-width: 600px) {
+	.topbanner, .topbanner-forex {
 		flex-direction:column;
 		padding:0;
 	}
@@ -1764,11 +1769,18 @@ a.btn-go-forex:hover {
 .topbanner-headlines {
 	display:flex;
 	flex-direction:column;
-	justify-content: flex-end;
+	justify-content: center;
 	align-items: flex-start;
-	width:35vw;
-	margin-left:0px;
-	padding: 0 0 0 calc(50vw - 512px);
+	width:calc(45vw - 40px);
+	padding:20px 20px 20px 40px;
+}
+.topbanner-headlines-forex {
+	display:flex;
+	flex-direction:column;
+	justify-content: center;
+	align-items: flex-start;
+	width:calc(45vw - 40px);
+	padding:20px 40px 20px 20px;
 }
 @media only screen and (max-width: 1430px) {
 	.topbanner-headlines {
@@ -1852,8 +1864,18 @@ img.laptop {
 	position:absolute;
 	bottom:10px;
 	right:0px;
-	width:50vw;
+	width:52vw;
 	animation-name: laptopmove;
+	animation-duration: 1s;  
+	animation-timing-function: ease-out;
+	animation-fill-mode: forwards;
+}
+img.laptop-forex {
+	position:absolute;
+	bottom:10px;
+	left:0px;
+	width:52vw;
+	animation-name: laptopmoveforex;
 	animation-duration: 1s;  
 	animation-timing-function: ease-out;
 	animation-fill-mode: forwards;
@@ -1884,6 +1906,10 @@ img.mobilephone {
   from {right: -150px; opacity:0.5;}
   to {right:-0px; opacity:1;}
 }
+@keyframes laptopmoveforex {
+  from {left: -150px; opacity:0.5;}
+  to {left:-0px; opacity:1;}
+}
 @keyframes mobilephonemove {
   from {bottom: 60px; opacity:0;}
   to {bottom:10px; opacity:1;}
@@ -1898,12 +1924,26 @@ img.mobilephone {
 	bottom:0px;
 	right:0;
 }
+.topbanner-fg-1-forex {
+	position:absolute;
+	top:0;
+	left:0;
+}
+.topbanner-fg-2-forex {
+	position:absolute;
+	bottom:0px;
+	left:0;
+}
 @media only screen and (max-width: 480px) {
-	.topbanner-fg-2 {
+	.topbanner-fg-2, .topbanner-fg-2-forex {
 		display:none;
 	}
 }
-.topbanner-fg-1 img, .topbanner-fg-2 img {
+.topbanner-fg-1-forex img, .topbanner-fg-2-forex img {
+	-webkit-transform: scaleX(-1);
+  	transform: scaleX(-1);
+}
+.topbanner-fg-1 img, .topbanner-fg-2 img, .topbanner-fg-1-forex img, .topbanner-fg-2-forex img {
 	width:40vw;
 }
 ul.list {
@@ -2002,7 +2042,7 @@ span.topcount::after {
 	position:relative;
 	display:flex;
 	flex-direction:column;
-	justify-content: space-between;
+	/*justify-content: space-between;*/
 	width:50%;
 }
 .half-left-1 {
@@ -2031,11 +2071,16 @@ span.topcount::after {
 	}
 }
 /* solutions and approach */
-.solution-bg {
+.solution-bg, .solution-bg-forex {
 	width:100%;
-	background-image: url("img/bg-solution.png");
 	background-position: center;
 	background-size: cover;
+}
+.solution-bg {
+	background-image: url("img/bg-solution.png");
+}
+.solution-bg-forex {
+	background-image: url("img/bg-solution-forex.png");
 }
 img.step1 {
 	position:absolute;
