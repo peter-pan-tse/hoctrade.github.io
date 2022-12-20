@@ -102,15 +102,15 @@ a.btn-general > span {
 .header-container-forex {
 	background-color: #06afc9;
 }
-@media only screen and (max-width: 768px) {
-	.header-container, .header-container-common {
+@media only screen and (max-width: 960px) {
+	.header-container, .header-container-common, .header-container-forex {
 		padding: 10px 10px 0 10px;
 		width: calc(100vw - 20px);
 		height:60px;
 	}
 }
-@media only screen and (max-width: 480px) {
-	.header-container, .header-container-common {
+@media only screen and (max-width: 600px) {
+	.header-container, .header-container-common, .header-container-forex {
 		padding: 5px 10px 0 10px;
 		height:40px;
 	}
@@ -1083,6 +1083,11 @@ a.btn-info > span {
 		text-align:center;
 		margin:10px 0;
 	}
+	.social-box {
+		display:block;
+		width:100%;
+		text-align:center;
+	}
 }
 .footer a.social {
 	color:#edc45c;
@@ -1745,9 +1750,11 @@ a.btn-go-forex:hover {
 	background-size:cover;
 }
 .topbanner {
+	flex-direction:row;
 	background-image: url("img/top-theme-bg.png");
 }
 .topbanner-forex {
+	flex-direction:row-reverse;
 	background-image: url("img/top-theme-bg-forex.png");
 }
 @media only screen and (min-width: 1281px) {
@@ -1773,6 +1780,7 @@ a.btn-go-forex:hover {
 	align-items: flex-start;
 	width:calc(45vw - 40px);
 	padding:20px 20px 20px 40px;
+	z-index:999;
 }
 .topbanner-headlines-forex {
 	display:flex;
@@ -1781,23 +1789,24 @@ a.btn-go-forex:hover {
 	align-items: flex-start;
 	width:calc(45vw - 40px);
 	padding:20px 40px 20px 20px;
+	z-index:999;
 }
 @media only screen and (max-width: 1430px) {
-	.topbanner-headlines {
+	.topbanner-headlines, .topbanner-headlines-forex {
 		width:40vw;
 		margin-left:0px;
 		padding: 0 0 0 calc(50vw - 512px);
 	}
 }
 @media only screen and (max-width: 1184px) {
-	.topbanner-headlines {
+	.topbanner-headlines, .topbanner-headlines-forex {
 		width:calc(50vw - 20px);
 		margin-left:20px;
 		padding: 0 0 0 calc(50vw - 500px);
 	}
 }
-@media only screen and (max-width: 480px) {
-	.topbanner-headlines {
+@media only screen and (max-width: 600px) {
+	.topbanner-headlines, .topbanner-headlines-forex {
 		width:calc(100vw - 40px);
 		margin-left:0px;
 		padding: 20px;
@@ -1893,7 +1902,7 @@ img.mobilephone {
 	animation-delay: 0.5s;
 }
 @media only screen and (max-width: 480px) {
-	img.laptop {
+	img.laptop, img.laptop-forex {
 		position:relative;
 		width:100vw;
 		animation-name: none;

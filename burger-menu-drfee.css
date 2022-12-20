@@ -1,11 +1,11 @@
 ﻿@charset "UTF-8";
 /* CSS Document */
 /* primary menu */
-#mobileMenuToggle {
+#mobileMenuToggle, #mobileMenuToggleForex {
 	display:none;
 }
-@media only screen and (max-width: 480px) {
-	#mobileMenuToggle {
+@media only screen and (max-width: 600px) {
+	#mobileMenuToggle, #mobileMenuToggleForex {
 	 	display: block;
 		position: fixed;
 	 	top: 12px;
@@ -16,17 +16,17 @@
 	}
 }
 
-#mobileMenuToggle a {
+#mobileMenuToggle a, #mobileMenuToggleForex a {
 	text-decoration: none;
 	transition: color 0.3s ease;
 }
 
-#mobileMenuToggle a:hover {
+#mobileMenuToggle a:hover, #mobileMenuToggleForex a:hover {
 	color: #FFFFFF;
 }
 
 
-#mobileMenuToggle input {
+#mobileMenuToggle input, #mobileMenuToggleForex input {
 	display: block;
 	width: 40px;
 	height: 40px;
@@ -40,13 +40,12 @@
 }
 
 /* Just a quick hamburger */
-#mobileMenuToggle span {
+#mobileMenuToggle span, #mobileMenuToggleForex span {
 	display: block;
 	width: 22px;
 	height: 4px;
 	margin-bottom: 4px;
 	position: relative;
-	background: #06AFC9;
 	border-radius: 0 2px 2px 0px;
 	z-index: 10000;
 	transform-origin: 0% 0%;
@@ -54,34 +53,39 @@
               	background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
               	opacity 0.55s ease;
 }
-
-#mobileMenuToggle span:first-child {
+#mobileMenuToggle span {
+	background: #8f6f1b;
+}
+#mobileMenuToggleForex span {
+	background: #103456;
+}
+#mobileMenuToggle span:first-child, #mobileMenuToggleForex span:first-child {
 	transform-origin: 4px 0px;
 	width: 20px;
 	height: 4px;
 }
 
-#mobileMenuToggle span:nth-last-child(3) {
+#mobileMenuToggle span:nth-last-child(3), #mobileMenuToggleForex span:nth-child(3) {
 	transform-origin: 0% 100%;
 	width: 18px;
 	height: 4px;
 }
 
 /* Transform all the slices of hamburger into a crossmark. */
-#mobileMenuToggle input:checked ~ span {
+#mobileMenuToggle input:checked ~ span, #mobileMenuToggleForex input:checked ~ span {
 	opacity: 1;
 	transform: rotate(45deg) translate(4px, -2px);
 	background: #06AFC9;
 }
 
 /*  But let's hide the middle one. */
-#mobileMenuToggle input:checked ~ span:nth-last-child(3) {
+#mobileMenuToggle input:checked ~ span:nth-last-child(3), #mobileMenuToggleForex input:checked ~ span:nth-child(3) {
 	opacity: 0;
 	transform: rotate(0deg) scale(0.2, 0.2);
 }
 
 /* Oh yeah and the last one should go the other direction */
-#mobileMenuToggle input:checked ~ span:nth-last-child(4) {
+#mobileMenuToggle input:checked ~ span:nth-last-child(4), #mobileMenuToggleForex input:checked ~ span:nth-child(4) {
 	transform: rotate(-45deg) translate(-5px, 7px);
 }
 
@@ -217,9 +221,9 @@ a.s-menu-item.disabled {
 	color:#999999;
 }
 /* And let's slide it in from the left */
-#mobileMenuToggle input:checked ~ ul {
+#mobileMenuToggle input:checked ~ ul, #mobileMenuToggleForex input:checked ~ ul {
 	transform: none;
 }
-#mobileMenuToggle input:checked ~ .mobileMenuMask {
+#mobileMenuToggle input:checked ~ .mobileMenuMask, #mobileMenuToggleForex input:checked ~ .mobileMenuMask {
 	display: block;
 }
