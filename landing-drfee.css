@@ -49,7 +49,7 @@ a {
 	text-decoration:underline;
 }
 a:hover, a:focus {
-	color:#06afc9;
+	color:#047F92;
 }
 a.btn-general {
 	display:inline-block;
@@ -100,7 +100,7 @@ a.btn-general > span {
 	background-color: #edc45c;
 }
 .header-container-forex {
-	background-color: #06afc9;
+	background-color: #047F92;
 }
 @media only screen and (max-width: 960px) {
 	.header-container, .header-container-common, .header-container-forex {
@@ -199,7 +199,7 @@ ul.menu li.switch-to-forex a, ul.menu li.switch-to-crypto a, ul.menu-forex li.sw
 }
 ul.menu li.switch-to-forex a, ul.menu-forex li.switch-to-forex a {
 	color:#FFFFFF;
-	background-color:#07c3e0;
+	background-color:#047F92;
 }
 ul.menu li.switch-to-crypto a, ul.menu-forex li.switch-to-crypto a {
 	color:#333333;
@@ -809,7 +809,7 @@ input.currency2 {
 }
 /* On mouse-over, add a background color */
 .container:hover input ~ .checkmark {
-	background-color: #06AFC9;
+	background-color: #047F92;
 }
 /* When the checkbox is checked, add a blue background */
 .check-box input:checked ~ .checkmark, .check-box-l input:checked ~ .checkmark {
@@ -905,7 +905,7 @@ a.btn-info {
 	margin:0 0 0 4px;
 }
 a.btn-info:hover {
-	color:#06afc9;
+	color:#047F92;
 }
 a.btn-info > span {
 	position:absolute;
@@ -1701,7 +1701,7 @@ img.commontop-tablet {
 	background-color:#edc45c;
 }
 .gotoforex-container {
-	background-color:#06afc9;
+	background-color:#047F92;
 }
 a.btn-go-crypto, a.btn-go-forex {
 	display:flex;
@@ -2437,7 +2437,7 @@ textarea.general {
 	background-color:#f9f9f9;
 	font-size:12px;
 	line-height: 1em;
-	color:#06AFC9;
+	color:#047F92;
 }
 .filter-item span {
 	position:absolute;
@@ -2480,7 +2480,7 @@ a.btn-form {
 	text-decoration:none;
 }
 a.btn-form:hover {
-	background-color:#06AFC9;
+	background-color:#047F92;
 }
 a.btn-form-clear {
 	display:flex;
@@ -2503,8 +2503,8 @@ a.btn-form-clear {
 }
 a.btn-form-clear:hover {
 	color:#FFFFFF;
-	background-color:#06AFC9;
-	border:1px solid #06AFC9;
+	background-color:#047F92;
+	border:1px solid #047F92;
 }
 a.btn-form span {
 	font-size:20px;
