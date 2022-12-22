@@ -49,7 +49,7 @@ a {
 	text-decoration:underline;
 }
 a:hover, a:focus {
-	color:#047F92;
+	color:#0792a0;
 }
 a.btn-general {
 	display:inline-block;
@@ -62,7 +62,7 @@ a.btn-general {
 	font-size:14px;
 	font-weight: normal;
 	line-height:16px;
-	color:#047F92;
+	color:#0792a0;
 	border-radius:6px;
 	transition: all 0.3s ease;
 }
@@ -100,7 +100,7 @@ a.btn-general > span {
 	background-color: #edc45c;
 }
 .header-container-forex {
-	background-color: #047F92;
+	background-color: #0792a0;
 }
 @media only screen and (max-width: 960px) {
 	.header-container, .header-container-common, .header-container-forex {
@@ -199,7 +199,7 @@ ul.menu li.switch-to-forex a, ul.menu li.switch-to-crypto a, ul.menu-forex li.sw
 }
 ul.menu li.switch-to-forex a, ul.menu-forex li.switch-to-forex a {
 	color:#FFFFFF;
-	background-color:#047F92;
+	background-color:#0792a0;
 }
 ul.menu li.switch-to-crypto a, ul.menu-forex li.switch-to-crypto a {
 	color:#333333;
@@ -237,20 +237,20 @@ ul.menu li.switch-to-forex a span, ul.menu li.switch-to-crypto a span, ul.menu-f
 	}
 }
 ul.menu li a:hover {
-	color:#047f92;
+	color:#0792a0;
 	background-color: #eddcaf;
 }
 ul.menu li a.active {
-	color:#047f92;
+	color:#0792a0;
 	background-color: #ffffff;
 	/*box-shadow: 5px -3px 5px rgba(0, 0, 0, 0.3);*/
 }
 ul.menu-forex li a:hover {
-	color:#047f92;
+	color:#0792a0;
 	background-color: #51d7e5;
 }
 ul.menu-forex li a.active {
-	color:#047f92;
+	color:#0792a0;
 	background-color: #ffffff;
 	/*box-shadow: 5px -3px 5px rgba(0, 0, 0, 0.3);*/
 }
@@ -308,14 +308,14 @@ h1.result {
 	margin: 0 10px 0 0;
 }
 h1 {
-	color:#047f92;
+	color:#0792a0;
 	line-height: 1.25em;
 	font-weight:bold;
 	font-size:48px;
 	margin: 20px 0 ;
 }
 h2 {
-	color:#047f92;
+	color:#0792a0;
 	font-size:24px;
 	font-weight:bold;
 	line-height: 1.25em;
@@ -809,11 +809,11 @@ input.currency2 {
 }
 /* On mouse-over, add a background color */
 .container:hover input ~ .checkmark {
-	background-color: #047F92;
+	background-color: #0792a0;
 }
 /* When the checkbox is checked, add a blue background */
 .check-box input:checked ~ .checkmark, .check-box-l input:checked ~ .checkmark {
-	background-color: #047F92;
+	background-color: #0792a0;
 }
 /* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
@@ -881,7 +881,7 @@ a.btn-submit {
 }
 a.btn-submit:hover {
 	color:#FFFFFF;
-	background-color:#047f92;
+	background-color:#0792a0;
 }
 a.btn-submit.disabled {
 	color:#999999;
@@ -896,7 +896,7 @@ a.btn-info {
 	width:12px;
 	height:12px;
 	background-color:#FFFFFF;
-	color:#047f92;
+	color:#0792a0;
 	cursor: pointer;
 	transition:all ease 0.3s;
 	text-decoration:none;
@@ -905,7 +905,7 @@ a.btn-info {
 	margin:0 0 0 4px;
 }
 a.btn-info:hover {
-	color:#047F92;
+	color:#0792a0;
 }
 a.btn-info > span {
 	position:absolute;
@@ -1225,7 +1225,7 @@ a.btn-info > span {
 	margin-bottom:10px;
 }
 .slider .slide.forex {
-	color:#047f92;
+	color:#0792a0;
 }
 /* promotions */
 .promo-box {
@@ -1390,7 +1390,7 @@ ul.blog li > .intro > .blog-header {
 	align-items:center;
 }
 ul.blog li > .intro > h1, .blog-content > h1 {
-	color:#047f92;
+	color:#0792a0;
 	font-size:24px;
 	font-weight: normal;
 	line-height: 1.25em;
@@ -1503,7 +1503,7 @@ a.btn-share:hover {
 	padding:0;
 	margin:0;
 	width:100vw;
-	background-image: linear-gradient(to right, #ba9a48, #047f92);
+	background-image: linear-gradient(to right, #ba9a48, #0792a0);
 }
 .commontop-devices {
 	position:relative;
@@ -1701,7 +1701,7 @@ img.commontop-tablet {
 	background-color:#edc45c;
 }
 .gotoforex-container {
-	background-color:#047F92;
+	background-color:#0792a0;
 }
 a.btn-go-crypto, a.btn-go-forex {
 	display:flex;
@@ -2179,7 +2179,7 @@ img.step3 {
 	width:16.6%;
 	flex-direction:column;
 	align-items:center;
-	color:#047f92;
+	color:#0792a0;
 	font-weight:bold;
 	text-align:center;
 }
@@ -2246,7 +2246,7 @@ img.step3 {
   transition: .4s;
 }
 input:checked + .slider {
-  background-color: #047F92;
+  background-color: #0792a0;
 }
 input:focus + .slider {
   box-shadow: 0 0 1px rgba(0 0 0 / 0.5);
@@ -2319,7 +2319,7 @@ a.btn-fee-engine, a.btn-cost-engine {
 	transition:all ease 0.3s;
 }
 a.btn-fee-engine {
-	background-color:#047f92;
+	background-color:#0792a0;
 	color:#edc45c;
 }
 a.btn-cost-engine {
@@ -2437,7 +2437,7 @@ textarea.general {
 	background-color:#f9f9f9;
 	font-size:12px;
 	line-height: 1em;
-	color:#047F92;
+	color:#0792a0;
 }
 .filter-item span {
 	position:absolute;
@@ -2469,7 +2469,7 @@ a.btn-form {
 	height:40px;
 	width: calc(100% - 20px);
 	padding:0px 20px;
-	background-color:#047F92;
+	background-color:#0792a0;
 	border-radius:10px;
 	font-size:18px;
 	line-height:40px;
@@ -2480,7 +2480,7 @@ a.btn-form {
 	text-decoration:none;
 }
 a.btn-form:hover {
-	background-color:#047F92;
+	background-color:#0792a0;
 }
 a.btn-form-clear {
 	display:flex;
@@ -2490,12 +2490,12 @@ a.btn-form-clear {
 	width: calc(100% - 20px);
 	padding:0px 20px;
 	background-color:#FFFFFF;
-	border:1px solid #047F92;
+	border:1px solid #0792a0;
 	border-radius:10px;
 	font-size:18px;
 	line-height:38px;
 	font-weight: bold;
-	color:#047F92;
+	color:#0792a0;
 	transition: all 0.3s ease;
 	cursor:pointer;
 	text-decoration:none;
@@ -2503,8 +2503,8 @@ a.btn-form-clear {
 }
 a.btn-form-clear:hover {
 	color:#FFFFFF;
-	background-color:#047F92;
-	border:1px solid #047F92;
+	background-color:#0792a0;
+	border:1px solid #0792a0;
 }
 a.btn-form span {
 	font-size:20px;

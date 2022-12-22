@@ -4,7 +4,7 @@
 	position:relative;
 	display:flex;
 	flex-direction:row;
-	background-image: linear-gradient(to right, #ba9a48, #047f92);
+	background-image: linear-gradient(to right, #ba9a48, #0792a0);
 	justify-content: space-between;
 	align-items: stretch;
 	min-height:calc(100vh - 100px);
@@ -23,7 +23,7 @@
 		flex-direction:column;
 		justify-content: space-between;
 		align-items: center;
-		background-image: linear-gradient(to bottom, #ba9a48, #047f92);
+		background-image: linear-gradient(to bottom, #ba9a48, #0792a0);
 		height:auto;
 		min-height:calc(100vh - 45px);
 	}
@@ -195,7 +195,7 @@ a.btn-start-crypto:hover {
 }
 a.btn-start-forex:hover {
 	color:#FFFFFF;
-	background-color:#047f92;
+	background-color:#0792a0;
 }
 @media only screen and (max-width: 600px) {
 	a.btn-start-crypto, a.btn-start-forex {
@@ -209,7 +209,7 @@ a.btn-start-forex:hover {
 	display:flex;
 	flex-direction:column;
 	align-items: center;
-	background-image: linear-gradient(to right, #8f6f1b, #047f92);
+	background-image: linear-gradient(to right, #8f6f1b, #0792a0);
 	width:100%;
 	padding:80px 0 0 0;
 	margin:0;
@@ -280,7 +280,7 @@ a.split-btn-crypto:hover {
 }
 a.split-btn-forex:hover {
 	color:#FFFFFF;
-	background-color:#047f92;
+	background-color:#0792a0;
 	/*background-image:linear-gradient(to bottom, rgba(6,175,201,1), rgba(6,175,201,0));*/
 }
 a.split-btn-crypto img, a.split-btn-forex img {
