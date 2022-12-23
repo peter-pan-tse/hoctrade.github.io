@@ -2537,6 +2537,7 @@ a.share-item {
 	text-decoration: none;
 	color:#103456;
 	transition: all ease 0.3s;
+	text-align: center;
 }
 a.share-item:hover {
 	color:#FF0000;
