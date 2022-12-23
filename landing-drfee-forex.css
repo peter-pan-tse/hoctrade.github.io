@@ -139,7 +139,7 @@ a.btn-general > span {
 	max-height:auto;
 	max-width:100%;
 }
-ul.menu {
+ul.menu, ul.menu-forex {
 	list-style: none;
 	display:flex;
 	flex-direction:row;
@@ -149,11 +149,11 @@ ul.menu {
 	transition:all ease 0.3s;
 }
 @media only screen and (max-width: 600px) {
-	ul.menu {
+	ul.menu, ul.menu-forex {
 		display:none;
 	}
 }
-ul.menu li a, ul.menu li a.crypto {
+ul.menu li a, ul.menu li a.engine, ul.menu li a.crypto, ul.menu li a.forex {
 	display:inline-block;
 	margin:0;
 	height:65px;
@@ -168,23 +168,38 @@ ul.menu li a, ul.menu li a.crypto {
 	transition:all ease 0.3s;
 	text-align:center;
 }
-ul.menu li a.engine {
+ul.menu-forex li a, ul.menu-forex li a.crypto, ul.menu-forex li a.forex {
 	display:inline-block;
 	margin:0;
 	height:65px;
 	padding:20px 20px 0 20px;
 	border-radius:20px 20px 0 0;
-	color:#edc45c;
+	color:#FFFFFF;
+	font-size:18px;
+	font-weight:bold;
+	text-decoration: none;
+	background-color:transparent;
+	cursor: pointer;
+	transition:all ease 0.3s;
+	text-align:center;
+}
+ul.menu-forex li a.engine {
+	display:inline-block;
+	margin:0;
+	height:65px;
+	padding:20px 20px 0 20px;
+	border-radius:20px 20px 0 0;
+	color:#51d7e5;
 	font-size:18px;
 	line-height: 1.25em;
 	font-weight:bold;
 	text-decoration: none;
-	background-color:#564112;
+	background-color:#024b57;
 	cursor: pointer;
 	transition:all ease 0.3s;
 	text-align:left;
 }
-ul.menu li.switch-to-forex a, ul.menu li.switch-to-crypto a {
+ul.menu-forex li.switch-to-forex a, ul.menu-forex li.switch-to-crypto a {
 	display:flex;
 	flex-direction: row;
 	align-items: center;
@@ -201,56 +216,71 @@ ul.menu li.switch-to-forex a, ul.menu li.switch-to-crypto a {
 	text-align:center;
 	/*text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);*/
 }
-ul.menu li.switch-to-forex a {
+ul.menu li.switch-to-forex a, ul.menu-forex li.switch-to-forex a {
 	color:#FFFFFF;
 	background-color:#0792a0;
 }
-ul.menu li.switch-to-crypto a {
+ul.menu li.switch-to-crypto a, ul.menu-forex li.switch-to-crypto a {
 	color:#333333;
 	background-color:#edc45c;
 }
-ul.menu li.switch-to-forex a:hover {
+ul.menu li.switch-to-forex a:hover, ul.menu-forex li.switch-to-forex a:hover {
 	color:#FFFFFF;
 	background-color:#103456;
 }
-ul.menu li.switch-to-crypto a:hover {
+ul.menu li.switch-to-crypto a:hover, ul.menu-forex li.switch-to-crypto a:hover {
 	color:#FFFFFF;
 	background-color:#8f6f1b;
 }
-ul.menu li.switch-to-forex a div.ico, ul.menu li.switch-to-crypto a div.ico {
+ul.menu-forex li.switch-to-forex a div.ico, ul.menu-forex li.switch-to-crypto a div.ico {
 	font-size:30px;
 	margin:0 5px 0 0;
 	vertical-align: middle;
 }
 @media only screen and (max-width: 960px) {
-	ul.menu li a, ul.menu li a.crypto, ul.menu li a.forex {
+	ul.menu li a, ul.menu li a.crypto, ul.menu li a.forex, ul.menu-forex li a, ul.menu-forex li a.crypto, ul.menu-forex li a.forex {
 		height:50px;
 		padding:10px 20px 0 20px;
 		border-radius:15px 15px 0 0;
 		font-size:14px;
 	}
-	ul.menu li.switch-to-forex a, ul.menu li.switch-to-crypto a {
+	ul.menu li.switch-to-forex a, ul.menu li.switch-to-crypto a, ul.menu-forex li.switch-to-forex a, ul.menu-forex li.switch-to-crypto a {
 		height:25px;
 		padding:10px;
 		margin:0 0 0 5px;
 		border-radius:10px;
 		font-size:14px;
 	}
-	ul.menu li.switch-to-forex a div.ico, ul.menu li.switch-to-crypto a div.ico {
+	ul.menu-forex li.switch-to-forex a div.ico, ul.menu-forex li.switch-to-crypto a div.ico {
 		font-size:24px;
 	}
 }
 ul.menu li a:hover {
-	color:#806a31;
+	color:#0792a0;
 	background-color: #eddcaf;
 }
 ul.menu li a.active {
-	color:#806a31;
+	color:#0792a0;
+	background-color: #ffffff;
+	/*box-shadow: 5px -3px 5px rgba(0, 0, 0, 0.3);*/
+}
+ul.menu-forex li a:hover {
+	color:#0792a0;
+	background-color: #51d7e5;
+}
+ul.menu-forex li a.active {
+	color:#0792a0;
 	background-color: #ffffff;
 	/*box-shadow: 5px -3px 5px rgba(0, 0, 0, 0.3);*/
 }
 @media only screen and (max-width: 768px) {
 	ul.menu li a.engine {
+		height:50px;
+		padding:10px 20px 0 20px;
+		border-radius:15px 15px 0 0;
+		font-size:14px;
+	}
+	ul.menu-forex li a.engine {
 		height:50px;
 		padding:10px 20px 0 20px;
 		border-radius:15px 15px 0 0;
@@ -271,13 +301,13 @@ ul.menu li a.forex:hover {
 	color:#ffffff;
 	background-color:#07c3e0;
 }
-ul.menu li a.engine:hover {
-	color:#edc45c;
+ul.menu-forex li a.engine:hover {
+	color:#07c3e0;
 	background-color:#4d4d4d;
 }
-ul.menu li a.engine.active {
-	color:#edc45c;
-	background-color: #564112;
+ul.menu-forex li a.engine.active {
+	color:#07c3e0;
+	background-color: #024b57;
 	box-shadow: 5px 3px 5px rgba(77, 77, 77, 0.75);
 }
 h1.result {
@@ -288,14 +318,14 @@ h1.result {
 	margin: 0 10px 0 0;
 }
 h1 {
-	color:#806a31;
+	color:#0792a0;
 	line-height: 1.25em;
 	font-weight:bold;
 	font-size:48px;
 	margin: 20px 0 ;
 }
 h2 {
-	color:#806a31;
+	color:#0792a0;
 	font-size:24px;
 	font-weight:bold;
 	line-height: 1.25em;
@@ -1370,7 +1400,7 @@ ul.blog li > .intro > .blog-header {
 	align-items:center;
 }
 ul.blog li > .intro > h1, .blog-content > h1 {
-	color:#806a31;
+	color:#0792a0;
 	font-size:24px;
 	font-weight: normal;
 	line-height: 1.25em;
@@ -2279,7 +2309,7 @@ input:checked + .slider:before {
 	}
 }
 /* action button */
-a.btn-fee-engine, a.btn-cost-engine {
+a.btn-cost-engine {
 	display:flex;
 	flex-direction:column;
 	justify-content:flex-end;
@@ -2299,16 +2329,12 @@ a.btn-fee-engine, a.btn-cost-engine {
 	box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
 	transition:all ease 0.3s;
 }
-a.btn-fee-engine {
-	background-color:#564112;
-	color:#edc45c;
-}
 a.btn-cost-engine {
-	background-color:#103456;
+	background-color:#024b57;
 	color:#51d7e5;
 }
-a.btn-fee-engine:hover, a.btn-cost-engine:hover {
-	background-color: #666;
+a.btn-cost-engine:hover {
+	background-color: #666666;
 }
 .text-start {
 	display:flex;
@@ -2359,6 +2385,19 @@ a.btn-fee-engine:hover, a.btn-cost-engine:hover {
 	position:relative;
 	margin: 0;
 	padding:0;
+}
+.labels {
+	display:flex;
+	position:absolute;
+	width:calc(100% - 12px);
+	top:2px;
+	left:6px;
+	font-size:8px;
+	color:#999999;
+	line-height:1em;
+	flex-direction:row;
+	justify-content: space-between;
+	z-index:1;
 }
 .field-label {
 	display:block;
@@ -2496,7 +2535,7 @@ a.share-item {
 	margin:10px;
 	width:20%;
 	text-decoration: none;
-	color:#8f6f1b;
+	color:#103456;
 	transition: all ease 0.3s;
 }
 a.share-item:hover {
@@ -2510,7 +2549,7 @@ a.share-item:hover {
 	line-height: 42px;
 	text-align: center;
 	background-color: #FFFFFF;
-	color:#8f6f1b;
+	color:#103456;
 	border-radius:50%;
 	margin:0 0 10px 0;
 }

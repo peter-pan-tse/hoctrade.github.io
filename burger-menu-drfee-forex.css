@@ -75,7 +75,7 @@
 #mobileMenuToggle input:checked ~ span, #mobileMenuToggleForex input:checked ~ span {
 	opacity: 1;
 	transform: rotate(45deg) translate(4px, -2px);
-	background: #edc45c;
+	background: #06AFC9;
 }
 
 /*  But let's hide the middle one. */
@@ -99,7 +99,7 @@
 	min-height:calc(100vh - 45px);
 	margin: 0;
 	padding:0;
-	background: #edc45c;
+	background: #06AFC9;
 	list-style-type: none;
 	-webkit-font-smoothing: antialiased;
 	/* to stop flickering of text in safari */ 
@@ -112,7 +112,7 @@
 	display: block;
 	padding: 0;
 	margin:0;
-	border-bottom: 1px solid #8f6f1b;
+	border-bottom: 1px solid #047F92;
 }
 .recent-cat {
 	display:none;
@@ -124,7 +124,7 @@
 		text-align:right;
 		font-size:16px;
 		font-weight:bold;
-		color:#8f6f1b;
+		color:#033c45;
 		top:12px;
 		right:48px;
 		z-index: 10003;
@@ -176,7 +176,7 @@
 	flex-direction:row;
 	align-items: center;
 	justify-content: flex-start;
-	color:#8f6f1b;
+	color:#033c45;
 	font-weight: bold;
 	height: 60px;
 	font-size:18px;
@@ -195,7 +195,7 @@
 }
 .s-menu-title.active {
 	color:#FFFFFF;
-	background-color: #8f6f1b;
+	background-color: #047F92;
 }
 a.s-menu-item {
 	display:flex;

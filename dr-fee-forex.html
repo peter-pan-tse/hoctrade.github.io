@@ -6,8 +6,8 @@
 	<script src="jquery-3.6.0.min.js" language="javascript"></script>
 	<link href="https://fonts.googleapis.com/css?family=Noto Sans:400,700,900" rel="stylesheet">
 	<link href="font.css" rel="stylesheet">
-	<link href="landing-drfee.css" rel="stylesheet">
-	<link href="burger-menu-drfee.css" rel="stylesheet">
+	<link href="landing-drfee-forex.css" rel="stylesheet">
+	<link href="burger-menu-drfee-forex.css" rel="stylesheet">
 	<link href="carousel-drfee.css" rel="stylesheet">
 	<link href="accordion-drfee.css" rel="stylesheet">
 	<link rel="icon" href="img/favicon-drfee.svg">
@@ -50,11 +50,11 @@
 			<div class="header-container-forex">
 				<a href="dr-fee-landing.html"><div class="logo"><img src="img/logo-drfree-1-white.svg" /></div></a>
 				<ul class="menu-forex">
-					<li><a class="engine" href="cost-analysis-engine-1.html">Cost analysis engine</a></li>
+					<li><a class="engine" href="cost-analysis-engine-1.html"><span class="ht-switch" style="font-size:24px; vertical-align:middle;"></span> START<br>Cost analysis engine</a></li>
 					<li><a href="dr-fee-broker-list.html">Broker list</a></li>
 					<li><a href="dr-fee-forex-promotion.html">Promotions</a></li>
 					<li><a href="dr-fee-forex-blog.html">Blog</a></li>
-					<li class="switch-to-crypto"><a href="dr-fee-crypto.html"><span class="ht-crypto-coin"></span>Crypto</a></li>
+					<li class="switch-to-crypto"><a href="dr-fee-crypto.html"><div class="ico ht-crypto-coin"></div><div><span style="font-size:smaller;">go to</span><br>Crypto</div></a></li>
 				</ul>
 			</div>
 		</div>
@@ -62,7 +62,7 @@
 		<!-- mobile menu -->
 		<nav role="navigation">
 			<div class="recent-cat"></div>
-			<div id="mobileMenuToggleForex">
+			<div id="mobileMenuToggle">
 				<!--A fake / hidden checkbox is used as click reciever, so you can use the :checked selector on it.-->
 				<input type="checkbox" />
 				<!--Some spans to act as a hamburger. They are acting like a real hamburger, not that McDonalds stuff.-->
@@ -73,7 +73,7 @@
 				<ul id="mobileMenu">
 					<li>
 						<a href="cost-analysis-engine-1.html">
-							<div class="s-menu-title"><div class="s-menu-ico ht-bar-chart"></div>Cost analysis engine</div>
+							<div class="s-menu-title"><div class="s-menu-ico ht-switch"></div>Start cost analysis engine</div>
 						</a>
 					</li>
 					<li>
@@ -93,7 +93,7 @@
 					</li>
 					<li>
 						<a href="dr-fee-crypto.html">
-							<div class="s-menu-title"><div class="s-menu-ico ht-forex-coin"></div>Swtich to dr-fee crypto</div>
+							<div class="s-menu-title"><div class="s-menu-ico ht-forex-coin"></div>Go to dr-fee Crypto</div>
 						</a>
 					</li>
 				</ul>
@@ -119,9 +119,9 @@
 					<div class="headline-box">
 						<p>Our cost analysis simulates your trading costs at other brokers based on your actual trades</p>
 						<ul class="list">
-							<li>Your trading volume &amp; order type</li>
-							<li>Your balance &amp; holdings</li>
-							<li>Your products (SPOT, perpetuals, futures)</li>
+							<li>Your Forex pairs traded</li>
+							<li>Your position size</li>
+							<li>Both spreads &amp; commissions</li>
 						</ul>
 					</div>
 				</div>
@@ -133,9 +133,9 @@
 				<div class="headline-box">
 					<p>Our cost analysis simulates your trading costs at other brokers based on your actual trades</p>
 					<ul class="list">
-						<li>Your trading volume &amp; order type</li>
-						<li>Your balance &amp; holdings</li>
-						<li>Your products (SPOT, perpetuals, futures)</li>
+						<li>Your Forex pairs traded</li>
+						<li>Your position size</li>
+						<li>Both spreads &amp; commissions</li>
 					</ul>
 				</div>
 			</div>
@@ -168,7 +168,7 @@
 				</div>
 				<div class="half-content-block-1 half-right-1">
 					<h2 style="min-height:60px;">Spreads &amp; commissions among brokers differ greatly</h2>
-					<p>You may only pay a fraction of your current cost at other brokers</p>
+					<p>Each Forex pair has a different spread at every broker and some charge commissions, other not.</p>
 					<div class="mobile">
 						<img class="img-responsive" src="img/problem-2-forex.png" />
 					</div>
@@ -185,7 +185,7 @@
 			<h1 align="center" style="color:#FFFFFF;">Our solution &amp; approach</h1>
 			<h2 align="center" style="color:#FFFFFF;">Our cost analysis engine makes spread &amp; commission comparison fast &amp; easy</h2>
 			<div class="main-container" style="margin-top:20px;">
-				<p align="center" style="color:#FFFFFF;">Just connect your read-only trading account through your investor password. We find your cost saving potential by simulating your spreads &amp; commissions for the same trades at other brokers.</p>
+				<p align="center" style="color:#FFFFFF;">Just connect your MT4 trading account through your read-only investor password.</p>
 			</div>
 			<div class="steps-wrapper" style="margin:0 auto; position:relative; text-align: center; max-width:800px;">
 				<img class="step2 img-responsive" src="img/forex-step-2.png" />
