@@ -11,7 +11,7 @@
 <link href="menu.css" rel="stylesheet">
 <link href="trade-history.css" rel="stylesheet">
 <link href="burger-menu.css" rel="stylesheet">
-<link href="modal.css" rel="stylesheet">
+<link href="modal-select-exchange.css" rel="stylesheet">
 <link href="blog.css" rel="stylesheet">
 <link rel="icon" href="favicon.svg">
 <title>hoc-trade editor's pick</title>
@@ -72,8 +72,12 @@
 		color: #FFFFFF;
 	}
 	.modal-content {
-		padding:60px 0 0 0;
-		border-radius:20px 20px 0 0;
+		background-color: #E9F3F5;
+	}
+	@media only screen and (max-width: 768px){
+		.close {
+			background-color: #047F92;
+		}
 	}
 </style>
 </head>
@@ -225,7 +229,7 @@
 						<a class="btn-general" href="hoc-trade-blog.html"><span class="ht-back-arrow"></span>Back</a>
 					</div>
 					<div></div>
-					<a class="btn-share" href="#"><span class="ht-share"></span></a>
+					<a class="btn-share" href="#" id="modalinfo1"><span class="ht-share"></span></a>
 				</div>
 				<h1>Bitcoin mining to harness onsite natural gas emissions: Ark Invest</h1>
 				<div class="blog-footer">
@@ -257,85 +261,37 @@
 	</div>
 	
 	<!-- The Modal -->
-	<div id="modalInfoBox" class="modal">
-		<!-- Modal content -->
+		<div id="modalInfoBox" class="modal">
+			<!-- Modal content -->
 
-	  <div class="modal-content">
-		<div class="modal-header">
-			<span class="close"><span class="ht-cross"></span></span>
+		  <div class="modal-content">
+			<div class="modal-header">
+				<span class="close"><span class="ht-cross"></span></span>
+				<strong>Share this article to</strong>
+			</div>
+			<div class="modal-body">
+				<div class="share-container">
+					<a href="#" class="share-item">
+						<div class="share-logo"><span class="ht-logo-fb"></span></div>
+						<div><strong>Facebook</strong></div>
+					</a>
+					<a href="#" class="share-item">
+						<div class="share-logo"><span class="ht-logo-twitter"></span></div>
+						<div><strong>Twitter</strong></div>
+					</a>
+					<a href="#" class="share-item">
+						<div class="share-logo"><span class="ht-logo-ig"></span></div>
+						<div><strong>Instagram</strong></div>
+					</a>
+					<a href="#" class="share-item">
+						<div class="share-logo"><span class="ht-chain"></span></div>
+						<div><strong>Copy link</strong></div>
+					</a>
+				</div>
+			</div>
+		  </div>
 		</div>
-		<div class="modal-body">
-			<ul class="trade-history">
-				<li style="max-height:calc(100vh - 10px); height: auto; background-color:#E9F3F5;">
-					<div class="th-item">
-						<span class="th-title">Order:</span>
-						1234567890
-					</div>
-					<div class="th-item">
-						<span class="th-title">Open:</span>
-						<div style="display: inline-block;">24/03/2022 19:56:02</div>
-					</div>
-					<div class="th-item">
-						<span class="th-title">Close:</span>
-						<div style="display: inline-block;">24/03/2022 20:06:13</div>
-					</div>
-					<div class="th-item">
-						<span class="th-title">Length:</span>
-						0h10m11s
-					</div>
-					<div class="th-item">
-						<span class="th-title">Symbol:</span>
-						EUR/USD <div class="not-mobile"></div>
-					</div>
-					<div class="th-item">
-						<span class="th-title">Type:</span>
-						<span class="trade-type-box">BUY</span>
-					</div>
-					<div class="th-item">
-						<span class="th-title">Lot:</span>
-						0.05
-					</div>
-					<div class="th-item">
-						<span class="th-title">Price open:</span>
-						1.23564
-					</div>
-					<div class="th-item">
-						<span class="th-title">Price close:</span>
-						1.23859
-					</div>
-					<div class="th-item" style="padding:5px 20px 5px 0px;">
-						<span class="th-title"><span style="padding-left:15px;">High/low (pips):</span></span>
-						<div class="pip-bar">
-							<div class="red-text">-12</div>
-							<div class="red-side" style="width:25px;"></div>
-							<div class="pip-bar-line" style="left:calc(40px + 25px);"></div>
-							<div class="pip-bar-dot" style="left:calc(34px + 33px);"></div>
-							<div class="green-side" style="width:25px;"></div>
-							<div class="green-text">+12</div>
-						</div>
-					</div>
-					<div class="th-item">
-						<span class="th-title">commission:</span>
-						<span class="text-ng">0.35USD</span>
-					</div>
-					<div class="th-item narrower not-mobile">
-						<span class="th-title">Swap:</span>
-						<span class="text-nu">0.00USD</span>
-					</div>
-					<div class="th-item">
-						<span class="th-title">Profit:</span>
-						<span class="text-po"><strong>+4.23USD</strong></span>
-					</div>
-					<div class="th-item">
-						<span class="th-title">Profit (pips):</span>
-						<span class="text-po"><strong>+41Pips</strong></span>
-					</div>
-				</li>
-			</ul>
-		</div>
-	  </div>
-
-	</div>
+	
 </body>
-<script src="modal-th.js" language="javascript"></script>
+<script src="modal.js" language="javascript"></script>
 </html>
