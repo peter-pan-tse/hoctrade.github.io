@@ -16,17 +16,17 @@
 	}
 }
 
-#mobileMenuToggle a, #mobileMenuToggleForex a {
+#mobileMenuToggle a {
 	text-decoration: none;
 	transition: color 0.3s ease;
 }
 
-#mobileMenuToggle a:hover, #mobileMenuToggleForex a:hover {
+#mobileMenuToggle a:hover {
 	color: #FFFFFF;
 }
 
 
-#mobileMenuToggle input, #mobileMenuToggleForex input {
+#mobileMenuToggle input {
 	display: block;
 	width: 40px;
 	height: 40px;
@@ -40,7 +40,7 @@
 }
 
 /* Just a quick hamburger */
-#mobileMenuToggle span, #mobileMenuToggleForex span {
+#mobileMenuToggle span {
 	display: block;
 	width: 22px;
 	height: 4px;
@@ -54,9 +54,6 @@
               	opacity 0.55s ease;
 }
 #mobileMenuToggle span {
-	background: #8f6f1b;
-}
-#mobileMenuToggleForex span {
 	background: #103456;
 }
 #mobileMenuToggle span:first-child, #mobileMenuToggleForex span:first-child {

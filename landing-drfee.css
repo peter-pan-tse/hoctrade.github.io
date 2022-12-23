@@ -1082,7 +1082,7 @@ a.btn-info > span {
 	font-size:18px;
 	vertical-align: middle;
 	text-decoration: none;
-	padding:0 10px;
+	padding:0 5px;
 	transition: all 0.3s ease;
 }
 .footer a:hover, .footer a.social:hover, .footer-common a:hover, .footer-common a.social:hover, .footer-forex a:hover, .footer-forex a.social:hover {
