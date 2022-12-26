@@ -1,0 +1,659 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="jquery-3.6.0.min.js" language="javascript"></script>
+	<link href="https://fonts.googleapis.com/css?family=Noto Sans:400,700,900" rel="stylesheet">
+	<link href="font.css" rel="stylesheet">
+	<link href="chart-forex.css" rel="stylesheet">
+	<link href="landing-drfee-forex.css" rel="stylesheet">
+	<link href="burger-menu-drfee-forex.css" rel="stylesheet">
+	<link rel="icon" href="img/favicon-drfee.svg">
+	<title>dr-fee - Broker list</title>
+	<!-- write your code here -->
+	<style>
+		@media only screen and (max-width: 480px) {
+			body {
+				padding-bottom:120px;
+			}
+		}
+		@media only screen and (min-width: 481px) {
+			body {
+				padding-bottom:0px;
+			}
+		}
+		@media only screen and (max-width: 768px) {
+			.footer {
+				position:relative;
+			}
+		}
+		@media only screen and (max-width: 480px) {
+			.footer {
+				position:relative;
+			}
+		}
+	</style>
+	</head>
+	<body>
+		<div class="header">
+			<div class="header-container-forex">
+				<a href="dr-fee-forex.html"><div class="logo"><img src="img/logo-drfree-1-white.svg" /></div></a>
+				<ul class="menu-forex">
+					<li><a class="engine" href="cost-analysis-engine-1.html"><span class="ht-switch" style="font-size:24px; vertical-align:middle;"></span> START<br>Cost analysis engine</a></li>
+					<li><a class="active" href="dr-fee-broker-list.html">Broker list</a></li>
+					<li><a href="dr-fee-forex-promotion.html">Promotions</a></li>
+					<li><a href="dr-fee-forex-blog.html">Blog</a></li>
+					<li class="switch-to-crypto"><a href="dr-fee-crypto.html"><div class="ico ht-crypto-coin"></div><div><span style="font-size:smaller;">go to</span><br>Crypto</div></a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<!-- mobile menu -->
+		<nav role="navigation">
+			<div class="recent-cat"></div>
+			<div id="mobileMenuToggle">
+				<!--A fake / hidden checkbox is used as click reciever, so you can use the :checked selector on it.-->
+				<input type="checkbox" />
+				<!--Some spans to act as a hamburger. They are acting like a real hamburger, not that McDonalds stuff.-->
+				<span></span>
+				<span></span>
+				<span></span>
+				<!-- Too bad the menu has to be inside of the button but hey, it's pure CSS magic.-->
+				<ul id="mobileMenu">
+					<li>
+						<a href="cost-analysis-engine-1.html">
+							<div class="s-menu-title"><div class="s-menu-ico ht-switch"></div>Start cost analysis engine</div>
+						</a>
+					</li>
+					<li>
+						<a href="dr-fee-broker-list.html">
+							<div class="s-menu-title active"><div class="s-menu-ico ht-clipboard"></div>Broker list</div>
+						</a>
+					</li>
+					<li>
+						<a href="dr-fee-forex-promotion.html">
+							<div class="s-menu-title"><div class="s-menu-ico ht-star"></div>Promotions</div>
+						</a>
+					</li>
+					<li>
+						<a href="dr-fee-forex-blog.html">
+							<div class="s-menu-title"><div class="s-menu-ico ht-blog"></div>Blog</div>
+						</a>
+					</li>
+					<li>
+						<a href="dr-fee-crypto.html">
+							<div class="s-menu-title"><div class="s-menu-ico ht-forex-coin"></div>Go to dr-fee Crypto</div>
+						</a>
+					</li>
+				</ul>
+				<div class="mobileMenuMask"></div>
+			</div>
+		</nav>
+		<!-- mobile menu ended -->
+		
+			<!-- table -- desktop / tablet -->
+			<div class="table-desktop">
+				<ul class="ex-list-table">
+					<li>
+						<div class="ex-list-row">
+							<div class="ex-list-item list-no">No.</div>
+							<div class="ex-list-item list-name">Exchange</div>
+							<div class="ex-list-item list-since">Since</div>
+							<div class="ex-list-item list-us-trader">US trader allowed?</div>
+							<div class="list-fee">
+								<div>Costs</div>
+								<div class="list-fee-container">
+									<div class="list-fee-spot">
+										<div>Spread</div>
+									</div>
+									<div class="list-fee-futures">
+										<div>Commission</div>
+									</div>
+								</div>
+							</div>
+							<div class="ex-list-item list-diff">Differentiator</div>
+							<div class="ex-list-item list-bonus">Exclusive bonus</div>
+							<div class="ex-list-item list-reg">Register</div>
+							<div class="ex-list-item list-details">Details</div>
+						</div>
+					</li>
+					<li>
+						<div class="ex-list-row">
+							<div class="ex-list-item list-no">1</div>
+							<div class="ex-list-item list-name">Binance</div>
+							<div class="ex-list-item list-since">2017</div>
+							<div class="ex-list-item list-us-trader">No<br><span style="font-size:10px; font-weight: normal;">(see Binance US)</span></div>
+							<div class="list-fee-2">
+										<div class="list-fee-spot-2">
+											<div class="list-fee-maker-2">0.02% ~ 0.10%</div>
+											<div class="list-fee-taker-2">0.04% ~ 0.10%</div>
+										</div>
+										<div class="list-fee-futures-2">
+											<div class="list-fee-maker-2">0.009% ~ 0.01%</div>
+											<div class="list-fee-taker-2">0.024% ~ 0.05%</div>
+										</div>
+							</div>
+							<div class="ex-list-item list-diff">Largest exchange</div>
+							<div class="ex-list-item list-bonus"><div class="bonus-pill">Up to 50 USD bonus</div></div>
+							<div class="ex-list-item list-reg"><a class="ex-rank-btn" href="https://accounts.binance.com/en/register?ref=487419400" target="_blank"><span class="ht-pencil"></span></a></div>
+							<div class="ex-list-item list-details"><a class="ex-rank-btn" href="https://www.binance.com/en/fee/schedule?ref=487419400" target="_blank"><span class="ht-search"></span></a></div>
+						</div>
+					</li>
+					<li>
+						<div class="ex-list-row">
+							<div class="ex-list-item list-no">2</div>
+							<div class="ex-list-item list-name">Binance US</div>
+							<div class="ex-list-item list-since">2019</div>
+							<div class="ex-list-item list-us-trader">Yes</div>
+							<div class="list-fee-2">
+										<div class="list-fee-spot-2">
+											<div class="list-fee-maker-2">0.00% ~ 0.10%</div>
+											<div class="list-fee-taker-2">0.02% ~ 0.10%</div>
+										</div>
+										<div class="list-fee-futures-2">
+											<div class="list-fee-maker-2">n/a</div>
+											<div class="list-fee-taker-2">n/a</div>
+										</div>
+							</div>
+							<div class="ex-list-item list-diff">Largest exchange</div>
+							<div class="ex-list-item list-bonus"><div class="bonus-pill">10 USD bonus</div></div>
+							<div class="ex-list-item list-reg"><a class="ex-rank-btn" href="https://accounts.binance.us/en/register?ref=59316310" target="_blank"><span class="ht-pencil"></span></a></div>
+							<div class="ex-list-item list-details"><a class="ex-rank-btn" href="https://www.binance.us/en/fee/schedule?ref=59316310" target="_blank"><span class="ht-search"></span></a></div>
+						</div>
+					</li>
+					<li>
+						<div class="ex-list-row">
+							<div class="ex-list-item list-no">3</div>
+							<div class="ex-list-item list-name">FTX</div>
+							<div class="ex-list-item list-since">2019</div>
+							<div class="ex-list-item list-us-trader">No<br><span style="font-size:10px; font-weight: normal;">(see FTX US)</span></div>
+							<div class="list-fee-2">
+										<div class="list-fee-spot-2">
+											<div class="list-fee-maker-2">0.1%</div>
+											<div class="list-fee-taker-2">0.03%</div>
+										</div>
+										<div class="list-fee-futures-2">
+											<div class="list-fee-maker-2">0.1%</div>
+											<div class="list-fee-taker-2">0.03%</div>
+										</div>
+							</div>
+							<div class="ex-list-item list-diff">Blue chip</div>
+							<div class="ex-list-item list-bonus">--</div>
+							<div class="ex-list-item list-reg"><a class="ex-rank-btn" href="#"><span class="ht-pencil"></span></a></div>
+							<div class="ex-list-item list-details"><a class="ex-rank-btn" href="#"><span class="ht-search"></span></a></div>
+						</div>
+					</li>
+					<li>
+						<div class="ex-list-row">
+							<div class="ex-list-item list-no">4</div>
+							<div class="ex-list-item list-name">Gate.io</div>
+							<div class="ex-list-item list-since">2013</div>
+							<div class="ex-list-item list-us-trader">No</div>
+							<div class="list-fee-2">
+										<div class="list-fee-spot-2">
+											<div class="list-fee-maker-2">0.1%</div>
+											<div class="list-fee-taker-2">0.03%</div>
+										</div>
+										<div class="list-fee-futures-2">
+											<div class="list-fee-maker-2">0.1%</div>
+											<div class="list-fee-taker-2">0.03%</div>
+										</div>
+							</div>
+							<div class="ex-list-item list-diff">--</div>
+							<div class="ex-list-item list-bonus">--</div>
+							<div class="ex-list-item list-reg"><a class="ex-rank-btn" href="#"><span class="ht-pencil"></span></a></div>
+							<div class="ex-list-item list-details"><a class="ex-rank-btn" href="#"><span class="ht-search"></span></a></div>
+						</div>
+					</li>
+					<li>
+						<div class="ex-list-row">
+							<div class="ex-list-item list-no">5</div>
+							<div class="ex-list-item list-name">Huobi</div>
+							<div class="ex-list-item list-since">2013</div>
+							<div class="ex-list-item list-us-trader">Yes</div>
+							<div class="list-fee-2">
+										<div class="list-fee-spot-2">
+											<div class="list-fee-maker-2">0.1%</div>
+											<div class="list-fee-taker-2">0.03%</div>
+										</div>
+										<div class="list-fee-futures-2">
+											<div class="list-fee-maker-2">0.1%</div>
+											<div class="list-fee-taker-2">0.03%</div>
+										</div>
+							</div>
+							<div class="ex-list-item list-diff">--</div>
+							<div class="ex-list-item list-bonus"><div class="bonus-pill">100 trades 0 fee</div></div>
+							<div class="ex-list-item list-reg"><a class="ex-rank-btn" href="#"><span class="ht-pencil"></span></a></div>
+							<div class="ex-list-item list-details"><a class="ex-rank-btn" href="#"><span class="ht-search"></span></a></div>
+						</div>
+					</li>
+					<li>
+						<div class="ex-list-row">
+							<div class="ex-list-item list-no">6</div>
+							<div class="ex-list-item list-name">Kraken</div>
+							<div class="ex-list-item list-since">2011</div>
+							<div class="ex-list-item list-us-trader">No</div>
+							<div class="list-fee-2">
+										<div class="list-fee-spot-2">
+											<div class="list-fee-maker-2">0.1%</div>
+											<div class="list-fee-taker-2">0.03%</div>
+										</div>
+										<div class="list-fee-futures-2">
+											<div class="list-fee-maker-2">0.1%</div>
+											<div class="list-fee-taker-2">0.03%</div>
+										</div>
+							</div>
+							<div class="ex-list-item list-diff">Beginner friendly</div>
+							<div class="ex-list-item list-bonus"><div class="bonus-pill">5% rebate</div></div>
+							<div class="ex-list-item list-reg"><a class="ex-rank-btn" href="#"><span class="ht-pencil"></span></a></div>
+							<div class="ex-list-item list-details"><a class="ex-rank-btn" href="#"><span class="ht-search"></span></a></div>
+						</div>
+					</li>
+					<li>
+						<div class="ex-list-row">
+							<div class="ex-list-item list-no">7</div>
+							<div class="ex-list-item list-name">KuCoin</div>
+							<div class="ex-list-item list-since">2017</div>
+							<div class="ex-list-item list-us-trader">Yes</div>
+							<div class="list-fee-2">
+										<div class="list-fee-spot-2">
+											<div class="list-fee-maker-2">0.1%</div>
+											<div class="list-fee-taker-2">0.03%</div>
+										</div>
+										<div class="list-fee-futures-2">
+											<div class="list-fee-maker-2">0.1%</div>
+											<div class="list-fee-taker-2">0.03%</div>
+										</div>
+							</div>
+							<div class="ex-list-item list-diff">Blue chip</div>
+							<div class="ex-list-item list-bonus">--</div>
+							<div class="ex-list-item list-reg"><a class="ex-rank-btn" href="#"><span class="ht-pencil"></span></a></div>
+							<div class="ex-list-item list-details"><a class="ex-rank-btn" href="#"><span class="ht-search"></span></a></div>
+						</div>
+					</li>
+					<li>
+						<div class="ex-list-row">
+							<div class="ex-list-item list-no">8</div>
+							<div class="ex-list-item list-name">Binance US</div>
+							<div class="ex-list-item list-since">2019</div>
+							<div class="ex-list-item list-us-trader">Yes</div>
+							<div class="list-fee-2">
+										<div class="list-fee-spot-2">
+											<div class="list-fee-maker-2">0.1%</div>
+											<div class="list-fee-taker-2">0.03%</div>
+										</div>
+										<div class="list-fee-futures-2">
+											<div class="list-fee-maker-2">0.1%</div>
+											<div class="list-fee-taker-2">0.03%</div>
+										</div>
+							</div>
+							<div class="ex-list-item list-diff">Blue chip</div>
+							<div class="ex-list-item list-bonus"><div class="bonus-pill">100 trades 0 fee</div></div>
+							<div class="ex-list-item list-reg"><a class="ex-rank-btn" href="#"><span class="ht-pencil"></span></a></div>
+							<div class="ex-list-item list-details"><a class="ex-rank-btn" href="#"><span class="ht-search"></span></a></div>
+						</div>
+					</li>
+					<li>
+						<div class="ex-list-row">
+							<div class="ex-list-item list-no">9</div>
+							<div class="ex-list-item list-name">FTX US</div>
+							<div class="ex-list-item list-since">2019</div>
+							<div class="ex-list-item list-us-trader">Yes</div>
+							<div class="list-fee-2">
+										<div class="list-fee-spot-2">
+											<div class="list-fee-maker-2">0.1%</div>
+											<div class="list-fee-taker-2">0.03%</div>
+										</div>
+										<div class="list-fee-futures-2">
+											<div class="list-fee-maker-2">0.1%</div>
+											<div class="list-fee-taker-2">0.03%</div>
+										</div>
+							</div>
+							<div class="ex-list-item list-diff">Blue chip</div>
+							<div class="ex-list-item list-bonus"><div class="bonus-pill">1st month free</div></div>
+							<div class="ex-list-item list-reg"><a class="ex-rank-btn" href="#"><span class="ht-pencil"></span></a></div>
+							<div class="ex-list-item list-details"><a class="ex-rank-btn" href="#"><span class="ht-search"></span></a></div>
+						</div>
+					</li>
+				</ul>
+			</div><!-- table desktop / tablet end -->
+			
+			<!-- table mobile -->
+			<div class="table-mobile">
+				<ul class="ex-list-table">
+					<li></li>
+					<li>
+						<div class="ex-list-row">
+							<div class="ex-list-item list-no">1</div>
+							<div class="ex-list-item list-name">
+								ByBit<span class="ex-smaller-text">--</span>
+							</div>
+							<div class="ex-list-item list-since">
+								<span class="ex-smaller-text">Since</span>
+								2018
+							</div>
+							<div class="list-fee">
+								<div>Costs</div>
+								<div class="list-fee-container">
+									<div class="list-fee-spot">
+										<div>SPOT</div>
+										<div class="list-fee-container">
+											<div class="list-fee-spot">Maker<br><strong>0.1%</strong></div>
+											<div class="list-fee-futures">Taker<br><strong>0.03%</strong></div>
+										</div>
+									</div>
+									<div class="list-fee-futures">
+										<div>Futures</div>
+										<div class="list-fee-container">
+											<div class="list-fee-spot">Maker<br><strong>0.1%</strong></div>
+											<div class="list-fee-futures">Taker<br><strong>0.03%</strong></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="ex-list-item list-details">
+								<a class="btn-exchange-details" href="broker-details-2.html"><span class="ht-triangle-right"></span></a>
+							</div>
+						</div>
+					</li><!-- list item end -->
+					<li>
+						<div class="ex-list-row">
+							<div class="ex-list-item list-no">2</div>
+							<div class="ex-list-item list-name">
+								Binance<span class="ex-smaller-text">Beginner friendly</span>
+							</div>
+							<div class="ex-list-item list-since">
+								<span class="ex-smaller-text">Since</span>
+								2017
+							</div>
+							<div class="list-fee">
+								<div>Costs</div>
+								<div class="list-fee-container">
+									<div class="list-fee-spot">
+										<div>SPOT</div>
+										<div class="list-fee-container">
+											<div class="list-fee-spot">Maker<br><strong>0.1%</strong></div>
+											<div class="list-fee-futures">Taker<br><strong>0.03%</strong></div>
+										</div>
+									</div>
+									<div class="list-fee-futures">
+										<div>Futures</div>
+										<div class="list-fee-container">
+											<div class="list-fee-spot">Maker<br><strong>0.1%</strong></div>
+											<div class="list-fee-futures">Taker<br><strong>0.03%</strong></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="ex-list-item list-details">
+								<a class="btn-exchange-details" href="broker-details-2.html"><span class="ht-triangle-right"></span></a>
+							</div>
+						</div>
+					</li><!-- list item end -->
+					<li>
+						<div class="ex-list-row">
+							<div class="ex-list-item list-no">3</div>
+							<div class="ex-list-item list-name">
+								FTX<span class="ex-smaller-text">Blue chip</span>
+							</div>
+							<div class="ex-list-item list-since">
+								<span class="ex-smaller-text">Since</span>
+								2019
+							</div>
+							<div class="list-fee">
+								<div>Costs</div>
+								<div class="list-fee-container">
+									<div class="list-fee-spot">
+										<div>SPOT</div>
+										<div class="list-fee-container">
+											<div class="list-fee-spot">Maker<br><strong>0.1%</strong></div>
+											<div class="list-fee-futures">Taker<br><strong>0.03%</strong></div>
+										</div>
+									</div>
+									<div class="list-fee-futures">
+										<div>Futures</div>
+										<div class="list-fee-container">
+											<div class="list-fee-spot">Maker<br><strong>0.1%</strong></div>
+											<div class="list-fee-futures">Taker<br><strong>0.03%</strong></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="ex-list-item list-details">
+								<a class="btn-exchange-details" href="broker-details-2.html"><span class="ht-triangle-right"></span></a>
+							</div>
+						</div>
+					</li><!-- list item end -->
+					<li>
+						<div class="ex-list-row">
+							<div class="ex-list-item list-no">4</div>
+							<div class="ex-list-item list-name">
+								Gate.io<span class="ex-smaller-text">--</span>
+							</div>
+							<div class="ex-list-item list-since">
+								<span class="ex-smaller-text">Since</span>
+								2013
+							</div>
+							<div class="list-fee">
+								<div>Costs</div>
+								<div class="list-fee-container">
+									<div class="list-fee-spot">
+										<div>SPOT</div>
+										<div class="list-fee-container">
+											<div class="list-fee-spot">Maker<br><strong>0.1%</strong></div>
+											<div class="list-fee-futures">Taker<br><strong>0.03%</strong></div>
+										</div>
+									</div>
+									<div class="list-fee-futures">
+										<div>Futures</div>
+										<div class="list-fee-container">
+											<div class="list-fee-spot">Maker<br><strong>0.1%</strong></div>
+											<div class="list-fee-futures">Taker<br><strong>0.03%</strong></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="ex-list-item list-details">
+								<a class="btn-exchange-details" href="broker-details-2.html"><span class="ht-triangle-right"></span></a>
+							</div>
+						</div>
+					</li><!-- list item end -->
+					<li>
+						<div class="ex-list-row">
+							<div class="ex-list-item list-no">5</div>
+							<div class="ex-list-item list-name">
+								Huobi<span class="ex-smaller-text">--</span>
+							</div>
+							<div class="ex-list-item list-since">
+								<span class="ex-smaller-text">Since</span>
+								2013
+							</div>
+							<div class="list-fee">
+								<div>Costs</div>
+								<div class="list-fee-container">
+									<div class="list-fee-spot">
+										<div>SPOT</div>
+										<div class="list-fee-container">
+											<div class="list-fee-spot">Maker<br><strong>0.1%</strong></div>
+											<div class="list-fee-futures">Taker<br><strong>0.03%</strong></div>
+										</div>
+									</div>
+									<div class="list-fee-futures">
+										<div>Futures</div>
+										<div class="list-fee-container">
+											<div class="list-fee-spot">Maker<br><strong>0.1%</strong></div>
+											<div class="list-fee-futures">Taker<br><strong>0.03%</strong></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="ex-list-item list-details">
+								<a class="btn-exchange-details" href="broker-details-2.html"><span class="ht-triangle-right"></span></a>
+							</div>
+						</div>
+					</li><!-- list item end -->
+					<li>
+						<div class="ex-list-row">
+							<div class="ex-list-item list-no">6</div>
+							<div class="ex-list-item list-name">
+								Kraken<span class="ex-smaller-text">Beginner friendly</span>
+							</div>
+							<div class="ex-list-item list-since">
+								<span class="ex-smaller-text">Since</span>
+								2011
+							</div>
+							<div class="list-fee">
+								<div>Costs</div>
+								<div class="list-fee-container">
+									<div class="list-fee-spot">
+										<div>SPOT</div>
+										<div class="list-fee-container">
+											<div class="list-fee-spot">Maker<br><strong>0.1%</strong></div>
+											<div class="list-fee-futures">Taker<br><strong>0.03%</strong></div>
+										</div>
+									</div>
+									<div class="list-fee-futures">
+										<div>Futures</div>
+										<div class="list-fee-container">
+											<div class="list-fee-spot">Maker<br><strong>0.1%</strong></div>
+											<div class="list-fee-futures">Taker<br><strong>0.03%</strong></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="ex-list-item list-details">
+								<a class="btn-exchange-details" href="broker-details-2.html"><span class="ht-triangle-right"></span></a>
+							</div>
+						</div>
+					</li><!-- list item end -->
+					<li>
+						<div class="ex-list-row">
+							<div class="ex-list-item list-no">7</div>
+							<div class="ex-list-item list-name">
+								KuCoin<span class="ex-smaller-text">Blue chip</span>
+							</div>
+							<div class="ex-list-item list-since">
+								<span class="ex-smaller-text">Since</span>
+								2017
+							</div>
+							<div class="list-fee">
+								<div>Costs</div>
+								<div class="list-fee-container">
+									<div class="list-fee-spot">
+										<div>SPOT</div>
+										<div class="list-fee-container">
+											<div class="list-fee-spot">Maker<br><strong>0.1%</strong></div>
+											<div class="list-fee-futures">Taker<br><strong>0.03%</strong></div>
+										</div>
+									</div>
+									<div class="list-fee-futures">
+										<div>Futures</div>
+										<div class="list-fee-container">
+											<div class="list-fee-spot">Maker<br><strong>0.1%</strong></div>
+											<div class="list-fee-futures">Taker<br><strong>0.03%</strong></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="ex-list-item list-details">
+								<a class="btn-exchange-details" href="broker-details-2.html"><span class="ht-triangle-right"></span></a>
+							</div>
+						</div>
+					</li><!-- list item end -->
+					<li>
+						<div class="ex-list-row">
+							<div class="ex-list-item list-no">8</div>
+							<div class="ex-list-item list-name">
+								Binance US<span class="ex-smaller-text">Blue chip</span>
+							</div>
+							<div class="ex-list-item list-since">
+								<span class="ex-smaller-text">Since</span>
+								2019
+							</div>
+							<div class="list-fee">
+								<div>Costs</div>
+								<div class="list-fee-container">
+									<div class="list-fee-spot">
+										<div>SPOT</div>
+										<div class="list-fee-container">
+											<div class="list-fee-spot">Maker<br><strong>0.1%</strong></div>
+											<div class="list-fee-futures">Taker<br><strong>0.03%</strong></div>
+										</div>
+									</div>
+									<div class="list-fee-futures">
+										<div>Futures</div>
+										<div class="list-fee-container">
+											<div class="list-fee-spot">Maker<br><strong>0.1%</strong></div>
+											<div class="list-fee-futures">Taker<br><strong>0.03%</strong></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="ex-list-item list-details">
+								<a class="btn-exchange-details" href="broker-details-2.html"><span class="ht-triangle-right"></span></a>
+							</div>
+						</div>
+					</li><!-- list item end -->
+					<li>
+						<div class="ex-list-row">
+							<div class="ex-list-item list-no">9</div>
+							<div class="ex-list-item list-name">
+								FTX US<span class="ex-smaller-text">Blue chip</span>
+							</div>
+							<div class="ex-list-item list-since">
+								<span class="ex-smaller-text">Since</span>
+								2019
+							</div>
+							<div class="list-fee">
+								<div>Costs</div>
+								<div class="list-fee-container">
+									<div class="list-fee-spot">
+										<div>SPOT</div>
+										<div class="list-fee-container">
+											<div class="list-fee-spot">Maker<br><strong>0.1%</strong></div>
+											<div class="list-fee-futures">Taker<br><strong>0.03%</strong></div>
+										</div>
+									</div>
+									<div class="list-fee-futures">
+										<div>Futures</div>
+										<div class="list-fee-container">
+											<div class="list-fee-spot">Maker<br><strong>0.1%</strong></div>
+											<div class="list-fee-futures">Taker<br><strong>0.03%</strong></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="ex-list-item list-details">
+								<a class="btn-exchange-details" href="broker-details-2.html"><span class="ht-triangle-right"></span></a>
+							</div>
+						</div>
+					</li><!-- list item end -->
+				</ul>
+			</div><!-- table mobile end -->
+		<!-- 1 click badge -->
+		<div class="oneclick">
+			<span>Get result in</span><div class="text-start">&nbsp;1 CLICK</div>
+		</div>
+		<!-- action button -->
+		<a class="btn-cost-engine" href="fee-analysis-engine-1.html">
+			<div class="text-start"><span class="ht-switch"></span> START</div>
+			<span>&nbsp;cost analysis engine</span>
+		</a>
+		<!-- footer -->
+		<div class="footer-forex">
+			<div class="footer-top-group">
+				<div class="footer-logo-box">
+					<img class="footer-logo" src="img/logo-drfree-2.svg" />&copy;2022 Hoc Trade Technology Co. Ltd. All Rights Reserved
+				</div>
+				<div class="footer-link-box">
+					<span class="separator">|</span><a href="terms.html">Terms &amp; conditions</a><span class="separator">|</span><a href="privacy.html">Privacy policy</a><span class="separator">|</span><a href="about.html">About</a><span class="separator">|</span><a href="d-fee-forex-contact.html">Contact</a><span class="separator">|</span>
+				</div>
+				<div class="social-box">
+					<a class="social" href="https://www.facebook.com/drfeecrypto" target="_blank"><span class="ht-logo-fb"></span></a><a class="social" href="https://www.instagram.com/drfeecrypto/" target="_blank"><span class="ht-logo-ig"></span></a><a class="social" href="https://twitter.com/drfeecrypto" target="_blank"><span class="ht-logo-twitter"></span></a>
+				</div>
+			</div>
+			<p class="disclaimer">HIGH RISK WARNING: Foreign exchange, cryptocurrencies, and other CFDtrading carries a high level of risk and may not be suitable for everyone. The usage of leverage creates additional risk and loss exposure. Your investment objectives, experience level, and risk tolerance have to be taken into consideration before you decide to trade foreign exchange, cryptocurrencies, or other CFD products. You could lose some or all of your investment. Do not invest money that you cannot afford to lose and always use an appropriate risk management. It’s important to educate yourself on the risks associated with foreign exchange trading, and seek professional advice from an independent financial or tax advisor in case of any questions. Any data and information is provided 'as is' solely for informational purposes, and is not intended for trading purposes or advice. Past performance, including fees, which are presented on this website or you find somewhere else, is not indicative of future results.</p>
+		</div>
+	</body>
+</html>

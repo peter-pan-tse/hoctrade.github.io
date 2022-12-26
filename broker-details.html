@@ -6,35 +6,30 @@
 	<script src="jquery-3.6.0.min.js" language="javascript"></script>
 	<link href="https://fonts.googleapis.com/css?family=Noto Sans:400,700,900" rel="stylesheet">
 	<link href="font.css" rel="stylesheet">
-	<link href="chart-crypto.css" rel="stylesheet">
-	<link href="landing-drfee.css" rel="stylesheet">
+	<link href="chart-forex.css" rel="stylesheet">
+	<link href="landing-drfee-forex.css" rel="stylesheet">
 	<link rel="icon" href="img/favicon-drfee.svg">
-	<title>dr-fee - Exchange list: details of Crypto.com</title>
+	<title>dr-fee</title>
 	<!-- write your code here -->
 	<style>
 		body {
-			background-color:#f6f6f6;
-			color:#333333;
+			background-color:#4d4d4d;
+			color:#ffffff;
 			padding-bottom:0px;
-		}
-		ul.compare-table li:nth-child(odd) {
-			background-color: #ffffff;
-		}
-		ul.compare-table li:nth-child(even) {
-			background-color: #fafafa;
-		}.item-compare-label {
-			border-right: none;
 		}
 		.footer {
 			position:relative;
+		}
+		.footer p.disclaimer {
+			width:100%;
 		}
 	</style>
 	</head>
 	<body>
 		<div class="header">
-			<div class="header-container">
-				<a class="btn-back" href="dr-fee-exchange-list.html"><span class="ht-back-arrow"></span>Back</a>
-				<div style="color:#000000; margin-top:8px; font-weight:bold;">Exchange list - Crypto.com</div>
+			<div class="header-container-forex">
+				<a class="btn-back" href="fee-analysis-engine-result.html"><span class="ht-back-arrow"></span>Back</a>
+				<div style="color:#000000; margin-top:8px; font-weight:bold;">Comparing to Forex.com</div>
 			</div>
 		</div>
 		<div class="main-container" style="min-height:calc(100vh - 340px);">
@@ -44,52 +39,43 @@
 					<li>
 						<div class="ex-rank-row">
 							<div class="ex-rank-item item-compare-label">Exchange</div>
-							<div class="ex-rank-item item-details-2"><img src="img/logo-cryptocom.svg" height="32" /><span>Crypto.com</span></div>
+							<div class="ex-rank-item item-compare"><span class="compare-logo ht-cryptocom"></span>Crypto.com</div>
+							<div class="ex-rank-item item-compare text-you"><span class="compare-logo ht-ftx"></span>Interactive Brokers</div>
 						</div>
 					</li>
 					<li>
 						<div class="ex-rank-row">
-							<div class="ex-rank-item item-compare-label">Since</div>
-							<div class="ex-rank-item item-details-2">2019</div>
-						</div>
-					</li>
-					<li>
-						<div class="ex-rank-row">
-							<div class="ex-rank-item item-compare-label">US trader allowed?</div>
-							<div class="ex-rank-item item-details-2">Yes</div>
-						</div>
-					</li>
-					<li>
-						<div class="ex-rank-row">
-							<div class="ex-rank-item item-compare-label">Fee</div>
-							<div class="ex-rank-item item-details-2" style="flex-direction:row; font-weight:normal; font-size:12px;">
-								<div class="list-fee-spot">
-									<div>SPOT</div>
-									<div class="list-fee-container">
-										<div class="list-fee-spot">Maker<br><strong>0.1%</strong></div>
-										<div class="list-fee-futures">Taker<br><strong>0.03%</strong></div>
-									</div>
-								</div>
-								<div class="list-fee-futures">
-									<div>Futures</div>
-									<div class="list-fee-container">
-										<div class="list-fee-spot">Maker<br><strong>0.1%</strong></div>
-										<div class="list-fee-futures">Taker<br><strong>0.03%</strong></div>
-									</div>
-								</div>
-							</div>
+							<div class="ex-rank-item item-compare-label">Rank</div>
+							<div class="ex-rank-item item-compare text-red">10</div>
+							<div class="ex-rank-item item-compare text-you">--</div>
 						</div>
 					</li>
 					<li>
 						<div class="ex-rank-row">
 							<div class="ex-rank-item item-compare-label">Differentiator</div>
-							<div class="ex-rank-item item-details-2">Blue chip</div>
+							<div class="ex-rank-item item-compare">Blue chip</div>
+							<div class="ex-rank-item item-compare text-you">Blue chip</div>
+						</div>
+					</li>
+					<li>
+						<div class="ex-rank-row">
+							<div class="ex-rank-item item-compare-label">Costs (USD/yr)</div>
+							<div class="ex-rank-item item-compare">100</div>
+							<div class="ex-rank-item item-compare text-you">80</div>
+						</div>
+					</li>
+					<li style="border:2px solid #edc45c; border-radius:6px; width:calc(100% - 4px);">
+						<div class="ex-rank-row">
+							<div class="ex-rank-item item-compare-label" style="width:calc(40% - 13px);">Potential saving</div>
+							<div class="ex-rank-item item-compare text-red">+20.00USD<br>25%</div>
+							<div class="ex-rank-item item-compare text-you">0</div>
 						</div>
 					</li>
 					<li>
 						<div class="ex-rank-row">
 							<div class="ex-rank-item item-compare-label">Exclusive bonus</div>
-							<div class="ex-rank-item item-details-2"><div class="bonus-pill">5% rebate</div></div>
+							<div class="ex-rank-item item-compare"><div class="bonus-pill">5% rebate</div></div>
+							<div class="ex-rank-item item-compare text-you">--</div>
 						</div>
 					</li>
 				</ul>
@@ -100,13 +86,13 @@
 			</div>
 		</div><!-- main container -->
 		<!-- footer -->
-		<div class="footer">
+		<div class="footer-forex">
 			<div class="footer-top-group">
 				<div class="footer-logo-box">
 					<img class="footer-logo" src="img/logo-drfree-2.svg" />&copy;2022 Hoc Trade Technology Co. Ltd. All Rights Reserved
 				</div>
 				<div class="footer-link-box">
-					<span class="separator">|</span><a href="terms.html">Terms &amp; conditions</a><span class="separator">|</span><a href="privacy.html">Privacy policy</a><span class="separator">|</span><a href="about.html">About</a><span class="separator">|</span><a href="d-fee-crypto-contact.html">Contact</a><span class="separator">|</span>
+					<span class="separator">|</span><a href="terms.html">Terms &amp; conditions</a><span class="separator">|</span><a href="privacy.html">Privacy policy</a><span class="separator">|</span><a href="about.html">About</a><span class="separator">|</span><a href="d-fee-forex-contact.html">Contact</a><span class="separator">|</span>
 				</div>
 				<div class="social-box">
 					<a class="social" href="https://www.facebook.com/drfeecrypto" target="_blank"><span class="ht-logo-fb"></span></a><a class="social" href="https://www.instagram.com/drfeecrypto/" target="_blank"><span class="ht-logo-ig"></span></a><a class="social" href="https://twitter.com/drfeecrypto" target="_blank"><span class="ht-logo-twitter"></span></a>

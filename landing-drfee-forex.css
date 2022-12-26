@@ -45,7 +45,7 @@ body {
 }
 
 a {
-	color:#edc45c;
+	color:#06afc9;
 	text-decoration:underline;
 }
 a:hover, a:focus {
@@ -2535,7 +2535,7 @@ a.share-item {
 	margin:10px;
 	width:20%;
 	text-decoration: none;
-	color:#103456;
+	color:#047F92;
 	transition: all ease 0.3s;
 	text-align: center;
 }
@@ -2550,7 +2550,7 @@ a.share-item:hover {
 	line-height: 42px;
 	text-align: center;
 	background-color: #FFFFFF;
-	color:#103456;
+	color:#047F92;
 	border-radius:50%;
 	margin:0 0 10px 0;
 }
