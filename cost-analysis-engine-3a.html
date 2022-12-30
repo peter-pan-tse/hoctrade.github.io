@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="jquery-3.6.0.min.js" language="javascript"></script>
+	<link href="https://fonts.googleapis.com/css?family=Noto Sans:400,700,900" rel="stylesheet">
+	<link href="font.css" rel="stylesheet">
+	<link href="landing-drfee-forex.css" rel="stylesheet">
+	<link href="burger-menu-drfee-forex.css" rel="stylesheet">
+	<link href="loading-drfee-forex.css" rel="stylesheet">
+	<link rel="icon" href="img/favicon-drfee.svg">
+	<title>dr-fee</title>
+	<!-- write your code here -->
+	<style>
+		body {
+			background-color:#4d4d4d;
+			color:#ffffff;
+		}
+		.footer-forex p.disclaimer {
+			width:100%;
+		}
+	</style>
+	</head>
+	<body>
+		<div class="header">
+			<div class="header-container-forex">
+				<a href="dr-fee-landing.html"><div class="logo"><img src="img/logo-drfree-1-white.svg" /></div></a>
+				<ul class="menu-forex">
+					<li><a class="engine active" href="cost-analysis-engine-1.html">Cost analysis engine</a></li>
+					<li><a href="dr-fee-broker-list.html">Broker list</a></li>
+					<li><a href="dr-fee-forex-promotion.html">Promotions</a></li>
+					<li><a href="dr-fee-forex-blog.html">Blog</a></li>
+					<li class="switch-to-crypto"><a href="dr-fee-crypto.html"><div class="ico ht-crypto-coin"></div><div><span style="font-size:smaller;">go to</span><br>Crypto</div></a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<!-- mobile menu -->
+		<nav role="navigation">
+			<div class="recent-cat"></div>
+			<div id="mobileMenuToggle">
+				<!--A fake / hidden checkbox is used as click reciever, so you can use the :checked selector on it.-->
+				<input type="checkbox" />
+				<!--Some spans to act as a hamburger. They are acting like a real hamburger, not that McDonalds stuff.-->
+				<span></span>
+				<span></span>
+				<span></span>
+				<!-- Too bad the menu has to be inside of the button but hey, it's pure CSS magic.-->
+				<ul id="mobileMenu">
+					<li>
+						<a href="cost-analysis-engine-1.html">
+							<div class="s-menu-title active">Cost analysis engine</div>
+						</a>
+					</li>
+					<li>
+						<a href="dr-fee-broker-list.html">
+							<div class="s-menu-title"><div class="s-menu-ico ht-clipboard"></div>Broker list</div>
+						</a>
+					</li>
+					<li>
+						<a href="dr-fee-forex-promotion.html">
+							<div class="s-menu-title"><div class="s-menu-ico ht-star"></div>Promotions</div>
+						</a>
+					</li>
+					<li>
+						<a href="dr-fee-forex-blog.html">
+							<div class="s-menu-title"><div class="s-menu-ico ht-blog"></div>Blog</div>
+						</a>
+					</li>
+					<li>
+						<a href="dr-fee-crypto.html">
+							<div class="s-menu-title"><div class="s-menu-ico ht-forex-coin"></div>Go to dr-fee Crypto</div>
+						</a>
+					</li>
+				</ul>
+				<div class="mobileMenuMask"></div>
+			</div>
+		</nav>
+		<!-- mobile menu ended -->
+		
+		<div class="step-container">
+			<div class="step-box">
+				<div class="stepline active"></div>
+				<div class="stepdot step1 active"></div>
+				<div class="steptext step1 active">Connect account</div>
+				<div class="stepdot step2 active"></div>
+				<div class="steptext step2 active">Verify email</div>
+			</div>
+			<div class="step-box">
+				<div class="stepline active"></div>
+				<div class="stepdot step3 active"></div>
+				<div class="steptext step3 active">Result</div>
+			</div>
+		</div>
+		<!-- form -->
+		<div class="main-container">
+			<div class="exchange-logo-block active">
+				<span class="ht-binance"></span>
+			</div>
+			<div class="exchange-logo-block active">
+				<span class="ht-cryptocom"></span>
+			</div>
+			<div class="exchange-logo-block active">
+				<span class="ht-ftx"></span>
+			</div>
+			<div class="exchange-loading-block">
+				<div id="loading">
+					<div class="outer-shadow"></div>
+					<div class="inner-shadow"></div>
+					<div class="hold left">
+						<div class="fill"></div>
+					</div>
+					<div class="hold right">
+						<div class="fill"></div>
+					</div>
+				</div>
+			</div>
+			<div class="exchange-logo-block">
+				<span class="ht-gemini"></span>
+			</div>
+			<div class="exchange-logo-block">
+				<span class="ht-kraken"></span>
+			</div>
+		</div>
+		<div class="adbanner-box">
+			<div class="main-container">
+				<img class="img-responsive" src="img/adbanner-1.jpg" />
+			</div>
+		</div>
+		<!-- footer -->
+		<div class="footer-forex">
+			<div class="footer-top-group">
+				<div class="footer-logo-box">
+					<img class="footer-logo" src="img/logo-drfree-2.svg" />&copy;2022 Hoc Trade Technology Co. Ltd. All Rights Reserved
+				</div>
+				<div class="footer-link-box">
+					<span class="separator">|</span><a href="terms.html">Terms &amp; conditions</a><span class="separator">|</span><a href="privacy.html">Privacy policy</a><span class="separator">|</span><a href="about.html">About</a><span class="separator">|</span><a href="d-fee-forex-contact.html">Contact</a><span class="separator">|</span>
+				</div>
+				<div class="social-box">
+					<a class="social" href="https://www.facebook.com/drfeecrypto" target="_blank"><span class="ht-logo-fb"></span></a><a class="social" href="https://www.instagram.com/drfeecrypto/" target="_blank"><span class="ht-logo-ig"></span></a><a class="social" href="https://twitter.com/drfeecrypto" target="_blank"><span class="ht-logo-twitter"></span></a>
+				</div>
+			</div>
+			<p class="disclaimer">HIGH RISK WARNING: Foreign exchange, cryptocurrencies, and other CFDtrading carries a high level of risk and may not be suitable for everyone. The usage of leverage creates additional risk and loss exposure. Your investment objectives, experience level, and risk tolerance have to be taken into consideration before you decide to trade foreign exchange, cryptocurrencies, or other CFD products. You could lose some or all of your investment. Do not invest money that you cannot afford to lose and always use an appropriate risk management. It’s important to educate yourself on the risks associated with foreign exchange trading, and seek professional advice from an independent financial or tax advisor in case of any questions. Any data and information is provided 'as is' solely for informational purposes, and is not intended for trading purposes or advice. Past performance, including fees, which are presented on this website or you find somewhere else, is not indicative of future results.</p>
+		</div>
+	</body>
+	<script>
+		setTimeout(function(){
+			window.location.href = "cost-analysis-engine-result.html";
+		}, 5000);
+	</script>
+</html>

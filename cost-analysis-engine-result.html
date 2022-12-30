@@ -1,0 +1,531 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="jquery-3.6.0.min.js" language="javascript"></script>
+	<link href="https://fonts.googleapis.com/css?family=Noto Sans:400,700,900" rel="stylesheet">
+	<link href="font.css" rel="stylesheet">
+	<link href="chart-forex.css" rel="stylesheet">
+	<link href="landing-drfee-forex.css" rel="stylesheet">
+	<link href="burger-menu-drfee-forex.css" rel="stylesheet">
+	<link href="modal-select-broker.css" rel="stylesheet">
+	<link rel="icon" href="img/favicon-drfee.svg">
+	<title>dr-fee</title>
+	<!-- write your code here -->
+	<style>
+		body {
+			background-color:#4d4d4d;
+			color:#ffffff;
+			padding-bottom:0px;
+		}
+		
+		.progress-bar {
+		  background-color: #000000;
+		  width: 100%;
+		  height: 10px;
+		  margin: 10px 0;
+			border-radius:5px;
+		}
+		.progress-filled {
+		background: -webkit-linear-gradient(
+			135deg,
+			#06afc9 25%, #07c3e0 25%,
+				#07c3e0 50%, #06afc9 50%,
+				#06afc9 75%, #07c3e0 75%
+		  );
+		  background: -moz-linear-gradient(
+			135deg,
+			#06afc9 25%, #07c3e0 25%,
+				#07c3e0 50%, #06afc9 50%,
+				#06afc9 75%, #07c3e0 75%
+		  );
+		  background: -o-linear-gradient(
+			135deg,
+			#06afc9 25%, #07c3e0 25%,
+				#07c3e0 50%, #06afc9 50%,
+				#06afc9 75%, #07c3e0 75%
+		  );
+		  width: 80%;
+		  height: 10px;
+		  background-size: 50px 50px;
+			border-radius:5px;
+		  -webkit-animation: bar-animation 3s linear infinite;
+		}
+		@-webkit-keyframes bar-animation {
+		  0% {
+			background-position: 0 0;
+		  }
+		  100% {
+			background-position: 50px 50px;
+		  }
+		}
+		.footer-forex {
+			position:relative;
+		}
+		.footer-forex p.disclaimer {
+			width:100%;
+		}
+		@media only screen and (max-width: 480px) {
+			.exchange-pill {
+				background-color: #999999;
+			}
+		}
+	</style>
+	</head>
+	<body>
+		<div class="header">
+			<div class="header-container-forex">
+				<a href="dr-fee-landing.html"><div class="logo"><img src="img/logo-drfree-1-white.svg" /></div></a>
+				<ul class="menu-forex">
+					<li><a class="engine active" href="cost-analysis-engine-1.html">Cost analysis engine</a></li>
+					<li><a href="dr-fee-broker-list.html">Broker list</a></li>
+					<li><a href="dr-fee-forex-promotion.html">Promotions</a></li>
+					<li><a href="dr-fee-forex-blog.html">Blog</a></li>
+					<li class="switch-to-crypto"><a href="dr-fee-crypto.html"><div class="ico ht-crypto-coin"></div><div><span style="font-size:smaller;">go to</span><br>Crypto</div></a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<!-- mobile menu -->
+		<nav role="navigation">
+			<div class="recent-cat"></div>
+			<div id="mobileMenuToggle">
+				<!--A fake / hidden checkbox is used as click reciever, so you can use the :checked selector on it.-->
+				<input type="checkbox" />
+				<!--Some spans to act as a hamburger. They are acting like a real hamburger, not that McDonalds stuff.-->
+				<span></span>
+				<span></span>
+				<span></span>
+				<!-- Too bad the menu has to be inside of the button but hey, it's pure CSS magic.-->
+				<ul id="mobileMenu">
+					<li>
+						<a href="cost-analysis-engine-1.html">
+							<div class="s-menu-title active">Cost analysis engine</div>
+						</a>
+					</li>
+					<li>
+						<a href="dr-fee-broker-list.html">
+							<div class="s-menu-title"><div class="s-menu-ico ht-clipboard"></div>Broker list</div>
+						</a>
+					</li>
+					<li>
+						<a href="dr-fee-forex-promotion.html">
+							<div class="s-menu-title"><div class="s-menu-ico ht-star"></div>Promotions</div>
+						</a>
+					</li>
+					<li>
+						<a href="dr-fee-forex-blog.html">
+							<div class="s-menu-title"><div class="s-menu-ico ht-blog"></div>Blog</div>
+						</a>
+					</li>
+					<li>
+						<a href="dr-fee-crypto.html">
+							<div class="s-menu-title"><div class="s-menu-ico ht-forex-coin"></div>Go to dr-fee Crypto</div>
+						</a>
+					</li>
+				</ul>
+				<div class="mobileMenuMask"></div>
+			</div>
+		</nav>
+		<!-- mobile menu ended -->
+		
+		<!-- title -->
+		<div class="main-container" style="justify-content:flex-start; align-items:center;">
+			<h1 class="result">Cost comparison report</h1>
+			<div class="timestamp">
+				for <strong>demo.drfee@gmail.com</strong><br>
+				analysis date: <strong>Tue 02-Jan-2023 14:02:34</strong>
+			</div>
+		</div>
+		<div class="main-container" style="justify-content:flex-start; align-items:center; padding:0 12px;">
+			We are in the process of updating the last trading symbols...<br>
+			<div class="progress-bar">
+				<div class="progress-filled"></div>
+			</div>
+		</div>
+		<div class="main-container">
+			<!-- fee chart -->
+			<div class="fee-chart-box">
+				<div class="chart-header-dark">
+					<div class="tooltip">Yearly trading cost comparison (USD)<span class="tooltiptext">Yearly trading cost comparison (USD)</span></div>
+					<div class="right-btn-box">
+						<a class="btn-info"><span class="ht-info"></span></a>
+					</div>
+				</div>
+				<div class="fee-chart-body">
+					<div class="fee-chart-bg">
+						<!-- for temporary display purpose -->
+						<img class="img-responsive" src="img/cost-chart-sample.png" />
+						<br>
+						<a class="btn-ex-list" id="modalinfo1"><span class="ht-pencil"></span> Edit</a>
+					</div>
+					<div class="fee-exchange-bg">
+						<div class="exchange-pill-intro">Select max. 5 brokers to compare (5/5)</div>
+						<div class="error-msg-box">Error message here...</div>
+						<div class="exchange-pill-box">
+							<div class="exchange-pill active"><span class="ht-binance"></span> Binance</div>
+							<div class="exchange-pill"><span class="ht-bybit"></span> ByBit</div>
+							<div class="exchange-pill active"><span class="ht-coinbase"></span> Coinbase</div>
+							<div class="exchange-pill active"><span class="ht-cryptocom"></span> Crypto.com</div>
+							<div class="exchange-pill"><span class="ht-gateio"></span> Gate.io</div>
+							<div class="exchange-pill"><span class="ht-gemini"></span> Gemini</div>
+							<div class="exchange-pill active"><span class="ht-huobi"></span> Huobi</div>
+							<div class="exchange-pill active"><span class="ht-kraken"></span> Kraken</div>
+							<div class="exchange-pill"><span class="ht-kucoin"></span> KuCoin</div>
+							<div class="exchange-pill"><span class="ht-mexc"></span> MEXC Global</div>
+							<div class="exchange-pill"><span class="ht-OKX"></span> OKX</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- fee chart end -->
+			<!-- table -- desktop / tablet -->
+			<div class="table-desktop">
+				<ul class="ex-rank-table">
+					<li>
+						<div class="ex-rank-row">
+							<div class="ex-rank-item item-no">No.</div>
+							<div class="ex-rank-item item-name">Broker</div>
+							<div class="ex-rank-item item-diff">Differentiator</div>
+							<div class="ex-rank-item item-fee">Cost (USD/yr)</div>
+							<div class="ex-rank-item item-saving">
+								<div>Saving potential</div>
+								<div style="display:flex; flex-direction:row; justify-content:space-around; width:100%;">
+									<div style="width:48%; text-align:center;">USD</div>
+									<div>|</div>
+									<div style="width:48%; text-align:center;">%</div>
+								</div>
+							</div>
+							<div class="ex-rank-item item-bonus">Exclusive bonus</div>
+							<div class="ex-rank-item item-reg">Register</div>
+							<div class="ex-rank-item item-details">Details</div>
+						</div>
+					</li>
+					<li>
+						<div class="ex-rank-row">
+							<div class="ex-rank-item item-no">YOU</div>
+							<div class="ex-rank-item item-name">FTX</div>
+							<div class="ex-rank-item item-diff">Blue chip</div>
+							<div class="ex-rank-item item-fee">80.00</div>
+							<div class="ex-rank-item item-saving-1">0</div>
+							<div class="ex-rank-item item-saving-2">0</div>
+							<div class="ex-rank-item item-bonus">--</div>
+							<div class="ex-rank-item item-reg">--</div>
+							<div class="ex-rank-item item-details">--</div>
+						</div>
+					</li>
+					<li>
+						<div class="ex-rank-row">
+							<div class="ex-rank-item item-no"><span class="item-dot green"></span>1</div>
+							<div class="ex-rank-item item-name">Kraken</div>
+							<div class="ex-rank-item item-diff">Beginner friendly</div>
+							<div class="ex-rank-item item-fee">40.00</div>
+							<div class="ex-rank-item item-saving-1 text-green">-40.00</div>
+							<div class="ex-rank-item item-saving-2 text-green">-50</div>
+							<div class="ex-rank-item item-bonus"><div class="bonus-pill">5% rebate</div></div>
+							<div class="ex-rank-item item-reg"><a class="ex-rank-btn" href="#"><span class="ht-pencil"></span></a></div>
+							<div class="ex-rank-item item-details"><a class="ex-rank-btn" href="#"><span class="ht-search"></span></a></div>
+						</div>
+					</li>
+					<li class="text-deselected">
+						<div class="ex-rank-row">
+							<div class="ex-rank-item item-no"><span class="item-dot"></span>2</div>
+							<div class="ex-rank-item item-name">Gemini</div>
+							<div class="ex-rank-item item-diff">Blue chip</div>
+							<div class="ex-rank-item item-fee">50.00</div>
+							<div class="ex-rank-item item-saving-1 text-green">-30.00</div>
+							<div class="ex-rank-item item-saving-2 text-green">-37.5</div>
+							<div class="ex-rank-item item-bonus"><div class="bonus-pill">1st month free</div></div>
+							<div class="ex-rank-item item-reg"><a class="ex-rank-btn" href="#"><span class="ht-pencil"></span></a></div>
+							<div class="ex-rank-item item-details"><a class="ex-rank-btn" href="#"><span class="ht-search"></span></a></div>
+						</div>
+					</li>
+					<li class="text-deselected">
+						<div class="ex-rank-row">
+							<div class="ex-rank-item item-no"><span class="item-dot"></span>3</div>
+							<div class="ex-rank-item item-name">KuCoin</div>
+							<div class="ex-rank-item item-diff">Beginner friendly</div>
+							<div class="ex-rank-item item-fee">59.99</div>
+							<div class="ex-rank-item item-saving-1 text-green">-20.01</div>
+							<div class="ex-rank-item item-saving-2 text-green">-25.1</div>
+							<div class="ex-rank-item item-bonus"><div class="bonus-pill">100 trades 0 fee</div></div>
+							<div class="ex-rank-item item-reg"><a class="ex-rank-btn" href="#"><span class="ht-pencil"></span></a></div>
+							<div class="ex-rank-item item-details"><a class="ex-rank-btn" href="#"><span class="ht-search"></span></a></div>
+						</div>
+					</li>
+					<li>
+						<div class="ex-rank-row">
+							<div class="ex-rank-item item-no"><span class="item-dot green"></span>4</div>
+							<div class="ex-rank-item item-name">Huobi</div>
+							<div class="ex-rank-item item-diff">--</div>
+							<div class="ex-rank-item item-fee">70.00</div>
+							<div class="ex-rank-item item-saving-1 text-green">-10.00</div>
+							<div class="ex-rank-item item-saving-2 text-green">-12.5</div>
+							<div class="ex-rank-item item-bonus">--</div>
+							<div class="ex-rank-item item-reg"><a class="ex-rank-btn" href="#"><span class="ht-pencil"></span></a></div>
+							<div class="ex-rank-item item-details"><a class="ex-rank-btn" href="#"><span class="ht-search"></span></a></div>
+						</div>
+					</li>
+					<li>
+						<div class="ex-rank-row">
+							<div class="ex-rank-item item-no"><span class="item-dot green"></span>5</div>
+							<div class="ex-rank-item item-name">ByBit</div>
+							<div class="ex-rank-item item-diff">Beginner friend</div>
+							<div class="ex-rank-item item-fee">70.50</div>
+							<div class="ex-rank-item item-saving-1 text-green">-9.95</div>
+							<div class="ex-rank-item item-saving-2 text-green">-12.4</div>
+							<div class="ex-rank-item item-bonus">--</div>
+							<div class="ex-rank-item item-reg"><a class="ex-rank-btn" href="#"><span class="ht-pencil"></span></a></div>
+							<div class="ex-rank-item item-details"><a class="ex-rank-btn" href="#"><span class="ht-search"></span></a></div>
+						</div>
+					</li>
+					<li class="text-deselected">
+						<div class="ex-rank-row">
+							<div class="ex-rank-item item-no"><span class="item-dot"></span>6</div>
+							<div class="ex-rank-item item-name">OKX</div>
+							<div class="ex-rank-item item-diff">Beginner friend</div>
+							<div class="ex-rank-item item-fee">73.60</div>
+							<div class="ex-rank-item item-saving-1 text-green">-6.70</div>
+							<div class="ex-rank-item item-saving-2 text-green">-8.4</div>
+							<div class="ex-rank-item item-bonus"><div class="bonus-pill">5% rebate</div></div>
+							<div class="ex-rank-item item-reg"><a class="ex-rank-btn" href="#"><span class="ht-pencil"></span></a></div>
+							<div class="ex-rank-item item-details"><a class="ex-rank-btn" href="#"><span class="ht-search"></span></a></div>
+						</div>
+					</li>
+					<li class="text-deselected">
+						<div class="ex-rank-row">
+							<div class="ex-rank-item item-no"><span class="item-dot"></span>7</div>
+							<div class="ex-rank-item item-name">MEXC Global</div>
+							<div class="ex-rank-item item-diff">--</div>
+							<div class="ex-rank-item item-fee">75.50</div>
+							<div class="ex-rank-item item-saving-1 text-green">-4.50</div>
+							<div class="ex-rank-item item-saving-2 text-green">-5.6</div>
+							<div class="ex-rank-item item-bonus">--</div>
+							<div class="ex-rank-item item-reg"><a class="ex-rank-btn" href="#"><span class="ht-pencil"></span></a></div>
+							<div class="ex-rank-item item-details"><a class="ex-rank-btn" href="#"><span class="ht-search"></span></a></div>
+						</div>
+					</li>
+					<li class="text-deselected">
+						<div class="ex-rank-row">
+							<div class="ex-rank-item item-no"><span class="item-dot"></span>8</div>
+							<div class="ex-rank-item item-name">Gate.io</div>
+							<div class="ex-rank-item item-diff">--</div>
+							<div class="ex-rank-item item-fee">89.99</div>
+							<div class="ex-rank-item item-saving-1 text-red">+8.99</div>
+							<div class="ex-rank-item item-saving-2 text-red">+11.2</div>
+							<div class="ex-rank-item item-bonus">--</div>
+							<div class="ex-rank-item item-reg"><a class="ex-rank-btn" href="#"><span class="ht-pencil"></span></a></div>
+							<div class="ex-rank-item item-details"><a class="ex-rank-btn" href="#"><span class="ht-search"></span></a></div>
+						</div>
+					</li>
+					<li>
+						<div class="ex-rank-row">
+							<div class="ex-rank-item item-no"><span class="item-dot red"></span>9</div>
+							<div class="ex-rank-item item-name">Crypto.com</div>
+							<div class="ex-rank-item item-diff">Blue chip</div>
+							<div class="ex-rank-item item-fee">100.00</div>
+							<div class="ex-rank-item item-saving-1 text-red">+20.00</div>
+							<div class="ex-rank-item item-saving-2 text-red">+25</div>
+							<div class="ex-rank-item item-bonus"><div class="bonus-pill">100 trades 0 fee</div></div>
+							<div class="ex-rank-item item-reg"><a class="ex-rank-btn" href="#"><span class="ht-pencil"></span></a></div>
+							<div class="ex-rank-item item-details"><a class="ex-rank-btn" href="#"><span class="ht-search"></span></a></div>
+						</div>
+					</li>
+					<li class="text-deselected">
+						<div class="ex-rank-row">
+							<div class="ex-rank-item item-no"><span class="item-dot"></span>10</div>
+							<div class="ex-rank-item item-name">CoinBase</div>
+							<div class="ex-rank-item item-diff">Blue chip</div>
+							<div class="ex-rank-item item-fee">120.00</div>
+							<div class="ex-rank-item item-saving-1 text-red">+40.00</div>
+							<div class="ex-rank-item item-saving-2 text-red">+50</div>
+							<div class="ex-rank-item item-bonus">--</div>
+							<div class="ex-rank-item item-reg"><a class="ex-rank-btn" href="#"><span class="ht-pencil"></span></a></div>
+							<div class="ex-rank-item item-details"><a class="ex-rank-btn" href="#"><span class="ht-search"></span></a></div>
+						</div>
+					</li>
+					<li>
+						<div class="ex-rank-row">
+							<div class="ex-rank-item item-no"><span class="item-dot red"></span>11</div>
+							<div class="ex-rank-item item-name">Binance</div>
+							<div class="ex-rank-item item-diff">Blue chip</div>
+							<div class="ex-rank-item item-fee">168.00</div>
+							<div class="ex-rank-item item-saving-1 last-item text-red">+88.00</div>
+							<div class="ex-rank-item item-saving-2 last-item text-red">+110</div>
+							<div class="ex-rank-item item-bonus">--</div>
+							<div class="ex-rank-item item-reg"><a class="ex-rank-btn" href="#"><span class="ht-pencil"></span></a></div>
+							<div class="ex-rank-item item-details"><a class="ex-rank-btn" href="#"><span class="ht-search"></span></a></div>
+						</div>
+					</li>
+				</ul>
+			</div><!-- table desktop / tablet end -->
+			
+			<!-- table mobile -->
+			<div class="table-mobile">
+				<ul class="ex-rank-table">
+					<li></li>
+					<li>
+						<div class="ex-rank-row">
+							<div class="ex-rank-item item-no">YOU</div>
+							<div class="ex-rank-item item-name">FTX<span class="ex-smaller-text">Blue chip</span></div>
+							<div class="ex-rank-item item-fee"><span class="ex-smaller-text">Fee</span>80.00</div>
+							<div class="ex-rank-item item-saving-2"><span class="ex-smaller-text">Saving potential</span>0USD<br>0%</div>
+							<div class="ex-rank-item item-details"><a class="btn-exchange-details" href="broker-details.html"><span class="ht-triangle-right"></span></a></div>
+						</div>
+					</li>
+					<li>
+						<div class="ex-rank-row">
+							<div class="ex-rank-item item-no">1<br><span class="item-dot green"></span></div>
+							<div class="ex-rank-item item-name">Kraken<span class="ex-smaller-text">Beginner friendly</span></div>
+							<div class="ex-rank-item item-fee"><span class="ex-smaller-text">Fee</span>40.00</div>
+							<div class="ex-rank-item item-saving-2"><span class="ex-smaller-text">Saving potential</span><span class="text-green">-40.00USD<br>-50%</span></div>
+							<div class="ex-rank-item item-details"><a class="btn-exchange-details" href="broker-details.html"><span class="ht-triangle-right"></span></a></div>
+						</div>
+					</li>
+					<li class="text-deselected">
+						<div class="ex-rank-row">
+							<div class="ex-rank-item item-no">2<br><span class="item-dot"></span></div>
+							<div class="ex-rank-item item-name">Gemini<span class="ex-smaller-text">Blue chip</span></div>
+							<div class="ex-rank-item item-fee"><span class="ex-smaller-text">Fee</span>50.00</div>
+							<div class="ex-rank-item item-saving-2"><span class="ex-smaller-text">Saving potential</span><span class="text-green">-30.00USD<br>-37.5%</span></div>
+							<div class="ex-rank-item item-details"><a class="btn-exchange-details" href="broker-details.html"><span class="ht-triangle-right"></span></a></div>
+						</div>
+					</li>
+					<li class="text-deselected">
+						<div class="ex-rank-row">
+							<div class="ex-rank-item item-no">3<br><span class="item-dot"></span></div>
+							<div class="ex-rank-item item-name">KuCoin<span class="ex-smaller-text">Beginner friendly</span></div>
+							<div class="ex-rank-item item-fee"><span class="ex-smaller-text">Fee</span>59.99</div>
+							<div class="ex-rank-item item-saving-2"><span class="ex-smaller-text">Saving potential</span><span class="text-green">-20.01USD<br>-25.1%</span></div>
+							<div class="ex-rank-item item-details"><a class="btn-exchange-details" href="broker-details.html"><span class="ht-triangle-right"></span></a></div>
+						</div>
+					</li>
+					<li>
+						<div class="ex-rank-row">
+							<div class="ex-rank-item item-no">4<br><span class="item-dot green"></span></div>
+							<div class="ex-rank-item item-name">Huobi<span class="ex-smaller-text"></span></div>
+							<div class="ex-rank-item item-fee"><span class="ex-smaller-text">Fee</span>70.00</div>
+							<div class="ex-rank-item item-saving-2"><span class="ex-smaller-text">Saving potential</span><span class="text-green">-10.00USD<br>-12.5%</span></div>
+							<div class="ex-rank-item item-details"><a class="btn-exchange-details" href="broker-details.html"><span class="ht-triangle-right"></span></a></div>
+						</div>
+					</li>
+					<li>
+						<div class="ex-rank-row">
+							<div class="ex-rank-item item-no">5<br><span class="item-dot green"></span></div>
+							<div class="ex-rank-item item-name">ByBit<span class="ex-smaller-text">Beginner friend</span></div>
+							<div class="ex-rank-item item-fee"><span class="ex-smaller-text">Fee</span>70.50</div>
+							<div class="ex-rank-item item-saving-2"><span class="ex-smaller-text">Saving potential</span><span class="text-green">-9.95USD<br>-12.4%</span></div>
+							<div class="ex-rank-item item-details"><a class="btn-exchange-details" href="broker-details.html"><span class="ht-triangle-right"></span></a></div>
+						</div>
+					</li>
+					<li class="text-deselected">
+						<div class="ex-rank-row">
+							<div class="ex-rank-item item-no">6<br><span class="item-dot"></span></div>
+							<div class="ex-rank-item item-name">OKX<span class="ex-smaller-text">Beginner friend</span></div>
+							<div class="ex-rank-item item-fee"><span class="ex-smaller-text">Fee</span>73.60</div>
+							<div class="ex-rank-item item-saving-2"><span class="ex-smaller-text">Saving potential</span><span class="text-green">-6.70USD<br>-8.4%</span></div>
+							<div class="ex-rank-item item-details"><a class="btn-exchange-details" href="broker-details.html"><span class="ht-triangle-right"></span></a></div>
+						</div>
+					</li>
+					<li class="text-deselected">
+						<div class="ex-rank-row">
+							<div class="ex-rank-item item-no">7<br><span class="item-dot"></span></div>
+							<div class="ex-rank-item item-name">MEXC Global<span class="ex-smaller-text"></span></div>
+							<div class="ex-rank-item item-fee"><span class="ex-smaller-text">Fee</span>75.50</div>
+							<div class="ex-rank-item item-saving-2"><span class="ex-smaller-text">Saving potential</span><span class="text-green">-4.50USD<br>-5.6%</span></div>
+							<div class="ex-rank-item item-details"><a class="btn-exchange-details" href="broker-details.html"><span class="ht-triangle-right"></span></a></div>
+						</div>
+					</li>
+					<li class="text-deselected">
+						<div class="ex-rank-row">
+							<div class="ex-rank-item item-no">8<br><span class="item-dot"></span></div>
+							<div class="ex-rank-item item-name">Gate.io<span class="ex-smaller-text"></span></div>
+							<div class="ex-rank-item item-fee"><span class="ex-smaller-text">Fee</span>89.99</div>
+							<div class="ex-rank-item item-saving-2"><span class="ex-smaller-text">Saving potential</span><span class="text-red">+8.90USD<br>+11.2%</span></div>
+							<div class="ex-rank-item item-details"><a class="btn-exchange-details" href="broker-details.html"><span class="ht-triangle-right"></span></a></div>
+						</div>
+					</li>
+					<li>
+						<div class="ex-rank-row">
+							<div class="ex-rank-item item-no">9<br><span class="item-dot red"></span></div>
+							<div class="ex-rank-item item-name">Crypto.com<span class="ex-smaller-text">Blue chip</span></div>
+							<div class="ex-rank-item item-fee"><span class="ex-smaller-text">Fee</span>100.00</div>
+							<div class="ex-rank-item item-saving-2"><span class="ex-smaller-text">Saving potential</span><span class="text-red">+20.00USD<br>+25%</span></div>
+							<div class="ex-rank-item item-details"><a class="btn-exchange-details" href="broker-details.html"><span class="ht-triangle-right"></span></a></div>
+						</div>
+					</li>
+					<li class="text-deselected">
+						<div class="ex-rank-row">
+							<div class="ex-rank-item item-no">10<br><span class="item-dot"></span></div>
+							<div class="ex-rank-item item-name">Coinbase<span class="ex-smaller-text">Blue chip</span></div>
+							<div class="ex-rank-item item-fee"><span class="ex-smaller-text">Fee</span>120.00</div>
+							<div class="ex-rank-item item-saving-2"><span class="ex-smaller-text">Saving potential</span><span class="text-red">+40.00USD<br>+50%</span></div>
+							<div class="ex-rank-item item-details"><a class="btn-exchange-details" href="broker-details.html"><span class="ht-triangle-right"></span></a></div>
+						</div>
+					</li>
+					<li>
+						<div class="ex-rank-row">
+							<div class="ex-rank-item item-no">11<br><span class="item-dot red"></span></div>
+							<div class="ex-rank-item item-name">Binance<span class="ex-smaller-text">Blue chip</span></div>
+							<div class="ex-rank-item item-fee"><span class="ex-smaller-text">Fee</span>160.00</div>
+							<div class="ex-rank-item item-saving-2"><span class="ex-smaller-text">Saving potential</span><span class="text-red">+88.00USD<br>+110%</span></div>
+							<div class="ex-rank-item item-details"><a class="btn-exchange-details" href="broker-details.html"><span class="ht-triangle-right"></span></a></div>
+						</div>
+					</li>
+				</ul>
+			</div><!-- table mobile end -->
+			
+		</div><!-- main container -->
+		<!-- footer -->
+		<div class="footer-forex">
+			<div class="footer-top-group">
+				<div class="footer-logo-box">
+					<img class="footer-logo" src="img/logo-drfree-2.svg" />&copy;2022 Hoc Trade Technology Co. Ltd. All Rights Reserved
+				</div>
+				<div class="footer-link-box">
+					<span class="separator">|</span><a href="terms.html">Terms &amp; conditions</a><span class="separator">|</span><a href="privacy.html">Privacy policy</a><span class="separator">|</span><a href="about.html">About</a><span class="separator">|</span><a href="d-fee-forex-contact.html">Contact</a><span class="separator">|</span>
+				</div>
+				<div class="social-box">
+					<a class="social" href="https://www.facebook.com/drfeecrypto" target="_blank"><span class="ht-logo-fb"></span></a><a class="social" href="https://www.instagram.com/drfeecrypto/" target="_blank"><span class="ht-logo-ig"></span></a><a class="social" href="https://twitter.com/drfeecrypto" target="_blank"><span class="ht-logo-twitter"></span></a>
+				</div>
+			</div>
+			<p class="disclaimer">HIGH RISK WARNING: Foreign exchange, cryptocurrencies, and other CFDtrading carries a high level of risk and may not be suitable for everyone. The usage of leverage creates additional risk and loss exposure. Your investment objectives, experience level, and risk tolerance have to be taken into consideration before you decide to trade foreign exchange, cryptocurrencies, or other CFD products. You could lose some or all of your investment. Do not invest money that you cannot afford to lose and always use an appropriate risk management. It’s important to educate yourself on the risks associated with foreign exchange trading, and seek professional advice from an independent financial or tax advisor in case of any questions. Any data and information is provided 'as is' solely for informational purposes, and is not intended for trading purposes or advice. Past performance, including fees, which are presented on this website or you find somewhere else, is not indicative of future results.</p>
+		</div>
+		
+		<!-- The Modal -->
+		<div id="modalInfoBox" class="modal">
+			<!-- Modal content -->
+
+		  <div class="modal-content">
+			<div class="modal-header">
+				<span class="close"><span class="ht-cross"></span></span>
+				Select max. 5 brokers to compare (5/5)
+			</div>
+			<div class="modal-body">
+				<div class="fee-exchange-bg-mobile">
+					<div class="exchange-pill-box">
+						<div class="exchange-pill active"><span class="ht-binance"></span> Binance</div>
+						<div class="exchange-pill"><span class="ht-bybit"></span> ByBit</div>
+						<div class="exchange-pill active"><span class="ht-coinbase"></span> Coinbase</div>
+						<div class="exchange-pill active"><span class="ht-cryptocom"></span> Crypto.com</div>
+						<div class="exchange-pill"><span class="ht-gateio"></span> Gate.io</div>
+						<div class="exchange-pill"><span class="ht-gemini"></span> Gemini</div>
+						<div class="exchange-pill active"><span class="ht-huobi"></span> Huobi</div>
+						<div class="exchange-pill active"><span class="ht-kraken"></span> Kraken</div>
+						<div class="exchange-pill"><span class="ht-kucoin"></span> KuCoin</div>
+						<div class="exchange-pill"><span class="ht-mexc"></span> MEXC Global</div>
+						<div class="exchange-pill"><span class="ht-OKX"></span> OKX</div>
+					</div>
+				</div>
+				<div class="btn-container" style="width:calc(100% - 40px); margin: 20px auto;">
+					<div class="error-msg-box">Error message here...</div>
+					<a class="btn-submit-modal">Select</a>
+				</div>
+			</div>
+		  </div>
+		</div>
+		
+	</body>
+	<script src="modal.js" language="javascript"></script>
+</html>

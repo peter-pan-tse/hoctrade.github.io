@@ -6,8 +6,8 @@
 <script src="jquery-3.6.0.min.js" language="javascript"></script>
 <link href="https://fonts.googleapis.com/css?family=Noto Sans:400,700,900" rel="stylesheet">
 <link href="font.css" rel="stylesheet">
-<link href="landing-drfee.css" rel="stylesheet">
-<link href="modal-verify-email.css" rel="stylesheet">
+<link href="landing-drfee-forex.css" rel="stylesheet">
+<link href="modal-verify-email-forex.css" rel="stylesheet">
 <link rel="icon" href="img/favicon-drfee.svg">
 <title>dr.fee</title>
 <style>
@@ -32,17 +32,13 @@ body {
 		display:inline-block;
 		height:60px;
 		padding:4px;
-		border:1px solid #edc45c;
-		background-color:#edc45c;
+		border:1px solid #07c3e0;
+		background-color:#07c3e0;
 		font-size:32px;
 		font-weight:bold;
 		text-align:center;
 		width:18%;
 		border-radius:10px;
-	}
-	input.confirmation-code.error {
-		border:1px solid #ED1C24;
-		color:#ED1C24;
 	}
 	/* Chrome, Safari, Edge, Opera */
 	input::-webkit-outer-spin-button,
@@ -73,17 +69,17 @@ body {
 		<br><br>
 			<p align="center">Please enter the confirmation code we have sent you through email</p>
 			<div class="confirm-code-box">
-				<input class="confirmation-code error" maxlength="1" type="number" min="0" value="1" />
-				<input class="confirmation-code error" maxlength="1" type="number" min="0" value="2" />
-				<input class="confirmation-code error" maxlength="1" type="number" min="0" value="3" />
-				<input class="confirmation-code error" maxlength="1" type="number" min="0" value="4" />
+				<input class="confirmation-code" maxlength="1" type="number" min="0" />
+				<input class="confirmation-code" maxlength="1" type="number" min="0" />
+				<input class="confirmation-code" maxlength="1" type="number" min="0" />
+				<input class="confirmation-code" maxlength="1" type="number" min="0" />
 			</div>
-			<div class="error-msg-box" style="text-align:center;">Incorrect code</div>
+			<div class="error-msg-box"></div>
 	</div>
 	<div class="bottom-btn-group" style="align-items: self-end;">
 		<div align="right">Did not receive the code?<br><span id="countdown2"></span><br><br></div>
 		<div class="bottom-btn-group-btns">
-			<a class="btn-submit disabled" href="cost-analysis-engine-3.html" target="_parent">SEE RESULT</a>
+			<a class="btn-submit" href="verify-email-forex-1a.html">SEE RESULT</a>
 		</div>
 	</div>
 </body>

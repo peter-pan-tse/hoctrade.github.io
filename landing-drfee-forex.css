@@ -311,7 +311,7 @@ ul.menu-forex li a.engine.active {
 	box-shadow: 5px 3px 5px rgba(77, 77, 77, 0.75);
 }
 h1.result {
-	color:#edc45c;
+	color:#07c3e0;
 	line-height: 1.25em;
 	font-weight:normal;
 	font-size:24px;
@@ -424,7 +424,7 @@ p.disclaimer-common {
 	}
 }
 .stepline.active {
-	background-color:#edc45c;
+	background-color:#07c3e0;
 }
 .stepdot {
 	display:block;
@@ -437,8 +437,8 @@ p.disclaimer-common {
 	z-index: 1;
 }
 .stepdot.active {
-	border:6px solid #edc45c;
-	background-color:#edc45c;
+	border:6px solid #07c3e0;
+	background-color:#07c3e0;
 }
 .stepdot.step1 {
 	left:-12px;
@@ -467,7 +467,7 @@ p.disclaimer-common {
 	align-items: flex-end;
 }
 .steptext.active {
-	color:#edc45c;
+	color:#07c3e0;
 }
 .steptext.step1 {
 	left:-60px;
@@ -883,7 +883,7 @@ a.btn-submit {
 	height:60px;
 	width:300px;
 	text-align: center;
-	background-color:#edc45c;
+	background-color:#07c3e0;
 	border-radius:10px;
 	transition:all ease 0.3s;
 	cursor: pointer;
@@ -944,7 +944,7 @@ a.btn-info > span {
 }
 .exchange-logo-block.active {
 	color:#4d4d4d;
-	background-color:#edc45c;
+	background-color:#07c3e0;
 }
 /* video box */
 .video-box {
@@ -958,7 +958,7 @@ a.btn-info > span {
 	padding:10px;
 	font-size:12px;
 	line-height:1.25em;
-	border-left:1px solid #edc45c;
+	border-left:1px solid #07c3e0;
 }
 @media only screen and (max-width: 480px) {
 	.timestamp {
@@ -2385,19 +2385,6 @@ a.btn-cost-engine:hover {
 	position:relative;
 	margin: 0;
 	padding:0;
-}
-.labels {
-	display:flex;
-	position:absolute;
-	width:calc(100% - 12px);
-	top:2px;
-	left:6px;
-	font-size:8px;
-	color:#999999;
-	line-height:1em;
-	flex-direction:row;
-	justify-content: space-between;
-	z-index:1;
 }
 .field-label {
 	display:block;

@@ -1,0 +1,250 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Noto Sans:400,700,900" rel="stylesheet">
+	<link href="font.css" rel="stylesheet">
+	<link href="landing-drfee-forex.css" rel="stylesheet">
+	<link href="burger-menu-drfee-forex.css" rel="stylesheet">
+	<link rel="icon" href="img/favicon-drfee.svg">
+	<title>dr-fee</title>
+	<!-- write your code here -->
+	<style>
+		body {
+			background-color:#4d4d4d;
+			color:#ffffff;
+		}
+		.footer-forex p.disclaimer {
+			width:100%;
+		}
+	</style>
+	</head>
+	<body>
+		<div class="header">
+			<div class="header-container-forex">
+				<a href="dr-fee-landing.html"><div class="logo"><img src="img/logo-drfree-1-white.svg" /></div></a>
+				<ul class="menu-forex">
+					<li><a class="engine active" href="cost-analysis-engine-1.html">Cost analysis engine</a></li>
+					<li><a href="dr-fee-broker-list.html">Broker list</a></li>
+					<li><a href="dr-fee-forex-promotion.html">Promotions</a></li>
+					<li><a href="dr-fee-forex-blog.html">Blog</a></li>
+					<li class="switch-to-crypto"><a href="dr-fee-crypto.html"><div class="ico ht-crypto-coin"></div><div><span style="font-size:smaller;">go to</span><br>Crypto</div></a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<!-- mobile menu -->
+		<nav role="navigation">
+			<div class="recent-cat"></div>
+			<div id="mobileMenuToggle">
+				<!--A fake / hidden checkbox is used as click reciever, so you can use the :checked selector on it.-->
+				<input type="checkbox" />
+				<!--Some spans to act as a hamburger. They are acting like a real hamburger, not that McDonalds stuff.-->
+				<span></span>
+				<span></span>
+				<span></span>
+				<!-- Too bad the menu has to be inside of the button but hey, it's pure CSS magic.-->
+				<ul id="mobileMenu">
+					<li>
+						<a href="cost-analysis-engine-1.html">
+							<div class="s-menu-title active">Cost analysis engine</div>
+						</a>
+					</li>
+					<li>
+						<a href="dr-fee-broker-list.html">
+							<div class="s-menu-title"><div class="s-menu-ico ht-clipboard"></div>Broker list</div>
+						</a>
+					</li>
+					<li>
+						<a href="dr-fee-forex-promotion.html">
+							<div class="s-menu-title"><div class="s-menu-ico ht-star"></div>Promotions</div>
+						</a>
+					</li>
+					<li>
+						<a href="dr-fee-forex-blog.html">
+							<div class="s-menu-title"><div class="s-menu-ico ht-blog"></div>Blog</div>
+						</a>
+					</li>
+					<li>
+						<a href="dr-fee-crypto.html">
+							<div class="s-menu-title"><div class="s-menu-ico ht-forex-coin"></div>Go to dr-fee Crypto</div>
+						</a>
+					</li>
+				</ul>
+				<div class="mobileMenuMask"></div>
+			</div>
+		</nav>
+		<!-- mobile menu ended -->
+		
+		<div class="step-container">
+			<div class="step-box">
+				<div class="stepline"></div>
+				<div class="stepdot step1 active"></div>
+				<div class="steptext step1 active">Insert data</div>
+				<div class="stepdot step2"></div>
+			</div>
+			<div class="step-box">
+				<div class="stepline"></div>
+				<div class="stepdot step3"></div>
+				<div class="steptext step3">Result</div>
+			</div>
+		</div>
+		<p class="intro">We use the read-only investor password access to retrieve your past trades as basis to simulate your trading costs for other brokers</p>
+		<!-- form -->
+		<!-- form -->
+		<div class="main-container">
+			<div class="content-block">
+				<!-- select broker -->
+				<div class="labels">Your broker <a class="btn-info" href="#" id="infomodal"><span class="ht-info"></span></a></div>
+				<div class="custom-select" style="width:calc(100% - 32px);">
+					<select>
+						<option value="null">Please select</option>
+						<option value="City Index">City Index</option>
+						<option value="CMC Markets">CMC Markets</option>
+						<option value="eToro">eToro</option>
+						<option value="Forex.com">Forex.com</option>
+						<option value="IG">IG</option>
+						<option value="Interactive Brokers">Interactive Brokers</option>
+						<option value="RoboForex">RoboForex</option>
+						<option value="SAXO Bank">SAXO Bank</option>
+						<option value="TD">TD</option>
+						<option value="Vantage">Vantage</option>
+						<option value="XM">XM</option>
+						<option value="XTB">XTB</option>
+					</select>
+				</div>
+				<!-- login id -->
+				<div class="labels">Login <a class="btn-info" href="#" id="infomodal"><span class="ht-info"></span></a></div>
+				<input class="general" placeholder="" value=""/>
+				<div class="error-msg-box"></div>
+				<!-- select server -->
+				<div class="labels">Server <a class="btn-info" id="infomodal1"><span class="ht-info"></span></a></div>
+				<div class="custom-select" style="width:calc(100% - 32px);">
+					<select>
+						<option value="null">Select server</option>
+						<option value="MT4">MetaTrader 4</option>
+					</select>
+				</div>
+				<!-- invester password -->
+				<div class="labels">Investor password <a class="btn-info" href="#" id="infomodal"><span class="ht-info"></span></a></div>
+				<input class="general" placeholder="" value="" type="password" />
+				<div class="error-msg-box"></div>
+				<!-- select country -->
+				<div class="labels">Country of residence <a class="btn-info" id="infomodal1"><span class="ht-info"></span></a></div>
+				<div class="custom-select" style="width:calc(100% - 32px);">
+					<select>
+						<option value="null">Select or type keyword</option>
+						<option value="Binance">USA</option>
+						<option value="Binance US">United Kingdom</option>
+						<option value="BitFinex">Germany</option>
+						<option value="BitStamp">Canada</option>
+						<option value="ByBit">Taiwan</option>
+						<option value="Coinbase">Japan</option>
+						<option value="Crypto.com">Singapore</option>
+						<option value="FTX">China</option>
+						<option value="FTX US">France</option>
+					</select>
+				</div>
+			</div><!-- content block -->
+		</div>
+		<div class="btn-container" style="width:calc(50% - 40px);">
+			<a class="btn-submit" href="cost-analysis-engine-2.html">NEXT</a>
+		</div>
+		<!-- footer -->
+		<div class="footer-forex">
+			<div class="footer-top-group">
+				<div class="footer-logo-box">
+					<img class="footer-logo" src="img/logo-drfree-2.svg" />&copy;2022 Hoc Trade Technology Co. Ltd. All Rights Reserved
+				</div>
+				<div class="footer-link-box">
+					<span class="separator">|</span><a href="terms.html">Terms &amp; conditions</a><span class="separator">|</span><a href="privacy.html">Privacy policy</a><span class="separator">|</span><a href="about.html">About</a><span class="separator">|</span><a href="d-fee-forex-contact.html">Contact</a><span class="separator">|</span>
+				</div>
+				<div class="social-box">
+					<a class="social" href="https://www.facebook.com/drfeecrypto" target="_blank"><span class="ht-logo-fb"></span></a><a class="social" href="https://www.instagram.com/drfeecrypto/" target="_blank"><span class="ht-logo-ig"></span></a><a class="social" href="https://twitter.com/drfeecrypto" target="_blank"><span class="ht-logo-twitter"></span></a>
+				</div>
+			</div>
+			<p class="disclaimer">HIGH RISK WARNING: Foreign exchange, cryptocurrencies, and other CFDtrading carries a high level of risk and may not be suitable for everyone. The usage of leverage creates additional risk and loss exposure. Your investment objectives, experience level, and risk tolerance have to be taken into consideration before you decide to trade foreign exchange, cryptocurrencies, or other CFD products. You could lose some or all of your investment. Do not invest money that you cannot afford to lose and always use an appropriate risk management. It’s important to educate yourself on the risks associated with foreign exchange trading, and seek professional advice from an independent financial or tax advisor in case of any questions. Any data and information is provided 'as is' solely for informational purposes, and is not intended for trading purposes or advice. Past performance, including fees, which are presented on this website or you find somewhere else, is not indicative of future results.</p>
+		</div>
+	</body>
+	<script>
+		var x, i, j, l, ll, selElmnt, a, b, c;
+		/*look for any elements with the class "custom-select":*/
+		x = document.getElementsByClassName("custom-select");
+		l = x.length;
+		for (i = 0; i < l; i++) {
+		  selElmnt = x[i].getElementsByTagName("select")[0];
+		  ll = selElmnt.length;
+		  /*for each element, create a new DIV that will act as the selected item:*/
+		  a = document.createElement("DIV");
+		  a.setAttribute("class", "select-selected");
+		  a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+		  x[i].appendChild(a);
+		  /*for each element, create a new DIV that will contain the option list:*/
+		  b = document.createElement("DIV");
+		  b.setAttribute("class", "select-items select-hide");
+		  for (j = 1; j < ll; j++) {
+			/*for each option in the original select element,
+			create a new DIV that will act as an option item:*/
+			c = document.createElement("DIV");
+			c.innerHTML = selElmnt.options[j].innerHTML;
+			c.addEventListener("click", function(e) {
+				/*when an item is clicked, update the original select box,
+				and the selected item:*/
+				var y, i, k, s, h, sl, yl;
+				s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+				sl = s.length;
+				h = this.parentNode.previousSibling;
+				for (i = 0; i < sl; i++) {
+				  if (s.options[i].innerHTML == this.innerHTML) {
+					s.selectedIndex = i;
+					h.innerHTML = this.innerHTML;
+					y = this.parentNode.getElementsByClassName("same-as-selected");
+					yl = y.length;
+					for (k = 0; k < yl; k++) {
+					  y[k].removeAttribute("class");
+					}
+					this.setAttribute("class", "same-as-selected");
+					break;
+				  }
+				}
+				h.click();
+			});
+			b.appendChild(c);
+		  }
+		  x[i].appendChild(b);
+		  a.addEventListener("click", function(e) {
+			  /*when the select box is clicked, close any other select boxes,
+			  and open/close the current select box:*/
+			  e.stopPropagation();
+			  closeAllSelect(this);
+			  this.nextSibling.classList.toggle("select-hide");
+			  this.classList.toggle("select-arrow-active");
+			});
+		}
+		function closeAllSelect(elmnt) {
+		  /*a function that will close all select boxes in the document,
+		  except the current select box:*/
+		  var x, y, i, xl, yl, arrNo = [];
+		  x = document.getElementsByClassName("select-items");
+		  y = document.getElementsByClassName("select-selected");
+		  xl = x.length;
+		  yl = y.length;
+		  for (i = 0; i < yl; i++) {
+			if (elmnt == y[i]) {
+			  arrNo.push(i)
+			} else {
+			  y[i].classList.remove("select-arrow-active");
+			}
+		  }
+		  for (i = 0; i < xl; i++) {
+			if (arrNo.indexOf(i)) {
+			  x[i].classList.add("select-hide");
+			}
+		  }
+		}
+		/*if the user clicks anywhere outside the select box,
+		then close all select boxes:*/
+		document.addEventListener("click", closeAllSelect);
+	</script>
+</html>
