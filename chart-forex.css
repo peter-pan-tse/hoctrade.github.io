@@ -234,7 +234,7 @@ ul.ex-rank-table li, ul.compare-table li {
 	flex-direction:column;
 	justify-content: center;
 	width:100%;
-	height:60px;
+	height:80px;
 	position:relative;
 	padding: 0;
 	margin: 0;
@@ -244,7 +244,7 @@ ul.ex-list-table li {
 	flex-direction:column;
 	justify-content: center;
 	width:100%;
-	height:60px;
+	height:80px;
 	position:relative;
 	padding: 10px 0;
 	margin: 0;
