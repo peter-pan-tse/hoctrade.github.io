@@ -74,6 +74,10 @@
 		.field-label, .custom-select {
 			font-size:14px;
 		}
+		input.general {
+			background-color: #f9f9f9;
+			border: 1px solid #f9f9f9;
+		}
 	</style>
 	</head>
 	<body>
@@ -139,8 +143,16 @@
 			<h1>Contact &amp; support</h1>
 			<p>Your feedbacks and recommendations are invaluable. Please tell us what is your problem and/or any suggestions by filling up the feedback form below. We will get back to you in no time.</p>
 			<div class="feedback-container">
+				<div style="font-size:12px; margin:0 0 20px 0;"><span style="color:red;">*</span> Required fields</div>
 					<!-- input module -->
-					<div class="field-label"><strong>Topic</strong></div>
+					<div class="field-label"><strong>Your name <span style="color:red;">*</span></strong></div>
+					<input class="general" type="text" />
+					<!-- input module -->
+					<div class="field-label"><strong>Contact email <span style="color:red;">*</span></strong></div>
+					<input class="general error" type="text" value="demo@demo,com" />
+					<div class="error-msg-box">Invalid email format</div>
+					<!-- input module -->
+					<div class="field-label"><strong>Topic <span style="color:red;">*</span></strong></div>
 					<div class="custom-select" style="width:calc(100% - 32px);">
 						<select>
 							<option value="null">Please select</option>
@@ -151,7 +163,7 @@
 					</div>
 					<!-- input module end -->
 					<!-- input module -->
-					<div class="field-label"><strong>Area</strong></div>
+					<div class="field-label"><strong>Area <span style="color:red;">*</span></strong></div>
 					<div class="custom-select" style="width:calc(100% - 32px);">
 						<select>
 							<option value="null">Please select</option>
@@ -162,7 +174,7 @@
 					</div>
 					<!-- input module end -->
 				<!-- input module -->
-				<div class="field-label"><strong>Details</strong></div>
+				<div class="field-label"><strong>Details <span style="color:red;">*</span></strong></div>
 				<textarea class="general" placeholder="" rows="4"></textarea>
 				<!-- input module end -->
 				<div class="upload-file-box">
