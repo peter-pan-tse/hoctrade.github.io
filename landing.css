@@ -565,3 +565,78 @@ img.scoreboard-img {
     opacity: 1;
   }
 }
+/* top theme animation */
+img.theme-step1, img.theme-step2, img.theme-step3, img.theme-step4, img.theme-step5 {
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	width:auto;
+	opacity: 0;
+}
+div.theme-steptext {
+	display:flex;
+	justify-content: center;
+	padding-bottom:40px;
+	color:#FFFFFF;
+	font-weight: bold;
+	font-size:4vw;
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	width:100%;
+	opacity: 0;
+}
+.theme-step1-animation, .theme-step2-animation, .theme-step3-animation, .theme-step4-animation, .theme-step5-animation, .theme-steptext-animation {
+	animation-duration: 5s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	transition: 0.3s ease-out;
+}
+.theme-step1-animation {
+	animation-name: theme-step1;
+}
+.theme-step2-animation {
+	animation-name: theme-step2;
+}
+.theme-step3-animation {
+	animation-name: theme-step3;
+}
+.theme-step4-animation {
+	animation-name: theme-step4;
+}
+.theme-step5-animation {
+	animation-name: theme-step5;
+}
+.theme-steptext-animation {
+	animation-name: theme-steptext;
+}
+@keyframes theme-step1 {
+	0%   {top: 40px; opacity: 0;}
+	10%   {top: 100px; opacity: 1;}
+	100%  {top: 100px; opacity: 1;}
+}
+@keyframes theme-steptext {
+	10%  {bottom: 0px; opacity: 0;}
+	20%  {bottom: 50px; opacity: 1;}
+	100% {bottom: 50px; opacity: 1;}
+}
+@keyframes theme-step2 {
+	20%  {top: 120px; opacity: 0;}
+	30%  {top: 100px; opacity: 1;}
+	100% {top: 100px; opacity: 1;}
+}
+@keyframes theme-step3 {
+	20%   {top: 120px; opacity: 0;}
+	30%   {top: 100px; opacity: 1;}
+	100%  {top: 100px; opacity: 1;}
+}
+@keyframes theme-step4 {
+	30%   {top: 130px; opacity: 0;}
+	40%   {top: 100px; opacity: 1;}
+	100%  {top: 100px; opacity: 1;}
+}
+@keyframes theme-step5 {
+	40%   {top: 140px; opacity: 0;}
+	50%   {top: 100px; opacity: 1;}
+	100%  {top: 100px; opacity: 1;}
+}

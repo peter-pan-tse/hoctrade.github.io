@@ -14,24 +14,62 @@
 			padding:0px;
 			margin:0px;
 		}
-		.theme-animation-container {
+		  #animation_container {
 			position:relative;
-			width:100%;
-			max-width:1024px;
-			height:100vh;
-			margin:0 auto;
-		}
+			margin:auto;
+			background-color:#367e91;
+		  }
 		.theme-container {
 			display:block;
 			position:relative;
 			width:100%;
 			background-color:#367e91;
-			background-image: url("img/hoc-trade-top-bg.png");
-			background-size:cover;
 			z-index:1000;
 		}
 	</style>
-	<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>	
+	<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+	<script src="theme-animation.js?1657163019398"></script>
+	<script>
+	var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+	function init() {
+		canvas = document.getElementById("canvas");
+		anim_container = document.getElementById("animation_container");
+		dom_overlay_container = document.getElementById("dom_overlay_container");
+		var comp=AdobeAn.getComposition("98145A8702D1466298816CCD4C4A8647");
+		var lib=comp.getLibrary();
+		var loader = new createjs.LoadQueue(false);
+		loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
+		loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+		var lib=comp.getLibrary();
+		loader.loadManifest(lib.properties.manifest);
+	}
+	function handleFileLoad(evt, comp) {
+		var images=comp.getImages();	
+		if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }	
+	}
+	function handleComplete(evt,comp) {
+		//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+		var lib=comp.getLibrary();
+		var ss=comp.getSpriteSheet();
+		var queue = evt.target;
+		var ssMetadata = lib.ssMetadata;
+		for(i=0; i<ssMetadata.length; i++) {
+			ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+		}
+		exportRoot = new lib.themeanimation();
+		stage = new lib.Stage(canvas);	
+		//Registers the "tick" event listener.
+		fnStartAnimation = function() {
+			stage.addChild(exportRoot);
+			createjs.Ticker.framerate = lib.properties.fps;
+			createjs.Ticker.addEventListener("tick", stage);
+		}	    
+		//Code to support hidpi screens and responsive scaling.
+		AdobeAn.makeResponsive(true,'both',true,1,[canvas,anim_container,dom_overlay_container]);	
+		AdobeAn.compositionLoaded(lib.properties.id);
+		fnStartAnimation();
+	}
+	</script>
 	<!-- scroll smoothly to anchor -->
 	<script>
 		// Select all links with hashes
@@ -71,8 +109,32 @@
 			}
 		  });
 	</script>
+	<!-- viewport fade in -->
+	<script>
+		function checkElementLocation() {
+		  var $window = $(window);
+		  var bottom_of_window = $window.scrollTop() + $window.height();
+
+		  $('.elem').each(function(i) {
+			var $that = $(this);
+			var bottom_of_object = $that.position().top + $that.outerHeight();
+
+			//if element is in viewport, add the animate class
+			if (bottom_of_window > bottom_of_object) {
+			  $(this).addClass('fade-in');
+			}
+		  });
+		}
+		// if in viewport, show the animation
+		checkElementLocation();
+
+		$(window).on('scroll', function() {
+		  checkElementLocation();
+		});
+	</script>
+	<!-- write your code here -->
 	</head>
-	<body>
+	<body onload="init();">
 		<div class="header">
 			<div class="header-container">
 				<div class="logo"><img src="img/logo-w-text.svg" /></div>
@@ -84,13 +146,10 @@
 			</div>
 		</div>
 		<div class="theme-container">
-			<div class="theme-animation-container">
-				<img class="theme-step2 img-responsive theme-step2-animation" src="img/hoc-trade-top-2.png" />
-				<img class="theme-step5 img-responsive theme-step5-animation" src="img/hoc-trade-top-5.png" />
-				<img class="theme-step4 img-responsive theme-step4-animation" src="img/hoc-trade-top-4.png" />
-				<img class="theme-step1 img-responsive theme-step1-animation" src="img/hoc-trade-top-1.png" />
-				<img class="theme-step3 img-responsive theme-step3-animation" src="img/hoc-trade-top-3.png" />
-				<div class="theme-steptext theme-steptext-animation">Do you know your trading errors?</div>
+			<div id="animation_container">
+				<canvas id="canvas" width="1400" height="700" style="position: absolute; display: block; background-color:rgba(4, 127, 146, 1.00);"></canvas>
+				<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:1400px; height:700px; position: absolute; left: 0px; top: 0px; display: block;">
+				</div>
 			</div>
 		</div>
 		<div class="header-bg"></div>
@@ -490,37 +549,4 @@
 			</div>
 		</div>
 	</body>
-	<script>
-		const observer = new IntersectionObserver(entries => {
-		  entries.forEach(entry => {
-			  const themestep1 = entry.target.querySelector('.theme-step1');
-			  const themestep2 = entry.target.querySelector('.theme-step2');
-			  const themestep3 = entry.target.querySelector('.theme-step3');
-			  const themestep4 = entry.target.querySelector('.theme-step4');
-			  const themestep5 = entry.target.querySelector('.theme-step5');
-			  const themestep6 = entry.target.querySelector('.theme-steptext');
-
-			if (entry.isIntersecting) {
-			    themestep1.classList.add('theme-step1-animation');
-				themestep2.classList.add('theme-step2-animation');
-				themestep3.classList.add('theme-step3-animation');
-				themestep4.classList.add('theme-step4-animation');
-				themestep5.classList.add('theme-step5-animation');
-				themestep6.classList.add('theme-steptext-animation');
-			  return; // if we added the class, exit the function
-			}
-
-			  // We're not intersecting, so remove the class!
-			  themestep1.classList.remove('theme-step1-animation');
-			  themestep2.classList.remove('theme-step2-animation');
-			  themestep3.classList.remove('theme-step3-animation');
-			  themestep4.classList.remove('theme-step4-animation');
-			  themestep5.classList.remove('theme-step5-animation');
-			  themestep6.classList.remove('theme-steptext-animation');
-		  });
-		});
-
-		observer.observe(document.querySelector('.theme-wrapper'));
-	</script>
-	<script src="animateViewport.js" language="javascript"></script>
 </html>
