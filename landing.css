@@ -178,7 +178,7 @@ h2 {
 }
 .content-block-l {
 	display:inline-block;
-	margin:20px 20px 20px 10px;
+	margin:20px 20px 0px 10px;
 	width:calc(60% - 40px);
 }
 .content-block-r {
@@ -639,4 +639,74 @@ div.theme-steptext {
 	40%   {top: 140px; opacity: 0;}
 	50%   {top: 100px; opacity: 1;}
 	100%  {top: 100px; opacity: 1;}
+}
+/* diagram animation */
+img.diagram-step1, img.diagram-step2, img.diagram-step3, img.diagram-step4, img.diagram-step5, img.diagram-step6, img.diagram-step7 {
+	position:absolute;
+	left:calc(50% - 400px);
+	top:0px;
+	width:800px;
+	opacity: 0;
+}
+.diagram-step1-animation, .diagram-step2-animation, .diagram-step3-animation, .diagram-step4-animation, .diagram-step5-animation, .diagram-step6-animation, .diagram-step7-animation {
+	animation-duration: 10s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	transition: 0.3s ease-out;
+}
+.diagram-step1-animation {
+	animation-name: diagram-step1;
+}
+.diagram-step2-animation {
+	animation-name: diagram-step2;
+}
+.diagram-step3-animation {
+	animation-name: diagram-step3;
+}
+.diagram-step4-animation {
+	animation-name: diagram-step4;
+}
+.diagram-step5-animation {
+	animation-name: diagram-step5;
+}
+.diagram-step6-animation {
+	animation-name: diagram-step6;
+}
+.diagram-step7-animation {
+	animation-name: diagram-step7;
+}
+@keyframes diagram-step1 {
+	5%   {top: 0px; opacity: 0;}
+	20%   {top: 0px; opacity: 1;}
+	100%  {top: 0px; opacity: 1;}
+}
+@keyframes diagram-step2 {
+	15%  {top: -20px; left:calc(50% - 460px); opacity: 0;}
+	25%  {top: 0px; left:calc(50% - 400px); opacity: 1;}
+	100% {top: 0px; left:calc(50% - 400px); opacity: 1;}
+}
+@keyframes diagram-step3 {
+	30%   {top: -20px; opacity: 0;}
+	40%   {top: 0px; opacity: 1;}
+	100%  {top: 0px; opacity: 1;}
+}
+@keyframes diagram-step4 {
+	35%   {top: 0px; opacity: 0;}
+	45%   {top: 0px; opacity: 1;}
+	100%  {top: 0px; opacity: 1;}
+}
+@keyframes diagram-step5 {
+	60%   {top: 20px; left:calc(50% - 460px); opacity: 0;}
+	70%   {top: 0px; left:calc(50% - 400px); opacity: 1;}
+	100%  {top: 0px; left:calc(50% - 400px); opacity: 1;}
+}
+@keyframes diagram-step6 {
+	75%  {top: 20px; left:calc(50% - 360px); opacity: 0;}
+	85%  {top: 0px; left:calc(50% - 400px); opacity: 1;}
+	100% {top: 0px; left:calc(50% - 400px); opacity: 1;}
+}
+@keyframes diagram-step7 {
+	85%  {top: 0px; opacity: 0;}
+	95%  {top: 0px; opacity: 1;}
+	100% {top: 0px; opacity: 1;}
 }

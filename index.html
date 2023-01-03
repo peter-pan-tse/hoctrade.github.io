@@ -30,6 +30,11 @@
 			background-size:cover;
 			z-index:1000;
 		}
+		.diagram-animation-container {
+			position:relative;
+			width:100%;
+			margin:0 auto;
+		}
 	</style>
 	<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>	
 	<!-- scroll smoothly to anchor -->
@@ -378,8 +383,16 @@
 				<div class="content-block-l">
 					<h1>How does hoc-trade behavioral trading analytics work</h1>
 				</div>
-				<div>
-					<img class="img-responsive" src="img/howto-diagram.png" />
+				<div style="height:calc(100vh - 60px); position:relative; width:100%;">
+					<div class="diagram-animation-container step-wrapper">
+						<img class="diagram-step2" src="img/hoc-trade-diagram-2.png" />
+						<img class="diagram-step1" src="img/hoc-trade-diagram-1.png" />
+						<img class="diagram-step3" src="img/hoc-trade-diagram-3.png" />
+						<img class="diagram-step4" src="img/hoc-trade-diagram-4.png" />
+						<img class="diagram-step6" src="img/hoc-trade-diagram-6.png" />
+						<img class="diagram-step5" src="img/hoc-trade-diagram-5.png" />
+						<img class="diagram-step7" src="img/hoc-trade-diagram-7.png" />
+					</div>
 				</div>
 			</div>
 		</div>
@@ -429,9 +442,9 @@
 						<li>Analyse the built-in benchmark to profitable traders in your analytics output.</li>
 					</ul>
 				</div>
-				<div class="content-block-r" style="position:relative;">
+				<!--<div class="content-block-r" style="position:relative;">
 					<img class="scoreboard-img" src="img/scoreboard.png" />
-				</div>
+				</div>-->
 			</div>
 		</div>
 		<!-- platforms -->
@@ -493,34 +506,37 @@
 	<script>
 		const observer = new IntersectionObserver(entries => {
 		  entries.forEach(entry => {
-			  const themestep1 = entry.target.querySelector('.theme-step1');
-			  const themestep2 = entry.target.querySelector('.theme-step2');
-			  const themestep3 = entry.target.querySelector('.theme-step3');
-			  const themestep4 = entry.target.querySelector('.theme-step4');
-			  const themestep5 = entry.target.querySelector('.theme-step5');
-			  const themestep6 = entry.target.querySelector('.theme-steptext');
+			  const step1 = entry.target.querySelector('.diagram-step1');
+			  const step2 = entry.target.querySelector('.diagram-step2');
+			  const step3 = entry.target.querySelector('.diagram-step3');
+			  const step4 = entry.target.querySelector('.diagram-step4');
+			  const step5 = entry.target.querySelector('.diagram-step5');
+			  const step6 = entry.target.querySelector('.diagram-step6');
+			  const step7 = entry.target.querySelector('.diagram-step7');
 
 			if (entry.isIntersecting) {
-			    themestep1.classList.add('theme-step1-animation');
-				themestep2.classList.add('theme-step2-animation');
-				themestep3.classList.add('theme-step3-animation');
-				themestep4.classList.add('theme-step4-animation');
-				themestep5.classList.add('theme-step5-animation');
-				themestep6.classList.add('theme-steptext-animation');
+			    step1.classList.add('diagram-step1-animation');
+				step2.classList.add('diagram-step2-animation');
+				step3.classList.add('diagram-step3-animation');
+				step4.classList.add('diagram-step4-animation');
+				step5.classList.add('diagram-step5-animation');
+				step6.classList.add('diagram-step6-animation');
+				step7.classList.add('diagram-step7-animation');
 			  return; // if we added the class, exit the function
 			}
 
 			  // We're not intersecting, so remove the class!
-			  themestep1.classList.remove('theme-step1-animation');
-			  themestep2.classList.remove('theme-step2-animation');
-			  themestep3.classList.remove('theme-step3-animation');
-			  themestep4.classList.remove('theme-step4-animation');
-			  themestep5.classList.remove('theme-step5-animation');
-			  themestep6.classList.remove('theme-steptext-animation');
+			  step1.classList.remove('diagram-step1-animation');
+			  step2.classList.remove('diagram-step2-animation');
+			  step3.classList.remove('diagram-step3-animation');
+			  step4.classList.remove('diagram-step4-animation');
+			  step5.classList.remove('diagram-step5-animation');
+			  step6.classList.remove('diagram-step6-animation');
+			  step7.classList.remove('diagram-step7-animation');
 		  });
 		});
 
-		observer.observe(document.querySelector('.theme-wrapper'));
+		observer.observe(document.querySelector('.step-wrapper'));
 	</script>
 	<script src="animateViewport.js" language="javascript"></script>
 </html>
