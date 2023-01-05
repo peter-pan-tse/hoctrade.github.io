@@ -95,6 +95,15 @@
 		<!-- form -->
 		<div class="main-container">
 			<div class="content-block">
+				<!-- select server -->
+				<div class="labels">Your trading platform <a class="btn-info" id="infomodal1"><span class="ht-info"></span></a></div>
+				<div class="custom-select" style="width:calc(100% - 32px);">
+					<select>
+						<option value="null">Select trading platform</option>
+						<option value="MT4">MetaTrader 4</option>
+						<option value="MT5">MetaTrader 5</option>
+					</select>
+				</div>
 				<!-- select broker -->
 				<div class="labels">Your broker <a class="btn-info" href="#" id="infomodal"><span class="ht-info"></span></a></div>
 				<div class="custom-select" style="width:calc(100% - 32px);">
@@ -114,16 +123,13 @@
 						<option value="XTB">XTB</option>
 					</select>
 				</div>
-				<!-- login id -->
-				<div class="labels">Login <a class="btn-info" href="#" id="infomodal"><span class="ht-info"></span></a></div>
-				<input class="general" placeholder="" value=""/>
-				<div class="error-msg-box"></div>
 				<!-- select server -->
 				<div class="labels">Server <a class="btn-info" id="infomodal1"><span class="ht-info"></span></a></div>
 				<div class="custom-select" style="width:calc(100% - 32px);">
 					<select>
 						<option value="null">Select server</option>
-						<option value="MT4">MetaTrader 4</option>
+						<option value="CI-demo">City Index Live</option>
+						<option value="CI-live">City Index Demo</option>
 					</select>
 				</div>
 				<!-- invester password -->
