@@ -229,7 +229,17 @@ ul.ex-list-table {
 		margin:10px;
 	}
 }
-ul.ex-rank-table li, ul.compare-table li {
+ul.ex-rank-table li {
+	display:flex;
+	flex-direction:column;
+	justify-content: center;
+	width:100%;
+	height:60px;
+	position:relative;
+	padding: 0;
+	margin: 0;
+}
+ul.compare-table li {
 	display:flex;
 	flex-direction:column;
 	justify-content: center;
