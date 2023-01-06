@@ -1399,12 +1399,20 @@ ul.blog li > .intro > .blog-header {
 	flex-direction: row-reverse;
 	align-items:center;
 }
-ul.blog li > .intro > h1, .blog-content > h1 {
+ul.blog li > .intro > a.blog-headline h1, .blog-content > h1 {
 	color:#0792a0;
 	font-size:24px;
 	font-weight: normal;
 	line-height: 1.25em;
 	margin:20px 0;
+	text-decoration: none;
+}
+a.blog-headline {
+	text-decoration: none;
+}
+ul.blog li > .intro > a.blog-headline h1:hover {
+	color:#06afc9;
+	text-decoration: underline;
 }
 ul.blog li > .intro > p, .blog-content > p {
 	margin:0 0 20px 0;
