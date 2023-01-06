@@ -111,7 +111,7 @@
 						<a id="modalSelectAcc" style="cursor:pointer;"><span class="ht-wallet-setting icon"></span>Account setting</a>
 					</li>
 					<li>
-						<a href="trade-account-adding.html"><span class="ht-wallet-add icon"></span>Add account</a>
+						<a id="modalSelectAddType" style="cursor:pointer;"><span class="ht-wallet-add icon"></span>Add account</a>
 					</li>
 					<hr class="dropmenu-separator" />
 					<li>
@@ -441,7 +441,7 @@
 				<span class="close"><span class="ht-cross"></span></span>
 			</div>
 			<div class="modal-body-trade-acc">
-				<p align="center">Select account to edit or add a new account.</p>
+				<p align="center" style="font-size:14px;">Select account to edit or add a new account.</p>
 				<ul class="select-acc">
 					
 					<li>
@@ -469,7 +469,7 @@
 					</li>
 					
 					<li>
-						<a href="trade-account-setting.html">
+						<a href="forex-trade-account-setting.html">
 							<div class="select-acc-ico ht-wallet">
 								<div class="select-acc-ico-verified-bg"></div>
 								<div class="select-acc-ico-verified"><span class="ht-verified"></span></div>
@@ -481,11 +481,61 @@
 					</li>
 					
 					<li>
-						<a href="trade-account-adding.html">
-							<div class="select-acc-ico ht-wallet-add"></div>
-							<div>Add new account</div>
+						<a href="forex-trade-account-adding.html">
+							<div class="select-acc-ico ht-forex-coin">
+								<div class="select-acc-ico-verified-bg"></div>
+								<div class="select-acc-ico-verified"><span class="ht-add"></span></div>
+							</div>
+							<div>Add Forex trade account</div>
 						</a>
 					</li>
+					<li>
+						<a href="crypto-trade-account-adding.html">
+							<div class="select-acc-ico ht-crypto-coin">
+								<div class="select-acc-ico-verified-bg"></div>
+								<div class="select-acc-ico-verified"><span class="ht-add"></span></div>
+							</div>
+							<div>Add Crypto trade account</div>
+						</a>
+					</li>
+					
+				</ul>
+				<p></p>
+			</div>
+	  </div>
+	</div>
+	
+	<!-- The Modal -->
+	<div id="modalAddTradeAcc" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content">
+			<div class="modal-header">
+				<span>Add new trade account</span>
+				<span class="close"><span class="ht-cross"></span></span>
+			</div>
+			<div class="modal-body-trade-acc">
+				<p align="center" style="font-size:14px;">Select type of the new trade account</p>
+				<ul class="select-acc">
+					
+					<li>
+						<a href="forex-trade-account-adding.html">
+							<div class="select-acc-ico ht-forex-coin">
+								<div class="select-acc-ico-verified-bg"></div>
+								<div class="select-acc-ico-verified"><span class="ht-add"></span></div>
+							</div>
+							<div>Add Forex trade account</div>
+						</a>
+					</li>
+					<li>
+						<a href="crypto-trade-account-adding.html">
+							<div class="select-acc-ico ht-crypto-coin">
+								<div class="select-acc-ico-verified-bg"></div>
+								<div class="select-acc-ico-verified"><span class="ht-add"></span></div>
+							</div>
+							<div>Add Crypto trade account</div>
+						</a>
+					</li>
+
 				</ul>
 				<p></p>
 			</div>
@@ -594,4 +644,5 @@
 	}
 </script>
 <script src="modal-trade-acc.js" language="javascript"></script>
+<script src="modal-add-trade-acc.js" language="javascript"></script>
 </html>
