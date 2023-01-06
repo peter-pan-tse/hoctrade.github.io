@@ -383,10 +383,10 @@ span.compare-logo {
 	display:flex;
 	align-items: center;
 	padding:5px;
-	height:50px;
+	height:70px;
 }
 .item-no, .item-reg, .item-details {
-	width:calc(7.5% - 10px);
+	width:calc(8% - 10px);
 	justify-content:center;
 }
 .list-no, .list-reg, .list-details, .list-since, .list-us-trader {
@@ -436,13 +436,14 @@ span.compare-logo {
 }
 .list-fee {
 	display:flex;
-	width:calc(24% - 2px);
+	width:calc(30% - 2px);
 	border-left:1px solid #047f92;
 	border-right:1px solid #047f92;
 	flex-direction: column;
-	justify-content: flex-start;
-	align-items:center;padding: 5px;
-    /*height: 50px;*/
+	justify-content: space-around;
+	align-items:center;
+	padding: 0px;
+    height: 100%;
 }
 @media only screen and (max-width: 480px) {
 	.list-fee {
@@ -457,13 +458,29 @@ span.compare-logo {
 }
 .list-fee-2 {
 	display:flex;
-	width:calc(25% - 2px);
+	width:calc(30% - 2px);
 	height:100%;
 	border-left:1px solid #047f92;
 	border-right:1px solid #047f92;
 	flex-direction: row;
 	justify-content: center;
 	align-items:center;
+}
+.list-fee-symbol {
+	display:flex;
+	width:calc(20% - 2px);
+	height:100%;
+	border-right:1px solid #047f92;
+	flex-direction: row;
+	justify-content: center;
+	align-items:center;
+	font-size:smaller;
+	font-weight:normal;
+	height: 50%;
+    text-align: center;
+}
+.last-symbol {
+	border-right:none;
 }
 .list-fee-container {
 	display:flex;
@@ -536,11 +553,11 @@ span.compare-logo {
 	}
 }
 .item-name, .item-bonus, .item-diff {
-	width:calc(14% - 10px);
+	width:calc(10% - 10px);
 	justify-content:flex-start;
 }
 .list-name, .list-bonus, .list-diff {
-	width:calc(12% - 10px);
+	width:calc(10% - 10px);
 	justify-content:flex-start;
 }
 @media only screen and (max-width: 480px) {

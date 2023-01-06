@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'ht-font';
-  src:  url('fonts/ht-font.eot?dw95ym');
-  src:  url('fonts/ht-font.eot?dw95ym#iefix') format('embedded-opentype'),
-    url('fonts/ht-font.ttf?dw95ym') format('truetype'),
-    url('fonts/ht-font.woff?dw95ym') format('woff'),
-    url('fonts/ht-font.svg?dw95ym#ht-font') format('svg');
+  src:  url('fonts/ht-font.eot?vh2a9n');
+  src:  url('fonts/ht-font.eot?vh2a9n#iefix') format('embedded-opentype'),
+    url('fonts/ht-font.ttf?vh2a9n') format('truetype'),
+    url('fonts/ht-font.woff?vh2a9n') format('woff'),
+    url('fonts/ht-font.svg?vh2a9n#ht-font') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ht-logo-discd:before {
+  content: "\e947";
+}
 .ht-blog:before {
   content: "\e944";
 }

@@ -575,16 +575,30 @@ img.theme-step1, img.theme-step2, img.theme-step3, img.theme-step4, img.theme-st
 }
 div.theme-steptext {
 	display:flex;
+	flex-direction:column;
 	justify-content: center;
 	padding-bottom:40px;
 	color:#FFFFFF;
 	font-weight: bold;
-	font-size:4vw;
+	font-size:4.5vw;
+	line-height:1.25em;
 	position:absolute;
 	left:0px;
 	bottom:0px;
 	width:100%;
 	opacity: 0;
+	text-align: center;
+}
+div.theme-steptext span {
+	font-size:3.5vw;
+}
+@media only screen and (min-width: 1025px) {
+	div.theme-steptext {
+		font-size:52px;
+	}
+	div.theme-steptext span {
+		font-size:40px;
+	}
 }
 .theme-step1-animation, .theme-step2-animation, .theme-step3-animation, .theme-step4-animation, .theme-step5-animation, .theme-steptext-animation {
 	animation-duration: 5s;
@@ -617,8 +631,8 @@ div.theme-steptext {
 }
 @keyframes theme-steptext {
 	10%  {bottom: 0px; opacity: 0;}
-	20%  {bottom: 50px; opacity: 1;}
-	100% {bottom: 50px; opacity: 1;}
+	20%  {bottom: 30px; opacity: 1;}
+	100% {bottom: 30px; opacity: 1;}
 }
 @keyframes theme-step2 {
 	20%  {top: 120px; opacity: 0;}
@@ -649,7 +663,7 @@ img.diagram-step1, img.diagram-step2, img.diagram-step3, img.diagram-step4, img.
 	opacity: 0;
 }
 .diagram-step1-animation, .diagram-step2-animation, .diagram-step3-animation, .diagram-step4-animation, .diagram-step5-animation, .diagram-step6-animation, .diagram-step7-animation {
-	animation-duration: 10s;
+	animation-duration:5s;
 	animation-iteration-count: 1;
 	animation-fill-mode: forwards;
 	transition: 0.3s ease-out;
@@ -677,7 +691,7 @@ img.diagram-step1, img.diagram-step2, img.diagram-step3, img.diagram-step4, img.
 }
 @keyframes diagram-step1 {
 	5%   {top: 0px; opacity: 0;}
-	20%   {top: 0px; opacity: 1;}
+	15%   {top: 0px; opacity: 1;}
 	100%  {top: 0px; opacity: 1;}
 }
 @keyframes diagram-step2 {
@@ -686,8 +700,8 @@ img.diagram-step1, img.diagram-step2, img.diagram-step3, img.diagram-step4, img.
 	100% {top: 0px; left:calc(50% - 400px); opacity: 1;}
 }
 @keyframes diagram-step3 {
-	30%   {top: -20px; opacity: 0;}
-	40%   {top: 0px; opacity: 1;}
+	25%   {top: -20px; opacity: 0;}
+	35%   {top: 0px; opacity: 1;}
 	100%  {top: 0px; opacity: 1;}
 }
 @keyframes diagram-step4 {
@@ -696,17 +710,30 @@ img.diagram-step1, img.diagram-step2, img.diagram-step3, img.diagram-step4, img.
 	100%  {top: 0px; opacity: 1;}
 }
 @keyframes diagram-step5 {
-	60%   {top: 20px; left:calc(50% - 460px); opacity: 0;}
-	70%   {top: 0px; left:calc(50% - 400px); opacity: 1;}
+	45%   {top: 20px; left:calc(50% - 460px); opacity: 0;}
+	55%   {top: 0px; left:calc(50% - 400px); opacity: 1;}
 	100%  {top: 0px; left:calc(50% - 400px); opacity: 1;}
 }
 @keyframes diagram-step6 {
-	75%  {top: 20px; left:calc(50% - 360px); opacity: 0;}
-	85%  {top: 0px; left:calc(50% - 400px); opacity: 1;}
+	55%  {top: 20px; left:calc(50% - 360px); opacity: 0;}
+	65%  {top: 0px; left:calc(50% - 400px); opacity: 1;}
 	100% {top: 0px; left:calc(50% - 400px); opacity: 1;}
 }
 @keyframes diagram-step7 {
-	85%  {top: 0px; opacity: 0;}
-	95%  {top: 0px; opacity: 1;}
+	65%  {top: 0px; opacity: 0;}
+	75%  {top: 0px; opacity: 1;}
 	100% {top: 0px; opacity: 1;}
+}
+sup.comingsoon {
+	display:inline-block;
+	padding:4px 12px;
+	border-radius:16px;
+	background-color:yellow;
+	color:black;
+	font-size:12px;
+	line-height: 1em;
+	font-weight: bold;
+	text-align: center;
+	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+	/*transform: rotate(10deg);*/
 }
