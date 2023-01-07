@@ -657,9 +657,9 @@ div.theme-steptext span {
 /* diagram animation */
 img.diagram-step1, img.diagram-step2, img.diagram-step3, img.diagram-step4, img.diagram-step5, img.diagram-step6, img.diagram-step7 {
 	position:absolute;
-	left:calc(50% - 400px);
+	left:calc(50% - 370px);
 	top:0px;
-	width:800px;
+	width:740px;
 	opacity: 0;
 }
 .diagram-step1-animation, .diagram-step2-animation, .diagram-step3-animation, .diagram-step4-animation, .diagram-step5-animation, .diagram-step6-animation, .diagram-step7-animation {
