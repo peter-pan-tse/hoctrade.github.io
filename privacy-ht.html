@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Noto Sans:400,700,900" rel="stylesheet">
+	<link href="font.css" rel="stylesheet">
+	<link href="landing.css" rel="stylesheet">
+	<link rel="icon" href="img/favicon.svg">
+	<title>hoc-trade privacy policy</title>
+	<!-- write your code here -->
+	<style>
+		body {
+			padding:80px 0 0 0;
+			margin:0px;
+		}
+	</style>
+	<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>	
+	<!-- scroll smoothly to anchor -->
+	<script>
+		// Select all links with hashes
+		$('a[href*="#"]')
+		  // Remove links that don't actually link to anything
+		  .not('[href="#"]')
+		  .not('[href="#0"]')
+		  .click(function(event) {
+			// On-page links
+			if (
+			  location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+			  && 
+			  location.hostname == this.hostname
+			) {
+			  // Figure out element to scroll to
+			  var target = $(this.hash);
+			  target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+			  // Does a scroll target exist?
+			  if (target.length) {
+				// Only prevent default if animation is actually gonna happen
+				event.preventDefault();
+				$('html, body').animate({
+				  scrollTop: target.offset().top
+				}, 1000, function() {
+				  // Callback after animation
+				  // Must change focus!
+				  var $target = $(target);
+				  $target.focus();
+				  if ($target.is(":focus")) { // Checking if the target was focused
+					return false;
+				  } else {
+					$target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+					$target.focus(); // Set focus again
+				  };
+				});
+			  }
+			}
+		  });
+	</script>
+	</head>
+	<body>
+		<div class="header" style="background-color: #047f92;">
+			<div class="header-container">
+				<div class="logo"><a href="index.html"><img src="img/logo-w-text.svg" /></a></div>
+				<ul class="menu">
+					<li><a href="#">Sign in</a></li>
+					<li><a href="#">Register for free</a></li>
+					<li><a class="sandbox" href="#sandbox">Create sandbox</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="main-container" style="display:block; padding: 40px 20px;">
+			<h1>Privacy Policy</h1>
+			<p>This website is operated by Hoc-trade (“we”, “us” and “our”).</p>
+			<p>This privacy policy ("Policy")describes how your personal information is collected, used, and shared when you visit our website or use our service (“website“ or “service“).</p>
+			<p>If you choose to use our service, you agree to the collection and use of information in relation with this Policy. The personal information that we collect are used for providing and improving the service. We will not use or share your information with anyone except as described in this Policy.</p>
+			<p>The term "Hoc-trade", "us" or "we" refers to the owner of the website. The term "you" refers to the user or viewer of the website.</p>
+			<p>Your privacy will be protected as provided in this Policy.</p>
+			<p>What data do we collect?</p>
+			<h3>We collect the following data:</h3>
+			<ul>
+				<li>Personal identification information, such as name, age, email address, phone number, postcode, preferences, interest, etc.</li>
+				<li>Information we are required or authorized by applicable laws to collect and process in order to authenticate or identify you or to verify the information we have collected.</li>
+				<li>Any information that is provided by you when using our services (community discussions, contact forms, trading account connection (e.g. API information access information) and trade analytics, information provided by you on trading style, experience, likes and comments in our community, etc).</li>
+			</ul>
+			<p>We do not consider personal information to include information that has been anonymized or aggregated so that it can no longer be used to identify a specific natural person, whether in combination with other information or otherwise.</p>
+			<h3>How do we collect your data?</h3>
+			<h4>Log Data</h4>
+			<p>When you visit our website, we collect information that your browser sends to us that is called Log Data. This Log Data may include information such as your computer’s Internet Protocol ("IP") address, browser version, pages of our website that you visit, the time and date of your visit, the time spent on those pages, and other statistics.</p>
+			<p>Personal information is collected automatically when you access our website.</p>
+			<p>Your interaction with our website and your communications with us is information we receive from devices  you use when you access our website. This information will include but not limited to device ID or unique identifier, device type, unique device token.</p>
+			<h3>Privacy policies of other websites</h3>
+			<p>Hoc-trade may host different types of advertisement from third-party advertisers. These banner ads may collect anonymous information and set cookies on you device. We do not control how this information is collected or stored. The privacy for information collected by those third-party advertisers may be found on their websites.</p>
+			<h3>How will we use your data?</h3>
+			<ul>
+				<li>We collect your data so that we can:Understand your needs and provide you with a better service.</li>
+				<li>Keep a record.</li>
+				<li>Provide customer service.</li>
+				<li>Improve our services.</li>
+				<li>Email you with new products, special offers or other information which you may find interesting.</li>
+				<li>Email/alert to you based on your account settings.</li>
+				<li>Detect, prevent, mitigate and investigate fraudulent or illegal activities.</li>
+			</ul>
+			<p>Hoctrade processes Information on servers in many countries around the world, therefore we may process Information on a server located outside the country where you live.</p>
+			<h3>Personal information collected from other sources</h3>
+			<p>We allow you to share information with social media sites, or use social media sites to create your account or to connect your account with the respective social media site. Those social media sites may give us automatic access to certain personal information retained by them about you. You grant us access to the personal information retained by the respective social media site about you and agree that we can collect, use and retain the information provided by these social media sites. We may also use plug-ins or other technologies from various social media sites. If you click on a link provided via a social media plug in, you are voluntarily establishing a connection with that respective social media site.</p>
+			<p>If you provide us personal information about a third party, you agree to have that person's permission. You should inform such person how we collect, use, disclose, and retain his/her personal information according to our Policy.</p>
+			<p>We might share your personal information to our subcontractor due to the following reasons:</p>
+			<ul>
+				<li>To facilitate our service;</li>
+				<li>To provide the service on our behalf;</li>
+				<li>To assist us in analyzing how our service is used</li>
+			</ul>
+			<p>In the event that Hoc-trade is acquired by or merged with a third party, we reserve the right, in any of these circumstances, to transfer or assign the information we have collected from you as part of such merger, acquisition, sale, or other change of control. In the unlikely event of our bankruptcy, insolvency, reorganization, receivership, or assignment for the benefit of creditors, or the application of laws or equitable principles affecting creditors' rights generally, we may not be able to control how your information is treated, transferred, or used.</p>
+			<h3>Cookies</h3>
+			<p>Cookies are text files placed on your computer to collect standard Internet log information and visitor behavior information. When you visit our websites, we may collect information from you automatically through cookies or similar technology.</p>
+			<h3>How do we use cookies?</h3>
+			<p>We use these "cookies" to collection information and to improve your experience on our website. You have the option to either accept or reject these cookies, and know when a cookie is being sent to your computer. If you choose to reject our cookies, you may not be able to use some portions of our websiteService.</p>
+			<p>We use cookies, web beacons (or pixels), unique identifiers, and similar technologies to collect information about the pages you view, the links you click, and other actions you take when using our website, within our advertising or email content.</p>
+			<p>We use Google Analytics which is a web analyzing tool of Google Inc. for the purposes of the adequate design and continuous optimization of our website. Google Analytics works with cookies and creates pseudonymised usage profiles, which enable an analysis of your use of our website. Information stored in such cookies (such as browser type/version, operating system used, referrer URL, Hostname of the accessing computer, time of server request) are usually transmitted to and stored on Google's servers.</p>
+			<h3>What kind of cookies do we collect?</h3>
+			<ul>
+				<li>Functionality – we use these cookies so that we recognize you on our website and remember your previously selected preferences. These could include what language you prefer and location you are in. A mix of first-party and third-party cookies are used.</li>
+				<li>Advertising – we use these cookies to collect information about your visit to our website, the content you viewed, the links you followed and information about your browser, device, and your IP address. We sometimes shares some limited aspects of this data with third parties for advertising purposes. We may also share online data collected through cookies with our advertising partners. This means that when you visit another website, you may be shown advertising based on your browsing patterns on our website.</li>
+			</ul>
+			<h3>What are your data protection rights?</h3>
+			<p>We respect your right to access, correct, request deletion or request restriction of our usage of your personal information as required by applicable law. We also take steps to ensure that the personal information we collect is accurate and up to date.</p>
+			<p>We would like to make sure you are fully aware of all of your data protection rights. You are entitled to the following:</p>
+			<ul>
+				<li>The right to access – You have the right to request Hoc-trade for copies of your personal data. We may charge you a small fee for this service.</li>
+				<li>The right to rectification – You have the right to request Hoc-trade correct any information you believe is inaccurate. You also have the right to request Hoc-trade to complete the information you believe is incomplete.</li>
+				<li>The right to erasure – You have the right to request Hoc-trade erase your personal data, under certain conditions.</li>
+				<li>The right to restrict processing – You have the right to request t Hoc-trade restrict the processing of your personal data, under certain conditions</li>
+				<li>The right to object to processing – You have the right to object to Hoc-trade’s processing of your personal data, under certain conditions.</li>
+				<li>The right to data portability – You have the right to request Hoc-trade transfer the data that we have collected to another organization, or directly to you, under certain conditions.</li>
+			</ul>
+			<p>You may exercise your legal rights by contacting us via the email listed at the end of the page.</p>
+			<h3>How do we store your data?</h3>
+			<h4>How long we keep your personal information</h4>
+			<p>We retain your personal information for as long as necessary to provide the services you have requested, or for other essential purposes such as complying with our legal obligations, resolving disputes, and enforcing our policies.</p>
+			<h4>Security</h4>
+			<p>We will use commercially acceptable means of protecting your personal information. Secure server software (SSL) and firewalls is used to protect your information from unauthorized access, disclosure, alteration, or destruction. Furthermore, our employees and third party service providers have access to your non-public personal information only on a "need to know" basis. We follow industry standards to protect the personal information submitted to us, both during transmission and once we receive it. You acknowledge no method of transmission over the Internet, or method of electronic storage, is 100% secure and we do not guarantee the commercially acceptable means used to protect your personal information is absolute security.</p>
+			<h3>Links to Other Sites</h3>
+			<p>Our website may contain links to other sites. If you click on a third party link, you will be directed to that site. Note that these external sites are not operated by us. Therefore, we strongly advise you to review the terms and conditions of these websites. We have no control over, and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
+			<h3>Changes to This Privacy Policy</h3>
+			<p>We may update our Policy from time to time. We advise you to review this page periodically for any changes. We will notify you of any changes by posting the new Policy on this page. These changes are effective immediately, after they are posted on this page.</p>
+			<p>The terms used in this Policy have the same meanings as in our Terms and Conditions, which is accessible at hoc-trade.com, unless otherwise defined in this Policy.</p>
+			<h3>Contact Us</h3>
+			<p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us.</p>
+			<p><a href="mailto:info@hoc-trade.com">info@hoc-trade.com</a></p>
+		</div>
+		<!-- footer -->
+		<div class="module-block bg-footer">
+			<div class="main-container" style="padding:30px 0;">
+				<div class="footer">
+					<span class="ht-logo"></span><strong>hoc-trade</strong>&nbsp;&nbsp;&nbsp; &copy; 2023 hoc-trade limited, all rights reserved<span class="separator">|</span><a href="tandc-ht.html">Terms &amp; conditions</a><span class="separator">|</span><a style="color:#FFFFFF;" href="privacy-ht.html">Privacy policy</a><span class="separator">|</span><a href="advertise-w-ht.html">advertise with us</a><span class="separator">|</span><a href="about-ht.html">About us</a><span class="separator">|</span><a href="contact-ht.html">Contact us</a><br><br><a class="social" href="#"><span class="ht-logo-fb"></span></a><a class="social" href="#"><span class="ht-logo-twitter"></span></a><a class="social" href="#"><span class="ht-logo-in"></span></a><a class="social" href="#"><span class="ht-logo-yt"></span></a><a class="social" href="#"><span class="ht-logo-ig"></span></a><a class="social" href="#"><span class="ht-logo-discd"></span></a>
+					<p class="disclaimer">HIGH RISK WARNING: Foreign exchange and other CFD trading carries a high level of risk and may not be suitable for everyone. The usage of leverage creates additional risk and loss exposure. Your investment objectives, experience level and risk tolerance have to be taken into consideration before you decide to trade foreign exchange or other CFD products. You could lose some or all of your entire investment. Do not invest money that you cannot afford to lose and always use an appropriate risk management. It’s important to educate yourself on the risks associated with foreign exchange trading, and seek professional advice from an independent financial or tax advisor in case of any questions. Any data and information is provided ‘as is’ solely for informational purposes, and is not intended for trading purposes or advice. Past performance, which are presented on this website or you find somewhere else, is not indicative of future results.</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

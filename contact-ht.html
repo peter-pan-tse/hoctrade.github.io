@@ -1,0 +1,402 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Noto Sans:400,700,900" rel="stylesheet">
+	<link href="font.css" rel="stylesheet">
+	<link href="landing.css" rel="stylesheet">
+	<link rel="icon" href="img/favicon.svg">
+	<title>hoc-trade about us</title>
+	<!-- write your code here -->
+	<style>
+		body {
+			padding:80px 0 0 0;
+			margin:0px;
+		}
+		/* feedback form */
+		.feedback-container {
+			display:block;
+			width:50%;
+			margin: 40px auto;
+		}
+		@media only screen and (max-width: 600px) {
+			.feedback-container {
+				display:block;
+				width:calc(100% - 20px);
+				margin: 40px 10px;
+			}
+		}
+		::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+		  color: #CCCCCC;
+		  opacity: 1; /* Firefox */
+		}
+		.label-box {
+			position:relative;
+			margin: 0;
+			padding:0;
+		}
+		.field-label {
+			display:block;
+			margin:0 0 5px 0;
+		}
+		.upload-file-box {
+			display:block;
+			margin:10px 0;
+		}
+		input.general {
+			display: block;
+			height: 28px;
+			width: calc(100% - 10px);
+			position: relative;
+			padding: 2px 4px 0;
+			background-color: #FFFFFF;
+			border-radius: 6px;
+			color: #333333;
+			margin-bottom: 10px;
+			border: 1px solid #FFFFFF;
+		}
+		input.general.error {
+			background-color: #ffc4c4;
+			color: #ff5e5e;
+			border: 1px solid #ff5e5e;
+		}
+		.error-msg-box {
+			display: block;
+			color: #ED1C24;
+			font-size: 12px;
+			margin: 0 0 20px 0px;
+		}
+		textarea.general {
+			display: block;
+			height: auto;
+			width: calc(100% - 10px);
+			position: relative;
+			padding: 10px 4px;
+			background-color: #f9f9f9;
+			border-radius: 6px;
+			font-family: "Noto Sans";
+			font-size: 14px;
+			color: #333333;
+			margin-bottom: 10px;
+			border: 1px solid #FFFFFF;
+			resize: none;
+		}
+		.filter-box {
+			display:flex;
+			flex-direction:row;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+			margin-bottom:20px;
+		}
+		@media only screen and (max-width: 480px) {
+			.filter-box {
+				margin-bottom:10px;
+			}
+		}
+		.filter-item {
+			display:inline-block;
+			position:relative;
+			padding:4px 20px 4px 4px;
+			margin:0 5px 5px 0;
+			border-radius:4px;
+			background-color:#f9f9f9;
+			font-size:12px;
+			line-height: 1em;
+			color:#0792a0;
+		}
+		.filter-item span {
+			position:absolute;
+			font-size:20px;
+			color:#ED1C24;
+			right:0px;
+			top:0px;
+			cursor:pointer;
+		}
+		.bottom-btn-group {
+			position:absolute;
+			width:calc(100% - 100px);
+			bottom:0px;
+			display:flex;
+			flex-direction:column;
+			justify-content: space-between;
+			padding:0 50px;
+		}
+		.bottom-btn-group-btns {
+			display:flex;
+			flex-direction:row-reverse;
+			justify-content: space-between;
+			width:100%;
+		}
+		a.btn-form {
+			display:flex;
+			justify-content:center;
+			align-items:center;
+			height:40px;
+			width: calc(100% - 20px);
+			padding:0px 20px;
+			background-color:#0792a0;
+			border-radius:10px;
+			font-size:18px;
+			line-height:40px;
+			font-weight: bold;
+			color:#FFFFFF;
+			transition: all 0.3s ease;
+			cursor:pointer;
+			text-decoration:none;
+		}
+		a.btn-form:hover {
+			background-color:#07deff;
+		}
+		a.btn-form-clear {
+			display:flex;
+			justify-content:center;
+			align-items:center;
+			height:38px;
+			width: calc(100% - 20px);
+			padding:0px 20px;
+			background-color:#FFFFFF;
+			border:1px solid #0792a0;
+			border-radius:10px;
+			font-size:18px;
+			line-height:38px;
+			font-weight: bold;
+			color:#0792a0;
+			transition: all 0.3s ease;
+			cursor:pointer;
+			text-decoration:none;
+			margin-right:10px;
+		}
+		a.btn-form-clear:hover {
+			color:#FFFFFF;
+			background-color:#0792a0;
+			border:1px solid #0792a0;
+		}
+		a.btn-form span {
+			font-size:20px;
+		}
+		a.btn-form.disabled, a.btn-form.disabled:hover {
+			background-color:#999999;
+			cursor:default;
+		}
+		.custom-select {
+			position: relative;
+			display:inline-block;
+			height:28px;
+			padding:2px 32px 2px 0px;
+			background-color:#FFFFFF;
+			border:1px solid transparent;
+			border-radius:6px;
+			color:#333333;
+			margin:0 0 20px 0px;
+		}
+		.custom-select.error {
+			background-color:#ffc4c4;
+			color:#ff5e5e;
+			border:1px solid #ff5e5e;
+		}
+		.custom-select select {
+			display: none; /*hide original SELECT element:*/
+		}
+		.select-selected {
+		  background-color: transparent;
+		}
+		/*style the arrow inside the select element:*/
+		.select-selected:after {
+			position: absolute;
+			content: url(dropmenu-open.svg);
+			width:32px;
+			height:32px;
+			top: 0px;
+			right: 0px;
+		}
+		/*point the arrow upwards when the select box is open (active):*/
+		.select-selected.select-arrow-active:after {
+			content: url(dropmenu-close.svg);
+		}
+		/*style the items (options), including the selected item:*/
+		.select-items div,.select-selected {
+			color: #333333;
+			padding: 4px 10px;
+			border: none;
+			cursor: pointer;
+			user-select: none;
+		}
+		/*style items (options):*/
+		.select-items {
+			position: absolute;
+			background-color:#FFFFFF;
+			top: 100%;
+			left: 6px;
+			right: 32px;
+			z-index: 99;
+		}
+		.select-items:nth-child(1) {
+			border-radius:6px 6px 0 0;
+		}
+		.select-items:last-child {
+			border-radius:0 0 6px 6px;
+		}
+		/*hide the items when the select box is closed:*/
+		.select-hide {
+		  display: none;
+		}
+		.select-items div:hover, .same-as-selected {
+		  background-color: rgba(0, 0, 0, 0.1);
+		}
+	</style>
+	</head>
+	<body>
+		<div class="header" style="background-color: #047f92;">
+			<div class="header-container">
+				<div class="logo"><a href="index.html"><img src="img/logo-w-text.svg" /></a></div>
+				<ul class="menu">
+					<li><a href="#">Sign in</a></li>
+					<li><a href="#">Register for free</a></li>
+					<li><a class="sandbox" href="#sandbox">Create sandbox</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="main-container" style="display:block; padding: 40px 20px;">
+			<h1>Contact &amp; support</h1>
+			<p>Your feedbacks and recommendations are invaluable. Please tell us what is your problem and/or any suggestions by filling up the feedback form below. We will get back to you in no time.</p>
+			<div class="feedback-container">
+				<div style="font-size:12px; margin:0 0 20px 0;"><span style="color:red;">*</span> Required fields</div>
+					<!-- input module -->
+					<div class="field-label"><strong>Your name <span style="color:red;">*</span></strong></div>
+					<input class="general" type="text" />
+					<!-- input module -->
+					<div class="field-label"><strong>Contact email <span style="color:red;">*</span></strong></div>
+					<input class="general error" type="text" value="demo@demo,com" />
+					<div class="error-msg-box">Invalid email format</div>
+					<!-- input module -->
+					<div class="field-label"><strong>Topic <span style="color:red;">*</span></strong></div>
+					<div class="custom-select" style="width:calc(100% - 32px);">
+						<select>
+							<option value="null">Please select</option>
+							<option value="general">General question</option>
+							<option value="problem">Report a problem</option>
+							<option value="recommendation">Recommendation</option>
+						</select>
+					</div>
+					<!-- input module end -->
+					<!-- input module 
+					<div class="field-label"><strong>Area <span style="color:red;">*</span></strong></div>
+					<div class="custom-select" style="width:calc(100% - 32px);">
+						<select>
+							<option value="null">Please select</option>
+							<option value="dr-fee-general">dr-fee general</option>
+							<option value="dr-fee crypto">dr-fee crypto</option>
+							<option value="dr-fee forex">dr-fee-forex</option>
+						</select>
+					</div>-->
+					<!-- input module end -->
+				<!-- input module -->
+				<div class="field-label"><strong>Details <span style="color:red;">*</span></strong></div>
+				<textarea class="general" placeholder="" rows="4"></textarea>
+				<!-- input module end -->
+				<div class="upload-file-box">
+					<a class="btn-general" href="#"><span class="ht-chain" style="font-size:20px; vertical-align:middle;"></span>Attach file(s) to help us understand more</a>
+					<div style="font-size:10px; color:#999999;">For each file, JPG, PNG or MP4 format. Maximum 1MB.</div>
+					<div class="filter-box">
+						<div class="filter-item">screencap-01.jpg<span class="ht-delete"></span></div>
+					</div>
+				</div>
+				<div class="bottom-btn-group-btns" style="justify-content:flex-end; flex-direction:row;">
+					<a class="btn-form-clear" href="#" style="display: inline-block; width:auto;">Clear</a>
+					<a class="btn-form" href="#" style="display: inline-block; width:auto;">Submit</a>
+				</div>
+			</div><!-- feedback container end -->
+		</div>
+		<!-- footer -->
+		<div class="module-block bg-footer">
+			<div class="main-container" style="padding:30px 0;">
+				<div class="footer">
+					<span class="ht-logo"></span><strong>hoc-trade</strong>&nbsp;&nbsp;&nbsp; &copy; 2023 hoc-trade limited, all rights reserved<span class="separator">|</span><a href="tandc-ht.html">Terms &amp; conditions</a><span class="separator">|</span><a href="privacy-ht.html">Privacy policy</a><span class="separator">|</span><a href="advertise-w-ht.html">advertise with us</a><span class="separator">|</span><a href="about-ht.html">About us</a><span class="separator">|</span><a style="color:#FFFFFF;" href="contact-ht.html">Contact us</a><br><br><a class="social" href="#"><span class="ht-logo-fb"></span></a><a class="social" href="#"><span class="ht-logo-twitter"></span></a><a class="social" href="#"><span class="ht-logo-in"></span></a><a class="social" href="#"><span class="ht-logo-yt"></span></a><a class="social" href="#"><span class="ht-logo-ig"></span></a><a class="social" href="#"><span class="ht-logo-discd"></span></a>
+					<p class="disclaimer">HIGH RISK WARNING: Foreign exchange and other CFD trading carries a high level of risk and may not be suitable for everyone. The usage of leverage creates additional risk and loss exposure. Your investment objectives, experience level and risk tolerance have to be taken into consideration before you decide to trade foreign exchange or other CFD products. You could lose some or all of your entire investment. Do not invest money that you cannot afford to lose and always use an appropriate risk management. It’s important to educate yourself on the risks associated with foreign exchange trading, and seek professional advice from an independent financial or tax advisor in case of any questions. Any data and information is provided ‘as is’ solely for informational purposes, and is not intended for trading purposes or advice. Past performance, which are presented on this website or you find somewhere else, is not indicative of future results.</p>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		var x, i, j, l, ll, selElmnt, a, b, c;
+		/*look for any elements with the class "custom-select":*/
+		x = document.getElementsByClassName("custom-select");
+		l = x.length;
+		for (i = 0; i < l; i++) {
+		  selElmnt = x[i].getElementsByTagName("select")[0];
+		  ll = selElmnt.length;
+		  /*for each element, create a new DIV that will act as the selected item:*/
+		  a = document.createElement("DIV");
+		  a.setAttribute("class", "select-selected");
+		  a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+		  x[i].appendChild(a);
+		  /*for each element, create a new DIV that will contain the option list:*/
+		  b = document.createElement("DIV");
+		  b.setAttribute("class", "select-items select-hide");
+		  for (j = 1; j < ll; j++) {
+			/*for each option in the original select element,
+			create a new DIV that will act as an option item:*/
+			c = document.createElement("DIV");
+			c.innerHTML = selElmnt.options[j].innerHTML;
+			c.addEventListener("click", function(e) {
+				/*when an item is clicked, update the original select box,
+				and the selected item:*/
+				var y, i, k, s, h, sl, yl;
+				s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+				sl = s.length;
+				h = this.parentNode.previousSibling;
+				for (i = 0; i < sl; i++) {
+				  if (s.options[i].innerHTML == this.innerHTML) {
+					s.selectedIndex = i;
+					h.innerHTML = this.innerHTML;
+					y = this.parentNode.getElementsByClassName("same-as-selected");
+					yl = y.length;
+					for (k = 0; k < yl; k++) {
+					  y[k].removeAttribute("class");
+					}
+					this.setAttribute("class", "same-as-selected");
+					break;
+				  }
+				}
+				h.click();
+			});
+			b.appendChild(c);
+		  }
+		  x[i].appendChild(b);
+		  a.addEventListener("click", function(e) {
+			  /*when the select box is clicked, close any other select boxes,
+			  and open/close the current select box:*/
+			  e.stopPropagation();
+			  closeAllSelect(this);
+			  this.nextSibling.classList.toggle("select-hide");
+			  this.classList.toggle("select-arrow-active");
+			});
+		}
+		function closeAllSelect(elmnt) {
+		  /*a function that will close all select boxes in the document,
+		  except the current select box:*/
+		  var x, y, i, xl, yl, arrNo = [];
+		  x = document.getElementsByClassName("select-items");
+		  y = document.getElementsByClassName("select-selected");
+		  xl = x.length;
+		  yl = y.length;
+		  for (i = 0; i < yl; i++) {
+			if (elmnt == y[i]) {
+			  arrNo.push(i)
+			} else {
+			  y[i].classList.remove("select-arrow-active");
+			}
+		  }
+		  for (i = 0; i < xl; i++) {
+			if (arrNo.indexOf(i)) {
+			  x[i].classList.add("select-hide");
+			}
+		  }
+		}
+		/*if the user clicks anywhere outside the select box,
+		then close all select boxes:*/
+		document.addEventListener("click", closeAllSelect);
+	</script>
+</html>

@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Noto Sans:400,700,900" rel="stylesheet">
+	<link href="font.css" rel="stylesheet">
+	<link href="landing.css" rel="stylesheet">
+	<link rel="icon" href="img/favicon.svg">
+	<title>hoc-trade about us</title>
+	<!-- write your code here -->
+	<style>
+		body {
+			padding:80px 0 0 0;
+			margin:0px;
+		}
+		.contact {
+			display:flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: flex-start;
+			width:100%;
+		}
+		.contact-cell {
+			display:inline-block;
+			width:40%;
+		}
+		@media only screen and (max-width: 480px) {
+			.contact {
+				flex-direction: column;
+			}
+			.contact-cell {
+				width:100%;
+			}
+		}
+	</style>
+	<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>	
+	<!-- scroll smoothly to anchor -->
+	<script>
+		// Select all links with hashes
+		$('a[href*="#"]')
+		  // Remove links that don't actually link to anything
+		  .not('[href="#"]')
+		  .not('[href="#0"]')
+		  .click(function(event) {
+			// On-page links
+			if (
+			  location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+			  && 
+			  location.hostname == this.hostname
+			) {
+			  // Figure out element to scroll to
+			  var target = $(this.hash);
+			  target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+			  // Does a scroll target exist?
+			  if (target.length) {
+				// Only prevent default if animation is actually gonna happen
+				event.preventDefault();
+				$('html, body').animate({
+				  scrollTop: target.offset().top
+				}, 1000, function() {
+				  // Callback after animation
+				  // Must change focus!
+				  var $target = $(target);
+				  $target.focus();
+				  if ($target.is(":focus")) { // Checking if the target was focused
+					return false;
+				  } else {
+					$target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+					$target.focus(); // Set focus again
+				  };
+				});
+			  }
+			}
+		  });
+	</script>
+	</head>
+	<body>
+		<div class="header" style="background-color: #047f92;">
+			<div class="header-container">
+				<div class="logo"><a href="index.html"><img src="img/logo-w-text.svg" /></a></div>
+				<ul class="menu">
+					<li><a href="#">Sign in</a></li>
+					<li><a href="#">Register for free</a></li>
+					<li><a class="sandbox" href="#sandbox">Create sandbox</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="main-container" style="display:block; padding: 40px 20px;">
+			<h1>About</h1>
+			<p>dr-fee is brought to you by hoc-trade, as part of our offering of behavioral trading analytics. We believe trading fees are, although oftentimes underestimated, one of the major levers to trading performance. Therefore, as part of our mission to support traders on their path towards profitable trading, we decided to built dr-fee as an easy and intuitive tool to identify fee saving potentials.</p>
+			<br><br>
+			<h2>Contact:</h2>
+			<div class="contact">
+				<div class="contact-cell">
+					<img class="img-responsive" src="img/about-contact.png" />
+				</div>
+				<div class="contact-cell">
+					<img src="img/hoc-trade-logo-green.png" height="50" /><br>
+					<strong>hoc-trade technologies Co.Ltd.</strong><br><br>
+					For any inquiries, please reach out to<br>
+					<a href="mailto:info@hoc-trade.com">info@hoc-trade.com</a> or fill up our <a href="contact-ht.html">online contact form</a>.
+				</div>
+			</div>
+			<br><br>
+			<h2>Who is hoc-trade?</h2>
+			<p align="center"><img class="img-responsive" src="img/about-team.png" /></p>
+			<p>We are a team of young people coming from the industries of finance, data science, and information technology. Despite our different backgrounds, we share one interest: Trading! Walking down the path as lonely traders, we found ourselves lost in countless investment analysis theories, economic news, etc..</p>
+			<p>We suffered from anxiety and emotional frustration as traders, and made every mistake a rookie could possibly make. Throughout this path, we developed tools for ourselves to improve our trading, but we had to search many places to do so or even develop it completely by ourselves. We were craving for a one-stop platform, which is easy to comprehend for beginners, but also powerful for professional traders. We did not find it, so we built it – hoc-trade! And we are continuously trying to make it better, everyday.</p>
+		</div>
+		<!-- footer -->
+		<div class="module-block bg-footer">
+			<div class="main-container" style="padding:30px 0;">
+				<div class="footer">
+					<span class="ht-logo"></span><strong>hoc-trade</strong>&nbsp;&nbsp;&nbsp; &copy; 2023 hoc-trade limited, all rights reserved<span class="separator">|</span><a href="tandc-ht.html">Terms &amp; conditions</a><span class="separator">|</span><a href="privacy-ht.html">Privacy policy</a><span class="separator">|</span><a href="advertise-w-ht.html">advertise with us</a><span class="separator">|</span><a style="color:#FFFFFF;" href="about-ht.html">About us</a><span class="separator">|</span><a href="contact-ht.html">Contact us</a><br><br><a class="social" href="#"><span class="ht-logo-fb"></span></a><a class="social" href="#"><span class="ht-logo-twitter"></span></a><a class="social" href="#"><span class="ht-logo-in"></span></a><a class="social" href="#"><span class="ht-logo-yt"></span></a><a class="social" href="#"><span class="ht-logo-ig"></span></a><a class="social" href="#"><span class="ht-logo-discd"></span></a>
+					<p class="disclaimer">HIGH RISK WARNING: Foreign exchange and other CFD trading carries a high level of risk and may not be suitable for everyone. The usage of leverage creates additional risk and loss exposure. Your investment objectives, experience level and risk tolerance have to be taken into consideration before you decide to trade foreign exchange or other CFD products. You could lose some or all of your entire investment. Do not invest money that you cannot afford to lose and always use an appropriate risk management. It’s important to educate yourself on the risks associated with foreign exchange trading, and seek professional advice from an independent financial or tax advisor in case of any questions. Any data and information is provided ‘as is’ solely for informational purposes, and is not intended for trading purposes or advice. Past performance, which are presented on this website or you find somewhere else, is not indicative of future results.</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

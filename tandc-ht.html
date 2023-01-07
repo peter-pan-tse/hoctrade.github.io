@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Noto Sans:400,700,900" rel="stylesheet">
+	<link href="font.css" rel="stylesheet">
+	<link href="landing.css" rel="stylesheet">
+	<link rel="icon" href="img/favicon.svg">
+	<title>hoc-trade terms &amp; conditions</title>
+	<!-- write your code here -->
+	<style>
+		body {
+			padding:80px 0 0 0;
+			margin:0px;
+		}
+	</style>
+	<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>	
+	<!-- scroll smoothly to anchor -->
+	<script>
+		// Select all links with hashes
+		$('a[href*="#"]')
+		  // Remove links that don't actually link to anything
+		  .not('[href="#"]')
+		  .not('[href="#0"]')
+		  .click(function(event) {
+			// On-page links
+			if (
+			  location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+			  && 
+			  location.hostname == this.hostname
+			) {
+			  // Figure out element to scroll to
+			  var target = $(this.hash);
+			  target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+			  // Does a scroll target exist?
+			  if (target.length) {
+				// Only prevent default if animation is actually gonna happen
+				event.preventDefault();
+				$('html, body').animate({
+				  scrollTop: target.offset().top
+				}, 1000, function() {
+				  // Callback after animation
+				  // Must change focus!
+				  var $target = $(target);
+				  $target.focus();
+				  if ($target.is(":focus")) { // Checking if the target was focused
+					return false;
+				  } else {
+					$target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+					$target.focus(); // Set focus again
+				  };
+				});
+			  }
+			}
+		  });
+	</script>
+	</head>
+	<body>
+		<div class="header" style="background-color: #047f92;">
+			<div class="header-container">
+				<div class="logo"><a href="index.html"><img src="img/logo-w-text.svg" /></a></div>
+				<ul class="menu">
+					<li><a href="#">Sign in</a></li>
+					<li><a href="#">Register for free</a></li>
+					<li><a class="sandbox" href="#sandbox">Create sandbox</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="main-container" style="display:block; padding: 40px 20px;">
+			<h1>Terms and Conditions</h1>
+			<h3>OVERVIEW</h3>
+			<p>This website is operated by Hoc-trade (“we”, “us” and “our”). Hoc-trade provides this website, including all information, products and services (“services”) from this website to the user or viewer of our website (“you”), upon your acceptance of all terms, conditions and our privacy policy stated herein (“Terms and Conditions“).</p>
+			<p>By visiting this website, you agree to be bound by the Terms and Conditions, including those additional terms and conditions referenced herein and/or available by hyperlink.</p>
+			<p>Please read the Terms and Conditions carefully before accessing or using our website. By accessing or using any part of this website, you agree to be bound by the Terms and Conditions. If you do not agree to all the Terms and Conditions, then you may not access or use this website or any services.</p>
+			<p>We may update, change or replace any part of the Terms and Conditions by posting updates and/or changes to our website. It is your responsibility to check this page periodically for changes. Your continued use of or access to the website following the posting of any changes constitutes acceptance of those changes.</p>
+			<h3>SECTION 1. GENERAL CONDITIONS</h3>
+			<p>This website is not intended for those under the age of 18. You must be at least 18 years of age or older to use the website and represent that you are 18 years of age or older and are competent to enter into, and abide by, the contract created by the Terms and Conditions.</p>
+			<h3>SECTION 2. SERVICES</h3>
+			<p>Trading is never without risk. Please read and consider the following before utilizing any of our services:</p>
+			<ul>
+				<li>All material found on Hoc-trade must be deemed as hypothetical. You are aware that there is often a vast difference between hypothetical results and real-life trading results achievable in a real brokerage account, and real-live results are almost always vastly worse than hypothetical results. Performance results listed on Hoc-trade do not take into account fees or commissions that may be charged by your broker if not otherwise stated.</li>
+				<li>The website are provided by Hoc-trade solely for informational purposes. Hoc-trade and its directors, employees and agents are not investment or financial advisors and will not provide any comments and/or advice directly or indirectly to you. Any comments, advice and/or copy trading provided by any onymous or anonymous participant found on the website are not the opinions and/or responsible of Hoc-trade and should not be construed as a recommendation.  You agree  to place trade based on the comments at your own risk. Contents and prizes offered should not be considered as an incentive to trade. Only participate the contests when you are ready to trade.</li>
+				<li>Any video or training material displayed in this website is solely based on the experience of the trainer. Actual trading may vary from the method, theory or principle displayed. You agree to place trade at your own risk.</li>
+			</ul>
+			<h3>SECTION 3. YOUR OBLIGATION</h3>
+			<p>By visiting this website, You agree not to:</p>
+			<ul>
+				<li>Post or transmit any content that is abusive, vulgar, profane, obscene, hateful, fraudulent or any other similar content of that nature;</li>
+				<li>Post or transmit any material that you don’t have the right to do so under any laws or contractual obligation;</li>
+				<li>Impersonate any person, or falsely state or otherwise misrepresent your relation with a person or entity;</li>
+				<li>Use the account, username or password of any other user at any time or disclose your account, username or password to any third party;</li>
+				<li>Sell or transfer your profile;</li>
+				<li>Use any material obtained from hoc-trade.com or drfee.com to harm any person;</li>
+				<li>Post or transmit any advertising, promotional materials, or any form of solicitation;</li>
+				<li>Violate any all applicable laws, any applicable foreign or domestic regulatory body, national or other securities exchanges, including rules against making false or misleading statements to manipulate the price of a foreign currency or any security;</li>
+				<li>Offer, sell, or buy any security or future;</li>
+				<li>Post or transmit any file that contains viruses, corrupted files or any  destructive features that may cause damages on someone’s computer;</li>
+				<li>Take any action that damages or disrupts the functioning of our website;</li>
+				<li>Use any automated means to access, monitor or copy data from the website;</li>
+				<li>Make any data in order to disguise the origin of any content transmitted through our website;</li>
+				<li>Attempt to access to  hoc-trade.com or drfee.com server without our permission.</li>
+			</ul>
+			<p>You shall be responsible for maintaining the confidentiality of your password which, together with your login e-mail address. If you become aware of any unauthorized use of your registration information, you agree to notify us immediately.</p>
+			<p>By providing us with your e-mail address, you agree to receive all required notices electronically, to that e-mail address.</p>
+			<h3>SECTION 4. ACCURACY, COMPLETENESS AND TIMELINESS OF INFORMATION</h3>
+			<P>Any information found on the website or communicated through other channels, such as social media or email, are (except as expressly stated by us) provided 'as is' for your use, without any representation, warranties or conditions of any kind, either express or implied. You acknowledge that there is a risk that the website may contain incomplete, incorrect, inaccurate, misleading and/or false information. You agree to use these information at your own risk, for which we shall not be liable. This explicitly also includes the information shown on the Dr.fee website and other associated channels.</P>
+			<h3>SECTION 5. RIGHTS OF HOC-TRADE</h3>
+			<p>Any content submitted to our website, you agree to give Hoc-Trade a worldwide and irrevocable license to use, host, store, reproduce, modify, create derivative works, communicate, publish, publicly perform, publicly display and distribute such content.</p>
+			<p>We may display your username, uploaded photos, and actions taken on the website which you could make to limit visibility via the account settings.</p>
+			<p>We may review content provided by you, once we believe it is illegal or violates our policies, we may remove or refuse to display such content.</p>
+			<p>We may investigate complaints or reported violations of this Agreement and to take any action we deem appropriate, including but not limited to reporting any suspected unlawful activity to the authorities or any third parties and disclosing any information necessary or appropriate to such persons or entities relating to your profile, email address, usage history, posted materials, IP addresses and traffic information.</p>
+			<h3>SECTION 6. CONFIDENTIALITY</h3>
+			<p>Hoc-trade shall have no duty of confidentiality regarding any information submitted on the website. Any disclosure of personal information submitted to us will be performed with the applicable laws. If you would like to protect any information submitted by you, please submit it under the bolded statement that the following information is personal and confidential and do not submit it to us as all or part of a web posting.</p>
+			<h3>SECTION 7. PERSONAL INFORMATION</h3>
+			<p>Your submission of personal information through the website is governed by our Privacy Policy.</p>
+			<h3>SECTION 8. DISCLAIMER OF WARRANTIES; LIMITATION OF LIABILITY</h3>
+			<p>Any material obtained through the website is done at your own discretion and risk. We are free from any damage to your electronic device or loss of any data that results from such obtained material.</p>
+			<p>We cannot be held liable for any kind of action of take based on the information provided on this website and none of the information provided should be regarded as financial advice, whether presented on the website or through any other form of communication channel. Additionally, we cannot be held liable for any potential form of loss incurred through the use of APIs that were connected to our websites.</p>
+			<p>This website may also include links to other websites. These links are provided for your convenience to provide further information. We have no responsibility for any information of the linked websites.</p>
+			<p>To the maximum extent permitted by applicable law, in no event shall Hoc-trade and its officers, directors, shareholders, employees and agents be liable for any damages, liability, claims, expenses and costs, incurred by you as a result of your use of the website or the information. Without limitation, we shall not be liable for any lost profits, lost savings or any consequential, incidental, direct, indirect, special, punitive or other damages whatsoever, including, without limitation, damages for loss of business profits, business interruption, loss of business information, costs associated with recreating lost data, the cost of any substitute program or other pecuniary loss, arising out of the use of or inability to use the website or the information, whether resulting from impaired or lost data, or any other cause, even if Hoc-trade has been advised of the possibility of such damages.</p>
+			<p>All trademarks reproduced in this website, which are not the property of, or licensed to Hoc-trade.</p>
+			<h3>SECTION 9. INDEMNIFICATION</h3>
+			<p>You agree to indemnify, defend and hold harmless Hoc-trade and its officers, directors, agents and employees, harmless from any claim or demand, including reasonable attorneys’ fees, made by any third-party due to or arising out of your breach of the Terms of Conditions or your violation of any law or the rights of a third-party.</p>
+			<h3>SECTION 10. TERMINATION</h3>
+			<p>Hoc-trade may terminate or temporarily suspend your access to all or any part of the website, without notice, for conduct that Hoc-trade believes violates these Terms and Conditions or any of its policies or guidelines, or for any other reason in its sole discretion. Hoc-trade will bear no responsibility or liability from such action.</p>
+			<p>You may cease to use Hoc-trade’s services at any time. Hoc trade may also cease to provide services to you at any time.</p>
+			<h3>SECTION 11. MISCELLANEOUS</h3>
+			<p>In the event that any provision of these Terms and Conditions is held unenforceable, the validity or enforceability of the remaining provisions will not be affected, and the unenforceable provision will be replaced with an enforceable provision that comes closest to the intention underlying the unenforceable provision.</p>
+			<p>Unless otherwise prohibited by law, you agree to authorize Hoc-trade to use any information or material provided by you at no cost.</p>
+			<h3>SECTION 12. GOVERNING LAW</h3>
+			<p>Hoc-trade is a company registered in Taiwan. The Terms and Conditions shall be governed by the laws of Taiwan, without regard to conflicts or choice of law, rules or principles. You agree the exclusive jurisdiction and venue of the Taiwan Taipei District Court, to resolve all issues that may arise out of or relate to the use of this website.</p>
+			<p><em>This Terms and Conditions were last updated on the 30th of April 2021</em></p>
+			<p>In case of questions or comments, please reach out to <a href="mailto:info@hoc-trade.com">info@hoc-trade.com</a></p>
+		</div>
+		<!-- footer -->
+		<div class="module-block bg-footer">
+			<div class="main-container" style="padding:30px 0;">
+				<div class="footer">
+					<span class="ht-logo"></span><strong>hoc-trade</strong>&nbsp;&nbsp;&nbsp; &copy; 2023 hoc-trade limited, all rights reserved<span class="separator">|</span><a style="color:#FFFFFF;" href="tandc-ht.html">Terms &amp; conditions</a><span class="separator">|</span><a href="privacy-ht.html">Privacy policy</a><span class="separator">|</span><a href="advertise-w-ht.html">advertise with us</a><span class="separator">|</span><a href="about-ht.html">About us</a><span class="separator">|</span><a href="contact-ht.html">Contact us</a><br><br><a class="social" href="#"><span class="ht-logo-fb"></span></a><a class="social" href="#"><span class="ht-logo-twitter"></span></a><a class="social" href="#"><span class="ht-logo-in"></span></a><a class="social" href="#"><span class="ht-logo-yt"></span></a><a class="social" href="#"><span class="ht-logo-ig"></span></a><a class="social" href="#"><span class="ht-logo-discd"></span></a>
+					<p class="disclaimer">HIGH RISK WARNING: Foreign exchange and other CFD trading carries a high level of risk and may not be suitable for everyone. The usage of leverage creates additional risk and loss exposure. Your investment objectives, experience level and risk tolerance have to be taken into consideration before you decide to trade foreign exchange or other CFD products. You could lose some or all of your entire investment. Do not invest money that you cannot afford to lose and always use an appropriate risk management. It’s important to educate yourself on the risks associated with foreign exchange trading, and seek professional advice from an independent financial or tax advisor in case of any questions. Any data and information is provided ‘as is’ solely for informational purposes, and is not intended for trading purposes or advice. Past performance, which are presented on this website or you find somewhere else, is not indicative of future results.</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
