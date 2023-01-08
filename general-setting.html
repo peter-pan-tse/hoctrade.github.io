@@ -111,7 +111,7 @@
 						<a id="modalSelectAcc" style="cursor:pointer;"><span class="ht-wallet-setting icon"></span>Account setting</a>
 					</li>
 					<li>
-						<a id="modalSelectAddType" style="cursor:pointer;"><span class="ht-wallet-add icon"></span>Add account</a>
+						<a id="modalSignUp" style="cursor:pointer;"><span class="ht-wallet-add icon"></span>Add account</a>
 					</li>
 					<hr class="dropmenu-separator" />
 					<li>
@@ -487,39 +487,14 @@
 	</div>
 	
 	<!-- The Modal -->
-	<div id="modalAddTradeAcc" class="modal">
+	<div id="modalSignUpBox" class="modal">
 		<!-- Modal content -->
-		<div class="modal-content">
+		<div class="modal-content-2">
 			<div class="modal-header">
-				<span>Add new trade account</span>
+				<span><img src="logo-w-text.svg" height="24" /></span>
 				<span class="close"><span class="ht-cross"></span></span>
 			</div>
-			<div class="modal-body-trade-acc">
-				<p align="center" style="font-size:14px;">Select type of the new trade account</p>
-				<ul class="select-acc">
-					
-					<li>
-						<a href="forex-trade-account-adding.html">
-							<div class="select-acc-ico ht-forex-coin">
-								<div class="select-acc-ico-verified-bg"></div>
-								<div class="select-acc-ico-verified"><span class="ht-add"></span></div>
-							</div>
-							<div>Add Forex trade account</div>
-						</a>
-					</li>
-					<li>
-						<a href="crypto-trade-account-adding.html">
-							<div class="select-acc-ico ht-crypto-coin">
-								<div class="select-acc-ico-verified-bg"></div>
-								<div class="select-acc-ico-verified"><span class="ht-add"></span></div>
-							</div>
-							<div>Add Crypto trade account</div>
-						</a>
-					</li>
-
-				</ul>
-				<p></p>
-			</div>
+			<iframe name="signUp" class="modal-body-2" src="add-account.html" scrolling="no" marginheight="0" marginwidth="0"></iframe>
 	  </div>
 	</div>
 	
@@ -625,5 +600,5 @@
 	}
 </script>
 <script src="modal-trade-acc.js" language="javascript"></script>
-<script src="modal-add-trade-acc.js" language="javascript"></script>
+<script src="modal-signup.js" language="javascript"></script>
 </html>
