@@ -152,7 +152,7 @@ iframe.modal-body-2 {
 	display:block;
 	padding:0 50px;
 }
-a.btn-login-google, a.btn-signup-google, a.btn-login-fb, a.btn-signup-email, a.btn-signup-trade-acc {
+a.btn-login-google, a.btn-signup-google, a.btn-login-fb, a.btn-signup-email, a.btn-signup-trade-acc, a.btn-add-forex-trade-acc, a.btn-add-crypto-trade-acc {
 	display:flex;
 	position:relative;
 	align-items:center;
@@ -214,7 +214,27 @@ a.btn-signup-trade-acc {
 	background-position:left center;
 	background-size:32px 32px;
 }
-a.btn-login-google:hover, a.btn-signup-google:hover, a.btn-login-fb:hover, a.btn-signup-email:hover, a.btn-signup-trade-acc:hover {
+a.btn-add-forex-trade-acc {
+	justify-content:center;
+	font-weight: bold;
+	background-color:#047F92;
+	color:#FFFFFF;
+	background-image: url("img/forex-coin.svg");
+	background-repeat: no-repeat;
+	background-position:left center;
+	background-size:32px 32px;
+}
+a.btn-add-crypto-trade-acc {
+	justify-content:center;
+	font-weight: bold;
+	background-color:#047F92;
+	color:#FFFFFF;
+	background-image: url("img/crypto-coin.svg");
+	background-repeat: no-repeat;
+	background-position:left center;
+	background-size:32px 32px;
+}
+a.btn-login-google:hover, a.btn-signup-google:hover, a.btn-login-fb:hover, a.btn-signup-email:hover, a.btn-signup-trade-acc:hover, a.btn-add-forex-trade-acc:hover, a.btn-add-crypto-trade-acc:hover {
 	background-color:#06AFC9;
 	color:#FFFFFF;
 }

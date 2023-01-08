@@ -421,6 +421,22 @@ a.btn-action, a.btn-info {
 	border-radius:6px;
 	transition: all 0.3s ease;
 }
+a.btn-info-form {
+    display: inline-block;
+    position: relative;
+    font-size: 18px;
+    line-height: 1em;
+    width: 11px;
+    height: 11px;
+    background-color: #FFFFFF;
+    color: #0792a0;
+    cursor: pointer;
+    transition: all ease 0.3s;
+    text-decoration: none;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin: 0 0 0 4px;
+}
 a.btn-action {
 	color:#D9D0BF;
 }
@@ -719,7 +735,7 @@ input.general.error, input.password.error {
 	display:block;
 	color:#ED1C24;
 	font-size:12px;
-	min-height: 15px;
+	min-height: 3px;
 	margin:-5px 0 10px 0px;
 }
 a.clear-content-btn {
