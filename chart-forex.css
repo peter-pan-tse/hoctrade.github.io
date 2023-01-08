@@ -423,7 +423,7 @@ span.compare-logo {
 	}
 	.list-no {
 		border-right:1px solid #047f92;
-		width:calc(10% - 11px);
+		width:calc(7% - 11px);
 		flex-direction:column;
 		justify-content: center;
     	align-items: flex-start;
@@ -447,7 +447,7 @@ span.compare-logo {
 }
 @media only screen and (max-width: 480px) {
 	.list-fee {
-		width:calc(50% - 1px);
+		width:calc(65% - 1px);
 		border-left:none;
 		border-right:1px solid #047f92;
 		/*height:100%;*/
@@ -479,9 +479,6 @@ span.compare-logo {
 	height: 50%;
     text-align: center;
 }
-.last-symbol {
-	border-right:none;
-}
 .list-fee-container {
 	display:flex;
 	flex-direction: row;
@@ -492,20 +489,28 @@ span.compare-logo {
 .list-fee-spot, .list-fee-maker {
 	display:flex;
 	border-right:1px solid #047f92;
-	width:calc(50% - 11px);
+	width:calc(20% - 5px);
 	flex-direction:column;
 	justify-content:flex-start;
 	align-items:center;
-	padding:0 5px;
+	padding:0 2px;
+	text-align:center;
+	line-height: 1.5em;
+	font-size:9px;
 }
 .list-fee-spot-2 {
 	display:flex;
 	border-right:1px solid #047f92;
-	width:calc(50% - 11px);
+	width:calc(20% - 5px);
 	flex-direction:row;
 	justify-content:center;
 	align-items:center;
-	padding:0 5px;
+	padding:0 2px;
+	text-align:center;
+	line-height: 1.5em;
+}
+.last-symbol {
+	border-right:none;
 }
 .list-fee-maker-2 {
 	display:flex;
