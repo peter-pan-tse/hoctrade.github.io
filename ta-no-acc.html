@@ -1,0 +1,236 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="jquery-3.6.0.min.js" language="javascript"></script>
+<script src="modal.js" language="javascript"></script>
+<link href="https://fonts.googleapis.com/css?family=Noto Sans:400,700,900" rel="stylesheet">
+<link href="font.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+<link href="chart.css" rel="stylesheet">
+<link href="menu.css" rel="stylesheet">
+<link href="burger-menu.css" rel="stylesheet">
+<link href="modal.css" rel="stylesheet">
+<link rel="icon" href="favicon.svg">
+<title>hoc-trade add your first trading account</title>
+<script>
+	$(function(){
+		$('.open-btn').on('click', function(){
+			$(this).toggleClass('close-btn')
+		});
+	});
+</script>
+<style>
+	a.btn-signup-trade-acc {
+		display:flex;
+		position:relative;
+		align-items:center;
+		height:64px;
+		padding:0px 30px 0px 80px;
+		border-radius:12px;
+		font-size:18px;
+		transition: all 0.3s ease;
+		cursor:pointer;
+		text-decoration:none;
+		margin:20px 0;
+		justify-content:center;
+		font-weight: bold;
+		background-color:#047F92;
+		color:#FFFFFF;
+		background-image: url("wallet.svg");
+		background-repeat: no-repeat;
+		background-position:20px center;
+		background-size:40px 40px;
+	}
+	a.btn-signup-trade-acc:hover {
+		background-color:#06AFC9;
+		color:#FFFFFF;
+	}
+</style>
+</head>
+<body>
+	<!--header and menu -->
+	<div class="header">
+		<div style="display:flex; flex-direction:row; justify-content: flex-start;">
+			<div class="logo"><span class="ht-logo"></span></div>
+			<div class="p-menu">
+				<a class="menu-item" href="account-overview.html">Dashboard</a>
+				<a class="menu-item" href="scoreboard.html">Scoreboard</a>
+			</div>
+		</div>
+		<div class="right-menu">
+			<a class="right-menu-item" href="#"><span class="ht-bell"></span><div class="ico-number">5</div></a>
+			<a class="right-menu-item" href="#"><span class="ht-search"></span></a>
+			<div class="member-menu">
+				<div class="profile-pic"></div>
+				<div class="user-profile"><!--<span class="ht-wallet"><div class="ico-verified"><span class="ht-verified"></span></div></span>-->No trading account</div>
+				<div class="open-btn"><label for="member-menu-toggle"><span class="ht-triangle"></span></label></div>
+				<input type="checkbox" id="member-menu-toggle"/>
+				<ul id="member-menu-dropdown">
+					<!--<hr class="dropmenu-separator" />
+					<li class="switch-menu">Switch account</li>
+					<li>
+						<a class="active" href="#"><span class="ht-wallet icon"><div class="ico-verified"><span class="ht-verified"></span></div></span>Winnie-fx-demo</a>
+					</li>
+					<li>
+						<a href="#"><span class="ht-wallet icon"><div class="ico-verified"><span class="ht-verified"></span></div></span>Winnie-fx-live</a>
+					</li>
+					<li>
+						<a href="#"><span class="ht-wallet icon"></span>Winnie-fx-open</a>
+					</li>-->
+					<hr class="dropmenu-separator" />
+					<!--<li>
+						<a id="modalTradeAcc" style="cursor:pointer;"><span class="ht-wallet-setting icon"></span>Account setting</a>
+					</li>-->
+					<li>
+						<a href="forex-trade-account-adding.html"><span class="ht-wallet-add icon"></span>Add trading account</a>
+					</li>
+					<hr class="dropmenu-separator" />
+					<li>
+						<a href="general-setting.html"><span class="ht-gear icon"></span>Settings</a>
+					</li>
+					<li class="switch-menu">
+						<div><span class="ht-moon icon"></span>Dark mode</div>
+						<label class="switch">
+						  <input type="checkbox">
+						  <span class="slider round"></span>
+						</label>
+					</li>
+					<li>
+						<a href="support.html"><span class="ht-support icon"></span>Help &amp; support</a>
+					</li>
+					<li>
+						<a href="#"><span class="ht-logout icon"></span>Logout</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<nav class="vertical">
+		<ul>
+			<li>
+				<a href="#"><span class="ht-dashboard"></span></a>
+				<ul>
+					<li class="submenu-title">Overview</li>
+					<li><a href="account-overview.html"><span class="ht-wallet"></span>Account overview</a></li>
+					<li><a href="basic-stat.html"><span class="ht-pie-chart"></span>Basic statistics</a></li>
+					<li><a href="advanced-stat.html"><span class="ht-cluster-chart"></span>Advanced statistics</a></li>
+					<li><a href="trade-history.html"><span class="ht-clipboard"></span>Trade history</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#"><span class="ht-bar-chart"></span></a>
+				<ul>
+					<li class="submenu-title">Analysis</li>
+					<li><a href="ta-customized.html"><span class="ht-star"></span>Customized</a></li>
+					<li><a href="ta-general.html"><span class="ht-bar-chart"></span>General</a></li>
+					<li><a href="ta-behavioral.html"><span class="ht-coffee"></span>Behavioral</a></li>
+					<li><a href="ta-timing.html"><span class="ht-timing"></span>Timing</a></li>
+					<li><a href="ta-risk-mgt.html"><span class="ht-alert"></span>Risk management</a></li>
+					<li><a href="ta-strategy.html"><span class="ht-chess-castle"></span>Strategy</a></li>
+					<li><a href="ta-costs.html"><span class="ht-coins"></span>Costs</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="alert.html"><span class="ht-bell"></span></a>
+			</li>
+		</ul>
+	</nav>
+	  
+	<!-- mobile menu -->
+	<nav role="navigation">
+		<div id="mobileMenuToggle">
+			<!--A fake / hidden checkbox is used as click reciever, so you can use the :checked selector on it.-->
+			<input type="checkbox" />
+			<!--Some spans to act as a hamburger. They are acting like a real hamburger, not that McDonalds stuff.-->
+			<span></span>
+			<span></span>
+			<span></span>
+			<!-- Too bad the menu has to be inside of the button but hey, it's pure CSS magic.-->
+			<ul id="mobileMenu">
+				<li>
+					<div class="p-menu-mobile">
+						<a class="active" href="#">Dashboard</a>
+						<a href="#">Scoreboard</a>
+					</div>
+				</li>
+				<li>
+					<div class="s-menu-title"><div><span class="ht-dashboard"></span></div>Dashboard</div>
+					<div class="s-menu-group">
+						<a class="s-menu-item" href="account-overview.html"><span class="ht-wallet"></span>Account overview</a>
+						<a class="s-menu-item" href="basic-atat.html"><span class="ht-pie-chart"></span>Basic statistics</a>
+						<a class="s-menu-item" href="advanced-stat.html"><span class="ht-cluster-chart"></span>Advanced statistics</a>
+						<a class="s-menu-item" href="trade-history.html"><span class="ht-clipboard"></span>Trade history</a>
+					</div>
+				</li>
+				<li>
+					<div class="s-menu-title"><div><span class="ht-bar-chart"></span></div>Analysis</div>
+					<div class="s-menu-group">
+						<a class="s-menu-item" href="ta-customized.html"><span class="ht-star"></span>Customized</a>
+						<a class="s-menu-item" href="ta-general.html"><span class="ht-bar-chart"></span>General</a>
+						<a class="s-menu-item" href="ta-behavioral.html"><span class="ht-coffee"></span>Behavioral</a>
+						<a class="s-menu-item" href="ta-timing.html"><span class="ht-timing"></span>Timing</a>
+						<a class="s-menu-item" href="ta-risk-mgt.html"><span class="ht-alert"></span>Risk management</a>
+						<a class="s-menu-item" href="ta-strategy.html"><span class="ht-chess-castle"></span>Strategy</a>
+						<a class="s-menu-item" href="ta-costs.html"><span class="ht-coins"></span>Costs</a>
+					</div>
+				</li>
+				<li>
+					<a href="alert.html"><div class="s-menu-title"><div><span class="ht-bell"></span></div>Alerts</div></a>
+				</li>
+			</ul>
+			<div class="mobileMenuMask"></div>
+		</div>
+	</nav>
+	<!-- mobile menu ended -->
+	
+	<!-- main content area -->
+	<div class="main-content-container">
+		<div style="display:flex; flex-direction:column; justify-content:center; align-items:center; margin:0 10% 0 10%; width:80%; height:80vh; text-align:center;">
+			<p>You do not have any trading account yet. Please add a trading account to start the trade analytic.</p>
+			<a class="btn-signup-trade-acc" href="add-account.html">Add trading account</a>
+		</div>	
+	</div><!-- main-content-container -->
+	<!-- main content area end -->
+	
+	<div class="footer">
+		<span class="ht-logo"></span><strong>hoc-trade</strong>&nbsp;&nbsp;&nbsp; copy; 2022 hoc-trade limited, all rights reserved<span class="separator">|</span><a href="#">Terms &amp; conditions</a><span class="separator">|</span><a href="#">Privacy policy</a><span class="separator">|</span><a href="#">advertise with us</a><span class="separator">|</span><a href="#">About us</a><span class="separator">|</span><a class="social" href="#"><span class="ht-logo-fb"></span></a><a class="social" href="#"><span class="ht-logo-twitter"></span></a><a class="social" href="#"><span class="ht-logo-in"></span></a><a class="social" href="#"><span class="ht-logo-yt"></span></a>
+		<p class="disclaimer">HIGH RISK WARNING: Foreign exchange and other CFD trading carries a high level of risk and may not be suitable for everyone. The usage of leverage creates additional risk and loss exposure. Your investment objectives, experience level and risk tolerance have to be taken into consideration before you decide to trade foreign exchange or other CFD products. You could lose some or all of your entire investment. Do not invest money that you cannot afford to lose and always use an appropriate risk management. It’s important to educate yourself on the risks associated with foreign exchange trading, and seek professional advice from an independent financial or tax advisor in case of any questions. Any data and information is provided ‘as is’ solely for informational purposes, and is not intended for trading purposes or advice. Past performance, which are presented on this website or you find somewhere else, is not indicative of future results.</p>
+	</div>	
+	
+	<!-- The Modal -->
+	<div id="modalInfoBox" class="modal">
+		<!-- Modal content -->
+
+	  <div class="modal-content">
+		<div class="modal-header">
+			<span class="close"><span class="ht-cross"></span></span>
+			<span class="action-btn-modal"><span class="ht-star"></span></span>
+			<span class="action-btn-modal"><span class="ht-bell"></span></span>
+			<span class="action-btn-modal active"><span class="ht-globe"></span></span>
+		</div>
+		<div class="modal-body">
+			<p><strong>Chart legend</strong></p>
+			<div class="legend-container">
+				<div class="legend-item"><img src="legend-benchmark.svg" height="20" />Benchmark</div>
+				<div class="legend-item"><img src="legend-profit.svg" height="20" />Profit</div>
+				<div class="legend-item"><img src="legend-loss.svg" height="20" />Loss</div>
+				<div class="legend-item"><img src="legend-not-so-significant.svg" height="20" />Limited significance</div>
+				<div class="legend-item"><img src="legend-insignificant.svg" height="20" />Insignificant</div>
+			</div>
+			<p><strong>Profit if TP closer/further away</strong></p>
+			<p>The average payoff (PIPS or % return) per trade in case the trades the Stop Loss (SL) would have been a few pips closer for further away from compared to the actual SL level set in the trade.</p>
+			<p><strong>Watch tutorial</strong></p>
+			<div class="modal-video-box">
+				<iframe class="modal-video" src="https://www.youtube.com/embed/LemZIhFS9QI" title="27 Profit of conflicting symbols VV" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+			<a class="btn-general" href="#" style="margin-top:20px;" target="_blank"><span class="ht-video"></span><span class="btn-general-text"></span> See all videos</a>
+		</div>
+	  </div>
+
+	</div>
+</body>
+<script src="modal.js" language="javascript"></script>
+</html>
