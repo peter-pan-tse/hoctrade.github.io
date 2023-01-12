@@ -11,7 +11,8 @@
 <link href="chart.css" rel="stylesheet">
 <link href="menu.css" rel="stylesheet">
 <link href="burger-menu.css" rel="stylesheet">
-<link href="modal.css" rel="stylesheet">
+<link href="setting.css" rel="stylesheet">
+<link href="modal-signup.css" rel="stylesheet">
 <link rel="icon" href="favicon.svg">
 <title>hoc-trade add your first trading account</title>
 <script>
@@ -46,6 +47,38 @@
 	a.btn-signup-trade-acc:hover {
 		background-color:#06AFC9;
 		color:#FFFFFF;
+	}
+	input.general, input.password, textarea.general {
+		background-color: #FFFFFF;
+		border:1px solid #FFFFFF;
+	}
+	textarea.general {
+		margin-bottom:0px;
+	}
+	.custom-select {
+		margin:0 0 10px 0px; 
+		width:calc(208px); 
+		background-color:#FFFFFF;
+	}
+	.profile-pic-box {
+		margin:0;
+	}
+	ul.password-format li.custom-width {
+			width:100%;
+		}
+	@media only screen and (max-width: 979px) {
+		input.general, textarea.general {
+			width:calc(100% - 10px);
+		}
+		input.password {
+			width:calc(100% - 70px);
+		}
+		.custom-select {
+			width:calc(100% - 32px); 
+		}
+		ul.password-format li.custom-width {
+			width:45%;
+		}
 	}
 </style>
 </head>
@@ -84,7 +117,7 @@
 						<a id="modalTradeAcc" style="cursor:pointer;"><span class="ht-wallet-setting icon"></span>Account setting</a>
 					</li>-->  
 					<li>
-						<a href="forex-trade-account-adding.html"><span class="ht-wallet-add icon"></span>Add trading account</a>
+						<a id="modalSignUp1" style="cursor:pointer;"><span class="ht-wallet-add icon"></span>Add trading account</a>
 					</li>
 					<hr class="dropmenu-separator" />
 					<li>
@@ -190,7 +223,7 @@
 	<div class="main-content-container">
 		<div style="display:flex; flex-direction:column; justify-content:center; align-items:center; margin:0 10% 0 10%; width:80%; height:80vh; text-align:center;">
 			<p>You do not have any trading account yet. Please add a trading account to start the trade analytic.</p>
-			<a class="btn-signup-trade-acc" href="add-account.html">Add trading account</a>
+			<a class="btn-signup-trade-acc"  id="modalSignUp" style="cursor:pointer;">Add trading account</a>
 		</div>	
 	</div><!-- main-content-container -->
 	<!-- main content area end -->
@@ -201,36 +234,96 @@
 	</div>	
 	
 	<!-- The Modal -->
-	<div id="modalInfoBox" class="modal">
+	<div id="modalSignUpBox" class="modal">
 		<!-- Modal content -->
-
-	  <div class="modal-content">
-		<div class="modal-header">
-			<span class="close"><span class="ht-cross"></span></span>
-			<span class="action-btn-modal"><span class="ht-star"></span></span>
-			<span class="action-btn-modal"><span class="ht-bell"></span></span>
-			<span class="action-btn-modal active"><span class="ht-globe"></span></span>
-		</div>
-		<div class="modal-body">
-			<p><strong>Chart legend</strong></p>
-			<div class="legend-container">
-				<div class="legend-item"><img src="legend-benchmark.svg" height="20" />Benchmark</div>
-				<div class="legend-item"><img src="legend-profit.svg" height="20" />Profit</div>
-				<div class="legend-item"><img src="legend-loss.svg" height="20" />Loss</div>
-				<div class="legend-item"><img src="legend-not-so-significant.svg" height="20" />Limited significance</div>
-				<div class="legend-item"><img src="legend-insignificant.svg" height="20" />Insignificant</div>
+		<div class="modal-content-2">
+			<div class="modal-header">
+				<span><img src="logo-w-text.svg" height="24" /></span>
+				<span class="close"><span class="ht-cross"></span></span>
 			</div>
-			<p><strong>Profit if TP closer/further away</strong></p>
-			<p>The average payoff (PIPS or % return) per trade in case the trades the Stop Loss (SL) would have been a few pips closer for further away from compared to the actual SL level set in the trade.</p>
-			<p><strong>Watch tutorial</strong></p>
-			<div class="modal-video-box">
-				<iframe class="modal-video" src="https://www.youtube.com/embed/LemZIhFS9QI" title="27 Profit of conflicting symbols VV" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			</div>
-			<a class="btn-general" href="#" style="margin-top:20px;" target="_blank"><span class="ht-video"></span><span class="btn-general-text"></span> See all videos</a>
-		</div>
+			<iframe name="signUp" class="modal-body-2" src="add-account.html" scrolling="no" marginheight="0" marginwidth="0"></iframe>
 	  </div>
-
 	</div>
 </body>
-<script src="modal.js" language="javascript"></script>
+<script>
+	var x, i, j, l, ll, selElmnt, a, b, c;
+	/*look for any elements with the class "custom-select":*/
+	x = document.getElementsByClassName("custom-select");
+	l = x.length;
+	for (i = 0; i < l; i++) {
+	  selElmnt = x[i].getElementsByTagName("select")[0];
+	  ll = selElmnt.length;
+	  /*for each element, create a new DIV that will act as the selected item:*/
+	  a = document.createElement("DIV");
+	  a.setAttribute("class", "select-selected");
+	  a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+	  x[i].appendChild(a);
+	  /*for each element, create a new DIV that will contain the option list:*/
+	  b = document.createElement("DIV");
+	  b.setAttribute("class", "select-items select-hide");
+	  for (j = 1; j < ll; j++) {
+		/*for each option in the original select element,
+		create a new DIV that will act as an option item:*/
+		c = document.createElement("DIV");
+		c.innerHTML = selElmnt.options[j].innerHTML;
+		c.addEventListener("click", function(e) {
+			/*when an item is clicked, update the original select box,
+			and the selected item:*/
+			var y, i, k, s, h, sl, yl;
+			s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+			sl = s.length;
+			h = this.parentNode.previousSibling;
+			for (i = 0; i < sl; i++) {
+			  if (s.options[i].innerHTML == this.innerHTML) {
+				s.selectedIndex = i;
+				h.innerHTML = this.innerHTML;
+				y = this.parentNode.getElementsByClassName("same-as-selected");
+				yl = y.length;
+				for (k = 0; k < yl; k++) {
+				  y[k].removeAttribute("class");
+				}
+				this.setAttribute("class", "same-as-selected");
+				break;
+			  }
+			}
+			h.click();
+		});
+		b.appendChild(c);
+	  }
+	  x[i].appendChild(b);
+	  a.addEventListener("click", function(e) {
+		  /*when the select box is clicked, close any other select boxes,
+		  and open/close the current select box:*/
+		  e.stopPropagation();
+		  closeAllSelect(this);
+		  this.nextSibling.classList.toggle("select-hide");
+		  this.classList.toggle("select-arrow-active");
+		});
+	}
+	function closeAllSelect(elmnt) {
+	  /*a function that will close all select boxes in the document,
+	  except the current select box:*/
+	  var x, y, i, xl, yl, arrNo = [];
+	  x = document.getElementsByClassName("select-items");
+	  y = document.getElementsByClassName("select-selected");
+	  xl = x.length;
+	  yl = y.length;
+	  for (i = 0; i < yl; i++) {
+		if (elmnt == y[i]) {
+		  arrNo.push(i)
+		} else {
+		  y[i].classList.remove("select-arrow-active");
+		}
+	  }
+	  for (i = 0; i < xl; i++) {
+		if (arrNo.indexOf(i)) {
+		  x[i].classList.add("select-hide");
+		}
+	  }
+	}
+	/*if the user clicks anywhere outside the select box,
+	then close all select boxes:*/
+	document.addEventListener("click", closeAllSelect);
+</script>
+<script src="modal-signup.js" language="javascript"></script>
 </html>
