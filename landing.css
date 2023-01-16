@@ -19,6 +19,20 @@ a {
 a:hover, a:focus {
 	color:#ED1C24;
 }
+.mobile {
+	display:none;
+}
+.desktop {
+	display:inline-block;
+}
+@media only screen and (max-width: 540px) {
+	.mobile {
+		display:inline-block;
+	}
+	.desktop {
+		display:none;
+	}
+}
 /* header */
 .header {
 	display:block;
@@ -39,12 +53,20 @@ a:hover, a:focus {
 }
 .logo {
 	display:inline-block;
-	padding:30px 0 0 10px;
+	padding:32px 0 0 10px;
 	transition:all ease 0.3s;
 }
 .logo img {
 	width:auto;
-	height:40px;
+	height:32px;
+}
+@media only screen and (max-width: 540px) {
+	.logo {
+		padding:32px 0 0 10px;
+	}
+	.logo img {
+		height:28px;
+	}
 }
 .img-responsive {
 	display:inline-block;
@@ -114,10 +136,7 @@ ul.menu li a.sandbox:hover {
 		height:70px;
 	}
 }
-@media only screen and (max-width: 480px) {
-	.logo {
-		padding:10px 0 0 10px;
-	}
+@media only screen and (max-width: 540px) {
 	ul.menu li a {
 		margin:20px 24px 0 24px;
 	}
@@ -179,6 +198,12 @@ h2 {
 	padding: 80px 10px;
 	max-width: 1000px;
 }
+@media only screen and (max-width: 540px) {
+	.main-container {
+		margin: 0 0 0 0;
+		/*width:calc(100% - 20px);*/
+	}
+}
 .content-block-l {
 	display:inline-block;
 	margin:20px 20px 0px 10px;
@@ -192,7 +217,17 @@ h2 {
 .content-block-w {
 	display:inline-block;
 	margin:20px 10px;
-	width:calc(100% - 40px);
+	width:calc(100% - 20px);
+}
+@media only screen and (max-width: 540px) {
+	.content-block-l {
+		margin:20px 10px;
+		width:calc(100% - 20px);
+	}
+	.content-block-r {
+		margin:20px 10px;
+		width:calc(100% - 20px);
+	}
 }
 ul.list {
 	list-style-image: url("img/triangle-bullet.png");
@@ -227,11 +262,18 @@ ul.list li {
 .tabs > input, .tabs > span > div.icon {
 	font-size:32px;
 }
-/*@media only screen and (min-width: 1000px) {
-	.tabs > input, .tabs > span {
-		width: 190px;
+@media only screen and (max-width: 540px) {
+	.tabs {
+		padding-top:70px;
 	}
-}*/
+	tabs > input, .tabs > span {
+		width:20%;
+		height:70px;
+		padding:20px 0 0 0;
+		margin:0;
+		border-radius:16px 16px 0 0;
+	}
+}
 .tabs > input {
 	cursor: pointer;
 	filter: alpha(opacity=0);
@@ -256,6 +298,11 @@ ul.list li {
 	border-radius:30px 30px 0 0;
 	color: #c15457;
 	font-weight:bold;
+}
+@media only screen and (max-width: 540px) {
+	.tabs > input:checked + span {
+		border-radius:16px 16px 0 0;
+	}
 }
 .tabs input:hover + span {
 	color: #c15457;
@@ -307,6 +354,25 @@ ul.list li {
 	padding:20px 420px 20px 40px;
 	background-color: #dde9eb;
 }
+.problem-footer {
+	padding:0px 0 40px 0; 
+	margin:0 auto 80px auto; 
+	border-radius:0 0 30px 30px;
+}
+@media only screen and (max-width: 540px) {
+	.tab-content-problem{
+		padding:20px;
+	}
+	.tab-content-solution{
+		padding:20px;
+	}
+	.problem-footer {
+		padding:0px 0 40px 0; 
+		margin:0; 
+		border-radius:0;
+		width:100%;
+	}
+}
 .tab-content-pic {
 	position:absolute;
 	right:20px;
@@ -315,6 +381,19 @@ ul.list li {
 .tab-content-pic img {
 	max-width:360px;
 	height:auto;
+}
+@media only screen and (max-width: 540px) {
+	.tab-content-pic {
+		position:relative;
+		right:auto;
+		bottom:auto;
+		width:calc(100% - 40px);
+		padding: 20px;
+		background-image: linear-gradient(#f5e9e9 50%, #dde9eb 50%);
+	}
+	.tab-content-pic img {
+		max-width:100%;
+	}
 }
 .tab-content section {
 	width: 100%;
@@ -371,6 +450,12 @@ ul.list li {
 	width:calc(25% - 41px);
 	min-height:120px;
 	color:#047f92;
+}
+@media only screen and (max-width: 540px) {
+	.counter-block {
+		width:calc(50% - 41px);
+		min-height:120px;
+	}
 }
 .counter-block h3 {
 	font-size:48px;
@@ -473,16 +558,35 @@ img.scoreboard-img {
 	line-height: 20px;
 	z-index: 10001;
 }
-.footer > span.ht-logo {
+.footer > .footer-copy > span.ht-logo {
+	display:inline-block;
 	font-size:24px;
 	vertical-align: middle;
 	margin-right: 5px;
+}
+@media only screen and (max-width: 540px) {
+	.footer > .footer-copy > span.ht-logo {
+		display:none;
+	}
 }
 .footer a {
 	color:#047F92;
 	text-decoration: none;
 	font-weight:bold;
 	transition: all 0.3s ease;
+}
+.footer-copy, .footer-links, .footer-social {
+	display:inline-block;
+	margin:0 0 10px 0;
+}
+@media only screen and (max-width: 540px) {
+	.footer-copy, .footer-links, .footer-social {
+		width:100%;
+		text-align: center;
+	}
+	.footer-links {
+		font-size:11px;
+	}
 }
 .footer a.social {
 	color:#047F92;
@@ -495,7 +599,7 @@ img.scoreboard-img {
 .footer a:hover, .footer a.social:hover {
 	color:#FFFFFF;
 }
-.footer > span.separator {
+.footer > .footer-links > span.separator {
 	display:inline-block;
 	padding:0 10px;
 }
@@ -504,6 +608,14 @@ img.scoreboard-img {
 	line-height: 1.25em;
 	color:#047F92;
 	margin-top:20px;
+}
+@media only screen and (max-width: 540px) {
+	.footer > .footer-links > span.separator {
+		padding:0 2px;
+	}
+	.footer p.disclaimer {
+		text-align: center;
+	}
 }
 /* infinite logo slide */
 @-webkit-keyframes scroll {
@@ -594,12 +706,67 @@ img.scoreboard-img {
   }
 }
 /* top theme animation */
+.theme-animation-container {
+	position:relative;
+	width:100%;
+	max-width:1024px;
+	height:100vh;
+	margin:0 auto;
+}
+.theme-container {
+	display:block;
+	position:relative;
+	width:100%;
+	background-color:#367e91;
+	background-image: url("img/hoc-trade-top-bg.png");
+	background-size:cover;
+	z-index:1000;
+}
+@media only screen and (max-width: 820px) {
+	.theme-animation-container {
+		max-width:100%;
+		height:60vh;
+	}
+	.theme-container {
+		background-size:auto 60vh;
+	}
+}
+@media only screen and (max-width: 540px) {
+	.theme-animation-container {
+		max-width:100%;
+		height:65vh;
+	}
+	.theme-container {
+		background-size:auto 65vh;
+	}
+}
+@media only screen and (max-width: 375px) {
+	.theme-animation-container {
+		max-width:100%;
+		height:90vh;
+	}
+	.theme-container {
+		background-size:auto 90vh;
+	}
+}
+.diagram-animation-container {
+	position:relative;
+	width:100%;
+	margin:0 auto;
+}
 img.theme-step1, img.theme-step2, img.theme-step3, img.theme-step4, img.theme-step5 {
 	position:absolute;
 	left:0px;
 	bottom:0px;
-	width:auto;
+	width:100%;
+	max-width:1024px;
 	opacity: 0;
+}
+@media only screen and (max-width: 540px) {
+	img.theme-step1, img.theme-step2, img.theme-step3, img.theme-step4, img.theme-step5 {
+		width:145vw;
+		overflow-x: hidden;
+	}
 }
 div.theme-steptext {
 	display:flex;
@@ -619,6 +786,7 @@ div.theme-steptext {
 }
 div.theme-steptext span {
 	font-size:3.5vw;
+	line-height: 1.25em;
 }
 @media only screen and (min-width: 1025px) {
 	div.theme-steptext {
@@ -626,6 +794,22 @@ div.theme-steptext span {
 	}
 	div.theme-steptext span {
 		font-size:40px;
+	}
+}
+@media only screen and (max-width: 820px) {
+	div.theme-steptext {
+		padding-bottom:20px;
+	}
+}
+@media only screen and (max-width: 540px) {
+	div.theme-steptext {
+		font-size:36px;
+		text-align: left;
+		padding-bottom:20px;
+	}
+	div.theme-steptext span {
+		font-size:24px;
+		text-align: left;
 	}
 }
 .theme-step1-animation, .theme-step2-animation, .theme-step3-animation, .theme-step4-animation, .theme-step5-animation, .theme-steptext-animation {
@@ -662,6 +846,13 @@ div.theme-steptext span {
 	20%  {bottom: 30px; opacity: 1;}
 	100% {bottom: 30px; opacity: 1;}
 }
+@media only screen and (max-width: 540px) {
+	@keyframes theme-steptext {
+		10%  {left:20px; bottom: 0px; opacity: 0;}
+		20%  {left:20px; bottom: 20px; opacity: 1;}
+		100% {left:20px; bottom: 20px; opacity: 1;}
+	}
+}
 @keyframes theme-step2 {
 	20%  {top: 120px; opacity: 0;}
 	30%  {top: 100px; opacity: 1;}
@@ -688,12 +879,23 @@ div.theme-steptext span {
 	position:relative; 
 	width:100%;
 }
+@media only screen and (max-width: 540px) {
+	.diagram-container {
+		height:300px; 
+	}
+}
 img.diagram-step1, img.diagram-step2, img.diagram-step3, img.diagram-step4, img.diagram-step5, img.diagram-step6, img.diagram-step7 {
 	position:absolute;
 	left:calc(50% - 370px);
 	top:0px;
 	width:740px;
 	opacity: 0;
+}
+@media only screen and (max-width: 739px) {
+	img.diagram-step1, img.diagram-step2, img.diagram-step3, img.diagram-step4, img.diagram-step5, img.diagram-step6, img.diagram-step7 {
+		left:0px;
+		width:100%;
+	}
 }
 .diagram-step1-animation, .diagram-step2-animation, .diagram-step3-animation, .diagram-step4-animation, .diagram-step5-animation, .diagram-step6-animation, .diagram-step7-animation {
 	animation-duration:5s;
@@ -757,6 +959,23 @@ img.diagram-step1, img.diagram-step2, img.diagram-step3, img.diagram-step4, img.
 	75%  {top: 0px; opacity: 1;}
 	100% {top: 0px; opacity: 1;}
 }
+@media only screen and (max-width: 739px) {
+	@keyframes diagram-step2 {
+		15%  {top: -20px; left:-60px; opacity: 0;}
+		25%  {top: 0px; left:0px; opacity: 1;}
+		100% {top: 0px; left:0px; opacity: 1;}
+	}
+	@keyframes diagram-step5 {
+		45%   {top: 20px; left:-60px; opacity: 0;}
+		55%   {top: 0px; left:0px; opacity: 1;}
+		100%  {top: 0px; left:0px; opacity: 1;}
+	}
+	@keyframes diagram-step6 {
+		55%  {top: 20px; left:40px; opacity: 0;}
+		65%  {top: 0px; left:0px; opacity: 1;}
+		100% {top: 0px; left:0px; opacity: 1;}
+	}
+}
 sup.comingsoon {
 	display:inline-block;
 	padding:4px 12px;
@@ -779,7 +998,15 @@ sup.comingsoon {
 	color:#999999;
 	font-weight: normal;
 	margin-bottom:20px;
-}.quote-block > p > strong {
+	padding:0 10px;
+}
+@media only screen and (max-width: 540px) {
+	.quote-block {
+		width:calc(100% - 20px);
+		padding:0 10px;
+	}
+}
+.quote-block > p > strong {
 	color:#FFFFFF;
 }
 .quote-block > span {
