@@ -153,6 +153,9 @@ h2 {
 .bg-sandbox {
 	background-color:#ffb700;
 }
+.bg-quote {
+	background-color:#012b30;
+}
 .bg-grey {
 	background-color:#e6e6e6;
 }
@@ -766,4 +769,27 @@ sup.comingsoon {
 	text-align: center;
 	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
 	/*transform: rotate(10deg);*/
+}
+/* famous quote */
+.quote-block {
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	width:30%;
+	color:#999999;
+	font-weight: normal;
+	margin-bottom:20px;
+}.quote-block > p > strong {
+	color:#FFFFFF;
+}
+.quote-block > span {
+	display:block;
+	text-align: right;
+	color:#07c3e0;
+	font-style: italic;
+	font-weight:normal;
+}
+.quote-block img {
+	width:100%;
+	margin-top:20px;
 }
