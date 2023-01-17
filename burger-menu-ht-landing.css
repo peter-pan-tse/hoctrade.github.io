@@ -1,0 +1,226 @@
+﻿@charset "UTF-8";
+/* CSS Document */
+/* primary menu */
+#mobileMenuToggle, #mobileMenuToggleForex {
+	display:none;
+}
+@media only screen and (max-width: 600px) {
+	#mobileMenuToggle, #mobileMenuToggleForex {
+	 	display: block;
+		position: fixed;
+	 	top: 20px;
+	 	right: 20px;
+	 	z-index: 10002;
+	 	-webkit-user-select: none;
+		user-select: none;
+	}
+}
+
+#mobileMenuToggle a {
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+#mobileMenuToggle a:hover {
+	color: #FFFFFF;
+}
+
+
+#mobileMenuToggle input {
+	display: block;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: -7px;
+	left: -5px;  
+	cursor: pointer;
+	opacity: 0; /* hide this */
+	z-index: 10003; /* and place it over the hamburger */
+	-webkit-touch-callout: none;
+}
+
+/* Just a quick hamburger */
+#mobileMenuToggle span {
+	display: block;
+	width: 22px;
+	height: 4px;
+	margin-bottom: 4px;
+	position: relative;
+	border-radius: 0 2px 2px 0px;
+	z-index: 10000;
+	transform-origin: 0% 0%;
+	transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              	background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              	opacity 0.55s ease;
+}
+#mobileMenuToggle span {
+	background: #FFFFFF;
+}
+#mobileMenuToggle span:first-child, #mobileMenuToggleForex span:first-child {
+	transform-origin: 4px 0px;
+	width: 20px;
+	height: 4px;
+}
+
+#mobileMenuToggle span:nth-last-child(3), #mobileMenuToggleForex span:nth-child(3) {
+	transform-origin: 0% 100%;
+	width: 18px;
+	height: 4px;
+}
+
+/* Transform all the slices of hamburger into a crossmark. */
+#mobileMenuToggle input:checked ~ span, #mobileMenuToggleForex input:checked ~ span {
+	opacity: 1;
+	transform: rotate(45deg) translate(4px, -2px);
+	background: #06AFC9;
+}
+
+/*  But let's hide the middle one. */
+#mobileMenuToggle input:checked ~ span:nth-last-child(3), #mobileMenuToggleForex input:checked ~ span:nth-child(3) {
+	opacity: 0;
+	transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/* Oh yeah and the last one should go the other direction */
+#mobileMenuToggle input:checked ~ span:nth-last-child(4), #mobileMenuToggleForex input:checked ~ span:nth-child(4) {
+	transform: rotate(-45deg) translate(-5px, 7px);
+}
+
+/* Make this absolute positioned at the top left of the screen */
+#mobileMenu {
+	position: absolute;
+	top:40px;
+	right:-20px;
+	width: calc(100vw - 0px);
+	height:auto;
+	/*min-height:calc(100vh - 60px);*/
+	margin: 0;
+	padding:0;
+	background: #047f92;
+	list-style-type: none;
+	-webkit-font-smoothing: antialiased;
+	/* to stop flickering of text in safari */ 
+	transform-origin: 0% 0%;
+	transform: translate(100%, 0);
+	transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#mobileMenu li {
+	display: block;
+	padding: 0;
+	margin:0;
+	border-bottom: 1px solid #06AFC9;
+}
+.recent-cat {
+	display:none;
+}
+@media only screen and (max-width: 480px) {
+	.recent-cat {
+		display:inline-block;
+		position:fixed;
+		text-align:right;
+		font-size:16px;
+		font-weight:bold;
+		color:#033c45;
+		top:12px;
+		right:48px;
+		z-index: 10003;
+	}
+}
+.mobileMenuMask {
+	display:none;
+	position: fixed;
+	top:0;
+	left:-0;
+	width: 100vw;
+	min-height:100vh;
+	margin: 0;
+	padding:0;
+	background:#000000;
+	opacity: 0.75;
+	z-index: -1;
+	transition: all ease 0.5s;
+}
+.p-menu-mobile {
+	display:block;
+	background: #033C45;
+	height:60px;
+	padding: 0 10px 0 60px;
+}
+.p-menu-mobile a {
+	display:inline-block;
+	font-size:16px;
+	line-height:60px;
+	color:#06AFC9;
+	font-weight: bold;
+	text-decoration:none;
+	transition: all 0.3s ease;
+	margin-right:20px;
+}
+.p-menu-mobile a.active {
+	color:#FFFFFF;
+}
+.s-menu-group {
+	display:flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: stretch;
+	padding:0 0 0 40px;
+	border-bottom:1px dotted #047F92;
+}
+.s-menu-title {
+	display:flex;
+	flex-direction:row;
+	align-items: center;
+	justify-content: flex-start;
+	color:#FFFFFF;
+	font-weight: bold;
+	height: 100px;
+	font-size:16px;
+	line-height: 100px;
+	padding:0 20px;
+}
+.s-menu-title > div > span {
+	font-size:24px;
+	line-height:24px;
+	display:inline-block;
+	margin:0;
+}
+.s-menu-title > div.s-menu-ico {
+	font-size:32px;
+	margin-right:10px;
+}
+.s-menu-title.active {
+	color:#FFFFFF;
+	background-color: #047F92;
+}
+a.s-menu-item {
+	display:flex;
+	flex-direction: row;
+	width:calc(49.99% - 10px);
+	align-items: flex-start;
+	justify-content: flex-start;
+	color:#047F92;
+	font-size: 14px;
+	line-height: 1.25em;
+	text-decoration:none;
+	padding:10px 10px 10px 0px;
+}
+a.s-menu-item > span {
+	font-size:24px;
+	margin-right:10px;
+	margin-top:-4px;
+}
+a.s-menu-item.active {
+	color:#FFFFFF;
+}
+a.s-menu-item.disabled {
+	color:#999999;
+}
+/* And let's slide it in from the left */
+#mobileMenuToggle input:checked ~ ul, #mobileMenuToggleForex input:checked ~ ul {
+	transform: none;
+}
+#mobileMenuToggle input:checked ~ .mobileMenuMask, #mobileMenuToggleForex input:checked ~ .mobileMenuMask {
+	display: block;
+}

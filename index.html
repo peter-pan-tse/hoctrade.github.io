@@ -6,6 +6,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Noto Sans:400,700,900" rel="stylesheet">
 	<link href="font.css" rel="stylesheet">
 	<link href="landing.css" rel="stylesheet">
+	<link href="burger-menu-ht-landing.css" rel="stylesheet">
 	<link rel="icon" href="img/favicon.svg">
 	<title>hoc-trade</title>
 	<!-- write your code here -->
@@ -67,7 +68,41 @@
 					<li><a class="sandbox" href="#sandbox">Create sandbox</a></li>
 				</ul>
 			</div>
+			<!-- mobile menu -->
+				<nav role="navigation">
+					<div class="recent-cat"></div>
+					<div id="mobileMenuToggle">
+						<!--A fake / hidden checkbox is used as click reciever, so you can use the :checked selector on it.-->
+						<input type="checkbox" />
+						<!--Some spans to act as a hamburger. They are acting like a real hamburger, not that McDonalds stuff.-->
+						<span></span>
+						<span></span>
+						<span></span>
+						<!-- Too bad the menu has to be inside of the button but hey, it's pure CSS magic.-->
+						<ul id="mobileMenu">
+							<li>
+								<a href="#">
+									<div class="s-menu-title"><div class="s-menu-ico ht-login"></div>Sign in</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="s-menu-title"><div class="s-menu-ico ht-pencil"></div>Register for free</div>
+								</a>
+							</li>
+							<li style="border-bottom:1px solid #ffb700;">
+								<a href="#sandbox">
+									<div class="s-menu-title bg-sandbox" style="color:#000000;"><div class="s-menu-ico ht-add"></div>Create sandbox</div>
+								</a>
+							</li>
+						</ul>
+						<div class="mobileMenuMask"></div>
+					</div>
+				</nav>
+			<!-- mobile menu ended -->
 		</div>
+		
+		<!-- theme -->
 		<div class="theme-container">
 			<div class="theme-animation-container">
 				<img class="theme-step2 theme-step2-animation" src="img/hoc-trade-top-2.png" />
@@ -79,6 +114,11 @@
 			</div>
 		</div>
 		<div class="header-bg"></div>
+		
+		<!-- sandbox mobile -->
+		<a class="sandbox-block mobile" href="#sandbox">
+			Create sandbox
+		</a>
 		
 		<!-- quote -->
 		<div class="module-block bg-quote">
