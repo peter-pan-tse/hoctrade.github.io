@@ -6,13 +6,15 @@
 	<link href="https://fonts.googleapis.com/css?family=Noto Sans:400,700,900" rel="stylesheet">
 	<link href="font.css" rel="stylesheet">
 	<link href="landing.css" rel="stylesheet">
+	<link href="burger-menu-ht-landing.css" rel="stylesheet">
 	<link rel="icon" href="img/favicon.svg">
 	<title>hoc-trade about us</title>
 	<!-- write your code here -->
 	<style>
-		body {
-			padding:80px 0 0 0;
+		html, body {
+			padding:40px 0 0 0;
 			margin:0px;
+			overflow-x: hidden;
 		}
 		.header-container {
 			padding: 0 0 6px 0;
@@ -79,7 +81,7 @@
 	</script>
 	</head>
 	<body>
-		<div class="header" style="background-color: #047f92;">
+		<div class="header">
 			<div class="header-container">
 				<div class="logo"><a href="index.html"><img src="img/logo-w-text.svg" /></a></div>
 				<ul class="menu">
@@ -87,7 +89,36 @@
 					<li><a href="#">Register for free</a></li>
 				</ul>
 			</div>
+			<!-- mobile menu -->
+				<nav role="navigation">
+					<div class="recent-cat"></div>
+					<div id="mobileMenuToggle">
+						<!--A fake / hidden checkbox is used as click reciever, so you can use the :checked selector on it.-->
+						<input type="checkbox" />
+						<!--Some spans to act as a hamburger. They are acting like a real hamburger, not that McDonalds stuff.-->
+						<span></span>
+						<span></span>
+						<span></span>
+						<!-- Too bad the menu has to be inside of the button but hey, it's pure CSS magic.-->
+						<ul id="mobileMenu">
+							<li>
+								<a href="#">
+									<div class="s-menu-title"><div class="s-menu-ico ht-login"></div>Sign in</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="s-menu-title"><div class="s-menu-ico ht-pencil"></div>Register for free</div>
+								</a>
+							</li>
+						</ul>
+						<div class="mobileMenuMask"></div>
+					</div>
+				</nav>
+			<!-- mobile menu ended -->
 		</div>
+		<div class="header-bg"></div>
+		
 		<div class="main-container" style="display:block; padding: 40px 20px;">
 			<h1>About</h1>
 			<p>hoc-trade is a 100% data-driven behavioral analytics platform for Crypto &amp; Forex traders. The vast majority of retail traders loses money, and active trader tend to fall into similar loss-making patterns, which are mostly behavioral driven, such as revenge trading, overtrading, or cutting their profits too early. At hoc-trade, we identify your trading patterns (profit &amp; loss making patterns), visualize them for you in our easy-to-understand dashboards, and warn you in case you are acting in one of your previously identified loss-making patterns again. All fully automated in our web application.</p>
@@ -115,7 +146,15 @@
 		<div class="module-block bg-footer">
 			<div class="main-container" style="padding:30px 0;">
 				<div class="footer">
-					<span class="ht-logo"></span><strong>hoc-trade</strong>&nbsp;&nbsp;&nbsp; &copy; 2023 hoc-trade limited, all rights reserved<span class="separator">|</span><a href="tandc-ht.html">Terms &amp; conditions</a><span class="separator">|</span><a href="privacy-ht.html">Privacy policy</a><!--<span class="separator">|</span><a href="advertise-w-ht.html">advertise with us</a>--><span class="separator">|</span><a style="color:#FFFFFF;" href="about-ht.html">About us</a><span class="separator">|</span><a href="contact-ht.html">Contact us</a><br><br><a class="social" href="#"><span class="ht-logo-fb"></span></a><a class="social" href="#"><span class="ht-logo-twitter"></span></a><a class="social" href="#"><span class="ht-logo-in"></span></a><a class="social" href="#"><span class="ht-logo-yt"></span></a><a class="social" href="#"><span class="ht-logo-ig"></span></a><a class="social" href="#"><span class="ht-logo-discd"></span></a>
+					<div class="footer-copy">
+						<span class="ht-logo"></span><strong>hoc-trade</strong>&nbsp;&nbsp;&nbsp; &copy; 2023 hoc-trade limited, all rights reserved
+					</div>
+					<div class="footer-links">
+						<span class="separator"><span class="desktop">|</span></span><a href="tandc-ht.html">Terms &amp; conditions</a><span class="separator">|</span><a href="privacy-ht.html">Privacy policy</a><!--<span class="separator">|</span><a href="advertise-w-ht.html">advertise with us</a>--><span class="separator">|</span><a style="color:#FFFFFF;" href="about-ht.html">About us</a><span class="separator">|</span><a href="contact-ht.html">Contact us</a>
+					</div>
+					<div class="footer-social">
+						<a class="social" href="#"><span class="ht-logo-fb"></span></a><a class="social" href="#"><span class="ht-logo-twitter"></span></a><a class="social" href="#"><span class="ht-logo-in"></span></a><a class="social" href="#"><span class="ht-logo-yt"></span></a><a class="social" href="#"><span class="ht-logo-ig"></span></a><a class="social" href="#"><span class="ht-logo-discd"></span></a>
+					</div>
 					<p class="disclaimer">HIGH RISK WARNING: Foreign exchange and other CFD trading carries a high level of risk and may not be suitable for everyone. The usage of leverage creates additional risk and loss exposure. Your investment objectives, experience level and risk tolerance have to be taken into consideration before you decide to trade foreign exchange or other CFD products. You could lose some or all of your entire investment. Do not invest money that you cannot afford to lose and always use an appropriate risk management. It’s important to educate yourself on the risks associated with foreign exchange trading, and seek professional advice from an independent financial or tax advisor in case of any questions. Any data and information is provided ‘as is’ solely for informational purposes, and is not intended for trading purposes or advice. Past performance, which are presented on this website or you find somewhere else, is not indicative of future results.</p>
 				</div>
 			</div>
