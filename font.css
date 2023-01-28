@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'ht-font';
-  src:  url('fonts/ht-font.eot?9y5tuj');
-  src:  url('fonts/ht-font.eot?9y5tuj#iefix') format('embedded-opentype'),
-    url('fonts/ht-font.ttf?9y5tuj') format('truetype'),
-    url('fonts/ht-font.woff?9y5tuj') format('woff'),
-    url('fonts/ht-font.svg?9y5tuj#ht-font') format('svg');
+  src:  url('fonts/ht-font.eot?cd9wwp');
+  src:  url('fonts/ht-font.eot?cd9wwp#iefix') format('embedded-opentype'),
+    url('fonts/ht-font.ttf?cd9wwp') format('truetype'),
+    url('fonts/ht-font.woff?cd9wwp') format('woff'),
+    url('fonts/ht-font.svg?cd9wwp#ht-font') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,126 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ht-ifc:before {
+  content: "\e948";
+}
+.ht-liteforex:before {
+  content: "\e949";
+}
+.ht-ironfx:before {
+  content: "\e94a";
+}
+.ht-instaforex:before {
+  content: "\e94b";
+}
+.ht-swissquote:before {
+  content: "\e94c";
+}
+.ht-hycm:before {
+  content: "\e94d";
+}
+.ht-globalprime:before {
+  content: "\e94e";
+}
+.ht-gkfx:before {
+  content: "\e94f";
+}
+.ht-fxtm:before {
+  content: "\e950";
+}
+.ht-fxpro:before {
+  content: "\e951";
+}
+.ht-fxdd:before {
+  content: "\e952";
+}
+.ht-hfm:before {
+  content: "\e953";
+}
+.ht-fxchoice:before {
+  content: "\e958";
+}
+.ht-fpmarkets:before {
+  content: "\e95a";
+}
+.ht-dukascopy:before {
+  content: "\e95c";
+}
+.ht-fxcm:before {
+  content: "\e960";
+}
+.ht-aaafx:before {
+  content: "\e961";
+}
+.ht-easyforex:before {
+  content: "\e966";
+}
+.ht-bdswiss:before {
+  content: "\e967";
+}
+.ht-naga:before {
+  content: "\e968";
+}
+.ht-axi:before {
+  content: "\e969";
+}
+.ht-ava:before {
+  content: "\e96a";
+}
+.ht-fbs:before {
+  content: "\e96b";
+}
+.ht-exness:before {
+  content: "\e96c";
+}
+.ht-admiral:before {
+  content: "\e96d";
+}
+.ht-fxopen:before {
+  content: "\e96e";
+}
+.ht-oanda:before {
+  content: "\e96f";
+}
+.ht-icmarkets:before {
+  content: "\e970";
+}
+.ht-xm:before {
+  content: "\e971";
+}
+.ht-xtb:before {
+  content: "\e972";
+}
+.ht-vantage:before {
+  content: "\e973";
+}
+.ht-alpari:before {
+  content: "\e974";
+}
+.ht-pepperstone:before {
+  content: "\e975";
+}
+.ht-roboforex:before {
+  content: "\e976";
+}
+.ht-octafx:before {
+  content: "\e977";
+}
+.ht-tickmill:before {
+  content: "\e978";
+}
+.ht-forexcom:before {
+  content: "\e979";
+}
+.ht-ig:before {
+  content: "\e97a";
+}
+.ht-cmc:before {
+  content: "\e97b";
+}
+.ht-activtrades:before {
+  content: "\e97c";
+}
 .ht-alert:before {
   content: "\e913";
 }
