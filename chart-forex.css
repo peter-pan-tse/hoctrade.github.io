@@ -234,7 +234,7 @@ ul.ex-rank-table li {
 	flex-direction:column;
 	justify-content: center;
 	width:100%;
-	height:60px;
+	height:80px;
 	position:relative;
 	padding: 0;
 	margin: 0;
@@ -583,7 +583,7 @@ span.compare-logo {
 	}
 }
 .item-saving-1, .item-saving-2 {
-	width:calc(12.5% - 12px);
+	width:calc(10% - 15.5px);
 	justify-content:center;
 }
 .item-saving-1 {
@@ -633,8 +633,8 @@ span.compare-logo {
 	border-radius:0 0 10px 0;
 }
 .item-saving {
-	width:calc(25% - 14px);
-	height:48px;
+	width:calc(20% - 14px);
+	height:70px;
 	justify-content:space-between;
 	flex-direction:column;
 	border-width:2px 2px 0 2px;
