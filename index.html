@@ -16,6 +16,28 @@
 			margin:0px;
 			overflow-x: hidden;
 		}
+		.video-container {
+			height: 56.25vw;
+			width: 100vw;
+			position: relative;
+			display:block;
+		}
+
+		.video-container video {
+		  width: 100vw;
+		  height: auto;
+		  position: absolute;
+		  object-fit: cover;
+		  z-index: 0;
+		}
+		/* Just styling the content of the div, the *magic* in the previous rules 
+		.video-container .caption {
+		  z-index: 1;
+		  position: relative;
+		  text-align: center;
+		  color: #dc0000;
+		  padding: 10px;
+		}*/
 	</style>
 	<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>	
 	<!-- scroll smoothly to anchor -->
@@ -102,15 +124,13 @@
 			<!-- mobile menu ended -->
 		</div>
 		
-		<!-- theme -->
+		
+		<!-- theme --> 
 		<div class="theme-container">
-			<div class="theme-animation-container">
-				<img class="theme-step2 theme-step2-animation" src="img/hoc-trade-top-2.png" />
-				<img class="theme-step5 theme-step5-animation" src="img/hoc-trade-top-5.png" />
-				<img class="theme-step4 theme-step4-animation" src="img/hoc-trade-top-4.png" />
-				<img class="theme-step1 theme-step1-animation" src="img/hoc-trade-top-1.png" />
-				<img class="theme-step3 theme-step3-animation" src="img/hoc-trade-top-3.png" />
-				<div class="theme-steptext theme-steptext-animation">Do you know your trading errors?<br><span>Become our own competitive trading edge</span></div>
+			<div class="video-container">
+				<video autoplay muted loop>
+					<source src="img/landing-3.mp4" type="video/mp4" />
+				</video>
 			</div>
 		</div>
 		<div class="header-bg"></div>
