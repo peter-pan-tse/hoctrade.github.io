@@ -18,6 +18,7 @@
 		}
 		.video-container {
 			height: 56.25vw;
+			max-height: 100vh;
 			width: 100vw;
 			position: relative;
 			display:block;
@@ -30,14 +31,33 @@
 		  object-fit: cover;
 		  z-index: 0;
 		}
-		/* Just styling the content of the div, the *magic* in the previous rules 
-		.video-container .caption {
-		  z-index: 1;
-		  position: relative;
-		  text-align: center;
-		  color: #dc0000;
-		  padding: 10px;
-		}*/
+		#audio-control {
+			position:absolute;
+			bottom:20px;
+			right:20px;
+			width:48px;
+			height:48px;
+			cursor:pointer;
+			text-align: center;
+			font-size: 32px;
+			line-height: 48px;
+			background:transparent;
+			color: #fff;
+		 	border-radius: 50%;
+			display: inline-block;
+			opacity: 0.5;
+			transition:all ease 0.3s;
+		}
+		#audio-control:hover {
+			opacity: 1;
+		}
+		@media only screen and (max-width: 540px) {
+			#audio-control {
+				right:5px;
+				bottom:5px;
+				font-size: 28px;
+			}
+		}
 	</style>
 	<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>	
 	<!-- scroll smoothly to anchor -->
@@ -128,9 +148,10 @@
 		<!-- theme --> 
 		<div class="theme-container">
 			<div class="video-container">
-				<video autoplay muted loop>
+				<video autoplay muted loop id="topVideo">
 					<source src="img/landing-3.mp4" type="video/mp4" />
 				</video>
+				<div id="audio-control" class="muted ht-unmute"></div>
 			</div>
 		</div>
 		<div class="header-bg"></div>
@@ -474,4 +495,19 @@
 		observer.observe(document.querySelector('.step-wrapper'));
 	</script>
 	<script src="animateViewport.js" language="javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$('#audio-control').click(function(){
+			if( $("#topVideo").prop('muted') ) {
+				  $("#topVideo").prop('muted', false);
+				  $(this).addClass('ht-mute');
+				  $(this).removeClass('ht-unmute');
+			  // or toggle class, style it with a volume icon sprite, change background-position
+			} else {
+			  $("#topVideo").prop('muted', true);
+			  $(this).addClass('ht-unmute');
+			  $(this).removeClass('ht-mute');
+			}
+		});
+	</script>
 </html>
