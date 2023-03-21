@@ -14,7 +14,7 @@
 <link href="modal.css" rel="stylesheet">
 <!--<link href="modal-signup.css" rel="stylesheet">-->
 <link rel="icon" href="favicon.svg">
-<title>hoc-trade trade history</title>
+<title>hoc-trade trade history search result</title>
 <script>
 	$(function(){
 		$('.open-btn').on('click', function(){
@@ -112,6 +112,12 @@
 	}
 	a.btn-form:hover {
 		background-color:#06AFC9;
+	}
+	.result-text {
+		display:block;
+		width:100%;
+		text-align: center;
+		margin:20px 5px;
 	}
 </style>
 </head>
@@ -256,6 +262,7 @@
 	<div class="breadcrumb">Dashboard / Overview / <span class="active">Trade history</span></div>
 	<!-- breadcrumb ended -->
 	<div class="main-content-container">
+		<div class="result-text"><strong>2</strong> trades found based on the search criteria <i>"from 20/03/2023 to 21/03/2023"</i></div>
 		<div class="desktop">
 			<div class="top-btn-group" style="display:block; clear:both;">
 				<a class="btn-duration" href="#">3m</a><a class="btn-duration" href="#">6m</a><a class="btn-duration duration-on" href="#">1yr</a><a class="btn-duration" href="#">all</a>

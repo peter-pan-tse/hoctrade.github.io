@@ -224,3 +224,15 @@ div.pip-bar-dot {
 	box-shadow: 1px 1px 3px rgb(0 0 0 / 0.5);
 	z-index: 801;
 }
+.date-group {
+	display:flex;
+	flex-direction:column;
+	justify-content: center;
+	align-items:center;
+	margin:10px 40px;
+}
+.date-input {
+	width:100%;
+	padding:10px;
+	text-align: left;
+}

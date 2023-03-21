@@ -690,7 +690,7 @@ textarea.general {
 	border:1px solid #F2F2F2;
 	resize: none;
 }
-input.password {
+input.password, input.date {
 	display:block;
 	height:28px;
 	width:calc(100% - 70px);
@@ -726,6 +726,13 @@ input.password.hidden-checked {
 	background-repeat: no-repeat, no-repeat;
 	background-position:right center, right 20px center;
 	background-size:32px 32px, 32px 32px;
+}
+input.date.calendar {
+	background-image: url("calendar.svg");
+	background-repeat: no-repeat;
+	background-position:right center;
+	background-size:32px 32px;
+	cursor: pointer;
 }
 input.general.error, input.password.error {
 	border:1px solid #ED1C24;
