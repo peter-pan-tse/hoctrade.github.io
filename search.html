@@ -1,0 +1,396 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="jquery-3.6.0.min.js" language="javascript"></script>
+<link href="https://fonts.googleapis.com/css?family=Noto Sans:400,700,900" rel="stylesheet">
+<link href="font.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+<link href="chart.css" rel="stylesheet">
+<link href="menu.css" rel="stylesheet">
+<link href="trade-history.css" rel="stylesheet">
+<link href="burger-menu.css" rel="stylesheet">
+<link href="modal.css" rel="stylesheet">
+<!--<link href="modal-signup.css" rel="stylesheet">-->
+<link rel="icon" href="favicon.svg">
+<title>hoc-trade search</title>
+<script>
+	$(function(){
+		$('.open-btn').on('click', function(){
+			$(this).toggleClass('close-btn')
+		});
+	});
+</script>
+<style>
+	.breadcrumb {
+		margin-bottom: 20px !important;
+	}
+	.desktop {
+		display:block;
+	}
+	.mobile {
+		display:none;
+	}
+	@media only screen and (max-width: 580px) {
+		.desktop {
+		display:none;
+		}
+		.mobile {
+			display:block;
+		}
+	}
+	.pagination {
+		display:inline-block;
+		height:24px;
+		min-width:25px;
+		padding:0 10px;
+		background-color: #06AFC9;
+		border-radius:6px 0 0 6px;
+		color:#FFFFFF;
+		font-size: 12px;
+		line-height: 24px;
+		font-weight: bold;
+	}
+	.open-btn-page {
+		display:inline-block;
+		width:24px;
+		height:24px;
+		text-align: center;
+		border-radius:0 6px 6px 0;
+		font-size:16px;
+		text-decoration:none;
+		transition: all 0.3s ease;
+		cursor:pointer;
+	}
+	.open-btn-page {
+		background-color: #D9D0BF;
+		color: #047F92;
+	}
+	.open-btn-page:hover {
+		background-color: #06AFC9;
+		color: #FFFFFF;
+	}
+	.modal-content {
+		width:480px;
+		padding:10px 0 20px 0;
+	}
+	@media only screen and (max-width: 768px) {
+		.modal-content {
+			width:100%;
+			padding:40px 0 20px 0;
+		}
+	}
+	
+	input.general, input.search, textarea.general {
+		background-color: #FFFFFF;
+		border:1px solid #FFFFFF;
+		margin:10px 0;
+	}
+	input.search {
+		display: inline-block;
+		height: 26px;
+		width: 50%;
+		position: relative;
+		padding: 4px 4px 0px 4px;
+		background-color: #F2F2F2;
+		border-radius: 6px;
+		font-size: 14px;
+		color: #333333;
+		margin-bottom: 10px;
+		border: 1px solid #F2F2F2;
+	}
+	@media only screen and (max-width: 540px) {
+		input.search {
+			width: calc(100% - 8px);
+		}
+	}
+	.search-group {
+		display:flex;
+		flex-direction:row;
+		justify-content: center;
+		align-items:center;
+		margin:10px 40px;
+	}
+	.search-input {
+		width:calc(100% - 20px);
+		padding:0 0 10px 0;
+		text-align: center;
+	}
+	.bottom-btn-group-btns {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		width: 100%;
+	}
+	a.btn-form {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 32px;
+		width: calc(100% - 20px);
+		padding: 0px 10px;
+		background-color: #047F92;
+		border-radius: 6px;
+		font-size: 14px;
+		line-height: 32px;
+		font-weight: bold;
+		color: #FFFFFF;
+		transition: all 0.3s ease;
+		cursor: pointer;
+		text-decoration: none;
+	}
+	a.btn-form:hover {
+		background-color:#06AFC9;
+	}
+</style>
+</head>
+<body>
+	<!--header and menu -->
+	<div class="header">
+		<div style="display:flex; flex-direction:row; justify-content: flex-start;">
+			<div class="logo"><span class="ht-logo"></span></div>
+			<div class="p-menu">
+				<a class="menu-item" href="account-overview.html">Dashboard</a>
+				<a class="menu-item" href="scoreboard.html">Scoreboard</a>
+			</div>
+		</div>
+		<div class="right-menu">
+			<a class="right-menu-item" href="#"><span class="ht-bell"></span><div class="ico-number">5</div></a>
+			<a class="right-menu-item" href="#"><span class="ht-search"></span></a>
+			<div class="member-menu">
+				<div class="profile-pic"></div>
+				<div class="user-profile"><span class="ht-wallet"><div class="ico-verified"><span class="ht-verified"></span></div></span>Winnie-fx-demo</div>
+				<div class="open-btn"><label for="member-menu-toggle"><span class="ht-triangle"></span></label></div>
+				<input type="checkbox" id="member-menu-toggle"/>
+				<ul id="member-menu-dropdown">
+					<hr class="dropmenu-separator" />
+					<li class="switch-menu">Switch account</li>
+					<li>
+						<a class="active" href="#"><span class="ht-wallet icon"><div class="ico-verified"><span class="ht-verified"></span></div></span>Winnie-fx-demo</a>
+					</li>
+					<li>
+						<a href="#"><span class="ht-wallet icon"><div class="ico-verified"><span class="ht-verified"></span></div></span>Winnie-fx-live</a>
+					</li>
+					<li>
+						<a href="#"><span class="ht-wallet icon"></span>Winnie-fx-open</a>
+					</li>
+					<hr class="dropmenu-separator" />
+					<li>
+						<a id="modalTradeAcc" style="cursor:pointer;"><span class="ht-wallet-setting icon"></span>Account setting</a>
+					</li>
+					<li>
+						<a href="forex-trade-account-adding.html"><span class="ht-wallet-add icon"></span>Add account</a>
+					</li>
+					<hr class="dropmenu-separator" />
+					<li>
+						<a href="general-setting.html"><span class="ht-gear icon"></span>Settings</a>
+					</li>
+					<li class="switch-menu">
+						<div><span class="ht-moon icon"></span>Dark mode</div>
+						<label class="switch">
+						  <input type="checkbox">
+						  <span class="slider round"></span>
+						</label>
+					</li>
+					<li>
+						<a href="support.html"><span class="ht-support icon"></span>Help &amp; support</a>
+					</li>
+					<li>
+						<a href="#"><span class="ht-logout icon"></span>Logout</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<nav class="vertical">
+		<ul>
+			<li>
+				<a href="#"><span class="ht-dashboard"></span></a>
+				<ul>
+					<li class="submenu-title">Overview</li>
+					<li><a href="account-overview.html"><span class="ht-wallet"></span>Account overview</a></li>
+					<li><a href="basic-stat.html"><span class="ht-pie-chart"></span>Basic statistics</a></li>
+					<li><a href="advanced-stat.html"><span class="ht-cluster-chart"></span>Advanced statistics</a></li>
+					<li><a href="trade-history.html"><span class="ht-clipboard"></span>Trade history</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#"><span class="ht-bar-chart"></span></a>
+				<ul>
+					<li class="submenu-title">Analysis</li>
+					<li><a href="ta-customized.html"><span class="ht-star"></span>Customized</a></li>
+					<li><a href="ta-general.html"><span class="ht-bar-chart"></span>General</a></li>
+					<li><a href="ta-behavioral.html"><span class="ht-coffee"></span>Behavioral</a></li>
+					<li><a href="ta-timing.html"><span class="ht-timing"></span>Timing</a></li>
+					<li><a href="ta-risk-mgt.html"><span class="ht-alert"></span>Risk management</a></li>
+					<li><a href="ta-strategy.html"><span class="ht-chess-castle"></span>Strategy</a></li>
+					<li><a href="ta-costs.html"><span class="ht-coins"></span>Costs</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="alert.html"><span class="ht-bell"></span></a>
+			</li>
+		</ul>
+	</nav>  
+	<!-- mobile menu -->
+	<nav role="navigation">
+		<div id="mobileMenuToggle">
+			<!--A fake / hidden checkbox is used as click reciever, so you can use the :checked selector on it.-->
+			<input type="checkbox" />
+			<!--Some spans to act as a hamburger. They are acting like a real hamburger, not that McDonalds stuff.-->
+			<span></span>
+			<span></span>
+			<span></span>
+			<!-- Too bad the menu has to be inside of the button but hey, it's pure CSS magic.-->
+			<ul id="mobileMenu">
+				<li>
+					<div class="p-menu-mobile">
+						<a href="#">Dashboard</a>
+						<a href="#">Scoreboard</a>
+					</div>
+				</li>
+				<li>
+					<div class="s-menu-title"><div><span class="ht-dashboard"></span></div>Dashboard</div>
+					<div class="s-menu-group">
+						<a class="s-menu-item" href="account-overview.html"><span class="ht-wallet"></span>Account overview</a>
+						<a class="s-menu-item" href="basic-atat.html"><span class="ht-pie-chart"></span>Basic statistics</a>
+						<a class="s-menu-item" href="advanced-stat.html"><span class="ht-cluster-chart"></span>Advanced statistics</a>
+						<a class="s-menu-item" href="trade-history.html"><span class="ht-clipboard"></span>Trade history</a>
+					</div>
+				</li>
+				<li>
+					<div class="s-menu-title"><div><span class="ht-bar-chart"></span></div>Analysis</div>
+					<div class="s-menu-group">
+						<a class="s-menu-item" href="ta-customized.html"><span class="ht-star"></span>Customized</a>
+						<a class="s-menu-item" href="ta-general.html"><span class="ht-bar-chart"></span>General</a>
+						<a class="s-menu-item" href="ta-behavioral.html"><span class="ht-coffee"></span>Behavioral</a>
+						<a class="s-menu-item" href="ta-timing.html"><span class="ht-timing"></span>Timing</a>
+						<a class="s-menu-item" href="ta-risk-mgt.html"><span class="ht-alert"></span>Risk management</a>
+						<a class="s-menu-item" href="ta-strategy.html"><span class="ht-chess-castle"></span>Strategy</a>
+						<a class="s-menu-item" href="ta-costs.html"><span class="ht-coins"></span>Costs</a>
+					</div>
+				</li>
+				<li>
+					<a href="alert.html"><div class="s-menu-title"><div><span class="ht-bell"></span></div>Alerts</div></a>
+				</li>
+			</ul>
+			<div class="mobileMenuMask"></div>
+		</div>
+	</nav>
+	<!-- mobile menu ended -->
+	
+	<!-- main content area -->
+	<!-- breadcrumb -->
+	<div class="breadcrumb"><span class="active">Search hoc-trade</span></div>
+	<!-- breadcrumb ended -->
+	<div class="main-content-container">
+		<p align="center" style="margin:40px 0 0 0;">Search content in hoc-trade. Type in keywords and/or select area of the search.</p>
+		<div class="search-group">
+			<div class="search-input">
+				<input class="search" placeholder="Keywords" value="" />
+				<div class="custom-select">
+					<select style="width:100%;">
+						<option value="all">Select a search area</option>
+						<option value="all">All areas</option>
+						<option value="overview">Overview</option>
+						<option value="analysis">Analysis</option>
+						<option value="alert">Alert</option>
+					</select>
+				</div>
+				<a class="btn-form" style="display: inline-block; width:auto; margin:0 5px;" href="search-result.html">Search</a>
+			</div>
+			
+		</div>
+		
+	</div><!-- main-content-container -->
+	<!-- main content area end -->
+	
+	<div class="footer">
+		<span class="ht-logo"></span><strong>hoc-trade</strong>&nbsp;&nbsp;&nbsp; copy; 2022 hoc-trade limited, all rights reserved<span class="separator">|</span><a href="#">Terms &amp; conditions</a><span class="separator">|</span><a href="#">Privacy policy</a><span class="separator">|</span><a href="#">advertise with us</a><span class="separator">|</span><a href="#">About us</a><span class="separator">|</span><a class="social" href="#"><span class="ht-logo-fb"></span></a><a class="social" href="#"><span class="ht-logo-twitter"></span></a><a class="social" href="#"><span class="ht-logo-in"></span></a><a class="social" href="#"><span class="ht-logo-yt"></span></a>
+		<p class="disclaimer">HIGH RISK WARNING: Foreign exchange and other CFD trading carries a high level of risk and may not be suitable for everyone. The usage of leverage creates additional risk and loss exposure. Your investment objectives, experience level and risk tolerance have to be taken into consideration before you decide to trade foreign exchange or other CFD products. You could lose some or all of your entire investment. Do not invest money that you cannot afford to lose and always use an appropriate risk management. It’s important to educate yourself on the risks associated with foreign exchange trading, and seek professional advice from an independent financial or tax advisor in case of any questions. Any data and information is provided ‘as is’ solely for informational purposes, and is not intended for trading purposes or advice. Past performance, which are presented on this website or you find somewhere else, is not indicative of future results.</p>
+	</div>
+	
+</body>
+<script>
+	var x, i, j, l, ll, selElmnt, a, b, c;
+	/*look for any elements with the class "custom-select":*/
+	x = document.getElementsByClassName("custom-select");
+	l = x.length;
+	for (i = 0; i < l; i++) {
+	  selElmnt = x[i].getElementsByTagName("select")[0];
+	  ll = selElmnt.length;
+	  /*for each element, create a new DIV that will act as the selected item:*/
+	  a = document.createElement("DIV");
+	  a.setAttribute("class", "select-selected");
+	  a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+	  x[i].appendChild(a);
+	  /*for each element, create a new DIV that will contain the option list:*/
+	  b = document.createElement("DIV");
+	  b.setAttribute("class", "select-items select-hide");
+	  for (j = 1; j < ll; j++) {
+		/*for each option in the original select element,
+		create a new DIV that will act as an option item:*/
+		c = document.createElement("DIV");
+		c.innerHTML = selElmnt.options[j].innerHTML;
+		c.addEventListener("click", function(e) {
+			/*when an item is clicked, update the original select box,
+			and the selected item:*/
+			var y, i, k, s, h, sl, yl;
+			s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+			sl = s.length;
+			h = this.parentNode.previousSibling;
+			for (i = 0; i < sl; i++) {
+			  if (s.options[i].innerHTML == this.innerHTML) {
+				s.selectedIndex = i;
+				h.innerHTML = this.innerHTML;
+				y = this.parentNode.getElementsByClassName("same-as-selected");
+				yl = y.length;
+				for (k = 0; k < yl; k++) {
+				  y[k].removeAttribute("class");
+				}
+				this.setAttribute("class", "same-as-selected");
+				break;
+			  }
+			}
+			h.click();
+		});
+		b.appendChild(c);
+	  }
+	  x[i].appendChild(b);
+	  a.addEventListener("click", function(e) {
+		  /*when the select box is clicked, close any other select boxes,
+		  and open/close the current select box:*/
+		  e.stopPropagation();
+		  closeAllSelect(this);
+		  this.nextSibling.classList.toggle("select-hide");
+		  this.classList.toggle("select-arrow-active");
+		});
+	}
+	function closeAllSelect(elmnt) {
+	  /*a function that will close all select boxes in the document,
+	  except the current select box:*/
+	  var x, y, i, xl, yl, arrNo = [];
+	  x = document.getElementsByClassName("select-items");
+	  y = document.getElementsByClassName("select-selected");
+	  xl = x.length;
+	  yl = y.length;
+	  for (i = 0; i < yl; i++) {
+		if (elmnt == y[i]) {
+		  arrNo.push(i)
+		} else {
+		  y[i].classList.remove("select-arrow-active");
+		}
+	  }
+	  for (i = 0; i < xl; i++) {
+		if (arrNo.indexOf(i)) {
+		  x[i].classList.add("select-hide");
+		}
+	  }
+	}
+	/*if the user clicks anywhere outside the select box,
+	then close all select boxes:*/
+	document.addEventListener("click", closeAllSelect);
+</script>
+</html>
