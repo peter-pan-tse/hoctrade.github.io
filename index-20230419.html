@@ -23,12 +23,7 @@
 			position: relative;
 			display:block;
 		}
-		@media only screen and (max-width: 540px) {
-			.video-container {
-				height: 177.7vw;
-				max-height: auto;
-			}
-		}
+
 		.video-container video {
 		  width: 100vw;
 		  height: auto;
@@ -36,7 +31,7 @@
 		  object-fit: cover;
 		  z-index: 0;
 		}
-		#audio-control, #audio-controlm {
+		#audio-control {
 			position:absolute;
 			bottom:20px;
 			right:20px;
@@ -53,26 +48,14 @@
 			opacity: 0.5;
 			transition:all ease 0.3s;
 		}
-		#audio-control:hover, #audio-controlm:hover {
+		#audio-control:hover {
 			opacity: 1;
 		}
 		@media only screen and (max-width: 540px) {
-			#audio-control, #audio-controlm {
+			#audio-control {
 				right:5px;
 				bottom:5px;
 				font-size: 28px;
-			}
-		}
-		.quote-h1 {
-			display:block; 
-			width:100%; 
-			color:#FFFFFF; 
-			text-align:center;
-		}
-		@media only screen and (max-width: 540px) {
-			.quote-h1 {
-				text-align:left;
-				padding:0 5px;
 			}
 		}
 	</style>
@@ -164,21 +147,11 @@
 		
 		<!-- theme --> 
 		<div class="theme-container">
-			<div class="desktop">
-				<div class="video-container">
-					<video autoplay muted loop id="topVideo">
-						<source src="img/landing-d.mp4" type="video/mp4" />
-					</video>
-					<div id="audio-control" class="muted ht-unmute"></div>
-				</div>
-			</div>
-			<div class="mobile">
-				<div class="video-container">
-					<video autoplay muted loop id="topVideom">
-						<source src="img/landing-m.mp4" type="video/mp4" />
-					</video>
-					<div id="audio-controlm" class="muted ht-unmute"></div>
-				</div>
+			<div class="video-container">
+				<video autoplay muted loop id="topVideo">
+					<source src="img/landing-3.mp4" type="video/mp4" />
+				</video>
+				<div id="audio-control" class="muted ht-unmute"></div>
 			</div>
 		</div>
 		<div class="header-bg"></div>
@@ -190,30 +163,9 @@
 			</a>
 		</div>
 		
-		<!-- top intro -->
-		<div class="module-block bg-top">
-			<div class="main-container" style="align-items:center; padding-bottom:20px; padding-top:40px;">
-				<div class="content-block-l">
-					<h2 style="color:#07c3e0;">Pioneer in AI-powered Trading Assistance</h2>
-					<p style="color:#FFFFFF;">Trade with an Edge</p>
-					<ul class="list-w" style="color:#FFFFFF;">
-						<li>Prevent destructive behaviors</li>
-						<li>Boost your strengths</li>
-						<li>Self-learning</li>
-						<li>Fully-automated</li>
-					</ul>
-				</div>
-				<div class="content-block-r">
-					<img class="img-responsive" src="img/top-video-image.png" />
-				</div>
-			</div>
-		</div>
-		
 		<!-- quote -->
 		<div class="module-block bg-quote">
-			
 			<div class="main-container" style="justify-content:center; align-items:stretch; padding-bottom:20px;">
-				<h1 class="quote-h1">What makes a successful Trader?</h1>
 				<div class="quote-block" style="background-color:rgba(255, 255, 255, 0.15);">
 					
 					<p><img src="img/blue-quote.png" width="48" /><br>Successful trading is about <strong>managing your psychology</strong>, not predicting the markets</p>
@@ -231,22 +183,22 @@
 				</div>
 			</div>
 			<div class="main-container" style="padding-top:0px;">
-				<h2 style="display:block; width:100%; text-align:center; color:#07c3e0;">Your trading patterns:<br>hoc-trade AI is the first tool to identify and reveal them in your trading data</h2>
+				<h2 style="display:block; width:100%; text-align:center; color:#07c3e0;">Your trading patterns:<br>hoc-trade is the first tool to identify and reveal them in your trading data</h2>
 				<div class="counter-block counter-separator-v counter-separator-h">
 					<h3>100%</h3>
-					data-driven behavioral &amp; statistical analysis
+					Data-driven behavioral &amp; statistical analysis
 				</div>
 				<div class="counter-block counter-separator-v2 counter-separator-h">
 					<h3>40+</h3>
-					patterns already identified
+					Trading patterns analytics
 				</div>
 				<div class="counter-block counter-separator-v">
 					<h3>20+</h3>
-					real-time alerts for loss-making patterns &amp; excessive risk
+					Real-time alerts for loss-making patterns &amp; excessive risk
 				</div>
 				<div class="counter-block">
 					<h3>$0</h3>
-					costs
+					Costs
 				</div>
 			</div>
 		</div>
@@ -255,8 +207,8 @@
 		<div class="module-block">
 			<div class="main-container" style="align-items:flex-end; padding-bottom:20px;">
 				<div class="content-block-l">
-					<h1>Our AI identifies your loss-making trading patterns</h1>
-					<p>Just like Alex, most traders face multiple loss-making behaviours, often times leading to an overall negative performance.</p>
+					<h1>Our analytics identifies your loss-making trading patterns</h1>
+					<p>Just like Alex, many traders face multiple loss-making behaviours, often times leading to an overall negative performance.</p>
 					<p><strong>ALEX</strong></p>
 					<ul class="list">
 						<li>daytrading Forex &amp; Crypto</li>
@@ -378,7 +330,7 @@
 		<!-- how to diagram -->
 		<div class="module-block bg-howto">
 			<div class="main-container" style="justify-content: center;">
-				<h1 style="margin:0 10px;">How does the hoc-trade AI work</h1>
+				<h1 style="margin:0 10px;">How does hoc-trade behavioral trading analytics work</h1>
 				<div class="diagram-container">
 					<div class="diagram-animation-container step-wrapper">
 						<img class="diagram-step2" src="img/hoc-trade-diagram-2.png" />
@@ -396,10 +348,10 @@
 		<div class="module-block bg-sandbox" id="sandbox">
 			<div class="main-container" style="padding-bottom:60px;">
 				<div class="content-block-w">
-					<h1 style="margin-bottom:0px;">Create a sandbox to experience how hoc-trade AI helps improve your trading performance <sup class="comingsoon">COMING<br>SOON</sup></h1>
+					<h1 style="margin-bottom:0px;">Create a sandbox to experience how hoc-trade analytics helps improve your trading performance <sup class="comingsoon">COMING<br>SOON</sup></h1>
 				</div>
 				<div class="content-block-l">
-					<p>hoc-trade AI sandbox is a fully functional environmnet which allows you to surf around to experience the powerful functionalities of the application.</p>
+					<p>hoc-trade analytics sandbox is a fully functional environmnet which allows you to surf around to experience the powerful functionalities of the application.</p>
 					<p>
 						<strong>Just drop your email and try it right away!</strong><br><br>
 						<input class="sandbox-input" type="email"><br>
@@ -553,18 +505,6 @@
 			  // or toggle class, style it with a volume icon sprite, change background-position
 			} else {
 			  $("#topVideo").prop('muted', true);
-			  $(this).addClass('ht-unmute');
-			  $(this).removeClass('ht-mute');
-			}
-		});
-		$('#audio-controlm').click(function(){
-			if( $("#topVideom").prop('muted') ) {
-				  $("#topVideom").prop('muted', false);
-				  $(this).addClass('ht-mute');
-				  $(this).removeClass('ht-unmute');
-			  // or toggle class, style it with a volume icon sprite, change background-position
-			} else {
-			  $("#topVideom").prop('muted', true);
 			  $(this).addClass('ht-unmute');
 			  $(this).removeClass('ht-mute');
 			}

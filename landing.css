@@ -192,6 +192,9 @@ h2 {
 .bg-grey {
 	background-color:#e6e6e6;
 }
+.bg-top {
+	background-color:#000506;
+}
 .bg-footer {
 	background-color:#033c45;
 }
@@ -249,7 +252,12 @@ ul.list {
 	margin:0;
 	padding:0 0 0 15px;
 }
-ul.list li {
+ul.list-w {
+	list-style-image: url("img/triangle-bullet-white.png");
+	margin:0;
+	padding:0 0 0 15px;
+}
+ul.list li, ul.list-w li {
 	margin-bottom:10px;
 }
 /* tabs */
