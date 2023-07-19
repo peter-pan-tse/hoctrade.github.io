@@ -1,0 +1,195 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="jquery-3.6.0.min.js" language="javascript"></script>
+<link href="https://fonts.googleapis.com/css?family=Noto Sans:400,700,900" rel="stylesheet">
+<link href="font.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+<link href="chart.css" rel="stylesheet">
+<link href="menu.css" rel="stylesheet">
+<link href="trade-history.css" rel="stylesheet">
+<link href="burger-menu.css" rel="stylesheet">
+<link href="modal.css" rel="stylesheet">
+<!--<link href="modal-signup.css" rel="stylesheet">-->
+<link rel="icon" href="favicon.svg">
+<title>hoc-trade sandbox</title>
+<script>
+	$(function(){
+		$('.open-btn').on('click', function(){
+			$(this).toggleClass('close-btn')
+		});
+	});
+</script>
+<style>
+	body {
+		padding:0 0 0 0;
+	}
+	.main-content-container {
+		min-height:100vh;
+		background-image:url("img/login-screen-bg-2.png"), url("img/login-screen-bg.png");
+		background-position: 24% center, center;
+		background-size:auto 90vh, cover;
+		background-repeat: no-repeat, no-repeat;
+	}
+	.login-box {
+		display:flex;
+		flex-direction:column;
+		justify-content: space-around;
+		position:fixed;
+		width:calc(30vw - 80px);
+		height:calc(80vh - 80px);
+		top:10vh;
+		right:5vw;
+		background-color:#abbec2;
+		border-radius:20px;
+		padding:40px;
+	}
+	@media only screen and (max-width: 920px) {
+		.main-content-container {
+			background-position: center 80px, center;
+			background-size:100vw auto, cover;
+		}
+		.login-box {
+			position:absolute;
+			width:calc(70vw - 80px);
+			height:40vh;
+			top:calc(50vh - 80px);
+			left:15vw;
+		}
+	}
+	@media only screen and (max-width: 540px) {
+		.main-content-container {
+			background-position: center 50px, center;
+			background-size:110vw auto, cover;
+		}
+		.login-box {
+			position:absolute;
+			width:calc(100vw - 40px);
+			height:auto;
+			left:0px;
+			top:auto;
+			bottom:0px;
+			border-radius:20px 20px 0 0;
+			padding:10px 20px 40px 20px;
+		}
+	}
+	.footer {
+		padding: 30px 30px 30px 30px;
+	}
+	.desktop {
+		display:block;
+	}
+	.mobile {
+		display:none;
+	}
+	@media only screen and (max-width: 540px) {
+		.desktop {
+		display:none;
+		}
+		.mobile {
+			display:block;
+		}
+	}
+	
+	input.general, input.password, input.date, textarea.general {
+		background-color: #FFFFFF;
+		border:1px solid #FFFFFF;
+		margin:10px 0;
+	}
+	.bottom-btn-group-btns {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		width: 100%;
+	}
+	a.btn-form {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 32px;
+		width: calc(100% - 20px);
+		padding: 0px 10px;
+		background-color: #047F92;
+		border-radius: 6px;
+		font-size: 14px;
+		line-height: 32px;
+		font-weight: bold;
+		color: #FFFFFF;
+		transition: all 0.3s ease;
+		cursor: pointer;
+		text-decoration: none;
+	}
+	a.btn-form:hover {
+		background-color:#06AFC9;
+	}
+	.label-box {
+		margin-bottom:20px;
+	}
+	.sandbox-label {
+		position:absolute;
+		display: inline-block;
+		left:160px;
+		top:10px;
+		font-size:12px;
+		line-height: 12px;
+		font-weight:bold;
+		background-color:#ffb700;
+		padding:2px 4px;
+		border-radius:6px;
+	}
+	a.btn-form.disabled {
+		background-color: #999999;
+		cursor:default;
+	}
+</style>
+</head>
+<body>
+	<!--header and menu -->
+	
+	
+	
+	<!-- main content area -->
+	<div class="main-content-container">
+		<div style="display:flex; flex-direction:row; justify-content: flex-start; position: relative">
+			<img style="height:32px; width:auto; padding:12px 0 0 12px;" src="img/logo-w-text.svg" /><span class="sandbox-label">SANDBOX</span>
+		</div>
+		<div class="login-box">
+			<p>Welcome to hoc-trade sandbox. Please enter the KEY from the message we have sent through your registered email.</p>
+			<div>
+				<!-- input module -->
+				<div class="label-box">
+					Email<br>
+					<input class="general" placeholder="Email" value="sandbox-user@gmail.com" disabled />
+				</div>
+				<!-- input module end -->
+				<!-- input module -->
+				<div class="label-box">
+					Key<br>
+					<input class="general" placeholder="" value="Abcd123vrTH456Rv789" />
+					<!--<div class="error-msg-box-narrow">This is error message. Input box with error is in red.</div>-->
+					<span style="font-size:12px;">Didn't receive the KEY? <a href="#">Click here to resend</a></span>
+				</div>
+				<!-- input module end -->
+				
+			</div>
+			<div class="">
+				<label class="check-box">
+					I have read and agree the <a href="#">terms &amp; conditions</a> and <a href="#">privacy &amp; cookie policies</a>. By signing up you will receive news and notifications from hoc-trade, which you may unsubscribe any time.
+					<input type="checkbox">
+					<span class="checkmark"></span>
+				</label>
+				<a class="btn-form" href="loading.html">START <span class="ht-login"></span></a>
+			</div>
+		</div>
+	</div><!-- main-content-container -->
+	<!-- main content area end -->
+	
+	<!--<div class="footer">
+		<span class="ht-logo"></span><strong>hoc-trade</strong>&nbsp;&nbsp;&nbsp; copy; 2023 hoc-trade limited, all rights reserved<span class="separator">|</span><a href="#">Terms &amp; conditions</a><span class="separator">|</span><a href="#">Privacy policy</a><span class="separator">|</span><a href="#">advertise with us</a><span class="separator">|</span><a href="#">About us</a><span class="separator">|</span><a class="social" href="#"><span class="ht-logo-fb"></span></a><a class="social" href="#"><span class="ht-logo-twitter"></span></a><a class="social" href="#"><span class="ht-logo-in"></span></a><a class="social" href="#"><span class="ht-logo-yt"></span></a>
+		<p class="disclaimer">HIGH RISK WARNING: Foreign exchange and other CFD trading carries a high level of risk and may not be suitable for everyone. The usage of leverage creates additional risk and loss exposure. Your investment objectives, experience level and risk tolerance have to be taken into consideration before you decide to trade foreign exchange or other CFD products. You could lose some or all of your entire investment. Do not invest money that you cannot afford to lose and always use an appropriate risk management. It’s important to educate yourself on the risks associated with foreign exchange trading, and seek professional advice from an independent financial or tax advisor in case of any questions. Any data and information is provided ‘as is’ solely for informational purposes, and is not intended for trading purposes or advice. Past performance, which are presented on this website or you find somewhere else, is not indicative of future results.</p>
+	</div>-->
+	
+</body>
+</html>
