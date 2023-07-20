@@ -230,7 +230,8 @@ hr.dropmenu-separator {
 }
 /* breadcrumb */
 .breadcrumb {
-	display: block;
+	display: flex;
+	justify-content: space-between;
 	position:relative;
 	background-color: #B8C8CA;
 	font-size: 14px;
@@ -265,7 +266,7 @@ hr.dropmenu-separator {
 		margin-right: -10px;
 	}
 }
-.breadcrumb > span.active {
+.breadcrumb > div > span.active {
 	display:inline-block;
 	color:#000000;
 	font-weight:bold;
@@ -291,6 +292,18 @@ hr.dropmenu-separator {
 		padding-left: 50px;
 		padding-right: 20px;
 	}
+}
+/* refresh counter */
+.refreah-counter {
+	display:flex;
+	align-items:center;
+	font-size:12px;
+	line-height: 1em;
+	background-color:#eeeeee;
+	border-radius:10px;
+	margin:15px 0;
+	padding:2px 5px;
+	color:#ABBEC2;
 }
 /*VERTICAL MENU*/
 nav.vertical{
