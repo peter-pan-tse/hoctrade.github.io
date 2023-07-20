@@ -299,11 +299,12 @@ hr.dropmenu-separator {
 	align-items:center;
 	font-size:12px;
 	line-height: 1em;
-	background-color:#eeeeee;
+	background-color:#333333;
 	border-radius:10px;
 	margin:15px 0;
 	padding:2px 5px;
-	color:#ABBEC2;
+	/*color:#ABBEC2;*/
+	color:palegreen;
 }
 /*VERTICAL MENU*/
 nav.vertical{
