@@ -23,6 +23,35 @@
 		.footer p.disclaimer {
 			width:100%;
 		}
+		.bonus-highlight {
+			display:flex;
+			position:absolute;
+			flex-direction:column;
+			align-items: center;
+			width:150%;
+			top:45px;
+			left:-25%;
+		}
+		.bonus-hl-text {
+			display:flex;
+			flex-direction:column;
+			background-color:red;
+			color:#ffffff;
+			text-align:center;
+			align-items:center;
+			padding:4px 4px 0 4px;
+			border-radius:10px;
+			font-size:12px;
+			line-height: 1.15em;
+			font-weight:normal;
+		}
+		.bonus-hl-arrow {
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0 5px 5px 5px;
+			border-color: transparent transparent red transparent;
+		}
 	</style>
 	</head>
 	<body>
@@ -74,7 +103,15 @@
 					<li>
 						<div class="ex-rank-row">
 							<div class="ex-rank-item item-compare-label">Exclusive bonus</div>
-							<div class="ex-rank-item item-compare"><div class="bonus-pill">5% rebate</div></div>
+							<div class="ex-rank-item item-compare" style="position:relative;">
+								<div class="bonus-highlight">
+									<div class="bonus-hl-arrow"></div>
+									<div class="bonus-hl-text">
+										<strong>To get our exclusive bonus</strong> visit the exchange through this button!<br>&nbsp;
+									</div>
+								</div>
+								<div class="bonus-pill">5% rebate</div>
+							</div>
 							<div class="ex-rank-item item-compare text-you">--</div>
 						</div>
 					</li>

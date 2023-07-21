@@ -66,6 +66,44 @@
 		.footer p.disclaimer {
 			width:100%;
 		}
+		/*.item-bonus {
+			width: calc(14% - 10px);
+			border-left:4px solid red;
+			border-right:4px solid red;
+		}
+		.item-bonus.last-bonus {
+			border-bottom:4px solid red;
+			border-radius:0 0 10px 10px;
+		}*/
+		.bonus-highlight {
+			display:flex;
+			position:absolute;
+			flex-direction:column;
+			align-items: center;
+			width:140%;
+			bottom:35px;
+			left:-20%;
+		}
+		.bonus-hl-text {
+			display:flex;
+			flex-direction:column;
+			background-color:red;
+			color:#ffffff;
+			text-align:center;
+			align-items:center;
+			padding:4px 4px 0 4px;
+			border-radius:10px;
+			font-size:12px;
+			line-height: 1.15em;
+			font-weight:normal;
+		}
+		.bonus-hl-arrow {
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 10px 10px 0 10px;
+			border-color: red transparent transparent transparent;
+		}
 	</style>
 	</head>
 	<body>
@@ -192,7 +230,15 @@
 									<div style="width:48%; text-align:center;">%</div>
 								</div>
 							</div>
-							<div class="ex-rank-item item-bonus">Exclusive bonus</div>
+							<div class="ex-rank-item item-bonus" style="position:relative;">
+								<div class="bonus-highlight">
+									<div class="bonus-hl-text">
+										<strong>To get our exclusive bonus</strong> visit the exchanges through the buttons below!<br><br>
+									</div>
+									<div class="bonus-hl-arrow"></div>
+								</div>
+								Exclusive bonus
+							</div>
 							<div class="ex-rank-item item-reg">Register</div>
 							<div class="ex-rank-item item-details">Details</div>
 						</div>
@@ -348,7 +394,7 @@
 							<div class="ex-rank-item item-fee">168.00</div>
 							<div class="ex-rank-item item-saving-1 last-item text-red">+88.00</div>
 							<div class="ex-rank-item item-saving-2 last-item text-red">+110</div>
-							<div class="ex-rank-item item-bonus">--</div>
+							<div class="ex-rank-item item-bonus last-bonus">--</div>
 							<div class="ex-rank-item item-reg"><a class="ex-rank-btn" href="#"><span class="ht-pencil"></span></a></div>
 							<div class="ex-rank-item item-details"><a class="ex-rank-btn" href="#"><span class="ht-search"></span></a></div>
 						</div>
