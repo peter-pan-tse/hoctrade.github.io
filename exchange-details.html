@@ -28,20 +28,20 @@
 			position:absolute;
 			flex-direction:column;
 			align-items: center;
-			width:150%;
+			width:160%;
 			top:45px;
-			left:-25%;
+			left:-30%;
 		}
 		.bonus-hl-text {
 			display:flex;
 			flex-direction:column;
-			background-color:red;
+			background-color:lightseagreen;
 			color:#ffffff;
 			text-align:center;
 			align-items:center;
-			padding:4px 4px 0 4px;
+			padding:4px;
 			border-radius:10px;
-			font-size:12px;
+			font-size:14px;
 			line-height: 1.15em;
 			font-weight:normal;
 		}
@@ -50,7 +50,10 @@
 			height: 0;
 			border-style: solid;
 			border-width: 0 5px 5px 5px;
-			border-color: transparent transparent red transparent;
+			border-color: transparent transparent lightseagreen transparent;
+		}
+		.bonus-hl-text > span {
+			font-size:24px;
 		}
 	</style>
 	</head>
@@ -107,7 +110,7 @@
 								<div class="bonus-highlight">
 									<div class="bonus-hl-arrow"></div>
 									<div class="bonus-hl-text">
-										<strong>To get our exclusive bonus</strong> visit the exchange through this button!<br>&nbsp;
+										<span class="ht-alert"></span><strong>Fees presented include exclusive bonuses</strong> available through this link
 									</div>
 								</div>
 								<div class="bonus-pill">5% rebate</div>

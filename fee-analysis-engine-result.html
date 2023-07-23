@@ -77,25 +77,25 @@
 		}*/
 		.bonus-highlight {
 			display:flex;
-			position:absolute;
+			position:relative;
 			flex-direction:column;
 			align-items: center;
-			width:140%;
-			bottom:35px;
-			left:-20%;
+			width:100%;
+			margin-bottom:10px;
 		}
 		.bonus-hl-text {
 			display:flex;
-			flex-direction:column;
-			background-color:red;
+			flex-direction:row;
+			background-color:lightseagreen;
 			color:#ffffff;
 			text-align:center;
 			align-items:center;
-			padding:4px 4px 0 4px;
+			padding:4px 10px;
 			border-radius:10px;
-			font-size:12px;
+			font-size:14px;
 			line-height: 1.15em;
 			font-weight:normal;
+			height:24px;
 		}
 		.bonus-hl-arrow {
 			width: 0;
@@ -103,6 +103,9 @@
 			border-style: solid;
 			border-width: 10px 10px 0 10px;
 			border-color: red transparent transparent transparent;
+		}
+		.bonus-hl-text > span {
+			font-size:24px;
 		}
 	</style>
 	</head>
@@ -178,6 +181,13 @@
 			</div>
 		</div>
 		<div class="main-container">
+			<div class="desktop">
+				<div class="bonus-highlight">
+					<div class="bonus-hl-text">
+						<span class="ht-alert"></span><strong>Fees presented include exclusive bonuses&nbsp;</strong> available through links below
+					</div>
+				</div>
+			</div>
 			<!-- fee chart -->
 			<div class="fee-chart-box">
 				<div class="chart-header-dark">
@@ -231,12 +241,6 @@
 								</div>
 							</div>
 							<div class="ex-rank-item item-bonus" style="position:relative;">
-								<div class="bonus-highlight">
-									<div class="bonus-hl-text">
-										<strong>To get our exclusive bonus</strong> visit the exchanges through the buttons below!<br><br>
-									</div>
-									<div class="bonus-hl-arrow"></div>
-								</div>
 								Exclusive bonus
 							</div>
 							<div class="ex-rank-item item-reg">Register</div>
