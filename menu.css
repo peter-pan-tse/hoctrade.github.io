@@ -299,12 +299,66 @@ hr.dropmenu-separator {
 	align-items:center;
 	font-size:12px;
 	line-height: 1em;
+	font-weight:bold;
 	background-color:#333333;
 	border-radius:10px;
 	margin:15px 0;
 	padding:2px 5px;
 	/*color:#ABBEC2;*/
 	color:palegreen;
+}
+.pulsating-circle {
+	position: relative;
+    transform: translateX(-50%) translateY(-50%);
+    width: 12px;
+    height: 12px;
+}
+  .pulsating-circle:before {
+    content: '';
+    position: relative;
+    display: block;
+    width: 200%;
+    height: 200%;
+    box-sizing: border-box;
+    margin-left: 3px;
+    margin-top: 0;
+    border-radius: 12px;
+    background-color: #01a4e9;
+    animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+  }
+  .pulsating-circle:after {
+    content: '';
+    position: absolute;
+    left: 9px; 
+    top: 6px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: palegreen;
+    border-radius: 6px;
+    box-shadow: 0 0 8px rgba(0,0,0,.3);
+    animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -.4s infinite;
+  }
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(.33);
+  }
+  80%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-dot {
+  0% {
+    transform: scale(.8);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(.8);
+  }
 }
 /*VERTICAL MENU*/
 nav.vertical{
