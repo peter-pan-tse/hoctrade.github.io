@@ -53,19 +53,19 @@
 		.price-header {
 			display:flex;
 			padding:20px 0 80px 0;
-			background: rgb(3,60,69);
-            background: linear-gradient(90deg, rgba(3,60,69,1) 29%, rgba(6,175,201,1) 73%, rgba(160,146,184,1) 100%);
+			background: rgb(4,127,146);
+            background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(4,127,146,1) 100%);
 		}
 		.price-header h1 {
 			color:#ffffff;
-			font-size:6vw;
+			font-size:4.3vw;
 			line-height: 1.25em;
 			margin:10px 0;
 			font-weight: bold;
 		}
 		.price-header h2 {
 			color:#ffffff;
-			font-size:3vw;
+			font-size:2vw;
 			line-height: 1em;
 			margin:5px 0;
 			font-weight: bold;
@@ -78,7 +78,7 @@
 			align-items: stretch;
 			justify-content: center;
 			position:relative;
-			padding: 0 5vw;
+			padding: 0 2vw;
 			font-size:12px;
 			line-height: 1.25em;
 		}
@@ -90,7 +90,7 @@
 		.price-header-items {
 			justify-content:flex-start;
 			padding:0 10px 0 0;
-			width:calc(10% - 10px);
+			width:calc(12% - 10px);
 			margin:20px 0 0 0;
 		}
 		.price-header-beginner {
@@ -99,7 +99,7 @@
 			background-color: #e6e6e6;
 			border-radius:20px 0 0 0;
 			padding:10px;
-			width:calc(24% - 20px);
+			width:calc(23% - 20px);
 			margin:20px 0 0 0;
 		}
 		.price-header-advanced {
@@ -108,7 +108,7 @@
 			background-color: #FFFFFF;
 			border-radius:20px 20px 0 0;
 			padding:10px;
-			width:calc(30% - 20px);
+			width:calc(28% - 20px);
 			margin:0;
 			overflow: hidden;
 		}
@@ -118,32 +118,22 @@
 			background-color: #e6e6e6;
 			border-radius:0 20px 0 0;
 			padding:10px;
-			width:calc(24% - 20px);
+			width:calc(23% - 20px);
 			margin:20px 0 0 0;
 		}
 		.price-header-enterprise {
-			align-items:flex-start;
+			align-items:flex-end;
 			flex-direction: row;
 			flex-wrap: wrap;
 			justify-content:center;
 			background-color: #00333b;
-			border-radius:20px;
+			border-radius:0 20px 0 0;
 			padding:10px;
-			width:calc(78% - 20px);
-			margin:20px 0 0 0;
+			width:calc(12% - 20px);
+			margin:40px 0 0 0;
 			color: #07c3e0;
 			line-height: 1.25em;
-		}
-		.price-enterprise-list {
-			width:38%;
-			margin:10px 5%;
-			text-align: left;
-		}
-		.price-enterprise-list ul {
-			padding:0;
-		}
-		.price-enterprise-list ul li {
-			margin:0 0 5px 0;
+			position:relative;
 		}
 		.list-separator {
 			height:5px;
@@ -231,7 +221,7 @@
 		.price-body-items {
 			justify-content:flex-start;
 			padding:5px 10px 5px 0px;
-			width:calc(10% - 20px);
+			width:calc(12% - 20px);
 			margin:0 0 0 10px;
 			text-align:left;
 			color:#666666;
@@ -243,7 +233,7 @@
 			background-color: #e6e6e6;
 			border-radius:0;
 			padding:5px 10px;
-			width:calc(24% - 20px);
+			width:calc(23% - 20px);
 			margin:0;
 			color: #103456;
 		}
@@ -253,7 +243,7 @@
 			background-color: #FFFFFF;
 			border-radius:0px;
 			padding:5px 10px;
-			width:calc(30% - 20px);
+			width:calc(28% - 20px);
 			margin:0;
 			color: #103456;
 		}
@@ -263,20 +253,30 @@
 			background-color: #e6e6e6;
 			border-radius:0;
 			padding:5px 10px;
-			width:calc(24% - 20px);
+			width:calc(23% - 20px);
 			margin:0;
 			color: #103456;
 		}
 		.price-body-enterprise {
+			position:absolute;
 			align-items:center;
 			justify-content:flex-start;
 			background-color: #00333b;
 			border-radius:0;
 			padding:10px;
-			width:calc(74% - 20px);
+			width:calc(100% - 20px);
 			margin:0;
-			
-			font-size:smaller;
+			color:#07c3e0;
+			font-size:12px;
+			top:100%;
+			border-radius:0 0 20px 0;
+		}
+		.price-body-enterprise ul {
+			padding:0 0 0 10px;
+			text-align:left;
+		}
+		.price-body-enterprise ul li {
+			margin:0 0 5px 0;
 		}
 		@media only screen and (max-width: 920px) {
 			.price-body-items {
@@ -400,7 +400,7 @@
 		  color: #FFFFFF;
 		  font-family: sans-serif;
 			font-weight:bold;
-		  left: 30px;
+		  left: 40px;
 		  top: 120px;
 		  position: absolute;
 		  width: 140px;
@@ -605,8 +605,8 @@
 		
 		<div class="price-header">
 			<div class="main-container" style="padding: 0;">
-				<h1>Enjoy full flexibility</h1>
-				<h2>with our monthly subscriptions</h2>
+				<h1>Elevate your trading<br>by improving what really counts</h1>
+				<h2>Enjoy full flexibility with our monthly subscriptions</h2>
 			</div>
 			<div></div>
 		</div>
@@ -624,6 +624,8 @@
 				<!-- tab-title -->
 				<input type="radio" id="tab-1" name="tab-effect-1" checked="checked"><span>Monthly</span>
 				<input type="radio" id="tab-2" name="tab-effect-1"><span>Annually</span>
+				<img src="img/burst-badge.png" style="position:absolute; width:40px; height:40px; left:calc(50vw + 100px); top:-100px; transition: all ease 0.3s;" />
+				<div style="position:absolute; width:40px; height:40px; left:calc(50vw + 105px); top:-90px; transition: all ease 0.3s; color:#ffffff; font-size:12px; font-weight: bold;">SAVE</div>
 
 			<!-- tab-content -->
 				<div class="tab-content">
@@ -645,27 +647,41 @@
 								<img src="img/pricing-professional.png" />
 								<h3>PROFESSIONAL</h3>
 							</div>
-							<div style="width:10%;"></div>
+							<div class="price-header-enterprise">
+								<h3 style="color: #07c3e0; text-align:center;">ENTERPRISE</h3>
+								<div class="price-body-enterprise">
+									<p align="left">Looking to stand out &amp; elevate your traders' performance? For brokers/exchanges, (Prop) trading firms, hedge funds, etc.</p>
+									<ul>
+										<li>Whitelabel integration</li>
+										<li>All trading platforms</li>
+										<li>All markets</li>
+										<li>Alert customization</li>
+										<li>Management dashboard</li>
+										<li>and more...</li>
+									</ul>
+									<a class="btn-contact-pricing" href="mailto:info@hoc-trade.com">Contact us</a>
+								</div>
+							</div>
 						</div>
 						
 						<div class="pricing-container">
 							<div class="price-body-items"></div>
 							<div class="price-body-beginner" style="justify-content: flex-end;">
-								<h2>USD37.99</h2>
+								<h2>USD37.99<span style="font-size:smaller">/mo</span></h2>
 								<span style="font-size:12px; line-height: 18px; text-align: center;">billed monthly</span>
 								<a class="btn-subscribe" href="#">Subscribe</a>
 							</div>
 							<div class="price-body-advanced" style="justify-content: flex-end;">
-								<h2 style="color: #103456;">USD49.99</h2>
+								<h2 style="color: #103456;">USD49.99<span style="font-size:smaller">/mo</span></h2>
 								<span style="font-size:12px; line-height: 18px; text-align: center;">billed monthly</span>
 								<a class="btn-subscribe" href="#">Subscribe</a>
 							</div>
 							<div class="price-body-professional" style="justify-content: flex-end;">
-								<h2>USD69.99</h2>
+								<h2>USD69.99<span style="font-size:smaller">/mo</span></h2>
 								<span style="font-size:12px; line-height: 18px; text-align: center;">billed monthly</span>
 								<a class="btn-subscribe" href="#">Subscribe</a>
 							</div>
-							<div style="width:10%;"></div>
+							<div style="width:12%;"></div>
 						</div>
 
 						<div class="pricing-container">
@@ -679,7 +695,7 @@
 							<div class="price-body-professional">
 								Enjoy the full power of hoc-trade  with priority speed, custom data, and combined account analytics<br><br>
 							</div>
-							<div style="width:10%;"></div>
+							<div style="width:12%;"></div>
 							<div class="list-separator"></div>
 						</div>
 						
@@ -702,30 +718,44 @@
 								<img src="img/pricing-professional.png" />
 								<h3>PROFESSIONAL</h3>
 							</div>
-							<div style="width:10%;"></div>
+							<div class="price-header-enterprise">
+								<h3 style="color: #07c3e0; text-align:center;">ENTERPRISE</h3>
+								<div class="price-body-enterprise">
+									<p align="left">Looking to stand out &amp; elevate your traders' performance? For brokers/exchanges, (Prop) trading firms, hedge funds, etc.</p>
+									<ul>
+										<li>Whitelabel integration</li>
+										<li>All trading platforms</li>
+										<li>All markets</li>
+										<li>Alert customization</li>
+										<li>Management dashboard</li>
+										<li>and more...</li>
+									</ul>
+									<a class="btn-contact-pricing" href="mailto:info@hoc-trade.com">Contact us</a>
+								</div>
+							</div>
 						</div>
 						
 						<div class="pricing-container">
 							<div class="price-body-items"></div>
 							<div class="price-body-beginner" style="justify-content: flex-end;">
-								<h2>USD359.88</h2>
+								<h2>USD29.99<span style="font-size:smaller">/mo</span></h2>
 								<span style="font-size:12px; line-height: 1.25em; text-align: center;">billed annually</span>
-								<span class="saved-amount">USD29.99/mo saved 21%</span>
+								<span class="saved-amount">USD359.88/yr saved 21%</span>
 								<a class="btn-subscribe" href="#">Subscribe</a>
 							</div>
 							<div class="price-body-advanced" style="justify-content: flex-end;">
-								<h2>USD479.88</h2>
+								<h2>USD39.99<span style="font-size:smaller">/mo</span></h2>
 								<span style="font-size:12px; line-height: 1.25em; text-align: center; color: lightseagreen;">billed annually</span>
-								<span class="saved-amount">USD39.99/mo saved 20%</span>
+								<span class="saved-amount">USD479.88/yr saved 20%</span>
 								<a class="btn-subscribe" href="#">Subscribe</a>
 							</div>
 							<div class="price-body-professional" style="justify-content: flex-end;">
-								<h2>USD719.88</h2>
+								<h2>USD59.99<span style="font-size:smaller">/mo</span></h2>
 								<span style="font-size:12px; line-height: 1.25em; text-align: center;">billed annually</span>
-								<span class="saved-amount">USD59.99/mo saved 15%</span>
+								<span class="saved-amount">USD719.88/yr saved 15%</span>
 								<a class="btn-subscribe" href="#">Subscribe</a>
 							</div>
-							<div style="width:10%;"></div>
+							<div style="width:12%;"></div>
 						</div>
 
 						<div class="pricing-container">
@@ -739,7 +769,7 @@
 							<div class="price-body-professional">
 								Enjoy the full power of hoc-trade  with priority speed, custom data, and combined account analytics<br><br>
 							</div>
-							<div style="width:10%;"></div>
+							<div style="width:12%;"></div>
 							<div class="list-separator"></div>
 						</div>
 
@@ -760,7 +790,7 @@
 				<div class="price-body-professional top-line-body">
 					<span class="ht-check compare-ico ico-yes"></span>
 				</div>
-				<div style="width:10%;"></div>
+				<div style="width:12%;"></div>
 			</div>
 
 			<div class="pricing-container">
@@ -776,7 +806,7 @@
 				<div class="price-body-professional top-line-body">
 					near real time
 				</div>
-				<div style="width:10%;"></div>
+				<div style="width:12%;"></div>
 				<!-- -->
 				<div class="price-body-items top-line-items">
 					"Pro patterns"
@@ -790,7 +820,7 @@
 				<div class="price-body-professional top-line-body">
 					<span class="ht-check compare-ico ico-yes"></span>
 				</div>
-				<div style="width:10%;"></div>
+				<div style="width:12%;"></div>
 				<div class="list-separator"></div>
 				<!-- -->
 				<div class="price-body-items top-line-items">
@@ -805,7 +835,7 @@
 				<div class="price-body-professional top-line-body">
 					<span class="ht-check compare-ico ico-yes"></span>
 				</div>
-				<div style="width:10%;"></div>
+				<div style="width:12%;"></div>
 				<div class="list-separator"></div>
 				<!-- -->
 				<div class="price-body-items top-line-items">
@@ -820,7 +850,7 @@
 				<div class="price-body-professional top-line-body">
 					<span class="ht-check compare-ico ico-yes"></span>
 				</div>
-				<div style="width:10%;"></div>
+				<div style="width:12%;"></div>
 				<div class="list-separator"></div>
 				<!-- -->
 				<div class="price-body-items top-line-items">
@@ -835,7 +865,7 @@
 				<div class="price-body-professional top-line-body">
 					<span class="ht-check compare-ico ico-yes"></span><span style="font-size:12px;">(priority speed)</span>
 				</div>
-				<div style="width:10%;"></div>
+				<div style="width:12%;"></div>
 				<!-- -->
 				<div class="price-body-items top-line-items">
 					Alert customization
@@ -849,7 +879,7 @@
 				<div class="price-body-professional top-line-body">
 					<span class="ht-check compare-ico ico-yes"></span><span style="font-size:12px;">(advanced)</span>
 				</div>
-				<div style="width:10%;"></div>
+				<div style="width:12%;"></div>
 				<div class="list-separator"></div>
 				<!-- -->
 				<div class="price-body-items top-line-items">
@@ -864,7 +894,7 @@
 				<div class="price-body-professional top-line-body">
 					10
 				</div>
-				<div style="width:10%;"></div>
+				<div style="width:12%;"></div>
 				<!-- -->
 				<div class="price-body-items top-line-items">
 					Merge trading accounts
@@ -878,7 +908,7 @@
 				<div class="price-body-professional top-line-body">
 					<span class="ht-check compare-ico ico-yes"></span>
 				</div>
-				<div style="width:10%;"></div>
+				<div style="width:12%;"></div>
 				<div class="list-separator"></div>
 				<!-- -->
 				<div class="price-body-items top-line-items">
@@ -893,7 +923,7 @@
 				<div class="price-body-professional top-line-body">
 					3 years<span style="font-size:12px;">(unlimited trades)</span>
 				</div>
-				<div style="width:10%;"></div>
+				<div style="width:12%;"></div>
 				<!-- -->
 				<div class="price-body-items top-line-items">
 					History csv upload
@@ -907,7 +937,7 @@
 				<div class="price-body-professional top-line-body">
 					<span class="ht-check compare-ico ico-yes"></span>
 				</div>
-				<div style="width:10%;"></div>
+				<div style="width:12%;"></div>
 				<!-- -->
 				<div class="price-body-items top-line-items">
 					Trade history download
@@ -921,7 +951,7 @@
 				<div class="price-body-professional top-line-body">
 					<span class="ht-check compare-ico ico-yes"></span>
 				</div>
-				<div style="width:10%;"></div>
+				<div style="width:12%;"></div>
 				<div class="list-separator"></div>
 				<!-- -->
 				<div class="price-body-items top-line-items">
@@ -936,7 +966,7 @@
 				<div class="price-body-professional top-line-body">
 					<span class="ht-check compare-ico ico-yes"></span>
 				</div>
-				<div style="width:10%;"></div>
+				<div style="width:12%;"></div>
 				<div class="list-separator"></div>
 				<!-- -->
 				<div class="price-body-items top-line-items">
@@ -951,33 +981,8 @@
 				<div class="price-body-professional top-line-body">
 					<span class="ht-check compare-ico ico-yes"></span>
 				</div>
-				<div style="width:10%;"></div>
+				<div style="width:12%;"></div>
 				<div class="list-separator"></div>
-			</div>
-			<div class="pricing-container">
-				<div class="price-body-items">
-				</div>
-				<div class="price-header-enterprise">
-					<h3 style="color: #07c3e0; margin:10px 0 0 0; font-size:24px; width:100%; text-align:center;">ENTERPRISE</h3>
-					<div class="price-enterprise-list">
-						<ul>
-							<li>Looking to stand out &amp; elevate your traders' performance?</li>
-							<li>For brokers/exchanges, (Prop) trading firms, hedge funds, etc.</li>
-							<li>Whitelabel integration</li>
-							<li>All trading platforms</li>
-						</ul>
-					</div>
-					<div class="price-enterprise-list">
-						<ul>
-							<li>All markets</li>
-							<li>Alert customization</li>
-							<li>Management dashboard</li>
-							<li>and more...</li>
-						</ul>
-					</div>
-					<a class="btn-contact-pricing" href="mailto:info@hoc-trade.com">Contact us</a>
-				</div>
-				<div style="width:10%;"></div>
 			</div>
 			<div class="main-container" style="display:block; padding:30px;"></div>
 		</div>
