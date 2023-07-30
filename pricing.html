@@ -540,47 +540,107 @@
 			font-size:12px; 
 			font-weight: bold;
 		}
+		
+		.popup-content {
+			background-color: lightseagreen;
+			width:calc(100vw - 70px);
+			max-width: 500px;
+			padding: 30px;
+			position: absolute;
+			transform: translate(-50%,0%);
+			left: 50%;
+			top: 220px;
+			border-radius: 20px;
+			text-align: center;
+			z-index: 10006;
+			color:#ffffff;
+			
+		}
+		@media only screen and (max-width: 920px) {
+			.popup-content {
+				top: 200px;
+			}
+		}
+		@media only screen and (max-width: 540px) {
+			.popup-content {
+				top: 60px;
+			}
+		}
+		.popup-content button {
+			position:absolute;
+			display: flex;
+			justify-content:center;
+			align-items:center;
+			top:-20px;
+			right:-20px;
+			background-color: transparent;
+			font-size: 30px;
+			color: #FFFFFF;
+			border: none;
+			outline: none;
+			cursor: pointer;
+		}
+		.popup-content > p > a {
+			color:#07deff;
+			text-decoration: underline;
+		}
+		.popup-content > p > a:hover {
+			color:red;
+		}
+		.popup {
+			position: fixed; /* Stay in place */
+			z-index: 10005; /* Sit on top */
+			display:none;
+			left: 0;
+			top: 0;
+			width: 100%; /* Full width */
+			height: 100%; /* Full height */
+			overflow: hidden; /* Enable scroll if needed */
+			background-color: rgb(0,0,0); /* Fallback color */
+			background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+			-webkit-animation-name: fadeIn; /* Fade in the background */
+			-webkit-animation-duration: 0.5s;
+			animation-name: fadeIn;
+			animation-duration: 0.5s;
+		}
+		@-webkit-keyframes fadeIn {
+			from {opacity: 0} 
+			to {opacity: 1}
+		}
+		@keyframes fadeIn {
+			from {opacity: 0} 
+			to {opacity: 1}
+		}
+		@-webkit-keyframes fadeOut {
+			from {opacity: 1} 
+			to {opacity: 0}
+		}
+
+		@keyframes fadeOut {
+			from {opacity: 1} 
+			to {opacity: 0}
+		}
+		.close {
+			display:inline-block;
+			width:32px;
+			height:32px;
+			text-align:center;
+			background-color:#FFFFFF;
+			border-radius:6px;
+			margin:0;
+			color: #047F92;
+			float: right;
+			font-size: 28px;
+			line-height:34px;
+			text-decoration: none;
+			transition: all 0.3s ease;
+		}
+		.close:hover, .close:focus {
+			background-color:#000000;
+			cursor: pointer;
+		}
 	</style>
 	<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>	
-	<!-- scroll smoothly to anchor -->
-	<script>
-		// Select all links with hashes
-		$('a[href*="#"]')
-		  // Remove links that don't actually link to anything
-		  .not('[href="#"]')
-		  .not('[href="#0"]')
-		  .click(function(event) {
-			// On-page links
-			if (
-			  location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-			  && 
-			  location.hostname == this.hostname
-			) {
-			  // Figure out element to scroll to
-			  var target = $(this.hash);
-			  target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-			  // Does a scroll target exist?
-			  if (target.length) {
-				// Only prevent default if animation is actually gonna happen
-				event.preventDefault();
-				$('html, body').animate({
-				  scrollTop: target.offset().top
-				}, 1000, function() {
-				  // Callback after animation
-				  // Must change focus!
-				  var $target = $(target);
-				  $target.focus();
-				  if ($target.is(":focus")) { // Checking if the target was focused
-					return false;
-				  } else {
-					$target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-					$target.focus(); // Set focus again
-				  };
-				});
-			  }
-			}
-		  });
-	</script>
 	</head>
 	<body>
 		<div class="header">
@@ -1057,5 +1117,31 @@
 				</div>
 			</div>
 		</div>
+		
+		<div class="popup">
+			<div class="popup-content">
+				<div style="position:relative;"><button id="close" class="close"><span class="ht-cross"></span></button></div><h2><strong>Currently Free-access</strong></h2>
+				<p>You can currently enjoy hoc-trade 100% free. We are in the final testing stage and would highly appreciate your feedback.</p>
+				<h3>No payment information required</h3>
+				<p style="font-size:smaller;">For feedback, questions, or support, please join our Discord server <a href="#">here</a></p>
+				<a class="btn-subscribe" href="#">Register for free</a>
+			</div>
+		</div>
+		
 	</body>
+	<script>
+		window.addEventListener("load", function(){
+			setTimeout(
+				function open(event){
+					document.querySelector(".popup").style.display = "block";
+				},
+				1000
+			)
+		});
+
+
+		document.querySelector("#close").addEventListener("click", function(){
+			document.querySelector(".popup").style.display = "none";
+		});
+	</script>
 </html>
