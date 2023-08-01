@@ -420,6 +420,7 @@ a.btn-action, a.btn-info {
 	margin-right:5px;
 	border-radius:6px;
 	transition: all 0.3s ease;
+	cursor:pointer;
 }
 a.btn-info-form {
     display: inline-block;

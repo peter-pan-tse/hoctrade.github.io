@@ -34,7 +34,7 @@
 	animation-name: slideIn;
 	animation-duration: 0.5s
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 920px) {
 	.modal-content {
 		width:100%;
 		margin:20px 0 0 0;
@@ -42,6 +42,7 @@
 		bottom:0px;
 		padding:100px 0 0 0;
 		border-radius:20px 20px 0 0;
+		max-height:100%;
 	}
 }
 .modal-header {
@@ -64,7 +65,7 @@
     overflow-y: auto;
 	padding: 0 20px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 920px) {
 	.modal-header {
 		width: calc(100% - 20px);
 		padding: 10px 10px 0;
@@ -138,7 +139,7 @@
 	text-decoration: none;
 	transition: all 0.3s ease;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 920px) {
 	.close {
 		display:block;
 		width:100px;
@@ -196,7 +197,7 @@
     width: 100%;
     height: 100%;
 }
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 540px) {
 	.alert-details-box {
 		display:flex;
 		flex-direction:column;

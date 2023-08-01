@@ -271,8 +271,8 @@ hr.dropmenu-separator {
 	color:#000000;
 	font-weight:bold;
 }
-@media only screen and (max-width: 480px) {
-	.breadcrumb > span.active {
+@media only screen and (max-width: 540px) {
+	.breadcrumb > div > span.active {
 		color:#FFFFFF;
 	}
 	.breadcrumb {
