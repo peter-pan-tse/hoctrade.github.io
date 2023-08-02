@@ -86,6 +86,15 @@
 		background-size: 8px 9.6px;
 		background-repeat: no-repeat;
 	}
+	a.btn-open {
+		position:absolute; 
+		right:30px;
+		color:#ffffff;
+		font-size:18px;
+	}
+	a.btn-open:hover {
+		color:#ffffff;
+	}
 </style>
 </head>
 <body>
@@ -294,7 +303,7 @@
 		<!-- accordion -->
 			<button class="accordion">
 				Full report
-				<a class="btn-info" style="position:absolute; right:10px;"><span class="ht-add" style="color:#ffffff;"></span></a>
+				<a class="btn-open"><span class="ht-add"></span></a>
 			</button>
 			<div class="panel">
 				<ul class="medic-report">
@@ -616,7 +625,7 @@
 			<!-- accordion -->
 			<button class="accordion">
 				Risk report
-				<a class="btn-info" style="position:absolute; right:10px;"><span class="ht-add" style="color:#ffffff;"></span></a>
+				<a class="btn-open"><span class="ht-add"></span></a>
 			</button>
 			<div class="panel" style="margin-bottom:0px;">
 				<ul class="medic-report">
@@ -748,5 +757,15 @@
 		  });
 		}
 	</script>
+	<script>
+		//$(function () {
+		//	$('.ht-minus').hide();
+		//})
 
+
+		//$('.btn-open').click(function () {
+		//	$('.ht-add').toggle();
+		//	$('.ht-minus').toggle();
+		//})
+	</script>
 </html>
