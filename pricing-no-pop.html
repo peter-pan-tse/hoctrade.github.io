@@ -1,0 +1,1148 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Noto Sans:400,700,900" rel="stylesheet">
+	<link href="font.css" rel="stylesheet">
+	<link href="landing.css" rel="stylesheet">
+	<link href="burger-menu-ht-landing.css" rel="stylesheet">
+	<link rel="icon" href="img/favicon.svg">
+	<title>hoc-trade pricing</title>
+	<!-- write your code here -->
+	<style>
+		html, body {
+			padding:30px 0 0 0;
+			margin:0px;
+			overflow-x: hidden;
+		}
+		.desktop-price {
+			display: block !important;
+		}
+		.mobile-price {
+			display: none !important;
+		}
+		@media only screen and (max-width: 540px) {
+			.desktop-price {
+				display: none !important;
+			}
+			.mobile-price {
+				display: block !important;
+			}
+		}
+		.header-container {
+			padding: 0 0 6px 0;
+		}
+		.price-header {
+			display:flex;
+			padding:20px 0 80px 0;
+			background: rgb(4,127,146);
+            background: linear-gradient(0deg, rgba(34,193,195,1) 10%, rgba(4,127,146,1) 90%);
+		}
+		
+		.price-header h1 {
+			color:#ffffff;
+			font-size:4.3vw;
+			line-height: 1.25em;
+			margin:10px 0;
+			font-weight: bold;
+		}
+		.price-header h2 {
+			color:#ffffff;
+			font-size:2vw;
+			line-height: 1em;
+			margin:5px 0;
+			font-weight: bold;
+		}
+		@media only screen and (max-width: 920px) {
+			.price-header {
+				padding:20px 20px 80px 20px;
+			}
+			.price-header h1 {
+				font-size:5.5vw;
+			}
+			.price-header h2 {
+				font-size:3vw;
+			}
+		}
+		@media only screen and (max-width: 540px) {
+			.price-header {
+				padding:20px 10px 80px 10px;
+			}
+			.price-header h1 {
+				font-size:5.5vw;
+			}
+			.price-header h2 {
+				font-size:18px;
+				line-height: 1.25em;
+			}
+		}
+		
+		.pricing-container {
+			display:flex;
+			flex-direction:row;
+			flex-wrap: wrap;
+			align-items: stretch;
+			justify-content: center;
+			position:relative;
+			padding: 0 2vw;
+			font-size:12px;
+			line-height: 1.25em;
+		}
+		.price-header-items, .price-header-beginner, .price-header-advanced, .price-header-professional, .price-header-enterprise {
+			display:flex;
+			position:relative;
+			flex-direction:column;
+		}
+		.price-header-items {
+			justify-content:flex-start;
+			padding:0 10px 0 0;
+			width:calc(14% - 10px);
+			margin:20px 0 0 0;
+		}
+		.price-header-beginner {
+			align-items:center;
+			justify-content:flex-end;
+			background-color: #e6e6e6;
+			border-radius:20px 0 0 0;
+			padding:10px;
+			width:calc(23% - 20px);
+			margin:20px 0 0 0;
+		}
+		.price-header-advanced {
+			align-items:center;
+			justify-content:flex-end;
+			background-color: #FFFFFF;
+			border-radius:20px 20px 0 0;
+			padding:10px;
+			width:calc(24% - 20px);
+			margin:0;
+			overflow: hidden;
+		}
+		.price-header-professional {
+			align-items:center;
+			justify-content:flex-end;
+			background-color: #e6e6e6;
+			border-radius:0 20px 0 0;
+			padding:10px;
+			width:calc(23% - 20px);
+			margin:20px 0 0 0;
+		}
+		.price-header-enterprise {
+			align-items:flex-end;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content:center;
+			background-color: #00333b;
+			border-radius:0 20px 0 0;
+			padding:10px;
+			width:calc(14% - 20px);
+			margin:40px 0 0 0;
+			color: #07c3e0;
+			line-height: 1.25em;
+			position:relative;
+		}
+		.list-separator {
+			height:5px;
+			width:95%;
+		}
+		@media only screen and (max-width: 920px) {
+			.pricing-container {
+				padding: 0 20px;
+			}
+		}
+		@media only screen and (max-width: 540px) {
+			.pricing-container {
+				padding: 0 5px;
+			}
+			.price-header-beginner {
+				width:calc(30% - 10px);
+				text-align: center;
+				padding:5px;
+			}
+			.price-header-advanced {
+				width:calc(36% - 10px);
+				text-align: center;
+				padding:5px;
+			}
+			.price-header-professional {
+				width:calc(30% - 10px);
+				text-align: center;
+				padding:5px;
+			}
+			.price-header-enterprise {
+				position:relative;
+				width:calc(96% - 20px);
+				border-radius:0;
+				flex-direction:column;
+				align-items: center;
+				text-align: center;
+				margin:0 8px;
+				padding:5px 10px;
+				font-size: 12px; 
+			}
+			.list-separator {
+				height:15px;
+			}
+		}
+		.price-header-beginner > img, .price-header-advanced > img, .price-header-professional > img {
+			height:100px;
+			width:auto;
+		}
+		.price-header-beginner > h3, .price-header-advanced > h3, .price-header-professional > h3, .price-header-enterprise > h3 {
+			margin: 10px 0 0 0;
+			color: #103456;
+		}
+		@media only screen and (max-width: 540px) {
+			.price-header-beginner > img, .price-header-advanced > img, .price-header-professional > img {
+				height:60px;
+			}
+			.price-header-beginner > h3, .price-header-advanced > h3, .price-header-professional > h3, .price-header-enterprise > h3 {
+				margin: 2px 0 0 0;
+				font-size: 14px;
+			}
+			.price-header-beginner > h2, .price-header-professional > h2, .price-header-enterprise > h2 {
+				margin: 10px 0 0 0;
+				color: #103456;
+				font-weight:bold;
+				line-height:0.75em;
+				font-size:16px;
+			}
+			.price-header-advanced > h2 {
+				margin: 10px 0 0 0;
+				color: lightseagreen;
+				font-weight:bold;
+				line-height:0.5em;
+				font-size:18px;
+			}
+		}
+		.price-body-items, .price-body-beginner, .price-body-advanced, .price-body-professional, .price-body-enterprise {
+			display:flex;
+			position:relative;
+			flex-direction:column;
+			text-align: center;
+		}
+		.price-body-items {
+			justify-content:flex-start;
+			padding:5px 10px 5px 0px;
+			width:calc(14% - 20px);
+			margin:0 0 0 10px;
+			text-align:left;
+			color:#666666;
+			font-size:12px;
+		}
+		.price-body-beginner {
+			align-items:center;
+			justify-content:flex-start;
+			background-color: #e6e6e6;
+			border-radius:0;
+			padding:5px 10px;
+			width:calc(23% - 20px);
+			margin:0;
+			color: #103456;
+		}
+		.price-body-advanced {
+			align-items:center;
+			justify-content:flex-start;
+			background-color: #FFFFFF;
+			border-radius:0px;
+			padding:5px 10px;
+			width:calc(24% - 20px);
+			margin:0;
+			color: #103456;
+		}
+		.price-body-professional {
+			align-items:center;
+			justify-content:flex-start;
+			background-color: #e6e6e6;
+			border-radius:0;
+			padding:5px 10px;
+			width:calc(23% - 20px);
+			margin:0;
+			color: #103456;
+		}
+		.price-body-enterprise {
+			position:absolute;
+			align-items:center;
+			justify-content:flex-start;
+			background-color: #00333b;
+			border-radius:0;
+			padding:10px;
+			width:calc(100% - 20px);
+			margin:0;
+			color:#07c3e0;
+			font-size:12px;
+			top:100%;
+			left:0;
+			border-radius:0 0 20px 0;
+			z-index: 1;
+		}
+		.price-header-enterprise ul, .price-header-enterprise > div > div > ul {
+			padding:0 0 0 2px;
+			text-align:left;
+		}
+		.price-header-enterprise ul li, .price-header-enterprise > div > div > ul li {
+			list-style: none;
+			margin:0 0 5px 0;
+			padding:0 0 0 20px;
+			background-image: url("img/check-blue.png");
+			background-position: left 2px;
+			background-size: 12px 12px;
+			background-repeat: no-repeat;
+		}
+		@media only screen and (max-width: 920px) {
+
+		}
+		@media only screen and (max-width: 540px) {
+			.price-body-items {
+				width:calc(96% - 10px);
+				padding:5px;
+				text-align: left;
+				margin:0;
+				background-color:#ebebeb;border-bottom:1px solid #dddddd;		
+			}
+			.price-body-beginner {
+				width:calc(30% - 10px);
+				text-align: center;
+				padding:5px;
+				font-size:12px;
+				line-height: 1.25em;
+			}
+			.price-body-advanced {
+				width:calc(36% - 10px);
+				text-align: center;
+				padding:5px;
+				font-size:12px;
+				line-height: 1.25em;
+			}
+			.price-body-professional {
+				width:calc(30% - 10px);
+				text-align: center;
+				padding:5px;
+				font-size:12px;
+				line-height: 1.25em;
+			}
+		}
+		.price-body-beginner > h2, .price-body-professional > h2, .price-body-enterprise > h2, .price-body-beginner > h3, .price-body-advanced > h3, .price-body-professional > h3, .price-body-enterprise > h3 {
+			margin: 10px 0 0 0;
+			color: #103456;
+			font-weight:bold;
+			line-height:1.25em;
+		}
+		.price-body-advanced > h2 {
+			margin: 10px 0 0 0;
+			color: lightseagreen;
+			font-weight:bold;
+			line-height:1em;
+			font-size:36px;
+		}
+		@media only screen and (max-width: 920px) {
+			.price-body-advanced > h2 {
+				font-size:24px;
+				line-height:1.25em;
+			}
+		}
+		@media only screen and (max-width: 540px) {
+			.price-body-beginner > h3, .price-body-advanced > h3, .price-body-professional > h3, .price-body-enterprise > h3 {
+				font-size:14px;
+			}
+		}
+		.saved-amount {
+			display:inline-block;
+			padding:2px 8px;
+			background-color: lightseagreen;
+			color:#ffffff;
+			font-size:10px;
+			border-radius:12px;
+			margin:5px 0 10px 0;
+		}
+		a.btn-subscribe {
+			display: inline-block;
+			padding: 10px 20px;
+			margin: 10px 0;
+			background-color: #ffb700;
+			border-radius: 20px;
+			color: #000000;
+			font-size: 16px;
+			font-weight: bold;
+			text-decoration: none;
+			cursor: pointer;
+			transition: all ease 0.3s;
+		}
+		@media only screen and (max-width: 540px) {
+			a.btn-subscribe {
+				padding: 8px 16px;
+				border-radius: 16px;
+				font-size: 14px;
+			}
+		}
+		a.btn-subscribe:hover {
+			color:#043c45;
+			background-color:#07deff;
+		}
+		.top-line-items {
+			border-top:2px dotted #e6e6e6;
+			justify-content:center;
+		}
+		.top-line-body {
+			border-top:2px dotted #f2f2f2;
+			justify-content:center;
+		}
+		@media only screen and (max-width: 540px) {
+			.top-line-items {
+				border-top:none;
+			}
+			.top-line-body {
+				border-top:none;
+			}
+		}
+		.best-deal-badge {
+		  background-color: lightseagreen;
+		  height: 150px;
+		  left: -75px;
+		  position: absolute;
+		  top: -75px;
+		  width: 150px;
+
+		  -webkit-transform: rotate(-45deg);
+		}
+		.best-deal-badge span {
+		  color: #FFFFFF;
+		  font-family: sans-serif;
+			font-weight:bold;
+		  left: 40px;
+		  top: 120px;
+		  position: absolute;
+		  width: 140px;
+		}
+		@media only screen and (max-width: 540px) {
+			.best-deal-badge {
+			  height: 120px;
+			  left: -60px;
+			  top: -60px;
+			  width: 120px;
+			}
+			.best-deal-badge span {
+			  left: 20px;
+			  top: 100px;
+			  width: 80px;
+			}
+		}
+		a.btn-contact-pricing {
+			display:inline-block;
+			height:24px;
+			padding:2px 10px;
+			background-color:#ffffff;
+			color:#00333b;
+			line-height:24px;
+			border-radius:16px;
+			text-decoration: none;
+			font-weight:bold;
+			transition: all ease 0.3s;
+			margin:0 0 20px 0;
+		}
+		a.btn-contact-pricing:hover {
+			background-color:#07deff;
+		}
+		.compare-ico {
+			font-size:32px;
+		}
+		@media only screen and (max-width: 540px) {
+			.compare-ico {
+				font-size:20px;
+			}
+		}
+		.ico-yes {
+			color:#009245;
+		}
+		.ico-no {
+			color:#c15357;
+		}
+		/* tabs */
+		.tabs {
+			position: relative;
+			display:flex;
+			justify-content: center;
+			width:100%;
+			max-width:100%;
+			padding-top:20px;
+			margin: 0 0 0 0;
+		}
+		.tabs > input, .tabs > span {
+			width:80px;
+			height: 40px;
+			line-height:40px;
+			color:#dddddd;
+			background-color:#047f92;
+			position: absolute;
+			padding:5px 20px;
+			top:-80px;
+			margin:0;
+			border-radius:0;
+		}
+		.tabs > input, .tabs > span > div.icon {
+			font-size:16px;
+		}
+		.tabs > input {
+			cursor: pointer;
+			filter: alpha(opacity=0);
+			opacity: 0;
+			position: absolute;
+			z-index: 99;
+		}
+		.tabs > span {
+			text-align: center;
+			overflow: hidden;
+		}
+		.tabs > span i, .tabs > span {
+			-webkit-transition: all .5s;
+			   -moz-transition: all .5s;
+				 -o-transition: all .5s;
+					transition: all .5s;
+		}
+		.tabs > input:hover + span, .tabs > input:hover {
+			color: ##07deff;
+		}
+		.tabs > input:checked + span {
+			background-color: #f2f2f2;
+			border-radius:0;
+			color: #047f92;
+			font-weight:bold;
+		}
+		.tabs input:hover + span {
+			color: ##07deff;
+		}
+		#tab-1, #tab-1 + span {
+			left: calc(50vw - 120px);
+			border-radius:15px 0 0 0;
+		}
+		#tab-2, #tab-2 + span {
+			left: 50vw;
+			border-radius:0 15px 0 0;
+		}
+		
+		.burst-badge {
+			position:absolute; 
+			width:40px; 
+			height:40px; 
+			left:calc(50vw + 100px); 
+			top:-100px; 
+			transition: all ease 0.3s;
+		}
+		.burst-badge-text {
+			position:absolute; 
+			width:40px; 
+			height:40px; 
+			left:calc(50vw + 105px); 
+			top:-90px; 
+			transition: all ease 0.3s; 
+			color:#ffffff; 
+			font-size:12px; 
+			font-weight: bold;
+		}
+		
+		.popup-content {
+			background-color: lightseagreen;
+			width:calc(100vw - 70px);
+			max-width: 500px;
+			padding: 30px;
+			position: absolute;
+			transform: translate(-50%,0%);
+			left: 50%;
+			top: 220px;
+			border-radius: 20px;
+			text-align: center;
+			z-index: 10006;
+			color:#ffffff;
+			
+		}
+		@media only screen and (max-width: 920px) {
+			.popup-content {
+				top: 200px;
+			}
+		}
+		@media only screen and (max-width: 540px) {
+			.popup-content {
+				top: 70px;
+			}
+		}
+		.popup-content button {
+			position:absolute;
+			display: flex;
+			justify-content:center;
+			align-items:center;
+			top:-20px;
+			right:-20px;
+			background-color: transparent;
+			font-size: 30px;
+			color: #FFFFFF;
+			border: none;
+			outline: none;
+			cursor: pointer;
+		}
+		.popup-content > p > a {
+			color:#07deff;
+			text-decoration: underline;
+		}
+		.popup-content > p > a:hover {
+			color:red;
+		}
+		.popup {
+			position: fixed; /* Stay in place */
+			/*z-index: 10005;  Sit on top */
+			display:none;
+			left: 0;
+			top: 0;
+			width: 100%; /* Full width */
+			height: 100%; /* Full height */
+			overflow: hidden; /* Enable scroll if needed */
+			background-color: rgb(0,0,0); /* Fallback color */
+			background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+			-webkit-animation-name: fadeIn; /* Fade in the background */
+			-webkit-animation-duration: 0.5s;
+			animation-name: fadeIn;
+			animation-duration: 0.5s;
+		}
+		@-webkit-keyframes fadeIn {
+			from {opacity: 0} 
+			to {opacity: 1}
+		}
+		@keyframes fadeIn {
+			from {opacity: 0} 
+			to {opacity: 1}
+		}
+		@-webkit-keyframes fadeOut {
+			from {opacity: 1} 
+			to {opacity: 0}
+		}
+
+		@keyframes fadeOut {
+			from {opacity: 1} 
+			to {opacity: 0}
+		}
+		.close {
+			display:inline-block;
+			width:32px;
+			height:32px;
+			text-align:center;
+			background-color:#FFFFFF;
+			border-radius:6px;
+			margin:0;
+			color: #047F92;
+			float: right;
+			font-size: 28px;
+			line-height:34px;
+			text-decoration: none;
+			transition: all 0.3s ease;
+		}
+		.close:hover, .close:focus {
+			background-color:#000000;
+			cursor: pointer;
+		}
+	</style>
+	<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>	
+	</head>
+	<body>
+		<div class="header">
+			<div class="header-container">
+				<div class="logo"><a href="index.html"><img src="img/logo-w-text.svg" /></a></div>
+				<ul class="menu">
+					<li><a href="pricing.html" style="color:#07deff;">Pricing</a></li>
+					<li><a href="#">Sign in</a></li>
+					<li><a href="#">Register for free</a></li>
+					<li><a class="sandbox" href="#sandbox">Create sandbox</a></li>
+				</ul>
+			</div>
+			<!-- mobile menu -->
+				<nav role="navigation">
+					<div class="recent-cat"></div>
+					<div id="mobileMenuToggle">
+						<!--A fake / hidden checkbox is used as click reciever, so you can use the :checked selector on it.-->
+						<input type="checkbox" />
+						<!--Some spans to act as a hamburger. They are acting like a real hamburger, not that McDonalds stuff.-->
+						<span></span>
+						<span></span>
+						<span></span>
+						<!-- Too bad the menu has to be inside of the button but hey, it's pure CSS magic.-->
+						<ul id="mobileMenu">
+							<li>
+								<a href="pricing.html">
+									<div class="s-menu-title"><div class="s-menu-ico ht-coins"></div>Pricing</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="s-menu-title"><div class="s-menu-ico ht-login"></div>Sign in</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="s-menu-title"><div class="s-menu-ico ht-pencil"></div>Register for free</div>
+								</a>
+							</li>
+							<li style="border-bottom:1px solid #ffb700;">
+								<a href="#sandbox">
+									<div class="s-menu-title bg-sandbox" style="color:#000000;"><div class="s-menu-ico ht-add"></div>Create sandbox</div>
+								</a>
+							</li>
+						</ul>
+						<div class="mobileMenuMask"></div>
+					</div>
+				</nav>
+			<!-- mobile menu ended -->
+		</div>
+		<div class="header-bg"></div>
+		
+		<div class="price-header">
+			<div class="main-container" style="padding: 0;">
+				<h1>Elevate your trading<br>by improving what really counts</h1>
+				<h2>Enjoy full flexibility with our monthly subscriptions</h2>
+			</div>
+			<div></div>
+		</div>
+		
+		<div class="main-container" style="display:block; padding:15px;"></div>
+			<div class="tabs effect-1"><!-- tab label -->
+				<!-- tab-title -->
+				<input type="radio" id="tab-1" name="tab-effect-1" checked="checked"><span>Monthly</span>
+				<input type="radio" id="tab-2" name="tab-effect-1"><span>Annually</span>
+				<img src="img/burst-badge.png" class="burst-badge" />
+				<div class="burst-badge-text">SAVE</div>
+
+			<!-- tab-content -->
+				<div class="tab-content">
+					
+					<section id="tab-item-1">
+						
+						<div class="pricing-container">
+							<div class="price-header-items desktop-price"></div>
+							<div class="price-header-beginner">
+								<img src="img/pricing-beginner.png" />
+								<h3>BEGINNER</h3>
+							</div>
+							<div class="price-header-advanced">
+								<!--<div class="best-deal-badge"><span>BEST DEAL</span></div>-->
+								<img src="img/pricing-advanced.png" />
+								<h3 style="font-size: larger;">ADVANCED</h3>
+							</div>
+							<div class="price-header-professional">
+								<img src="img/pricing-professional.png" />
+								<h3>PROFESSIONAL</h3>
+							</div>
+							<div class="price-header-enterprise desktop-price">
+								<img src="img/pricing-enterprise.png" class="img-responsive" />
+								<h3 style="color: #07c3e0; text-align:center;">ENTERPRISE</h3>
+								<div class="price-body-enterprise">
+									<p align="left"><strong>Looking to stand out &amp; elevate your traders' performance?</strong></p>
+									<p align="left">For brokers / exchanges, (prop) trading firms, hedge funds, etc.</p>
+									<ul>
+										<li>Whitelabel</li>
+										<li>All platforms</li>
+										<li>All markets</li>
+										<li>Alert customization</li>
+										<li>Management dashboard</li>
+										<li>and more...</li>
+									</ul>
+									<a class="btn-contact-pricing" href="mailto:info@hoc-trade.com">Contact us</a>
+								</div>
+							</div>
+						</div>
+						
+						<div class="pricing-container">
+							<div class="price-body-items desktop-price"></div>
+							<div class="price-body-beginner" style="justify-content: flex-end;">
+								<h2>USD 37.99<span style="font-size:smaller">/mo</span></h2>
+								<span style="font-size:12px; line-height: 18px; text-align: center;">billed monthly</span>
+								<a class="btn-subscribe" href="#">Subscribe</a>
+							</div>
+							<div class="price-body-advanced" style="justify-content: flex-end;">
+								<h2 style="color: #103456;">USD 49.99<span style="font-size:smaller">/mo</span></h2>
+								<span style="font-size:12px; line-height: 18px; text-align: center;">billed monthly</span>
+								<a class="btn-subscribe" href="#">Subscribe</a>
+							</div>
+							<div class="price-body-professional" style="justify-content: flex-end;">
+								<h2>USD 69.99<span style="font-size:smaller">/mo</span></h2>
+								<span style="font-size:12px; line-height: 18px; text-align: center;">billed monthly</span>
+								<a class="btn-subscribe" href="#">Subscribe</a>
+							</div>
+							<div style="width:14%;" class="desktop-price"></div>
+						</div>
+
+						<div class="pricing-container">
+							<div class="price-body-items desktop-price"></div>
+							<div class="price-body-beginner">
+								Elevate your trading to the next level by identifying, analysing, and improving your trading behaviors<br><br>
+							</div>
+							<div class="price-body-advanced">
+								Strengthen your trading with the support of real-time alerts for behaviors and risk management<br><br>
+							</div>
+							<div class="price-body-professional">
+								Enjoy the full power of hoc-trade  with priority speed, custom data, and combined account analytics<br><br>
+							</div>
+							<div style="width:14%;" class=" desktop-price"></div>
+							<div class="list-separator"></div>
+						</div>
+						
+					</section><!-- item 1 -->
+					
+					<section id="tab-item-2">
+						
+						<div class="pricing-container">
+							<div class="price-header-items desktop-price"></div>
+							<div class="price-header-beginner">
+								<img src="img/pricing-beginner.png" />
+								<h3>BEGINNER</h3>
+							</div>
+							<div class="price-header-advanced">
+								<div class="best-deal-badge"><span>BEST DEAL</span></div>
+								<img src="img/pricing-advanced.png" />
+								<h3 style="font-size: larger;">ADVANCED</h3>
+							</div>
+							<div class="price-header-professional">
+								<img src="img/pricing-professional.png" />
+								<h3>PROFESSIONAL</h3>
+							</div>
+							<div class="price-header-enterprise desktop-price">
+								<img src="img/pricing-enterprise.png" class="img-responsive" />
+								<h3 style="color: #07c3e0; text-align:center;">ENTERPRISE</h3>
+								<div class="price-body-enterprise">
+									<p align="left"><strong>Looking to stand out &amp; elevate your traders' performance?</strong></p>
+									<p align="left">For brokers / exchanges, (prop) trading firms, hedge funds, etc.</p>
+									<ul>
+										<li>Whitelabel</li>
+										<li>All platforms</li>
+										<li>All markets</li>
+										<li>Alert customization</li>
+										<li>Management dashboard</li>
+										<li>and more...</li>
+									</ul>
+									<a class="btn-contact-pricing" href="mailto:info@hoc-trade.com">Contact us</a>
+								</div>
+							</div>
+						</div>
+						
+						<div class="pricing-container">
+							<div class="price-body-items desktop-price"></div>
+							<div class="price-body-beginner" style="justify-content: flex-end;">
+								<h2>USD 29.99<span style="font-size:smaller">/mo</span></h2>
+								<span style="font-size:12px; line-height: 1.25em; text-align: center;">billed annually</span>
+								<span class="saved-amount">USD 359.88/yr saved 21%</span>
+								<a class="btn-subscribe" href="#">Subscribe</a>
+							</div>
+							<div class="price-body-advanced" style="justify-content: flex-end;">
+								<h2>USD 39.99<span style="font-size:smaller">/mo</span></h2>
+								<span style="font-size:12px; line-height: 1.25em; text-align: center; color: lightseagreen;">billed annually</span>
+								<span class="saved-amount">USD 479.88/yr saved 20%</span>
+								<a class="btn-subscribe" href="#">Subscribe</a>
+							</div>
+							<div class="price-body-professional" style="justify-content: flex-end;">
+								<h2>USD 59.99<span style="font-size:smaller">/mo</span></h2>
+								<span style="font-size:12px; line-height: 1.25em; text-align: center;">billed annually</span>
+								<span class="saved-amount">USD 719.88/yr saved 15%</span>
+								<a class="btn-subscribe" href="#">Subscribe</a>
+							</div>
+							<div style="width:14%;" class="desktop-price"></div>
+						</div>
+
+						<div class="pricing-container">
+							<div class="price-body-items desktop-price"></div>
+							<div class="price-body-beginner">
+								Elevate your trading to the next level by identifying, analysing, and improving your trading behaviors<br><br>
+							</div>
+							<div class="price-body-advanced">
+								Strengthen your trading with the support of real-time alerts for behaviors and risk management<br><br>
+							</div>
+							<div class="price-body-professional">
+								Enjoy the full power of hoc-trade  with priority speed, custom data, and combined account analytics<br><br>
+							</div>
+							<div style="width:14%;" class="desktop-price"></div>
+							<div class="list-separator"></div>
+						</div>
+
+					</section><!-- item 2 -->
+				</div>
+			</div><!-- tab label end -->
+
+			<div class="pricing-container">
+				<div class="price-body-items top-line-items">
+					Analytics access
+				</div>
+				<div class="price-body-beginner top-line-body">
+					<span class="ht-check compare-ico ico-yes"></span>
+				</div>
+				<div class="price-body-advanced top-line-body">
+					<span class="ht-check compare-ico ico-yes"></span>
+				</div>
+				<div class="price-body-professional top-line-body">
+					<span class="ht-check compare-ico ico-yes"></span>
+				</div>
+				<div style="width:14%;" class="desktop-price"></div>
+			</div>
+
+			<div class="pricing-container">
+				<div class="price-body-items top-line-items">
+					Analytics update frequency
+				</div>
+				<div class="price-body-beginner top-line-body">
+					&lt; 15 mins
+				</div>
+				<div class="price-body-advanced top-line-body">
+					&lt; 3 mins
+				</div>
+				<div class="price-body-professional top-line-body">
+					near real time
+				</div>
+				<div style="width:14%;" class="desktop-price"></div>
+				<!-- -->
+				<div class="price-body-items top-line-items">
+					"Pro patterns"
+				</div>
+				<div class="price-body-beginner top-line-body">
+					<span class="ht-delete compare-ico ico-no"></span>
+				</div>
+				<div class="price-body-advanced top-line-body">
+					<span class="ht-delete compare-ico ico-no"></span>
+				</div>
+				<div class="price-body-professional top-line-body">
+					<span class="ht-check compare-ico ico-yes"></span>
+				</div>
+				<div style="width:14%;" class="desktop-price"></div>
+				<div class="list-separator"></div>
+				<!-- -->
+				<div class="price-body-items top-line-items">
+					Trade Medic Report
+				</div>
+				<div class="price-body-beginner top-line-body">
+					<span class="ht-check compare-ico ico-yes"></span>
+				</div>
+				<div class="price-body-advanced top-line-body">
+					<span class="ht-check compare-ico ico-yes"></span>
+				</div>
+				<div class="price-body-professional top-line-body">
+					<span class="ht-check compare-ico ico-yes"></span>
+				</div>
+				<div style="width:14%;" class="desktop-price"></div>
+				<div class="list-separator"></div>
+				<!-- -->
+				<div class="price-body-items top-line-items">
+					Overview, basic &amp; advanced statistics
+				</div>
+				<div class="price-body-beginner top-line-body">
+					<span class="ht-check compare-ico ico-yes"></span>
+				</div>
+				<div class="price-body-advanced top-line-body">
+					<span class="ht-check compare-ico ico-yes"></span>
+				</div>
+				<div class="price-body-professional top-line-body">
+					<span class="ht-check compare-ico ico-yes"></span>
+				</div>
+				<div style="width:14%;" class="desktop-price"></div>
+				<div class="list-separator"></div>
+				<!-- -->
+				<div class="price-body-items top-line-items">
+					Alerts
+				</div>
+				<div class="price-body-beginner top-line-body">
+					<span class="ht-check compare-ico ico-yes"></span>
+				</div>
+				<div class="price-body-advanced top-line-body">
+					<span class="ht-check compare-ico ico-yes"></span>
+				</div>
+				<div class="price-body-professional top-line-body">
+					<span class="ht-check compare-ico ico-yes"></span><span style="font-size:12px;">(priority speed)</span>
+				</div>
+				<div style="width:14%;" class="desktop-price"></div>
+				<!-- -->
+				<div class="price-body-items top-line-items">
+					Alert customization
+				</div>
+				<div class="price-body-beginner top-line-body">
+					<span class="ht-delete compare-ico ico-no"></span>
+				</div>
+				<div class="price-body-advanced top-line-body">
+					<span class="ht-check compare-ico ico-yes"></span><span style="font-size:12px;">(basic)</span>
+				</div>
+				<div class="price-body-professional top-line-body">
+					<span class="ht-check compare-ico ico-yes"></span><span style="font-size:12px;">(advanced)</span>
+				</div>
+				<div style="width:14%;" class="desktop-price"></div>
+				<div class="list-separator"></div>
+				<!-- -->
+				<div class="price-body-items top-line-items">
+					Number of trading accounts
+				</div>
+				<div class="price-body-beginner top-line-body">
+					1
+				</div>
+				<div class="price-body-advanced top-line-body">
+					3
+				</div>
+				<div class="price-body-professional top-line-body">
+					10
+				</div>
+				<div style="width:14%;" class="desktop-price"></div>
+				<!-- -->
+				<div class="price-body-items top-line-items">
+					Merge trading accounts
+				</div>
+				<div class="price-body-beginner top-line-body">
+					<span class="ht-delete compare-ico ico-no"></span>
+				</div>
+				<div class="price-body-advanced top-line-body">
+					<span class="ht-delete compare-ico ico-no"></span>
+				</div>
+				<div class="price-body-professional top-line-body">
+					<span class="ht-check compare-ico ico-yes"></span>
+				</div>
+				<div style="width:14%;" class="desktop-price"></div>
+				<div class="list-separator"></div>
+				<!-- -->
+				<div class="price-body-items top-line-items">
+					Trade history
+				</div>
+				<div class="price-body-beginner top-line-body">
+					1 year<span style="font-size:12px;">(1000 trades)</span>
+				</div>
+				<div class="price-body-advanced top-line-body">
+					3 years<span style="font-size:12px;">(3000 trades)</span>
+				</div>
+				<div class="price-body-professional top-line-body">
+					3 years<span style="font-size:12px;">(unlimited trades)</span>
+				</div>
+				<div style="width:14%;" class="desktop-price"></div>
+				<!-- -->
+				<div class="price-body-items top-line-items">
+					History csv upload
+				</div>
+				<div class="price-body-beginner top-line-body">
+					<span class="ht-delete compare-ico ico-no"></span>
+				</div>
+				<div class="price-body-advanced top-line-body">
+					<span class="ht-delete compare-ico ico-no"></span>
+				</div>
+				<div class="price-body-professional top-line-body">
+					<span class="ht-check compare-ico ico-yes"></span>
+				</div>
+				<div style="width:14%;" class="desktop-price"></div>
+				<!-- -->
+				<div class="price-body-items top-line-items">
+					Trade history download
+				</div>
+				<div class="price-body-beginner top-line-body">
+					<span class="ht-delete compare-ico ico-no"></span>
+				</div>
+				<div class="price-body-advanced top-line-body">
+					<span class="ht-check compare-ico ico-yes"></span>
+				</div>
+				<div class="price-body-professional top-line-body">
+					<span class="ht-check compare-ico ico-yes"></span>
+				</div>
+				<div style="width:14%;" class="desktop-price"></div>
+				<div class="list-separator"></div>
+				<!-- -->
+				<div class="price-body-items top-line-items">
+					Account verification
+				</div>
+				<div class="price-body-beginner top-line-body">
+					<span class="ht-delete compare-ico ico-no"></span>
+				</div>
+				<div class="price-body-advanced top-line-body">
+					<span class="ht-check compare-ico ico-yes"></span>
+				</div>
+				<div class="price-body-professional top-line-body">
+					<span class="ht-check compare-ico ico-yes"></span>
+				</div>
+				<div style="width:14%;" class="desktop-price"></div>
+				<div class="list-separator"></div>
+				<!-- -->
+				<div class="price-body-items top-line-items">
+					hoc-trade academy
+				</div>
+				<div class="price-body-beginner top-line-body">
+					<span class="ht-check compare-ico ico-yes"></span>
+				</div>
+				<div class="price-body-advanced top-line-body">
+					<span class="ht-check compare-ico ico-yes"></span>
+				</div>
+				<div class="price-body-professional top-line-body">
+					<span class="ht-check compare-ico ico-yes"></span>
+				</div>
+				<div style="width:14%;" class="desktop-price"></div>
+				<div class="list-separator"></div>
+			</div>
+		<!-- enterprise for mobile -->
+			<div class="pricing-container mobile-price">
+				<div class="price-header-enterprise">
+					<img src="img/pricing-enterprise.png" style="width: 200px;" />
+					<br>
+					<h3 style="color: #07c3e0;">ENTERPRISE</h3>
+					<p><strong>Looking to stand out &amp; elevate your traders' performance?</strong></p>
+					<p>For brokers/exchanges, (prop) trading firms, hedge funds, etc.</p>
+					<div style="display:flex; flex-direction: row; justify-content: space-between;">
+						<div style="padding: 0 20px 0 0;">
+							<ul>
+								<li>Whitelabel</li>
+								<li>All platforms</li>
+								<li>All markets</li>
+							</ul>
+						</div>
+						<div>
+							<ul>
+								<li>Alert customization</li>
+								<li>Management dashboard</li>
+								<li>and more...</li>
+							</ul>
+						</div>
+					</div>
+					<br>
+					<a class="btn-contact-pricing" href="mailto:info@hoc-trade.com">Contact us</a>
+				</div>
+			</div>
+			<div class="main-container" style="display:block; padding:30px;"></div>
+
+		<!-- footer -->
+		<div class="module-block bg-footer">
+			<div class="main-container" style="padding:30px 0;">
+				<div class="footer">
+					<div class="footer-copy">
+						<span class="ht-logo"></span><strong>hoc-trade</strong>&nbsp;&nbsp;&nbsp; &copy; 2023 hoc-trade limited, all rights reserved
+					</div>
+					<div class="footer-links">
+						<span class="separator"><span class="desktop">|</span></span><a href="tandc-ht.html">Terms &amp; conditions</a><span class="separator">|</span><a href="privacy-ht.html">Privacy policy</a><!--<span class="separator">|</span><a href="advertise-w-ht.html">advertise with us</a>--><span class="separator">|</span><a href="about-ht.html">About us</a><span class="separator">|</span><a href="contact-ht.html">Contact us</a>
+					</div>
+					<div class="footer-social">
+						<a class="social" href="#"><span class="ht-logo-fb"></span></a><a class="social" href="#"><span class="ht-logo-twitter"></span></a><a class="social" href="#"><span class="ht-logo-in"></span></a><a class="social" href="#"><span class="ht-logo-yt"></span></a><a class="social" href="#"><span class="ht-logo-ig"></span></a><a class="social" href="#"><span class="ht-logo-discd"></span></a>
+					</div>
+					<p class="disclaimer">HIGH RISK WARNING: Foreign exchange and other CFD trading carries a high level of risk and may not be suitable for everyone. The usage of leverage creates additional risk and loss exposure. Your investment objectives, experience level and risk tolerance have to be taken into consideration before you decide to trade foreign exchange or other CFD products. You could lose some or all of your entire investment. Do not invest money that you cannot afford to lose and always use an appropriate risk management. It’s important to educate yourself on the risks associated with foreign exchange trading, and seek professional advice from an independent financial or tax advisor in case of any questions. Any data and information is provided ‘as is’ solely for informational purposes, and is not intended for trading purposes or advice. Past performance, which are presented on this website or you find somewhere else, is not indicative of future results.</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="popup">
+			<div class="popup-content">
+				<!--<div style="position:relative;"><button id="close" class="close"><span class="ht-cross"></span></button></div>-->
+				<h2><strong>Currently Free-access</strong></h2>
+				<p>You can currently enjoy hoc-trade 100% free. We are in the final testing stage and would highly appreciate your feedback.</p>
+				<h3>No payment information required</h3>
+				<p style="font-size:smaller;">For feedback, questions, or support, please join our Discord server <a href="#">here</a></p>
+				<a class="btn-subscribe" href="#">Register for free</a>
+			</div>
+		</div>
+		
+	</body>
+	<script>
+		//window.addEventListener("load", function(){
+		//	setTimeout(
+		//		function open(event){
+		//			document.querySelector(".popup").style.display = "block";
+		//		},
+		//		1000
+		//	)
+		//});
+
+
+		//document.querySelector("#close").addEventListener("click", function(){
+		//	document.querySelector(".popup").style.display = "none";
+		//});
+	</script>
+</html>
