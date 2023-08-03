@@ -95,6 +95,12 @@
 	a.btn-open:hover {
 		color:#ffffff;
 	}
+	.disclaimer {
+		display: block;
+		color:#666666;
+		font-size: 10px;
+		line-height: 1.25em;
+	}
 </style>
 </head>
 <body>
@@ -243,56 +249,57 @@
 	<!-- breadcrumb -->
 	<div class="breadcrumb"><div>Dashboard / <span class="active">Trade Medic</span></div></div>
 	<!-- breadcrumb ended -->
+	<!--<div style="height:20px;"></div> -->
 	<div class="main-content-container">
 		<div class="general-info-header">
 			Trade medic report <a class="btn-info" id="modalinfo" style="position:absolute; top:10px; right:10px;"><span class="ht-info"></span></a>
 		</div>
 		<!-- top 3 -->
-		<div class="medic-report-section">
-			TOP 3 critical issues
+		<div class="medic-report-section" style="background-color:#e54c00; height:50px;">
+			<div><span class="ht-star"></span> TOP 3 critical issues</div>
 		</div>
 		<ul class="medic-report">
-			<li style="font-size:12px; background-color: #cccccc;">
+			<li style="font-size:12px; background-color:#666666; color:#ffffff;">
 				<div class="column-issue"><strong>Issue</strong></div>
 				<div class="column-severity"><strong>Severity</strong></div>
 				<div class="column-effect"><strong>Performance effect</strong></div>
-				<div class="column-info"></div>
+				<div class="column-info"><strong>Further details</strong></div>
 			</li>
 			<!---->
-			<li>
-				<div class="column-issue"><strong>Cut profits early</strong></div>
+			<li class="larger-font" style="background-color:#ffe3bd;">
+				<div class="column-issue">Cut profits early</div>
 				<div class="column-severity">
 					<div class="sev-bar">
 						<div class="sev-bar-dot" style="left:calc(100% - 12px);"></div>
 					</div>
 				</div>
-				<div class="column-effect"><span class="text-ng"><strong>-6,493 USD</strong></span></div>
+				<div class="column-effect"><span class="text-ng">-6,493 USD</span></div>
 				<div class="column-info">
 					<a class="btn-info" id="modalinfo1" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
 				</div>
 			</li>
 			<!---->
-			<li>
-				<div class="column-issue"><strong>Revenge Trading</strong></div>
+			<li class="larger-font" style="background-color:#f4d3a6;">
+				<div class="column-issue">Revenge Trading</div>
 				<div class="column-severity">
 					<div class="sev-bar">
 						<div class="sev-bar-dot" style="left:calc(80% - 9.6px);"></div>
 					</div>
 				</div>
-				<div class="column-effect"><span class="text-ng"><strong>-5,281 USD</strong></span></div>
+				<div class="column-effect"><span class="text-ng">-5,281 USD</span></div>
 				<div class="column-info">
 					<a class="btn-info" id="modalinfo2" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
 				</div>
 			</li>
 			<!---->
-			<li>
-				<div class="column-issue"><strong>Late trade entry</strong></div>
+			<li class="larger-font" style="background-color:#ffe3bd;">
+				<div class="column-issue">Late trade entry</div>
 				<div class="column-severity">
 					<div class="sev-bar">
 						<div class="sev-bar-dot" style="left:calc(75% - 9px);"></div>
 					</div>
 				</div>
-				<div class="column-effect"><span class="text-ng"><strong>-4,992 USD</strong></span></div>
+				<div class="column-effect"><span class="text-ng">-4,992 USD</span></div>
 				<div class="column-info">
 					<a class="btn-info" id="modalinfo3" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
 				</div>
@@ -302,7 +309,7 @@
 		<!-- other issues -->
 		<!-- accordion -->
 			<button class="accordion">
-				Full report
+				<div><span class="ht-clipboard"></span> Full report</div>
 				<a class="btn-open"><span class="ht-add"></span></a>
 			</button>
 			<div class="panel">
@@ -624,7 +631,7 @@
 			<!-- accordion end -->
 			<!-- accordion -->
 			<button class="accordion">
-				Risk report
+				<div><span class="ht-alert-chart"></span> Risk report</div>
 				<a class="btn-open"><span class="ht-add"></span></a>
 			</button>
 			<div class="panel" style="margin-bottom:0px;">
@@ -633,7 +640,7 @@
 						<div class="column-issue"><strong>Risk area</strong></div>
 						<div class="column-risk-ico"></div>
 						<div class="column-risk"></div>
-						<div class="column-info"></div>
+						<div class="column-info"><strong>Further details</strong></div>
 					</li>
 					<!---->
 					<li>
@@ -694,6 +701,10 @@
 			</div>
 			<!-- accordion end -->
 		<div class="general-info-header" style="border-radius:0 0 20px 20px;"></div>
+		<div style="height:20px;"></div>
+		<div class="disclaimer">
+			<strong>DISCLAIMER:</strong> Please be cautious interpreting the presented information and always do your own research. None of the information provided should be considered financial advice, it may have errors, it is not mutually exclusive nor collectively exhaustive, and we cannot in any way be held liable for any losses or influences of those information on your trading.
+		</div>
 		<div style="height:20px;"></div>
 	</div><!-- main-content-container -->
 	<!-- main content area end -->

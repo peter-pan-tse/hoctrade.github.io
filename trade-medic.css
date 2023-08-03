@@ -12,6 +12,10 @@
     color: #FFFFFF;
     font-weight: bold;
 }
+.medic-report-section > div > span, .accordion > div > span {
+	font-size:22px;
+	vertical-align:text-bottom;
+}
 
 ul.medic-report {
 	list-style: none;
@@ -47,16 +51,25 @@ ul.medic-report li:nth-child(even) {
 	text-align: center;
 }
 .column-effect {
-	width:calc(30% - 20px);
+	width:calc(23% - 20px);
 	text-align: center;
 }
 .column-info, .column-risk-ico {
-	width:calc(8% - 20px);
+	width:calc(15% - 20px);
 	text-align: right;
+	justify-content:flex-end;
 }
 .column-risk {
-	width:calc(45% - 20px);
+	width:calc(38% - 20px);
 	text-align: left;
+}
+@media only screen and (max-width: 540px) {
+	.column-issue {
+		width:calc(26% - 20px);
+	}
+	.column-severity {
+		width:calc(18% - 20px);
+	}
 }
 /* high low pip bar */
 .sev-bar {
@@ -114,4 +127,13 @@ div.sev-bar-dot {
 .risk-ico-ng {
 	font-size:36px;
 	color:#C1272D;
+}
+.larger-font {
+	font-size: larger;
+	font-weight: bold;
+}
+@media only screen and (max-width: 540px) {
+	.larger-font {
+		font-size: 12px;
+	}
 }
