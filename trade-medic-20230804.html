@@ -101,18 +101,6 @@
 		font-size: 10px;
 		line-height: 1.25em;
 	}
-	.info-text {
-		display:block;
-		position:absolute;
-		font-size:10px;
-		font-weight: normal;
-		color:#666666;
-		width:80px;
-		right:32px;
-		bottom:12px;
-		line-height: 1em;
-		text-align: right;
-	}
 </style>
 </head>
 <body>
@@ -264,80 +252,59 @@
 	<!--<div style="height:20px;"></div> -->
 	<div class="main-content-container">
 		<div class="general-info-header">
-			<div style="font-size:larger;"><span class="ht-medbox"></span> Your trade medic report</div>
-			<a class="btn-info" id="modalinfo" style="position:absolute; top:10px; right:10px;"><span class="ht-info"></span></a>
+			Trade medic report <a class="btn-info" id="modalinfo" style="position:absolute; top:10px; right:10px;"><span class="ht-info"></span></a>
 		</div>
 		<!-- top 3 -->
-		<div class="medic-report-section" style="background-color:#0d6b75; height:50px;">
-			<div><span class="ht-star"></span> TOP 4 critical issues</div>
+		<div class="medic-report-section" style="background-color:#e54c00; height:50px;">
+			<div><span class="ht-star"></span> TOP 3 critical issues</div>
 		</div>
-		<div class="medic-report-top">
-			<!-- -->
-			<div class="top-report-box">
-				<div class="top-report-box-header">
-					1. Cut profits early 
-					<a class="btn-info" id="modalinfo1" style="margin-right:-5px; position:relative"><span class="ht-info"></span><div class="info-text">Further details</div></a>
-				</div>
-				<div class="top-report-box-body">
-					<div class="severity-text">100% severity</div>
-					<div class="sev-bar-top">
-						<div class="sev-bar-dot-top" style="left:calc(100% - 20px);"></div>
-					</div>
-					<div class="perf-effect-text">
-						<span>Performance effect</span><div class="text-ng">-6,493 USD</div>
-					</div>
-				</div>
-			</div>
-			<!-- -->
-			<div class="top-report-box">
-				<div class="top-report-box-header">
-					2. Revenge Trading 
-					<a class="btn-info" id="" style="margin-right:-5px; position:relative"><span class="ht-info"></span><div class="info-text">Further details</div></a>
-				</div>
-				<div class="top-report-box-body">
-					<div class="severity-text">80% severity</div>
-					<div class="sev-bar-top">
-						<div class="sev-bar-dot-top" style="left:calc(80% - 16px);"></div>
-					</div>
-					<div class="perf-effect-text">
-						<span>Performance effect</span><div class="text-ng">-5,281 USD</div>
+		<ul class="medic-report">
+			<li style="font-size:12px; background-color:#666666; color:#ffffff;">
+				<div class="column-issue"><strong>Issue</strong></div>
+				<div class="column-severity"><strong>Severity</strong></div>
+				<div class="column-effect"><strong>Performance effect</strong></div>
+				<div class="column-info"><strong>Further details</strong></div>
+			</li>
+			<!---->
+			<li class="larger-font" style="background-color:#ffe3bd;">
+				<div class="column-issue">Cut profits early</div>
+				<div class="column-severity">
+					<div class="sev-bar">
+						<div class="sev-bar-dot" style="left:calc(100% - 12px);"></div>
 					</div>
 				</div>
-			</div>
-			<!-- -->
-			<div class="top-report-box">
-				<div class="top-report-box-header">
-					3. Late trade entry 
-					<a class="btn-info" id="" style="margin-right:-5px; position:relative"><span class="ht-info"></span><div class="info-text">Further details</div></a>
+				<div class="column-effect"><span class="text-ng">-6,493 USD</span></div>
+				<div class="column-info">
+					<a class="btn-info" id="modalinfo1" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
 				</div>
-				<div class="top-report-box-body">
-					<div class="severity-text">75% severity</div>
-					<div class="sev-bar-top">
-						<div class="sev-bar-dot-top" style="left:calc(75% - 15px);"></div>
-					</div>
-					<div class="perf-effect-text">
-						<span>Performance effect</span><div class="text-ng">-4,992 USD</div>
+			</li>
+			<!---->
+			<li class="larger-font" style="background-color:#f4d3a6;">
+				<div class="column-issue">Revenge Trading</div>
+				<div class="column-severity">
+					<div class="sev-bar">
+						<div class="sev-bar-dot" style="left:calc(80% - 9.6px);"></div>
 					</div>
 				</div>
-			</div>
-			<!-- -->
-			<div class="top-report-box">
-				<div class="top-report-box-header">
-					4. Overtrading 
-					<a class="btn-info" id="" style="margin-right:-5px; position:relative"><span class="ht-info"></span><div class="info-text">Further details</div></a>
+				<div class="column-effect"><span class="text-ng">-5,281 USD</span></div>
+				<div class="column-info">
+					<a class="btn-info" id="modalinfo2" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
 				</div>
-				<div class="top-report-box-body">
-					<div class="severity-text">65% severity</div>
-					<div class="sev-bar-top">
-						<div class="sev-bar-dot-top" style="left:calc(65% - 13px);"></div>
-					</div>
-					<div class="perf-effect-text">
-						<span>Performance effect</span><div class="text-ng">-4,225 USD</div>
+			</li>
+			<!---->
+			<li class="larger-font" style="background-color:#ffe3bd;">
+				<div class="column-issue">Late trade entry</div>
+				<div class="column-severity">
+					<div class="sev-bar">
+						<div class="sev-bar-dot" style="left:calc(75% - 9px);"></div>
 					</div>
 				</div>
-			</div>
-		</div>
-
+				<div class="column-effect"><span class="text-ng">-4,992 USD</span></div>
+				<div class="column-info">
+					<a class="btn-info" id="modalinfo3" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+				</div>
+			</li>
+		</ul>
 		<div style="height:4px;"></div>
 		<!-- other issues -->
 		<!-- accordion -->
@@ -347,11 +314,18 @@
 			</button>
 			<div class="panel">
 				<ul class="medic-report">
-					<li style="font-size:12px; background-color:#666666; color:#ffffff;">
-						<div class="column-issue"><strong>Issue</strong></div>
-						<div class="column-severity"><strong>Severity</strong></div>
-						<div class="column-effect"><strong>Performance effect</strong></div>
-						<div class="column-info"><strong>Further details</strong></div>
+					<!---->
+					<li>
+						<div class="column-issue">Overtrading</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-dot" style="left:65%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-ng">-4,225 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" id="" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+						</div>
 					</li>
 					<!---->
 					<li>
@@ -662,7 +636,7 @@
 			</button>
 			<div class="panel" style="margin-bottom:0px;">
 				<ul class="medic-report">
-					<li style="font-size:12px;  background-color:#666666; color:#ffffff;">
+					<li style="font-size:12px; background-color: #cccccc;">
 						<div class="column-issue"><strong>Risk area</strong></div>
 						<div class="column-risk-ico"></div>
 						<div class="column-risk"></div>
