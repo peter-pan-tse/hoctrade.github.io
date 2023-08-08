@@ -73,6 +73,25 @@
 	.modal-content {
 		padding:60px 0 20px 0;
 	}
+	a.btn-alert-setting {
+		display: inline-block;
+		height: 24px;
+		width: auto;
+		padding: 2px 10px 2px 5px;
+		margin: 10px 0;
+		background-color:#047F92;
+		text-align: center;
+		text-decoration: none;
+		font-size: 14px;
+		font-weight: bold;
+		line-height: 24px;
+		color: #FFFFFF;
+		border-radius: 6px;
+		transition: all 0.3s ease;
+	}
+	a.btn-alert-setting:hover {
+		background-color:#06AFC9;
+	}
 </style>
 </head>
 <body>
@@ -213,7 +232,10 @@
 	
 	<!-- main content area -->
 	<!-- breadcrumb -->
-	<div class="breadcrumb"><div>Dashboard / <span class="active">Alerts</span></div></div>
+	<div class="breadcrumb" style="display:flex; justify-content: space-between;">
+		<div>Dashboard / <span class="active">Alerts</span></div>
+		<a class="btn-alert-setting" href="alert-setting.html"><span class="ht-gear"></span> Alert settings</a>
+	</div>
 	<!-- breadcrumb ended -->
 	<div class="main-content-container">
 		
