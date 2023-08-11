@@ -6,7 +6,9 @@
 	<link href="https://fonts.googleapis.com/css?family=Noto Sans:400,700,900" rel="stylesheet">
 	<link href="font.css" rel="stylesheet">
 	<link href="landing.css" rel="stylesheet">
+	<link href="landing-new.css" rel="stylesheet">
 	<link href="burger-menu-ht-landing.css" rel="stylesheet">
+	<link href="modal-theme.css" rel="stylesheet">
 	<link rel="icon" href="img/favicon.svg">
 	<title>hoc-trade</title>
 	<!-- write your code here -->
@@ -16,64 +18,17 @@
 			margin:0px;
 			overflow-x: hidden;
 		}
-		.video-container {
-			height: 56.25vw;
-			max-height: 100vh;
-			width: 100vw;
-			position: relative;
-			display:block;
+		.container {
+		    width: 100vw;
+		    height: 100vh;
+		    scroll-snap-type: y mandatory;
+		    overflow-y: scroll;
+			overflow-x:hidden;
+			transition:all ease 0.5s;
 		}
-		@media only screen and (max-width: 540px) {
-			.video-container {
-				height: 177.7vw;
-				max-height: auto;
-			}
-		}
-		.video-container video {
-		  width: 100vw;
-		  height: auto;
-		  position: absolute;
-		  object-fit: cover;
-		  z-index: 0;
-		}
-		#audio-control, #audio-controlm {
-			position:absolute;
-			bottom:20px;
-			right:20px;
-			width:48px;
-			height:48px;
-			cursor:pointer;
-			text-align: center;
-			font-size: 32px;
-			line-height: 48px;
-			background:transparent;
-			color: #fff;
-		 	border-radius: 50%;
-			display: inline-block;
-			opacity: 0.5;
-			transition:all ease 0.3s;
-		}
-		#audio-control:hover, #audio-controlm:hover {
-			opacity: 1;
-		}
-		@media only screen and (max-width: 540px) {
-			#audio-control, #audio-controlm {
-				right:5px;
-				bottom:5px;
-				font-size: 28px;
-			}
-		}
-		.quote-h1 {
-			display:block; 
-			width:100%; 
-			color:#FFFFFF; 
-			text-align:center;
-		}
-		@media only screen and (max-width: 540px) {
-			.quote-h1 {
-				text-align:left;
-				padding:0 5px;
-			}
+
+		.container > * {
+		  scroll-snap-align: start;
 		}
 	</style>
 	<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>	
@@ -166,352 +121,276 @@
 				</nav>
 			<!-- mobile menu ended -->
 		</div>
-		
-		
-		<!-- theme --> 
-		<div class="theme-container">
-			<div class="desktop">
-				<div class="video-container">
-					<video autoplay muted loop id="topVideo">
-						<source src="img/landing-d.mp4" type="video/mp4" />
-					</video>
-					<div id="audio-control" class="muted ht-unmute"></div>
-				</div>
-			</div>
-			<div class="mobile">
-				<div class="video-container">
-					<video autoplay muted loop id="topVideom">
-						<source src="img/landing-m.mp4" type="video/mp4" />
-					</video>
-					<div id="audio-controlm" class="muted ht-unmute"></div>
-				</div>
-			</div>
-		</div>
 		<div class="header-bg"></div>
 		
-		<!-- sandbox mobile -->
-		<div class="mobile">
-			<a class="sandbox-block" href="#sandbox">
-				Create sandbox
-			</a>
-		</div>
+		<!-- container -->
+		<div class="container">
 		
-		<!-- top intro -->
-		<div class="module-block bg-top">
-			<div class="main-container" style="align-items:center; padding-bottom:20px; padding-top:40px;">
-				<div class="content-block-l">
-					<h2 style="color:#07c3e0;">Pioneer in AI-powered Trading Assistance</h2>
-					<p style="color:#FFFFFF;">Trade with an Edge</p>
-					<ul class="list-w" style="color:#FFFFFF;">
-						<li>Prevent destructive behaviors</li>
-						<li>Boost your strengths</li>
-						<li>Self-learning</li>
-						<li>Fully-automated</li>
-					</ul>
+			<!-- theme --> 
+			<div class="theme-container">
+				<div class="theme-text-box">
+					<h1>Elevate<br>your trading</h1>
+					<h2>with AI-powered behavioral<br>trading analytics &amp; alerts</h2>
+					<a class="btn-reg-free" href="#">REGISTER FOR FREE</a>
+					<a class="btn-explainer" id="video1"><span class="ht-video"></span> Watch explainer</a>
 				</div>
-				<div class="content-block-r">
-					<img class="img-responsive" src="img/top-video-image.png" />
+				<div class="theme-slideshow">
+					<div class="theme-slide">
+						<img src="img/ht-top-chart-1.png" />
+						<span>Revenge trading</span>
+					</div>
+					<div class="theme-slide">
+						<img src="img/ht-top-chart-2.png" />
+						<span>Overtrading</span>
+					</div>
+					<div class="theme-slide">
+						<img src="img/ht-top-chart-3.png" />
+						<span>Cut profits early</span>
+					</div>
 				</div>
+				<img class="theme-brain-r" src="img/ht-top-brain-r.png" />
 			</div>
-		</div>
-		
-		<!-- quote -->
-		<div class="module-block bg-quote">
-			
-			<div class="main-container" style="justify-content:center; align-items:stretch; padding-bottom:20px;">
-				<h1 class="quote-h1">What makes a successful Trader?</h1>
-				<div class="quote-block" style="background-color:rgba(255, 255, 255, 0.15);">
-					
-					<p><img src="img/blue-quote.png" width="48" /><br>Successful trading is about <strong>managing your psychology</strong>, not predicting the markets</p>
-					<span>Mark Douglas</span>
-				</div>
-				<div class="quote-block" style="background-color:rgba(255, 255, 255, 0.25);">
-					
-					<p><img src="img/blue-quote.png" width="48" /><br>Once we realize that imperfect understanding is the human condition, <strong>there is no shame in being wrong, only in failing to correct our mistakes</strong></p>
-					<span>George Soros</span>
-				</div>
-				<div class="quote-block" style="background-color:rgba(255, 255, 255, 0.2);">
-					
-					<p><img src="img/blue-quote.png" width="48" /><br>You have to identify your weaknesses, and work to change. [...] <strong>Look for repetitive patterns of success and failure</strong></p>
-					<span>Alexander Elder</span>
-				</div>
-			</div>
-			<div class="main-container" style="padding-top:0px;">
-				<h2 style="display:block; width:100%; text-align:center; color:#07c3e0;">Your trading patterns:<br>hoc-trade AI is the first tool to identify and reveal them in your trading data</h2>
-				<div class="counter-block counter-separator-v counter-separator-h">
-					<h3>100%</h3>
-					data-driven behavioral &amp; statistical analysis
-				</div>
-				<div class="counter-block counter-separator-v2 counter-separator-h">
-					<h3>40+</h3>
-					patterns already identified
-				</div>
-				<div class="counter-block counter-separator-v">
-					<h3>20+</h3>
-					real-time alerts for loss-making patterns &amp; excessive risk
-				</div>
-				<div class="counter-block">
-					<h3>$0</h3>
-					costs
-				</div>
-			</div>
-		</div>
 
-		<!-- alex -->
-		<div class="module-block">
-			<div class="main-container" style="align-items:flex-end; padding-bottom:20px;">
-				<div class="content-block-l">
-					<h1>Our AI identifies your loss-making trading patterns</h1>
-					<p>Just like Alex, most traders face multiple loss-making behaviours, often times leading to an overall negative performance.</p>
-					<p><strong>ALEX</strong></p>
-					<ul class="list">
-						<li>daytrading Forex &amp; Crypto</li>
-						<li>applied different technical trading strategies</li>
-						<li>shows overall negative trading performance, however has many days and weeks in profit</li>
-					</ul>
+
+			<!-- sandbox mobile -->
+			<div class="mobile">
+				<a class="sandbox-block" href="#sandbox">
+					Create sandbox
+				</a>
+			</div>
+
+			<!-- quote -->
+			<div class="general-container">
+				<h1>What makes a successful Trader?</h1>
+				<div style="height:40px;"></div>
+				<div class="quote-container">
+					<div class="quote-block-l">	
+						<p><img src="img/blue-quote.png" width="48" /><br>Successful trading is about <strong>managing your psychology</strong>, not predicting the markets</p>
+						<span>Mark Douglas</span>
+					</div>
+					<div class="quote-block-m">
+						<p><img src="img/blue-quote.png" width="48" /><br>You have to identify your weaknesses, and work to change. [...] <strong>Look for repetitive patterns of success and failure</strong></p>
+						<span>Alexander Elder</span>
+					</div>
+					<div class="quote-block-r">
+						<p><img src="img/blue-quote.png" width="48" /><br>Once we realize that imperfect understanding is the human condition, <strong>there is no shame in being wrong, only in failing to correct our mistakes</strong></p>
+						<span>George Soros</span>
+					</div>
 				</div>
-				<div class="content-block-r alex">
-					<img class="img-responsive" src="img/alex.png" />
-				</div>
-				<div class="content-block-w">
-					<p>Alex heard about the importance of psychology &amp; managing emotions in trading and now uses hoc-trade for tailored and automated behavioral analytics.</p>
-					<p><strong>See some of Alex's trading patterns and improvement potentials below!</strong></p>
+				<h3><span style="font-weight:normal;">Your trading patterns:</span><br>hoc-trade AI is the first tool to identify and reveal them in your trading data</h3>
+			</div>
+
+			<!-- problem & solution -->
+			<div class="general-container">
+				<h1>Gain a holistic view on your Trading</h1>
+				<h3>How the hoc-trade AI identified your loss-making behaviors</h3>
+				<div class="tabs effect-1"><!-- tab label -->
+						<!-- tab-title -->
+						<input type="radio" id="tab-1" name="tab-effect-1" checked="checked"><span style="margin-left:0;"><div class="icon ht-coffee"></div><span class="desktop">Behavioral</span><div class="tab-subtitle"><span class="desktop">Detect toxic behaviors</span></div></span>
+						<input type="radio" id="tab-2" name="tab-effect-1"><span><div class="icon ht-timing"></div><span class="desktop">Timing</span><div class="tab-subtitle"><span class="desktop">Improve trade timing</span></div></span>
+						<input type="radio" id="tab-3" name="tab-effect-1"><span><div class="icon ht-alert"></div><span class="desktop">Risk</span><div class="tab-subtitle"><span class="desktop">Warn of excessive risk</span></div></span>
+						<input type="radio" id="tab-4" name="tab-effect-1"><span><div class="icon ht-chess-castle"></div><span class="desktop">Strategic</span><div class="tab-subtitle"><span class="desktop">Find strategic errors</span></div></span>
+						<input type="radio" id="tab-5" name="tab-effect-1"><span style="margin-right:0;"><div class="icon ht-coins"></div><span class="desktop">Costs</span><div class="tab-subtitle"><span class="desktop">Identify cost savings</span></div></span>
+					<!-- tab-content -->
+					<div class="tab-content">
+
+						<section id="tab-item-1">
+							<div class="tab-content-container">
+								<div class="tab-content-problem">
+									<h2 class="mobile" style="color:#c15457; margin-bottom:10px;">Behavioral</h2>
+									<h3 class="mobile" style="color:#c15457; margin-bottom:10px;">Detect toxic behaviors</h3>
+									<h3 style="color:#c15457; margin-top:10px;"><strong>Break after loss trade</strong></h3>
+									<p style="color:#c15457;">You appear to emotionally re-enter the market very quick after closing a loss trade.</p>
+								</div>
+								<div class="tab-content-solution">
+									<h3 style="color:#047f92; margin-top:10px;">Our solution</h3>
+									<p style="color:#047f92;">You trade quickly after a loss trade show a significantly negative performance. <strong>If you take the time to analyze the market, the trades show a profitable result on average.</strong></p>
+								</div>
+								<div class="tab-content-pic"><img src="img/chart-behavioral.png" /></div>
+							</div>
+						</section><!-- item 1 -->
+
+						<section id="tab-item-2">
+							<div class="tab-content-container">
+								<div class="tab-content-problem">
+									<h2 class="mobile" style="color:#c15457; margin-bottom:10px;">Timing</h2>
+									<h3 class="mobile" style="color:#c15457; margin-bottom:10px;">Improve trade timing</h3>
+									<h3 style="color:#c15457; margin-top:10px;"><strong>Cutting profits early</strong></h3>
+									<p style="color:#c15457;">You tend to manually close your profitable trades before they reach your Take Profit level.</p>
+								</div>
+								<div class="tab-content-solution">
+									<h3 style="color:#047f92; margin-top:10px;">Our solution</h3>
+									<p style="color:#047f92;">If You would have done nothing during your profitable trades, just let your trades go into the Take Profit or Stop Loss, <strong>You would have made significantly more profit.</strong></p>
+								</div>
+								<div class="tab-content-pic"><img src="img/chart-timing.png" /></div>
+							</div>
+						</section><!-- item 2 -->
+
+						<section id="tab-item-3">
+							<div class="tab-content-container">
+								<div class="tab-content-problem">
+									<h2 class="mobile" style="color:#c15457; margin-bottom:10px;">Risk</h2>
+									<h3 class="mobile" style="color:#c15457; margin-bottom:10px;">Warn of excessive risk</h3>
+									<h3 style="color:#c15457; margin-top:10px;"><strong>Doubling-down</strong></h3>
+									<p style="color:#c15457;">You do not early cut losing trades early, but adds additional positions to it.</p>
+								</div>
+								<div class="tab-content-solution">
+									<h3 style="color:#047f92; margin-top:10px;">Our solution</h3>
+									<p style="color:#047f92;"><strong>You would have higher profits if not applying a DCA (dollar-cost-average) strategy</strong>. Adding positions to a loss trade shows a negative result on average for you.</strong></p>
+								</div>
+								<div class="tab-content-pic"><img src="img/chart-risk.png" /></div>
+							</div>
+						</section><!-- item 3 -->
+
+						<section id="tab-item-4">
+							<div class="tab-content-container">
+								<div class="tab-content-problem">
+									<h2 class="mobile" style="color:#c15457; margin-bottom:10px;">Strategic</h2>
+									<h3 class="mobile" style="color:#c15457; margin-bottom:10px;">Find strategic errors</h3>
+									<h3 style="color:#c15457; margin-top:10px;"><strong>News trading</strong></h3>
+									<p style="color:#c15457;">You try to make profits during volatile times, however ends up losing.</p>
+								</div>
+								<div class="tab-content-solution">
+									<h3 style="color:#047f92; margin-top:10px;">Our solution</h3>
+									<p style="color:#047f92;"><strong>Your trading performance is significantly better during low volatile markets</strong>. When trading during fast and large price movements, result in total lost 2,000 USD.</p>
+								</div>
+								<div class="tab-content-pic"><img src="img/chart-strategic.png" /></div>
+							</div>
+						</section><!-- item 4 -->
+
+						<section id="tab-item-5">
+							<div class="tab-content-container">
+								<div class="tab-content-problem">
+									<h2 class="mobile" style="color:#c15457; margin-bottom:10px;">Costs</h2>
+									<h3 class="mobile" style="color:#c15457; margin-bottom:10px;">Identify cost savings</h3>
+									<h3 style="color:#c15457; margin-top:10px;"><strong>Overpaying fees</strong></h3>
+									<p style="color:#c15457;">You could save lots of fees for the exact same trades if using a different broker.</p>
+								</div>
+								<div class="tab-content-solution">
+									<h3 style="color:#047f92; margin-top:10px;">Our solution</h3>
+									<p style="color:#047f92;">Large fees paid for spreads &amp; commission/exchange fees significantly hurt your trading performance. <strong>You would be able to save a majority of those fees if trading with another broker.</strong></p>
+								</div>
+								<div class="tab-content-pic"><img src="img/chart-costs.png" /></div>
+							</div>
+						</section><!-- item 5 -->
+
+					</div>
+				</div><!-- tab label end -->
+			</div>
+	
+			<!-- sandbox -->
+			<div id="sandbox" class="general-container bg-sandbox">
+				<div class="main-container">
+					<div class="content-block-w">
+						<h1 style="margin-bottom:0px;">Create a sandbox to experience how hoc-trade AI helps improve your trading performance <sup class="comingsoon">COMING<br>SOON</sup></h1>
+					</div>
+					<div class="content-block-l">
+						<p>hoc-trade AI sandbox is a fully functional environmnet which allows you to surf around to experience the powerful functionalities of the application.</p>
+						<p>
+							<strong>Just drop your email and try it right away!</strong><br><br>
+							<input class="sandbox-input" type="email"><br>
+							<span class="disclaimer">By clicking on the START button, you agree to the terms &amp; conditions of hoc-trade and the use of your email address for marketing and promotional purposes.</span>
+						</p>
+						<a class="btn-submit" href="#">START</a>
+					</div>
+					<div class="content-block-r">
+						<img class="img-responsive" src="img/sandbox-screenshot.png" />
+					</div>
 				</div>
 			</div>
+
+			<!-- how to diagram -->
+			<div class="general-container">
+				<div class="main-container" style="justify-content: center;">
+					<h1 style="margin-bottom:0;">How does the hoc-trade AI work</h1>
+					<div class="diagram-container">
+						<div class="diagram-animation-container step-wrapper">
+							<img class="diagram-step2" src="img/hoc-trade-diagram-2.png" />
+							<img class="diagram-step1" src="img/hoc-trade-diagram-1.png" />
+							<img class="diagram-step3" src="img/hoc-trade-diagram-3.png" />
+							<img class="diagram-step4" src="img/hoc-trade-diagram-4.png" />
+							<img class="diagram-step6" src="img/hoc-trade-diagram-6.png" />
+							<img class="diagram-step5" src="img/hoc-trade-diagram-5.png" />
+							<img class="diagram-step7" src="img/hoc-trade-diagram-7.png" />
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- platforms -->
+			<div class="general-container">
+				<div class="main-container">
+					<div class="content-block-w">
+						<img src="img/platform-logo-metatrader.svg" height="120" />
+						<h1>Easy &amp; Secure</h1>
+						<h2>Simply connect your trading platform to hoc-trade</h2>
+						<p>We will utilize a read-only access to your trading account. We will at no times be able to interfere with your trading.</p>
+						<a class="btn-submit" href="#">REGISTER FOR FREE</a>
+					</div>
+				</div>
+				<!-- logo slider -->
+				<div class="slider">
+					<div class="slide-track">
+						<div class="slide">
+							<img src="img/platform-logo-binance.svg" /><br>Binance
+						</div>
+						<div class="slide">
+							<img src="img/platform-logo-coinbase.svg" /><br>Coinbase
+						</div>
+						<div class="slide">
+							<img src="img/platform-logo-uphold.svg" /><br>Uphold
+						</div>
+						<div class="slide">
+							<img src="img/platform-logo-hodlnaut.svg" /><br>Hodlnaut
+						</div>
+						<div class="slide">
+							<img src="img/platform-logo-binance.svg" /><br>Binance
+						</div>
+						<div class="slide">
+							<img src="img/platform-logo-coinbase.svg" /><br>Coinbase
+						</div>
+						<div class="slide">
+							<img src="img/platform-logo-uphold.svg" /><br>Uphold
+						</div>
+						<div class="slide">
+							<img src="img/platform-logo-hodlnaut.svg" /><br>Hodlnaut
+						</div>
+					</div>
+				</div>
+			</div><!-- module-block end -->
+			<!-- footer -->
+			<div class="module-block bg-footer">
+				<div class="main-container" style="padding:30px 0;">
+					<div class="footer">
+						<div class="footer-copy">
+							<span class="ht-logo"></span><strong>hoc-trade</strong>&nbsp;&nbsp;&nbsp; &copy; 2023 hoc-trade limited, all rights reserved
+						</div>
+						<div class="footer-links">
+							<span class="separator"><span class="desktop">|</span></span><a href="tandc-ht.html">Terms &amp; conditions</a><span class="separator">|</span><a href="privacy-ht.html">Privacy policy</a><!--<span class="separator">|</span><a href="advertise-w-ht.html">advertise with us</a>--><span class="separator">|</span><a href="about-ht.html">About us</a><span class="separator">|</span><a href="contact-ht.html">Contact us</a>
+						</div>
+						<div class="footer-social">
+							<a class="social" href="#"><span class="ht-logo-fb"></span></a><a class="social" href="#"><span class="ht-logo-twitter"></span></a><a class="social" href="#"><span class="ht-logo-in"></span></a><a class="social" href="#"><span class="ht-logo-yt"></span></a><a class="social" href="#"><span class="ht-logo-ig"></span></a><a class="social" href="#"><span class="ht-logo-discd"></span></a>
+						</div>
+						<p class="disclaimer">HIGH RISK WARNING: Foreign exchange and other CFD trading carries a high level of risk and may not be suitable for everyone. The usage of leverage creates additional risk and loss exposure. Your investment objectives, experience level and risk tolerance have to be taken into consideration before you decide to trade foreign exchange or other CFD products. You could lose some or all of your entire investment. Do not invest money that you cannot afford to lose and always use an appropriate risk management. It’s important to educate yourself on the risks associated with foreign exchange trading, and seek professional advice from an independent financial or tax advisor in case of any questions. Any data and information is provided ‘as is’ solely for informational purposes, and is not intended for trading purposes or advice. Past performance, which are presented on this website or you find somewhere else, is not indicative of future results.</p>
+					</div>
+				</div>
+			</div>
+			
 		</div>
-		<!-- problem & solution -->
-		<div class="module-block">
-			<h2 align="center" style="color:#c15457;">Alex's problems</h2>
-			<div class="tabs effect-1"><!-- tab label -->
-					<!-- tab-title -->
-					<input type="radio" id="tab-1" name="tab-effect-1" checked="checked"><span style="margin-left:0;"><div class="icon ht-coffee"></div><span class="desktop">Behavioral</span></span>
-					<input type="radio" id="tab-2" name="tab-effect-1"><span><div class="icon ht-timing"></div><span class="desktop">Timing</span></span>
-					<input type="radio" id="tab-3" name="tab-effect-1"><span><div class="icon ht-alert"></div><span class="desktop">Risk</span></span>
-					<input type="radio" id="tab-4" name="tab-effect-1"><span><div class="icon ht-chess-castle"></div><span class="desktop">Strategic</span></span>
-					<input type="radio" id="tab-5" name="tab-effect-1"><span style="margin-right:0;"><div class="icon ht-coins"></div><span class="desktop">Costs</span></span>
-				<!-- tab-content -->
-				<div class="tab-content">
-					
-					<section id="tab-item-1">
-						<div class="tab-content-problem">
-							<h2 class="mobile" style="color:#c15457; margin-bottom:10px;">Behavioral</h2>
-							<p style="color:#c15457;"><strong>Break after loss trade</strong></p>
-							<p style="color:#c15457;">Alex appears to emotionally re-enter the market very quick after closing a loss trade.</p>
-						</div>
-						<div class="tab-content-pic"><img src="img/chart-behavioral.png" /></div>
-						<div class="tab-content-solution">
-							<h2 style="color:#047f92; margin-top:10px;">Our solution</h2>
-							<p style="color:#047f92;">Alex trades quickly after a loss trade show a significantly negative performance. <strong>If Alex takes the time to analyze the market, the trades show a profitable result on average.</strong></p>
-						</div>
-					</section><!-- item 1 -->
-					
-					<section id="tab-item-2">
-						<div class="tab-content-problem">
-							<h2 class="mobile" style="color:#c15457; margin-bottom:10px;">Timing</h2>
-							<p style="color:#c15457;"><strong>Trade closed earlier/later</strong></p>
-							<p style="color:#c15457;">Alex closes winning trades very early, missing out on further profit.</p>
-						</div>
-						<div class="tab-content-pic"><img src="img/chart-timing.png" /></div>
-						<div class="tab-content-solution">
-							<h2 style="color:#047f92; margin-top:10px;">Our solution</h2>
-							<p style="color:#047f92;"><strong>Alex could increase performance if closing winning trades min. 5min later</strong>. It appears Alex is not fully following one of the major trading principles of cutting losing trades early &amp; letting winning trades run.</p>
-						</div>
-					</section><!-- item 2 -->
-					
-					<section id="tab-item-3">
-						<div class="tab-content-problem">
-							<h2 class="mobile" style="color:#c15457; margin-bottom:10px;">Risk</h2>
-							<p style="color:#c15457;"><strong>Adding to a loss trade</strong></p>
-							<p style="color:#c15457;">Alex does not early cut losing trades early, but adds additional positions to it.</p>
-						</div>
-						<div class="tab-content-pic"><img src="img/chart-risk.png" /></div>
-						<div class="tab-content-solution">
-							<h2 style="color:#047f92; margin-top:10px;">Our solution</h2>
-							<p style="color:#047f92;"><strong>Alex would have higher profits if not applying a DCA (dollar-cost-average) strategy</strong>. Adding positions to a loss trade shows a negative result on average for Alex.</p>
-						</div>
-					</section><!-- item 3 -->
-					
-					<section id="tab-item-4">
-						<div class="tab-content-problem">
-							<h2 class="mobile" style="color:#c15457; margin-bottom:10px;">Strategic</h2>
-							<p style="color:#c15457;"><strong>Profit in high vs. low volatility</strong></p>
-							<p style="color:#c15457;">Alex tries to make profits during volatile times, however ends up losing.</p>
-						</div>
-						<div class="tab-content-pic"><img src="img/chart-strategic.png" /></div>
-						<div class="tab-content-solution">
-							<h2 style="color:#047f92; margin-top:10px;">Our solution</h2>
-							<p style="color:#047f92;"><strong>Alex's trading performance is significantly better during low volatile markets</strong>. When trading during fast and large price movements, Alex in total lost 2,000USD.<br>&nbsp;</p>
-						</div>
-					</section><!-- item 4 -->
-					
-					<section id="tab-item-5">
-						<div class="tab-content-problem">
-							<h2 class="mobile" style="color:#c15457; margin-bottom:10px;">Costs</h2>
-							<p style="color:#c15457;"><strong>Spread &amp; commission</strong></p>
-							<p style="color:#c15457;">Alex could save lots of fees for the exact same trades if using a different broker.</p>
-						</div>
-						<div class="tab-content-pic"><img src="img/chart-costs.png" /></div>
-						<div class="tab-content-solution">
-							<h2 style="color:#047f92; margin-top:10px;">Our solution</h2>
-							<p style="color:#047f92;">Large fees paid for spreads &amp; commission/exchange fees significantly hurt Alex's trading performance. <strong>Alex would be able to save a majority of those fees if trading with another broker.</strong></p>
-						</div>
-					</section><!-- item 5 -->
-					
-				</div>
-			</div><!-- tab label end -->
-		</div>
-		<!-- counter -->
-		<div class="module-block">
-			<div class="main-container bg-blue problem-footer">
-				<!--<div class="counter-block counter-separator-v counter-separator-h">
-					<h3>100%</h3>
-					Data-driven behavioral &amp; statistical analysis
-				</div>
-				<div class="counter-block counter-separator-v2 counter-separator-h">
-					<h3>40+</h3>
-					Trading patterns analytics
-				</div>
-				<div class="counter-block counter-separator-v">
-					<h3>20+</h3>
-					Real-time alerts for loss-making patterns &amp; excessive risk
-				</div>
-				<div class="counter-block">
-					<h3>$0</h3>
-					Costs
-				</div>-->
+		<!-- container ended -->
+		<div style="width:100vw; height:1px; background-color:#033c45;"></div>
+
+		<!-- The Modal -->
+		<div id="modalInfoBox" class="modal">
+		<!-- Modal content -->
+			<div class="modal-header">
+				<div class="close"><span class="ht-cross"></span></div>
 			</div>
-		</div>
-		<!-- how to diagram -->
-		<div class="module-block bg-howto">
-			<div class="main-container" style="justify-content: center;">
-				<h1 style="margin:0 10px;">How does the hoc-trade AI work</h1>
-				<div class="diagram-container">
-					<div class="diagram-animation-container step-wrapper">
-						<img class="diagram-step2" src="img/hoc-trade-diagram-2.png" />
-						<img class="diagram-step1" src="img/hoc-trade-diagram-1.png" />
-						<img class="diagram-step3" src="img/hoc-trade-diagram-3.png" />
-						<img class="diagram-step4" src="img/hoc-trade-diagram-4.png" />
-						<img class="diagram-step6" src="img/hoc-trade-diagram-6.png" />
-						<img class="diagram-step5" src="img/hoc-trade-diagram-5.png" />
-						<img class="diagram-step7" src="img/hoc-trade-diagram-7.png" />
-					</div>
-				</div>
+			<div class="modal-video-box">
+				<iframe class="modal-video" src="https://www.youtube.com/embed/LemZIhFS9QI" title="27 Profit of conflicting symbols VV" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
-		</div>
-		<!-- sandbox -->
-		<div class="module-block bg-sandbox" id="sandbox">
-			<div class="main-container" style="padding-bottom:60px;">
-				<div class="content-block-w">
-					<h1 style="margin-bottom:0px;">Create a sandbox to experience how hoc-trade AI helps improve your trading performance <sup class="comingsoon">COMING<br>SOON</sup></h1>
-				</div>
-				<div class="content-block-l">
-					<p>hoc-trade AI sandbox is a fully functional environmnet which allows you to surf around to experience the powerful functionalities of the application.</p>
-					<p>
-						<strong>Just drop your email and try it right away!</strong><br><br>
-						<input class="sandbox-input" type="email"><br>
-						<span class="disclaimer">By clicking on the START button, you agree to the terms &amp; conditions of hoc-trade and the use of your email address for marketing and promotional purposes.</span>
-					</p>
-					<a class="btn-submit" href="#">START</a>
-				</div>
-				<div class="content-block-r">
-					<img class="img-responsive" src="img/sandbox-screenshot.png" />
-				</div>
-			</div>
-		</div>
-		<!-- academy -->
-		<div class="module-block bg-grey">
-			<div class="main-container" style="padding-bottom:60px;">
-				<div class="content-block-l">
-					<h1>Learn in our academy <sup class="comingsoon">COMING<br>SOON</sup></h1>
-					<p>From Beginner to Professional: Our academy covers detailed background, explanation &amp; interpretation of the analytics charts, as well as beginner-friendly trading basics</p>
-					<a class="btn-blue" href="#" target="_blank">View all videos</a>
-				</div>
-				<div class="content-block-r">
-					<div class="video-box">
-						<iframe class="video" src="https://www.youtube.com/embed/LemZIhFS9QI" title="hoc-trade academy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- scoreboard -->
-		<div class="module-block">
-			<div class="main-container" style="padding-bottom:60px;">
-				<div class="content-block-l">
-					<h1>Learn from your peers <sup class="comingsoon">COMING<br>SOON</sup></h1>
-					<ul class="list">
-						<li>Visit profitable traders' analytical charts &amp; discuss with them.</li>
-						<li>Share your own analytics output and receive feedback from peers.</li>
-						<li>Analyse the built-in benchmark to profitable traders in your analytics output.</li>
-					</ul>
-				</div>
-				<div class="content-block-r">
-					<img class="img-responsive" src="img/scoreboard.png" />
-				</div>
-			</div>
-		</div>
-		<!-- platforms -->
-		<div class="module-block bg-grey">
-			<div class="main-container" style="padding-bottom:40px;">
-				<div class="content-block-w">
-					<h1>Easy &amp; Secure<br>Simply connect your trading platform to hoc-trade</h1>
-					<p>We will utilize a read-only access to your trading account. We will at no times be able to interfere with your trading.</p>
-					<a class="btn-submit" href="#">REGISTER NOW</a>
-				</div>
-			</div>
-			<!-- logo slider -->
-			<div class="slider">
-				<div class="slide-track">
-					<div class="slide forex">
-						<img src="img/platform-logo-metatrader.svg" /><br>MetaTrader 4
-					</div>
-					<div class="slide">
-						<img src="img/platform-logo-binance.svg" /><br>Binance
-					</div>
-					<div class="slide">
-						<img src="img/platform-logo-coinbase.svg" /><br>Coinbase
-					</div>
-					<div class="slide">
-						<img src="img/platform-logo-uphold.svg" /><br>Uphold
-					</div>
-					<div class="slide">
-						<img src="img/platform-logo-hodlnaut.svg" /><br>Hodlnaut
-					</div>
-					<div class="slide forex">
-						<img src="img/platform-logo-metatrader.svg" /><br>MetaTrader 4
-					</div>
-					<div class="slide">
-						<img src="img/platform-logo-binance.svg" /><br>Binance
-					</div>
-					<div class="slide">
-						<img src="img/platform-logo-coinbase.svg" /><br>Coinbase
-					</div>
-					<div class="slide">
-						<img src="img/platform-logo-uphold.svg" /><br>Uphold
-					</div>
-					<div class="slide">
-						<img src="img/platform-logo-hodlnaut.svg" /><br>Hodlnaut
-					</div>
-				</div>
-			</div>
-		</div><!-- module-block end -->
-		</div><!-- wrapper -->
-		<!-- footer -->
-		<div class="module-block bg-footer">
-			<div class="main-container" style="padding:30px 0;">
-				<div class="footer">
-					<div class="footer-copy">
-						<span class="ht-logo"></span><strong>hoc-trade</strong>&nbsp;&nbsp;&nbsp; &copy; 2023 hoc-trade limited, all rights reserved
-					</div>
-					<div class="footer-links">
-						<span class="separator"><span class="desktop">|</span></span><a href="tandc-ht.html">Terms &amp; conditions</a><span class="separator">|</span><a href="privacy-ht.html">Privacy policy</a><!--<span class="separator">|</span><a href="advertise-w-ht.html">advertise with us</a>--><span class="separator">|</span><a href="about-ht.html">About us</a><span class="separator">|</span><a href="contact-ht.html">Contact us</a>
-					</div>
-					<div class="footer-social">
-						<a class="social" href="#"><span class="ht-logo-fb"></span></a><a class="social" href="#"><span class="ht-logo-twitter"></span></a><a class="social" href="#"><span class="ht-logo-in"></span></a><a class="social" href="#"><span class="ht-logo-yt"></span></a><a class="social" href="#"><span class="ht-logo-ig"></span></a><a class="social" href="#"><span class="ht-logo-discd"></span></a>
-					</div>
-					<p class="disclaimer">HIGH RISK WARNING: Foreign exchange and other CFD trading carries a high level of risk and may not be suitable for everyone. The usage of leverage creates additional risk and loss exposure. Your investment objectives, experience level and risk tolerance have to be taken into consideration before you decide to trade foreign exchange or other CFD products. You could lose some or all of your entire investment. Do not invest money that you cannot afford to lose and always use an appropriate risk management. It’s important to educate yourself on the risks associated with foreign exchange trading, and seek professional advice from an independent financial or tax advisor in case of any questions. Any data and information is provided ‘as is’ solely for informational purposes, and is not intended for trading purposes or advice. Past performance, which are presented on this website or you find somewhere else, is not indicative of future results.</p>
-				</div>
-			</div>
-		</div>
+		</div>		
+
 	</body>
 	<script>
 		const observer = new IntersectionObserver(entries => {
@@ -576,4 +455,5 @@
 			}
 		});
 	</script>
+	<script src="modal-theme.js" language="javascript"></script>
 </html>
