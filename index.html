@@ -9,6 +9,7 @@
 	<link href="landing-new.css" rel="stylesheet">
 	<link href="burger-menu-ht-landing.css" rel="stylesheet">
 	<link href="modal-theme.css" rel="stylesheet">
+	<link href="slideshow.css" rel="stylesheet">
 	<link rel="icon" href="img/favicon.svg">
 	<title>hoc-trade</title>
 	<!-- write your code here -->
@@ -29,6 +30,15 @@
 
 		.container > * {
 		  scroll-snap-align: start;
+		}
+		.logo-mt4 {
+			display:flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 20px;
+			color:#047f92;
+			font-weight: bold;
 		}
 	</style>
 	<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>	
@@ -136,15 +146,12 @@
 				</div>
 				<div class="theme-slideshow">
 					<div class="theme-slide">
-						<img src="img/ht-top-chart-1.png" />
 						<span>Revenge trading</span>
 					</div>
 					<div class="theme-slide">
-						<img src="img/ht-top-chart-2.png" />
 						<span>Overtrading</span>
 					</div>
 					<div class="theme-slide">
-						<img src="img/ht-top-chart-3.png" />
 						<span>Cut profits early</span>
 					</div>
 				</div>
@@ -158,10 +165,41 @@
 					Create sandbox
 				</a>
 			</div>
+			
+			<!-- slideshow 1 -->
+			<div class="general-container">
+				<h1>We empower traders</h1>
+				<div class="slideshow1-container">
+					<div class="mySlides fade">
+						<div class="slide-content-box">
+							<h2>Our algorithms detect &amp; quantify your trading issues</h2>
+							<!--<img src="img/trade-medic-screenshot.png" />-->
+						</div>
+					</div>
+					<div class="mySlides fade">
+						<div class="slide-content-box">
+							<h2>Understand your losses through personalized, in-depth analytics</h2>
+						</div>
+					</div>
+					<div class="mySlides fade">
+						<div class="slide-content-box">
+							<h2>Track your improvement on your personal dashboard</h2>
+							<h2>Be warned when showing similar behaviors again</h2>
+						</div>
+					</div>
+					<div class="dot-container">
+						<span class="dot">Detect</span>
+						<span class="dot">Understand</span>
+						<span class="dot">Improve</span>
+					</div>
+					<a class="prev" onclick="prevSlide()"><span class="ht-back-arrow"></span></a>
+					<a class="next" onclick="showSlides()"><span class="ht-next-arrow"></span></a>
+				</div>
+			</div>
 
 			<!-- quote -->
 			<div class="general-container">
-				<h1>What makes a successful Trader?</h1>
+				<h1>What makes a successful trader?</h1>
 				<div style="height:40px;"></div>
 				<div class="quote-container">
 					<div class="quote-block-l">	
@@ -177,7 +215,7 @@
 						<span>George Soros</span>
 					</div>
 				</div>
-				<h3><span style="font-weight:normal;">Your trading patterns:</span><br>hoc-trade AI is the first tool to identify and reveal them in your trading data</h3>
+				<h3 align="center" style="font-size:larger;"><span style="font-weight:normal;">Your trading patterns:</span><br>hoc-trade AI is the first tool to identify and reveal them in your trading data</h3>
 			</div>
 
 			<!-- problem & solution -->
@@ -186,19 +224,18 @@
 				<h3>How the hoc-trade AI identified your loss-making behaviors</h3>
 				<div class="tabs effect-1"><!-- tab label -->
 						<!-- tab-title -->
-						<input type="radio" id="tab-1" name="tab-effect-1" checked="checked"><span style="margin-left:0;"><div class="icon ht-coffee"></div><span class="desktop">Behavioral</span><div class="tab-subtitle"><span class="desktop">Detect toxic behaviors</span></div></span>
-						<input type="radio" id="tab-2" name="tab-effect-1"><span><div class="icon ht-timing"></div><span class="desktop">Timing</span><div class="tab-subtitle"><span class="desktop">Improve trade timing</span></div></span>
-						<input type="radio" id="tab-3" name="tab-effect-1"><span><div class="icon ht-alert"></div><span class="desktop">Risk</span><div class="tab-subtitle"><span class="desktop">Warn of excessive risk</span></div></span>
-						<input type="radio" id="tab-4" name="tab-effect-1"><span><div class="icon ht-chess-castle"></div><span class="desktop">Strategic</span><div class="tab-subtitle"><span class="desktop">Find strategic errors</span></div></span>
-						<input type="radio" id="tab-5" name="tab-effect-1"><span style="margin-right:0;"><div class="icon ht-coins"></div><span class="desktop">Costs</span><div class="tab-subtitle"><span class="desktop">Identify cost savings</span></div></span>
+						<input type="radio" id="tab-1" name="tab-effect-1" checked="checked"><span style="margin-left:0;"><div class="icon ht-coffee"></div><span class="desktop">Detect toxic behaviors</span></span>
+						<input type="radio" id="tab-2" name="tab-effect-1"><span><div class="icon ht-timing"></div><span class="desktop">Improve trade timing</span></span>
+						<input type="radio" id="tab-3" name="tab-effect-1"><span><div class="icon ht-alert"></div><span class="desktop">Warn of excessive risk</span></span>
+						<input type="radio" id="tab-4" name="tab-effect-1"><span><div class="icon ht-chess-castle"></div><span class="desktop">Find strategic errors</span></span>
+						<input type="radio" id="tab-5" name="tab-effect-1"><span style="margin-right:0;"><div class="icon ht-coins"></div><span class="desktop">Identify cost savings</span></span>
 					<!-- tab-content -->
 					<div class="tab-content">
 
 						<section id="tab-item-1">
 							<div class="tab-content-container">
 								<div class="tab-content-problem">
-									<h2 class="mobile" style="color:#c15457; margin-bottom:10px;">Behavioral</h2>
-									<h3 class="mobile" style="color:#c15457; margin-bottom:10px;">Detect toxic behaviors</h3>
+									<h2 class="mobile" style="color:#c15457; margin-bottom:10px;">Detect toxic behaviors</h2>
 									<h3 style="color:#c15457; margin-top:10px;"><strong>Break after loss trade</strong></h3>
 									<p style="color:#c15457;">You appear to emotionally re-enter the market very quick after closing a loss trade.</p>
 								</div>
@@ -213,8 +250,7 @@
 						<section id="tab-item-2">
 							<div class="tab-content-container">
 								<div class="tab-content-problem">
-									<h2 class="mobile" style="color:#c15457; margin-bottom:10px;">Timing</h2>
-									<h3 class="mobile" style="color:#c15457; margin-bottom:10px;">Improve trade timing</h3>
+									<h2 class="mobile" style="color:#c15457; margin-bottom:10px;">Improve trade timing</h2>
 									<h3 style="color:#c15457; margin-top:10px;"><strong>Cutting profits early</strong></h3>
 									<p style="color:#c15457;">You tend to manually close your profitable trades before they reach your Take Profit level.</p>
 								</div>
@@ -229,14 +265,13 @@
 						<section id="tab-item-3">
 							<div class="tab-content-container">
 								<div class="tab-content-problem">
-									<h2 class="mobile" style="color:#c15457; margin-bottom:10px;">Risk</h2>
-									<h3 class="mobile" style="color:#c15457; margin-bottom:10px;">Warn of excessive risk</h3>
+									<h2 class="mobile" style="color:#c15457; margin-bottom:10px;">Warn of excessive risk</h2>
 									<h3 style="color:#c15457; margin-top:10px;"><strong>Doubling-down</strong></h3>
 									<p style="color:#c15457;">You do not early cut losing trades early, but adds additional positions to it.</p>
 								</div>
 								<div class="tab-content-solution">
 									<h3 style="color:#047f92; margin-top:10px;">Our solution</h3>
-									<p style="color:#047f92;"><strong>You would have higher profits if not applying a DCA (dollar-cost-average) strategy</strong>. Adding positions to a loss trade shows a negative result on average for you.</strong></p>
+									<p style="color:#047f92;"><strong>You would have higher profits if not applying a DCA (dollar-cost-average) strategy</strong>. Adding positions to a loss trade shows a negative result on average for you.</p>
 								</div>
 								<div class="tab-content-pic"><img src="img/chart-risk.png" /></div>
 							</div>
@@ -245,8 +280,7 @@
 						<section id="tab-item-4">
 							<div class="tab-content-container">
 								<div class="tab-content-problem">
-									<h2 class="mobile" style="color:#c15457; margin-bottom:10px;">Strategic</h2>
-									<h3 class="mobile" style="color:#c15457; margin-bottom:10px;">Find strategic errors</h3>
+									<h2 class="mobile" style="color:#c15457; margin-bottom:10px;">Find strategic errors</h2>
 									<h3 style="color:#c15457; margin-top:10px;"><strong>News trading</strong></h3>
 									<p style="color:#c15457;">You try to make profits during volatile times, however ends up losing.</p>
 								</div>
@@ -261,8 +295,7 @@
 						<section id="tab-item-5">
 							<div class="tab-content-container">
 								<div class="tab-content-problem">
-									<h2 class="mobile" style="color:#c15457; margin-bottom:10px;">Costs</h2>
-									<h3 class="mobile" style="color:#c15457; margin-bottom:10px;">Identify cost savings</h3>
+									<h2 class="mobile" style="color:#c15457; margin-bottom:10px;">Identify cost savings</h2>
 									<h3 style="color:#c15457; margin-top:10px;"><strong>Overpaying fees</strong></h3>
 									<p style="color:#c15457;">You could save lots of fees for the exact same trades if using a different broker.</p>
 								</div>
@@ -282,14 +315,18 @@
 			<div id="sandbox" class="general-container bg-sandbox">
 				<div class="main-container">
 					<div class="content-block-w">
-						<h1 style="margin-bottom:0px;">Create a sandbox to experience how hoc-trade AI helps improve your trading performance <sup class="comingsoon">COMING<br>SOON</sup></h1>
+						<h1 style="margin-bottom:0px;">Create a sandbox to experience how hoc-trade AI helps improve your trading performance</h1>
 					</div>
 					<div class="content-block-l">
 						<p>hoc-trade AI sandbox is a fully functional environmnet which allows you to surf around to experience the powerful functionalities of the application.</p>
 						<p>
 							<strong>Just drop your email and try it right away!</strong><br><br>
 							<input class="sandbox-input" type="email"><br>
-							<span class="disclaimer">By clicking on the START button, you agree to the terms &amp; conditions of hoc-trade and the use of your email address for marketing and promotional purposes.</span>
+							<label class="check-box">
+								<span style="font-size:14px;">I agree to the <a href="tandc-ht.html" target="_blank">Terms &amp; Conditions</a> and <a href="privacy-ht.html" target="_blank">Privacy Statement</a> and agree to receive promotional emails from hoc-trade</span>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+							</label>
 						</p>
 						<a class="btn-submit" href="#">START</a>
 					</div>
@@ -318,16 +355,22 @@
 			</div>
 			
 			<!-- platforms -->
-			<div class="general-container">
+			<div class="general-container" style="padding-top:80px;">
 				<div class="main-container">
 					<div class="content-block-w">
-						<img src="img/platform-logo-metatrader.svg" height="120" />
+						<div style="display:flex; justify-content: space-between">
+							<div class="logo-mt4">
+								<img src="img/platform-logo-metatrader.svg" height="120" />
+								<span>MetaTrader 4</span>
+							</div>
+						</div>
 						<h1>Easy &amp; Secure</h1>
 						<h2>Simply connect your trading platform to hoc-trade</h2>
 						<p>We will utilize a read-only access to your trading account. We will at no times be able to interfere with your trading.</p>
 						<a class="btn-submit" href="#">REGISTER FOR FREE</a>
 					</div>
 				</div>
+				<br>
 				<!-- logo slider -->
 				<div class="slider">
 					<div class="slide-track">
@@ -456,4 +499,5 @@
 		});
 	</script>
 	<script src="modal-theme.js" language="javascript"></script>
+	<script src="slide1.js" language="javascript"></script>
 </html>

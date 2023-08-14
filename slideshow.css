@@ -1,0 +1,131 @@
+﻿@charset "UTF-8";
+/* CSS Document */
+/* slideshow 1 */
+.mySlides {
+  display: none;
+}
+/* Slideshow container */
+.slideshow1-container {
+	position:relative;
+	display:flex;
+	justify-content: center;
+	align-items: flex-start;
+	margin-top: 120px;
+    height: calc(100vh - 330px);
+	width:100%;
+}
+.slide-content-box {
+	display:flex;
+	flex-direction:column;
+	justify-content: center;
+	align-items:flex-start;
+	width:100%;
+	max-width:1000px;
+	overflow-y:hidden;
+}
+.slide-content-box img {
+	max-width:500px;
+}
+/* The dots/bullets/indicators */
+.dot-container {
+	position:absolute;
+	top:-100px;
+	left:0;
+	display:flex;
+	justify-content: flex-start;
+	align-items: stretch;
+}
+.dot {
+	display:inline-block;
+	padding:5px 20px;
+	width:100px;
+	height:40px;
+	line-height:40px;
+	text-align: center;
+	font-weight: bold;
+	color:#999999;
+  margin: 0 10px 0 0;
+  background-color: #e6e6e6;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.active {
+  background-color: #ffffff;
+	color:#047f92;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+	display:flex;
+	
+	align-items:center;
+  top: 0;
+  width: 40px;
+  height:80px;
+  padding: 0;
+  color: white;
+  font-size: 32px;
+  transition: all 0.3s ease;
+  user-select: none;
+	background-color:rgba(100, 100, 100, 0.25);
+}
+
+/* Position the "next button" to the right */
+.prev {
+  left: calc(-5vw + 8px);
+	justify-content: flex-start;
+  border-radius:0 40px 40px 0;
+}
+.next {
+  right: -5vw;
+	justify-content: flex-end;
+  border-radius:40px 0 0 40px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color:#07c3e0;
+	color:#ffffff;
+}
