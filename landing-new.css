@@ -196,6 +196,12 @@ a.btn-explainer > span {
 	padding:160px 5vw 0 5vw;
 	height:calc(100vh - 160px);
 }
+.general-container-slide2 {
+	display:block;
+	position:relative;
+	padding:160px 0 0 5vw;
+	height:calc(100vh - 160px);
+}
 
 /* quote */
 .quote-container {

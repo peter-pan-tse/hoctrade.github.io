@@ -1,8 +1,8 @@
 ﻿@charset "UTF-8";
 /* CSS Document */
 /* slideshow 1 */
-.mySlides {
-  display: none;
+.mySlides, .myslides2 {
+  /*display: none;*/
 }
 /* Slideshow container */
 .slideshow1-container {
@@ -10,49 +10,151 @@
 	display:flex;
 	justify-content: center;
 	align-items: flex-start;
-	margin-top: 120px;
-    height: calc(100vh - 330px);
+	margin-top: 100px;
+    height: calc(100vh - 310px);
+	width:100%;
+}
+.slideshow2-container {
+	position:relative;
+	display:flex;
+	justify-content: center;
+	align-items: flex-start;
+	margin-top:20px;
+    height: calc(100vh - 370px);
 	width:100%;
 }
 .slide-content-box {
 	display:flex;
 	flex-direction:column;
-	justify-content: center;
-	align-items:flex-start;
+	justify-content: flex-start;
+	align-items:center;
 	width:100%;
 	max-width:1000px;
+	  height: calc(100vh - 310px);
 	overflow-y:hidden;
 }
+.slide-content-box2 {
+	display:flex;
+	flex-direction:column;
+	justify-content: flex-start;
+	align-items:center;
+	width:100%;
+	  height: calc(100vh - 420px);
+	overflow:hidden;
+}
+.slide-content-split {
+	display:flex;
+	flex-direction:row;
+	justify-content: space-between;
+}
+.slide-content-l, .slide-content-r {
+	display:flex;
+	flex-direction:column;
+	justify-content: center;
+	height: calc(100vh - 420px);
+	overflow-y:hidden;
+	overflow-x:hidden;
+}
+.slide-content-l {
+	width:45%;
+}
+.slide-content-r {
+	width:52%;
+	align-items: center;
+}
+.slide-content-box h2 {
+	position:relative;
+	margin-bottom:40px;
+	padding:10px 0 0 70px;
+}
+.slide-content-split > div > h2 {
+	position:relative;
+	line-height:1.25em;
+	margin:20px 0;
+	padding:0;
+	color:#047f92;
+}
+.hl-text {
+	font-size:150%;
+	color:#07c3e0;
+	text-shadow: 0px 0px 4px rgba(255, 255, 255, 1.0);
+}
+.slide-content-split > div > h3 {
+	position:relative;
+	margin:0;
+	padding:0;
+}
+.slide-content-box h2 > span {
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:60px;
+	height:60px;
+	border-radius:50%;
+	background-color:#ffffff;
+	color:#0baeca;
+	font-size:40px;
+	line-height:60px;
+	text-align:center;
+}
 .slide-content-box img {
-	max-width:500px;
+	width:auto;
+	max-width:800px;
+}
+.slide-content-split > div > img {
+	width:100%;
 }
 /* The dots/bullets/indicators */
 .dot-container {
 	position:absolute;
-	top:-100px;
+	top:-80px;
 	left:0;
 	display:flex;
 	justify-content: flex-start;
 	align-items: stretch;
 }
-.dot {
-	display:inline-block;
-	padding:5px 20px;
-	width:100px;
-	height:40px;
-	line-height:40px;
-	text-align: center;
+.slide-dot {
+	padding:5px 0;
+	height:30px;
+	width:auto;
+	font-size:20px;
+	line-height:30px;
 	font-weight: bold;
 	color:#999999;
-  margin: 0 10px 0 0;
-  background-color: #e6e6e6;
-  border-radius: 10px;
-  transition: background-color 0.3s ease;
+  margin: 0 50px 0 0;
+  border-bottom:10px solid #e6e6e6;
+  transition: border-bottom 0.3s ease;
 }
 
 .active {
-  background-color: #ffffff;
+	background-color:transparent;
+	border-bottom:10px solid #ffffff;
 	color:#047f92;
+}
+
+/* slide 2 */
+.dot-container-2 {
+	position:absolute;
+	bottom:0;
+	right:17%;
+	display:flex;
+	justify-content:center;
+	align-items: center;
+	width:20%;
+}
+.slide-dot-2 {
+	padding:0;
+	height:12px;
+	width:12px;
+	background-color:#e6e6e6;
+  margin: 0 6px;
+	border-radius:50%;
+  transition: background-color 0.3s ease;
+}
+
+.active2 {
+	background-color:#047f92;
+	transform: scale(1.25);
 }
 
 /* Fading animation */
@@ -83,6 +185,102 @@
   }
 }
 
+/* Fading up animation */
+.fade2 {
+  -webkit-animation-name: fade2;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade2;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade2 {
+  from {
+    opacity: 0.4;
+	  transform: translatey(40%);
+  }
+
+  to {
+    opacity: 1;
+	  transform: translatey(0%);
+  }
+}
+
+@keyframes fade2 {
+  from {
+    opacity: 0.4;
+	  transform: translatey(40%);
+  }
+
+  to {
+    opacity: 1;
+	  transform: translatey(0%);
+  }
+}
+
+/* Fading left animation */
+.fade3 {
+  -webkit-animation-name: fade3;
+  -webkit-animation-duration: 1s;
+  animation-name: fade3;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes fade3 {
+  from {
+    opacity: 0;
+	  transform: translatex(-20%);
+  }
+
+  to {
+    opacity: 1;
+	  transform: translatex(0%);
+  }
+}
+
+@keyframes fade3 {
+  from {
+    opacity: 0;
+	  transform: translatex(-20%);
+  }
+
+  to {
+    opacity: 1;
+	  transform: translatex(0%);
+  }
+}
+
+/* Fading right animation */
+.fade4 {
+  -webkit-animation-name: fade4;
+  -webkit-animation-duration: 1s;
+  animation-name: fade4;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes fade4 {
+  from {
+    opacity: 0;
+	  transform: translatex(20%);
+  }
+
+  to {
+    opacity: 1;
+	  transform: translatex(0%);
+  }
+}
+
+@keyframes fade4 {
+  from {
+    opacity: 0;
+	  transform: translatex(20%);
+  }
+
+  to {
+    opacity: 1;
+	  transform: translatex(0%);
+  }
+}
+
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .prev,
@@ -100,7 +298,7 @@
 	display:flex;
 	
 	align-items:center;
-  top: 0;
+  top: 10px;
   width: 40px;
   height:80px;
   padding: 0;
@@ -113,7 +311,7 @@
 
 /* Position the "next button" to the right */
 .prev {
-  left: calc(-5vw + 8px);
+  left: -5vw;
 	justify-content: flex-start;
   border-radius:0 40px 40px 0;
 }
@@ -128,4 +326,43 @@
 .next:hover {
   background-color:#07c3e0;
 	color:#ffffff;
+}
+/* slide 2 */
+.prev-2,
+.next-2 {
+  cursor: pointer;
+  position: absolute;
+	display:flex;
+	justify-content: center;
+	align-items:center;
+  bottom: -13px;
+  width: 40px;
+  height:40px;
+  padding: 0;
+  color: white;
+  font-size: 24px;
+	border-radius:50%;
+  transition: all 0.3s ease;
+  user-select: none;
+	background-color:rgba(100, 100, 100, 0.25);
+}
+
+.prev-2 {
+  right:calc(37% + 0px);
+}
+.next-2 {
+  right: calc(17% - 40px);
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev-2:hover,
+.next-2:hover {
+  background-color:#07c3e0;
+	color:#ffffff;
+}
+
+.reg-btn-box {
+	position:absolute;
+	left:0;
+	bottom:0;
 }
