@@ -14,7 +14,7 @@ function autoSlides() {
 }
 
 function prevSlide() {
-  timeOut = 2000;
+  timeOut = 5000;
 
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("slide-dot");

@@ -8,9 +8,9 @@
 	width:100vw;
 	height:100vh;
 	background-color:#367e91;
-	background-image:url("img/ht-top-logo.png"), /*url("img/ht-top-brain-r.png"),*/ url("img/ht-top-gradient.png"), url("img/ht-top-brain-l.png"), url("img/ht-top-bg.png");
-	background-position:center;
-	background-size:810px 675px, /*auto 85vh,*/ cover, 810px 675px, cover;
+	background-image:url("img/ht-top-logo.png"), url("img/ht-top-brain-r.png"), url("img/ht-top-gradient.png"), url("img/ht-top-brain-l.png"), url("img/ht-top-bg.png");
+	background-position:right center;
+	background-size:80vw auto, 80vw auto, cover, 80vw auto, cover;
 	background-repeat:no-repeat;
 	z-index:1000;
 }
@@ -79,9 +79,12 @@ a.btn-reg-free:hover {
 }
 a.btn-explainer {
 	display:inline-block;
+	position:absolute;
+	right:40px;
+	bottom:40px;
 	background-color:#333333;
-	font-size:18px;
-	color:#ffffff;
+	font-size:16px;
+	color:#07deff;
 	text-decoration: none;
 	height:40px;
 	line-height:40px;
@@ -95,7 +98,7 @@ a.btn-explainer:hover {
 	background-color:#07deff;
 }
 a.btn-explainer > span {
-	font-size:20px;
+	font-size:18px;
 }
 
 /* top slideshow */
@@ -563,4 +566,14 @@ a.btn-explainer > span {
 .prev:hover,
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
+}
+
+.little-arrow {
+	display:block;
+	text-align:center;
+	font-size:24px;
+	transform:rotate(90deg);
+}
+.little-arrow span {
+	
 }
