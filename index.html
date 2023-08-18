@@ -20,16 +20,28 @@
 			overflow-x: hidden;
 		}
 		.container {
-		    width: 100vw;
-		    height: 100vh;
-		    scroll-snap-type: y mandatory;
-		    overflow-y: scroll;
+			width: 100vw;
+			height: auto;
+			scroll-snap-type: none;
+			overflow-y: scroll;
 			overflow-x:hidden;
 			transition:all ease 0.5s;
 		}
-
 		.container > * {
-		  scroll-snap-align: start;
+			  scroll-snap-align: none;
+			}
+		@media only screen and (min-width: 768px) {
+			.container {
+				width: 100vw;
+				height: 100vh;
+				scroll-snap-type: y mandatory;
+				overflow-y: scroll;
+				overflow-x:hidden;
+				transition:all ease 0.5s;
+			}
+			.container > * {
+			  scroll-snap-align: start;
+			}
 		}
 		.logo-mt4 {
 			display:flex;

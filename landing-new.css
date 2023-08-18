@@ -235,14 +235,16 @@ a.btn-explainer > span {
 }
 @media only screen and (max-width: 540px) {
 	.general-container {
-		padding:100px 20px 0 20px;
+		padding:40px 20px 20px 20px;
 		height:auto;
-		min-height: calc(100vh - 100px);
+		/*min-height: calc(100vh - 100px);*/
+		border-top:4px solid #cccccc;
 	}
 	.general-container-slide2 {
-		padding:100px 20px 0 20px;
+		padding:40px 20px 20px 20px;
 		height:auto;
-		min-height: calc(100vh - 100px);
+		/*min-height: calc(100vh - 100px);*/
+		border-top:4px solid #cccccc;
 	}
 }
 
