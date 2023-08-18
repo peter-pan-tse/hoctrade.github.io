@@ -180,6 +180,12 @@ h3 {
 	line-height: 1.5em;
 	margin: 0 0 10px 0;
 }
+@media only screen and (max-width: 540px) {
+	h1 {
+		font-size:26px;
+		line-height:1.15em;
+	}
+}
 .bg-red {
 	background-color:#f5e9e9;
 }
@@ -228,6 +234,12 @@ h3 {
 		/*width:calc(100% - 20px);*/
 	}
 }
+@media only screen and (max-width: 540px) {
+	.main-container {
+		padding: 0;
+		/*width:calc(100% - 20px);*/
+	}
+}
 .content-block-l {
 	display:inline-block;
 	margin:20px 20px 0px 10px;
@@ -239,7 +251,8 @@ h3 {
 	width:calc(40% - 20px);
 }
 
-@media only screen and (max-width: 540px) {
+
+@media only screen and (max-width: 920px) {
 	.content-block-l {
 		margin:20px 10px;
 		width:calc(100% - 20px);
@@ -247,6 +260,10 @@ h3 {
 	.content-block-r {
 		margin:20px 10px;
 		width:calc(100% - 20px);
+		text-align: center;
+	}
+	.content-block-r img {
+		max-width:75%;
 	}
 }
 ul.list {
@@ -311,7 +328,7 @@ ul.list li, ul.list-w li {
 .counter-separator-h {
 	border-bottom: none;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 540px) {
 	.counter-separator-v2 {
 		border-right: none;
 	}
@@ -481,6 +498,12 @@ img.scoreboard-img {
   width: 100%;
 	padding-bottom:60px;
 }
+@media only screen and (max-width: 920px) {
+	.slider {
+		padding-bottom:60px;
+		margin-top:50px;
+	}
+}
 /*.slider::before, .slider::after {
   background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
   content: "";
@@ -551,14 +574,16 @@ img.scoreboard-img {
 	position:relative; 
 	width:100%;
 }
-@media only screen and (max-width: 820px) {
+@media only screen and (max-width: 920px) {
 	.diagram-container {
+		margin-top:100px;
 		height:600px; 
 	}
 }
 @media only screen and (max-width: 540px) {
 	.diagram-container {
 		height:300px; 
+		transform:scale(1.25);
 	}
 }
 img.diagram-step1, img.diagram-step2, img.diagram-step3, img.diagram-step4, img.diagram-step5, img.diagram-step6, img.diagram-step7 {
@@ -635,6 +660,44 @@ img.diagram-step1, img.diagram-step2, img.diagram-step3, img.diagram-step4, img.
 	55%  {top: 0px; opacity: 0;}
 	65%  {top: 0px; opacity: 1;}
 	100% {top: 0px; opacity: 1;}
+}
+
+@media only screen and (max-width: 540px) {
+	@keyframes diagram-step1 {
+		/*5%   {top: 0px; opacity: 0;}*/
+		0%   {top: 0px; opacity: 1;}
+		100%  {top: 0px; opacity: 1;}
+	}
+	@keyframes diagram-step2 {
+		5%  {top: -20px; left:-20px; opacity: 0;}
+		15%  {top: 0px; left:0px; opacity: 1;}
+		100% {top: 0px; left:0px; opacity: 1;}
+	}
+	@keyframes diagram-step3 {
+		15%   {top: -20px; opacity: 0;}
+		25%   {top: 0px; opacity: 1;}
+		100%  {top: 0px; opacity: 1;}
+	}
+	@keyframes diagram-step4 {
+		25%   {top: 20px; left:0px; opacity: 0;}
+		35%   {top: 0px; left:0px; opacity: 1;}
+		100%  {top: 0px; left:0px; opacity: 1;}
+	}
+	@keyframes diagram-step5 {
+		35%   {top: 20px; left:-20px; opacity: 0;}
+		45%   {top: 0px; left:0px; opacity: 1;}
+		100%  {top: 0px; left:0px; opacity: 1;}
+	}
+	@keyframes diagram-step6 {
+		45%  {top: -20px; left:-20px; opacity: 0;}
+		55%  {top: 0px; left:0px; opacity: 1;}
+		100% {top: 0px; left:0px; opacity: 1;}
+	}
+	@keyframes diagram-step7 {
+		55%  {top: 0px; opacity: 0;}
+		65%  {top: 0px; opacity: 1;}
+		100% {top: 0px; opacity: 1;}
+	}
 }
 
 sup.comingsoon {

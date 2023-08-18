@@ -143,3 +143,13 @@
     width: 100%;
     height: 100%;
 }
+@media only screen and (max-width: 920px) {
+	.modal-video-box {
+		width: 100%;
+		padding-bottom: 66%;
+	}
+	.modal-video {
+		top: 35%;
+
+	}
+}
