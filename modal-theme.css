@@ -118,8 +118,10 @@
 	transition: all 0.3s ease;
 	z-index:10;
 }
-@media only screen and (max-width: 920px) {
-
+@media only screen and (max-width: 540px) {
+	.close {
+		margin:10px 0 0 0;
+	}
 }
 .close:hover, .close:focus {
 	color: #FFFFFF;

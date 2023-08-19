@@ -134,7 +134,7 @@ a.btn-explainer > span {
 @media only screen and (max-width: 540px) {
 	a.btn-explainer {
 		right:10px;
-		bottom:110px;
+		bottom:120px;
 		font-size:14px;
 		height:28px;
 		line-height:28px;
