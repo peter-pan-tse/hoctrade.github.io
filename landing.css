@@ -518,6 +518,11 @@ img.scoreboard-img {
 		margin-top:50px;
 	}
 }
+@media only screen and (max-width: 540px) {
+	.slider {
+		margin-top:20px;
+	}
+}
 /*.slider::before, .slider::after {
   background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
   content: "";
@@ -558,6 +563,17 @@ img.scoreboard-img {
 .slider .slide.forex {
 	color:#047f92;
 }
+@media only screen and (max-width: 540px) {
+	.slider .slide {
+		width: 150px;
+	}
+	.slider .slide img {
+		width:80x;
+		height:80px;
+		margin-bottom:5px;
+	}
+}
+
 /* viewport fade in */
 .wrapper {
   width: 100%;
