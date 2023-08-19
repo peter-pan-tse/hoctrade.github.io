@@ -351,11 +351,12 @@ a.btn-explainer > span {
 @media only screen and (max-width: 540px) {
 	.quote-block-l > span, .quote-block-m > span, .quote-block-r > span {
 		margin-top:2px;
-		font-size:90%;
+		font-size:85%;
 	}
 	.quote-block-l p, .quote-block-m p, .quote-block-r p {
 		margin:8px 0;
-		font-size:90%;
+		font-size:85%;
+		line-height: 1.25em;
 	}
 	.quote-block-l img, .quote-block-m img, .quote-block-r img {
 		margin-top:0px;
