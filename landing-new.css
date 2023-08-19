@@ -307,13 +307,14 @@ a.btn-explainer > span {
 		width:calc(100% - 20px);
 		padding:0 10px 10px 10px;
 		border-radius:20px;
-		margin:0 0 10px 0;
+		margin:0 0 5px 0;
+		font-size:90%;
 	}
 	.separator2 {
 		height:0px;
 	}
 	.quoteh3 {
-		font-size:14px;
+		font-size:12px;
 	}
 }
 .quote-block-l, .quote-block-r  {
@@ -349,10 +350,16 @@ a.btn-explainer > span {
 }
 @media only screen and (max-width: 540px) {
 	.quote-block-l > span, .quote-block-m > span, .quote-block-r > span {
-		margin-top:5px;
+		margin-top:2px;
+		font-size:90%;
+	}
+	.quote-block-l p, .quote-block-m p, .quote-block-r p {
+		margin:8px 0;
+		font-size:90%;
 	}
 	.quote-block-l img, .quote-block-m img, .quote-block-r img {
 		margin-top:0px;
+		transform:scale(0.75);
 	}
 }
 
