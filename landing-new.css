@@ -303,12 +303,18 @@ a.btn-explainer > span {
 		align-items:center;
 		margin:0;
 	}
-	.quote-block-l, .quote-block-m, .quote-block-r  {
+	.quote-block-l, .quote-block-r  {
 		width:calc(100% - 20px);
 		padding:0 10px 10px 10px;
 		border-radius:20px;
 		margin:0;
 		font-size:90%;
+	}
+	.quote-block-m {
+		width:calc(100% - 20px);
+		padding:0 10px 10px 10px;
+		border-radius:20px;
+		margin:0;
 	}
 	.separator2 {
 		height:0px;
