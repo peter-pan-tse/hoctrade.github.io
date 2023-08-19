@@ -60,7 +60,7 @@
 }
 @media only screen and (max-width: 540px) {
 	.theme-container {
-		background-position:calc(50% - 50px) 35vh, calc(50% - 50px) 35vh, center center, calc(50% - 50px) 35vh, center center;
+		background-position:calc(50% - 50px) 40vh, calc(50% - 50px) 40vh, center center, calc(50% - 50px) 40vh, center center;
 		background-size:150vw auto, 150vw auto, cover, 150vw auto, cover;
 	}
 	.theme-text-box {
@@ -71,6 +71,7 @@
 	}
 	.theme-text-box h2 {
 		font-size:6vw;
+		margin:0 0 10px 0;
 	}
 }
 
@@ -132,8 +133,8 @@ a.btn-explainer > span {
 }
 @media only screen and (max-width: 540px) {
 	a.btn-explainer {
-		right:20px;
-		bottom:120px;
+		right:10px;
+		bottom:110px;
 		font-size:14px;
 		height:28px;
 		line-height:28px;
