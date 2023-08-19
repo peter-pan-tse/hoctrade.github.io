@@ -389,6 +389,16 @@ a.btn-submit {
 	transition:all ease 0.3s;
 	cursor: pointer;
 }
+@media only screen and (max-width: 540px) {
+	a.btn-submit {
+		font-size:14px;
+		line-height:32px;
+		height:32px;
+		width:auto;
+		padding:0 20px;
+		border-radius:16px;
+	}
+}
 a.btn-blue {
 	display:inline-block;
 	font-size:18px;
