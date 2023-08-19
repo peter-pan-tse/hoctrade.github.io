@@ -48,9 +48,9 @@
 	.slide-content-box {
 		width:80vw;
 		justify-content: space-between;
-		margin-top:20px;
+		margin-top:0px;
 		padding-bottom:80px;
-		height: calc(100vh - 420px);
+		height: calc(100vh - 400px);
 	}
 }
 .slide-content-box2 {
