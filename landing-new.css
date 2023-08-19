@@ -496,7 +496,7 @@ a.btn-explainer > span {
 	}
 	.tab-content-problem, .tab-content-solution {
 		width:calc(100% - 40px);
-		padding:10px 0px;
+		padding:10px 0 0 0px;
 	}
 }
 .tab-content-pic {
@@ -531,7 +531,7 @@ a.btn-explainer > span {
 		right:auto;
 		bottom:auto;
 		width:calc(100% - 40px);
-		padding: 20px;
+		padding: 0 20px;
 	}
 	.tab-content-pic img {
 		max-width:100%;

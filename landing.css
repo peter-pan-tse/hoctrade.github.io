@@ -360,6 +360,14 @@ input.sandbox-input {
 	font-size:18px;
 	font-weight: normal;
 }
+@media only screen and (max-width: 540px) {
+	input.sandbox-input {
+		width:calc(100% - 40px);
+		padding:4px 10px;
+		font-size:14px;
+		border-radius:5px;
+	}
+}
 span.disclaimer {
 	display:block;
 	width:70%;
