@@ -360,7 +360,7 @@ a.btn-explainer > span {
 	}
 	.quote-block-l img, .quote-block-m img, .quote-block-r img {
 		margin-top:0px;
-		transform:scale(0.75);
+		transform:scale(0.6);
 	}
 }
 

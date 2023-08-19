@@ -13,6 +13,12 @@ body {
 	background-color:#f2f2f2;
 	overflow-x:hidden;
 }
+@media only screen and (max-width: 540px) {
+	body {
+		font-size:14px;
+		line-height:1.15em;
+	}
+}
 a {
 	color:#047F92;
 }
