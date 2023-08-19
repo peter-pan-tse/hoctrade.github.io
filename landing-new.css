@@ -258,7 +258,7 @@ a.btn-explainer > span {
 	.general-container {
 		padding:90px 20px 110px 20px;
 		height:auto;
-		min-height: calc(100vh - 200px);
+		height: calc(100vh - 200px);
 		/*border-top:4px solid #cccccc;*/
 	}
 	.general-container-slide2 {
