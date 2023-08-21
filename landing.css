@@ -748,7 +748,7 @@ img.diagram-step1, img.diagram-step2, img.diagram-step3, img.diagram-step4, img.
 	}
 }
 
-sup.comingsoon {
+span.comingsoon {
 	display:inline-block;
 	padding:4px 12px;
 	border-radius:16px;
