@@ -33,7 +33,7 @@
 			</div>
 		</div>
 		<div class="right-menu">
-			<a class="right-menu-item" href="#"><span class="ht-bell"></span><div class="ico-number">5</div></a>
+			<a class="right-menu-item" href="#" id="modalAlert"><span class="ht-bell"></span><div class="ico-number">5</div></a>
 			<a class="right-menu-item" href="search.html"><span class="ht-search"></span></a>
 			<div class="member-menu">
 				<div class="profile-pic"></div>
@@ -565,7 +565,65 @@
 	  </div>
 
 	</div>
+	
+	<!-- notification menu -->
+	<div id="modalAlertBox" class="modal">
+		<!--- content 1 -->
+		<div class="notification-block" style="display:block;">
+			<ul class="note-list">
+				<li><h3>Notification</h3></li>
+				<li style="justify-content:flex-start;">
+					<a href="#" class="cat-bullet active">All</a><a href="#" class="cat-bullet">Alerts</a><a href="#" class="cat-bullet">Messages</a><a href="#" class="cat-bullet">Others</a>
+				</li>
+				<li><strong>Alerts</strong><span><a href="alert.html">Read all</a></span></li>
+				<a href="#">
+					<li>
+						<div>
+							<strong>Action in loss making pattern</strong><br>
+							Analysis: Profit by daytime<br>
+							<span class="msgtime">Sep-04-2023 16:45 Order ID:9876564</span>
+						</div>
+						<div class="bullet-unread"></div>
+					</li>
+				</a>
+				<a href="#">
+					<li>
+						<div>
+							<strong>New loss-making pattern</strong><br>
+							Analysis: Profit if trade close earlier/later<br>
+							<span class="msgtime">Aug-15-2023 12:54 Order ID:1235647</span>
+						</div>
+						<div class="bullet-read"></div>
+					</li>
+				</a>
+				<li><strong>Messages</strong><span><a href="#">Read all</a></span></li>
+				<a href="#">
+					<li>
+						<div>
+							hoc-trade<br>
+							<strong>New feature - Trade medic</strong><br>
+							Trade medic is now available. Take a first glance.<br>
+							<span class="msgtime">Aug-04-2023 9:12</span>
+						</div>
+						<div class="bullet-unread"></div>
+					</li>
+				</a>
+				<a href="#">
+					<li>
+						<div>
+							user-005<br>
+							<strong>Request on sharing trade information</strong><br>
+							Hi, please share your trade information with me... <br>
+							<span class="msgtime">Jun-04-2023 6:04</span>
+						</div>
+						<div class="bullet-read"></div>
+					</li>
+				</a>
+			</ul>
+		</div>
+	</div>
+	<!--notification menu ended-->
 </body>
-<script src="modal.js" language="javascript"></script>
+	<script src="modal-alert.js" language="javascript"></script>
 <script src="carousel.js" language="javascript"></script>
 </html>

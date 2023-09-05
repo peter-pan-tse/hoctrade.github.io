@@ -1064,3 +1064,112 @@ a.share-item:hover {
 	text-decoration: none;
 	cursor:pointer;
 }
+
+/* notification dropdown */
+.notification-block {
+	display:flex;
+	position:absolute;
+	top:60px;
+	right:20px;
+	width:300px;
+	padding:10px 20px;
+	height:auto;
+	background-color: #E9F3F5;
+	border-radius:20px;
+	-webkit-animation-name: slideIn2;
+	-webkit-animation-duration: 0.5s;
+	animation-name: slideIn2;
+	animation-duration: 0.5s
+}
+@media only screen and (max-width: 540px) {
+	.notification-block {
+		top:auto;
+		bottom:0px;
+		right:0px;
+		width:calc(100% - 40px);
+		border-radius:20px 20px 0 0;
+		-webkit-animation-name: slideIn;
+		-webkit-animation-duration: 0.5s;
+		animation-name: slideIn;
+		animation-duration: 0.5s
+	}
+}
+
+@-webkit-keyframes slideIn2 {
+	from {top: 40px; opacity: 0} 
+	to {top: 60px; opacity: 1}
+}
+
+@keyframes slideIn2 {
+	from {top: 40px; opacity: 0} 
+	to {top: 60px; opacity: 1}
+}
+
+ul.note-list {
+	padding:0;
+	margin:0;
+}
+ul.note-list li, ul.note-list a li {
+	display:flex;
+	width:100%;
+	flex-direction:row;
+	justify-content: space-between;
+	padding:10px 0;
+	border-bottom:1px dotted #999;
+	font-size:14px;
+	transition:all ease 0.3s;
+}
+ul.note-list li:last-child, ul.note-list a li:last-child {
+	border-bottom:none;
+}
+ul.note-list a li:hover {
+	background-color:#F3FDFF;
+}
+ul.note-list a {
+	text-decoration: none;
+}
+ul.note-list li > h3 {
+	font-size: 16px;
+	font-weight: bold;
+	margin: 0;
+}
+a.cat-bullet {
+	display:inline-block;
+	height:20px;
+	background-color:#C0D2D4;
+	font-size:12px;
+	color:#033C45;
+	text-decoration:none;
+	border-radius:12px;
+	padding:2px 10px;
+	margin-right:5px;
+	transition:all ease 0.3s;
+}
+a.cat-bullet:hover {
+	background-color:#06AFC9;
+	color:#ffffff;
+}
+a.cat-bullet.active {
+	background-color:#033C45;
+	color:#ffffff;
+}
+.bullet-unread {
+	display:block;
+	width:12px;
+	height:12px;
+	border-radius:6px;
+	background-color:springgreen;
+	margin-top:6px;
+}
+.bullet-read {
+	display:block;
+	width:12px;
+	height:12px;
+	border-radius:6px;
+	background-color:#ccc;
+	margin-top:6px;
+}
+span.msgtime {
+	font-size:12px;
+	color:dodgerblue;
+}
