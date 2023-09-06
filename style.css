@@ -1133,4 +1133,10 @@ a.cat-bullet.active {
 	height:calc(100vh - 210px);
 	overflow-x:hidden;
 	overflow-y: scroll;
+	transition:all ease 0.5s;
+}
+@media only screen and (max-width: 540px) {
+	.notification-content {
+		height:calc(100vh - 180px);
+	}
 }
