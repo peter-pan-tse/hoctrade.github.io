@@ -1071,9 +1071,10 @@ a.share-item:hover {
 	position:absolute;
 	top:60px;
 	right:20px;
-	width:300px;
-	padding:10px 20px;
+	width:400px;
+	padding:10px 0px 20px 0;
 	height:auto;
+	max-height:calc(100vh - 90px);
 	background-color: #E9F3F5;
 	border-radius:20px;
 	-webkit-animation-name: slideIn2;
@@ -1086,7 +1087,8 @@ a.share-item:hover {
 		top:auto;
 		bottom:0px;
 		right:0px;
-		width:calc(100% - 40px);
+		width:calc(100% - 0px);
+		max-height:calc(100vh - 60px);
 		border-radius:20px 20px 0 0;
 		-webkit-animation-name: slideIn;
 		-webkit-animation-duration: 0.5s;
@@ -1104,35 +1106,6 @@ a.share-item:hover {
 	from {top: 40px; opacity: 0} 
 	to {top: 60px; opacity: 1}
 }
-
-ul.note-list {
-	padding:0;
-	margin:0;
-}
-ul.note-list li, ul.note-list a li {
-	display:flex;
-	width:100%;
-	flex-direction:row;
-	justify-content: space-between;
-	padding:10px 0;
-	border-bottom:1px dotted #999;
-	font-size:14px;
-	transition:all ease 0.3s;
-}
-ul.note-list li:last-child, ul.note-list a li:last-child {
-	border-bottom:none;
-}
-ul.note-list a li:hover {
-	background-color:#F3FDFF;
-}
-ul.note-list a {
-	text-decoration: none;
-}
-ul.note-list li > h3 {
-	font-size: 16px;
-	font-weight: bold;
-	margin: 0;
-}
 a.cat-bullet {
 	display:inline-block;
 	height:20px;
@@ -1146,30 +1119,18 @@ a.cat-bullet {
 	transition:all ease 0.3s;
 }
 a.cat-bullet:hover {
-	background-color:#06AFC9;
-	color:#ffffff;
+		background-color:#06AFC9;
+		color:#ffffff;
 }
 a.cat-bullet.active {
 	background-color:#033C45;
 	color:#ffffff;
 }
-.bullet-unread {
-	display:block;
-	width:12px;
-	height:12px;
-	border-radius:6px;
-	background-color:springgreen;
-	margin-top:6px;
-}
-.bullet-read {
-	display:block;
-	width:12px;
-	height:12px;
-	border-radius:6px;
-	background-color:#ccc;
-	margin-top:6px;
-}
-span.msgtime {
-	font-size:12px;
-	color:dodgerblue;
+
+.notification-content {
+	border:none;
+	width:100%;
+	height:calc(100vh - 210px);
+	overflow-x:hidden;
+	overflow-y: scroll;
 }

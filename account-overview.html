@@ -570,56 +570,11 @@
 	<div id="modalAlertBox" class="modal">
 		<!--- content 1 -->
 		<div class="notification-block" style="display:block;">
-			<ul class="note-list">
-				<li><h3>Notification</h3></li>
-				<li style="justify-content:flex-start;">
-					<a href="#" class="cat-bullet active">All</a><a href="#" class="cat-bullet">Alerts</a><a href="#" class="cat-bullet">Messages</a><a href="#" class="cat-bullet">Others</a>
-				</li>
-				<li><strong>Alerts</strong><span><a href="alert.html">Read all</a></span></li>
-				<a href="#">
-					<li>
-						<div>
-							<strong>Action in loss making pattern</strong><br>
-							Analysis: Profit by daytime<br>
-							<span class="msgtime">Sep-04-2023 16:45 Order ID:9876564</span>
-						</div>
-						<div class="bullet-unread"></div>
-					</li>
-				</a>
-				<a href="#">
-					<li>
-						<div>
-							<strong>New loss-making pattern</strong><br>
-							Analysis: Profit if trade close earlier/later<br>
-							<span class="msgtime">Aug-15-2023 12:54 Order ID:1235647</span>
-						</div>
-						<div class="bullet-read"></div>
-					</li>
-				</a>
-				<li><strong>Messages</strong><span><a href="#">Read all</a></span></li>
-				<a href="#">
-					<li>
-						<div>
-							hoc-trade<br>
-							<strong>New feature - Trade medic</strong><br>
-							Trade medic is now available. Take a first glance.<br>
-							<span class="msgtime">Aug-04-2023 9:12</span>
-						</div>
-						<div class="bullet-unread"></div>
-					</li>
-				</a>
-				<a href="#">
-					<li>
-						<div>
-							user-005<br>
-							<strong>Request on sharing trade information</strong><br>
-							Hi, please share your trade information with me... <br>
-							<span class="msgtime">Jun-04-2023 6:04</span>
-						</div>
-						<div class="bullet-read"></div>
-					</li>
-				</a>
-			</ul>
+			<div style="padding:0 20px 10px 20px; border-bottom:2px solid #ccc;">
+				<h3>Notification</h3>
+				<a href="note-all.html" target="notification-content" class="cat-bullet active">All</a><a href="note-alert.html" target="notification-content" class="cat-bullet">Alerts</a><a href="note-message.html" target="notification-content" class="cat-bullet">Messages</a><a href="note-other.html" target="notification-content" class="cat-bullet">Others</a>
+			</div>
+			<iframe class="notification-content" name="notification-content" src="note-all.html"></iframe>
 		</div>
 	</div>
 	<!--notification menu ended-->

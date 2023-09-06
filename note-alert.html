@@ -1,0 +1,141 @@
+<!doctype html>
+<link href="style.css" rel="stylesheet">
+<style>
+	html, body {
+		background-color: #E9F3F5;
+		padding:0;
+		margin:0;
+	}
+	ul.note-list {
+		padding:0;
+		margin:0;
+	}
+	ul.note-list li {
+		list-style: none;
+		display:flex;
+		width:calc(100% - 30px);
+		flex-direction:row;
+		justify-content: space-between;
+		padding:10px 0px;
+		margin:0 10px 0 20px;
+		border-bottom:1px dotted #ccc;
+		font-size:14px;
+	}
+	ul.note-list li a {
+		display:flex;
+		width:100%;
+		flex-direction:row;
+		justify-content: space-between;
+		transition:all ease 0.3s;
+	}
+	ul.note-list li:last-child {
+		border-bottom:none;
+	}
+	ul.note-list li a {
+		text-decoration: none;
+	}
+	.bullet-unread {
+		display:block;
+		width:12px;
+		height:12px;
+		border-radius:6px;
+		background-color:#06AFC9;
+		margin-top:6px;
+	}
+	.bullet-read {
+		display:block;
+		width:12px;
+		height:12px;
+		border-radius:6px;
+		background-color:transparent;
+		margin-top:6px;
+	}
+	span.msgtime {
+		font-size:12px;
+		color:dodgerblue;
+	}
+	.msg-txt {
+		width:calc(100% - 30px);
+	}
+</style>
+<ul class="note-list">
+	<li><strong>Alerts</strong><span><a href="alert.html" target="_parent">Read all</a></span></li>
+	
+	<li>
+		<a href="#">
+			<div class="msg-txt">
+				<strong>Action in loss making pattern</strong><br>
+				Analysis: Profit by daytime<br>
+				<span class="msgtime">Sep-04-2023 16:45 Order ID:9876564</span>
+			</div>
+			<div class="bullet-unread"></div>
+		</a>
+	</li>
+		
+	<li>
+		<a href="#">
+			<div class="msg-txt">
+				<strong>New loss-making pattern</strong><br>
+				Analysis: Profit if trade close earlier/later<br>
+				<span class="msgtime">Aug-15-2023 12:54 Order ID:1235647</span>
+			</div>
+			<div class="bullet-unread"></div>
+		</a>
+	</li>
+		
+	<li>
+		<a href="#">
+			<div class="msg-txt">
+				<strong>New loss-making pattern</strong><br>
+				Analysis: % of trades stopped early in profit<br>
+				<span class="msgtime">Aug-3-2023 09:03 Order ID:7858412</span>
+			</div>
+			<div class="bullet-read"></div>
+		</a>
+	</li>
+	
+	<li>
+		<a href="#">
+			<div class="msg-txt">
+				<strong>Action in loss making pattern</strong><br>
+				Analysis: Profit by daytime<br>
+				<span class="msgtime">Sep-04-2023 16:45 Order ID:9876564</span>
+			</div>
+			<div class="bullet-unread"></div>
+		</a>
+	</li>
+		
+	<li>
+		<a href="#">
+			<div class="msg-txt">
+				<strong>New loss-making pattern</strong><br>
+				Analysis: Profit if trade close earlier/later<br>
+				<span class="msgtime">Aug-15-2023 12:54 Order ID:1235647</span>
+			</div>
+			<div class="bullet-unread"></div>
+		</a>
+	</li>
+		
+	<li>
+		<a href="#">
+			<div class="msg-txt">
+				<strong>New loss-making pattern</strong><br>
+				Analysis: % of trades stopped early in profit<br>
+				<span class="msgtime">Aug-3-2023 09:03 Order ID:7858412</span>
+			</div>
+			<div class="bullet-read"></div>
+		</a>
+	</li>
+	
+	<li>
+		<a href="#">
+			<div class="msg-txt">
+				<strong>Action in loss making pattern</strong><br>
+				Analysis: Profit by daytime<br>
+				<span class="msgtime">Sep-04-2023 16:45 Order ID:9876564</span>
+			</div>
+			<div class="bullet-unread"></div>
+		</a>
+	</li>
+	
+</ul>
