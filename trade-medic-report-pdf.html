@@ -1,0 +1,914 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="jquery-3.6.0.min.js" language="javascript"></script>	
+	<link href="https://fonts.googleapis.com/css?family=Noto Sans:400,700,900" rel="stylesheet">
+	<link href="font.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
+	<link href="report-pdf.css" rel="stylesheet">
+	<link rel="icon" href="favicon.svg">
+	<title>hoc-trade Trade Medic Report</title>
+	<style>
+		html, body {
+			margin:0;
+			padding:0;
+			color:#333333;
+			font-size:18px;
+			background-color: #FFFFFF !important;
+		}
+	</style>
+</head>
+<body>
+	<!-- pagge -->
+	<div class="a4-cover">
+		<div class="cover-content">
+			<img src="img/trade-medic-report-cover-logo.png" width="400" />
+			<div class="page-patch"></div>
+		</div>
+		<div><img src="img/trade-medic-report-cover-pic.png" width="100%" /></div>
+		<div class="cover-content">
+			<h1 style="font-size:90px; color:#ffffff; margin-top:0px;">Your AI-powered<br>Trade Medic Report</h1>
+		</div>
+		<ul class="cover-toc">
+			<li>8-point trading assessment</li>
+			<li>Top 4 issues</li>
+			<li>Content navigation</li>
+			<li>Full Trade Medic report</li>
+			<li>Issue-by-issue charts &amp; details</li>
+			<li>FAQ</li>
+		</ul>
+		<div class="cover-info-box">
+			<div>
+				<strong>Broker<br>
+				Acc. ID<br>
+				Date</strong>
+			</div>
+			<div align="right">
+				ActivTrades<br>
+				583957294<br>
+				Sep-05-2023
+			</div>
+		</div>
+		<div class="cover-disclaimer">
+			<strong>Disclaimer:</strong><br>
+			None of the information presented in this report are financial advice. Reading and interpreting this report is solely at the risk of the viewer. Trading CFDs or any other form of financial instruments imposes high risk and you may lose your entire capital. Only risk what you can afford to lose. Past performance is not an indication of future performance. None of the parties can be held liable for any information or decisions based on this report. It is highly dependent on the interpretation of the viewer and the report itself may contain errors. There has been no review of a human before sending out this report.
+		</div>
+		<div class="page-logo"><img src="img/hoc-trade-logo-green.png" width="150" /></div>
+	</div>
+	<!-- page ended-->
+	
+	<!-- pagge -->
+	<div class="a4-page">
+		<div class="num-patch">1</div>
+		<h1>8-point Trading Area Assessment</h1>
+		<h2>Which areas of your trading show issues?</h2>
+		<div class="dashboard-container">
+			<div class="speedometer">
+				<img class="dial" src="img/speedometer-dial.png" />
+				<img class="hand" style="transform:rotate(20deg);" src="img/speedometer-hand.png" />
+				<span class="ht-error-behavior"></span>
+				Behavioral<br>errors
+			</div>
+			<div class="speedometer">
+				<img class="dial" src="img/speedometer-dial.png" />
+				<img class="hand" style="transform:rotate(48deg);" src="img/speedometer-hand.png" />
+				<span class="ht-error-emotion"></span>
+				Emotional<br>errors
+			</div>
+			<div class="speedometer">
+				<img class="dial" src="img/speedometer-dial.png" />
+				<img class="hand" style="transform:rotate(125deg);" src="img/speedometer-hand.png" />
+				<span class="ht-error-strategic"></span>
+				Strategic<br>errors
+			</div>
+			<div class="speedometer">
+				<img class="dial" src="img/speedometer-dial.png" />
+				<img class="hand" style="transform:rotate(92deg);" src="img/speedometer-hand.png" />
+				<span class="ht-error-trade"></span>
+				Trade<br>Execution
+			</div>
+			<div class="speedometer">
+				<img class="dial" src="img/speedometer-dial.png" />
+				<img class="hand" style="transform:rotate(123deg);" src="img/speedometer-hand.png" />
+				<span class="ht-error-accuracy"></span>
+				Stop<br>accuracy
+			</div>
+			<div class="speedometer">
+				<img class="dial" src="img/speedometer-dial.png" />
+				<img class="hand" style="transform:rotate(173deg);" src="img/speedometer-hand.png" />
+				<span class="ht-error-timing"></span>
+				Trade<br>timing
+			</div>
+			<div class="speedometer">
+				<img class="dial" src="img/speedometer-dial.png" />
+				<img class="hand" style="transform:rotate(10deg);" src="img/speedometer-hand.png" />
+				<span class="ht-error-risk"></span>
+				Risk<br>management
+			</div>
+			<div class="speedometer">
+				<img class="dial" src="img/speedometer-dial.png" />
+				<img class="hand" style="transform:rotate(72deg);" src="img/speedometer-hand.png" />
+				<span class="ht-error-stimulation"></span>
+				Over-<br>stimulation
+			</div>
+		</div>
+		<div align="center" style="padding:100px 0; font-size:48px; font-weight:bold;">
+			Details follow<br><br>
+			<span class="ht-down-arrow" style="font-size:64px;"></span>
+		</div>
+		<div class="page-logo"><img src="img/hoc-trade-logo-green.png" width="150" /></div>
+	</div>
+	<!-- page ended-->
+	
+	<!-- pagge -->
+	<div class="a4-page">
+		<div class="num-patch">2</div>
+		<h1>Your Top 4 critical issues</h1>
+		
+		<!-- -->
+		<div class="medic-report-top">
+			<div class="top-report-box-1">
+				<div class="top-report-box-header">
+					1. Cut profits early 
+				</div>
+				<div class="top-report-box-body">
+					<div style="width:100%; text-align:center;">
+						<div class="severity-text">Severity: 100%</div>
+						<div class="sev-bar-top">
+							<div class="sev-bar-dot-top" style="left:calc(100% - 40px);"></div>
+						</div>
+					</div>
+					<div class="perf-effect-text">
+						<span>Performance effect</span><div class="text-ng">-6,493 USD</div>
+					</div>
+					<div>
+						<a class="btn-top-info" href="#"><span class="ht-info"></span> Further details</a>
+					</div>
+				</div>
+			</div>
+			<!-- -->
+			<div class="top-report-box-2">
+				<div class="top-report-box-header">
+					2. Revenge Trading 
+				</div>
+				<div class="top-report-box-body">
+					<div style="width:100%; text-align:center;">
+						<div class="severity-text">Severity: 80%</div>
+						<div class="sev-bar-top">
+							<div class="sev-bar-dot-top" style="left:calc(80% - 16px);"></div>
+						</div>
+					</div>
+					<div class="perf-effect-text">
+						<span>Performance effect</span><div class="text-ng">-5,281 USD</div>
+					</div>
+					<div>
+						<a class="btn-top-info" href="#"><span class="ht-info"></span> Further details</a>
+					</div>
+				</div>
+			</div>
+			<!-- -->
+			<div class="top-report-box-3">
+				<div class="top-report-box-header">
+					3. Late trade entry 
+				</div>
+				<div class="top-report-box-body">
+					<div style="width:100%; text-align:center;">
+						<div class="severity-text">Severity: 75%</div>
+						<div class="sev-bar-top">
+							<div class="sev-bar-dot-top" style="left:calc(75% - 15px);"></div>
+						</div>
+					</div>
+					<div class="perf-effect-text">
+						<span>Performance effect</span><div class="text-ng">-4,992 USD</div>
+					</div>
+					<div>
+						<a class="btn-top-info" href="#"><span class="ht-info"></span> Further details</a>
+					</div>
+				</div>
+			</div>
+			<!-- -->
+			<div class="top-report-box-4">
+				<div class="top-report-box-header">
+					4. Overtrading 
+				</div>
+				<div class="top-report-box-body">
+					<div style="width:100%; text-align:center;">
+						<div class="severity-text">Severity: 65%</div>
+						<div class="sev-bar-top">
+							<div class="sev-bar-dot-top" style="left:calc(65% - 13px);"></div>
+						</div>
+					</div>
+					<div class="perf-effect-text">
+						<span>Performance effect</span><div class="text-ng">-4,225 USD</div>
+					</div>
+					<div>
+						<a class="btn-top-info" href="#"><span class="ht-info"></span> Further details</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="cover-disclaimer" style="padding:0px 350px 30px 0px;">
+			This report is brought to you by Hoc-trade as a service of your broker ActivTrades. For more charts &amp; analyses, different timeframes &amp; tracking, live updates, real-time alerts, and more, please visit <a href="https://hoc-trade.com">https://hoc-trade.com</a>
+		</div>
+		<div class="page-logo"><img src="img/hoc-trade-logo-green.png" width="150" /></div>
+	</div>
+	<!-- page ended-->
+	
+	<!-- pagge -->
+	<div class="a4-page">
+		<div class="num-patch">3</div>
+		<h1>Content navigation</h1>
+		<h2>Discover &amp; explore all areas of your Trading!</h2>
+		<div class="toc-container">
+			
+			<div class="toc-column" style="width:calc(25% - 45px); border-left:none;">
+				<h3>Trade Medic Report</h3>
+				<ul class="toc">
+					<li><a href="#">Full Trading Issue report</a></li>
+					<li><a href="#">Full Risk report</a></li>
+				</ul>
+			</div>
+			<div class="toc-column" style="width:calc(25% - 45px);">
+				<h3>Issue Details</h3>
+				<ul class="toc">
+					<li><a href="#">Overtrading</a></li>
+					<li><a href="#">Revenge Trading</a></li>
+					<li><a href="#">Catch a falling knife</a></li>
+					<li><a href="#">Cut profits early</a></li>
+					<li><a href="#">News Trading</a></li>
+					<li><a href="#">Fail to cut losses</a></li>
+					<li><a href="#">Fighting the trend</a></li>
+					<li><a href="#">Weekend Trading</a></li>
+					<li><a href="#">Distracted Trading</a></li>
+					<li><a href="#">Doubling down</a></li>
+					<li><a href="#">Overoptimism</a></li>
+					<li><a href="#">Failed de-risking</a></li>
+					<li><a href="#">Impatient entries</a></li>
+					<li><a href="#">Trade without break</a></li>
+					<li><a href="#">Over-complexity</a></li>
+					<li><a href="#">Impatient exits</a></li>
+					<li><a href="#">Too tight stops</a></li>
+					<li><a href="#">Too wide stops</a></li>
+					<li><a href="#">Emotional trading</a></li>
+					<li><a href="#">Anxious trade entries</a></li>
+					<li><a href="#">Anxious trade exits</a></li>
+					<li><a href="#">Inefficient hedging</a></li>
+					<li><a href="#">Fail to call it a day</a></li>
+					<li><a href="#">Blindly follow momentum</a></li>
+				</ul>
+			</div>
+			<div class="toc-column" style="width:calc(25% - 45px);">
+				<h3>Risk Details</h3>
+				<ul class="toc">
+					<li><a href="#">Emotional loss streaks</a></li>
+					<li><a href="#">All-in trades</a></li>
+					<li><a href="#">Trades without SL</a></li>
+					<li><a href="#">Excessive risk taking</a></li>
+					<li><a href="#">Reward Risk imbalance</a></li>
+				</ul>
+			</div>
+			<div class="toc-column" style="width:calc(25% - 45px);">
+				<h3>Others</h3>
+				<ul class="toc">
+					<li><a href="#">FAQ</a></li>
+				</ul>
+			</div>
+		
+		</div>
+		<div class="page-logo"><img src="img/hoc-trade-logo-green.png" width="150" /></div>
+	</div>
+	<!-- page ended-->
+	
+	<!-- pagge -->
+	<div class="a4-page">
+		<div class="num-patch">4</div>
+		<h1>Full Trading Issue report</h1>
+		
+		<ul class="medic-report">
+					<li style="border-bottom:4px solid #cccccc;">
+						<div class="column-issue"><strong>Issue</strong></div>
+						<div class="column-severity"><strong>Severity</strong></div>
+						<div class="column-effect"><strong>Performance effect</strong></div>
+						<div class="column-info"><strong>Further details</strong></div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Catch a falling knife</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-dot" style="left:60%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-ng">-3,900 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" href="#" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Anxious trade exits</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-dot" style="left:52%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-ng">-3,380 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" href="#" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">News trading</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-dot" style="left:44%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-ng">-2,860 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" href="#" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Fail to cut losses</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-dot" style="left:35%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-ng">-2,275 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" href="#" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Fighting the trend</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-dot" style="left:30%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-ng">-1,950 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" href="#" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Weekend trading</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-dot" style="left:25%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-ng">-1,625 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" href="#" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Distracted trading</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-dot" style="left:25%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-ng">-1,625 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" href="#" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Doubling down</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-dot" style="left:25%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-ng">-1,625 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" href="#" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Overoptimism</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-dot" style="left:20%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-ng">-1,300 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" href="#" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Failed de-risking</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-dot" style="left:17%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-ng">-1,105 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" href="#" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Impatient entries</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-dot" style="left:15%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-ng">- USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" href="#" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Trade without break</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-dot" style="left:11%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-ng">-715 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" href="#" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Over-complexity</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-dot" style="left:9%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-ng">-585 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" href="#" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Impatient exits</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-dot" style="left:5%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-ng">-325 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" href="#" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Too tight stops</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-dot" style="left:2%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-ng">-130 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" href="#" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Too wide stops</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-dot" style="left:0%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-po">0 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" href="#" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Emotional trading</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-dot" style="left:0%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-po">0 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" href="#" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Anxious trade entries</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-dot" style="left:0%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-po">0 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" href="#" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">issue</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-dot" style="left:0%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-po">0 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" href="#" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Overpaying fees</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-dot" style="left:0%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-po">0 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" href="#" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Inefficient hedging</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-dot" style="left:0%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-po">0 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" href="#" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Fail to call it a day</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-dot" style="left:0%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-po">0 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" href="#" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Blindly follow momentum</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-dot" style="left:0%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-po">0 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" href="#" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+				</ul>
+		
+		<div class="page-logo"><img src="img/hoc-trade-logo-green.png" width="150" /></div>
+	</div>
+	<!-- page ended-->
+	
+	<!-- pagge -->
+	<div class="a4-page">
+		<div class="num-patch">5</div>
+		<h1>Full Risk report</h1>
+		
+		<ul class="medic-report">
+					<li style="border-bottom:4px solid #cccccc;">
+						<div class="column-issue"><strong>Risk area</strong></div>
+						<div class="column-risk-ico"></div>
+						<div class="column-risk"></div>
+						<div class="column-info"><strong>Further details</strong></div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue"><strong>Emotional loss streak</strong></div>
+						<div class="column-risk-ico">
+							<div class="risk-ico-ng"><span class="ht-alert"></span></div>
+						</div>
+						<div class="column-risk">Warning: On average, you increase your risk/trade by 173% after 4-6 consecutive losses</div>
+						<div class="column-info">
+							<a class="btn-info" href="#" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue"><strong>All-in trades</strong></div>
+						<div class="column-risk-ico">
+							<div class="risk-ico-po"><span class="ht-check"></span></div>
+						</div>
+						<div class="column-risk">All good, you recently didn't have all-in trades</div>
+						<div class="column-info">
+							<a class="btn-info" href="#" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue"><strong>Trade without SL</strong></div>
+						<div class="column-risk-ico">
+							<div class="risk-ico-ng"><span class="ht-alert"></span></div>
+						</div>
+						<div class="column-risk">Warning: Only 12% of your trades had a Stop Loss!</div>
+						<div class="column-info">
+							<a class="btn-info" href="#" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue"><strong>Excessive risk taking</strong></div>
+						<div class="column-risk-ico">
+							<div class="risk-ico-po"><span class="ht-check"></span></div>
+						</div>
+						<div class="column-risk">Good job, you seem to tightly manage your risk per trade</div>
+						<div class="column-info">
+							<a class="btn-info" href="#" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue"><strong>Reward Risk imbalance</strong></div>
+						<div class="column-risk-ico">
+							<div class="risk-ico-ng"><span class="ht-alert"></span></div>
+						</div>
+						<div class="column-risk">"Warning: On average, you lose more in a loss trade than you gain in a win trade.</div>
+						<div class="column-info">
+							<a class="btn-info" href="#" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+				</ul>
+		
+		<div class="page-logo"><img src="img/hoc-trade-logo-green.png" width="150" /></div>
+	</div>
+	<!-- page ended-->
+	
+	<!-- detailed report start -->
+	
+	<!-- pagge -->
+	<div class="a4-page">
+		<div class="num-patch">6</div>
+		<h1>Issue details</h1>
+		<div class="detail-info-container">
+			<div class="detail-info-box-1">
+				<h3>Issue</h3>
+				<h2>Overtrading</h2>
+			</div>
+			<div class="detail-info-box-2">
+				<h3>Area</h3>
+				<h2 style="padding-left:60px;"><span class="ht-error-behavior"></span> Behavioral error</h2>
+			</div>
+			<div class="detail-info-box-3">
+				<h3>Performance effect</h3>
+				<h2 class="text-ng">-6,793 USD</h2>
+			</div>
+			<div class="detail-info-box-4">
+				<h3>Severity</h3>
+				<div class="sev-bar-top" style="width:75%;">
+					<div class="sev-bar-dot-top" style="left:calc(87% - 26px);"></div>
+				</div>
+				<div class="severity-level text-ng">87%</div>
+			</div>
+		</div>
+		<h2>Explanation</h2>
+		<p>Over trading describes the behavior of performing a large number of trades during a short amount of time.</p><p>Oftentimes, over trading leads to an underperformance in your trades due to an <strong>emotion-based entry and trade management, lack of focus on individual trades, or trading non-ideal trade set-ups.</strong></p>
+		<h2>Your trading activity: Output chart</h2>
+		<div class="report-chart-container">
+			<div class="report-chart-box">
+				<img class="img-responsive" src="img/trade-medic-report-pdf-chart-01.png" />
+			</div>
+			<div class="report-chart-box">
+				<p>The effect of over trading on your trading result is derived by measuring your performance depending on the number of trades you performed during a day. A large number of trades during a day may indicate over trading.</p>
+				<p>For details, please refer to your personal output chart.</p>
+				<p><strong>Chart legend</strong></p>
+				<div class="legend-container">
+					<div class="legend-item"><img src="legend-benchmark.svg" height="20" /><br>Benchmark</div>
+					<div class="legend-item"><img src="legend-profit.svg" height="20" /><br>Profit</div>
+					<div class="legend-item"><img src="legend-loss.svg" height="20" /><br>Loss</div>
+					<div class="legend-item"><img src="legend-not-so-significant.svg" height="20" /><br>Limited significance</div>
+					<div class="legend-item"><img src="legend-insignificant.svg" height="20" /><br>Insignificant</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="page-logo"><img src="img/hoc-trade-logo-green.png" width="150" /></div>
+	</div>
+	<!-- page ended-->
+	
+	<!-- pagge -->
+	<div class="a4-page">
+		<div class="num-patch">7</div>
+		<h1>Issue details</h1>
+		<div class="detail-info-container">
+			<div class="detail-info-box-1">
+				<h3>Issue</h3>
+				<h2>Revenge Trading</h2>
+			</div>
+			<div class="detail-info-box-2">
+				<h3>Area</h3>
+				<h2 style="padding-left:60px;"><span class="ht-error-emotion"></span> Emeotional error</h2>
+			</div>
+			<div class="detail-info-box-3">
+				<h3>Performance effect</h3>
+				<h2 class="text-ng">-2,003 USD</h2>
+			</div>
+			<div class="detail-info-box-4">
+				<h3>Severity</h3>
+				<div class="sev-bar-top" style="width: 75%;">
+					<div class="sev-bar-dot-top" style="left:calc(25% - 0px);"></div>
+				</div>
+				<div class="severity-level text-ng">26%</div>
+			</div>
+		</div>
+		<h2>Explanation</h2>
+		<p>Revenge trading describes the attempt to recover losses quicky after they have been incurred.</p><p>Revenge trading can negatively impact your trading performance due to the <strong>emotional nature of trade entries and trade management as well as an oftentimes perceived higher winning likelihood</strong> after losses with adverse effects on a traders' risk management.</p>
+		<h2>Your trading activity: Output chart</h2>
+		<div class="report-chart-container">
+			<div class="report-chart-box">
+				<img class="img-responsive" src="img/trade-medic-report-pdf-chart-01.png" />
+			</div>
+			<div class="report-chart-box">
+				<p>The effect of revenge trading on your performance is derived by measuring your performance depending on how long you waited to enter a new trade after incurring a loss.</p>
+				<p>For details, please refer to your personal output chart.</p>
+				<p><strong>Chart legend</strong></p>
+				<div class="legend-container">
+					<div class="legend-item"><img src="legend-benchmark.svg" height="20" /><br>Benchmark</div>
+					<div class="legend-item"><img src="legend-profit.svg" height="20" /><br>Profit</div>
+					<div class="legend-item"><img src="legend-loss.svg" height="20" /><br>Loss</div>
+					<div class="legend-item"><img src="legend-not-so-significant.svg" height="20" /><br>Limited significance</div>
+					<div class="legend-item"><img src="legend-insignificant.svg" height="20" /><br>Insignificant</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="page-logo"><img src="img/hoc-trade-logo-green.png" width="150" /></div>
+	</div>
+	<!-- page ended-->
+	
+	<!-- pagge -->
+	<div class="a4-page">
+		<div class="num-patch">8</div>
+		<h1>Risk details</h1>
+		<div class="detail-info-container">
+			<div class="detail-info-box-1">
+				<h3>Risk</h3>
+				<h2>Emotional loss streaks</h2>
+			</div>
+			<div class="detail-info-box-2">
+				<h3>Area</h3>
+				<h2 style="padding-left:60px;"><span class="ht-error-risk"></span> Risk management</h2>
+			</div>
+			<div class="detail-info-box-5 bg-ng">
+				<h3>Risk message</h3>
+				<div style="padding-left:90px; font-weight: bold;"><span class="ht-alert"></span> Warning: On average, you increase your risk/ trade by 989% after 10+ consecutive losses</div>
+			</div>
+		</div>
+		<h2>Explanation</h2>
+		<p>Emotional loss streak describes the behavior of increasing your risk per trade after incurring a number of losses in your previous trades.</p>
+		<p>Some traders <strong>perceive the winning likelihood of their trades higher in case the had a couple of loss trades beforehand</strong>. This behavior roots in a human behavioral tendency described as the Gambler's Fallacy. Moreover, some traders tend to revenge trade after losses combined with higher risks per trade.</p>
+		<h2>Your trading activity: Output chart</h2>
+		<div class="report-chart-container">
+			<div class="report-chart-box">
+				<img class="img-responsive" src="img/trade-medic-report-pdf-chart-01.png" />
+			</div>
+			<div class="report-chart-box">
+				<p>Your risk behavior is derived by identifying whether you show an average increased risk per trade after some consecutive losses.</p>
+				<p>For details, please refer to your personal output chart.</p>
+				<p><strong>Chart legend</strong></p>
+				<div class="legend-container">
+					<div class="legend-item"><img src="legend-benchmark.svg" height="20" /><br>Benchmark</div>
+					<div class="legend-item"><img src="legend-profit.svg" height="20" /><br>Profit</div>
+					<div class="legend-item"><img src="legend-loss.svg" height="20" /><br>Loss</div>
+					<div class="legend-item"><img src="legend-not-so-significant.svg" height="20" /><br>Limited significance</div>
+					<div class="legend-item"><img src="legend-insignificant.svg" height="20" /><br>Insignificant</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="page-logo"><img src="img/hoc-trade-logo-green.png" width="150" /></div>
+	</div>
+	<!-- page ended-->
+	
+	<!-- pagge -->
+	<div class="a4-page">
+		<div class="num-patch">9</div>
+		<h1>Risk details</h1>
+		<div class="detail-info-container">
+			<div class="detail-info-box-1">
+				<h3>Risk</h3>
+				<h2>EAll-in trades</h2>
+			</div>
+			<div class="detail-info-box-2">
+				<h3>Area</h3>
+				<h2 style="padding-left:60px;"><span class="ht-error-risk"></span> Risk management</h2>
+			</div>
+			<div class="detail-info-box-5 bg-po">
+				<h3>Risk message</h3>
+				<div style="padding-left:90px; font-weight: bold;"><span class="ht-check"></span> All good, you recently didn't have all-in trades</div>
+			</div>
+		</div>
+		<h2>Explanation</h2>
+		<p>All-in trades describes the behavior of entering risk that could lead to a margin call of the account.</p>
+		<p>All-in trades are <strong>extremely risky and likely to sooner or later lead to a margin call</strong> of your trading account. All-in trades oftentimes are placed during <strong>highly emotional trading</strong>, mostly in combination with previous losses. Having clear risk management rules of risk for all open positions or stop trading after X% loss in a day can help preventing all-in trades.</p>
+		<h2>Your trading activity: Output chart</h2>
+		<div class="report-chart-container">
+			<div class="report-chart-box">
+				<img class="img-responsive" src="img/trade-medic-report-pdf-chart-01.png" />
+			</div>
+			<div class="report-chart-box">
+				<p>Your risk behavior is derived by identifying your total risk of all open positions. If exceeding a certain threshold, it is flagged as all-in trades.</p>
+				<p>For details, please refer to your personal output chart.</p>
+				<p><strong>Chart legend</strong></p>
+				<div class="legend-container">
+					<div class="legend-item"><img src="legend-benchmark.svg" height="20" /><br>Benchmark</div>
+					<div class="legend-item"><img src="legend-profit.svg" height="20" /><br>Profit</div>
+					<div class="legend-item"><img src="legend-loss.svg" height="20" /><br>Loss</div>
+					<div class="legend-item"><img src="legend-not-so-significant.svg" height="20" /><br>Limited significance</div>
+					<div class="legend-item"><img src="legend-insignificant.svg" height="20" /><br>Insignificant</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="page-logo"><img src="img/hoc-trade-logo-green.png" width="150" /></div>
+	</div>
+	<!-- page ended-->
+	
+	<!-- detailed report ended -->
+	
+	<!-- pagge -->
+	<div class="a4-page">
+		<div class="num-patch">10</div>
+		<h1>FAQ</h1>
+		
+		<p class="faq">
+			<strong>How are the results of this Trade Medic Report generated?</strong><br>
+			The results are fully automatically generated based on your historic trades. Smart algorithms analyze your trades, identify patterns &amp; behaviors, interpret them, and derive the quantified effects shown in the report.
+		</p>
+		<p class="faq">
+			<strong>Can I view the charts in different timeframes and dimensions?</strong><br>
+			Yes, you can view the charts in custom timeframes for more recent performances, alter between Pip &amp; Return to derive position sizing effects, analyze number of trades, significances, benchmarks, risk effects, and more. These additional insights are available through Hoc-trade.
+		</p>
+		<p class="faq">
+			<strong>Can I receive alerts if I perform trades that show issues?</strong><br>
+			Yes, Hoc-trade enables real-time alerts in case you exhibit trading actions indicative of behaving in one of your trading issues. Moreover, you can receive alerts in case risk management related actions are identified. All alerts can be customized based on your preferences.
+		</p>
+		<p class="faq">
+			<strong>Are the Trade Medic Reports also available for accounts except MetaTrader 4?</strong><br>
+			Currently, the Trade Medic reports are only available for MetaTrader 4 users. However, we are already working on integrating additional trading platforms frequently used by traders. Stay tuned for more integrations.
+		</p>
+		<p class="faq">
+			<strong>Are there additional analytics available?</strong><br>
+			There are many more charts available that outline trading behaviors, strategies, etc.. Moreover, advanced statistics, tracking tools, and in-depth explanations &amp; videos on root causes of behaviors are available. These additional sources can be found on Hoc-trade.
+		</p>
+		<p class="faq">
+			<strong>Why do I receive this report?</strong><br>
+			This report has been generated as a service by your broker.  To inquire about the eligibility to receive this and future reports, please contact your broker.
+		</p>
+		
+		<div class="page-logo"><img src="img/hoc-trade-logo-green.png" width="150" /></div>
+	</div>
+	<!-- page ended-->
+	
+	<!-- pagge -->
+	<div class="a4-page">
+		<div class="num-patch">11</div>
+		<h1>Disclaimer</h1>
+		
+		<p class="end-disclaimer"><strong>HIGH RISK WARNING:</strong> Foreign exchange and other CFD trading carries a high level of risk and may not be suitable for everyone. The usage of leverage creates additional risk and loss exposure. Your investment objectives, experience level and risk tolerance have to be taken into consideration before you decide to trade foreign exchange or other CFD products. You could lose some or all of your entire investment. Do not invest money that you cannot afford to lose and always use an appropriate risk management. It’s important to educate yourself on the risks associated with foreign exchange trading, and seek professional advice from an independent financial or tax advisor in case of any questions. Any data and information is provided ‘as is’ solely for informational purposes, and is not intended for trading purposes or advice. Past performance, which are presented on this website or you find somewhere else such as this report, is not indicative of future results.</p>
+		<p class="end-disclaimer"><strong>DISCLAIMER:</strong> The information provided through the report or in any other form (e.g. written on website) are no financial advise. We are not a professional advisor in business areas involving finance, cryptocurrency, Forex, taxation, securities and commodities trading, or the practice of law. The information and content written, broadcasted, and/or disseminated by and through Hoc-trade is intended FOR GENERAL INFORMATION PURPOSES ONLY. Nothing written or discussed is intended to be construed, or relied upon, as investment, financial, legal, regulatory, accounting, tax or similar advice, nor should it be. All content expressed by any means through any channel of hoc-trade is premised upon subjective opinions and possibly incomplete and outdated information. Reports generated on any website, affiliated pages, or distributed by any means, may have not been personally reviewed. We cannot be held liable for any form of loss based on your actions.</p>
+		
+		<div class="page-logo"><img src="img/hoc-trade-logo-green.png" width="150" /></div>
+	</div>
+	<!-- page ended-->
+	
+</body>
+</html>

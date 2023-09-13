@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'ht-font';
-  src:  url('fonts/ht-font.eot?nyen40');
-  src:  url('fonts/ht-font.eot?nyen40#iefix') format('embedded-opentype'),
-    url('fonts/ht-font.ttf?nyen40') format('truetype'),
-    url('fonts/ht-font.woff?nyen40') format('woff'),
-    url('fonts/ht-font.svg?nyen40#ht-font') format('svg');
+  src:  url('fonts/ht-font.eot?k82ltz');
+  src:  url('fonts/ht-font.eot?k82ltz#iefix') format('embedded-opentype'),
+    url('fonts/ht-font.ttf?k82ltz') format('truetype'),
+    url('fonts/ht-font.woff?k82ltz') format('woff'),
+    url('fonts/ht-font.svg?k82ltz#ht-font') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,30 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ht-error-accuracy:before {
+  content: "\e980";
+}
+.ht-error-behavior:before {
+  content: "\e981";
+}
+.ht-error-emotion:before {
+  content: "\e982";
+}
+.ht-error-risk:before {
+  content: "\e983";
+}
+.ht-error-stimulation:before {
+  content: "\e984";
+}
+.ht-error-strategic:before {
+  content: "\e985";
+}
+.ht-error-timing:before {
+  content: "\e986";
+}
+.ht-error-trade:before {
+  content: "\e987";
+}
 .ht-medbox:before {
   content: "\e97f";
 }

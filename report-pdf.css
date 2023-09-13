@@ -1,0 +1,501 @@
+﻿@charset "UTF-8";
+/* CSS Document */
+.a4-cover {
+	display:block;
+	position:relative;
+	Width: calc(1188px - 2px);
+	height:calc(1680px - 1px); /* equal to half size of 300dpi printable A4 */
+	padding:0;
+	margin:0 auto;
+	border-width: 0 1px 1px 1px;
+	border-style: dashed;
+	border-color: #ff0000;
+	background-image:url("img/trade-medic-report-cover-bg.png");
+	background-repeat: no-repeat;
+	background-size:cover;
+}
+.a4-page {
+	display:block;
+	position:relative;
+	Width: calc(1188px - 202px);
+	height:calc(1680px - 301px); /* equal to half size of 300dpi printable A4 */
+	padding:150px 100px;
+	margin:0 auto;
+	border-width: 0 1px 1px 1px;
+	border-style: dashed;
+	border-color: #ff0000;
+}
+.cover-content {
+	display:flex;
+	padding:0 100px;
+	justify-content: space-between;
+}
+.cover-content h1, .a4-page h1 {
+	font-size:78px;
+	line-height: 1.15em;
+	color:#1B3967; /* color match to the corporate color of the logo */
+}
+.a4-page h2 {
+	font-size:48px;
+	line-height: 1.15em;
+}
+.page-patch, .num-patch {
+	display:flex;
+	width:100px;
+	height:100px;
+	text-align:center;
+	justify-content: center;
+	align-items: center;
+	background-color:#1B3967; /* color match to the corporate color of the logo */
+	color:#ffffff; /* black or white depends on the background color */
+	font-size:24px;
+	font-weight: bold;
+}
+.num-patch {
+	position:absolute;
+	top:0;
+	right:100px;
+}
+.page-logo {
+	position:absolute;
+	right:100px;
+	bottom:20px;
+}
+ul.cover-toc {
+	position:absolute;
+	bottom:220px;
+	left:15px;
+	padding:0px 100px;
+	width:50%;
+	font-size:18px;
+	font-weight: bold;
+	color:#ffffff;
+}
+ul.cover-toc li {
+	list-style-image: url("img/triangle-bullet-white.png");
+	padding:0 0 8px 10px;
+}
+.cover-info-box {
+	position:absolute;
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	bottom:230px;
+	right:100px;
+	height:calc(178px - 40px);
+	width:300px;
+	padding: 20px 50px;
+	font-size:18px;
+	line-height: 2em;
+	background-color:#1B3967; /* color match to the corporate color of the logo */
+	color:#ffffff; /* black or white depends on the background color */
+}
+.cover-disclaimer {
+	position:absolute;
+	bottom:0px;
+	padding:50px 300px 50px 100px;
+	color:#cccccc;
+	font-size:14px;
+	text-align: justify;
+}
+
+/* 8-point */
+.dashboard-container {
+	display:flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: stretch;
+}
+.speedometer {
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	width:25%;
+	margin:100px 0 60px 0;
+	padding-top:120px;
+	position:relative;
+	text-align: center;
+	font-size:18px;
+	font-weight:bold;
+}
+.speedometer > img.dial, .speedometer > img.hand {
+	position:absolute;
+	width:160px;
+	left:calc(50% - 80px);
+	top:0;
+}
+.speedometer > span {
+	font-size:72px;
+}
+
+/* top 4 */
+.medic-report-top {
+	display:flex;
+	position:relative;
+	flex-direction:row;
+	flex-wrap: wrap;
+	justify-content:center;
+	align-items:stretch;
+	padding:40px 0;
+}
+.top-report-box-1, .top-report-box-2, .top-report-box-3, .top-report-box-4 {
+	display:flex;
+	position:relative;
+	flex-direction: column;
+	align-items: stretch;
+	width:calc(50% - 10px);
+	height:482px;
+	margin:0;
+	border-style:solid;
+	border-color:#cccccc;
+	transition: all ease 0.5s;
+}
+.top-report-box-1 {
+	border-width:4px 4px 4px 4px;
+	border-radius:20px 0 0 0;
+}
+.top-report-box-2 {
+	border-width:4px 4px 4px 0px;
+	border-radius:0 20px 0 0;
+}
+.top-report-box-3 {
+	border-width:0px 4px 4px 4px;
+	border-radius:0 0 0 20px;
+}
+.top-report-box-4 {
+	border-width:0px 4px 4px 0px;
+	border-radius:0 0 20px 0;
+}
+.top-report-box-header {
+	display:flex;
+	flex-direction:row;
+	justify-content: space-between;
+	align-items: center;
+    min-height: 40px;
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+	border-bottom:3px dotted #cccccc;
+}
+.top-report-box-body {
+	display:flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items:center;
+    padding:10px 10px 30px 10px;
+	height:380px;
+}
+
+/* toc */
+.toc-container {
+	display:flex;
+	flex-direction:row;
+	justify-content: center;
+	align-items:stretch;
+}
+.toc-column {
+	border-left:2px dotted #cccccc;
+	padding:20px;
+}
+.toc-column h3 {
+	font-size: 20px;
+	font-weight:bold;
+}
+ul.toc {
+	list-style: none;
+	padding:0 0 0 15px;
+}
+ul.toc li {
+	list-style-image: url("img/triangle-bullet.png");
+	padding:0 0 15px 0;
+}
+
+/* full report list */
+ul.medic-report {
+	list-style: none;
+	line-height: 1.15em;
+	margin:0;
+	padding:0;
+}
+ul.medic-report li {
+	display:flex;
+	position: relative;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	transition: all 0.3s ease;
+	border-bottom:1px dotted #cccccc;
+}
+.column-issue, .column-severity, .column-effect, .column-info, .column-risk-ico, .column-risk {
+	display:flex;
+	position:relative;
+	padding: 15px 10px;
+	align-items:center;
+}
+.column-issue {
+	width:calc(25% - 20px);
+	text-align: left;
+}
+.column-severity {
+	width:calc(15% - 20px);
+	text-align: center;
+}
+.column-effect {
+	width:calc(23% - 20px);
+	text-align: center;
+}
+.column-info, .column-risk-ico {
+	width:calc(20% - 20px);
+	text-align: right;
+	justify-content:flex-end;
+}
+.column-risk {
+	width:calc(38% - 20px);
+	text-align: left;
+}
+/* high low pip bar */
+.sev-bar {
+	display:inline-block;
+	position:relative;
+	width:100%;
+	height:8px;
+	border:2px solid #ffffff;
+	border-radius:6px;
+	background: rgb(38,255,0);
+    background: linear-gradient(90deg, rgba(38,255,0,1) 0%, rgba(255,220,0,1) 13%, rgba(255,160,0,1) 40%, rgba(255,0,0,1) 70%, rgba(121,24,24,1) 96%);
+}
+div.sev-bar-dot {
+	position:absolute;
+	width:8px;
+	height:8px;
+	top:-4px;
+	padding:0;
+	margin:0;
+	border:4px solid #FFFFFF;
+	border-radius:50%;
+	box-shadow: 1px 1px 3px rgb(0 0 0 / 0.5);
+	z-index: 801;
+}
+.severity-text {
+	font-size:24px;
+	line-height: 1.25em;
+	font-weight: normal;
+	margin:20px 0 10px;
+	text-align: center;
+}
+.perf-effect-text {
+	font-size:48px;
+	line-height: 1em;
+	font-weight: bold;
+	margin:0 0 40px 0;
+	text-align: center;
+}
+.perf-effect-text span {
+	font-size:24px;
+	color:#333333;
+}
+.sev-bar-top {
+	display:inline-block;
+	position:relative;
+	width:60%;
+	height:40px;
+	border-radius:20px;
+	background: rgb(38,255,0);
+    background: linear-gradient(90deg, rgba(38,255,0,1) 0%, rgba(255,220,0,1) 13%, rgba(255,160,0,1) 40%, rgba(255,0,0,1) 70%, rgba(121,24,24,1) 96%);
+}
+div.sev-bar-dot-top {
+	position:absolute;
+	width:32px;
+	height:32px;
+	padding:0;
+	margin:4px;
+	background-color:#ffffff;
+	border-radius:50%;
+	box-shadow: 1px 1px 3px rgb(0 0 0 / 0.5);
+	z-index: 801;
+}
+a.btn-top-info {
+	display:flex;
+	align-items:center;
+	height:36px;
+	line-height: 36px;
+	background-color:#047F92;
+	color:#ffffff;
+	font-weight:bold;
+	padding:0 20px;
+	border-radius:18px;
+	transition:all ease 0.3s;
+	cursor:pointer;
+	font-size:18px;
+}
+a.btn-top-info:hover {
+	background-color:#06AFC9;
+}
+a.btn-top-info span {
+	font-size:24px;
+	margin-right:10px;
+}
+
+.risk-ico-po {
+	font-size:36px;
+	color:#009245;
+}
+.risk-ico-ng {
+	font-size:36px;
+	color:#C1272D;
+}
+
+/* detailed report */
+.detail-info-container {
+	display:flex;
+	position:relative;
+	flex-direction:row;
+	flex-wrap: wrap;
+	justify-content:center;
+	align-items:stretch;
+	padding:40px 0;
+}
+
+.detail-info-box-1, .detail-info-box-2, .detail-info-box-3, .detail-info-box-4 {
+	display:flex;
+	position:relative;
+	flex-direction: column;
+	align-items: stretch;
+	width:calc(50% - 45px);
+	height:80px;
+	margin:0;
+	padding:20px;
+	border-style:solid;
+	border-color:#cccccc;
+	transition: all ease 0.5s;
+}
+.detail-info-box-5 {
+	display:flex;
+	position:relative;
+	flex-direction: column;
+	align-items: stretch;
+	width:calc(100% - 48px);
+	height:80px;
+	margin:0;
+	padding:20px;
+	border-style:solid;
+	border-color:#cccccc;
+	transition: all ease 0.5s;
+}
+.detail-info-box-1 {
+	border-width:2px 2px 2px 2px;
+	border-radius:20px 0 0 0;
+}
+.detail-info-box-2 {
+	border-width:2px 2px 2px 0px;
+	border-radius:0 20px 0 0;
+}
+.detail-info-box-3 {
+	border-width:0px 2px 2px 2px;
+	border-radius:0 0 0 20px;
+}
+.detail-info-box-4 {
+	border-width:0px 2px 2px 0px;
+	border-radius:0 0 20px 0;
+}
+.detail-info-box-5 {
+	border-width:0px 2px 2px 2px;
+	border-radius:0 0 20px 20px;
+	color:#ffffff;
+}
+.bg-ng {
+	background-color:#C1272D;
+}
+.bg-po {
+	background-color:#009245;
+}
+.detail-info-box-1 h3, .detail-info-box-2 h3, .detail-info-box-3 h3, .detail-info-box-4 h3, .detail-info-box-5 h3 {
+	font-size:18px;
+	font-weight: normal;
+	margin:0 0 10px 0;
+}
+.detail-info-box-1 h2, .detail-info-box-2 h2, .detail-info-box-3 h2, .detail-info-box-4 h2, .detail-info-box-5 h2 {
+	position:relative;
+	font-size:36px;
+	margin: 0;
+}
+.detail-info-box-5 h3, .detail-info-box-5 h2 {
+	color:#ffffff;
+}
+.detail-info-box-2 > h2 > span {
+	position:absolute;
+	left:-20px;
+	top:-15px;
+	font-size:80px;
+	/*color:#047F92;*/
+}
+.detail-info-box-5 > div > span {
+	position:absolute;
+	left:20px;
+	bottom:10px;
+	font-size:72px;
+}
+.severity-level {
+	position:absolute;
+	right:20px;
+	bottom:40px;
+	font-size:36px;
+	font-weight: bold;
+}
+.report-chart-container {
+	display:flex;
+	justify-content: space-between;
+}
+.report-chart-box {
+	display:flex;
+	flex-direction:column;
+	width:calc(50% - 30px);
+	position:relative;
+}
+.legend-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px 0;
+}
+.legend-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 10px 10px;
+	font-size:12px;
+	line-height: 1.25em;
+	width:calc(20% - 20px);
+	text-align: center;
+}
+
+/* faq */
+p.faq {
+	margin:20px 0 60px;
+}
+p.faq > strong {
+	display:block;
+	font-size:24px;
+	padding-bottom:5px;
+	color:#047f92;
+}
+.end-disclaimer {
+	color:#07c3e0;
+	text-align: justify;
+	margin:60px 0;
+}
+
+.larger-font {
+	font-size: larger;
+	font-weight: bold;
+}
+@media only screen and (max-width: 540px) {
+	.larger-font {
+		font-size: 12px;
+	}
+}
