@@ -328,6 +328,7 @@ a.btn-top-info {
 	transition:all ease 0.3s;
 	cursor:pointer;
 	font-size:18px;
+	text-decoration:none;
 }
 a.btn-top-info:hover {
 	background-color:#06AFC9;
