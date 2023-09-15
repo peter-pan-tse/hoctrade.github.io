@@ -9,7 +9,7 @@
 	margin:0 auto;
 	border-width: 0 1px 1px 1px;
 	border-style: dashed;
-	border-color: #ff0000;
+	border-color: #dddddd;
 	background-image:url("img/trade-medic-report-cover-bg.png");
 	background-repeat: no-repeat;
 	background-size:cover;
@@ -23,7 +23,7 @@
 	margin:0 auto;
 	border-width: 0 1px 1px 1px;
 	border-style: dashed;
-	border-color: #ff0000;
+	border-color: #dddddd;
 }
 .cover-content {
 	display:flex;
@@ -82,7 +82,7 @@ ul.cover-toc li {
 	align-items: center;
 	bottom:230px;
 	right:100px;
-	height:calc(178px - 40px);
+	height:155px;
 	width:300px;
 	padding: 20px 50px;
 	font-size:18px;
@@ -111,9 +111,11 @@ ul.cover-toc li {
 	display:flex;
 	flex-direction:column;
 	align-items:center;
-	width:25%;
-	margin:100px 0 60px 0;
-	padding-top:120px;
+	width:180px;
+	margin:60px 0 60px 0;
+	padding:150px 10px 40px 10px;
+	border:2px solid #ccc;
+	border-radius: 100px;
 	position:relative;
 	text-align: center;
 	font-size:18px;
@@ -123,10 +125,45 @@ ul.cover-toc li {
 	position:absolute;
 	width:160px;
 	left:calc(50% - 80px);
-	top:0;
+	top:20px;
 }
 .speedometer > span {
 	font-size:72px;
+}
+.speedometer-dot {
+	position:absolute;
+	width:30px;
+	height:30px;
+	border-radius:15px;
+	top:85px;
+	left:calc(50% - 15px);
+}
+.gear-1 {
+	background-color:#39B54A;
+}
+.gear-2 {
+	background-color:#8DC63F;
+}
+.gear-3 {
+	background-color:#D7DF23;
+}
+.gear-4 {
+	background-color:#F9ED32;
+}
+.gear-5 {
+	background-color:#FBB040;
+}
+.gear-6 {
+	background-color:#F7941D;
+}
+.gear-7 {
+	background-color:#F15A29;
+}
+.gear-8 {
+	background-color:#EF4136;
+}
+.gear-9 {
+	background-color:#BE1E2D;
 }
 
 /* top 4 */
@@ -137,7 +174,7 @@ ul.cover-toc li {
 	flex-wrap: wrap;
 	justify-content:center;
 	align-items:stretch;
-	padding:40px 0;
+	padding:40px 0 0 0;
 }
 .top-report-box-1, .top-report-box-2, .top-report-box-3, .top-report-box-4 {
 	display:flex;
@@ -148,8 +185,7 @@ ul.cover-toc li {
 	height:482px;
 	margin:0;
 	border-style:solid;
-	border-color:#cccccc;
-	transition: all ease 0.5s;
+	border-color:#087F92;
 }
 .top-report-box-1 {
 	border-width:4px 4px 4px 4px;
@@ -161,11 +197,33 @@ ul.cover-toc li {
 }
 .top-report-box-3 {
 	border-width:0px 4px 4px 4px;
-	border-radius:0 0 0 20px;
+	border-radius:0 0 0 0px;
 }
 .top-report-box-4 {
 	border-width:0px 4px 4px 0px;
-	border-radius:0 0 20px 0;
+	border-radius:0 0 0px 0;
+}
+.top-report-box-5 {
+	display:block;
+	position:relative;
+	text-align:center;
+	width:calc(100% - 56px);
+	margin:0;
+	padding:20px;
+	border-style:solid;
+	border-color:#087F92;
+	background-color: #087F92;
+	border-width:0px 4px 4px 4px;
+	border-radius:0 0 40px 40px;
+	color:#ffffff;
+	font-weight: bold;
+}
+.top-report-box-5 > a {
+	color:#00DFFF;
+	text-decoration:none;
+}
+.top-report-box-5 > a:hover {
+	text-decoration:underline;
 }
 .top-report-box-header {
 	display:flex;
@@ -298,7 +356,7 @@ div.sev-bar-dot {
 .sev-bar-top {
 	display:inline-block;
 	position:relative;
-	width:60%;
+	width:80%;
 	height:40px;
 	border-radius:20px;
 	background: rgb(38,255,0);
@@ -355,7 +413,7 @@ a.btn-top-info span {
 	flex-wrap: wrap;
 	justify-content:center;
 	align-items:stretch;
-	padding:40px 0;
+	padding:0 0 40px 0;
 }
 
 .detail-info-box-1, .detail-info-box-2, .detail-info-box-3, .detail-info-box-4 {
@@ -444,6 +502,12 @@ a.btn-top-info span {
 	font-size:36px;
 	font-weight: bold;
 }
+.explanation-box {
+	border-top:2px dotted #cccccc;
+	border-bottom:2px dotted #cccccc;
+	margin-top:40px;
+	padding-bottom:40px;
+}
 .report-chart-container {
 	display:flex;
 	justify-content: space-between;
@@ -451,7 +515,13 @@ a.btn-top-info span {
 .report-chart-box {
 	display:flex;
 	flex-direction:column;
-	width:calc(50% - 30px);
+	width:calc(45% - 30px);
+	position:relative;
+}
+.report-chart-txt-box {
+	display:flex;
+	flex-direction:column;
+	width:calc(52% - 30px);
 	position:relative;
 }
 .legend-container {
