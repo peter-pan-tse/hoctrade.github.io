@@ -272,7 +272,7 @@ ul.toc li {
 /* full report list */
 ul.medic-report {
 	list-style: none;
-	line-height: 1.15em;
+	line-height: 1em;
 	margin:0;
 	padding:0;
 }
@@ -288,7 +288,7 @@ ul.medic-report li {
 .column-issue, .column-severity, .column-effect, .column-info, .column-risk-ico, .column-risk {
 	display:flex;
 	position:relative;
-	padding: 15px 10px;
+	padding: 13px 10px;
 	align-items:center;
 }
 .column-issue {
