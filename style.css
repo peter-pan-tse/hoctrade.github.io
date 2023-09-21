@@ -1140,3 +1140,110 @@ a.cat-bullet.active {
 		height:calc(100vh - 180px);
 	}
 }
+/* 8-point assessment */
+.speedometer-body {
+	display:flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: stretch;
+	background-color: #00333B;
+    border-radius: 0 0 20px 20px;
+}
+.speedometer-item {
+	position:relative;
+	display:flex;
+	flex-direction:column;
+	align-items: center;
+	width:10%;
+	text-align: center;
+	padding-top:45px;
+	height:45px;
+	margin:20px 0 0 0;
+	font-size:12px;
+	color:#06AFC9;
+	line-height: 1.15em;
+}
+@media only screen and (max-width: 540px) {
+	.speedometer-item {
+		width:24%;
+	}
+}
+.speedometer-dial {
+	position:absolute;
+	width:60px;
+	top:0px;
+	left:calc(50% - 30px);
+}
+.speedometer-hand {
+	position:absolute;
+	width:60px;
+	height:2px;
+	background:#ffffff;
+	top:29px;
+	left: calc(50% - 30px);
+	
+}
+.gear-1 {
+	background:linear-gradient(90deg, rgba(255,255,255,0) 6%, rgba(255,255,255,1) 7%, rgba(255,255,255,1) 25%, rgba(57,181,74,1) 26%, rgba(57,181,74,1) 50%, rgba(57,181,74,0) 51%);
+}
+.gear-2 {
+	background:linear-gradient(90deg, rgba(255,255,255,0) 6%, rgba(255,255,255,1) 7%, rgba(255,255,255,1) 25%, rgba(141,198,63,1) 26%, rgba(141,198,63,1) 50%, rgba(141,198,63,0) 51%);
+}
+.gear-3 {
+	background:linear-gradient(90deg, rgba(255,255,255,0) 6%, rgba(255,255,255,1) 7%, rgba(255,255,255,1) 25%, rgba(215,223,35,1) 26%, rgba(215,223,35,1) 50%, rgba(215,223,35,0) 51%);
+}
+.gear-4 {
+	background:linear-gradient(90deg, rgba(255,255,255,0) 6%, rgba(255,255,255,1) 7%, rgba(255,255,255,1) 25%, rgba(249,237,50,1) 26%, rgba(249,237,50,1) 50%, rgba(249,237,50,0) 51%);
+}
+.gear-5 {
+	background:linear-gradient(90deg, rgba(255,255,255,0) 6%, rgba(255,255,255,1) 7%, rgba(255,255,255,1) 25%, rgba(251,176,64,1) 26%, rgba(251,176,64,1) 50%, rgba(251,176,64,0) 51%);
+}
+.gear-6 {
+	background:linear-gradient(90deg, rgba(255,255,255,0) 6%, rgba(255,255,255,1) 7%, rgba(255,255,255,1) 25%, rgba(247,148,29,1) 26%, rgba(247,148,29,1) 50%, rgba(247,148,29,0) 51%);
+}
+.gear-7 {
+	background:linear-gradient(90deg, rgba(255,255,255,0) 6%, rgba(255,255,255,1) 7%, rgba(255,255,255,1) 25%, rgba(241,90,41,1) 26%, rgba(241,90,41,1) 50%, rgba(241,90,41,0) 51%);
+}
+.gear-8 {
+	background:linear-gradient(90deg, rgba(255,255,255,0) 6%, rgba(255,255,255,1) 7%, rgba(255,255,255,1) 25%, rgba(239,65,54,1) 26%, rgba(239,65,54,1) 50%, rgba(239,65,54,0) 51%);
+}
+.gear-9 {
+	background:linear-gradient(90deg, rgba(255,255,255,0) 6%, rgba(255,255,255,1) 7%, rgba(255,255,255,1) 25%, rgba(190,30,45,1) 26%, rgba(190,30,45,1) 50%, rgba(190,30,45,0) 51%);
+}
+.gear-dot {
+	position:absolute;
+	width:10px;
+	height:10px;
+	border-radius: 5px;
+	top:25px;
+	left: calc(50% - 5px);
+	box-shadow:1px 1px 2px rgba(0,0,0,0.3);
+}
+.gear-dot-1 {
+	background-color:#39B54A;
+}
+.gear-dot-2 {
+	background-color:#8DC63F;
+}
+.gear-dot-3 {
+	background-color:#D7DF23;
+}
+.gear-dot-4 {
+	background-color:#F9ED32;
+}
+.gear-dot-5 {
+	background-color:#FBB040;
+}
+.gear-dot-6 {
+	background-color:#F7941D;
+}
+.gear-dot-7 {
+	background-color:#F15A29;
+}
+.gear-dot-8 {
+	background-color:#EF4136;
+}
+.gear-dot-9 {
+	background-color:#BE1E2D;
+}
