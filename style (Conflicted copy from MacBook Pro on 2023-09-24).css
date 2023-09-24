@@ -1199,78 +1199,6 @@ a.cat-bullet.active {
 
 	}
 }
-.hand-behavioral {
-	animation: hand1 ease 2s forwards;
-	animation-delay: 0.5s;
-}
-.hand-emotion {
-	animation: hand2 ease 2s forwards;
-	animation-delay: 0.5s;
-}
-.hand-strategic {
-	animation: hand3 ease 2s forwards;
-	animation-delay: 0.5s;
-}
-.hand-trade {
-	animation: hand4 ease 2s forwards;
-	animation-delay: 0.5s;
-}
-.hand-accuracy {
-	animation: hand5 ease 2s forwards;
-	animation-delay: 0.5s;
-}
-.hand-timing {
-	animation: hand6 ease 2s forwards;
-	animation-delay: 0.5s;
-}
-.hand-risk {
-	animation: hand7 ease 2s forwards;
-	animation-delay: 0.5s;
-}
-.hand-stimulation {
-	animation: hand8 ease 2s forwards;
-	animation-delay: 0.5s;
-}
-@-webkit-keyframes hand1 {
-	0% {transform:rotate(0deg);}
-	17% {transform:rotate(30deg);}
-	100% {transform:rotate(30deg);}
-}
-@-webkit-keyframes hand2 {
-	0% {transform:rotate(0deg);}
-	74% {transform:rotate(134deg);}
-	100% {transform:rotate(134deg);}
-}
-@-webkit-keyframes hand3 {
-	0% {transform:rotate(0deg);}
-	50% {transform:rotate(90deg);}
-	100% {transform:rotate(90deg);}
-}
-@-webkit-keyframes hand4 {
-	0% {transform:rotate(0deg);}
-	34% {transform:rotate(62deg);}
-	100% {transform:rotate(62deg);}
-}
-@-webkit-keyframes hand5 {
-	0% {transform:rotate(0deg);}
-	6% {transform:rotate(10deg);}
-	100% {transform:rotate(10deg);}
-}
-@-webkit-keyframes hand6 {
-	0% {transform:rotate(0deg);}
-	59% {transform:rotate(107deg);}
-	100% {transform:rotate(107deg);}
-}
-@-webkit-keyframes hand7 {
-	0% {transform:rotate(0deg);}
-	100% {transform:rotate(180deg);}
-	100% {transform:rotate(180deg);}
-}
-@-webkit-keyframes hand8 {
-	0% {transform:rotate(0deg);}
-	70% {transform:rotate(128deg);}
-	100% {transform:rotate(128deg);}
-}
 /*.gear-1 {
 	background:linear-gradient(90deg, rgba(255,255,255,0) 6%, rgba(255,255,255,1) 7%, rgba(255,255,255,1) 25%, rgba(57,181,74,1) 26%, rgba(57,181,74,1) 50%, rgba(57,181,74,0) 51%);
 }
@@ -1319,48 +1247,48 @@ a.cat-bullet.active {
 }
 .gear-dot-1 {
 	background-color:#39B54A;
-	animation: color1 ease 2s;
-	animation-delay: 0.5s;
+	animation-name: color1;
+	animation-duration: 1s;
 }
 .gear-dot-2 {
 	background-color:#8DC63F;
-	animation: color2 ease 2s;
-	animation-delay: 0.5s;
+	animation-name: color2;
+	animation-duration: 1s;
 }
 .gear-dot-3 {
 	background-color:#D7DF23;
-	animation: color3 ease 2s;
-	animation-delay: 0.5s;
+	animation-name: color3;
+	animation-duration: 1s;
 }
 .gear-dot-4 {
 	background-color:#F9ED32;
-	animation: color4 ease 2s;
-	animation-delay: 0.5s;
+	animation-name: color4;
+	animation-duration: 1s;
 }
 .gear-dot-5 {
 	background-color:#FBB040;
-	animation: color5 ease 2s;
-	animation-delay: 0.5s;
+	animation-name: color5;
+	animation-duration: 1s;
 }
 .gear-dot-6 {
 	background-color:#F7941D;
-	animation: color6 ease 2s;
-	animation-delay: 0.5s;
+	animation-name: color6;
+	animation-duration: 1s;
 }
 .gear-dot-7 {
 	background-color:#F15A29;
-	animation: color7 ease 2s;
-	animation-delay: 0.5s;
+	animation-name: color7;
+	animation-duration: 1s;
 }
 .gear-dot-8 {
 	background-color:#EF4136;
-	animation: color8 ease 2s;
-	animation-delay: 0.5s;
+	animation-name: color8;
+	animation-duration: 1s;
 }
 .gear-dot-9 {
 	background-color:#BE1E2D;
-	animation: color9 ease 1s;
-	animation-delay: 0.5s;
+	animation-name: color9;
+	animation-duration: 1s;
 }
 		
 @-webkit-keyframes color1 {
@@ -1370,77 +1298,41 @@ a.cat-bullet.active {
 }
 @-webkit-keyframes color2 {
 	0% {background-color:#ffffff;}
-	10% {background-color: #8DC63F;}
   	20% {background-color: #8DC63F;}
 	100% {background-color: #8DC63F;}
 }
 @-webkit-keyframes color3 {
 	0% {background-color:#ffffff;}
-	10% {background-color: #8DC63F;}
-  	20% {background-color: #8DC63F;}
   	30% {background-color: #D7DF23;}
 	100% {background-color: #D7DF23;}
 }
 @-webkit-keyframes color4 {
 	0% {background-color:#ffffff;}
-	10% {background-color: #8DC63F;}
-  	20% {background-color: #8DC63F;}
-  	30% {background-color: #D7DF23;}
   	40% {background-color: #F9ED32;}
 	100% {background-color: #F9ED32;}
 }
 @-webkit-keyframes color5 {
 	0% {background-color:#ffffff;}
-	10% {background-color: #8DC63F;}
-  	20% {background-color: #8DC63F;}
-  	30% {background-color: #D7DF23;}
-  	40% {background-color: #F9ED32;}
   	50% {background-color: #FBB040;}
 	100% {background-color: #FBB040;}
 }
 @-webkit-keyframes color6 {
 	0% {background-color:#ffffff;}
-	10% {background-color: #8DC63F;}
-  	20% {background-color: #8DC63F;}
-  	30% {background-color: #D7DF23;}
-  	40% {background-color: #F9ED32;}
-  	50% {background-color: #FBB040;}
   	60% {background-color: #F7941D;}
 	100% {background-color: #F7941D;}
 }
 @-webkit-keyframes color7 {
 	0% {background-color:#ffffff;}
-	10% {background-color: #8DC63F;}
-  	20% {background-color: #8DC63F;}
-  	30% {background-color: #D7DF23;}
-  	40% {background-color: #F9ED32;}
-  	50% {background-color: #FBB040;}
-  	60% {background-color: #F7941D;}
   	70% {background-color: #F15A29;}
 	100% {background-color: #F15A29;}
 }
 @-webkit-keyframes color8 {
 	0% {background-color:#ffffff;}
-	10% {background-color: #8DC63F;}
-  	20% {background-color: #8DC63F;}
-  	30% {background-color: #D7DF23;}
-  	40% {background-color: #F9ED32;}
-  	50% {background-color: #FBB040;}
-  	60% {background-color: #F7941D;}
-  	70% {background-color: #F15A29;}
   	80% {background-color: #EF4136;}
 	100% {background-color: #EF4136;}
 }
 @-webkit-keyframes color9 {
 	0% {background-color:#ffffff;}
-	10% {background-color: #8DC63F;}
-  	20% {background-color: #8DC63F;}
-  	30% {background-color: #D7DF23;}
-  	40% {background-color: #F9ED32;}
-  	50% {background-color: #FBB040;}
-  	60% {background-color: #F7941D;}
-  	70% {background-color: #F15A29;}
-  	80% {background-color: #EF4136;}
   	90% {background-color: #BE1E2D;}
 	100% {background-color: #BE1E2D;}
 }
