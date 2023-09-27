@@ -4,7 +4,7 @@
 #mobileMenuToggle, #mobileMenuToggleForex {
 	display:none;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 920px) {
 	#mobileMenuToggle, #mobileMenuToggleForex {
 	 	display: block;
 		position: fixed;

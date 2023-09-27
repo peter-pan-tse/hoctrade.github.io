@@ -647,8 +647,8 @@
 			<div class="header-container">
 				<div class="logo"><a href="index.html"><img src="img/logo-w-text.svg" /></a></div>
 				<ul class="menu">
-					<li><a href="pricing.html" style="color:#07deff;">Pricing</a></li>
-					<li><a href="partnership.html">Partnership</a></li>
+					<li><a href="pricing.html">Pricing</a></li>
+					<li><a href="partnership.html" style="color:#07deff;">Partnership</a></li>
 					<li><a href="#">Sign in</a></li>
 					<li><a href="#">Register for free</a></li>
 					<li><a class="sandbox" href="#sandbox">Create sandbox</a></li>
@@ -1124,31 +1124,5 @@
 			</div>
 		</div>
 		
-		<div class="popup">
-			<div class="popup-content">
-				<!--<div style="position:relative;"><button id="close" class="close"><span class="ht-cross"></span></button></div>-->
-				<h2><strong>Currently Free-access</strong></h2>
-				<p>You can currently enjoy hoc-trade 100% free. We are in the final testing stage and would highly appreciate your feedback.</p>
-				<h3>No payment information required</h3>
-				<p style="font-size:smaller;">For feedback, questions, or support, please join our Discord server <a href="#">here</a></p>
-				<a class="btn-subscribe" href="#">Register for free</a>
-			</div>
-		</div>
-		
 	</body>
-	<script>
-		window.addEventListener("load", function(){
-			setTimeout(
-				function open(event){
-					document.querySelector(".popup").style.display = "block";
-				},
-				1000
-			)
-		});
-
-
-		document.querySelector("#close").addEventListener("click", function(){
-			document.querySelector(".popup").style.display = "none";
-		});
-	</script>
 </html>

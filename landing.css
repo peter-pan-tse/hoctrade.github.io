@@ -75,10 +75,12 @@ a:hover, a:focus {
 	width:auto;
 	height:32px;
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 920px) {
 	.logo {
 		padding:32px 0 0 10px;
 	}
+}
+@media only screen and (max-width: 540px) {
 	.logo img {
 		height:28px;
 	}
@@ -107,7 +109,7 @@ ul.menu li a {
 	cursor: pointer;
 	transition:all ease 0.3s;
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width:920px) {
 	ul.menu {
 		display:none;
 	}
