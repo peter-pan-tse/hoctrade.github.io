@@ -8,7 +8,7 @@
 	<link href="landing.css" rel="stylesheet">
 	<link href="burger-menu-ht-landing.css" rel="stylesheet">
 	<link rel="icon" href="img/favicon.svg">
-	<title>hoc-trade pricing</title>
+	<title>hoc-trade paatnership</title>
 	<!-- write your code here -->
 	<style>
 		html, body {
@@ -33,21 +33,21 @@
 		.header-container {
 			padding: 0 0 6px 0;
 		}
-		.price-header {
+		.partner-header {
 			display:flex;
-			padding:20px 0 80px 0;
+			padding:20px 0;
 			background: rgb(4,127,146);
             background: linear-gradient(0deg, rgba(34,193,195,1) 10%, rgba(4,127,146,1) 90%);
 		}
 		
-		.price-header h1 {
+		.partner-header h1 {
 			color:#ffffff;
 			font-size:4.3vw;
 			line-height: 1.25em;
 			margin:10px 0;
 			font-weight: bold;
 		}
-		.price-header h2 {
+		.partner-header h2 {
 			color:#ffffff;
 			font-size:2vw;
 			line-height: 1em;
@@ -55,589 +55,235 @@
 			font-weight: bold;
 		}
 		@media only screen and (max-width: 920px) {
-			.price-header {
+			.partner-header {
 				padding:20px 20px 80px 20px;
 			}
-			.price-header h1 {
+			.partner-header h1 {
 				font-size:5.5vw;
 			}
-			.price-header h2 {
+			.partner-header h2 {
 				font-size:3vw;
 			}
 		}
 		@media only screen and (max-width: 540px) {
-			.price-header {
+			.partner-header {
 				padding:20px 10px 80px 10px;
 			}
-			.price-header h1 {
+			.partner-header h1 {
 				font-size:5.5vw;
 			}
-			.price-header h2 {
+			.partner-header h2 {
 				font-size:18px;
 				line-height: 1.25em;
 			}
 		}
-		
-		.pricing-container {
+		.partner-cat-container {
 			display:flex;
 			flex-direction:row;
+			justify-content: space-between;
+			align-items: stretch;
+			width:100%;
+		}
+		a.partner-cat-box {
+			position:relative;
+			display:flex;
+			flex-direction:column;
+			align-items: center;
+			justify-content: flex-start;
+			width:32%;
+			text-decoration: none;
+			font-weight: bold;
+			text-align: center;
+			color:#ffffff;
+			transition:all ease 0.5s;
+		}
+		a.partner-cat-box:hover {
+			transform: scale(1.1);
+		}
+		.partner {
+			border-radius: 40px 40px 0 0;
+			background-color:rgba(29,99,99,1);
+			padding:40px 40px 0 40px;
+			width:calc(100% - 80px);
+		}
+		.cat-text-partner {
+			padding:20px;
+			border-radius: 0 0 40px 40px;
+			
+			background:linear-gradient(rgba(29,99,99,1) 0%, rgba(34,193,195,1) 75%);
+			width:calc(100% - 40px);
+		}
+		.be-partner {
+			border-radius: 40px 40px 0 0;
+			background-color:rgba(25,99,107,1);
+			padding:40px 40px 0 40px;
+			width:calc(100% - 80px);
+		}
+		.cat-text-be-partner {
+			padding:20px;
+			border-radius: 0 0 40px 40px;
+			background:linear-gradient(rgba(25,99,107,1) 0%, rgba(6,175,201,1) 75%);
+			width:calc(100% - 40px);
+		}
+		.be-affiliate {
+			border-radius: 40px 40px 0 0;
+			background-color:rgba(16,84,91,1);
+			padding:40px 40px 0 40px;
+			width:calc(100% - 80px);
+		}
+		.cat-text-affiliate {
+			padding:20px;
+			border-radius: 0 0 40px 40px;
+			background:linear-gradient(rgba(16,84,91,1) 0%, rgba(4,127,146,1) 75%);
+			width:calc(100% - 40px);
+		}
+		.cat-text-partner > span, .cat-text-be-partner > span, .cat-text-affiliate > span {
+			font-size:32px;
+			padding:20px;
+		}
+		.main-container {
+			padding:40px 0;
+		}
+		
+		ul.tier-1, ul.tier-2, ul.tier-3, ul.tier-4, ul.tier-5 {
+			display:flex;
+			flex-direction:column;
+			padding:60px 0 0 0;
+			width:100%;
+		}
+		ul.tier-1 h2, ul.tier-1 h3 {
+			color:#033C45;
+			margin:5px 0;
+		}
+		ul.tier-2 h2, ul.tier-2 h3 {
+			color:#026C7C;
+			margin:5px 0;
+		}
+		ul.tier-3 h2, ul.tier-3 h3 {
+			color:#047F92;
+			margin:5px 0;
+		}
+		ul.tier-4 h2, ul.tier-4 h3 {
+			color:#06AFC9;
+			margin:5px 0;
+		}
+		ul.tier-5 h2, ul.tier-5 h3 {
+			color:#07C3E0;
+			margin:5px 0;
+		}
+		ul.tier-1 li.tier-1-item, 
+		ul.tier-2 li.tier-2-item, 
+		ul.tier-3 li.tier-3-item, 
+		ul.tier-4 li.tier-4-item, 
+		ul.tier-5 li.tier-5-item {
+			list-style: none;
+			display:flex;
+			flex-wrap: wrap;
+			justify-content:flex-start;
+			align-items:center;
+			position: relative;
+			padding:40px;
+			margin:2px 0;
+			width:calc(100% - 80px);
+			background-color: #ffffff;
+			margin-bottom: 4px solid #f2f2f2;
+		}
+		ul.tier-1 li:first-child, 
+		ul.tier-2 li:first-child, 
+		ul.tier-3 li:first-child, 
+		ul.tier-4 li:first-child, 
+		ul.tier-5 li:first-child {
+			list-style: none;
+			position: relative;
+			padding:20px;
+			margin:2px 0;
+			width:calc(100% - 40px);
+			background-color:#e6e6e6;
+			border-radius:40px 40px 0 0;
+		}
+		ul.tier-1 li:last-child, 
+		ul.tier-2 li:last-child, 
+		ul.tier-3 li:last-child, 
+		ul.tier-4 li:last-child, 
+		ul.tier-5 li:last-child {
+			border-radius:0 0 40px 40px;
+		}
+		.tier-logo {
+			height:120px;
+			width:120px;
+			margin-right:40px;
+		}
+		.tier-name {
+			font-size:18px;
+			line-height: 1.25em;
+			font-weight: bold;
+			width:20%;
+		}
+		.tier-name > span {
+			display:inline-block;
+			margin-top:5px;
+			padding:1px 10px;
+			border-radius:10px;
+			font-size:11px;
+			color:#ffffff;
+		}
+		.tier-description {
+			width:calc(80% - 360px);
+			padding:0 40px;
+			border-left:2px dotted #CCCCCC;
+			border-right:2px dotted #CCCCCC;
+			line-height: 1.25em;
+		}
+		.tier-description > span {
+			display:inline-block;
+			margin-top:20px;
+			padding:1px 10px;
+			border-radius:10px;
+			font-size:11px;
+			font-weight: bold;
+			color:goldenrod;
+			border:2px solid goldenrod;
+		}
+		a.tier-btn-visit {
+			width:60px;
+			height:30px;
+			margin:0 0 0 40px;
+			color:#ffffff;
+			background-color:#047F92;
+			text-decoration: none;
+			transition:all ease 0.3s;
+			border-radius: 15px;
+			font-weight: bold;
+			font-size:14px;
+			line-height: 30px;
+			text-align: center;
+		}
+		a.tier-btn-visit:hover {
+			background-color:#07C3E0;
+		}
+		.other-partner-container {
+			display:flex;
+			justify-content:flex-start;
 			flex-wrap: wrap;
 			align-items: stretch;
-			justify-content: center;
-			position:relative;
-			padding: 0 2vw;
-			font-size:12px;
-			line-height: 1.25em;
-		}
-		.price-header-items, .price-header-beginner, .price-header-advanced, .price-header-professional, .price-header-enterprise {
-			display:flex;
-			position:relative;
-			flex-direction:column;
-		}
-		.price-header-items {
-			justify-content:flex-start;
-			padding:0 10px 0 0;
-			width:calc(14% - 10px);
-			margin:20px 0 0 0;
-		}
-		.price-header-beginner {
-			align-items:center;
-			justify-content:flex-end;
-			background-color: #e6e6e6;
-			border-radius:20px 0 0 0;
-			padding:10px;
-			width:calc(23% - 20px);
-			margin:20px 0 0 0;
-		}
-		.price-header-advanced {
-			align-items:center;
-			justify-content:flex-end;
-			background-color: #FFFFFF;
-			border-radius:20px 20px 0 0;
-			padding:10px;
-			width:calc(24% - 20px);
-			margin:0;
-			overflow: hidden;
-		}
-		.price-header-professional {
-			align-items:center;
-			justify-content:flex-end;
-			background-color: #e6e6e6;
-			border-radius:0 20px 0 0;
-			padding:10px;
-			width:calc(23% - 20px);
-			margin:20px 0 0 0;
-		}
-		.price-header-enterprise {
-			align-items:flex-end;
-			flex-direction: row;
-			flex-wrap: wrap;
-			justify-content:center;
-			background-color: #00333b;
-			border-radius:0 20px 0 0;
-			padding:10px;
-			width:calc(14% - 20px);
-			margin:40px 0 0 0;
-			color: #07c3e0;
-			line-height: 1.25em;
-			position:relative;
-		}
-		.list-separator {
-			height:5px;
-			width:95%;
-		}
-		@media only screen and (max-width: 920px) {
-			.pricing-container {
-				padding: 0 20px;
-			}
-		}
-		@media only screen and (max-width: 540px) {
-			.pricing-container {
-				padding: 0 5px;
-			}
-			.price-header-beginner {
-				width:calc(30% - 10px);
-				text-align: center;
-				padding:5px;
-			}
-			.price-header-advanced {
-				width:calc(36% - 10px);
-				text-align: center;
-				padding:5px;
-			}
-			.price-header-professional {
-				width:calc(30% - 10px);
-				text-align: center;
-				padding:5px;
-			}
-			.price-header-enterprise {
-				position:relative;
-				width:calc(96% - 20px);
-				border-radius:0;
-				flex-direction:column;
-				align-items: center;
-				text-align: center;
-				margin:0 8px;
-				padding:5px 10px;
-				font-size: 12px; 
-			}
-			.list-separator {
-				height:15px;
-			}
-		}
-		.price-header-beginner > img, .price-header-advanced > img, .price-header-professional > img {
-			height:100px;
-			width:auto;
-		}
-		.price-header-beginner > h3, .price-header-advanced > h3, .price-header-professional > h3, .price-header-enterprise > h3 {
-			margin: 10px 0 0 0;
-			color: #103456;
-		}
-		@media only screen and (max-width: 540px) {
-			.price-header-beginner > img, .price-header-advanced > img, .price-header-professional > img {
-				height:60px;
-			}
-			.price-header-beginner > h3, .price-header-advanced > h3, .price-header-professional > h3, .price-header-enterprise > h3 {
-				margin: 2px 0 0 0;
-				font-size: 14px;
-			}
-			.price-header-beginner > h2, .price-header-professional > h2, .price-header-enterprise > h2 {
-				margin: 10px 0 0 0;
-				color: #103456;
-				font-weight:bold;
-				line-height:0.75em;
-				font-size:16px;
-			}
-			.price-header-advanced > h2 {
-				margin: 10px 0 0 0;
-				color: lightseagreen;
-				font-weight:bold;
-				line-height:0.5em;
-				font-size:18px;
-			}
-		}
-		.price-body-items, .price-body-beginner, .price-body-advanced, .price-body-professional, .price-body-enterprise {
-			display:flex;
-			position:relative;
-			flex-direction:column;
-			text-align: center;
-		}
-		.price-body-items {
-			justify-content:flex-start;
-			padding:5px 10px 5px 0px;
-			width:calc(14% - 20px);
-			margin:0 0 0 10px;
-			text-align:left;
-			color:#666666;
-			font-size:12px;
-		}
-		.price-body-beginner {
-			align-items:center;
-			justify-content:flex-start;
-			background-color: #e6e6e6;
-			border-radius:0;
-			padding:5px 10px;
-			width:calc(23% - 20px);
-			margin:0;
-			color: #103456;
-		}
-		.price-body-advanced {
-			align-items:center;
-			justify-content:flex-start;
-			background-color: #FFFFFF;
-			border-radius:0px;
-			padding:5px 10px;
-			width:calc(24% - 20px);
-			margin:0;
-			color: #103456;
-		}
-		.price-body-professional {
-			align-items:center;
-			justify-content:flex-start;
-			background-color: #e6e6e6;
-			border-radius:0;
-			padding:5px 10px;
-			width:calc(23% - 20px);
-			margin:0;
-			color: #103456;
-		}
-		.price-body-enterprise {
-			position:absolute;
-			align-items:center;
-			justify-content:flex-start;
-			background-color: #00333b;
-			border-radius:0;
-			padding:10px;
-			width:calc(100% - 20px);
-			margin:0;
-			color:#07c3e0;
-			font-size:12px;
-			top:100%;
-			left:0;
-			border-radius:0 0 20px 0;
-			z-index: 1;
-		}
-		.price-header-enterprise ul, .price-header-enterprise > div > div > ul {
-			padding:0 0 0 2px;
-			text-align:left;
-		}
-		.price-header-enterprise ul li, .price-header-enterprise > div > div > ul li {
-			list-style: none;
-			margin:0 0 5px 0;
-			padding:0 0 0 20px;
-			background-image: url("img/check-blue.png");
-			background-position: left 2px;
-			background-size: 12px 12px;
-			background-repeat: no-repeat;
-		}
-		@media only screen and (max-width: 920px) {
-
-		}
-		@media only screen and (max-width: 540px) {
-			.price-body-items {
-				width:calc(96% - 10px);
-				padding:5px;
-				text-align: left;
-				margin:0;
-				background-color:#ebebeb;border-bottom:1px solid #dddddd;		
-			}
-			.price-body-beginner {
-				width:calc(30% - 10px);
-				text-align: center;
-				padding:5px;
-				font-size:12px;
-				line-height: 1.25em;
-			}
-			.price-body-advanced {
-				width:calc(36% - 10px);
-				text-align: center;
-				padding:5px;
-				font-size:12px;
-				line-height: 1.25em;
-			}
-			.price-body-professional {
-				width:calc(30% - 10px);
-				text-align: center;
-				padding:5px;
-				font-size:12px;
-				line-height: 1.25em;
-			}
-		}
-		.price-body-beginner > h2, .price-body-professional > h2, .price-body-enterprise > h2, .price-body-beginner > h3, .price-body-advanced > h3, .price-body-professional > h3, .price-body-enterprise > h3 {
-			margin: 10px 0 0 0;
-			color: #103456;
-			font-weight:bold;
-			line-height:1.25em;
-		}
-		.price-body-advanced > h2 {
-			margin: 10px 0 0 0;
-			color: lightseagreen;
-			font-weight:bold;
-			line-height:1em;
-			font-size:36px;
-		}
-		@media only screen and (max-width: 920px) {
-			.price-body-advanced > h2 {
-				font-size:24px;
-				line-height:1.25em;
-			}
-		}
-		@media only screen and (max-width: 540px) {
-			.price-body-beginner > h3, .price-body-advanced > h3, .price-body-professional > h3, .price-body-enterprise > h3 {
-				font-size:14px;
-			}
-		}
-		.saved-amount {
-			display:inline-block;
-			padding:2px 8px;
-			background-color: lightseagreen;
-			color:#ffffff;
-			font-size:10px;
-			border-radius:12px;
-			margin:5px 0 10px 0;
-		}
-		a.btn-subscribe {
-			display: inline-block;
-			padding: 10px 20px;
-			margin: 10px 0;
-			background-color: #ffb700;
-			border-radius: 20px;
-			color: #000000;
-			font-size: 16px;
-			font-weight: bold;
-			text-decoration: none;
-			cursor: pointer;
-			transition: all ease 0.3s;
-		}
-		@media only screen and (max-width: 540px) {
-			a.btn-subscribe {
-				padding: 8px 16px;
-				border-radius: 16px;
-				font-size: 14px;
-			}
-		}
-		a.btn-subscribe:hover {
-			color:#043c45;
-			background-color:#07deff;
-		}
-		.top-line-items {
-			border-top:2px dotted #e6e6e6;
-			justify-content:center;
-		}
-		.top-line-body {
-			border-top:2px dotted #f2f2f2;
-			justify-content:center;
-		}
-		@media only screen and (max-width: 540px) {
-			.top-line-items {
-				border-top:none;
-			}
-			.top-line-body {
-				border-top:none;
-			}
-		}
-		.best-deal-badge {
-		  background-color: lightseagreen;
-		  height: 150px;
-		  left: -75px;
-		  position: absolute;
-		  top: -75px;
-		  width: 150px;
-
-		  -webkit-transform: rotate(-45deg);
-		}
-		.best-deal-badge span {
-		  color: #FFFFFF;
-		  font-family: sans-serif;
-			font-weight:bold;
-		  left: 40px;
-		  top: 120px;
-		  position: absolute;
-		  width: 140px;
-		}
-		@media only screen and (max-width: 540px) {
-			.best-deal-badge {
-			  height: 120px;
-			  left: -60px;
-			  top: -60px;
-			  width: 120px;
-			}
-			.best-deal-badge span {
-			  left: 20px;
-			  top: 100px;
-			  width: 80px;
-			}
-		}
-		a.btn-contact-pricing {
-			display:inline-block;
-			height:24px;
-			padding:2px 10px;
-			background-color:#ffffff;
-			color:#00333b;
-			line-height:24px;
-			border-radius:16px;
-			text-decoration: none;
-			font-weight:bold;
-			transition: all ease 0.3s;
-			margin:0 0 20px 0;
-		}
-		a.btn-contact-pricing:hover {
-			background-color:#07deff;
-		}
-		.compare-ico {
-			font-size:32px;
-		}
-		@media only screen and (max-width: 540px) {
-			.compare-ico {
-				font-size:20px;
-			}
-		}
-		.ico-yes {
-			color:#009245;
-		}
-		.ico-no {
-			color:#c15357;
-		}
-		/* tabs */
-		.tabs {
-			position: relative;
-			display:flex;
-			justify-content: center;
+			padding:40px 0;
 			width:100%;
-			max-width:100%;
-			padding-top:20px;
-			margin: 0 0 0 0;
+			position:relative;
 		}
-		.tabs > input, .tabs > span {
-			width:80px;
-			height: 40px;
-			line-height:40px;
-			color:#dddddd;
-			background-color:#047f92;
-			position: absolute;
-			padding:5px 20px;
-			top:-80px;
-			margin:0;
-			border-radius:0;
+		.other-partner-box {
+			display:flex;
+			flex-direction: column;
+			align-items: center;
+			padding:40px;
+			margin:10px;
+			width:calc(25% - 100px);
+			background-color:#ffffff;
+			border-radius:30px;
 		}
-		.tabs > input, .tabs > span > div.icon {
-			font-size:16px;
-		}
-		.tabs > input {
-			cursor: pointer;
-			filter: alpha(opacity=0);
-			opacity: 0;
-			position: absolute;
-			z-index: 99;
-		}
-		.tabs > span {
-			text-align: center;
-			overflow: hidden;
-		}
-		.tabs > span i, .tabs > span {
-			-webkit-transition: all .5s;
-			   -moz-transition: all .5s;
-				 -o-transition: all .5s;
-					transition: all .5s;
-		}
-		.tabs > input:hover + span, .tabs > input:hover {
-			color: ##07deff;
-		}
-		.tabs > input:checked + span {
-			background-color: #f2f2f2;
-			border-radius:0;
-			color: #047f92;
-			font-weight:bold;
-		}
-		.tabs input:hover + span {
-			color: ##07deff;
-		}
-		#tab-1, #tab-1 + span {
-			left: calc(50vw - 120px);
-			border-radius:15px 0 0 0;
-		}
-		#tab-2, #tab-2 + span {
-			left: 50vw;
-			border-radius:0 15px 0 0;
-		}
-		
-		.burst-badge {
-			position:absolute; 
-			width:40px; 
-			height:40px; 
-			left:calc(50vw + 100px); 
-			top:-100px; 
-			transition: all ease 0.3s;
-		}
-		.burst-badge-text {
-			position:absolute; 
-			width:40px; 
-			height:40px; 
-			left:calc(50vw + 105px); 
-			top:-90px; 
-			transition: all ease 0.3s; 
-			color:#ffffff; 
-			font-size:12px; 
-			font-weight: bold;
-		}
-		
-		.popup-content {
-			background-color: lightseagreen;
-			width:calc(100vw - 70px);
-			max-width: 500px;
-			padding: 30px;
-			position: absolute;
-			transform: translate(-50%,0%);
-			left: 50%;
-			top: 220px;
-			border-radius: 20px;
-			text-align: center;
-			z-index: 10006;
-			color:#ffffff;
-			
-		}
-		@media only screen and (max-width: 920px) {
-			.popup-content {
-				top: 200px;
-			}
-		}
-		@media only screen and (max-width: 540px) {
-			.popup-content {
-				top: 70px;
-			}
-		}
-		.popup-content button {
-			position:absolute;
-			display: flex;
-			justify-content:center;
-			align-items:center;
-			top:-20px;
-			right:-20px;
-			background-color: transparent;
-			font-size: 30px;
-			color: #FFFFFF;
-			border: none;
-			outline: none;
-			cursor: pointer;
-		}
-		.popup-content > p > a {
-			color:#07deff;
-			text-decoration: underline;
-		}
-		.popup-content > p > a:hover {
-			color:red;
-		}
-		.popup {
-			position: fixed; /* Stay in place */
-			/*z-index: 10005;  Sit on top */
-			display:none;
-			left: 0;
-			top: 0;
-			width: 100%; /* Full width */
-			height: 100%; /* Full height */
-			overflow: hidden; /* Enable scroll if needed */
-			background-color: rgb(0,0,0); /* Fallback color */
-			background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
-			-webkit-animation-name: fadeIn; /* Fade in the background */
-			-webkit-animation-duration: 0.5s;
-			animation-name: fadeIn;
-			animation-duration: 0.5s;
-		}
-		@-webkit-keyframes fadeIn {
-			from {opacity: 0} 
-			to {opacity: 1}
-		}
-		@keyframes fadeIn {
-			from {opacity: 0} 
-			to {opacity: 1}
-		}
-		@-webkit-keyframes fadeOut {
-			from {opacity: 1} 
-			to {opacity: 0}
-		}
-
-		@keyframes fadeOut {
-			from {opacity: 1} 
-			to {opacity: 0}
-		}
-		.close {
-			display:inline-block;
-			width:32px;
-			height:32px;
-			text-align:center;
-			background-color:#FFFFFF;
-			border-radius:6px;
-			margin:0;
-			color: #047F92;
-			float: right;
-			font-size: 28px;
-			line-height:34px;
-			text-decoration: none;
-			transition: all 0.3s ease;
-		}
-		.close:hover, .close:focus {
-			background-color:#000000;
-			cursor: pointer;
+		.other-partner-box > img {
+			width:100px;
+			height:100px;
+			margin-bottom:20px;
 		}
 	</style>
 	<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>	
@@ -699,413 +345,186 @@
 		</div>
 		<div class="header-bg"></div>
 		
-		<div class="price-header">
-			<div class="main-container" style="padding: 0;">
-				<h1>Elevate your trading<br>by improving what really counts</h1>
-				<h2>Enjoy full flexibility with our monthly subscriptions</h2>
+		<div class="partner-header">
+			<div class="main-container" style="padding: 0 0 100px 0;">
+				<h1>Join the era of<br>AI-powered Trading solutions<br>with hoc-trade</h1>
+				<h2>Where can you enjoy Hoc-trade’s AI-powered Trading solutions?</h2>
 			</div>
 			<div></div>
 		</div>
 		
-		<div class="main-container" style="display:block; padding:15px;"></div>
-			<div class="tabs effect-1"><!-- tab label -->
-				<!-- tab-title -->
-				<input type="radio" id="tab-1" name="tab-effect-1" checked="checked"><span>Monthly</span>
-				<input type="radio" id="tab-2" name="tab-effect-1"><span>Annually</span>
-				<img src="img/burst-badge.png" class="burst-badge" />
-				<div class="burst-badge-text">SAVE</div>
-
-			<!-- tab-content -->
-				<div class="tab-content">
-					
-					<section id="tab-item-1">
-						
-						<div class="pricing-container">
-							<div class="price-header-items desktop-price"></div>
-							<div class="price-header-beginner">
-								<img src="img/pricing-beginner.png" />
-								<h3>BEGINNER</h3>
-							</div>
-							<div class="price-header-advanced">
-								<!--<div class="best-deal-badge"><span>BEST DEAL</span></div>-->
-								<img src="img/pricing-advanced.png" />
-								<h3 style="font-size: larger;">ADVANCED</h3>
-							</div>
-							<div class="price-header-professional">
-								<img src="img/pricing-professional.png" />
-								<h3>PROFESSIONAL</h3>
-							</div>
-							<div class="price-header-enterprise desktop-price">
-								<img src="img/pricing-enterprise.png" class="img-responsive" />
-								<h3 style="color: #07c3e0; text-align:center;">ENTERPRISE</h3>
-								<div class="price-body-enterprise">
-									<p align="left"><strong>Looking to stand out &amp; elevate your traders' performance?</strong></p>
-									<p align="left">For brokers / exchanges, (prop) trading firms, hedge funds, etc.</p>
-									<ul>
-										<li>Whitelabel</li>
-										<li>All platforms</li>
-										<li>All markets</li>
-										<li>Alert customization</li>
-										<li>Management dashboard</li>
-										<li>and more...</li>
-									</ul>
-									<a class="btn-contact-pricing" href="mailto:info@hoc-trade.com">Contact us</a>
-								</div>
-							</div>
-						</div>
-						
-						<div class="pricing-container">
-							<div class="price-body-items desktop-price"></div>
-							<div class="price-body-beginner" style="justify-content: flex-end;">
-								<h2>USD 37.99<span style="font-size:smaller">/mo</span></h2>
-								<span style="font-size:12px; line-height: 18px; text-align: center;">billed monthly</span>
-								<a class="btn-subscribe" href="#">Subscribe</a>
-							</div>
-							<div class="price-body-advanced" style="justify-content: flex-end;">
-								<h2 style="color: #103456;">USD 49.99<span style="font-size:smaller">/mo</span></h2>
-								<span style="font-size:12px; line-height: 18px; text-align: center;">billed monthly</span>
-								<a class="btn-subscribe" href="#">Subscribe</a>
-							</div>
-							<div class="price-body-professional" style="justify-content: flex-end;">
-								<h2>USD 69.99<span style="font-size:smaller">/mo</span></h2>
-								<span style="font-size:12px; line-height: 18px; text-align: center;">billed monthly</span>
-								<a class="btn-subscribe" href="#">Subscribe</a>
-							</div>
-							<div style="width:14%;" class="desktop-price"></div>
-						</div>
-
-						<div class="pricing-container">
-							<div class="price-body-items desktop-price"></div>
-							<div class="price-body-beginner">
-								Elevate your trading to the next level by identifying, analysing, and improving your trading behaviors<br><br>
-							</div>
-							<div class="price-body-advanced">
-								Strengthen your trading with the support of real-time alerts for behaviors and risk management<br><br>
-							</div>
-							<div class="price-body-professional">
-								Enjoy the full power of hoc-trade  with priority speed, custom data, and combined account analytics<br><br>
-							</div>
-							<div style="width:14%;" class=" desktop-price"></div>
-							<div class="list-separator"></div>
-						</div>
-						
-					</section><!-- item 1 -->
-					
-					<section id="tab-item-2">
-						
-						<div class="pricing-container">
-							<div class="price-header-items desktop-price"></div>
-							<div class="price-header-beginner">
-								<img src="img/pricing-beginner.png" />
-								<h3>BEGINNER</h3>
-							</div>
-							<div class="price-header-advanced">
-								<div class="best-deal-badge"><span>BEST DEAL</span></div>
-								<img src="img/pricing-advanced.png" />
-								<h3 style="font-size: larger;">ADVANCED</h3>
-							</div>
-							<div class="price-header-professional">
-								<img src="img/pricing-professional.png" />
-								<h3>PROFESSIONAL</h3>
-							</div>
-							<div class="price-header-enterprise desktop-price">
-								<img src="img/pricing-enterprise.png" class="img-responsive" />
-								<h3 style="color: #07c3e0; text-align:center;">ENTERPRISE</h3>
-								<div class="price-body-enterprise">
-									<p align="left"><strong>Looking to stand out &amp; elevate your traders' performance?</strong></p>
-									<p align="left">For brokers / exchanges, (prop) trading firms, hedge funds, etc.</p>
-									<ul>
-										<li>Whitelabel</li>
-										<li>All platforms</li>
-										<li>All markets</li>
-										<li>Alert customization</li>
-										<li>Management dashboard</li>
-										<li>and more...</li>
-									</ul>
-									<a class="btn-contact-pricing" href="mailto:info@hoc-trade.com">Contact us</a>
-								</div>
-							</div>
-						</div>
-						
-						<div class="pricing-container">
-							<div class="price-body-items desktop-price"></div>
-							<div class="price-body-beginner" style="justify-content: flex-end;">
-								<h2>USD 29.99<span style="font-size:smaller">/mo</span></h2>
-								<span style="font-size:12px; line-height: 1.25em; text-align: center;">billed annually</span>
-								<span class="saved-amount">USD 359.88/yr saved 21%</span>
-								<a class="btn-subscribe" href="#">Subscribe</a>
-							</div>
-							<div class="price-body-advanced" style="justify-content: flex-end;">
-								<h2>USD 39.99<span style="font-size:smaller">/mo</span></h2>
-								<span style="font-size:12px; line-height: 1.25em; text-align: center; color: lightseagreen;">billed annually</span>
-								<span class="saved-amount">USD 479.88/yr saved 20%</span>
-								<a class="btn-subscribe" href="#">Subscribe</a>
-							</div>
-							<div class="price-body-professional" style="justify-content: flex-end;">
-								<h2>USD 59.99<span style="font-size:smaller">/mo</span></h2>
-								<span style="font-size:12px; line-height: 1.25em; text-align: center;">billed annually</span>
-								<span class="saved-amount">USD 719.88/yr saved 15%</span>
-								<a class="btn-subscribe" href="#">Subscribe</a>
-							</div>
-							<div style="width:14%;" class="desktop-price"></div>
-						</div>
-
-						<div class="pricing-container">
-							<div class="price-body-items desktop-price"></div>
-							<div class="price-body-beginner">
-								Elevate your trading to the next level by identifying, analysing, and improving your trading behaviors<br><br>
-							</div>
-							<div class="price-body-advanced">
-								Strengthen your trading with the support of real-time alerts for behaviors and risk management<br><br>
-							</div>
-							<div class="price-body-professional">
-								Enjoy the full power of hoc-trade  with priority speed, custom data, and combined account analytics<br><br>
-							</div>
-							<div style="width:14%;" class="desktop-price"></div>
-							<div class="list-separator"></div>
-						</div>
-
-					</section><!-- item 2 -->
-				</div>
-			</div><!-- tab label end -->
-
-			<div class="pricing-container">
-				<div class="price-body-items top-line-items">
-					Analytics access
-				</div>
-				<div class="price-body-beginner top-line-body">
-					<span class="ht-check compare-ico ico-yes"></span>
-				</div>
-				<div class="price-body-advanced top-line-body">
-					<span class="ht-check compare-ico ico-yes"></span>
-				</div>
-				<div class="price-body-professional top-line-body">
-					<span class="ht-check compare-ico ico-yes"></span>
-				</div>
-				<div style="width:14%;" class="desktop-price"></div>
-			</div>
-
-			<div class="pricing-container">
-				<div class="price-body-items top-line-items">
-					Analytics update frequency
-				</div>
-				<div class="price-body-beginner top-line-body">
-					&lt; 15 mins
-				</div>
-				<div class="price-body-advanced top-line-body">
-					&lt; 3 mins
-				</div>
-				<div class="price-body-professional top-line-body">
-					near real time
-				</div>
-				<div style="width:14%;" class="desktop-price"></div>
-				<!-- -->
-				<div class="price-body-items top-line-items">
-					"Pro patterns"
-				</div>
-				<div class="price-body-beginner top-line-body">
-					<span class="ht-delete compare-ico ico-no"></span>
-				</div>
-				<div class="price-body-advanced top-line-body">
-					<span class="ht-delete compare-ico ico-no"></span>
-				</div>
-				<div class="price-body-professional top-line-body">
-					<span class="ht-check compare-ico ico-yes"></span>
-				</div>
-				<div style="width:14%;" class="desktop-price"></div>
-				<div class="list-separator"></div>
-				<!-- -->
-				<div class="price-body-items top-line-items">
-					Trade Medic Report
-				</div>
-				<div class="price-body-beginner top-line-body">
-					<span class="ht-check compare-ico ico-yes"></span>
-				</div>
-				<div class="price-body-advanced top-line-body">
-					<span class="ht-check compare-ico ico-yes"></span>
-				</div>
-				<div class="price-body-professional top-line-body">
-					<span class="ht-check compare-ico ico-yes"></span>
-				</div>
-				<div style="width:14%;" class="desktop-price"></div>
-				<div class="list-separator"></div>
-				<!-- -->
-				<div class="price-body-items top-line-items">
-					Overview, basic &amp; advanced statistics
-				</div>
-				<div class="price-body-beginner top-line-body">
-					<span class="ht-check compare-ico ico-yes"></span>
-				</div>
-				<div class="price-body-advanced top-line-body">
-					<span class="ht-check compare-ico ico-yes"></span>
-				</div>
-				<div class="price-body-professional top-line-body">
-					<span class="ht-check compare-ico ico-yes"></span>
-				</div>
-				<div style="width:14%;" class="desktop-price"></div>
-				<div class="list-separator"></div>
-				<!-- -->
-				<div class="price-body-items top-line-items">
-					Alerts
-				</div>
-				<div class="price-body-beginner top-line-body">
-					<span class="ht-check compare-ico ico-yes"></span>
-				</div>
-				<div class="price-body-advanced top-line-body">
-					<span class="ht-check compare-ico ico-yes"></span>
-				</div>
-				<div class="price-body-professional top-line-body">
-					<span class="ht-check compare-ico ico-yes"></span><span style="font-size:12px;">(priority speed)</span>
-				</div>
-				<div style="width:14%;" class="desktop-price"></div>
-				<!-- -->
-				<div class="price-body-items top-line-items">
-					Alert customization
-				</div>
-				<div class="price-body-beginner top-line-body">
-					<span class="ht-delete compare-ico ico-no"></span>
-				</div>
-				<div class="price-body-advanced top-line-body">
-					<span class="ht-check compare-ico ico-yes"></span><span style="font-size:12px;">(basic)</span>
-				</div>
-				<div class="price-body-professional top-line-body">
-					<span class="ht-check compare-ico ico-yes"></span><span style="font-size:12px;">(advanced)</span>
-				</div>
-				<div style="width:14%;" class="desktop-price"></div>
-				<div class="list-separator"></div>
-				<!-- -->
-				<div class="price-body-items top-line-items">
-					Number of trading accounts
-				</div>
-				<div class="price-body-beginner top-line-body">
-					1
-				</div>
-				<div class="price-body-advanced top-line-body">
-					3
-				</div>
-				<div class="price-body-professional top-line-body">
-					10
-				</div>
-				<div style="width:14%;" class="desktop-price"></div>
-				<!-- -->
-				<div class="price-body-items top-line-items">
-					Merge trading accounts
-				</div>
-				<div class="price-body-beginner top-line-body">
-					<span class="ht-delete compare-ico ico-no"></span>
-				</div>
-				<div class="price-body-advanced top-line-body">
-					<span class="ht-delete compare-ico ico-no"></span>
-				</div>
-				<div class="price-body-professional top-line-body">
-					<span class="ht-check compare-ico ico-yes"></span>
-				</div>
-				<div style="width:14%;" class="desktop-price"></div>
-				<div class="list-separator"></div>
-				<!-- -->
-				<div class="price-body-items top-line-items">
-					Trade history
-				</div>
-				<div class="price-body-beginner top-line-body">
-					1 year<span style="font-size:12px;">(1000 trades)</span>
-				</div>
-				<div class="price-body-advanced top-line-body">
-					3 years<span style="font-size:12px;">(3000 trades)</span>
-				</div>
-				<div class="price-body-professional top-line-body">
-					3 years<span style="font-size:12px;">(unlimited trades)</span>
-				</div>
-				<div style="width:14%;" class="desktop-price"></div>
-				<!-- -->
-				<div class="price-body-items top-line-items">
-					History csv upload
-				</div>
-				<div class="price-body-beginner top-line-body">
-					<span class="ht-delete compare-ico ico-no"></span>
-				</div>
-				<div class="price-body-advanced top-line-body">
-					<span class="ht-delete compare-ico ico-no"></span>
-				</div>
-				<div class="price-body-professional top-line-body">
-					<span class="ht-check compare-ico ico-yes"></span>
-				</div>
-				<div style="width:14%;" class="desktop-price"></div>
-				<!-- -->
-				<div class="price-body-items top-line-items">
-					Trade history download
-				</div>
-				<div class="price-body-beginner top-line-body">
-					<span class="ht-delete compare-ico ico-no"></span>
-				</div>
-				<div class="price-body-advanced top-line-body">
-					<span class="ht-check compare-ico ico-yes"></span>
-				</div>
-				<div class="price-body-professional top-line-body">
-					<span class="ht-check compare-ico ico-yes"></span>
-				</div>
-				<div style="width:14%;" class="desktop-price"></div>
-				<div class="list-separator"></div>
-				<!-- -->
-				<div class="price-body-items top-line-items">
-					Account verification
-				</div>
-				<div class="price-body-beginner top-line-body">
-					<span class="ht-delete compare-ico ico-no"></span>
-				</div>
-				<div class="price-body-advanced top-line-body">
-					<span class="ht-check compare-ico ico-yes"></span>
-				</div>
-				<div class="price-body-professional top-line-body">
-					<span class="ht-check compare-ico ico-yes"></span>
-				</div>
-				<div style="width:14%;" class="desktop-price"></div>
-				<div class="list-separator"></div>
-				<!-- -->
-				<div class="price-body-items top-line-items">
-					hoc-trade academy
-				</div>
-				<div class="price-body-beginner top-line-body">
-					<span class="ht-check compare-ico ico-yes"></span>
-				</div>
-				<div class="price-body-advanced top-line-body">
-					<span class="ht-check compare-ico ico-yes"></span>
-				</div>
-				<div class="price-body-professional top-line-body">
-					<span class="ht-check compare-ico ico-yes"></span>
-				</div>
-				<div style="width:14%;" class="desktop-price"></div>
-				<div class="list-separator"></div>
-			</div>
-		<!-- enterprise for mobile -->
-			<div class="pricing-container mobile-price">
-				<div class="price-header-enterprise">
-					<img src="img/pricing-enterprise.png" style="width: 200px;" />
-					<br>
-					<h3 style="color: #07c3e0;">ENTERPRISE</h3>
-					<p><strong>Looking to stand out &amp; elevate your traders' performance?</strong></p>
-					<p>For brokers/exchanges, (prop) trading firms, hedge funds, etc.</p>
-					<div style="display:flex; flex-direction: row; justify-content: space-between;">
-						<div style="padding: 0 20px 0 0;">
-							<ul>
-								<li>Whitelabel</li>
-								<li>All platforms</li>
-								<li>All markets</li>
-							</ul>
-						</div>
-						<div>
-							<ul>
-								<li>Alert customization</li>
-								<li>Management dashboard</li>
-								<li>and more...</li>
-							</ul>
-						</div>
+		<div class="main-container" style="margin-top:-120px;">
+			<div class="partner-cat-container">
+				<a class="partner-cat-box" href="#partner">
+					<div class="partner">
+						<img class="img-responsive" style="max-height:160px;" src="img/partnership-graphics-1.png" />
 					</div>
-					<br>
-					<a class="btn-contact-pricing" href="mailto:info@hoc-trade.com">Contact us</a>
+					<div class="cat-text-partner">
+						See all partners / integrations<br><br><span class="ht-down-arrow"></span>
+					</div>
+				</a>
+				<a class="partner-cat-box" href="be-a-partner.html" target="_blank">
+					<div class="be-partner">
+						<img class="img-responsive" style="max-height:160px;" src="img/partnership-graphics-2.png" />
+					</div>
+					<div class="cat-text-be-partner">
+						Become a partner<br><br><span class="ht-new-window"></span>
+					</div>
+				</a>
+				<a class="partner-cat-box" href="affiliate.html" target="_blank">
+					<div class="be-affiliate">
+						<img class="img-responsive" style="max-height:160px;" src="img/partnership-graphics-3.png" />
+					</div>
+					<div class="cat-text-affiliate">
+						Become an affiliate<br><br><span class="ht-new-window"></span>
+					</div>
+				</a>
+			</div>
+		</div>
+		<a id="partner"></a>
+		<div class="main-container" style="padding:80px 0 40px 0">
+			<h1>See all of our partners<br>Brokers, exchanges, Prop Trading firms, and more</h1>
+			<!-- tier 1 -->
+			<ul class="tier-1">
+				<li>
+					<h2>Full integration</h2>
+					<h3>Enjoy free access to the full suite of Hoc-trade’s AI-powered Trading Analytics</h3>
+				</li>
+				<!-- item -->
+				<li class="tier-1-item">
+					<div class="tier-logo"><img src="img/ht-broker-tegasfx.svg" /></div>
+					<div class="tier-name">
+						tegasFX<br><span style="background-color: blue;">CFD Broker</span>
+					</div>
+					<div class="tier-description">
+						tegasFX is a leading multi-asset STP broker from Switzerland with low spreads and tier-1 licenses<br>
+						<span>BENEFIT</span><br>
+						<strong>Seamless integration for MT4, MT5 in tegasFX dashboard</strong>
+					</div>
+					<a class="tier-btn-visit" href="#" target="_blank">VISIT</a>
+				</li>
+				<!-- item -->
+				<li class="tier-1-item">
+					<div class="tier-logo"><img src="img/ht-broker_axi.svg" /></div>
+					<div class="tier-name">
+						AXI<br><span style="background-color: blue;">CFD Broker</span>
+					</div>
+					<div class="tier-description">
+						AXI is a leading prop trading company enabling you to trade up to 2m USD<br>
+						<span>BENEFIT</span><br>
+						<strong>Seamless integration for MT4, MT5 in AXI dashboard</strong>
+					</div>
+					<a class="tier-btn-visit" href="#" target="_blank">VISIT</a>
+				</li>
+			</ul>
+			<!-- tier 2 -->
+			<ul class="tier-2">
+				<li>
+					<h2>Exclusive discounts</h2>
+					<h3>Get exclusive discounts on Hoc-trade from our part</h3>
+				</li>
+				<!-- item -->
+				<li class="tier-2-item">
+					<div class="tier-logo"><img src="img/ht-broker_fxpro.svg" /></div>
+					<div class="tier-name">
+						FX Pro<br><span style="background-color: blue;">CFD Broker</span>
+					</div>
+					<div class="tier-description">
+						FxPro UK Limited is authorised and regulated by the FCA since 2010. FxPro Financial Services Limited is authorised and regulated by the CySEC since 2007 and by the FSCA since 2015. FxPro Global Markets Limited is authorised and regulated by the SCB.<br>
+						<span>BENEFIT</span><br>
+						<strong>70% off at Hoc-trade for funded traders</strong>
+					</div>
+					<a class="tier-btn-visit" href="#" target="_blank">VISIT</a>
+				</li>
+				<!-- item -->
+				<li class="tier-2-item">
+					<div class="tier-logo"><img src="img/ht-broker-tradingpit.svg" /></div>
+					<div class="tier-name">
+						The Trading Pit<br><span style="background-color: darkcyan;">Prop Trading firm</span>
+					</div>
+					<div class="tier-description">
+						The Trading Pit is a leading prop trading company enabling you to trade up to 2m USD<br>
+						<span>BENEFIT</span><br>
+						<strong>70% off at Hoc-trade for funded traders</strong>
+					</div>
+					<a class="tier-btn-visit" href="#" target="_blank">VISIT</a>
+				</li>
+			</ul>
+			<!-- tier 3 -->
+			<ul class="tier-3">
+				<li>
+					<h2>Trade Medic Report</h2>
+					<h3>Receive free access to AI-powered Trade Medic Reports</h3>
+				</li>
+				<!-- item -->
+				<li class="tier-3-item">
+					<div class="tier-logo"><img src="img/ht-broker_ironfx.svg" /></div>
+					<div class="tier-name">
+						IronFX<br><span style="background-color: blue;">CFD Broker</span>
+					</div>
+					<div class="tier-description">
+						IronFX was founded in 2010 with the mission to deliver the best trading conditions for both retail and institutional traders<br>
+						<span>BENEFIT</span><br>
+						<strong>Free periodic Trade Medic Reports for all tegasFX traders</strong>
+					</div>
+					<a class="tier-btn-visit" href="#" target="_blank">VISIT</a>
+				</li>
+			</ul>
+			<!-- tier 4 -->
+			<ul class="tier-4">
+				<li>
+					<h2>Official partners/integrations</h2>
+					<h3>Connect to Hoc-trade using your broker account</h3>
+				</li>
+				<!-- item -->
+				<li class="tier-4-item">
+					<div class="tier-logo"><img src="img/ht-broker_octafx.svg" /></div>
+					<div class="tier-name">
+						OctaFX<br><span style="background-color: blue;">CFD Broker</span>
+					</div>
+					<div class="tier-description">
+						OctaFX was founded in 2010 with the mission to deliver the best trading conditions for both retail and institutional traders<br>
+						<span>BENEFIT</span><br>
+						<strong>Connect and receive 4 weeks free access</strong>
+					</div>
+					<a class="tier-btn-visit" href="#" target="_blank">VISIT</a>
+				</li>
+			</ul>
+		</div>
+		<div class="main-container">
+			<h2>Other partners</h2>
+			<div class="other-partner-container">
+				<div class="other-partner-box">
+					<img src="img/ht-broker_forexcom.svg" />
+					Forex.com
+				</div>
+				<div class="other-partner-box">
+					<img src="img/ht-broker_activtrades.svg" />
+					Activ Trades
+				</div>
+				<div class="other-partner-box">
+					<img src="img/ht-broker_fbs.svg" />
+					FBS
+				</div>
+				<div class="other-partner-box">
+					<img src="img/ht-broker_cmc.svg" />
+					CMC
+				</div>
+				<div class="other-partner-box">
+					<img src="img/ht-broker_fxdd.svg" />
+					FXDD
+				</div>
+				<div class="other-partner-box">
+					<img src="img/ht-broker_admiral.svg" />
+					Admiral
+				</div>
+				<div class="other-partner-box">
+					<img src="img/ht-broker_naga.svg" />
+					Naga
 				</div>
 			</div>
-			<div class="main-container" style="display:block; padding:30px;"></div>
-
+		</div>
+		
 		<!-- footer -->
 		<div class="module-block bg-footer">
 			<div class="main-container" style="padding:30px 0;">
