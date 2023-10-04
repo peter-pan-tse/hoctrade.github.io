@@ -55,9 +55,6 @@
 			font-weight: bold;
 		}
 		@media only screen and (max-width: 920px) {
-			.partner-header {
-				padding:20px 20px 80px 20px;
-			}
 			.partner-header h1 {
 				font-size:5.5vw;
 			}
@@ -66,11 +63,8 @@
 			}
 		}
 		@media only screen and (max-width: 540px) {
-			.partner-header {
-				padding:20px 10px 80px 10px;
-			}
 			.partner-header h1 {
-				font-size:5.5vw;
+				font-size:9vw;
 			}
 			.partner-header h2 {
 				font-size:18px;
@@ -94,11 +88,24 @@
 			text-decoration: none;
 			font-weight: bold;
 			text-align: center;
+			font-size: 18px;
+			line-height: 1.25em;
 			color:#ffffff;
 			transition:all ease 0.5s;
 		}
 		a.partner-cat-box:hover {
 			transform: scale(1.1);
+		}
+		@media only screen and (max-width: 540px) {
+			.partner-cat-container {
+				display:flex;
+				flex-direction:column;
+			}
+			a.partner-cat-box {
+				width:100%;
+				font-size: 16px;
+				margin-bottom:20px;
+			}
 		}
 		.partner {
 			border-radius: 40px 40px 0 0;
@@ -142,7 +149,7 @@
 			padding:20px;
 		}
 		.main-container {
-			padding:40px 0;
+			padding:40px 10px;
 		}
 		
 		ul.tier-1, ul.tier-2, ul.tier-3, ul.tier-4, ul.tier-5 {
@@ -150,6 +157,11 @@
 			flex-direction:column;
 			padding:60px 0 0 0;
 			width:100%;
+		}
+		@media only screen and (max-width: 540px) {
+			ul.tier-1, ul.tier-2, ul.tier-3, ul.tier-4, ul.tier-5 {
+				padding:30px 0 0 0;
+			}
 		}
 		ul.tier-1 h2, ul.tier-1 h3 {
 			color:#033C45;
@@ -188,6 +200,17 @@
 			background-color: #ffffff;
 			margin-bottom: 4px solid #f2f2f2;
 		}
+		@media only screen and (max-width: 540px) {
+			ul.tier-1 li.tier-1-item, 
+			ul.tier-2 li.tier-2-item, 
+			ul.tier-3 li.tier-3-item, 
+			ul.tier-4 li.tier-4-item, 
+			ul.tier-5 li.tier-5-item {
+				padding:20px;
+				width:calc(100% - 40px);
+				justify-content:flex-end;
+			}
+		}
 		ul.tier-1 li:first-child, 
 		ul.tier-2 li:first-child, 
 		ul.tier-3 li:first-child, 
@@ -196,7 +219,7 @@
 			list-style: none;
 			position: relative;
 			padding:20px;
-			margin:2px 0;
+			margin: 0;
 			width:calc(100% - 40px);
 			background-color:#e6e6e6;
 			border-radius:40px 40px 0 0;
@@ -207,6 +230,22 @@
 		ul.tier-4 li:last-child, 
 		ul.tier-5 li:last-child {
 			border-radius:0 0 40px 40px;
+		}
+		@media only screen and (max-width: 540px) {
+			ul.tier-1 li:first-child, 
+			ul.tier-2 li:first-child, 
+			ul.tier-3 li:first-child, 
+			ul.tier-4 li:first-child, 
+			ul.tier-5 li:first-child {
+				border-radius:20px 20px 0 0;
+			}
+			ul.tier-1 li:last-child, 
+			ul.tier-2 li:last-child, 
+			ul.tier-3 li:last-child, 
+			ul.tier-4 li:last-child, 
+			ul.tier-5 li:last-child {
+				border-radius:0 0 20px 20px;
+			}
 		}
 		.tier-logo {
 			height:120px;
@@ -227,12 +266,30 @@
 			font-size:11px;
 			color:#ffffff;
 		}
+		@media only screen and (max-width: 540px) {
+			.tier-name {
+				width:calc(100% - 160px);
+				text-align: center;
+			}
+		}
 		.tier-description {
 			width:calc(80% - 360px);
 			padding:0 40px;
 			border-left:2px dotted #CCCCCC;
 			border-right:2px dotted #CCCCCC;
+			border-top:none;
+			border-bottom:none;
 			line-height: 1.25em;
+		}
+		@media only screen and (max-width: 540px) {
+			.tier-description {
+				width:100%;
+				padding:20px 0;
+				border-top:2px dotted #CCCCCC;
+				border-bottom:2px dotted #CCCCCC;
+				border-left:none;
+				border-right:none;
+			}
 		}
 		.tier-description > span {
 			display:inline-block;
@@ -258,6 +315,22 @@
 			line-height: 30px;
 			text-align: center;
 		}
+		@media only screen and (max-width: 540px) {
+			a.tier-btn-visit {
+				width:60px;
+				height:30px;
+				margin:20px 0;
+				color:#ffffff;
+				background-color:#047F92;
+				text-decoration: none;
+				transition:all ease 0.3s;
+				border-radius: 15px;
+				font-weight: bold;
+				font-size:14px;
+				line-height: 30px;
+				text-align: center;
+			}	
+		}
 		a.tier-btn-visit:hover {
 			background-color:#07C3E0;
 		}
@@ -279,6 +352,13 @@
 			width:calc(25% - 100px);
 			background-color:#ffffff;
 			border-radius:30px;
+			text-align: center;
+		}
+		@media only screen and (max-width: 540px) {
+			.other-partner-box {
+				width:calc(50% - 100px);
+				border-radius:20px;
+			}
 		}
 		.other-partner-box > img {
 			width:100px;
@@ -346,7 +426,7 @@
 		<div class="header-bg"></div>
 		
 		<div class="partner-header">
-			<div class="main-container" style="padding: 0 0 100px 0;">
+			<div class="main-container" style="padding: 0 10px 100px 10px;">
 				<h1>Join the era of<br>AI-powered Trading solutions<br>with hoc-trade</h1>
 				<h2>Where can you enjoy Hoc-trade’s AI-powered Trading solutions?</h2>
 			</div>
@@ -360,7 +440,7 @@
 						<img class="img-responsive" style="max-height:160px;" src="img/partnership-graphics-1.png" />
 					</div>
 					<div class="cat-text-partner">
-						See all partners / integrations<br><br><span class="ht-down-arrow"></span>
+						See all<br>partners/integrations<br><br><span class="ht-down-arrow"></span>
 					</div>
 				</a>
 				<a class="partner-cat-box" href="be-a-partner.html" target="_blank">
@@ -368,7 +448,7 @@
 						<img class="img-responsive" style="max-height:160px;" src="img/partnership-graphics-2.png" />
 					</div>
 					<div class="cat-text-be-partner">
-						Become a partner<br><br><span class="ht-new-window"></span>
+						Become<br>a partner<br><br><span class="ht-new-window"></span>
 					</div>
 				</a>
 				<a class="partner-cat-box" href="affiliate.html" target="_blank">
@@ -376,17 +456,17 @@
 						<img class="img-responsive" style="max-height:160px;" src="img/partnership-graphics-3.png" />
 					</div>
 					<div class="cat-text-affiliate">
-						Become an affiliate<br><br><span class="ht-new-window"></span>
+						Become<br>an affiliate<br><br><span class="ht-new-window"></span>
 					</div>
 				</a>
 			</div>
 		</div>
 		<a id="partner"></a>
-		<div class="main-container" style="padding:80px 0 40px 0">
+		<div class="main-container" style="padding:80px 10px 40px 10px">
 			<h1>See all of our partners<br>Brokers, exchanges, Prop Trading firms, and more</h1>
 			<!-- tier 1 -->
 			<ul class="tier-1">
-				<li>
+				<li style="border-bottom:4px solid #033C45;">
 					<h2>Full integration</h2>
 					<h3>Enjoy free access to the full suite of Hoc-trade’s AI-powered Trading Analytics</h3>
 				</li>
@@ -419,7 +499,7 @@
 			</ul>
 			<!-- tier 2 -->
 			<ul class="tier-2">
-				<li>
+				<li style="border-bottom:4px solid #026C7C;">
 					<h2>Exclusive discounts</h2>
 					<h3>Get exclusive discounts on Hoc-trade from our part</h3>
 				</li>
@@ -452,7 +532,7 @@
 			</ul>
 			<!-- tier 3 -->
 			<ul class="tier-3">
-				<li>
+				<li style="border-bottom:4px solid #047F92;">
 					<h2>Trade Medic Report</h2>
 					<h3>Receive free access to AI-powered Trade Medic Reports</h3>
 				</li>
@@ -472,7 +552,7 @@
 			</ul>
 			<!-- tier 4 -->
 			<ul class="tier-4">
-				<li>
+				<li style="border-bottom:4px solid #06AFC9;">
 					<h2>Official partners/integrations</h2>
 					<h3>Connect to Hoc-trade using your broker account</h3>
 				</li>
