@@ -20,15 +20,15 @@
 			padding: 0 0 6px 0;
 		}
 		.container {
-			/*width: 100vw;
+			width: 100vw;
 			height: 100vh;
 			scroll-snap-type: y mandatory;
 			overflow-y: scroll;
 			overflow-x:hidden;
-			transition:all ease 0.5s;*/
+			transition:all ease 0.5s;
 		}
 		.container > * {
-			/*scroll-snap-align: start;*/
+			scroll-snap-align: start;
 		}
 		.be-partner-header {
 			display:flex;
@@ -98,6 +98,21 @@
 		.learn-more > span {
 			font-size:24px;
 		}
+		.benefit-header {
+			display:flex;
+			position:relative;
+			width:100vw;
+			height: 100vh;
+			background-color: background: linear-gradient(0deg, rgba(34,193,195,1) 10%, rgba(4,127,146,1) 90%);
+			background-image: url("img/traders-1.jpg");
+			background-position: center center;
+			background-size: cover;
+			background-repeat:no-repeat;
+		}
+		.benefit-header > * > h1, .benefit-header > * > * > h2, .benefit-item > h3 {
+			color:#ffffff;
+			text-shadow: 0px 0px 10px rgba(7, 195, 224, 1);
+		}
 		.benefit-box {
 			display:flex;
 			flex-direction: row;
@@ -112,10 +127,14 @@
 			justify-content:flex-start;
 			align-items: center;
 			text-align: center;
-			width:30%;
+			width:calc(30% - 40px);
+			padding:20px;
+			border-radius:20px;
+			background-color: rgba(0, 51, 59, 0.5);
 		}
 		.main-container {
-			padding:80px 20px;
+			padding:140px 20px 80px 20px;
+			justify-content: center;
 		}
 	</style>
 	<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>	
@@ -171,27 +190,30 @@
 				</div>
 			</div>
 			
-			<div class="main-container">
-				<h1>Your unique benefits</h1>
-				<div class="benefit-box">
-					<div class="benefit-item">
-						<img class="img-responsive" src="img/slide-2-pic-5.png" />
-						<h3>Lead in the new era of AI-enabled trading offerings</h3>
+			<div class="benefit-header">
+				<div class="main-container">
+					<h1 style="color:#ffffff;">Your unique benefits</h1>
+					<div class="benefit-box">
+						<div class="benefit-item">
+							<img class="img-responsive" src="img/slide-2-pic-5.png" />
+							<h3>Lead in the new era of AI-enabled trading offerings</h3>
+						</div>
+						<div class="benefit-item">
+							<img class="img-responsive" src="img/slide-2-pic-3.png" />
+							<h3>Provide unprecedented insights to your traders</h3>
+						</div>
+						<div class="benefit-item">
+							<img class="img-responsive" src="img/slide-2-pic-4.png" />
+							<h3>Drive branding &amp; growth by enabling your traders’ success</h3>
+						</div>
 					</div>
-					<div class="benefit-item">
-						<img class="img-responsive" src="img/slide-2-pic-3.png" />
-						<h3>Provide unprecedented insights to your traders</h3>
+					<div>
+						<h2 style="width:100%; color:#ffffff; text-align:center;">…and much more!</h2>
+						<a class="btn-large" style="margin-top:10px;" href="mailto:info@hoc-trade.com">Ask us for demo</a>
 					</div>
-					<div class="benefit-item">
-						<img class="img-responsive" src="img/slide-2-pic-4.png" />
-						<h3>Drive branding &amp; growth by enabling your traders’ success</h3>
-					</div>
-				</div>
-				<div>
-					<h2 style="width:100%;">…and much more!</h2>
-					<a class="btn-large" style="margin-top:10px;" href="mailto:info@hoc-trade.com">Ask us for demo</a>
 				</div>
 			</div>
+			
 			
 			<div class="main-container">
 				<h1>Your options</h1>
