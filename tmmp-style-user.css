@@ -240,7 +240,7 @@ a.powered-by > span {
 @media only screen and (max-width: 540px) {
 	.msg-box {
 		width:calc(100% - 40px);
-		height:120px;
+		height:100px;
 	}
 }
 .disclaimer {
