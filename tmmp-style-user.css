@@ -96,13 +96,13 @@ a:hover, a:focus {
 }
 @media only screen and (max-width: 540px) {
 	.header {
-		padding:180px 10px 20px 10px;
+		padding:190px 10px 20px 10px;
 		width:calc(100% - 20px);
 		height:auto;
 	}
 	.header h1 {
 		font-size:18px;
-		padding:10px 0;
+		padding:10px 0 0 0;
 	}
 	.company-logo {
 		top:0;
@@ -240,7 +240,7 @@ a.powered-by > span {
 @media only screen and (max-width: 540px) {
 	.msg-box {
 		width:calc(100% - 40px);
-		height:160px;
+		height:120px;
 	}
 }
 .disclaimer {
