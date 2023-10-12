@@ -33,7 +33,7 @@
 .cover-content h1, .a4-page h1 {
 	font-size:78px;
 	line-height: 1.15em;
-	color:#1B3967; /* color match to the corporate color of the logo */
+	color:#41ba77; /* color match to the corporate color of the logo */
 }
 .a4-page h2 {
 	font-size:48px;
@@ -46,7 +46,7 @@
 	text-align:center;
 	justify-content: center;
 	align-items: center;
-	background-color:#1B3967; /* color match to the corporate color of the logo */
+	background-color:#41ba77; /* color match to the corporate color of the logo */
 	color:#ffffff; /* black or white depends on the background color */
 	font-size:24px;
 	font-weight: bold;
@@ -87,7 +87,7 @@ ul.cover-toc li {
 	padding: 20px 50px;
 	font-size:18px;
 	line-height: 2em;
-	background-color:#1B3967; /* color match to the corporate color of the logo */
+	background-color:#41ba77; /* color match to the corporate color of the logo */
 	color:#ffffff; /* black or white depends on the background color */
 }
 .cover-disclaimer {
