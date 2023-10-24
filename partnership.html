@@ -281,12 +281,29 @@
 			border-bottom:none;
 			line-height: 1.25em;
 		}
+		.tier-5-item > .tier-description {
+			width:calc(80% - 300px);
+			padding:0 40px;
+			border-left:2px dotted #CCCCCC;
+			border-right:none;
+			border-top:none;
+			border-bottom:none;
+			line-height: 1.25em;
+		}
 		@media only screen and (max-width: 540px) {
 			.tier-description {
 				width:100%;
 				padding:20px 0;
 				border-top:2px dotted #CCCCCC;
 				border-bottom:2px dotted #CCCCCC;
+				border-left:none;
+				border-right:none;
+			}
+			.tier-5-item > .tier-description {
+				width:100%;
+				padding:20px 0;
+				border-top:2px dotted #CCCCCC;
+				border-bottom:none;
 				border-left:none;
 				border-right:none;
 			}
@@ -336,34 +353,46 @@
 		}
 		.other-partner-container {
 			display:flex;
+			flex-direction:column;
 			justify-content:flex-start;
-			flex-wrap: wrap;
-			align-items: stretch;
 			padding:40px 0;
 			width:100%;
 			position:relative;
 		}
 		.other-partner-box {
 			display:flex;
-			flex-direction: column;
+			flex-direction: row;
 			align-items: center;
 			padding:40px;
-			margin:10px;
-			width:calc(25% - 100px);
+			margin:10px 0;
+			width:calc(100% - 80px);
 			background-color:#ffffff;
 			border-radius:30px;
-			text-align: center;
 		}
 		@media only screen and (max-width: 540px) {
 			.other-partner-box {
-				width:calc(50% - 100px);
 				border-radius:20px;
 			}
 		}
 		.other-partner-box > img {
 			width:100px;
 			height:100px;
-			margin-bottom:20px;
+			margin-right:20px;
+		}
+		a.btn-large {
+			display: inline-block;
+			padding: 16px 40px;
+			background-color: #ffb700;
+			border-radius: 30px;
+			color: #000000;
+			font-size: 20px;
+			font-weight: bold;
+			text-decoration: none;
+			cursor: pointer;
+			transition: all ease 0.3s;
+		}
+		a.btn-large:hover {
+			background-color: #07deff;
 		}
 	</style>
 	<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>	
@@ -428,7 +457,6 @@
 		<div class="partner-header">
 			<div class="main-container" style="padding: 0 10px 100px 10px;">
 				<h1>Join the era of<br>AI-powered Trading solutions<br>with hoc-trade</h1>
-				<h2>Where can you enjoy Hoc-trade’s AI-powered Trading solutions?</h2>
 			</div>
 			<div></div>
 		</div>
@@ -461,6 +489,7 @@
 				</a>
 			</div>
 		</div>
+		<h2 style="color:#043c45; text-align:center; width:100%;">Where can you enjoy Hoc-trade’s AI-powered Trading solutions?</h2>
 		<a id="partner"></a>
 		<div class="main-container" style="padding:80px 10px 40px 10px">
 			<h1>See all of our partners<br>Brokers, exchanges, Prop Trading firms, and more</h1>
@@ -533,8 +562,8 @@
 			<!-- tier 3 -->
 			<ul class="tier-3">
 				<li style="border-bottom:4px solid #047F92;">
-					<h2>Trade Medic Report</h2>
-					<h3>Receive free access to AI-powered Trade Medic Reports</h3>
+					<h2>TradeMedic Report</h2>
+					<h3>Receive free access to AI-powered TradeMedic Reports</h3>
 				</li>
 				<!-- item -->
 				<li class="tier-3-item">
@@ -545,7 +574,7 @@
 					<div class="tier-description">
 						IronFX was founded in 2010 with the mission to deliver the best trading conditions for both retail and institutional traders<br>
 						<span>BENEFIT</span><br>
-						<strong>Free periodic Trade Medic Reports for all tegasFX traders</strong>
+						<strong>Free periodic TradeMedic Reports for all tegasFX traders</strong>
 					</div>
 					<a class="tier-btn-visit" href="#" target="_blank">VISIT</a>
 				</li>
@@ -569,40 +598,62 @@
 					</div>
 					<a class="tier-btn-visit" href="#" target="_blank">VISIT</a>
 				</li>
+				<li class="tier-4-item" style="justify-content: center;">
+					<a class="btn-large" href="be-a-partner.html" target="_blank">BECOME A PARTNER</a>
+				</li>
 			</ul>
-		</div>
-		<div class="main-container">
-			<h2>Other partners</h2>
-			<div class="other-partner-container">
-				<div class="other-partner-box">
-					<img src="img/ht-broker_forexcom.svg" />
-					Forex.com
-				</div>
-				<div class="other-partner-box">
-					<img src="img/ht-broker_activtrades.svg" />
-					Activ Trades
-				</div>
-				<div class="other-partner-box">
-					<img src="img/ht-broker_fbs.svg" />
-					FBS
-				</div>
-				<div class="other-partner-box">
-					<img src="img/ht-broker_cmc.svg" />
-					CMC
-				</div>
-				<div class="other-partner-box">
-					<img src="img/ht-broker_fxdd.svg" />
-					FXDD
-				</div>
-				<div class="other-partner-box">
-					<img src="img/ht-broker_admiral.svg" />
-					Admiral
-				</div>
-				<div class="other-partner-box">
-					<img src="img/ht-broker_naga.svg" />
-					Naga
-				</div>
-			</div>
+			<!-- tier 5 -->
+			<ul class="tier-5">
+				<li style="border-bottom:4px solid #07C3E0;">
+					<h2>Other partners</h2>
+				</li>
+				<!-- item -->
+				<li class="tier-5-item">
+					<div class="tier-logo"><img src="img/ht-broker_forexcom.svg" /></div>
+					<div class="tier-name">
+						Forex.com
+					</div>
+					<div class="tier-description">
+						Forex.com was founded in 2010 with the mission to deliver the best trading conditions for both retail and institutional traders
+					</div>
+				</li>
+				<li class="tier-5-item">
+					<div class="tier-logo"><img src="img/ht-broker_activtrades.svg" /></div>
+					<div class="tier-name">
+						Activ Trades
+					</div>
+					<div class="tier-description">
+						Activ Trades was founded in 2010 with the mission to deliver the best trading conditions for both retail and institutional traders
+					</div>
+				</li>
+				<li class="tier-5-item">
+					<div class="tier-logo"><img src="img/ht-broker_fbs.svg" /></div>
+					<div class="tier-name">
+						FBS
+					</div>
+					<div class="tier-description">
+						FBS was founded in 2010 with the mission to deliver the best trading conditions for both retail and institutional traders
+					</div>
+				</li>
+				<li class="tier-5-item">
+					<div class="tier-logo"><img src="img/ht-broker_cmc.svg" /></div>
+					<div class="tier-name">
+						CMC
+					</div>
+					<div class="tier-description">
+						CMC was founded in 2010 with the mission to deliver the best trading conditions for both retail and institutional traders
+					</div>
+				</li>
+				<li class="tier-5-item">
+					<div class="tier-logo"><img src="img/ht-broker_admiral.svg" /></div>
+					<div class="tier-name">
+						Admiral
+					</div>
+					<div class="tier-description">
+						Admiral was founded in 2010 with the mission to deliver the best trading conditions for both retail and institutional traders
+					</div>
+				</li>
+			</ul>
 		</div>
 		
 		<!-- footer -->
