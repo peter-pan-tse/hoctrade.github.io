@@ -199,6 +199,16 @@
 			border-radius:20px;
 			background-color: rgba(0, 51, 59, 1);
 		}
+		@media only screen and (max-width: 540px) {
+			.benefit-box {
+				flex-direction: column;
+				justify-content: center;
+			}
+			.benefit-item {
+				width:calc(100% - 40px);
+				margin-bottom:20px;
+			}
+		}
 		.benefit-item > span {
 			color:#ffffff;
 			font-size:80px;

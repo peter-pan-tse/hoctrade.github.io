@@ -169,7 +169,6 @@
 			display:flex;
 			position:relative;
 			width:100vw;
-			height: 100vh;
 			background-color: background: linear-gradient(0deg, rgba(34,193,195,1) 10%, rgba(4,127,146,1) 90%);
 			background-image: url("img/traders-1.jpg");
 			background-position: left center;
@@ -198,6 +197,16 @@
 			padding:20px;
 			border-radius:20px;
 			background-color: rgba(0, 51, 59, 1);
+		}
+		@media only screen and (max-width: 540px) {
+			.benefit-box {
+				flex-direction: column;
+				justify-content: center;
+			}
+			.benefit-item {
+				width:calc(100% - 40px);
+				margin-bottom:20px;
+			}
 		}
 		.benefit-item > span {
 			color:#ffffff;
@@ -328,6 +337,44 @@
 			background-position: left top;
 			background-size:cover;
 			background-repeat: no-repeat;
+		}
+		.custom-box {
+			display:flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			width:100%;
+			justify-content: space-between;
+			align-items: stretch;
+			margin:20px 0;
+		}
+		.custom-item {
+			display:flex;
+			flex-direction: column;
+			justify-content:flex-start;
+			align-items: center;
+			text-align: center;
+			width:calc(32% - 40px);
+			padding:20px;
+			border-radius:20px;
+			background-color:#ffffff;
+			margin-bottom:20px;
+		}
+		.custom-item > h2, .custom-item > h3 {
+			color:#043c45;
+			text-shadow: 0px 0px 10px rgba(7, 195, 224, 0.5);
+		}
+		.custom-item > img {
+			width:80%;
+			height:auto;
+		}
+		@media only screen and (max-width: 540px) {
+			.custom-box {
+				flex-direction: column;
+				justify-content: center;
+			}
+			.custom-item {
+				width:calc(100% - 40px);
+			}
 		}
 		
 		.main-container {
@@ -486,21 +533,30 @@
 			
 			<div class="main-container">
 				<h1>Are you a hedge fund or trading firm with specific data needs? We got you covered!</h1>
-				<div class="benefit-box">
-					<div class="benefit-item">
-						<span class="ht-eye-closed"></span>
-						<h2>Privacy</h2>
-						<p style="color:#ffffff;">Our process works completely <strong>without any personal identifiers</strong></p>
+				<div class="custom-box">
+					<div class="custom-item">
+						<img src="img/custom-ico-1.png" />
+						<h3>Fully customizable data through our APIs</h3>
 					</div>
-					<div class="benefit-item">
-						<span class="ht-lock"></span>
-						<h2>Security</h2>
-						<p style="color:#ffffff;">API connections are <strong>read-only &amp; data is stored securely</strong></p>
+					<div class="custom-item">
+						<img src="img/custom-ico-2.png" />
+						<h3>Add specific markets to track</h3>
 					</div>
-					<div class="benefit-item">
-						<span class="ht-gear"></span>
-						<h2>Complexity</h2>
-						<p style="color:#ffffff;"><strong>Minimal</strong> integration <strong>complexity</strong> by using existing APIs</p>
+					<div class="custom-item">
+						<img src="img/custom-ico-3.png" />
+						<h3>Add the trading platforms you need</h3>
+					</div>
+					<div class="custom-item">
+						<img src="img/custom-ico-4.png" />
+						<h3>Custom-trained LLMs per your data needs</h3>
+					</div>
+					<div class="custom-item">
+						<img src="img/custom-ico-5.png" />
+						<h3>Customized analytics according to your needs</h3>
+					</div>
+					<div class="custom-item">
+						<img src="img/custom-ico-6.png" />
+						<h3>Custom timeframes and tracking dimensions</h3>
 					</div>
 				</div>
 				<div>
