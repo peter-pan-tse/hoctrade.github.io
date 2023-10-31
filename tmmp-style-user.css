@@ -268,3 +268,15 @@ a.powered-by > span {
 		padding:20px 10px;
 	}
 }
+a.btn-faq {
+	display:inline-block;
+	padding:2px 10px;
+	color:#ffffff;
+	background-color:#05AFC9;
+	text-decoration: none;
+	transition:all ease 0.3s;
+	border-radius: 10px;
+}
+a.btn-faq:hover {
+	background-color: #07DEFF;
+}
