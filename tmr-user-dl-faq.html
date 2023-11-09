@@ -1,0 +1,258 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Noto Sans:400,700,900" rel="stylesheet">
+	<link href="font.css" rel="stylesheet">
+	<link href="tmmp-style-user.css" rel="stylesheet">
+	<!--<link rel="icon" href="img/favicon.svg">-->
+	<title>TradeMedic User Portal - FAQ</title>
+	<style>
+		:root {
+		  --primary: #eeeeee;
+		  --secondary: #ff5252;
+		  --background: #eee;
+		  --highlight: #ffda79;
+		  /* Theme color */
+		  --theme: var(--primary);
+		}
+
+
+		/* Core styles/functionality */
+		.tab input {
+		  position: absolute;
+		  opacity: 0;
+		  z-index: -1;
+		}
+		.tab__content {
+		  max-height: 0;
+		  overflow: hidden;
+		  transition: all 0.35s;
+		}
+		.tab input:checked ~ .tab__content {
+		  max-height: 100rem;
+		}
+
+		/* Visual styles */
+		.accordion {
+		  color: #cccccc;
+		  border: 1px solid;
+		  border-radius: 0.5rem;
+		  overflow: hidden;
+		}
+		.tab__label,
+		.tab__close {
+		  display: flex;
+		  color: #047f92;
+		  background: var(--theme);
+		  cursor: pointer;
+		}
+		.tab__label {
+		  justify-content: space-between;
+		  padding: 1rem;
+			font-weight: bold;
+		}
+		.tab__label::after {
+		  content: "\276F";
+		  width: 1em;
+		  height: 1em;
+		  text-align: center;
+		  transform: rotate(90deg);
+		  transition: all 0.35s;
+		}
+		.tab input:checked + .tab__label::after {
+		  transform: rotate(270deg);
+		}
+		.tab__content p {
+			color:#333333;
+		  margin: 0;
+		  padding: 1rem;
+			background-color:#ffffff;
+		}
+		.tab__content ul {
+			color:#333333;
+		  padding: 0;
+			margin:0 0 20px 40px;
+		}
+		.tab__close {
+		  justify-content: flex-end;
+		  padding: 0.5rem 1rem;
+		  font-size: 0.75rem;
+		}
+		.accordion--radio {
+		  --theme: var(--secondary);
+		}
+
+		/* Arrow animation */
+		.tab input:not(:checked) + .tab__label:hover::after {
+		  animation: bounce 0.5s infinite;
+		}
+		@keyframes bounce {
+		  25% {
+			transform: rotate(90deg) translate(0.25rem);
+		  }
+		  75% {
+			transform: rotate(90deg) translate(-0.25rem);
+		  }
+		}
+		a.btn-blue {
+			display:inline-block;
+			font-size:18px;
+			line-height:40px;
+			font-weight:bold;
+			color:#FFFFFF;
+			text-decoration:none;
+			height:40px;
+			width:auto;
+			padding:0 40px;
+			background-color:#047f92;
+			border-radius:20px;
+			transition:all ease 0.3s;
+			cursor: pointer;
+		}
+		a.btn-blue:hover {
+			color:#FFFFFF;
+			background-color:#07deff;
+		}
+	</style>
+	<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>	
+</head>
+
+<body>
+	<div class="bg"></div>
+	<div class="header">
+		<div class="company-logo">
+			<p>A service by your broker</p>
+			<img class="img-responsive" src="img/logo-dominion.png" />
+		</div>
+		<h1>Frequently Asked Questions</h1>
+	</div>
+	
+	<div class="search-box" style="align-items:flex-start;">
+		
+		<h3>Further help:</h3>
+			<p>Couldn’t find the info you were looking for?<br>Please visit our Discord server, we will assist you there for further questions!</p>
+			<p><a class="btn-blue" href="#"><span class="ht-logo-discd" style="font-size:24px; vertical-align: text-bottom;"></span> Discord</a></p>
+			<br>
+			
+			<h2>General</h2>
+			<section class="accordion">
+			  <div class="tab">
+				<input type="checkbox" name="accordion-1" id="g1">
+				<label for="g1" class="tab__label">What time zone is the base for the values presented?</label>
+				<div class="tab__content">
+				  <p>All trades are logged in UTC time zone.</p>
+				</div>
+			  </div>
+			  <div class="tab">
+				<input type="checkbox" name="accordion-1" id="g2">
+				<label for="g2" class="tab__label">Which symbols are tracked?</label>
+				<div class="tab__content">
+				  <p>We track the following symbols. Quote related analytics are only performed for trades in these symbols:</p>
+					<p><strong>Forex:</strong> EURUSD, AUDCAD, AUDCHF, AUDUSD, GBPUSD, NZDUSD, USDCAD, USDCHF, USDJPY, AUDJPY, AUDNZD, CADJPY, CHFJPY, EURAUD, EURCAD, EURCHF, EURGBP, EURJPY, GBPCHF, GBPJPY, CADCHF, EURNZD, GBPAUD, GBPCAD, GBPNZD, NZDJPY, NZDCAD, NZDCHF</p>
+					<p><strong>Indices:</strong> S&amp;P500, Dow Jones, Nasdaq100, Dollar Index (DXY), China A50, FTSE 100, ASX 200, EuroStoxx 50, Nikkei 225</p>
+					<p><strong>Commodities:</strong> Brent Oil, Crude Oil</p>
+					<p><strong>Metals:</strong> Gold, Silver</p>
+					<p><strong>Stocks:</strong> Apple, Google, Alphabet, Amazon, Tesla, Facebook</p>
+					<p><strong>Crypto:</strong> Bitcoin, Ethereum</p>
+				</div>
+			  </div>
+			  <div class="tab">
+				<input type="checkbox" name="accordion-1" id="g3">
+				<label for="g3" class="tab__label">Why do pip values differ to my trading account or analytics tools?</label>
+				<div class="tab__content">
+				  <p>In order to normalize the pip values among different assets traded, we selectively adjust the point multipliers for certain symbols. The adjustments may lead to differences to analytics tools, however significantly improve the comparability to among your assets traded.</p>
+					<p>We adjusted the following point multipliers:</p>
+					<ul>
+						<li>NGCUSD: 4</li>
+						<li>UKOIL: 3</li>
+						<li>USOIL: 3</li>
+						<li>S&amp;P500: 1</li>
+						<li>Dow Jones: 1</li>
+						<li>DAX: 1</li>
+						<li>EuroStoxx: 1</li>
+						<li>Nasdaq100: 1</li>
+						<li>Silver: 4</li>
+						<li>Gold: 2</li>
+						<li>Bitcoin: 0</li>
+					</ul>
+				</div>
+			  </div>
+				<div class="tab">
+					<input type="checkbox" name="accordion-1" id="g4">
+					<label for="g4" class="tab__label">How do you record trades with partial exits?</label>
+					<div class="tab__content">
+					  <p>Each partial exit of a trade is considered a single trade.</p>
+					</div>
+				  </div>
+				<div class="tab">
+					<input type="checkbox" name="accordion-1" id="g5">
+					<label for="g5" class="tab__label">How to record trades with partial entries?</label>
+					<div class="tab__content">
+					  <p>Each partial entry into a trade is considered a single trade.</p>
+					</div>
+				  </div>
+				<div class="tab">
+					<input type="checkbox" name="accordion-1" id="g6">
+					<label for="g6" class="tab__label">How do you derive the benchmarks shown in the chart?</label>
+					<div class="tab__content">
+					  <p>If available, the benchmarks are derived by taking the average of profitable traders that show a similar trading style to you. Thereby, the benchmarks give you a unique reference value to cross-check in which dimensions you under - or overperform profitable traders.</p>
+					</div>
+				  </div>
+			</section>
+			<br><br>
+			<h2>TradeMedic report</h2>
+			<section class="accordion">
+			  <div class="tab">
+				<input type="checkbox" name="accordion-2" id="tm1">
+				<label for="tm1" class="tab__label">How are the results of this Trade Medic Report generated?</label>
+				<div class="tab__content">
+				  <p>The results are fully automatically generated based on your historic trades. Smart algorithms analyze your trades, identify patterns &amp; behaviors, interpret them, and derive the quantified effects shown in the report.</p>
+				</div>
+			  </div>
+			  <div class="tab">
+				<input type="checkbox" name="accordion-2" id="tm2">
+				<label for="tm2" class="tab__label">Can I view the charts in different timeframes and dimensions?</label>
+				<div class="tab__content">
+				  <p>Yes, you can view the charts in custom timeframes for more recent performances, alter between Pip &amp; Return to derive position sizing effects, analyze number of trades, significances, benchmarks, risk effects, and more. These additional insights are available through Hoc-trade.</p>
+				</div>
+			  </div>
+			  <div class="tab">
+				<input type="checkbox" name="accordion-2" id="tm3">
+				<label for="tm3" class="tab__label">Can I receive alerts if I perform trades that show issues?</label>
+				<div class="tab__content">
+				  <p>Yes, Hoc-trade enables real-time alerts in case you exhibit trading actions indicative of behaving in one of your trading issues. Moreover, you can receive alerts in case risk management related actions are identified. All alerts can be customized based on your preferences.</p>
+				</div>
+			  </div>
+				<div class="tab">
+					<input type="checkbox" name="accordion-2" id="tm4">
+					<label for="tm4" class="tab__label">Are the Trade Medic Reports also available for accounts except MetaTrader 4?</label>
+					<div class="tab__content">
+					  <p>Currently, the Trade Medic reports are only available for MetaTrader 4 users. However, we are already working on integrating additional trading platforms frequently used by traders. Stay tuned for more integrations.</p>
+					</div>
+				  </div>
+				<div class="tab">
+					<input type="checkbox" name="accordion-2" id="tm5">
+					<label for="tm5" class="tab__label">Are there additional analytics available?</label>
+					<div class="tab__content">
+					  <p>here are many more charts available that outline trading behaviors, strategies, etc.. Moreover, advanced statistics, tracking tools, and in-depth explanations &amp; videos on root causes of behaviors are available. These additional sources can be found on Hoc-trade.</p>
+					</div>
+				  </div>
+				<div class="tab">
+					<input type="checkbox" name="accordion-2" id="tm6">
+					<label for="tm6" class="tab__label">Why do I receive this report?</label>
+					<div class="tab__content">
+					  <p>This report has been generated as a service by your broker. To inquire about the eligibility to receive this and future reports, please contact your broker.</p>
+					</div>
+				  </div>
+			</section>
+		 
+	</div>
+
+	<div class="disclaimer" style="position: relative;">
+		<strong>Disclaimer:</strong> 
+		None of the information presented in this report are financial advice. Reading and interpreting this report is solely at the risk of the viewer. Trading CFDs or any other form of financial instruments imposes high risk and you may lose your entire capital. Only risk what you can afford to lose. Past performance is not an indication of future performance. None of the parties can be held liable for any information or decisions based on this report. It is highly dependent on the interpretation of the viewer and the report itself may contain errors. There has been no review of a human before sending out this report.
+	</div>
+</body>
+</html>
