@@ -52,7 +52,18 @@
 				</div>
 				2023/10/23/23:49
 			</div>
-			<div class="list-key"><div class="mobile"><strong>Key:</strong></div>jklwefj8348348hjkfd</div>
+			
+			<div class="list-key">
+				<div class="mobile"><strong>Key:</strong></div>
+				<input class="key-content" type="text" value="jklwefj8348348hjkfd" id="myInput">
+				<div class="tooltip">
+					<a onclick="myFunction()" onmouseout="outFunc()">
+						<span class="tooltiptext" id="myTooltip">Copy key to clipboard</span>
+						<span class="ht-new-window"></span>
+					</a>
+				</div>
+			</div>
+			
 			<a class="btn-download-pdf" href="#">Download</a>
 		</li>
 		<!-- item -->
@@ -375,4 +386,20 @@
 	</div>
 	
 </body>
+<script>
+	function myFunction() {
+	  var copyText = document.getElementById("myInput");
+	  copyText.select();
+	  copyText.setSelectionRange(0, 99999);
+	  navigator.clipboard.writeText(copyText.value);
+
+	  var tooltip = document.getElementById("myTooltip");
+	  tooltip.innerHTML = "Key copied";
+	}
+
+	function outFunc() {
+	  var tooltip = document.getElementById("myTooltip");
+	  tooltip.innerHTML = "Copy key to clipboard";
+	}
+</script>
 </html>
