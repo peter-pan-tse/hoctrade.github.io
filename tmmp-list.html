@@ -9,7 +9,11 @@
 	<link rel="icon" href="img/favicon.svg">
 	<title>TradeMedic Management Portal</title>
 </head>
-
+<style>
+	::selection {
+	  background-color: transparent;
+	}
+</style>
 <body>
 	<div class="header" style="margin:0 auto; max-width:1000px;">
 		<h1>TradeMedic Management Portal</h1>
@@ -55,7 +59,7 @@
 			
 			<div class="list-key">
 				<div class="mobile"><strong>Key:</strong></div>
-				<input class="key-content" type="text" value="jklwefj8348348hjkfd" id="myInput">
+				<input class="key-content" type="text" value="jklwefj8348348hjkfd" spellcheck="false" id="myInput">
 				<div class="tooltip">
 					<a onclick="myFunction()" onmouseout="outFunc()">
 						<span class="tooltiptext" id="myTooltip">Copy key to clipboard</span>
