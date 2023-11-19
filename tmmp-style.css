@@ -431,6 +431,9 @@ input.key-content, input.key-content:focus  {
 	margin:0 5px 0 0;
 	width:130px;
 }
+input.key-content::selection {
+	  background-color: transparent;
+	}
 @media only screen and (max-width: 540px) {
 	input.key-content, input.key-content:focus  {
 		font-size:12px;
