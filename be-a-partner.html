@@ -381,6 +381,24 @@
 			padding:120px 20px 40px 20px;
 			justify-content: center;
 		}
+		.form-container {
+			display:flex;
+			flex-direction: column;
+			justify-content: center;
+			padding:120px 20px 40px 20px;
+    		position: relative;
+   			margin: 0 auto;
+    		max-width: 1000px;
+			text-align: center;
+		}
+		.form-container > iframe {
+			width:100%;
+			padding:0;
+			margin:0;
+			border:none;
+			overflow: hidden;
+			min-height:1000px;
+		}
 	</style>
 	<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>	
 	</head>
@@ -429,7 +447,7 @@
 				<div class="theme-text-box">
 					<h1>Supercharge<br>your Traders with AI</h1>
 					<br>
-					<a class="btn-reg-free" href="mailto:info@hoc-trade.com">Ask us for demo</a>
+					<a class="btn-reg-free" href="#contactform">Ask us for demo</a>
 					<div class="learn-more">
 						Scroll to learn more<br><span class="ht-down-arrow"></span>
 					</div>
@@ -455,7 +473,7 @@
 					</div>
 					<div>
 						<h2 style="width:100%; color:#ffffff; text-align:center;">…and much more!</h2>
-						<a class="btn-large" style="margin-top:10px;" href="mailto:info@hoc-trade.com">Ask us for demo</a>
+						<a class="btn-large" style="margin-top:10px;" href="#contactform">Ask us for demo</a>
 					</div>
 				</div>
 			</div>
@@ -503,7 +521,7 @@
 				</div>
 				<div align="center" style="margin: 40px 0 0 0;">
 					<h2 style="width:100%;">Reach out to explore all options</h2>
-					<a class="btn-large" style="margin-top:10px;" href="mailto:info@hoc-trade.com">Get in contact</a>
+					<a class="btn-large" style="margin-top:10px;" href="#contactform">Get in contact</a>
 				</div>
 			</div>
 			
@@ -527,7 +545,7 @@
 					</div>
 				</div>
 				<div>
-					<a class="btn-large" style="margin-top:10px;" href="mailto:info@hoc-trade.com">Inquire integration details</a>
+					<a class="btn-large" style="margin-top:10px;" href="#contactform">Inquire integration details</a>
 				</div>
 			</div>
 			
@@ -560,8 +578,14 @@
 					</div>
 				</div>
 				<div>
-					<a class="btn-large" style="margin-top:10px;" href="mailto:info@hoc-trade.com">Get in touch</a>
+					<a class="btn-large" style="margin-top:10px;" href="#contactform">Get in touch</a>
 				</div>
+			</div>
+			
+			<div class="form-container" id="contactform">
+				<h1>Contact us</h1>
+				<p>Simply leave your contact details and we will reach out to you with further info about Hoc-trade and integration options.</p>
+				<iframe src="https://view.forms.app/jonasschleypen/untitled-form?draftId=fc551730"></iframe>
 			</div>
 			
 			<!-- footer -->
