@@ -38,7 +38,7 @@
 			width:100vw;
 			height:100vh;
 			background-color:#367e91;
-			background-image:url("img/ht-top-logo.png"), url("img/ht-top-brain-r.png"), url("img/ht-top-gradient.png"), url("img/ht-top-brain-l.png"), url("img/ht-top-bg.png");
+			background-image:url("img/ht-top-logo.png"), url("img/ht-top-brain-r2.png"), url("img/ht-top-gradient.png"), url("img/ht-top-brain-l.png"), url("img/ht-top-bg.png");
 			background-position:right center;
 			background-size:80vw auto, 80vw auto, cover, 80vw auto, cover;
 			background-repeat:no-repeat;
@@ -211,6 +211,61 @@
 		.benefit-item > span {
 			color:#ffffff;
 			font-size:80px;
+		}
+		.tm-box {
+			display:flex;
+			flex-direction: row;
+			width:100%;
+			justify-content: space-between;
+			align-items: stretch;
+			margin:20px 0;
+		}
+		.tm-item {
+			display:flex;
+			flex-direction: column;
+			justify-content:flex-start;
+			align-items: center;
+			text-align: center;
+			width:calc(50% - 40px);
+			padding:20px;
+		}
+		.tm-text {
+			display:flex;
+			flex-direction: column;
+			justify-content:center;
+			align-items: flex-start;
+			text-align: left;
+			width:calc(50% - 40px);
+			padding:20px;
+		}
+		.tm-text > h2 {
+			margin:20px 0;
+		}
+		.tm-text > h2 > span {
+			font-size:120%;
+			margin-right:10px;
+			vertical-align: text-bottom;
+		}
+		@media only screen and (max-width: 920px) {
+			.tm-box {
+				flex-direction: column;
+			}
+			.tm-item {
+				width:calc(100% - 40px);
+			}
+			.tm-text {
+				width:calc(100% - 40px);
+				align-items: center;
+				text-align: center;
+			}
+		}
+		@media only screen and (max-width: 540px) {
+			.tm-text > h2 > span {
+				display:block;
+				width:100%;
+				font-size:150%;
+				margin-right:0;
+			}
 		}
 		.option-header-box {
 			display:flex;
@@ -454,9 +509,47 @@
 				</div>
 			</div>
 			
+			<div class="main-container">
+				<h1>TradeMedic: Retain your Traders through unprecedented insights</h1>
+				<div class="tm-box">
+					<div class="tm-item">
+						<img class="img-responsive" src="img/partner-tm-top4.png" />
+					</div>
+					<div class="tm-text">
+						<h2><span class="ht-medbox"></span>Detects loss reasons of trader</h2>
+						<h2><span class="ht-medbox"></span>Generates personalized report</h2>
+						<h2><span class="ht-medbox"></span>Supports during trading journey</h2>
+					</div>
+				</div>
+				<div>
+					<a class="btn-large" style="margin-top:10px;" href="#contactform">Ask us for demo</a>
+				</div>
+			</div>
+			
+			<div class="main-container">
+				<h1>3-in-1 profitability boost using AI</h1>
+				<div class="benefit-box">
+					<div class="benefit-item" style="background-color:#047f92;">
+						<h2>Retain</h2>
+						<p style="color:#ffffff;">Support your most valuable traders in a fully personalized way</p>
+					</div>
+					<div class="benefit-item" style="background-color:#047f92;">
+						<h2>Re-activate</h2>
+						<p style="color:#ffffff;">Automated report-triggers when your traders need them the most</p>
+					</div>
+					<div class="benefit-item" style="background-color:#047f92;">
+						<h2>Differentiate</h2>
+						<p style="color:#ffffff;">Pioneer the AI revolution and educate with unprecedented insights</p>
+					</div>
+				</div>
+				<div>
+					<a class="btn-large" style="margin:10px 0 80px 0;" href="#contactform">Ask us for demo</a>
+				</div>
+			</div>
+			
 			<div class="benefit-header">
 				<div class="main-container">
-					<h1 style="color:#ffffff;">Your unique benefits</h1>
+					<h1 style="color:#ffffff;">Stand out from the rest</h1>
 					<div class="benefit-box">
 						<div class="benefit-item">
 							<img class="img-responsive" src="img/slide-2-pic-5.png" />
