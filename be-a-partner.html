@@ -175,7 +175,7 @@
 			background-size: cover;
 			background-repeat:no-repeat;
 		}
-		.benefit-header > * > h1, .benefit-header > * > * > h2, .benefit-item > h2, .benefit-item > h3 {
+		.benefit-header > * > h1, .benefit-header > * > * > h2, .benefit-item > h2, .benefit-item > h3, .three-item > h2, .three-item > h3 {
 			color:#ffffff;
 			text-shadow: 0px 0px 10px rgba(7, 195, 224, 1);
 		}
@@ -211,6 +211,27 @@
 		.benefit-item > span {
 			color:#ffffff;
 			font-size:80px;
+		}
+		.three-item {
+			display:flex;
+			flex-direction: column;
+			justify-content:flex-start;
+			align-items: center;
+			text-align: center;
+			width:calc(32% - 40px);
+			padding:40px 20px;
+			border-radius:20px;
+			background-color:#047f92;
+			background-image: url("img/bg-brain-top.png");
+			background-size:100%;
+			background-position: center -80px;
+			background-repeat: no-repeat;
+		}
+		@media only screen and (max-width: 540px) {
+			.three-item {
+				width:calc(100% - 40px);
+				margin-bottom:20px;
+			}
 		}
 		.tm-box {
 			display:flex;
@@ -529,15 +550,15 @@
 			<div class="main-container">
 				<h1>3-in-1 profitability boost using AI</h1>
 				<div class="benefit-box">
-					<div class="benefit-item" style="background-color:#047f92;">
+					<div class="three-item">
 						<h2>Retain</h2>
 						<p style="color:#ffffff;">Support your most valuable traders in a fully personalized way</p>
 					</div>
-					<div class="benefit-item" style="background-color:#047f92;">
+					<div class="three-item">
 						<h2>Re-activate</h2>
 						<p style="color:#ffffff;">Automated report-triggers when your traders need them the most</p>
 					</div>
-					<div class="benefit-item" style="background-color:#047f92;">
+					<div class="three-item">
 						<h2>Differentiate</h2>
 						<p style="color:#ffffff;">Pioneer the AI revolution and educate with unprecedented insights</p>
 					</div>

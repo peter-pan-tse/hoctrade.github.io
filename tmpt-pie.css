@@ -1,0 +1,130 @@
+@charset "UTF-8";
+/* CSS Document */
+/* donut chart */
+.donut-chart {
+	position: relative;
+	width: 80px;
+	height: 80px;
+	margin: 0 auto 10px;
+	border-radius: 100%
+}
+.portion-block {
+    border-radius: 50%;
+    clip: rect(0px, 80px, 80px, 40px);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+.circle {
+    border-radius: 50%;
+    clip: rect(0px, 40px, 80px, 0px);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    font-family: monospace;
+    font-size: 1.5rem;
+}	
+#part1p {
+    transform: rotate(0deg);
+  }
+#part1p .circle {
+	background-color: #56A07E;
+	/*transform: rotate(76deg);*/
+	animation: firstp 0.3s 1 forwards;
+}	
+#part2p {
+    transform: rotate(180deg);
+ }
+#part2p .circle {
+	background-color: #443035;
+    animation: secondp 0.3s 1 forwards 0.15s;
+ }
+#part3p {
+    transform: rotate(300deg);
+}
+#part3p .circle {
+	background-color: #264349;
+	animation: thirdp 0.3s 1 forwards 0.3s;
+}	
+/* Animation */
+@keyframes firstp {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(180deg);}
+}	
+@keyframes secondp {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(120deg);}
+}	
+@keyframes thirdp {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(60deg);}
+}
+#part1l {
+    transform: rotate(0deg);
+  }
+#part1l .circle {
+	background-color: #1E4B42;
+	/*transform: rotate(76deg);*/
+	animation: firstl 0.3s 1 forwards;
+}	
+#part2l {
+    transform: rotate(180deg);
+ }
+#part2l .circle {
+	background-color: #C15457;
+    animation: secondl 0.3s 1 forwards 0.15s;
+ }
+#part3l {
+    transform: rotate(300deg);
+}
+#part3l .circle {
+	background-color: #264349;
+	animation: thirdl 0.3s 1 forwards 0.3s;
+}	
+/* Animation */
+@keyframes firstl {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(180deg);}
+}	
+@keyframes secondl {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(120deg);}
+}	
+@keyframes thirdl {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(60deg);}
+}
+a.donut-rank-bar-p, a.donut-rank-bar-l {
+	display:block;
+	postion:relative;
+	overflow: hidden;
+	height:20px;
+	margin:0 0 5px 0;
+	padding:0 5px;
+	font-size:12px;
+	line-height:20px;
+	text-decoration: none;
+	background-color:#001216;
+	border-radius:5px;
+	transition: all 0.3s ease;
+}
+a.donut-rank-bar-p {
+	color:#56A07E;
+	background-image:url("donut-bg-p.png");
+	background-position: left top;
+	background-repeat: no-repeat;
+}
+a.donut-rank-bar-p:hover {
+	color:#FFFFFF;
+	background-image:url("donut-bg-p-hover.png");
+}
+a.donut-rank-bar-l {
+	color:#C15357;
+	background-image:url("donut-bg-l.png");
+	background-position: left top;
+	background-repeat: no-repeat;
+}
+a.donut-rank-bar-l:hover {
+	color:#FFFFFF;
+	background-image:url("donut-bg-l-hover.png");
+}
