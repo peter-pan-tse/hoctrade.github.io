@@ -98,7 +98,7 @@ ul.medic-report li {
 ul.medic-report li:nth-child(even) {
 	background-color:#efefef;
 }
-.column-issue, .column-severity, .column-effect, .column-info, .column-risk-ico, .column-risk {
+.column-issue, .column-severity, .column-effect, .column-info, .column-risk-ico, .column-risk, .column-issue-area, .column-improvement, .column-donut, .column-info-chart {
 	display:flex;
 	position:relative;
 	padding: 20px 10px;
@@ -124,6 +124,24 @@ ul.medic-report li:nth-child(even) {
 .column-risk {
 	width:calc(38% - 20px);
 	text-align: left;
+}
+/*columns for improvement tracker*/
+.column-issue-area {
+	width:calc(14% - 20px);
+	text-align: left;
+}
+.column-improvement {
+	width:calc(18% - 20px);
+	text-align: center;
+}
+.column-donut {
+	width:calc(30% - 20px);
+	text-align: center;
+}
+.column-info-chart {
+	width:calc(8% - 20px);
+	text-align: right;
+	justify-content:flex-end;
 }
 @media only screen and (max-width: 540px) {
 	.column-issue {
@@ -258,4 +276,38 @@ a.btn-top-info span {
 	.larger-font {
 		font-size: 12px;
 	}
+}
+.overall-score-box {
+	display:flex;
+	flex-direction:column;
+	padding:20px;
+	background-color: #cccccc;
+}
+.overall-score {
+	display:flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: stretch;
+}
+.overall-score-item {
+	display:flex;
+	position:relative;
+	flex-direction:column;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+	border-radius:10px;
+	padding:10px 15px;
+	width:calc(25%- 30px);
+	background-color: transparent;
+	cursor: default;
+	transition:all ease 0.3s;
+}
+.overall-score-item:hover {
+	transform: scale(120%);
+	background-color: #ffffff;
+}
+.overall-score-item h4 {
+	margin:0 0 10px 0;
 }

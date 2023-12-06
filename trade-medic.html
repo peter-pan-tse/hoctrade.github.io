@@ -669,7 +669,7 @@
 				<div><span class="ht-alert-chart"></span> Risk report</div>
 				<a class="btn-open"><span class="ht-add"></span></a>
 			</button>
-			<div class="panel" style="margin-bottom:0px;">
+			<div class="panel">
 				<ul class="medic-report">
 					<li style="font-size:12px;  background-color:#666666; color:#ffffff;">
 						<div class="column-issue"><strong>Risk area</strong></div>
@@ -735,6 +735,115 @@
 				</ul>
 			</div>
 			<!-- accordion end -->
+			<!-- accordion -->
+			<button class="accordion">
+				<div><span class="ht-up-chart"></span> Improvement tracker</div>
+				<a class="btn-open"><span class="ht-add"></span></a>
+			</button>
+			<div class="panel" style="margin-bottom:0px;">
+				<div class="overall-score-box">
+					<h3 style="margin:0;">Overall issue score *</h3>
+					<div class="overall-score">
+						<div class="overall-score-item">
+							<h4>All</h4>
+							<div class="donut-chart-block block"> 
+								<div class="donut-chart">
+									<div class="overall-r portion-block ring-neg" style="transform:rotate(0deg);"><div class="circle"></div></div>
+									<div class="overall-l portion-block ring-neg" style="transform:rotate(171deg);"><div class="circle"></div></div>
+									<p class="center-score">77</p>        
+								</div>
+							</div>
+						</div>
+						<div class="overall-score-item">
+							<h4>1Y</h4>
+							<div class="donut-chart-block block"> 
+								<div class="donut-chart">
+									<div class="overall-r portion-block ring-neg" style="transform:rotate(0deg);"><div class="circle"></div></div>
+									<div class="overall-l portion-block ring-neg" style="transform:rotate(180deg);"><div class="circle"></div></div>
+									<p class="center-score">79</p>        
+								</div>
+							</div>
+						</div>
+						<div class="overall-score-item">
+							<h4>3M</h4>
+							<div class="donut-chart-block block"> 
+								<div class="donut-chart">
+									<div class="overall-r portion-block ring-even" style="transform:rotate(0deg);"><div class="circle"></div></div>
+									<div class="overall-l portion-block ring-even" style="transform:rotate(171deg);"><div class="circle"></div></div>
+									<p class="center-score">77</p>        
+								</div>
+							</div>
+						</div>
+						<div class="overall-score-item">
+							<h4>1M</h4>
+							<div class="donut-chart-block block"> 
+								<div class="donut-chart">
+									<div class="overall-r portion-block ring-po" style="transform:rotate(0deg);"><div class="circle"></div></div>
+									<div class="overall-l portion-block ring-po" style="transform:rotate(162deg);"><div class="circle"></div></div>
+									<p class="center-score">75</p>        
+								</div>
+							</div>
+						</div>
+						<div class="overall-score-item">
+							<h4>2W</h4>
+							<div class="donut-chart-block block"> 
+								<div class="donut-chart">
+									<div class="overall-r portion-block ring-po" style="transform:rotate(0deg);"><div class="circle"></div></div>
+									<div class="overall-l portion-block ring-po" style="transform:rotate(160deg);"><div class="circle"></div></div>
+									<p class="center-score">74</p>        
+								</div>
+							</div>
+						</div>
+					</div>
+					<div style="width:100%; text-align:right; font-size:10px; color:#666666;">
+						*Score (0-100) combines severity &amp; share of trades showing issues
+					</div>
+				</div>
+				<ul class="medic-report">
+					<li style="font-size:12px;  background-color:#666666; color:#ffffff;">
+						<div class="column-issue-area"><strong>Issue area</strong></div>
+						<div class="column-improvement"><strong>Improvement</strong></div>
+						<div class="column-donut"><strong>Return/trade</strong></div>
+						<div class="column-donut"><strong>Percentage of trade</strong></div>
+						<div class="column-info-chart"><strong>Further details</strong></div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue"><strong>Emotional loss streak</strong></div>
+						<div class="column-risk-ico">
+							<div class="risk-ico-ng"><span class="ht-alert"></span></div>
+						</div>
+						<div class="column-risk">Warning: On average, you increase your risk/trade by 173% after 4-6 consecutive losses</div>
+						<div class="column-info">
+							<a class="btn-info" id="" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue"><strong>All-in trades</strong></div>
+						<div class="column-risk-ico">
+							<div class="risk-ico-po"><span class="ht-check"></span></div>
+						</div>
+						<div class="column-risk">All good, you recently didn't have all-in trades</div>
+						<div class="column-info">
+							<a class="btn-info" id="" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue"><strong>Trade without SL</strong></div>
+						<div class="column-risk-ico">
+							<div class="risk-ico-ng"><span class="ht-alert"></span></div>
+						</div>
+						<div class="column-risk">Warning: Only 12% of your trades had a Stop Loss!</div>
+						<div class="column-info">
+							<a class="btn-info" id="" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- accordion end -->
+		
 		<div class="general-info-header" style="border-radius:0 0 20px 20px;"></div>
 		<div style="height:20px;"></div>
 		<div class="disclaimer">
