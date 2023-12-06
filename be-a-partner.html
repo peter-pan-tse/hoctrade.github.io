@@ -177,7 +177,7 @@
 		}
 		.benefit-header > * > h1, .benefit-header > * > * > h2, .benefit-item > h2, .benefit-item > h3, .three-item > h2, .three-item > h3 {
 			color:#ffffff;
-			text-shadow: 0px 0px 10px rgba(7, 195, 224, 1);
+			text-shadow: 0px 0px 10px rgba(0, 51, 59, 1);
 		}
 		.benefit-box {
 			display:flex;
@@ -196,7 +196,7 @@
 			width:calc(32% - 40px);
 			padding:20px;
 			border-radius:20px;
-			background-color: rgba(0, 51, 59, 1);
+			background-color: rgba(0, 60, 70, 1);
 		}
 		@media only screen and (max-width: 540px) {
 			.benefit-box {
@@ -219,12 +219,11 @@
 			align-items: center;
 			text-align: center;
 			width:calc(32% - 40px);
-			padding:40px 20px;
+			padding:60px 20px;
 			border-radius:20px;
 			background-color:#047f92;
-			background-image: url("img/bg-brain-top.png");
-			background-size:100%;
-			background-position: center -80px;
+			background-image: url("img/tmr-header-bg.png");
+			background-size: auto 75%;
 			background-repeat: no-repeat;
 		}
 		@media only screen and (max-width: 540px) {
@@ -232,6 +231,10 @@
 				width:calc(100% - 40px);
 				margin-bottom:20px;
 			}
+		}
+		.tmh2 {
+			color:#043c45;
+			font-size:30px;
 		}
 		.tm-box {
 			display:flex;
@@ -260,10 +263,11 @@
 			padding:20px;
 		}
 		.tm-text > h2 {
-			margin:20px 0;
+			margin:10px 0;
+			color:#043c45;
 		}
 		.tm-text > h2 > span {
-			font-size:120%;
+			font-size:200%;
 			margin-right:10px;
 			vertical-align: text-bottom;
 		}
@@ -284,15 +288,17 @@
 			.tm-text > h2 > span {
 				display:block;
 				width:100%;
-				font-size:150%;
 				margin-right:0;
+			}
+			.tmh2 {
+				font-size:20px;
 			}
 		}
 		.option-header-box {
 			display:flex;
 			justify-content: center;
 			width:100%;
-			align-items: center;
+			align-items: stretch;
 			color:#047f92;
 			font-weight: bold;
 			margin:40px 0;
@@ -301,14 +307,22 @@
 			display:flex;
 			width:calc(26% - 44px);
 			justify-content: center;
+			align-items: center;
 			text-align:center;
 			padding:10px 20px;
 			border:2px solid #047f92;
 			border-radius:16px;
 		}
+		@media only screen and (max-width: 540px) {
+			.option-header-word {
+				padding:10px 10px;
+				width:calc(30% - 24px);
+			}
+		}
 		.option-header-dots {
 			display:flex;
 			justify-content: center;
+			align-items: center;
 			text-align: center;
 			font-size:24px;
 			width:5%;
@@ -475,6 +489,9 @@
 			overflow: hidden;
 			min-height:1000px;
 		}
+		sup {
+			font-size:50%;
+		}
 	</style>
 	<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>	
 	</head>
@@ -523,48 +540,51 @@
 				<div class="theme-text-box">
 					<h1>Supercharge<br>your Traders with AI</h1>
 					<br>
-					<a class="btn-reg-free" href="#contactform">Ask us for demo</a>
+					<a class="btn-reg-free" href="#contactform">Request demo</a>
 					<div class="learn-more">
 						Scroll to learn more<br><span class="ht-down-arrow"></span>
 					</div>
 				</div>
 			</div>
 			
-			<div class="main-container">
-				<h1>TradeMedic: Retain your Traders through unprecedented insights</h1>
+			<div class="main-container" style="flex-direction: column;">
+				<h1>TradeMedic<sup>TM</sup></h1>
+				<h2 class="tmh2">Retain your Traders through unprecedented insights</h2>
 				<div class="tm-box">
 					<div class="tm-item">
 						<img class="img-responsive" src="img/partner-tm-top4.png" />
 					</div>
 					<div class="tm-text">
-						<h2><span class="ht-medbox"></span>Detects loss reasons of trader</h2>
-						<h2><span class="ht-medbox"></span>Generates personalized report</h2>
-						<h2><span class="ht-medbox"></span>Supports during trading journey</h2>
+						<h2><span class="ht-search"></span>Detects loss reasons of trader</h2>
+						<div class="ht-down-arrow" style="font-size:40px; width:100%; text-align: center; color:#07DEFF;"></div>
+						<h2><span class="ht-clipboard"></span>Generates personalized report</h2>
+						<div class="ht-down-arrow" style="font-size:40px; width:100%; text-align: center; color:#07DEFF;"></div>
+						<h2><span class="ht-gear"></span>Supports during trading journey</h2>
 					</div>
 				</div>
-				<div>
-					<a class="btn-large" style="margin-top:10px;" href="#contactform">Ask us for demo</a>
+				<div style="text-align: center; width:100%;">
+					<a class="btn-large" style="margin-top:10px;" href="#contactform">Get in touch</a>
 				</div>
 			</div>
 			
 			<div class="main-container">
 				<h1>3-in-1 profitability boost using AI</h1>
 				<div class="benefit-box">
-					<div class="three-item">
+					<div class="three-item" style="background-position: left top;">
 						<h2>Retain</h2>
 						<p style="color:#ffffff;">Support your most valuable traders in a fully personalized way</p>
 					</div>
-					<div class="three-item">
+					<div class="three-item" style="background-position: center top;">
 						<h2>Re-activate</h2>
 						<p style="color:#ffffff;">Automated report-triggers when your traders need them the most</p>
 					</div>
-					<div class="three-item">
+					<div class="three-item" style="background-position: right top;">
 						<h2>Differentiate</h2>
 						<p style="color:#ffffff;">Pioneer the AI revolution and educate with unprecedented insights</p>
 					</div>
 				</div>
 				<div>
-					<a class="btn-large" style="margin:10px 0 80px 0;" href="#contactform">Ask us for demo</a>
+					<a class="btn-large" style="margin:10px 0 80px 0;" href="#contactform">Request a trial</a>
 				</div>
 			</div>
 			
@@ -587,7 +607,7 @@
 					</div>
 					<div>
 						<h2 style="width:100%; color:#ffffff; text-align:center;">…and much more!</h2>
-						<a class="btn-large" style="margin-top:10px;" href="#contactform">Ask us for demo</a>
+						<a class="btn-large" style="margin-top:10px;" href="#contactform">Request demo</a>
 					</div>
 				</div>
 			</div>
@@ -616,14 +636,14 @@
 					<div class="option-item-pic option-pic-1"></div>
 					<div class="option-item-text">
 						<h2>Full whitelabel integration</h2>
-						Offer all functionalities of Hoc-trade within your own Dashboard, include Analytics, TradeMedic, Alerts, and more.
+						Offer all functionalities of Hoc-trade within your own dashboard, including Analytics, TradeMedic<sup>TM</sup>, Alerts, and more.
 					</div>
 				</div>
 				<div class="option-box even">
 					<div class="option-item-pic option-pic-2"></div>
 					<div class="option-item-text">
-						<h2>TradeMedic integration</h2>
-						Elevate your traders by integrating the TradeMedic report, fully-automated with regular, trigger-based or manually requested reports within your own Management Dashboard.
+						<h2>TradeMedic<sup>TM</sup> integration</h2>
+						Elevate your traders by integrating TradeMedic<sup>TM</sup> report — fully-automated with regular, trigger-based, or manually requested reports— within your own Management Dashboard.
 					</div>
 				</div>
 				<div class="option-box odd">
