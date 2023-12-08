@@ -1,29 +1,6 @@
 @charset "UTF-8";
 /* CSS Document */
-/* donut chart 
-.donut-chart {
-	position: relative;
-	width: 80px;
-	height: 80px;
-	margin: 0 auto 10px;
-	border-radius: 100%
-}
-.portion-block {
-    border-radius: 50%;
-    clip: rect(0px, 80px, 80px, 40px);
-    height: 100%;
-    position: absolute;
-    width: 100%;
-}
-.circle {
-    border-radius: 50%;
-    clip: rect(0px, 40px, 80px, 0px);
-    height: 100%;
-    position: absolute;
-    width: 100%;
-    font-family: monospace;
-    font-size: 1.5rem;
-}*/	
+/* donut chart */	
 .ring-po {
 	background-color:#56A07E;
 }
@@ -33,14 +10,10 @@
 .ring-even {
 	background-color:#999999;
 }
+.ring-mask {
+	background-color:#dddddd;
+}
 /* donut charts */
-.overall-r {
-     transform:rotate(0deg);
- }	
-.overall-l {
-    transform: rotate(180deg);
- }
-
 p.center-score {
 	position: absolute;
 	text-align: center;
@@ -57,8 +30,84 @@ p.center-score {
 	border-radius: 50%;
 	line-height: 60px;
 	padding: 0;
-	transition: all ease 0.3s;
+	transition: all ease 0.2s;
 }
 p.center-score:hover {
 	background-color: #ffffff;
+}
+@media only screen and (max-width: 540px) {
+	p.center-score {
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+	}
+}
+/* smaller donut */
+.donut-chart-s {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	margin: 0 auto 10px;
+	border-radius: 100%
+}
+.portion-block-s {
+    border-radius: 50%;
+    clip: rect(0px, 40px, 40px, 20px);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+.circle-s {
+    border-radius: 50%;
+    clip: rect(0px, 20px, 40px, 0px);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    font-family: monospace;
+    font-size: 1.5rem;
+}
+p.center-score-s {
+	position: absolute;
+	text-align: center;
+	font-size:80%;
+	font-weight: bold;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	width: 32px;
+	height: 32px;
+	margin: auto;
+	border-radius: 50%;
+	line-height: 32px;
+	padding: 0;
+	transition: all ease 0.2s;
+}
+@media only screen and (max-width: 540px) {
+	.donut-chart-s {
+		width: 50px;
+		height: 50px;
+	}
+	.portion-block-s {
+		clip: rect(0px, 50px, 50px, 25px);
+	}
+	.circle-s {
+		clip: rect(0px, 25px, 50px, 0px);
+	}
+	p.center-score-s {
+		font-size:100%;
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+	}
+}
+
+ul.medic-report li:nth-child(odd) p.center-score-s {
+	background-color:#e6e6e6;
+}
+ul.medic-report li:nth-child(even) p.center-score-s {
+	background-color:#efefef;
+}
+ul.medic-report li:nth-child(odd) p.center-score-s:hover, ul.medic-report li:nth-child(even) p.center-score-s:hover  {
+	background-color:#ffffff;
 }
