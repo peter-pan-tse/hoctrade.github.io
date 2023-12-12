@@ -351,6 +351,7 @@ a.btn-top-info span {
 	flex-direction:column;
 	padding:20px;
 	background-color: #cccccc;
+	position:relative;
 }
 .overall-score {
 	display:flex;
