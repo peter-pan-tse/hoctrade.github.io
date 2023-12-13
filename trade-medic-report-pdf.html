@@ -15,8 +15,9 @@
 			margin:0;
 			padding:0;
 			color:#333333;
-			font-size:18px;
+			font-size:16px;
 			background-color: #FFFFFF !important;
+			scroll-behavior: smooth;
 		}
 	</style>
 </head>
@@ -297,6 +298,66 @@
 	<div class="a4-page">
 		<div class="num-patch">4</div>
 		<h1>Full Trading Issue report</h1>
+		
+		<div class="overall-score-box">
+			<h3>Overall issue score*</h3>
+			<div class="overall-score-item">
+				<h4>All</h4>
+				<div class="donut-chart-block block"> 
+					<div class="donut-chart">
+						<div class="portion-block ring-mask" style="transform:rotate(180deg);"><div class="circle"></div></div>
+						<div class="portion-block ring-neg" style="transform:rotate(0deg);"><div class="circle"></div></div>
+						<div class="portion-block ring-neg" style="transform:rotate(171deg);"><div class="circle"></div></div>
+						<p class="center-score">77</p>        
+					</div>
+				</div>
+			</div>
+			<div class="overall-score-item">
+				<h4>1Y</h4>
+				<div class="donut-chart-block block"> 
+					<div class="donut-chart">
+						<div class="portion-block ring-mask" style="transform:rotate(180deg);"><div class="circle"></div></div>
+						<div class="portion-block ring-neg" style="transform:rotate(0deg);"><div class="circle"></div></div>
+						<div class="portion-block ring-neg" style="transform:rotate(180deg);"><div class="circle"></div></div>
+						<p class="center-score">79</p>        
+					</div>
+				</div>
+			</div>
+			<div class="overall-score-item">
+				<h4>3M</h4>
+				<div class="donut-chart-block block"> 
+					<div class="donut-chart">
+						<div class="portion-block ring-mask" style="transform:rotate(180deg);"><div class="circle"></div></div>
+						<div class="portion-block ring-even" style="transform:rotate(0deg);"><div class="circle"></div></div>
+						<div class="portion-block ring-even" style="transform:rotate(171deg);"><div class="circle"></div></div>
+						<p class="center-score">77</p>        
+					</div>
+				</div>
+			</div>
+			<div class="overall-score-item">
+				<h4>1M</h4>
+				<div class="donut-chart-block block"> 
+					<div class="donut-chart">
+						<div class="portion-block ring-mask" style="transform:rotate(180deg);"><div class="circle"></div></div>
+						<div class="portion-block ring-po" style="transform:rotate(0deg);"><div class="circle"></div></div>
+						<div class="portion-block ring-po" style="transform:rotate(162deg);"><div class="circle"></div></div>
+						<p class="center-score">75</p>        
+					</div>
+				</div>
+			</div>
+			<div class="overall-score-item">
+				<h4>2W</h4>
+				<div class="donut-chart-block block"> 
+					<div class="donut-chart">
+						<div class="portion-block ring-mask" style="transform:rotate(180deg);"><div class="circle"></div></div>
+						<div class="portion-block ring-po" style="transform:rotate(0deg);"><div class="circle"></div></div>
+						<div class="portion-block ring-po" style="transform:rotate(160deg);"><div class="circle"></div></div>
+						<p class="center-score">74</p>        
+					</div>
+				</div>
+			</div>
+			<div style="width:100%; text-align:right; font-size:12px; color:#cccccc;">*Score (0-100) combines severity &amp; share of trades showing issues</div>
+		</div>
 		
 		<ul class="medic-report">
 					<li style="border-bottom:4px solid #cccccc;">
@@ -647,6 +708,153 @@
 					<div class="sev-bar-dot-top" style="left:calc(100% - 40px);"></div>
 				</div>
 				<div class="severity-level text-ng">100%</div>
+			</div>
+		</div>
+		<!-- improvement tracker -->
+		<div class="improvement-box">
+			<h2 style="width:100%; text-align: left;">Improvement tracker</h2>
+			<div class="improve-info-box-1">
+				<h3>Improvement</h3>
+				<div class="improvement-item">
+					<h4>1Y</h4>
+					<div class="trend-bullet-neg"><img src="img/arrow.png" /></div>
+				</div>
+				<div class="improvement-item">
+					<h4>3M</h4>
+					<div class="trend-bullet-even"><img src="img/arrow.png" /></div>
+				</div>
+				<div class="improvement-item">
+					<h4>1M</h4>
+					<div class="trend-bullet-po"><img src="img/arrow.png" /></div>
+				</div>
+				<div class="improvement-item">
+					<h4>2W</h4>
+					<div class="trend-bullet-po"><img src="img/arrow.png" /></div>
+				</div>
+			</div>
+			<div class="improve-info-box-2">
+				<h3>Return/trade</h3>
+				<div class="donut-item">
+					<h4>All</h4>
+					<div class="donut-chart-block block"> 
+						<div class="donut-chart-s">
+							<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
+							<div class="portion-block-s ring-neg" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
+							<div class="portion-block-s ring-neg" style="transform:rotate(128deg);"><div class="circle-s"></div></div>
+							<p class="center-score-s">-0.6%</p>        
+						</div>
+					</div>
+				</div>
+				<!-- -->
+				<div class="donut-item">
+					<h4>1Y</h4>
+					<div class="donut-chart-block block"> 
+						<div class="donut-chart-s">
+							<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
+							<div class="portion-block-s ring-neg" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
+							<div class="portion-block-s ring-neg" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
+							<p class="center-score-s">-0.7%</p>        
+						</div>
+					</div>
+				</div>
+				<!-- -->
+				<div class="donut-item">
+					<h4>3M</h4>
+					<div class="donut-chart-block block"> 
+						<div class="donut-chart-s">
+							<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
+							<div class="portion-block-s ring-even" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
+							<div class="portion-block-s ring-even" style="transform:rotate(128deg);"><div class="circle-s"></div></div>
+							<p class="center-score-s">-0.6%</p>        
+						</div>
+					</div>
+				</div>
+				<!-- -->
+				<div class="donut-item">
+					<h4>1M</h4>
+					<div class="donut-chart-block block"> 
+						<div class="donut-chart-s">
+							<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
+							<div class="portion-block-s ring-po" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
+							<div class="portion-block-s ring-mask" style="transform:rotate(102deg);"><div class="circle-s"></div></div>
+							<p class="center-score-s">-0.2%</p>        
+						</div>
+					</div>
+				</div>
+				<!-- -->
+				<div class="donut-item">
+					<h4>2W</h4>
+					<div class="donut-chart-block block"> 
+						<div class="donut-chart-s">
+							<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
+							<div class="portion-block-s ring-po" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
+							<div class="portion-block-s ring-mask" style="transform:rotate(52deg);"><div class="circle-s"></div></div>
+							<p class="center-score-s">-0.1%</p>        
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="improve-info-box-3">
+				<h3>Percentage of trades</h3>
+				<div class="donut-item">
+					<h4>All</h4>
+					<div class="donut-chart-block block"> 
+						<div class="donut-chart-s">
+							<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
+							<div class="portion-block-s ring-neg" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
+							<div class="portion-block-s ring-neg" style="transform:rotate(141deg);"><div class="circle-s"></div></div>
+							<p class="center-score-s">33%</p>        
+						</div>
+					</div>
+				</div>
+				<!-- -->
+				<div class="donut-item">
+					<h4>1Y</h4>
+					<div class="donut-chart-block block"> 
+						<div class="donut-chart-s">
+							<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
+							<div class="portion-block-s ring-neg" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
+							<div class="portion-block-s ring-neg" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
+							<p class="center-score-s">37%</p>        
+						</div>
+					</div>
+				</div>
+				<!-- -->
+				<div class="donut-item">
+					<h4>3M</h4>
+					<div class="donut-chart-block block"> 
+						<div class="donut-chart-s">
+							<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
+							<div class="portion-block-s ring-even" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
+							<div class="portion-block-s ring-even" style="transform:rotate(141deg);"><div class="circle-s"></div></div>
+							<p class="center-score-s">33%</p>        
+						</div>
+					</div>
+				</div>
+				<!-- -->
+				<div class="donut-item">
+					<h4>1M</h4>
+					<div class="donut-chart-block block"> 
+						<div class="donut-chart-s">
+							<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
+							<div class="portion-block-s ring-po" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
+							<div class="portion-block-s ring-po" style="transform:rotate(5deg);"><div class="circle-s"></div></div>
+							<p class="center-score-s">19%</p>        
+						</div>
+					</div>
+				</div>
+				<!-- -->
+				<div class="donut-item">
+					<h4>2W</h4>
+					<div class="donut-chart-block block"> 
+						<div class="donut-chart-s">
+							<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
+							<div class="portion-block-s ring-po" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
+							<div class="portion-block-s ring-po" style="transform:rotate(34deg);"><div class="circle-s"></div></div>
+							<p class="center-score-s">22%</p>        
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="explanation-box">
