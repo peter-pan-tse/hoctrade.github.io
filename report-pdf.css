@@ -315,12 +315,12 @@ ul.medic-report li {
 .column-issue-item {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-start;
 	position:relative;
-	padding: 13px 10px;
+	padding: 18px 10px;
 	width:calc(20% - 20px);
 	text-align: left;
-	line-height: 1.5em;
+	line-height: 1.25em;
 }
 .column-improve {
 	width:calc(20% - 20px);
@@ -662,14 +662,14 @@ p.faq > strong {
 	display:flex;
 	position:relative;
 	flex-direction:column;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	text-align: center;
 	padding:5px 5px 20px;
 	width:calc(25%- 10px);
 }
 .improvement-item h4 {
-	margin:0 0 5px 0;
+	margin:0 0 12px 0;
 	font-weight: normal;
 }
 .trend-bullet-po, .trend-bullet-neg, .trend-bullet-even {
