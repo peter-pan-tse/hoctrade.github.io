@@ -1,0 +1,552 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Noto Sans:400,700,900" rel="stylesheet">
+	<link href="font.css" rel="stylesheet">
+	<link href="landing.css" rel="stylesheet">
+	<link href="burger-menu-ht-landing.css" rel="stylesheet">
+	<link rel="icon" href="img/favicon.svg">
+	<title>TradeMedic</title>
+	<!-- write your code here -->
+	<style>
+		html, body {
+			padding:0;
+			margin:0px;
+			overflow-x: hidden;
+		}
+		.header-container {
+			padding: 0 0 6px 0;
+		}
+		/*.container {
+			width: 100vw;
+			height: 100vh;
+			scroll-snap-type: y mandatory;
+			overflow-y: scroll;
+			overflow-x:hidden;
+			transition:all ease 0.5s;
+		}
+		.container > * {
+			scroll-snap-align: start;
+		}*/
+		.theme-container {
+			display:flex;
+			flex-direction:row;
+			position:relative;
+			justify-content: space-between;
+			width:100vw;
+			height:100vh;
+			background-color:#367e91;
+			background-image:url("img/ht-top-logo.png"), url("img/ht-top-brain-r2.png"), url("img/ht-top-gradient.png"), url("img/ht-top-brain-l.png"), url("img/ht-top-bg.png");
+			background-position:right center;
+			background-size:80vw auto, 80vw auto, cover, 80vw auto, cover;
+			background-repeat:no-repeat;
+			z-index:1000;
+		}
+		.theme-text-box {
+			display:flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items:flex-start;
+			margin:0 0 0 5vw;
+			width: calc(50% - 5vw);
+			height:100vh;
+			z-index:100;
+		}
+		.theme-text-box h1 {
+			font-size:5.5vw;
+			line-height: 1.05em;
+			font-weight: bold;
+			margin:20px 0;
+			color:#FFFFFF;
+		}
+		.theme-text-box h2 {
+			font-size:2.5vw;
+			line-height: 1.25em;
+			font-weight: bold;
+			margin:0 0 20px 0;
+			color:#FFFFFF;
+		}
+		@media only screen and (max-width: 920px) {
+			.theme-container {
+				flex-direction:column;
+				justify-content: flex-start;
+				background-position:center 35vh, center 35vh, center center, center 35vh, center center;
+				background-size:120vw auto, 120vw auto, cover, 120vw auto, cover;
+			}
+			.theme-text-box {
+				margin:100px 0 0 20px;
+				width: calc(100% - 20px);
+				height:auto;
+			}
+			.theme-text-box h1 {
+				font-size:9vw;
+			}
+			.theme-text-box h2 {
+				font-size:5vw;
+			}
+		}
+		@media only screen and (max-width: 540px) {
+			.theme-container {
+				background-position:calc(50% - 50px) 40vh, calc(50% - 50px) 40vh, center center, calc(50% - 50px) 40vh, center center;
+				background-size:150vw auto, 150vw auto, cover, 150vw auto, cover;
+			}
+			.theme-text-box {
+				margin:60px 0 0 10px;
+			}
+			.theme-text-box h1 {
+				font-size:14vw;
+			}
+			.theme-text-box h2 {
+				font-size:6vw;
+				margin:0 0 10px 0;
+			}
+		}
+
+		a.btn-reg-free {
+			display: inline-block;
+			padding: 0px 24px;
+			margin: 20px 0;
+			height:48px;
+			background-color: #ffffff;
+			border-radius: 20px;
+			border:4px solid #047f92;
+			color: #033c45;
+			font-size: 22px;
+			line-height:48px;
+			font-weight: bold;
+			text-decoration: none;
+			cursor: pointer;
+			transition: all ease 0.3s;
+		}
+		@media only screen and (max-width: 540px) {
+			a.btn-reg-free {
+				padding: 0px 16px;
+				margin: 10px 0;
+				height:32px;
+				border-radius: 16px;
+				border:2px solid #047f92;
+				font-size: 18px;
+				line-height:32px;
+				margin: 0;
+			}
+		}
+		a.btn-reg-free:hover {
+			color:#FFFFFF;
+			background-color: #07deff;
+			transform: scale(1.2);
+		}
+		a.btn-large {
+			display: inline-block;
+			padding: 16px 40px;
+			margin: 50px 0 0 0;
+			background-color: #ffb700;
+			border-radius: 30px;
+			color: #000000;
+			font-size: 20px;
+			font-weight: bold;
+			text-decoration: none;
+			cursor: pointer;
+			transition: all ease 0.3s;		
+		}
+		a.btn-large:hover {
+			background-color: #07deff;
+		}
+		.learn-more {
+			width:200px;
+			position:absolute;
+			bottom:20px;
+			left: calc(50vw - 100px);
+			color:#ffffff;
+			font-weight:bold;
+			text-align: center;
+		}
+		.learn-more > span {
+			font-size:24px;
+		}
+		.benefit-header {
+			display:flex;
+			position:relative;
+			width:100vw;
+			background-color: background: linear-gradient(0deg, rgba(34,193,195,1) 10%, rgba(4,127,146,1) 90%);
+			background-image: url("img/traders-1.jpg");
+			background-position: left center;
+			background-size: cover;
+			background-repeat:no-repeat;
+		}
+		.benefit-header > * > h1, .benefit-header > * > * > h2, .benefit-item > h2, .benefit-item > h3, .three-item > h2, .three-item > h3 {
+			color:#ffffff;
+			text-shadow: 0px 0px 10px rgba(0, 51, 59, 1);
+		}
+		.benefit-box {
+			display:flex;
+			flex-direction: row;
+			width:100%;
+			justify-content: space-between;
+			align-items: stretch;
+			margin:20px 0;
+		}
+		.benefit-item {
+			display:flex;
+			flex-direction: column;
+			justify-content:flex-start;
+			align-items: center;
+			text-align: center;
+			width:calc(32% - 40px);
+			padding:20px;
+			border-radius:20px;
+			background-color: rgba(0, 60, 70, 1);
+		}
+		@media only screen and (max-width: 540px) {
+			.benefit-box {
+				flex-direction: column;
+				justify-content: center;
+			}
+			.benefit-item {
+				width:calc(100% - 40px);
+				margin-bottom:20px;
+			}
+		}
+		.benefit-item > span {
+			color:#ffffff;
+			font-size:80px;
+		}
+		.three-item {
+			display:flex;
+			flex-direction: column;
+			justify-content:flex-start;
+			align-items: center;
+			text-align: center;
+			width:calc(32% - 40px);
+			padding:60px 20px;
+			border-radius:20px;
+			background-color:#047f92;
+			background-image: url("img/tmr-header-bg.png");
+			background-size: auto 75%;
+			background-repeat: no-repeat;
+		}
+		@media only screen and (max-width: 540px) {
+			.three-item {
+				width:calc(100% - 40px);
+				margin-bottom:20px;
+			}
+		}
+		.tmh2 {
+			color:#043c45;
+			font-size:30px;
+		}
+		.tm-box {
+			display:flex;
+			flex-direction: row;
+			width:100%;
+			justify-content: space-between;
+			align-items: stretch;
+			margin:20px 0;
+		}
+		.tm-item {
+			display:flex;
+			flex-direction: column;
+			justify-content:flex-start;
+			align-items: center;
+			text-align: center;
+			width:calc(50% - 40px);
+			padding:20px;
+		}
+		.tm-text {
+			display:flex;
+			flex-direction: column;
+			justify-content:center;
+			align-items: flex-start;
+			text-align: left;
+			width:calc(50% - 40px);
+			padding:20px;
+		}
+		.tm-text > h2 {
+			margin:10px 0;
+			color:#043c45;
+		}
+		.tm-text > h2 > span {
+			font-size:200%;
+			margin-right:10px;
+			vertical-align: text-bottom;
+		}
+		@media only screen and (max-width: 920px) {
+			.tm-box {
+				flex-direction: column;
+			}
+			.tm-item {
+				width:calc(100% - 40px);
+			}
+			.tm-text {
+				width:calc(100% - 40px);
+				align-items: center;
+				text-align: center;
+			}
+		}
+		@media only screen and (max-width: 540px) {
+			.tm-text > h2 > span {
+				display:block;
+				width:100%;
+				margin-right:0;
+			}
+			.tmh2 {
+				font-size:20px;
+			}
+		}
+		.option-header-box {
+			display:flex;
+			justify-content: center;
+			width:100%;
+			align-items: stretch;
+			color:#047f92;
+			font-weight: bold;
+			margin:40px 0;
+		}
+		.option-header-word {
+			display:flex;
+			width:calc(26% - 44px);
+			justify-content: center;
+			align-items: center;
+			text-align:center;
+			padding:10px 20px;
+			border:2px solid #047f92;
+			border-radius:16px;
+		}
+		@media only screen and (max-width: 540px) {
+			.option-header-word {
+				padding:10px 10px;
+				width:calc(30% - 24px);
+			}
+		}
+		.option-header-dots {
+			display:flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			font-size:24px;
+			width:5%;
+		}
+		.option-box {
+			display:flex;
+			justify-content: space-between;
+			align-items:stretch;
+			width:100%;
+			margin:10px 0;
+		}
+		.option-box.odd {
+			flex-direction:row;
+		}
+		.option-box.even {
+			flex-direction:row-reverse;
+		}
+		.option-item-pic {
+			display:flex;
+			justify-content: center;
+			align-items:center;
+			width:30%;
+			padding:0px;
+			background-color: #ffffff;
+			min-height: 300px;
+		}
+		.option-item-text {
+			display:flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items:flex-start;
+			width:calc(70% - 80px);
+			padding:40px;
+			background-color: #ffffff;
+		}
+		@media only screen and (max-width: 920px) {
+			.option-item-pic {
+				width:40%;
+			}
+			.option-item-text {
+				width:calc(60% - 80px);
+			}
+		}
+		@media only screen and (max-width: 540px) {
+			.option-box {
+				flex-direction:column;
+				justify-content:center;
+				align-items:center;
+			}
+			.option-box.odd, .option-box.even {
+				flex-direction:column;
+			}
+			.option-item-pic {
+				width:100%;
+			}
+			.option-item-text {
+				width:calc(100% - 80px);
+				padding:40px;
+				background-color: #ffffff;
+			}
+		}
+		.option-box.odd > .option-item-pic {
+			border-radius:20px 0 0 20px;
+		}
+		.option-box.odd > .option-item-text {
+			border-radius:0 20px 20px 0;
+		}
+		.option-box.even > .option-item-text {
+			border-radius:20px 0 0 20px;
+		}
+		.option-box.even > .option-item-pic {
+			border-radius:0 20px 20px 0;
+		}
+		@media only screen and (max-width: 540px) {
+			.option-box.odd > .option-item-pic {
+				border-radius:20px 20px 0 0;
+			}
+			.option-box.odd > .option-item-text {
+				border-radius:0 0 20px 20px;
+			}
+			.option-box.even > .option-item-text {
+				border-radius:0 0 20px 20px;
+			}
+			.option-box.even > .option-item-pic {
+				border-radius:20px 20px 0 0;
+			}
+		}
+		.option-pic-1 {
+			background-image: url("img/partner-option-1.png");
+			background-position: left top;
+			background-size:cover;
+			background-repeat: no-repeat;
+		}
+		.option-pic-2 {
+			background-image: url("img/partner-option-2.png");
+			background-position: left top;
+			background-size:cover;
+			background-repeat: no-repeat;
+		}
+		.option-pic-3 {
+			background-image: url("img/partner-option-3.png");
+			background-position: left top;
+			background-size:cover;
+			background-repeat: no-repeat;
+		}
+		.custom-box {
+			display:flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			width:100%;
+			justify-content: space-between;
+			align-items: stretch;
+			margin:20px 0;
+		}
+		.custom-item {
+			display:flex;
+			flex-direction: column;
+			justify-content:flex-start;
+			align-items: center;
+			text-align: center;
+			width:calc(32% - 40px);
+			padding:20px;
+			border-radius:20px;
+			background-color:#ffffff;
+			margin-bottom:20px;
+		}
+		.custom-item > h2, .custom-item > h3 {
+			color:#043c45;
+			text-shadow: 0px 0px 10px rgba(7, 195, 224, 0.5);
+		}
+		.custom-item > img {
+			width:80%;
+			height:auto;
+		}
+		@media only screen and (max-width: 540px) {
+			.custom-box {
+				flex-direction: column;
+				justify-content: center;
+			}
+			.custom-item {
+				width:calc(100% - 40px);
+			}
+		}
+		
+		.main-container {
+			padding:120px 20px 40px 20px;
+			justify-content: center;
+		}
+		.form-container {
+			display:flex;
+			flex-direction: column;
+			justify-content: center;
+			padding:120px 20px 40px 20px;
+    		position: relative;
+   			margin: 0 auto;
+    		max-width: 1000px;
+			text-align: center;
+		}
+		.form-container > iframe {
+			width:100%;
+			padding:0;
+			margin:0;
+			border:none;
+			overflow: hidden;
+			min-height:1000px;
+		}
+		sup {
+			font-size:50%;
+		}
+	</style>
+	<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>	
+	</head>
+	<body>
+		<div class="header">
+			<div class="header-container">
+				<div class="logo"><a href="index.html"><img src="img/logo-w-text.svg" /></a></div>
+			</div>
+		</div>
+		<div class="header-bg"></div>
+		
+		<div class="container">
+			
+			<div class="main-container" style="flex-direction: column; align-items:center; margin-top:80px;">
+				<h1 style="margin-bottom:0;">TradeMedic<sup>TM</sup></h1>
+				<h2 class="tmh2">Retain your Traders through unprecedented insights</h2>
+				<div class="tm-box">
+					<div class="tm-item">
+						<img class="img-responsive" src="img/partner-tm-top4.png" />
+					</div>
+					<div class="tm-text">
+						<h2><span class="ht-search"></span>Detects loss reasons of trader</h2>
+						<div class="ht-down-arrow" style="font-size:40px; width:100%; text-align: center; color:#07DEFF;"></div>
+						<h2><span class="ht-clipboard"></span>Generates personalized report</h2>
+						<div class="ht-down-arrow" style="font-size:40px; width:100%; text-align: center; color:#07DEFF;"></div>
+						<h2><span class="ht-gear"></span>Supports during trading journey</h2>
+					</div>
+				</div>
+			</div>
+			
+			<div class="form-container" id="contactform" style="padding-top:0px;">
+				<h1>Get in touch</h1>
+				<p>Simply leave your contact details and we will reach out to you with further info about Hoc-trade and integration options.</p>
+				<iframe src="https://view.forms.app/jonasschleypen/untitled-form?draftId=fc551730"></iframe>
+			</div>
+			
+			<!-- footer -->
+			<div class="module-block bg-footer">
+				<div class="main-container" style="padding:30px 0; margin:0 auto;">
+					<div class="footer">
+						<div class="footer-copy">
+							<span class="ht-logo"></span><strong>hoc-trade</strong>&nbsp;&nbsp;&nbsp; &copy; 2023 hoc-trade limited, all rights reserved
+						</div>
+						<div class="footer-links">
+							<span class="separator"><span class="desktop">|</span></span><a href="tandc-ht.html">Terms &amp; conditions</a><span class="separator">|</span><a href="privacy-ht.html">Privacy policy</a><!--<span class="separator">|</span><a href="advertise-w-ht.html">advertise with us</a>--><span class="separator">|</span><a href="about-ht.html">About us</a><span class="separator">|</span><a href="contact-ht.html">Contact us</a>
+						</div>
+						<div class="footer-social">
+							<a class="social" href="#"><span class="ht-logo-fb"></span></a><a class="social" href="#"><span class="ht-logo-twitter"></span></a><a class="social" href="#"><span class="ht-logo-in"></span></a><a class="social" href="#"><span class="ht-logo-yt"></span></a><a class="social" href="#"><span class="ht-logo-ig"></span></a><a class="social" href="#"><span class="ht-logo-discd"></span></a>
+						</div>
+						<p class="disclaimer">HIGH RISK WARNING: Foreign exchange and other CFD trading carries a high level of risk and may not be suitable for everyone. The usage of leverage creates additional risk and loss exposure. Your investment objectives, experience level and risk tolerance have to be taken into consideration before you decide to trade foreign exchange or other CFD products. You could lose some or all of your entire investment. Do not invest money that you cannot afford to lose and always use an appropriate risk management. It’s important to educate yourself on the risks associated with foreign exchange trading, and seek professional advice from an independent financial or tax advisor in case of any questions. Any data and information is provided ‘as is’ solely for informational purposes, and is not intended for trading purposes or advice. Past performance, which are presented on this website or you find somewhere else, is not indicative of future results.</p>
+					</div>
+				</div>
+			</div>
+			
+		</div><!-- container end -->
+		
+	</body>
+</html>
