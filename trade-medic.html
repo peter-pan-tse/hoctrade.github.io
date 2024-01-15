@@ -1701,32 +1701,53 @@
 	<div id="modalInfoBox" class="modal">
 		<!-- Modal content -->
 		<!-- content 1 -->
-		<div class="modal-content">
+		<div class="modal-content" style="padding: 70px 0 20px 0;">
 			<div class="modal-header">
-				Issue: Cut profits early<span class="close"><span class="ht-cross"></span></span>
+				<span class="close"><span class="ht-cross"></span></span>
 			</div>
-			<div class="modal-body">
-				<div class="alert-details-box">
-					<div class="medic-explain">
-						<h4><strong>Explanation:</strong></h4>
-						<p>Cutting profits early describes the behavior of closing your trade in profit before it reaches your Take Profit (TP) level. Traders tend to close their winning trades early in fear of losing their unrealized gains, a human tendency closely connected to loss aversion and well described in Nobel Prize winning Prospect Theory. The performance effect is derived by simulating the profit of your manually closed profit trades in case you did nothing and let it reach your original TP or SL. The result is compared to your actual profit for those trades.</p>
-						<p>For details, please refer to your personal output chart.</p>
-						<h4><strong>Further information:</strong></h4>
-						<ul>
-							<li><a href="#" target="_blank">Prospect Theory</a></li>
-							<li><a href="#" target="_blank">Pessimism Bias</a></li>
-							<li><a href="#" target="_blank">Loss aversion</a></li>
-						</ul>
-					</div>
-					<div class="medic-chart">
-						<div class="alert-chart-container">
-							<div class="chart-header-dark">
-								<div class="tooltip">Chart 3<span class="tooltiptext">Chart 3 tooltip</span></div>
+			<div class="modal-body" style="max-height: calc(100vh - 140px);">
+				<div class="alert-details-box-tm">
+					
+					<div class="detail-info-container">
+						<div class="detail-info-box-1">
+							<h3>Issue</h3>
+							<h2>Cut profits early</h2>
+						</div>
+						<div class="detail-info-box-2">
+							<h3>Area</h3>
+							<h2 style="padding-left:40px;"><span class="ht-error-trade"></span> Trade execution</h2>
+						</div>
+						<div class="detail-info-box-3">
+							<h3>Performance effect</h3>
+							<h2 class="text-ng">-7,070 USD</h2>
+						</div>
+						<div class="detail-info-box-4">
+							<h3>Severity</h3>
+							<div class="sev-bar-top" style="width:75%; border: 4px solid #E9F3F5;">
+								<div class="sev-bar-dot-top" style="left:calc(91% - 36px);"></div>
 							</div>
-							<div class="chart-bg-dark"></div>
-						</div><!-- chart-container -->
-						<a class="btn-general" href="ta-timing.html" style="margin-top:10px;">Go to Analysis</a>
+							<div class="severity-level text-ng">91%</div>
+						</div>
+						<div class="detail-info-box-5 bg-ng">
+							<div class="alert-msg-box"><span class="ht-alert"></span> <strong>You could have made an additional profit of 7,070 USD if not manually closing your trades in profit</strong>. Those trades made you a profit of <strong>7,833 USD</strong>, however just keeping them with their existing SL &amp; TP, the profit would have been <strong>14,093 USD</strong>. Consider to let such trades develop.</div>
+						</div>
 					</div>
+					<div class="explanation-box">
+						<h2>Explanation</h2>
+						<p>Cutting profits early describes the behavior of closing your trade in profit before it reaches your Take Profit (TP) level.</p>
+						<p>Traders tend to close their winning trades early in fear of losing their unrealized gains, a <strong>human tendency closely connected to loss aversion and well described in Nobel Prize winning Prospect Theory.</strong></p>
+					</div>
+					<h2>Your trading activity: Output chart</h2>
+					<div class="report-chart-container">
+						<div class="report-chart-box">
+							<img class="img-responsive" src="img/chart-i02.png" />
+						</div>
+						<div class="report-chart-txt-box">
+							<p>The performance effect is derived by <strong>simulating the profit of your manually closed profit trades in case you did nothing</strong> and let it reach your original TP or SL. The result is compared to your actual profit for those trades.</p>
+							<p>For details, please refer to your personal output chart.</p>
+						</div>
+					</div>
+					
 				</div>
 			</div>
 		</div>

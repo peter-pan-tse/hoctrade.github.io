@@ -583,3 +583,195 @@ a.btn-top-info span {
 #issue-menu-toggle:checked + #issue-menu-dropdown {
 	max-height: 75vh;
 }
+.alert-details-box-tm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* pop up details */
+/* detailed report */
+.detail-info-container {
+	display:flex;
+	position:relative;
+	flex-direction:row;
+	flex-wrap: wrap;
+	justify-content:center;
+	align-items:stretch;
+	padding:0 0 20px 0;
+}
+
+.detail-info-box-1, .detail-info-box-2, .detail-info-box-3, .detail-info-box-4 {
+	display:flex;
+	position:relative;
+	flex-direction: column;
+	align-items: stretch;
+	width:calc(50% - 35px);
+	margin:0;
+	padding:15px;
+	border-style:solid;
+	border-color:#cccccc;
+	transition: all ease 0.5s;
+}
+.detail-info-box-5 {
+	display:flex;
+	position:relative;
+	flex-direction: column;
+	align-items: stretch;
+	width:calc(100% - 48px);
+	min-height: 40px;
+	margin:0;
+	padding:20px;
+	border-style:solid;
+	border-color:#cccccc;
+	transition: all ease 0.5s;
+}
+.detail-info-box-1 {
+	border-width:2px 2px 2px 2px;
+	border-radius:20px 0 0 0;
+}
+.detail-info-box-2 {
+	border-width:2px 2px 2px 0px;
+	border-radius:0 20px 0 0;
+}
+.detail-info-box-3 {
+	border-width:0px 2px 2px 2px;
+	border-radius:0 0 0 0;
+}
+.detail-info-box-4 {
+	border-width:0px 2px 2px 0px;
+	border-radius:0 0 0 0;
+}
+.detail-info-box-5 {
+	border-width:0px 2px 2px 2px;
+	border-radius:0 0 20px 20px;
+	color:#ffffff;
+}
+@media only screen and (max-width: 540px) {
+	.detail-info-container {
+		flex-direction:column;
+	}
+	.detail-info-box-1, .detail-info-box-2, .detail-info-box-3, .detail-info-box-4 {
+		flex-direction: column;
+		align-items: stretch;
+		width:calc(100% - 35px);
+	}
+	.detail-info-box-5 {
+		width:calc(100% - 35px);
+		padding:15px;
+	}
+	.detail-info-box-1 {
+		border-width:2px 2px 2px 2px;
+		border-radius:10px 10px 0 0;
+	}
+	.detail-info-box-2 {
+		border-width:0 2px 2px 2px;
+		border-radius:0 0 0 0;
+	}
+	.detail-info-box-3 {
+		border-width:0px 2px 2px 2px;
+		border-radius:0 0 0 0;
+	}
+	.detail-info-box-4 {
+		border-width:0px 2px 2px 2px;
+		border-radius:0 0 0 0;
+	}
+	.detail-info-box-5 {
+		border-width:0px 2px 2px 2px;
+		border-radius:0 0 10px 10px;
+		color:#ffffff;
+	}
+}
+.bg-ng {
+	background-color:#C1272D;
+}
+.bg-po {
+	background-color:#009245;
+}
+.detail-info-box-1 h3, .detail-info-box-2 h3, .detail-info-box-3 h3, .detail-info-box-4 h3, .detail-info-box-5 h3 {
+	font-size:14px;
+	font-weight: normal;
+	margin:0 0 10px 0;
+}
+.detail-info-box-1 h2, .detail-info-box-2 h2, .detail-info-box-3 h2, .detail-info-box-4 h2, .detail-info-box-5 h2 {
+	position:relative;
+	font-size:24px;
+	margin: 0;
+}
+.detail-info-box-5 h3, .detail-info-box-5 h2 {
+	color:#ffffff;
+}
+.detail-info-box-2 > h2 > span {
+	position:absolute;
+	left:-20px;
+	top:-15px;
+	font-size:60px;
+	/*color:#047F92;*/
+}
+.detail-info-box-5 > div > span {
+	position:absolute;
+	left:20px;
+	font-size:72px;
+	top:10px;
+}
+.alert-msg-box {
+	padding-left:90px;
+}
+@media only screen and (max-width: 540px) {
+	.detail-info-box-5 > div > span {
+		left:10px;
+		font-size:48px;
+		top:10px;
+	}
+	.alert-msg-box {
+		padding-left:50px;
+	}
+}
+.severity-level {
+	position:absolute;
+	right:20px;
+	bottom:20px;
+	font-size:24px;
+	font-weight: bold;
+}
+.explanation-box {
+	border-top:2px dotted #cccccc;
+	border-bottom:2px dotted #cccccc;
+	margin-top:0px;
+}
+@media only screen and (max-width: 540px) {
+	.explanation-box h2, .alert-details-box-tm h2 {
+		font-size:18px;
+	}
+}
+.report-chart-container {
+	display:flex;
+	justify-content: space-between;
+}
+.report-chart-box {
+	display:flex;
+	padding:10px 0 0 0;
+	flex-direction:column;
+	width:calc(40% - 15px);
+	position:relative;
+}
+.report-chart-txt-box {
+	display:flex;
+	padding:0px 0 0 0;
+	flex-direction:column;
+	width:calc(60% - 15px);
+	position:relative;
+}
+@media only screen and (max-width: 540px) {
+	.report-chart-container {
+		flex-direction:column;
+		justify-content:center;
+	}
+	.report-chart-box {
+		padding:0px 5px;
+		width:calc(100% - 10px);
+	}
+	.report-chart-txt-box {
+		padding:0px 5px;
+		width:calc(100% - 10px);
+	}
+}
