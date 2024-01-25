@@ -1,0 +1,216 @@
+﻿@charset "UTF-8";
+/* CSS Document */
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 10005; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: hidden; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.75); /* Black w/ opacity */
+	-webkit-animation-name: fadeIn; /* Fade in the background */
+	-webkit-animation-duration: 0.5s;
+	animation-name: fadeIn;
+	animation-duration: 0.5s
+}
+/* Modal Content */
+.modal-content {
+	position: fixed;
+	background-color: #efefef;
+	width: calc(80%);
+	/*max-width:1000px;*/
+	max-height:calc(100vh - 60px);
+	margin:20px 10%;
+	top:0px;
+	padding:100px 0 20px 0;
+	color:#333333;
+	border-radius:20px 20px 20px 20px;
+	-webkit-animation-name: slideIn;
+	-webkit-animation-duration: 0.5s;
+	animation-name: slideIn;
+	animation-duration: 0.5s
+}
+@media only screen and (max-width: 920px) {
+	.modal-content {
+		width:100%;
+		margin:20px 0 0 0;
+		top:auto;
+		bottom:0px;
+		padding:100px 0 0 0;
+		border-radius:20px 20px 0 0;
+	}
+}
+.modal-header {
+	display: block;
+	position:absolute;
+	width: calc(100% - 40px);
+	top:0;
+	padding: 20px 20px 0;
+	font-size:14px;
+	line-height:30px;
+	font-weight:bold;
+	color:#033C45;
+}
+
+.modal-body {
+	display:block;
+	/*position: absolute;
+	top:100px;*/
+	max-height: calc(100vh - 140px);
+    overflow-y: auto;
+	padding: 0 20px;
+}
+@media only screen and (max-width: 920px) {
+	.modal-header {
+		width: calc(100% - 20px);
+		padding: 10px 10px 0;
+		text-align: center;
+	}
+
+	.modal-body {
+		max-height: calc(100vh - 200px);
+		padding: 0 10px 20px;
+	}
+}
+/* Add Animation */
+@-webkit-keyframes slideIn {
+	from {top: 0px; opacity: 0} 
+	to {top: 0px; opacity: 1}
+}
+
+@keyframes slideIn {
+	from {top: 0px; opacity: 0} 
+	to {top: 0px; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+	from {opacity: 0} 
+	to {opacity: 1}
+}
+
+@keyframes fadeIn {
+	from {opacity: 0} 
+	to {opacity: 1}
+}
+@media only screen and (max-width: 768px) {
+	@-webkit-keyframes slideIn {
+		from {bottom: -100vh; opacity: 0} 
+		to {bottom: 0px; opacity: 1}
+	}
+
+	@keyframes slideIn {
+		from {bottom: -100vh; opacity: 0} 
+		to {bottom: 0px; opacity: 1}
+	}
+}
+/* The Close Button */
+.back {
+	display:inline-block;
+	width:32px;
+	height:32px;
+	text-align:center;
+	background-color:#FFFFFF;
+	border-radius:6px;
+	margin:0 10px 0 0;
+	color: #047F92;
+	float: left;
+	font-size: 28px;
+	line-height:34px;
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+.close {
+	display:inline-block;
+	width:32px;
+	height:32px;
+	text-align:center;
+	background-color:#FFFFFF;
+	border-radius:6px;
+	margin:0;
+	color: #000000;
+	float: right;
+	font-size: 28px;
+	line-height:34px;
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+@media only screen and (max-width: 920px) {
+	.close {
+		display:block;
+		width:100px;
+		height:6px;
+		background-color:#000000;
+		border-radius:3px;
+		margin:10px auto 20px;
+		color: #047F92;
+		float: none;
+		font-size: 0px;
+		line-height:0px;
+		text-decoration: none;
+		transition: none;
+	}
+}
+.close:hover, .close:focus, .back:hover, .back:focus {
+	color: #FFFFFF;
+	background-color:#000000;
+	cursor: pointer;
+}
+.alert-details-box {
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+}
+.alert-chart {
+	width:40%;
+	margin-right:20px;
+	margin-bottom:0px;
+	text-align: right;
+}
+.alert-chart-container {
+    display: flex;
+    flex-direction: column;
+    width: 99.99%;
+    margin: 0 0 0 0;
+}
+.chart-bg-dark, .chart-bg-light {
+    min-height: 30vw;
+}
+.alert-video {
+	width:calc(60% - 20px);
+	text-align: right;
+}
+.modal-video-box {
+	position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+.modal-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+@media only screen and (max-width: 540px) {
+	.alert-details-box {
+		display:flex;
+		flex-direction:column;
+		justify-content:space-between;
+	}
+	.alert-chart {
+		width:100%;
+		margin-right:0px;
+		margin-bottom:20px;
+	}
+	.alert-video {
+		width:100%;
+	}
+	.chart-bg-dark, .chart-bg-light {
+		min-height:calc(100vw - 120px);
+	}
+}
