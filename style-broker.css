@@ -53,6 +53,7 @@ a:hover, a:focus {
 }
 @media only screen and (max-width: 540px) {
 	.header {
+		flex-direction: column;
 		height:50vh;
 	}
 }
@@ -61,7 +62,7 @@ a:hover, a:focus {
 	flex-direction: column;
 	align-items:center;
 	padding:0 15px 10px 15px;
-	margin:0 0 10px 15px;
+	margin:0 15px 10px 15px;
 	background-color: #ffffff;
 	border-radius:0 0 20px 20px;
 	height:200px;
@@ -1947,7 +1948,7 @@ ul.medic-report li:nth-child(odd) p.center-score-s:hover, ul.medic-report li:nth
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-
+  font-size:22px;
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
