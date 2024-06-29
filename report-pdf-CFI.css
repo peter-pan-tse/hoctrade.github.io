@@ -44,15 +44,16 @@
 	line-height: 1.15em;
 }
 .page-patch, .num-patch {
-	display:flex;
-	width:100px;
-	height:100px;
-	text-align:center;
-	justify-content: center;
-	align-items: center;
-	color:#ffffff; /* black or white depends on the background color */
-	font-size:24px;
-	font-weight: bold;
+	display: flex;
+    width: 250px;
+    height: 100px;
+    text-align: center;
+    justify-content: flex-end;
+    align-items: center;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    padding-right: 40px;
 }
 .page-patch {
 	background-color:#06243D; /* color match to the corporate color of the logo */
@@ -63,6 +64,17 @@
 	position:absolute;
 	top:0;
 	right:100px;
+}
+.num-patch-logo {
+	background:#06243D;
+	position:absolute;
+	height:100px;
+	width:auto;
+	padding-left:30px;
+	left:0px;
+}
+.num-patch-logo img {
+	height:100px;
 }
 .page-logo {
 	position:absolute;
