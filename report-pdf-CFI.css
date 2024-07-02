@@ -162,31 +162,31 @@ ul.cover-toc li {
 	left:calc(50% - 15px);
 }
 .gear-1 {
-	background-color:#091728;
+	background-color:#cacaca;
 }
 .gear-2 {
-	background-color:#113548;
+	background-color:#999fa4;
 }
 .gear-3 {
-	background-color:#16495f;
+	background-color:#6b7680;
 }
 .gear-4 {
-	background-color:#24809c;
+	background-color:#4c5b68;
 }
 .gear-5 {
-	background-color:#2da3c2;
+	background-color:#081f33;
 }
 .gear-6 {
-	background-color:#3a6e94;
+	background-color:#125970;
 }
 .gear-7 {
-	background-color:#573964;
+	background-color:#1b8099;
 }
 .gear-8 {
-	background-color:#642451;
+	background-color:#22a0bb;
 }
 .gear-9 {
-	background-color:#970522;
+	background-color:#26b3ce;
 }
 
 /* top 4 */
@@ -343,7 +343,7 @@ ul.medic-report li {
 	border:2px solid #ffffff;
 	border-radius:6px;
 	background: rgb(38,255,0);
-    background: linear-gradient(90deg, rgba(0,38,63,1) 4%, rgba(0,190,214,1) 50%, rgba(193,2,48,1) 96%);
+    background: linear-gradient(90deg, rgba(212,212,212,1) 4%, rgba(0,38,63,1) 50%, rgba(0,190,214,1) 96%);
 }
 div.sev-bar-dot {
 	position:absolute;
@@ -382,7 +382,7 @@ div.sev-bar-dot {
 	height:40px;
 	border-radius:20px;
 	background: rgb(38,255,0);
-    background: linear-gradient(90deg, rgba(0,38,63,1) 4%, rgba(0,190,214,1) 50%, rgba(193,2,48,1) 96%);
+    background: linear-gradient(90deg, rgba(212,212,212,1) 4%, rgba(0,38,63,1) 50%, rgba(0,190,214,1) 96%);
 }
 div.sev-bar-dot-top {
 	position:absolute;
