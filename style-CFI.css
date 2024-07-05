@@ -1,22 +1,12 @@
 ﻿@charset "UTF-8";
 /* CSS Document */
 @font-face {
-   font-family: Roboto;
-   src: url("fonts/Roboto-Regular.ttf");
-}
-@font-face {
-   font-family: Roboto;
-   src: url("fonts/Roboto-Light.ttf");
-   font-weight: lighter;
-}
-@font-face {
-   font-family: Roboto;
-   src: url("fonts/Roboto-Bold.ttf");
-   font-weight: bold;
+   font-family: Jakata;
+   src: url("fonts/PlusJakartaSans-VariableFont_wght.ttf");
 }
 body {
-	font-family: Roboto;
-	line-height:1.25em;
+	font-family: Jakata;
+	line-height:1.5em;
 	margin:0;
 	padding:60px 0 0 60px;
 	background-color:#ABBEC2;
