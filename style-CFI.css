@@ -10,6 +10,7 @@ body {
 	margin:0;
 	padding:60px 0 0 60px;
 	background-color:#ABBEC2;
+	color:#101921;
 }
 @media only screen and (max-width: 480px) {
 	body {
@@ -249,7 +250,7 @@ table.general-info-table td {
 	justify-content: space-between;
 	height:50px;
 	padding:0 10px;
-	background-color: #333333;
+	background-color: #101921;
 	color: #06AFC9;
 	font-size:14px;
 	font-weight:bold;
@@ -630,7 +631,7 @@ input.search-box {
 	border:none;
 	border-radius:6px;
 	font-size:14px;
-	color:#333333;
+	color:#101921;
 	background-image: url("search.svg");
 	background-repeat: no-repeat;
 	background-position:left center;
@@ -646,7 +647,7 @@ input.general {
 	background-color:#F2F2F2;
 	border-radius:6px;
 	font-size:14px;
-	color:#333333;
+	color:#101921;
 	margin-bottom:10px;
 	border:1px solid #F2F2F2;
 }
@@ -659,7 +660,7 @@ input.social {
 	background-color:#FFFFFF;
 	border-radius:6px;
 	font-size:14px;
-	color:#333333;
+	color:#101921;
 	background-repeat: no-repeat;
 	background-position:right center;
 	background-size:24px 24px;
@@ -690,7 +691,7 @@ textarea.general {
 	border-radius:6px;
 	font-family: "Noto Sans";
 	font-size:14px;
-	color:#333333;
+	color:#101921;
 	margin-bottom:10px;
 	border:1px solid #F2F2F2;
 	resize: none;
@@ -704,7 +705,7 @@ input.password, input.date {
 	background-color:#F2F2F2;
 	border-radius:6px;
 	font-size:14px;
-	color:#333333;
+	color:#101921;
 	margin-bottom:10px;
 	border:1px solid #F2F2F2;
 }
@@ -774,7 +775,7 @@ a.clear-content-btn {
 	border:none;
 	border-radius:6px;
 	font-size:14px;
-	color:#333333;
+	color:#101921;
 	margin:0 0 5px 5px;
 }
 .custom-select select {
@@ -798,7 +799,7 @@ a.clear-content-btn {
 }
 /*style the items (options), including the selected item:*/
 .select-items div,.select-selected {
-	color: #333333;
+	color: #101921;
 	padding: 4px 10px;
 	border: none;
 	cursor: pointer;

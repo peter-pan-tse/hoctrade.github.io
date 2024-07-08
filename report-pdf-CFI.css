@@ -13,7 +13,7 @@
 	background-image:url("img/trade-medic-report-cover-bg-CFI.png");
 	background-position: top center;
 	background-repeat: no-repeat;
-	background-size:cover;
+	background-size:contain;
 }
 .a4-page {
 	display:block;
@@ -41,7 +41,7 @@
 	line-height: 1.15em;
 	margin-top:60px;
 	margin-bottom:10px;
-	color:#00263F; /* color match to the corporate color of the logo */
+	color:#101921; /* color match to the corporate color of the logo */
 }
 .a4-page h2 {
 	font-size:36px;
@@ -142,7 +142,7 @@ ul.cover-toc li {
     text-align: center;
     font-size: 18px;
     font-weight: bold;
-    color: #00263F;
+    color: #101921;
 	box-shadow: 3px 3px 10px rgba(0,0,0,0.25);
 	background-color:#F3F7FE;
 }
@@ -376,7 +376,7 @@ div.sev-bar-dot {
 }
 .perf-effect-text span {
 	font-size:24px;
-	color:#333333;
+	color:#101921;
 }
 .sev-bar-top {
 	display:inline-block;
