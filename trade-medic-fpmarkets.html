@@ -3,8 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css?family=Noto Sans:400,700,900" rel="stylesheet">
-<link href="style-broker.css" rel="stylesheet">
+<link href="style-FP-Markets.css" rel="stylesheet">
 <!-- Editable favicon -->
 <link rel="icon" href="https://www.fpmarkets.com/favicon-32x32.png">
 <!-- Editable page title -->
@@ -19,22 +18,12 @@
 </script>
 <!-- Customizable styles -->
 <style>
-	body {
-		background-color:#000000;
-		font-family: "Helvetica Neue", Helvetica, Arial, "sans-serif";
-	}
-	.header {
-		background-color: #00BDFD;
-		background-image: url(img/trade-medic-report-cover-bg-fpmarkets.png);
-	}
 	.header h1 {
-		display:flex;
-		align-items: center;
-		padding:40px;
-		font-weight: 300;
-		font-size:3em;
+		font-weight: bold;
+		font-size:5em;
 		line-height: 1.25em;
-		color:#00BDFD;
+		color:#F5F7F4;
+		margin:0 10%;
 	}
 	@media only screen and (max-width: 1024px) {
 		.header h1 {
@@ -59,51 +48,28 @@
 			font-size:2em;
 		}
 	}
-	.header h1 strong {
-		color:#FFFFFF;
-	}
 	a.btn-info {
 		color:#046C96;
 	}
 	a.btn-info:hover {
 		color:#000000;
 	}
-	.session-box {
-		background-color: #000000;
-		color:#00BDFD;
-	}
-	a.btn-top-info {
-		background-color:#000000;
-		color:#FFFFFF;
-	}
-	a.btn-top-info:hover {
-		background-color:#00A2DB;
-	}
 	.general-info-header {
 		background-color: #00BDFD;
-		color: #FFFFFF;
+		color: #F5F7F4;
 	}
 	.accordion {
 		background-color: #00BDFD;
-		color: #FFFFFF;
+		color: #F5F7F4;
 	}
 	.accordion:hover {
 		background-color:#00A2DB;
 	}
 	a.btn-open {
-		color:#FFFFFF;
+		color:#F5F7F4;
 	}	
 	a.btn-open:hover {
 		color:#000000;
-	}
-	.session-box {
-		border-radius: 0 20px 0 0;
-	}
-	.general-info-header {
-		border-radius: 0 20px 0 0;
-	}
-	.top-report-box {
-		border-radius: 0 20px 20px 20px;
 	}
 	.speedometer-item {
 		border-radius: 0 20px 20px 20px;
@@ -115,41 +81,29 @@
 	<div class="header">
 		<div class="logo">
 			<img src="img/logo-fpmarkets.png" />
-			<div class="powered-by">
-				Powered by &nbsp;&nbsp;
-				<img src="img/hoc-trade-logo-green.png" width="80" />
-			</div>
 		</div>
-		<h1><div><strong>Monitor</strong>, <strong>Review</strong> and <strong>Strengthen</strong> your <strong>Trading Performance</strong> with <strong>FP Markets TradeMedic</strong></div></h1>
+		<h1>Monitor, Review and Strengthen your Trading Performance</h1>
 		<div class="session-box">
+			<div>
+				<div class="session-text" style="font-size:20px; font-weight:medium;">Account ID 583957294</div>
+				<div class="session-text">Last updated Apr-24-2024</div>
+			</div>
 			<div class="refreah-counter">LIVE <span class="pulsating-circle"></span>&nbsp;</div>
-			<div class="session-text"><strong>Account ID</strong></div>
-			<div class="session-text">583957294</div>
-			<div class="session-text"><strong>Last updated</strong></div>
-			<div class="session-text">Apr-24-2024</div>
+		</div>
+		<div class="disclaimer">
+			DISCLAIMER: Please be cautious interpreting the presented information and always do your own research. None of the information provided should be considered financial advice, it may have errors, it is not mutually exclusive nor collectively exhaustive, and we cannot in any way be held liable for any losses or influences of those information on your trading.
 		</div>
 	</div>
 	<!-- main content area -->
 	<!--<div style="height:20px;"></div> -->
 	<div class="main-content-container">
-		<div class="disclaimer">
-			<strong>DISCLAIMER:</strong> Please be cautious interpreting the presented information and always do your own research. None of the information provided should be considered financial advice, it may have errors, it is not mutually exclusive nor collectively exhaustive, and we cannot in any way be held liable for any losses or influences of those information on your trading.
-		</div>
-		<div style="height:20px;"></div>
-		<div class="general-info-header">
-			<div style="font-size:larger;"><span class="ht-medbox"></span> Your TradeMedic report</div>
-			<a class="btn-info" id="modalinfo" style="position:absolute; top:5px; right:15px;"><span class="ht-info"></span></a>
-		</div>
-		<!-- top 3 -->
-		<div class="medic-report-section" style="height:50px;">
-			<div><span class="ht-star"></span> TOP 4 critical issues</div>
-		</div>
+		<h1>Your TradeMedic report</h1>
+		<div style="display:flex; align-items: center;"><span class="ht-star"></span> TOP 4 critical issues</div>
+		<!-- top 4 -->
 		<div class="medic-report-top">
 			<!-- -->
 			<div class="top-report-box">
-				<div class="top-report-box-header">
-					1. Cut profits early 
-				</div>
+				<div class="top-report-box-header">Cut profits early</div>
 				<div class="top-report-box-body">
 					<div class="severity-text">Severity: 100%</div>
 					<div class="sev-bar-top">
@@ -165,9 +119,7 @@
 			</div>
 			<!-- -->
 			<div class="top-report-box">
-				<div class="top-report-box-header">
-					2. Revenge Trading 
-				</div>
+				<div class="top-report-box-header">Revenge Trading</div>
 				<div class="top-report-box-body">
 					<div class="severity-text">Severity: 80%</div>
 					<div class="sev-bar-top">
@@ -183,9 +135,7 @@
 			</div>
 			<!-- -->
 			<div class="top-report-box">
-				<div class="top-report-box-header">
-					3. Late trade entry 
-				</div>
+				<div class="top-report-box-header">Late trade entry</div>
 				<div class="top-report-box-body">
 					<div class="severity-text">Severity: 75%</div>
 					<div class="sev-bar-top">
@@ -201,9 +151,7 @@
 			</div>
 			<!-- -->
 			<div class="top-report-box">
-				<div class="top-report-box-header">
-					4. Overtrading 
-				</div>
+				<div class="top-report-box-header">Overtrading</div>
 				<div class="top-report-box-body">
 					<div class="severity-text">Severity: 65%</div>
 					<div class="sev-bar-top">
@@ -276,7 +224,7 @@
 					</div>
 				</div>
 				<div class="speedometer-footer">
-					<div style="font-size:12px; color:#ffffff;">
+					<div style="font-size:12px; color:#F5F7F4;">
 						<strong>Severity:</strong> <span style="display:inline-block; width:12px; height:12px; border-radius:6px; margin:0 5px 0 10px; background-color:#8DC63F; vertical-align: middle;"></span>Low <span style="display:inline-block; width:12px; height:12px; border-radius:6px; margin:0 5px 0 10px; background-color:#BE1E2D; vertical-align: middle;"></span>High
 					</div>
 				</div>
@@ -290,7 +238,7 @@
 			</button>
 			<div class="panel">
 				<ul class="medic-report">
-					<li style="font-size:12px; background-color:#666666; color:#ffffff;">
+					<li style="font-size:12px; background-color:#666666; color:#F5F7F4;">
 						<div class="column-issue"><strong>Issue</strong></div>
 						<div class="column-severity"><strong>Severity</strong></div>
 						<div class="column-effect"><strong>Performance effect</strong></div>
@@ -605,7 +553,7 @@
 			</button>
 			<div class="panel">
 				<ul class="medic-report">
-					<li style="font-size:12px;  background-color:#666666; color:#ffffff;">
+					<li style="font-size:12px;  background-color:#666666; color:#F5F7F4;">
 						<div class="column-issue"><strong>Risk area</strong></div>
 						<div class="column-risk-ico"></div>
 						<div class="column-risk"></div>
@@ -741,7 +689,7 @@
 				</div>
 				<ul class="medic-report">
 					<div class="desktop">
-						<li style="font-size:12px;  background-color:#666666; color:#ffffff;">
+						<li style="font-size:12px;  background-color:#666666; color:#F5F7F4;">
 							<div class="column-issue-area"><strong>Issue area</strong></div>
 							<div class="column-improvement"><strong>Improvement</strong></div>
 							<div class="column-donut"><strong>Return/trade</strong></div>
