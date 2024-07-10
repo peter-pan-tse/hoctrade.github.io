@@ -20,7 +20,7 @@
 <style>
 	.header h1 {
 		font-weight: bold;
-		font-size:5em;
+		font-size:4.5em;
 		line-height: 1.25em;
 		color:#F5F7F4;
 		margin:0 10%;
@@ -49,30 +49,10 @@
 		}
 	}
 	a.btn-info {
-		color:#046C96;
+		color:#CDD5E3;
 	}
 	a.btn-info:hover {
-		color:#000000;
-	}
-	.general-info-header {
-		background-color: #00BDFD;
-		color: #F5F7F4;
-	}
-	.accordion {
-		background-color: #00BDFD;
-		color: #F5F7F4;
-	}
-	.accordion:hover {
-		background-color:#00A2DB;
-	}
-	a.btn-open {
-		color:#F5F7F4;
-	}	
-	a.btn-open:hover {
-		color:#000000;
-	}
-	.speedometer-item {
-		border-radius: 0 20px 20px 20px;
+		
 	}
 </style>
 </head>
@@ -86,7 +66,7 @@
 		<div class="session-box">
 			<div>
 				<div class="session-text" style="font-size:20px; font-weight:medium;">Account ID 583957294</div>
-				<div class="session-text">Last updated Apr-24-2024</div>
+				<div class="session-text" style="font-size:14px; margin-bottom: 0;">Last updated Apr-24-2024</div>
 			</div>
 			<div class="refreah-counter">LIVE <span class="pulsating-circle"></span>&nbsp;</div>
 		</div>
@@ -97,7 +77,7 @@
 	<!-- main content area -->
 	<!--<div style="height:20px;"></div> -->
 	<div class="main-content-container">
-		<h1>Your TradeMedic report</h1>
+		<h1 style="margin-bottom:20px;">Your TradeMedic report</h1>
 		<div style="display:flex; align-items: center;"><span class="ht-star"></span> TOP 4 critical issues</div>
 		<!-- top 4 -->
 		<div class="medic-report-top">
@@ -107,10 +87,11 @@
 				<div class="top-report-box-body">
 					<div class="severity-text">Severity: 100%</div>
 					<div class="sev-bar-top">
-						<div class="sev-bar-dot-top" style="left:calc(100% - 20px);"></div>
+						<div class="sev-bar-top-grey" style="width:0%;"></div>
+						<div class="sev-bar-dot-top severity-level-7" style="left:calc(100% - 30px);"></div>
 					</div>
 					<div class="perf-effect-text">
-						<span>Performance effect</span><div class="text-ng">-7,070 USD</div>
+						<span>Performance effect</span><div class="text-nu">-7,070 USD</div>
 					</div>
 					<div>
 						<a class="btn-top-info" id="modalinfo1"><span class="ht-info"></span> Further details</a>
@@ -123,10 +104,11 @@
 				<div class="top-report-box-body">
 					<div class="severity-text">Severity: 80%</div>
 					<div class="sev-bar-top">
-						<div class="sev-bar-dot-top" style="left:calc(80% - 16px);"></div>
+						<div class="sev-bar-top-grey" style="width:calc(20% + 24px);"></div>
+						<div class="sev-bar-dot-top severity-level-5" style="left:calc(80% - 24px);"></div>
 					</div>
 					<div class="perf-effect-text">
-						<span>Performance effect</span><div class="text-ng">-5,281 USD</div>
+						<span>Performance effect</span><div class="text-nu">-5,281 USD</div>
 					</div>
 					<div>
 						<a class="btn-top-info" id=""><span class="ht-info"></span> Further details</a>
@@ -139,10 +121,11 @@
 				<div class="top-report-box-body">
 					<div class="severity-text">Severity: 75%</div>
 					<div class="sev-bar-top">
-						<div class="sev-bar-dot-top" style="left:calc(75% - 15px);"></div>
+						<div class="sev-bar-top-grey" style="width:calc(25% + 22.5px);"></div>
+						<div class="sev-bar-dot-top severity-level-5" style="left:calc(75% - 22.5px);"></div>
 					</div>
 					<div class="perf-effect-text">
-						<span>Performance effect</span><div class="text-ng">-4,992 USD</div>
+						<span>Performance effect</span><div class="text-nu">-4,992 USD</div>
 					</div>
 					<div>
 						<a class="btn-top-info" id=""><span class="ht-info"></span> Further details</a>
@@ -155,10 +138,11 @@
 				<div class="top-report-box-body">
 					<div class="severity-text">Severity: 65%</div>
 					<div class="sev-bar-top">
-						<div class="sev-bar-dot-top" style="left:calc(65% - 13px);"></div>
+						<div class="sev-bar-top-grey" style="width:calc(35% + 19.5px);"></div>
+						<div class="sev-bar-dot-top severity-level-5" style="left:calc(65% - 19.5px);"></div>
 					</div>
 					<div class="perf-effect-text">
-						<span>Performance effect</span><div class="text-ng">-4,225 USD</div>
+						<span>Performance effect</span><div class="text-nu">-4,225 USD</div>
 					</div>
 					<div>
 						<a class="btn-top-info" id=""><span class="ht-info"></span> Further details</a>
@@ -166,95 +150,89 @@
 				</div>
 			</div>
 		</div>
+	</div>
 
-		
 		<!-- 8-point assessment -->
-			<div class="general-info-box">	
-				<div class="general-info-header" style="border-radius:0;">
-					Discover your trading issues <a class="btn-info" id="" style="position:absolute; top:5px; right:15px;"><span class="ht-info"></span></a>
-				</div>
-				<div class="speedometer-body">
-					<div class="speedometer-item">
-						<img class="speedometer-dial" src="img/speedometer-dial-2.png" />
-						<div class="speedometer-hand gear-2 hand-behavioral"></div>
-						<div class="gear-dot gear-dot-2"></div>
-						Behavioral<br>errors
-					</div>
-					<div class="speedometer-item">
-						<img class="speedometer-dial" src="img/speedometer-dial-2.png" />
-						<div class="speedometer-hand gear-7 hand-emotion"></div>
-						<div class="gear-dot gear-dot-7"></div>
-						Emotional<br>errors
-					</div>
-					<div class="speedometer-item">
-						<img class="speedometer-dial" src="img/speedometer-dial-2.png" />
-						<div class="speedometer-hand gear-5 hand-strategic"></div>
-						<div class="gear-dot gear-dot-5"></div>
-						Strategic<br>errors
-					</div>
-					<div class="speedometer-item">
-						<img class="speedometer-dial" src="img/speedometer-dial-2.png" />
-						<div class="speedometer-hand gear-4 hand-trade"></div>
-						<div class="gear-dot gear-dot-4"></div>
-						Trade<br>execution
-					</div>
-					<div class="speedometer-item">
-						<img class="speedometer-dial" src="img/speedometer-dial-2.png" />
-						<div class="speedometer-hand gear-1 hand-accuracy"></div>
-						<div class="gear-dot gear-dot-1"></div>
-						Stop<br>accuracy
-					</div>
-					<div class="speedometer-item">
-						<img class="speedometer-dial" src="img/speedometer-dial-2.png" />
-						<div class="speedometer-hand gear-6 hand-timing"></div>
-						<div class="gear-dot gear-dot-6"></div>
-						Trade<br>timing
-					</div>
-					<div class="speedometer-item">
-						<img class="speedometer-dial" src="img/speedometer-dial-2.png" />
-						<div class="speedometer-hand gear-9 hand-risk"></div>
-						<div class="gear-dot gear-dot-9"></div>
-						Risk<br>management
-					</div>
-					<div class="speedometer-item">
-						<img class="speedometer-dial" src="img/speedometer-dial-2.png" />
-						<div class="speedometer-hand gear-7 hand-stimulation"></div>
-						<div class="gear-dot gear-dot-7"></div>
-						Over-<br>stimulation
-					</div>
-				</div>
-				<div class="speedometer-footer">
-					<div style="font-size:12px; color:#F5F7F4;">
-						<strong>Severity:</strong> <span style="display:inline-block; width:12px; height:12px; border-radius:6px; margin:0 5px 0 10px; background-color:#8DC63F; vertical-align: middle;"></span>Low <span style="display:inline-block; width:12px; height:12px; border-radius:6px; margin:0 5px 0 10px; background-color:#BE1E2D; vertical-align: middle;"></span>High
-					</div>
+		<div class="main-content-container" style="background-color:#F7F8FB;">
+			<h1>Discover your trading issues</h1>
+			<div class="speedometer-footer">
+				<div>
+					Severity: <span style="display:inline-block; width:16px; height:16px; border-radius:8px; margin:-3px 5px 0 10px; background-color:#62c973; vertical-align: middle;"></span><span style="color:#62c973;">LOW</span> <span style="display:inline-block; width:16px; height:16px; border-radius:8px; margin:-3px 5px 0 10px; background-color:#e44450; vertical-align: middle;"></span><span style="color:#e44450;">HIGH</span>
 				</div>
 			</div>
-		
-		<!-- other issues -->
-		<!-- accordion -->
-			<button class="accordion">
-				<div><span class="ht-clipboard"></span> Full report</div>
-				<a class="btn-open"><span class="ht-add"></span></a>
-			</button>
-			<div class="panel">
-				<ul class="medic-report">
-					<li style="font-size:12px; background-color:#666666; color:#F5F7F4;">
-						<div class="column-issue"><strong>Issue</strong></div>
-						<div class="column-severity"><strong>Severity</strong></div>
-						<div class="column-effect"><strong>Performance effect</strong></div>
-						<div class="column-info"><strong>Further details</strong></div>
+			<div class="speedometer-body">
+					<div class="speedometer-item">
+						<img class="speedometer-dial" src="img/speedometer-dial-fpmarkets.png" />
+						<div class="speedometer-hand gear-2 hand-behavioral"></div>
+						<div class="gear-dot"></div>
+						Behavioral errors
+					</div>
+					<div class="speedometer-item">
+						<img class="speedometer-dial" src="img/speedometer-dial-fpmarkets.png" />
+						<div class="speedometer-hand gear-7 hand-emotion"></div>
+						<div class="gear-dot"></div>
+						Emotional errors
+					</div>
+					<div class="speedometer-item">
+						<img class="speedometer-dial" src="img/speedometer-dial-fpmarkets.png" />
+						<div class="speedometer-hand gear-5 hand-strategic"></div>
+						<div class="gear-dot"></div>
+						Strategic errors
+					</div>
+					<div class="speedometer-item">
+						<img class="speedometer-dial" src="img/speedometer-dial-fpmarkets.png" />
+						<div class="speedometer-hand gear-4 hand-trade"></div>
+						<div class="gear-dot"></div>
+						Trade execution
+					</div>
+					<div class="speedometer-item">
+						<img class="speedometer-dial" src="img/speedometer-dial-fpmarkets.png" />
+						<div class="speedometer-hand gear-1 hand-accuracy"></div>
+						<div class="gear-dot"></div>
+						Stop accuracy
+					</div>
+					<div class="speedometer-item">
+						<img class="speedometer-dial" src="img/speedometer-dial-fpmarkets.png" />
+						<div class="speedometer-hand gear-6 hand-timing"></div>
+						<div class="gear-dot"></div>
+						Trade timing
+					</div>
+					<div class="speedometer-item">
+						<img class="speedometer-dial" src="img/speedometer-dial-fpmarkets.png" />
+						<div class="speedometer-hand gear-9 hand-risk"></div>
+						<div class="gear-dot"></div>
+						Risk management
+					</div>
+					<div class="speedometer-item">
+						<img class="speedometer-dial" src="img/speedometer-dial-fpmarkets.png" />
+						<div class="speedometer-hand gear-7 hand-stimulation"></div>
+						<div class="gear-dot"></div>
+						Over-stimulation
+					</div>
+				</div>
+		</div>
+	<!-- full report -->
+	<div class="main-content-container">
+		<h1>Full report</h1>
+		<ul class="medic-report">
+					<li style="padding-bottom:30px;">
+						<div class="column-issue"><strong>ISSUE</strong></div>
+						<div class="column-severity"><strong>SEVERITY</strong></div>
+						<div class="column-effect"><strong>PERFORMANCE EFFECT</strong></div>
+						<div class="column-info"><strong>FURTHER DETAILS</strong></div>
 					</li>
 					<!---->
 					<li>
 						<div class="column-issue">Catch a falling knife</div>
 						<div class="column-severity">
 							<div class="sev-bar">
-								<div class="sev-bar-dot" style="left:60%;"></div>
+								<div class="sev-bar-grey" style="width:40%;"></div>
+								<div class="sev-bar-dot severity-level-5" style="left:60%;"></div>
 							</div>
 						</div>
 						<div class="column-effect"><span class="text-ng">-3,900 USD</span></div>
 						<div class="column-info">
-							<a class="btn-info" id="" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
 						</div>
 					</li>
 					<!---->
@@ -262,12 +240,13 @@
 						<div class="column-issue">Anxious trade exits</div>
 						<div class="column-severity">
 							<div class="sev-bar">
-								<div class="sev-bar-dot" style="left:52%;"></div>
+								<div class="sev-bar-grey" style="width:48%;"></div>
+								<div class="sev-bar-dot severity-level-4" style="left:52%;"></div>
 							</div>
 						</div>
 						<div class="column-effect"><span class="text-ng">-3,380 USD</span></div>
 						<div class="column-info">
-							<a class="btn-info" id="" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
 						</div>
 					</li>
 					<!---->
@@ -275,12 +254,13 @@
 						<div class="column-issue">News trading</div>
 						<div class="column-severity">
 							<div class="sev-bar">
-								<div class="sev-bar-dot" style="left:44%;"></div>
+								<div class="sev-bar-grey" style="width:56%;"></div>
+								<div class="sev-bar-dot severity-level-4" style="left:44%;"></div>
 							</div>
 						</div>
 						<div class="column-effect"><span class="text-ng">-2,860 USD</span></div>
 						<div class="column-info">
-							<a class="btn-info" id="" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
 						</div>
 					</li>
 					<!---->
@@ -288,12 +268,13 @@
 						<div class="column-issue">Fail to cut losses</div>
 						<div class="column-severity">
 							<div class="sev-bar">
-								<div class="sev-bar-dot" style="left:35%;"></div>
+								<div class="sev-bar-grey" style="width:65%;"></div>
+								<div class="sev-bar-dot severity-level-3" style="left:35%;"></div>
 							</div>
 						</div>
 						<div class="column-effect"><span class="text-ng">-2,275 USD</span></div>
 						<div class="column-info">
-							<a class="btn-info" id="" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
 						</div>
 					</li>
 					<!---->
@@ -301,12 +282,13 @@
 						<div class="column-issue">Fighting the trend</div>
 						<div class="column-severity">
 							<div class="sev-bar">
-								<div class="sev-bar-dot" style="left:30%;"></div>
+								<div class="sev-bar-grey" style="width:70%;"></div>
+								<div class="sev-bar-dot severity-level-3" style="left:30%;"></div>
 							</div>
 						</div>
 						<div class="column-effect"><span class="text-ng">-1,950 USD</span></div>
 						<div class="column-info">
-							<a class="btn-info" id="" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
 						</div>
 					</li>
 					<!---->
@@ -314,12 +296,13 @@
 						<div class="column-issue">Weekend trading</div>
 						<div class="column-severity">
 							<div class="sev-bar">
-								<div class="sev-bar-dot" style="left:25%;"></div>
+								<div class="sev-bar-grey" style="width:75%;"></div>
+								<div class="sev-bar-dot severity-level-3" style="left:25%;"></div>
 							</div>
 						</div>
 						<div class="column-effect"><span class="text-ng">-1,625 USD</span></div>
 						<div class="column-info">
-							<a class="btn-info" id="" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
 						</div>
 					</li>
 					<!---->
@@ -327,12 +310,13 @@
 						<div class="column-issue">Distracted trading</div>
 						<div class="column-severity">
 							<div class="sev-bar">
-								<div class="sev-bar-dot" style="left:25%;"></div>
+								<div class="sev-bar-grey" style="width:75%;"></div>
+								<div class="sev-bar-dot severity-level-3" style="left:25%;"></div>
 							</div>
 						</div>
 						<div class="column-effect"><span class="text-ng">-1,625 USD</span></div>
 						<div class="column-info">
-							<a class="btn-info" id="" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
 						</div>
 					</li>
 					<!---->
@@ -340,12 +324,13 @@
 						<div class="column-issue">Doubling down</div>
 						<div class="column-severity">
 							<div class="sev-bar">
-								<div class="sev-bar-dot" style="left:25%;"></div>
+								<div class="sev-bar-grey" style="width:75%;"></div>
+								<div class="sev-bar-dot severity-level-3" style="left:25%;"></div>
 							</div>
 						</div>
 						<div class="column-effect"><span class="text-ng">-1,625 USD</span></div>
 						<div class="column-info">
-							<a class="btn-info" id="" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
 						</div>
 					</li>
 					<!---->
@@ -353,12 +338,13 @@
 						<div class="column-issue">Overoptimism</div>
 						<div class="column-severity">
 							<div class="sev-bar">
-								<div class="sev-bar-dot" style="left:20%;"></div>
+								<div class="sev-bar-grey" style="width:80%;"></div>
+								<div class="sev-bar-dot severity-level-2" style="left:20%;"></div>
 							</div>
 						</div>
 						<div class="column-effect"><span class="text-ng">-1,300 USD</span></div>
 						<div class="column-info">
-							<a class="btn-info" id="" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
 						</div>
 					</li>
 					<!---->
@@ -366,12 +352,13 @@
 						<div class="column-issue">Failed de-risking</div>
 						<div class="column-severity">
 							<div class="sev-bar">
-								<div class="sev-bar-dot" style="left:17%;"></div>
+								<div class="sev-bar-grey" style="width:83%;"></div>
+								<div class="sev-bar-dot severity-level-2" style="left:17%;"></div>
 							</div>
 						</div>
 						<div class="column-effect"><span class="text-ng">-1,105 USD</span></div>
 						<div class="column-info">
-							<a class="btn-info" id="" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
 						</div>
 					</li>
 					<!---->
@@ -379,12 +366,13 @@
 						<div class="column-issue">Impatient entries</div>
 						<div class="column-severity">
 							<div class="sev-bar">
-								<div class="sev-bar-dot" style="left:15%;"></div>
+								<div class="sev-bar-grey" style="width:85%;"></div>
+								<div class="sev-bar-dot severity-level-2" style="left:15%;"></div>
 							</div>
 						</div>
-						<div class="column-effect"><span class="text-ng">- USD</span></div>
+						<div class="column-effect"><span class="text-ng">-923 USD</span></div>
 						<div class="column-info">
-							<a class="btn-info" id="" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
 						</div>
 					</li>
 					<!---->
@@ -392,12 +380,13 @@
 						<div class="column-issue">Trade without break</div>
 						<div class="column-severity">
 							<div class="sev-bar">
-								<div class="sev-bar-dot" style="left:11%;"></div>
+								<div class="sev-bar-grey" style="width:89%;"></div>
+								<div class="sev-bar-dot severity-level-1" style="left:11%;"></div>
 							</div>
 						</div>
 						<div class="column-effect"><span class="text-ng">-715 USD</span></div>
 						<div class="column-info">
-							<a class="btn-info" id="" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
 						</div>
 					</li>
 					<!---->
@@ -405,12 +394,13 @@
 						<div class="column-issue">Over-complexity</div>
 						<div class="column-severity">
 							<div class="sev-bar">
-								<div class="sev-bar-dot" style="left:9%;"></div>
+								<div class="sev-bar-grey" style="width:91%;"></div>
+								<div class="sev-bar-dot severity-level-1" style="left:9%;"></div>
 							</div>
 						</div>
 						<div class="column-effect"><span class="text-ng">-585 USD</span></div>
 						<div class="column-info">
-							<a class="btn-info" id="" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
 						</div>
 					</li>
 					<!---->
@@ -418,12 +408,13 @@
 						<div class="column-issue">Impatient exits</div>
 						<div class="column-severity">
 							<div class="sev-bar">
-								<div class="sev-bar-dot" style="left:5%;"></div>
+								<div class="sev-bar-grey" style="width:95%;"></div>
+								<div class="sev-bar-dot severity-level-1" style="left:5%;"></div>
 							</div>
 						</div>
 						<div class="column-effect"><span class="text-ng">-325 USD</span></div>
 						<div class="column-info">
-							<a class="btn-info" id="" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
 						</div>
 					</li>
 					<!---->
@@ -431,12 +422,13 @@
 						<div class="column-issue">Too tight stops</div>
 						<div class="column-severity">
 							<div class="sev-bar">
-								<div class="sev-bar-dot" style="left:2%;"></div>
+								<div class="sev-bar-grey" style="width:98%;"></div>
+								<div class="sev-bar-dot severity-level-1" style="left:2%;"></div>
 							</div>
 						</div>
 						<div class="column-effect"><span class="text-ng">-130 USD</span></div>
 						<div class="column-info">
-							<a class="btn-info" id="" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
 						</div>
 					</li>
 					<!---->
@@ -444,12 +436,13 @@
 						<div class="column-issue">Too wide stops</div>
 						<div class="column-severity">
 							<div class="sev-bar">
-								<div class="sev-bar-dot" style="left:0%;"></div>
+								<div class="sev-bar-grey" style="width:100%;"></div>
+								<div class="sev-bar-dot severity-level-1" style="left:0%;"></div>
 							</div>
 						</div>
 						<div class="column-effect"><span class="text-po">0 USD</span></div>
 						<div class="column-info">
-							<a class="btn-info" id="" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
 						</div>
 					</li>
 					<!---->
@@ -457,12 +450,13 @@
 						<div class="column-issue">Emotional trading</div>
 						<div class="column-severity">
 							<div class="sev-bar">
-								<div class="sev-bar-dot" style="left:0%;"></div>
+								<div class="sev-bar-grey" style="width:100%;"></div>
+								<div class="sev-bar-dot severity-level-1" style="left:0%;"></div>
 							</div>
 						</div>
 						<div class="column-effect"><span class="text-po">0 USD</span></div>
 						<div class="column-info">
-							<a class="btn-info" id="" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
 						</div>
 					</li>
 					<!---->
@@ -470,12 +464,13 @@
 						<div class="column-issue">Anxious trade entries</div>
 						<div class="column-severity">
 							<div class="sev-bar">
-								<div class="sev-bar-dot" style="left:0%;"></div>
+								<div class="sev-bar-grey" style="width:100%;"></div>
+								<div class="sev-bar-dot severity-level-1" style="left:0%;"></div>
 							</div>
 						</div>
 						<div class="column-effect"><span class="text-po">0 USD</span></div>
 						<div class="column-info">
-							<a class="btn-info" id="" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
 						</div>
 					</li>
 					<!---->
@@ -483,12 +478,13 @@
 						<div class="column-issue">issue</div>
 						<div class="column-severity">
 							<div class="sev-bar">
-								<div class="sev-bar-dot" style="left:0%;"></div>
+								<div class="sev-bar-grey" style="width:100%;"></div>
+								<div class="sev-bar-dot severity-level-1" style="left:0%;"></div>
 							</div>
 						</div>
 						<div class="column-effect"><span class="text-po">0 USD</span></div>
 						<div class="column-info">
-							<a class="btn-info" id="" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
 						</div>
 					</li>
 					<!---->
@@ -496,12 +492,13 @@
 						<div class="column-issue">Overpaying fees</div>
 						<div class="column-severity">
 							<div class="sev-bar">
-								<div class="sev-bar-dot" style="left:0%;"></div>
+								<div class="sev-bar-grey" style="width:100%;"></div>
+								<div class="sev-bar-dot severity-level-1" style="left:0%;"></div>
 							</div>
 						</div>
 						<div class="column-effect"><span class="text-po">0 USD</span></div>
 						<div class="column-info">
-							<a class="btn-info" id="" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
 						</div>
 					</li>
 					<!---->
@@ -509,12 +506,13 @@
 						<div class="column-issue">Inefficient hedging</div>
 						<div class="column-severity">
 							<div class="sev-bar">
-								<div class="sev-bar-dot" style="left:0%;"></div>
+								<div class="sev-bar-grey" style="width:100%;"></div>
+								<div class="sev-bar-dot severity-level-1" style="left:0%;"></div>
 							</div>
 						</div>
 						<div class="column-effect"><span class="text-po">0 USD</span></div>
 						<div class="column-info">
-							<a class="btn-info" id="" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
 						</div>
 					</li>
 					<!---->
@@ -522,12 +520,13 @@
 						<div class="column-issue">Fail to call it a day</div>
 						<div class="column-severity">
 							<div class="sev-bar">
-								<div class="sev-bar-dot" style="left:0%;"></div>
+								<div class="sev-bar-grey" style="width:100%;"></div>
+								<div class="sev-bar-dot severity-level-1" style="left:0%;"></div>
 							</div>
 						</div>
 						<div class="column-effect"><span class="text-po">0 USD</span></div>
 						<div class="column-info">
-							<a class="btn-info" id="" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
 						</div>
 					</li>
 					<!---->
@@ -535,1148 +534,163 @@
 						<div class="column-issue">Blindly follow momentum</div>
 						<div class="column-severity">
 							<div class="sev-bar">
-								<div class="sev-bar-dot" style="left:0%;"></div>
+								<div class="sev-bar-grey" style="width:100%;"></div>
+								<div class="sev-bar-dot severity-level-1" style="left:0%;"></div>
 							</div>
 						</div>
 						<div class="column-effect"><span class="text-po">0 USD</span></div>
 						<div class="column-info">
-							<a class="btn-info" id="" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
 						</div>
 					</li>
 				</ul>
-			</div>
-			<!-- accordion end -->
-			<!-- accordion -->
-			<button class="accordion">
-				<div><span class="ht-alert-chart"></span> Risk report</div>
-				<a class="btn-open"><span class="ht-add"></span></a>
-			</button>
-			<div class="panel">
-				<ul class="medic-report">
-					<li style="font-size:12px;  background-color:#666666; color:#F5F7F4;">
-						<div class="column-issue"><strong>Risk area</strong></div>
+	</div>
+	<!-- risk report -->
+	<div class="main-content-container" style="background-color:#F7F8FB;">
+		<h1>Risk report</h1>
+		<ul class="medic-report">
+					<li style="padding-bottom:30px;">
+						<div class="column-issue"><strong>RISK AREA</strong></div>
 						<div class="column-risk-ico"></div>
 						<div class="column-risk"></div>
-						<div class="column-info"><strong>Further details</strong></div>
+						<div class="column-info"><strong>FURTHER DETAILS</strong></div>
 					</li>
 					<!---->
 					<li>
-						<div class="column-issue"><strong>Emotional loss streak</strong></div>
+						<div class="column-issue">Emotional loss streak</div>
 						<div class="column-risk-ico">
 							<div class="risk-ico-ng"><span class="ht-alert"></span></div>
 						</div>
 						<div class="column-risk">Warning: On average, you increase your risk/trade by 173% after 4-6 consecutive losses</div>
 						<div class="column-info">
-							<a class="btn-info" id="" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
 						</div>
 					</li>
 					<!---->
 					<li>
-						<div class="column-issue"><strong>All-in trades</strong></div>
+						<div class="column-issue">All-in trades</div>
 						<div class="column-risk-ico">
 							<div class="risk-ico-po"><span class="ht-check"></span></div>
 						</div>
 						<div class="column-risk">All good, you recently didn't have all-in trades</div>
 						<div class="column-info">
-							<a class="btn-info" id="" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
 						</div>
 					</li>
 					<!---->
 					<li>
-						<div class="column-issue"><strong>Trade without SL</strong></div>
+						<div class="column-issue">Trade without SL</div>
 						<div class="column-risk-ico">
 							<div class="risk-ico-ng"><span class="ht-alert"></span></div>
 						</div>
 						<div class="column-risk">Warning: Only 12% of your trades had a Stop Loss!</div>
 						<div class="column-info">
-							<a class="btn-info" id="" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
 						</div>
 					</li>
 					<!---->
 					<li>
-						<div class="column-issue"><strong>Excessive risk taking</strong></div>
+						<div class="column-issue">Excessive risk taking</div>
 						<div class="column-risk-ico">
 							<div class="risk-ico-po"><span class="ht-check"></span></div>
 						</div>
 						<div class="column-risk">Good job, you seem to tightly manage your risk per trade</div>
 						<div class="column-info">
-							<a class="btn-info" id="" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
 						</div>
 					</li>
 					<!---->
 					<li>
-						<div class="column-issue"><strong>Reward Risk imbalance</strong></div>
+						<div class="column-issue">Reward Risk imbalance</div>
 						<div class="column-risk-ico">
 							<div class="risk-ico-ng"><span class="ht-alert"></span></div>
 						</div>
 						<div class="column-risk">"Warning: On average, you lose more in a loss trade than you gain in a win trade.</div>
 						<div class="column-info">
-							<a class="btn-info" id="" style="position:absolute; right:10px;"><span class="ht-info"></span></a>
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
 						</div>
 					</li>
 				</ul>
-			</div>
-			<!-- accordion end -->
-			<!-- accordion improvement tracker 
-			<button class="accordion">
-				<div><span class="ht-up-chart"></span> Improvement tracker</div>
-				<a class="btn-open"><span class="ht-add"></span></a>
-			</button>
-			<div class="panel">
-				<div class="overall-score-box">
-					<a class="btn-info" id="" style="position:absolute; right:10px; top:10px;"><span class="ht-info"></span></a>
-					<h3 style="margin:0;">Overall issue score*</h3>
-					<div class="overall-score">
-						<div class="overall-score-item">
-							<h4>All</h4>
-							<div class="donut-chart-block block"> 
-								<div class="donut-chart">
-									<div class="portion-block ring-mask" style="transform:rotate(180deg);"><div class="circle"></div></div>
-									<div class="portion-block ring-neg" style="transform:rotate(0deg);"><div class="circle"></div></div>
-									<div class="portion-block ring-neg" style="transform:rotate(171deg);"><div class="circle"></div></div>
-									<p class="center-score">77</p>        
-								</div>
-							</div>
-						</div>
-						<div class="overall-score-item">
-							<h4>1Y</h4>
-							<div class="donut-chart-block block"> 
-								<div class="donut-chart">
-									<div class="portion-block ring-mask" style="transform:rotate(180deg);"><div class="circle"></div></div>
-									<div class="portion-block ring-neg" style="transform:rotate(0deg);"><div class="circle"></div></div>
-									<div class="portion-block ring-neg" style="transform:rotate(180deg);"><div class="circle"></div></div>
-									<p class="center-score">79</p>        
-								</div>
-							</div>
-						</div>
-						<div class="overall-score-item">
-							<h4>3M</h4>
-							<div class="donut-chart-block block"> 
-								<div class="donut-chart">
-									<div class="portion-block ring-mask" style="transform:rotate(180deg);"><div class="circle"></div></div>
-									<div class="portion-block ring-even" style="transform:rotate(0deg);"><div class="circle"></div></div>
-									<div class="portion-block ring-even" style="transform:rotate(171deg);"><div class="circle"></div></div>
-									<p class="center-score">77</p>        
-								</div>
-							</div>
-						</div>
-						<div class="overall-score-item">
-							<h4>1M</h4>
-							<div class="donut-chart-block block"> 
-								<div class="donut-chart">
-									<div class="portion-block ring-mask" style="transform:rotate(180deg);"><div class="circle"></div></div>
-									<div class="portion-block ring-po" style="transform:rotate(0deg);"><div class="circle"></div></div>
-									<div class="portion-block ring-po" style="transform:rotate(162deg);"><div class="circle"></div></div>
-									<p class="center-score">75</p>        
-								</div>
-							</div>
-						</div>
-						<div class="overall-score-item">
-							<h4>2W</h4>
-							<div class="donut-chart-block block"> 
-								<div class="donut-chart">
-									<div class="portion-block ring-mask" style="transform:rotate(180deg);"><div class="circle"></div></div>
-									<div class="portion-block ring-po" style="transform:rotate(0deg);"><div class="circle"></div></div>
-									<div class="portion-block ring-po" style="transform:rotate(160deg);"><div class="circle"></div></div>
-									<p class="center-score">74</p>        
-								</div>
-							</div>
-						</div>
-					</div>
-					<div style="width:100%; text-align:right; font-size:10px; color:#666666;">
-						*Score (0-100) combines severity &amp; share of trades showing issues
-					</div>
-				</div>
-				<ul class="medic-report">
-					<div class="desktop">
-						<li style="font-size:12px;  background-color:#666666; color:#F5F7F4;">
-							<div class="column-issue-area"><strong>Issue area</strong></div>
-							<div class="column-improvement"><strong>Improvement</strong></div>
-							<div class="column-donut"><strong>Return/trade</strong></div>
-							<div class="column-donut"><strong>Percentage of trades</strong></div>
-							<div class="column-info-chart"><strong>Info &amp; chart</strong></div>
-						</li>
-					</div>
-					
-					
-					<li>
-						<div class="column-issue-area">
-							<div class="tablet" style="margin-right:20px;"><strong>Issue area:</strong></div>
-							<strong style="margin-right:10px;">Cut profits early</strong>
-							<div class="text-ng">-6,493 USD</div>
-						</div>
-						<div class="column-improvement">
-							<div class="tablet"><strong>Improvement</strong></div>
-							<div class="improvement-box">
-								<div class="improvement-item">
-									<h4>1Y</h4>
-									<div class="trend-bullet-neg"><span class="ht-arrow"></span></div>
-								</div>
-								<div class="improvement-item">
-									<h4>3M</h4>
-									<div class="trend-bullet-even"><span class="ht-arrow"></span></div>
-								</div>
-								<div class="improvement-item">
-									<h4>1M</h4>
-									<div class="trend-bullet-po"><span class="ht-arrow"></span></div>
-								</div>
-								<div class="improvement-item">
-									<h4>2W</h4>
-									<div class="trend-bullet-po"><span class="ht-arrow"></span></div>
-								</div>
-							</div>
-						</div>
-						<div class="column-donut">
-							<div class="tablet"><strong>Return/trade</strong></div>
-							<div class="donut-box">
-								
-								<div class="donut-item">
-									<h4>All</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-neg" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-neg" style="transform:rotate(128deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">-0.6%</p>        
-										</div>
-									</div>
-								</div>
-								
-								<div class="donut-item">
-									<h4>1Y</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-neg" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-neg" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">-0.7%</p>        
-										</div>
-									</div>
-								</div>
-								
-								<div class="donut-item">
-									<h4>3M</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-even" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-even" style="transform:rotate(128deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">-0.6%</p>        
-										</div>
-									</div>
-								</div>
-								
-								<div class="donut-item">
-									<h4>1M</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-po" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-mask" style="transform:rotate(102deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">-0.2%</p>        
-										</div>
-									</div>
-								</div>
-								
-								<div class="donut-item">
-									<h4>2W</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-po" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-mask" style="transform:rotate(52deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">-0.1%</p>        
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="column-donut">
-							<div class="tablet"><strong>Percentage of trades</strong></div>
-							<div class="donut-box">
-								
-								<div class="donut-item">
-									<h4>All</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-neg" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-neg" style="transform:rotate(141deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">33%</p>        
-										</div>
-									</div>
-								</div>
-								
-								<div class="donut-item">
-									<h4>1Y</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-neg" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-neg" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">37%</p>        
-										</div>
-									</div>
-								</div>
-								
-								<div class="donut-item">
-									<h4>3M</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-even" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-even" style="transform:rotate(141deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">33%</p>        
-										</div>
-									</div>
-								</div>
-								
-								<div class="donut-item">
-									<h4>1M</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-po" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-po" style="transform:rotate(5deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">19%</p>        
-										</div>
-									</div>
-								</div>
-								
-								<div class="donut-item">
-									<h4>2W</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-po" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-po" style="transform:rotate(34deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">22%</p>        
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="column-info-chart">
-							<div class="tablet"><strong>Info &amp; chart</strong></div>
-							<a class="btn-info" id=""><span class="ht-info"></span></a>
-						</div>
-					</li>
-					
-					
-					<li>
-						<div class="column-issue-area">
-							<div class="tablet" style="margin-right:20px;"><strong>Issue area:</strong></div>
-							<strong style="margin-right:10px;">Revenge Trading</strong>
-							<div class="text-ng">-5,281 USD</div>
-						</div>
-						<div class="column-improvement">
-							<div class="tablet"><strong>Improvement</strong></div>
-							<div class="improvement-box">
-								<div class="improvement-item">
-									<h4>1Y</h4>
-									<div class="trend-bullet-neg"><span class="ht-arrow"></span></div>
-								</div>
-								<div class="improvement-item">
-									<h4>3M</h4>
-									<div class="trend-bullet-even"><span class="ht-arrow"></span></div>
-								</div>
-								<div class="improvement-item">
-									<h4>1M</h4>
-									<div class="trend-bullet-po"><span class="ht-arrow"></span></div>
-								</div>
-								<div class="improvement-item">
-									<h4>2W</h4>
-									<div class="trend-bullet-po"><span class="ht-arrow"></span></div>
-								</div>
-							</div>
-						</div>
-						<div class="column-donut">
-							<div class="tablet"><strong>Return/trade</strong></div>
-							<div class="donut-box">
-								
-								<div class="donut-item">
-									<h4>All</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-neg" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-neg" style="transform:rotate(128deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">-0.6%</p>        
-										</div>
-									</div>
-								</div>
-								
-								<div class="donut-item">
-									<h4>1Y</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-neg" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-neg" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">-0.7%</p>        
-										</div>
-									</div>
-								</div>
-								
-								<div class="donut-item">
-									<h4>3M</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-even" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-even" style="transform:rotate(128deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">-0.6%</p>        
-										</div>
-									</div>
-								</div>
-								
-								<div class="donut-item">
-									<h4>1M</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-po" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-mask" style="transform:rotate(102deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">-0.2%</p>        
-										</div>
-									</div>
-								</div>
-								
-								<div class="donut-item">
-									<h4>2W</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-po" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-mask" style="transform:rotate(52deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">-0.1%</p>        
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="column-donut">
-							<div class="tablet"><strong>Percentage of trades</strong></div>
-							<div class="donut-box">
-								
-								<div class="donut-item">
-									<h4>All</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-neg" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-neg" style="transform:rotate(141deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">33%</p>        
-										</div>
-									</div>
-								</div>
-								
-								<div class="donut-item">
-									<h4>1Y</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-neg" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-neg" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">37%</p>        
-										</div>
-									</div>
-								</div>
-								
-								<div class="donut-item">
-									<h4>3M</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-even" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-even" style="transform:rotate(141deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">33%</p>        
-										</div>
-									</div>
-								</div>
-								
-								<div class="donut-item">
-									<h4>1M</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-po" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-po" style="transform:rotate(5deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">19%</p>        
-										</div>
-									</div>
-								</div>
-								
-								<div class="donut-item">
-									<h4>2W</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-po" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-po" style="transform:rotate(34deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">22%</p>        
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="column-info-chart">
-							<div class="tablet"><strong>Info &amp; chart</strong></div>
-							<a class="btn-info" id=""><span class="ht-info"></span></a>
-						</div>
-					</li>
-					
-					
-					<li>
-						<div class="column-issue-area">
-							<div class="tablet" style="margin-right:20px;"><strong>Issue area:</strong></div>
-							<strong style="margin-right:10px;">Late trade entry</strong>
-							<div class="text-ng">-4,992 USD</div>
-						</div>
-						<div class="column-improvement">
-							<div class="tablet"><strong>Improvement</strong></div>
-							<div class="improvement-box">
-								<div class="improvement-item">
-									<h4>1Y</h4>
-									<div class="trend-bullet-neg"><span class="ht-arrow"></span></div>
-								</div>
-								<div class="improvement-item">
-									<h4>3M</h4>
-									<div class="trend-bullet-even"><span class="ht-arrow"></span></div>
-								</div>
-								<div class="improvement-item">
-									<h4>1M</h4>
-									<div class="trend-bullet-po"><span class="ht-arrow"></span></div>
-								</div>
-								<div class="improvement-item">
-									<h4>2W</h4>
-									<div class="trend-bullet-po"><span class="ht-arrow"></span></div>
-								</div>
-							</div>
-						</div>
-						<div class="column-donut">
-							<div class="tablet"><strong>Return/trade</strong></div>
-							<div class="donut-box">
-								
-								<div class="donut-item">
-									<h4>All</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-neg" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-neg" style="transform:rotate(128deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">-0.6%</p>        
-										</div>
-									</div>
-								</div>
-								
-								<div class="donut-item">
-									<h4>1Y</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-neg" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-neg" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">-0.7%</p>        
-										</div>
-									</div>
-								</div>
-								
-								<div class="donut-item">
-									<h4>3M</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-even" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-even" style="transform:rotate(128deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">-0.6%</p>        
-										</div>
-									</div>
-								</div>
-								
-								<div class="donut-item">
-									<h4>1M</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-po" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-mask" style="transform:rotate(102deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">-0.2%</p>        
-										</div>
-									</div>
-								</div>
-								
-								<div class="donut-item">
-									<h4>2W</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-po" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-mask" style="transform:rotate(52deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">-0.1%</p>        
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="column-donut">
-							<div class="tablet"><strong>Percentage of trades</strong></div>
-							<div class="donut-box">
-								
-								<div class="donut-item">
-									<h4>All</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-neg" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-neg" style="transform:rotate(141deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">33%</p>        
-										</div>
-									</div>
-								</div>
-								
-								<div class="donut-item">
-									<h4>1Y</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-neg" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-neg" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">37%</p>        
-										</div>
-									</div>
-								</div>
-								
-								<div class="donut-item">
-									<h4>3M</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-even" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-even" style="transform:rotate(141deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">33%</p>        
-										</div>
-									</div>
-								</div>
-								
-								<div class="donut-item">
-									<h4>1M</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-po" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-po" style="transform:rotate(5deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">19%</p>        
-										</div>
-									</div>
-								</div>
-								
-								<div class="donut-item">
-									<h4>2W</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-po" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-po" style="transform:rotate(34deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">22%</p>        
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="column-info-chart">
-							<div class="tablet"><strong>Info &amp; chart</strong></div>
-							<a class="btn-info" id=""><span class="ht-info"></span></a>
-						</div>
-					</li>
-					
-					
-					<li>
-						<div class="column-issue-area">
-							<div class="tablet" style="margin-right:20px;"><strong>Issue area:</strong></div>
-							<strong style="margin-right:10px;">Overtrading</strong>
-							<div class="text-ng">-4,225 USD</div>
-						</div>
-						<div class="column-improvement">
-							<div class="tablet"><strong>Improvement</strong></div>
-							<div class="improvement-box">
-								<div class="improvement-item">
-									<h4>1Y</h4>
-									<div class="trend-bullet-neg"><span class="ht-arrow"></span></div>
-								</div>
-								<div class="improvement-item">
-									<h4>3M</h4>
-									<div class="trend-bullet-even"><span class="ht-arrow"></span></div>
-								</div>
-								<div class="improvement-item">
-									<h4>1M</h4>
-									<div class="trend-bullet-po"><span class="ht-arrow"></span></div>
-								</div>
-								<div class="improvement-item">
-									<h4>2W</h4>
-									<div class="trend-bullet-po"><span class="ht-arrow"></span></div>
-								</div>
-							</div>
-						</div>
-						<div class="column-donut">
-							<div class="tablet"><strong>Return/trade</strong></div>
-							<div class="donut-box">
-								
-								<div class="donut-item">
-									<h4>All</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-neg" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-neg" style="transform:rotate(128deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">-0.6%</p>        
-										</div>
-									</div>
-								</div>
-								
-								<div class="donut-item">
-									<h4>1Y</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-neg" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-neg" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">-0.7%</p>        
-										</div>
-									</div>
-								</div>
-								
-								<div class="donut-item">
-									<h4>3M</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-even" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-even" style="transform:rotate(128deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">-0.6%</p>        
-										</div>
-									</div>
-								</div>
-								
-								<div class="donut-item">
-									<h4>1M</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-po" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-mask" style="transform:rotate(102deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">-0.2%</p>        
-										</div>
-									</div>
-								</div>
-								
-								<div class="donut-item">
-									<h4>2W</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-po" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-mask" style="transform:rotate(52deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">-0.1%</p>        
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="column-donut">
-							<div class="tablet"><strong>Percentage of trades</strong></div>
-							<div class="donut-box">
-								
-								<div class="donut-item">
-									<h4>All</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-neg" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-neg" style="transform:rotate(141deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">33%</p>        
-										</div>
-									</div>
-								</div>
-								
-								<div class="donut-item">
-									<h4>1Y</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-neg" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-neg" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">37%</p>        
-										</div>
-									</div>
-								</div>
-								
-								<div class="donut-item">
-									<h4>3M</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-even" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-even" style="transform:rotate(141deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">33%</p>        
-										</div>
-									</div>
-								</div>
-								
-								<div class="donut-item">
-									<h4>1M</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-po" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-po" style="transform:rotate(5deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">19%</p>        
-										</div>
-									</div>
-								</div>
-								
-								<div class="donut-item">
-									<h4>2W</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-po" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-po" style="transform:rotate(34deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">22%</p>        
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="column-info-chart">
-							<div class="tablet"><strong>Info &amp; chart</strong></div>
-							<a class="btn-info" id=""><span class="ht-info"></span></a>
-						</div>
-					</li>
-					
-					<!-- custom row
-					<li>
-						<div class="column-custom">
-							<div class="tablet" style="margin-right:20px;">
-								<strong>Issue area:</strong>
-							</div>
-							
-							<div class="issue-menu">
-								<div class="default-item">Select an issue</div>
-								<div class="open-btn"><label for="issue-menu-toggle"><span class="ht-triangle"></span></label></div>
-								<input type="checkbox" id="issue-menu-toggle"/>
-								<ul id="issue-menu-dropdown">
-									<li class="issue-list">
-										<a href="#"><strong style="margin-right:10px;">Catch a falling knife</strong><span class="text-ng">-3,900 USD</span></a>
-									</li>
-									<li class="issue-list">
-										<a href="#"><strong style="margin-right:10px;">Anxious trade exits</strong><span class="text-ng">-3,380 USD</span></a>
-									</li>
-									<li class="issue-list">
-										<a href="#"><strong style="margin-right:10px;">News trading</strong><span class="text-ng">-2,860 USD</span></a>
-									</li>
-								</ul>
-							</div>
-
-						</div>
-						<div class="column-issue-area desktop"></div>
-						<div class="column-improvement">
-							<div class="tablet"><strong>Improvement</strong></div>
-							<div class="improvement-box">
-								<div class="improvement-item">
-									<h4>1Y</h4>
-									<div class="trend-bullet-neg"><span class="ht-arrow"></span></div>
-								</div>
-								<div class="improvement-item">
-									<h4>3M</h4>
-									<div class="trend-bullet-even"><span class="ht-arrow"></span></div>
-								</div>
-								<div class="improvement-item">
-									<h4>1M</h4>
-									<div class="trend-bullet-po"><span class="ht-arrow"></span></div>
-								</div>
-								<div class="improvement-item">
-									<h4>2W</h4>
-									<div class="trend-bullet-po"><span class="ht-arrow"></span></div>
-								</div>
-							</div>
-						</div>
-						<div class="column-donut">
-							<div class="tablet"><strong>Return/trade</strong></div>
-							<div class="donut-box">
-								
-								<div class="donut-item">
-									<h4>All</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-neg" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-neg" style="transform:rotate(128deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">-0.6%</p>        
-										</div>
-									</div>
-								</div>
-								
-								<div class="donut-item">
-									<h4>1Y</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-neg" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-neg" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">-0.7%</p>        
-										</div>
-									</div>
-								</div>
-								
-								<div class="donut-item">
-									<h4>3M</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-even" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-even" style="transform:rotate(128deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">-0.6%</p>        
-										</div>
-									</div>
-								</div>
-								
-								<div class="donut-item">
-									<h4>1M</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-po" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-mask" style="transform:rotate(102deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">-0.2%</p>        
-										</div>
-									</div>
-								</div>
-								
-								<div class="donut-item">
-									<h4>2W</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-po" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-mask" style="transform:rotate(52deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">-0.1%</p>        
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="column-donut">
-							<div class="tablet"><strong>Percentage of trades</strong></div>
-							<div class="donut-box">
-								
-								<div class="donut-item">
-									<h4>All</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-neg" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-neg" style="transform:rotate(141deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">33%</p>        
-										</div>
-									</div>
-								</div>
-								
-								<div class="donut-item">
-									<h4>1Y</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-neg" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-neg" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">37%</p>        
-										</div>
-									</div>
-								</div>
-								
-								<div class="donut-item">
-									<h4>3M</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-even" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-even" style="transform:rotate(141deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">33%</p>        
-										</div>
-									</div>
-								</div>
-								
-								<div class="donut-item">
-									<h4>1M</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-po" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-po" style="transform:rotate(5deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">19%</p>        
-										</div>
-									</div>
-								</div>
-								
-								<div class="donut-item">
-									<h4>2W</h4>
-									<div class="donut-chart-block block"> 
-										<div class="donut-chart-s">
-											<div class="portion-block-s ring-mask" style="transform:rotate(180deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-po" style="transform:rotate(0deg);"><div class="circle-s"></div></div>
-											<div class="portion-block-s ring-po" style="transform:rotate(34deg);"><div class="circle-s"></div></div>
-											<p class="center-score-s">22%</p>        
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="column-info-chart">
-							<div class="tablet"><strong>Info &amp; chart</strong></div>
-							<a class="btn-info" id=""><span class="ht-info"></span></a>
-						</div>
-					</li>
-					
-				</ul>
-			</div>
-			<!-- accordion end -->
-		<!-- accordion -->
-			<button class="accordion">
-				<div><span class="ht-info"></span> FAQ</div>
-				<a class="btn-open"><span class="ht-add"></span></a>
-			</button>
-			<div class="panel" style="background-color:#efefef;">
-				<p class="faq">
-					<strong>How are the results of this TradeMedic Report generated?</strong><br>
-					The results are fully automatically generated based on your historic trades. Smart algorithms analyze your trades, identify patterns &amp; behaviors, interpret them, and derive the quantified effects shown in the report.
-				</p>
-				<p class="faq">
-					<strong>Can I view the charts in different timeframes and dimensions?</strong><br>
-					Yes, you can view the charts in custom timeframes for more recent performances, alter between Pip &amp; Return to derive position sizing effects, analyze number of trades, significances, benchmarks, risk effects, and more. These additional insights are available through Hoc-trade.
-				</p>
-				<p class="faq">
-					<strong>Can I receive alerts if I perform trades that show issues?</strong><br>
-					Yes, Hoc-trade enables real-time alerts in case you exhibit trading actions indicative of behaving in one of your trading issues. Moreover, you can receive alerts in case risk management related actions are identified. All alerts can be customized based on your preferences.
-				</p>
-				<p class="faq">
-					<strong>Are the TradeMedic Reports also available for accounts except MetaTrader 4?</strong><br>
-					Currently, the TradeMedic reports are only available for MetaTrader 4 users. However, we are already working on integrating additional trading platforms frequently used by traders. Stay tuned for more integrations.
-				</p>
-				<p class="faq">
-					<strong>Are there additional analytics available?</strong><br>
-					There are many more charts available that outline trading behaviors, strategies, etc.. Moreover, advanced statistics, tracking tools, and in-depth explanations &amp; videos on root causes of behaviors are available. These additional sources can be found on Hoc-trade.
-				</p>
-				<p class="faq">
-					<strong>Why do I receive this report?</strong><br>
-					This report has been generated as a service by your broker.  To inquire about the eligibility to receive this and future reports, please contact your broker.
-				</p>
-				<p class="faq">
-					For further questions, please refer to our FAQ page <a href="#" target="_blank">here</a>.
-				</p>
-			</div>
-			<!-- accordion end -->
-		
-		<div class="general-info-header" style="border-radius:0 0 20px 20px;"></div>
-		
-		<div style="height:20px;"></div>
-	</div><!-- main-content-container -->
-	<!-- main content area end -->
-	
-	<div class="footer">
-		<!--<span class="ht-logo"></span><strong>hoc-trade</strong>&nbsp;&nbsp;&nbsp; copy; 2022 hoc-trade limited, all rights reserved<span class="separator">|</span><a href="#">Terms &amp; conditions</a><span class="separator">|</span><a href="#">Privacy policy</a><span class="separator">|</span><a href="#">advertise with us</a><span class="separator">|</span><a href="#">About us</a><span class="separator">|</span><a class="social" href="#"><span class="ht-logo-fb"></span></a><a class="social" href="#"><span class="ht-logo-twitter"></span></a><a class="social" href="#"><span class="ht-logo-in"></span></a><a class="social" href="#"><span class="ht-logo-yt"></span></a>-->
-		<p class="disclaimer">HIGH RISK WARNING: Foreign exchange and other CFD trading carries a high level of risk and may not be suitable for everyone. The usage of leverage creates additional risk and loss exposure. Your investment objectives, experience level and risk tolerance have to be taken into consideration before you decide to trade foreign exchange or other CFD products. You could lose some or all of your entire investment. Do not invest money that you cannot afford to lose and always use an appropriate risk management. It’s important to educate yourself on the risks associated with foreign exchange trading, and seek professional advice from an independent financial or tax advisor in case of any questions. Any data and information is provided ‘as is’ solely for informational purposes, and is not intended for trading purposes or advice. Past performance, which are presented on this website or you find somewhere else, is not indicative of future results.</p>
 	</div>
-	
-	<!-- The Modal -->
-	<div id="modalInfoBox" class="modal">
-		<!-- Modal content -->
-		<!-- content 1 -->
-		<div class="modal-content" style="padding: 70px 0 20px 0;">
-			<div class="modal-header">
-				<span class="close"><span class="ht-cross"></span></span>
-			</div>
-			<div class="modal-body">
-				<div class="alert-details-box-tm">
-					
-					<div class="detail-info-container">
-						<div class="detail-info-box-1">
-							<h3>Issue</h3>
-							<h2>Cut profits early</h2>
-						</div>
-						<div class="detail-info-box-2">
-							<h3>Area</h3>
-							<h2 style="padding-left:40px;"><span class="ht-error-trade"></span> Trade execution</h2>
-						</div>
-						<div class="detail-info-box-3">
-							<h3>Performance effect</h3>
-							<h2 class="text-ng">-7,070 USD</h2>
-						</div>
-						<div class="detail-info-box-4">
-							<h3>Severity</h3>
-							<div class="sev-bar-top" style="width:75%; border: 4px solid #E9F3F5;">
-								<div class="sev-bar-dot-top" style="left:calc(100% - 20px);"></div>
-							</div>
-							<div class="severity-level text-ng">100%</div>
-						</div>
-						<div class="detail-info-box-5 bg-ng">
-							<div class="alert-msg-box"><span class="ht-alert"></span> <strong>You could have made an additional profit of 7,070 USD if not manually closing your trades in profit</strong>. Those trades made you a profit of <strong>7,833 USD</strong>, however just keeping them with their existing SL &amp; TP, the profit would have been <strong>14,093 USD</strong>. Consider to let such trades develop.</div>
-						</div>
-					</div>
-					<div class="explanation-box">
-						<h2>Explanation</h2>
-						<p>Cutting profits early describes the behavior of closing your trade in profit before it reaches your Take Profit (TP) level.</p>
-						<p>Traders tend to close their winning trades early in fear of losing their unrealized gains, a <strong>human tendency closely connected to loss aversion and well described in Nobel Prize winning Prospect Theory.</strong></p>
-					</div>
-					<h2>Your trading activity: Output chart</h2>
-					<div class="report-chart-container">
-						<div class="report-chart-box">
-							<img class="img-responsive" src="img/chart-i02.png" />
-						</div>
-						<div class="report-chart-txt-box">
-							<p>The performance effect is derived by <strong>simulating the profit of your manually closed profit trades in case you did nothing</strong> and let it reach your original TP or SL. The result is compared to your actual profit for those trades.</p>
-							<p>For details, please refer to your personal output chart.</p>
-							<h4>Further information</h4>
-							<ul>
-								<li><a href="#" target="_blank">Prospect Theory</a></li>
-								<li><a href="#" target="_blank">Pessimism Bias</a></li>
-								<li><a href="#" target="_blank">Loss aversion</a></li>
-							</ul>
-						</div>
-					</div>
-					
-				</div>
-			</div>
+	<!--FAQ -->
+	<div class="main-content-container">
+		<h1>Share CFD Trading FAQ</h1>	
+		<!-- accordion -->
+		<button class="accordion">
+			<div><strong>How are the results of this TradeMedic Report generated?</strong></div>
+			<a class="btn-open"><span class="ht-arrow-thin"></span></a>
+		</button>
+		<div class="panel">
+			<p class="faq">
+				The results are fully automatically generated based on your historic trades. Smart algorithms analyze your trades, identify patterns &amp; behaviors, interpret them, and derive the quantified effects shown in the report.
+			</p>
+		</div>
+		<!-- accordion end -->
+		<!-- accordion -->
+		<button class="accordion">
+			<div><strong>Can I view the charts in different timeframes and dimensions?</strong></div>
+			<a class="btn-open"><span class="ht-arrow-thin"></span></a>
+		</button>
+		<div class="panel">
+			<p class="faq">
+				Yes, you can view the charts in custom timeframes for more recent performances, alter between Pip &amp; Return to derive position sizing effects, analyze number of trades, significances, benchmarks, risk effects, and more. These additional insights are available through FP Markets.
+			</p>
+		</div>
+		<!-- accordion end -->
+		<!-- accordion -->
+		<button class="accordion">
+			<div><strong>Can I receive alerts if I perform trades that show issues?</strong></div>
+			<a class="btn-open"><span class="ht-arrow-thin"></span></a>
+		</button>
+		<div class="panel">
+			<p class="faq">
+				Yes, FP Markets enables real-time alerts in case you exhibit trading actions indicative of behaving in one of your trading issues. Moreover, you can receive alerts in case risk management related actions are identified. All alerts can be customized based on your preferences.
+			</p>
+		</div>
+		<!-- accordion end -->
+		<!-- accordion -->
+		<button class="accordion">
+			<div><strong>Are the TradeMedic Reports also available for accounts except MetaTrader 4?</strong></div>
+			<a class="btn-open"><span class="ht-arrow-thin"></span></a>
+		</button>
+		<div class="panel">
+			<p class="faq">
+				Currently, the Trade Medic reports are only available for MetaTrader 4 users. However, we are already working on integrating additional trading platforms frequently used by traders. Stay tuned for more integrations.
+			</p>
+		</div>
+		<!-- accordion end -->
+		<!-- accordion -->
+		<button class="accordion">
+			<div><strong>Are there additional analytics available?</strong></div>
+			<a class="btn-open"><span class="ht-arrow-thin"></span></a>
+		</button>
+		<div class="panel">
+			<p class="faq">
+				here are many more charts available that outline trading behaviors, strategies, etc.. Moreover, advanced statistics, tracking tools, and in-depth explanations &amp; videos on root causes of behaviors are available. These additional sources can be found on FP Markets.
+			</p>
+		</div>
+		<!-- accordion end -->
+		<!-- accordion -->
+		<button class="accordion">
+			<div><strong>Why do I receive this report?</strong></div>
+			<a class="btn-open"><span class="ht-arrow-thin"></span></a>
+		</button>
+		<div class="panel">
+			<p class="faq">
+				This report has been generated as a service by FP Markets. To inquire about the eligibility to receive this and future reports, please contact FP Markets.
+			</p>
+		</div>
+		<!-- accordion end -->
+		<p style="padding:30px 40px 0 40px;">For further questions, please refer to our FAQ page <a href="#">here</a>.</p>
+		<!--footer-->
+		<div class="footer">
+			<p class="footer-disclaimer">HIGH RISK WARNING: Foreign exchange and other CFD trading carries a high level of risk and may not be suitable for everyone. The usage of leverage creates additional risk and loss exposure. Your investment objectives, experience level and risk tolerance have to be taken into consideration before you decide to trade foreign exchange or other CFD products. You could lose some or all of your entire investment. Do not invest money that you cannot afford to lose and always use an appropriate risk management. It’s important to educate yourself on the risks associated with foreign exchange trading, and seek professional advice from an independent financial or tax advisor in case of any questions. Any data and information is provided ‘as is’ solely for informational purposes, and is not intended for trading purposes or advice. Past performance, which are presented on this website or you find somewhere else, is not indicative of future results.</p>
 		</div>
 	</div>
-	<!-- the modal end -->
+		
+	<!-- main content area end -->
+
 </body>
-<script>
-	// Get the modal
-	var modal = document.getElementById("modalInfoBox");
-
-	// Get the button that opens the modal
-	var btn1 = document.getElementById("modalinfo1");
-
-	// Get the <span> element that closes the modal
-	var span = document.getElementsByClassName("close")[0];
-
-	// When the user clicks the button, open the modal 
-	btn1.onclick = function() {
-		modal.style.display = "block";
-	}
-
-	// When the user clicks on <span> (x), close the modal
-	span.onclick = function() {
-		modal.style.display = "none";
-	}
-
-	// When the user clicks anywhere outside of the modal, close it
-	window.onclick = function(event) {
-		if (event.target == modal) {
-			modal.style.display = "none";
-		}
-	}
-</script>
 <script>
 	var acc = document.getElementsByClassName("accordion");
 	var i;
