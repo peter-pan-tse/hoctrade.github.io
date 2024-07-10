@@ -16,45 +16,6 @@
 		});
 	});
 </script>
-<!-- Customizable styles -->
-<style>
-	.header h1 {
-		font-weight: bold;
-		font-size:4.5em;
-		line-height: 1.25em;
-		color:#F5F7F4;
-		margin:0 10%;
-	}
-	@media only screen and (max-width: 1024px) {
-		.header h1 {
-			align-items: flex-start;
-			padding:0px 30px;
-			font-size:2.5em;
-		}
-	}
-	@media only screen and (max-width: 920px) {
-		.header h1 {
-			align-items: flex-start;
-			padding:0px 30px;
-			font-size:2em;
-		}
-	}
-	@media only screen and (max-width: 540px) {
-		.header {
-			height:auto;
-		}
-		.header h1 {
-			padding:0px 15px 70px 15px;
-			font-size:2em;
-		}
-	}
-	a.btn-info {
-		color:#CDD5E3;
-	}
-	a.btn-info:hover {
-		
-	}
-</style>
 </head>
 <body>
 	<!--header and menu -->
@@ -693,6 +654,7 @@
 </body>
 <script>
 	var acc = document.getElementsByClassName("accordion");
+	var expand = document.getElementsByClassName("btn-open");
 	var i;
 
 	for (i = 0; i < acc.length; i++) {
@@ -703,6 +665,7 @@
 				panel.style.maxHeight = null;
 			} else {
 				panel.style.maxHeight = panel.scrollHeight + "px";
+				//expand.transform.rotate(0deg);
 			} 
 		});
 	}
