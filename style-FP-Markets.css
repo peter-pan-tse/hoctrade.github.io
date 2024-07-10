@@ -103,7 +103,7 @@ a.btn-info:hover {
 	align-items:center;
 	text-align: center;
 	width: 85%;
-	height:510px;
+	height:calc(55vh);
 	margin:0;
 	padding:100px 7.5% 50px;
 	background-image: url(img/trade-medic-report-cover-bg-fpmarkets.png);
