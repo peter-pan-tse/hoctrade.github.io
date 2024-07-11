@@ -43,6 +43,11 @@ a.btn-info {
 a.btn-info:hover {
 	color:#00BDFF;
 }
+@media only screen and (max-width: 920px) {
+	a.btn-info {
+		font-size:22px;
+	}
+}
 .desktop {
 	display:block;
 }
@@ -86,10 +91,12 @@ a.btn-info:hover {
 	background-repeat: no-repeat;
 	background-color:#12223b;
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 920px) {
 	.header {
-		flex-direction: column;
-		height:50vh;
+		height:30vh;
+		max-height:auto;
+		width:calc(100% - 80px);
+		padding:40px;
 	}
 }
 .header h1 {
@@ -99,27 +106,9 @@ a.btn-info:hover {
 	color:#F5F7F4;
 	margin:0 10%;
 }
-@media only screen and (max-width: 1024px) {
-	.header h1 {
-		align-items: flex-start;
-		padding:0px 30px;
-		font-size:2.5em;
-	}
-}
 @media only screen and (max-width: 920px) {
 	.header h1 {
-		align-items: flex-start;
-		padding:0px 30px;
-		font-size:2em;
-	}
-}
-@media only screen and (max-width: 540px) {
-	.header {
-		height:auto;
-	}
-	.header h1 {
-		padding:0px 15px 70px 15px;
-		font-size:2em;
+		font-size:1.8em;
 	}
 }
 .logo {
@@ -133,22 +122,29 @@ a.btn-info:hover {
 .logo > img {
 	width: 320px;
 }
+@media only screen and (max-width: 920px) {
+	.logo {
+		top:40px;
+		left:40px;
+	}
+	.logo > img {
+		width: 280px;
+	}
+}
 .disclaimer {
 	display: block;
 	text-align: left;
 	position:absolute;
 	bottom:50px;
-	width:85.2%;
+	width:85%;
 	color:#CDD5E3;
 	font-size: 12px;
 	line-height: 1.5em;
 }
-@media only screen and (max-width: 540px) {
-	.logo {
-		height:150px;
-	}
-	.logo > img {
-		height: 100px;
+@media only screen and (max-width: 920px) {
+	.disclaimer {
+		bottom:40px;
+		width:calc(100% - 80px);
 	}
 }
 .session-box {
@@ -163,6 +159,13 @@ a.btn-info:hover {
 .session-text {
 	margin:0 20px 4px 0;
 	text-align: right;
+}
+@media only screen and (max-width: 920px) {
+	.session-box {
+		top:50px;
+		right:0px;
+		transform: scale(0.75);
+	}
 }
 .img-responsive {
 	display:inline-block;
@@ -187,7 +190,8 @@ a.btn-info:hover {
 }
 @media only screen and (max-width: 920px) {
 	.main-content-container {
-		padding: 0 10px;
+		width:calc(100% - 80px);
+		padding: 40px;
 	}
 }
 .general-info-box {
@@ -379,11 +383,6 @@ a.btn-info:hover {
 	align-items: stretch;
 	padding:20px 0 0 0;
 }
-@media only screen and (max-width: 540px) {
-	.speedometer-body {
-		padding:10px;
-	}
-}
 .speedometer-footer {
 	display:flex;
 	position:absolute;
@@ -392,6 +391,13 @@ a.btn-info:hover {
 	justify-content: space-between;
 	align-items: center;
 	font-size: 20px;
+}
+@media only screen and (max-width: 920px) {
+	.speedometer-footer {
+		right:10px;
+		top:50px;
+		transform: scale(0.75);
+	}
 }
 .speedometer-item {
 	position:relative;
@@ -411,14 +417,12 @@ a.btn-info:hover {
 .speedometer-item:hover {
 	transform:scale(1.1);
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 920px) {
 	.speedometer-item {
-		padding:65px 5px 5px 5px;
-		width:18%;
-		border-radius:10px;
-		margin:5px;
-		font-size:12px;
-		font-weight:normal;
+		transform:scale(0.75);
+	}
+	.speedometer-item:hover {
+		transform:scale(0.9);
 	}
 }
 .speedometer-dial {
@@ -606,6 +610,11 @@ a.btn-info:hover {
     font-size: 22px;
     font-weight: bold;
 }
+@media only screen and (max-width: 920px) {
+	.top-report-box-header {
+		font-size: 18px;
+	}
+}
 .top-report-box-body {
 	display:flex;
 	flex-direction: column;
@@ -613,13 +622,18 @@ a.btn-info:hover {
 	align-items:center;
     padding:10px 10px 40px 10px;
 }
-
 ul.medic-report {
 	list-style: none;
 	font-size:22px;
 	line-height: 1.25em;
 	margin:0;
 	padding:0;
+}
+@media only screen and (max-width: 920px) {
+	ul.medic-report {
+		list-style: none;
+		font-size:16px;
+	}
 }
 ul.medic-report li {
 	display:flex;
@@ -628,9 +642,6 @@ ul.medic-report li {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	transition: all 0.3s ease;
-}
-ul.medic-report li:nth-child(even) {
-	/*background-color:#efefef;*/
 }
 .column-issue, .column-severity, .column-effect, .column-info, .column-risk-ico, .column-risk {
 	display:flex;
@@ -807,6 +818,17 @@ div.sev-bar-dot {
 	font-size:22px;
 	font-weight: normal;
 }
+@media only screen and (max-width: 920px) {
+	.severity-text {
+		font-size:18px;
+	}
+	.perf-effect-text {
+		font-size:32px;
+	}
+	.perf-effect-text span {
+		font-size:18px;
+	}
+}
 .sev-bar-top {
 	display:inline-block;
 	position:relative;
@@ -871,6 +893,7 @@ a.btn-top-info span {
 	display:flex;
 	justify-content: space-between;
 	align-items: center;
+	text-align: left;
     min-height: 80px;
     padding: 30px 100px 30px 40px;
 	margin:20px 0 0 0;
