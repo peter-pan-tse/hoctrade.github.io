@@ -45,6 +45,7 @@ h3 {
 	h1 {
 		font-size: 24px;
 		margin-bottom:30px;
+		text-align: center;
 	}
 }
 a {
@@ -91,9 +92,15 @@ a.btn-info:hover {
 	.tablet {
 		display:block;
 	}
+	.mobile {
+		display:none;
+	}
 }
 @media only screen and (max-width: 540px) {
 	.desktop {
+		display:none;
+	}
+	.tablet {
 		display:none;
 	}
 	.mobile {
@@ -473,6 +480,14 @@ a.btn-info:hover {
 		transform: scale(0.75);
 	}
 }
+@media only screen and (max-width: 540px) {
+	.speedometer-footer {
+		width:300px;
+		right:calc(50vw - 150px);
+		top:75px;
+		transform: scale(0.5);
+	}
+}
 .speedometer-item {
 	position:relative;
 	display:flex;
@@ -499,6 +514,13 @@ a.btn-info:hover {
 		transform:scale(0.9);
 	}
 }
+@media only screen and (max-width: 540px) {
+	.speedometer-item {
+		width:50%;;
+		padding:110px 0px 10px 0px;
+		transform:scale(0.75);
+	}
+}
 .speedometer-dial {
 	position:absolute;
 	width:180px;
@@ -516,15 +538,15 @@ a.btn-info:hover {
 }
 @media only screen and (max-width: 540px) {
 	.speedometer-dial {
-		width:60px;
-		left:calc(50% - 30px);
+		width:150px;
+		left:calc(50% - 75px);
 	}
 	.speedometer-hand {
-		width:60px;
+		width:150px;
 		height:2px;
 		border-radius:2px;
-		top:39px;
-		left: calc(50% - 30px);
+		top:83px;
+		left: calc(50% - 75px);
 	}
 }
 .hand-behavioral {
@@ -612,9 +634,9 @@ a.btn-info:hover {
 	.gear-dot {
 		width:8px;
 		height:8px;
-		border-radius: 6px;
-		top:34px;
-		left: calc(50% - 6px);
+		border-radius: 4px;
+		top:80px;
+		left: calc(50% - 4px);
 	}
 }
 /* table for desktop */
@@ -644,7 +666,7 @@ a.btn-info:hover {
 	flex-wrap: wrap;
 	justify-content:space-between;
 	align-items:stretch;
-	padding:24px 0 0 0;
+	padding:0;
 }
 .top-report-box {
 	display:flex;
@@ -666,7 +688,7 @@ a.btn-info:hover {
 		flex-direction:column;
 		justify-content:center;
 		align-items:stretch;
-		padding:0 10px 30px 10px;
+		padding:0 10px;
 	}
 	.top-report-box {
 		width:100%;
@@ -717,11 +739,22 @@ ul.medic-report li {
 	justify-content: space-between;
 	transition: all 0.3s ease;
 }
+@media only screen and (max-width: 540px) {
+	ul.medic-report li {
+		line-height: 1.15em;
+	}
+}
 .column-issue, .column-severity, .column-effect, .column-info, .column-risk-ico, .column-risk {
 	display:flex;
 	position:relative;
 	padding: 20px 0px;
 	align-items:center;
+}
+@media only screen and (max-width:540px) {
+	.column-issue, .column-severity, .column-effect, .column-info, .column-risk-ico, .column-risk {
+		padding: 10px 0px;
+		font-size:12px;
+	}
 }
 .column-issue-area, .column-improvement, .column-donut {
 	display:flex;
@@ -750,7 +783,7 @@ ul.medic-report li {
 }
 .column-effect {
 	width:calc(20% - 10px);
-	text-align: center;
+	text-align: left;
 }
 .column-info {
 	width:calc(15% - 10px);
@@ -765,6 +798,40 @@ ul.medic-report li {
 .column-risk {
 	width:calc(60% - 10px);
 	text-align: left;
+}
+@media only screen and (max-width: 920px) {
+	.column-issue {
+		width:calc(25% - 10px);
+	}
+	.column-severity {
+		width:calc(35% - 10px);
+	}
+	.column-effect {
+		width:calc(20%);
+	}
+	.column-info {
+		width:calc(10%);
+	}
+}
+@media only screen and (max-width: 540px) {
+	.column-issue {
+		width:calc(25% - 5px);
+	}
+	.column-severity {
+		width:calc(40% - 5px);
+	}
+	.column-effect {
+		width:calc(25%);
+	}
+	.column-info {
+		width:calc(5%);
+	}
+	.column-risk-ico {
+		width:calc(5%);
+	}
+	.column-risk {
+		width:calc(60% - 10px);
+	}
 }
 /*columns for improvement tracker*/
 .column-issue-area {
@@ -791,14 +858,6 @@ ul.medic-report li {
 	align-items:center;
 	justify-content:flex-start;
 	width:calc(100% - 20px);
-}
-@media only screen and (max-width: 540px) {
-	.column-issue {
-		width:calc(26% - 20px);
-	}
-	.column-severity {
-		width:calc(18% - 20px);
-	}
 }
 @media only screen and (max-width: 920px) {
 	.column-issue-area {
@@ -852,6 +911,11 @@ ul.medic-report li {
 	height:18px;;
 	border-radius:9px;
 	background: linear-gradient(90deg, rgba(83,173,87,1) 0%, rgba(109,173,59,1) 16.7%, rgba(150,172,61,1) 33.4%, rgba(241,210,85,1) 50.1%, rgba(227,116,66,1) 66.8%, rgba(228,90,63,1) 83.5%, rgba(228,68,80,1) 100%);
+}
+@media only screen and (max-width: 920px) {
+	.sev-bar {
+		width:90%;
+	}
 }
 .sev-bar-grey {
 	display:inline-block;
@@ -978,8 +1042,13 @@ a.btn-top-info span {
 	background-color:#F7F8FB;
 	transition: all ease 0.3s;
 }
-.accordion:hover {
-	
+@media only screen and (max-width: 540px) {
+	.accordion {
+		min-height: 60px;
+		padding: 20px 50px 20px 10px;
+		margin:10px 0 0 0;
+		font-size: 14px;
+	}
 }
 .panel {
 	padding: 0;
@@ -995,6 +1064,20 @@ p.faq {
 	color:#132A4A;
     margin: 0px 100px 30px 40px;
 }
+p.faq-footer {
+	padding:30px 40px 0 40px;
+}
+@media only screen and (max-width: 540px) {
+	p.faq {
+		font-size: 14px;
+		line-height: 1.25em;
+		color:#132A4A;
+		margin: 0px 10px 20px 10px;
+	}
+	p.faq-footer {
+		padding:20px 10px 0 10px;
+	}
+}
 a.btn-open {
 	position:absolute;
 	top:28px;
@@ -1005,6 +1088,13 @@ a.btn-open {
 }	
 a.btn-open:hover {
 	color:#41B8EA;
+}
+@media only screen and (max-width: 540px) {
+	a.btn-open {
+		top:18px;
+		right:10px;
+		font-size:20px;
+	}
 }
 .risk-ico-po {
 	font-size:32px;
@@ -1021,6 +1111,12 @@ a.btn-open:hover {
 @media only screen and (max-width: 540px) {
 	.larger-font {
 		font-size: 12px;
+	}
+		.risk-ico-po {
+		font-size:24px;
+	}
+	.risk-ico-ng {
+		font-size:24px;
 	}
 }
 .overall-score-box {
@@ -1328,32 +1424,28 @@ a.btn-open:hover {
 	.detail-info-box-1, .detail-info-box-2, .detail-info-box-3, .detail-info-box-4 {
 		flex-direction: column;
 		align-items: stretch;
-		width:calc(100% - 35px);
-	}
-	.detail-info-box-5 {
-		width:calc(100% - 35px);
-		padding:15px;
+		padding:20px 10px;
+		width:calc(100% - 22px);
 	}
 	.detail-info-box-1 {
-		border-width:2px 2px 2px 2px;
-		border-radius:10px 10px 0 0;
+		border-width:1px 1px 1px 1px;
+		border-radius:5px 5px 0 0;
 	}
 	.detail-info-box-2 {
-		border-width:0 2px 2px 2px;
+		border-width:0 1px 1px 1px;
 		border-radius:0 0 0 0;
 	}
 	.detail-info-box-3 {
-		border-width:0px 2px 2px 2px;
+		border-width:0px 1px 1px 1px;
 		border-radius:0 0 0 0;
 	}
 	.detail-info-box-4 {
-		border-width:0px 2px 2px 2px;
-		border-radius:0 0 0 0;
+		border-width:0px 1px 1px 1px;
+		border-radius:0 0 5px 5px;
 	}
 	.detail-info-box-5 {
-		border-width:0px 2px 2px 2px;
-		border-radius:0 0 10px 10px;
-		color:#F5F7F4;
+		width:calc(100% - 20px);
+		padding:20px 10px;
 	}
 }
 .bg-ng {
@@ -1372,18 +1464,21 @@ a.btn-open:hover {
 	font-size:24px;
 	margin:0 0 20px 0;
 }
-.detail-info-box-2 > h2 > span {
-	position:absolute;
-	left:-20px;
-	top:-15px;
-	font-size:60px;
-	/*color:#047F92;*/
-}
 .detail-info-box-5 > div > span {
 	position:absolute;
 	left:0px;
 	font-size:36px;
 	top:20px;
+}
+@media only screen and (max-width: 540px) {
+	.detail-info-box-1 h3, .detail-info-box-2 h3, .detail-info-box-3 h3, .detail-info-box-4 h3, .detail-info-box-5 h3 {
+		font-size:14px;
+	}
+	.detail-info-box-1 h2, .detail-info-box-2 h2, .detail-info-box-3 h2, .detail-info-box-4 h2, .detail-info-box-5 h2 {
+		position:relative;
+		font-size:20px;
+		margin:0 0 10px 0;
+	}
 }
 .alert-msg-box {
 	padding-left:50px;
@@ -1393,9 +1488,6 @@ a.btn-open:hover {
 		left:10px;
 		font-size:48px;
 		top:10px;
-	}
-	.alert-msg-box {
-		padding-left:50px;
 	}
 }
 .severity-level {
@@ -1410,6 +1502,11 @@ a.btn-open:hover {
 @media only screen and (max-width: 540px) {
 	.explanation-box h2, .alert-details-box-tm h2 {
 		font-size:18px;
+	}
+	.severity-level {
+		right:20px;
+		bottom:25px;
+		font-size:14px;
 	}
 }
 .report-chart-container {
@@ -1707,8 +1804,6 @@ ul.medic-report li:nth-child(odd) p.center-score-s:hover, ul.medic-report li:nth
 	overflow: hidden; /* Enable scroll if needed */
 	background-color: rgb(0,0,0); /* Fallback color */
 	background-color: rgba(0,0,0,0.75); /* Black w/ opacity */
-	-webkit-animation-name: fadeIn; /* Fade in the background */
-	-webkit-animation-duration: 0.5s;
 	animation-name: fadeIn;
 	animation-duration: 0.5s
 }
@@ -1724,8 +1819,6 @@ ul.medic-report li:nth-child(odd) p.center-score-s:hover, ul.medic-report li:nth
 	padding:40px 0;
 	color:#132A4A;
 	border-radius:5px;
-	-webkit-animation-name: slideIn;
-	-webkit-animation-duration: 0.5s;
 	animation-name: slideIn;
 	animation-duration: 0.5s
 }
@@ -1735,14 +1828,20 @@ ul.medic-report li:nth-child(odd) p.center-score-s:hover, ul.medic-report li:nth
 		margin:20px 0 0 0;
 		top:auto;
 		bottom:0px;
-		padding:100px 0 0 0;
+		padding:60px 0 0 0;
 		border-radius:5px 5px 0 0;
+	}
+}
+@media only screen and (max-width: 540px) {
+	.modal-content {
+		margin:0;
+		padding:40px 0 0 0;
 	}
 }
 .modal-header {
 	display: block;
 	position:absolute;
-	width: calc(100% - 40px);
+	width:100%;
 	top:0;
 	padding:0;
 	font-size:14px;
@@ -1763,10 +1862,15 @@ ul.medic-report li:nth-child(odd) p.center-score-s:hover, ul.medic-report li:nth
 		padding: 10px 10px 0;
 		text-align: center;
 	}
-
 	.modal-body {
-		max-height: calc(100vh - 200px);
-		padding: 0 10px 20px;
+		max-height: calc(100vh - 280px);
+		padding: 40px;
+	}
+}
+@media only screen and (max-width: 540px) {
+	.modal-body {
+		padding: 20px 10px;
+		height:calc(90vh);
 	}
 }
 /* Add Animation */
@@ -1789,7 +1893,7 @@ ul.medic-report li:nth-child(odd) p.center-score-s:hover, ul.medic-report li:nth
 	from {opacity: 0} 
 	to {opacity: 1}
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 920px) {
 	@-webkit-keyframes slideIn {
 		from {bottom: -100vh; opacity: 0} 
 		to {bottom: 0px; opacity: 1}
@@ -1822,7 +1926,7 @@ ul.medic-report li:nth-child(odd) p.center-score-s:hover, ul.medic-report li:nth
 	width:36px;
 	height:36px;
 	top:-18px;
-	right:-58px;
+	right:-18px;
 	justify-content: center;
 	align-items: center;
 	text-align:center;
@@ -1838,19 +1942,21 @@ ul.medic-report li:nth-child(odd) p.center-score-s:hover, ul.medic-report li:nth
 }
 @media only screen and (max-width: 920px) {
 	.close {
-		position: relative;
+		position:absolute;
 		display:block;
+		top:20px;
+		left:calc(50% - 50px);
 		width:100px;
 		height:6px;
-		background-color:#000000;
+		background-color:#132A4A;
 		border-radius:3px;
-		margin:10px auto 20px;
-		color: #047F92;
+		color: #132A4A;
 		float: none;
 		font-size: 0px;
 		line-height:0px;
 		text-decoration: none;
 		transition: none;
+		box-shadow: 2px 2px 10px rgba(0,0,0,0.0);
 	}
 }
 .close:hover, .close:focus, .back:hover, .back:focus {

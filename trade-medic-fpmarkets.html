@@ -39,7 +39,7 @@
 	<!--<div style="height:20px;"></div> -->
 	<div class="main-content-container">
 		<h1 style="margin-bottom:20px;">Your TradeMedic report</h1>
-		<div style="display:flex; align-items: center;"><span class="ht-star"></span> TOP 4 critical issues</div>
+		<div style="display:flex; align-items:center; margin-bottom:1em;"><span class="ht-star"></span> TOP 4 critical issues</div>
 		<!-- top 4 -->
 		<div class="medic-report-top">
 			<!-- -->
@@ -176,12 +176,31 @@
 	<div class="main-content-container">
 		<h1>Full report</h1>
 		<ul class="medic-report">
-					<li style="padding-bottom:30px;">
-						<div class="column-issue"><strong>ISSUE</strong></div>
-						<div class="column-severity"><strong>SEVERITY</strong></div>
-						<div class="column-effect"><strong>PERFORMANCE EFFECT</strong></div>
-						<div class="column-info"><strong>FURTHER DETAILS</strong></div>
-					</li>
+			<div class="desktop">
+				<li style="padding-bottom:30px;">
+					<div class="column-issue"><strong>ISSUE</strong></div>
+					<div class="column-severity"><strong>SEVERITY</strong></div>
+					<div class="column-effect"><strong>PERFORMANCE EFFECT</strong></div>
+					<div class="column-info"><strong>FURTHER DETAILS</strong></div>
+				</li>
+			</div>
+			<div class="tablet">
+				<li style="padding-bottom:30px;">
+					<div class="column-issue"><strong>ISSUE</strong></div>
+					<div class="column-severity"><strong>SEVERITY</strong></div>
+					<div class="column-effect"><strong>PERFORMANCE EFFECT</strong></div>
+					<div class="column-info"><strong>FURTHER DETAILS</strong></div>
+				</li>
+			</div>
+			<div class="mobile">
+				<li style="padding-bottom:10px;">
+					<div class="column-issue"><strong>ISSUE</strong></div>
+					<div class="column-severity"><strong>SEVERITY</strong></div>
+					<div class="column-effect"><strong>PERFORMANCE</strong></div>
+					<div class="column-info"></div>
+				</li>
+			</div>
+					
 					<!---->
 					<li>
 						<div class="column-issue">Catch a falling knife</div>
@@ -510,12 +529,31 @@
 	<div class="main-content-container" style="background-color:#F7F8FB;">
 		<h1>Risk report</h1>
 		<ul class="medic-report">
-					<li style="padding-bottom:30px;">
-						<div class="column-issue"><strong>RISK AREA</strong></div>
-						<div class="column-risk-ico"></div>
-						<div class="column-risk"></div>
-						<div class="column-info"><strong>FURTHER DETAILS</strong></div>
-					</li>
+			<div class="desktop">
+				<li style="padding-bottom:30px;">
+					<div class="column-issue"><strong>RISK AREA</strong></div>
+					<div class="column-risk-ico"></div>
+					<div class="column-risk"></div>
+					<div class="column-info"><strong>FURTHER DETAILS</strong></div>
+				</li>
+			</div>
+			<div class="tablet">
+				<li style="padding-bottom:30px;">
+					<div class="column-issue"><strong>RISK AREA</strong></div>
+					<div class="column-risk-ico"></div>
+					<div class="column-risk"></div>
+					<div class="column-info"><strong>FURTHER DETAILS</strong></div>
+				</li>
+			</div>
+			<div class="mobile">
+				<li style="padding-bottom:10px;">
+					<div class="column-issue"><strong>RISK AREA</strong></div>
+					<div class="column-risk-ico"></div>
+					<div class="column-risk"></div>
+					<div class="column-info"></div>
+				</li>
+			</div>
+					
 					<!---->
 					<li>
 						<div class="column-issue">Emotional loss streak</div>
@@ -642,7 +680,7 @@
 			</p>
 		</div>
 		<!-- accordion end -->
-		<p style="padding:30px 40px 0 40px;">For further questions, please refer to our FAQ page <a href="#">here</a>.</p>
+		<p class="faq-footer">For further questions, please refer to our FAQ page <a href="#">here</a>.</p>
 		<!--footer-->
 		<div class="footer">
 			<p class="footer-disclaimer">HIGH RISK WARNING: Foreign exchange and other CFD trading carries a high level of risk and may not be suitable for everyone. The usage of leverage creates additional risk and loss exposure. Your investment objectives, experience level and risk tolerance have to be taken into consideration before you decide to trade foreign exchange or other CFD products. You could lose some or all of your entire investment. Do not invest money that you cannot afford to lose and always use an appropriate risk management. It’s important to educate yourself on the risks associated with foreign exchange trading, and seek professional advice from an independent financial or tax advisor in case of any questions. Any data and information is provided ‘as is’ solely for informational purposes, and is not intended for trading purposes or advice. Past performance, which are presented on this website or you find somewhere else, is not indicative of future results.</p>
