@@ -155,7 +155,7 @@ a.btn-info:hover {
 }
 @media only screen and (max-width: 540px) {
 	.header h1 {
-		font-size:1.6em;
+		font-size:1.75em;
 	}
 }
 .logo {
