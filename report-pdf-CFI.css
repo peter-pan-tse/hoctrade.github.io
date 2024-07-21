@@ -44,7 +44,7 @@
 	color:#101921; /* color match to the corporate color of the logo */
 }
 .a4-page h2 {
-	font-size:36px;
+	font-size:32px;
 	font-weight:normal;
 	line-height: 1.15em;
 	margin-top:10px;
@@ -119,6 +119,15 @@ ul.cover-toc li {
 	padding:50px 100px 100px 100px;
 	color:#ffffff;
 	font-size:14px;
+	text-align: justify;
+}
+.general-disclaimer {
+	position:absolute;
+	bottom:0px;
+	padding:0 450px 30px 0;
+	color:#999999;
+	font-size:14px;
+	line-height: 1.25em;
 	text-align: justify;
 }
 
@@ -249,6 +258,27 @@ ul.cover-toc li {
 	align-items:center;
     padding:10px 10px 30px 10px;
 	height:380px;
+}
+.click-hint {
+	display:inline-block;
+	position:absolute;
+	right:-16px;
+	top:-22px;
+	padding:4px 8px;
+	background-color:brown;
+	border-radius:4px;
+	font-size: 12px;
+	line-height: 1em;
+}
+.arrow-down {
+	position:absolute;
+	left:calc(50% - 5px);
+	bottom:-5px;
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid brown;
 }
 
 /* toc */
@@ -575,10 +605,13 @@ a.btn-top-info span {
 /* faq */
 p.faq {
 	margin:20px 0 60px;
+	font-size:16px;
+	line-height: 1.25em;
 }
 p.faq > strong {
 	display:block;
-	font-size:24px;
+	font-size:18px;
+	line-height: 1.25em;
 	padding-bottom:5px;
 	color:#00263F;
 }
