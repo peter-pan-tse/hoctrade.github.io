@@ -98,7 +98,15 @@ ul.cover-toc li {
 	font-size:14px;
 	text-align: justify;
 }
-
+.general-disclaimer {
+	position:absolute;
+	bottom:0px;
+	padding:0 280px 30px 0;
+	color:#999999;
+	font-size:14px;
+	line-height: 1.25em;
+	text-align: justify;
+}
 /* 8-point */
 .dashboard-container {
 	display:flex;
@@ -244,7 +252,27 @@ ul.cover-toc li {
     padding:10px 10px 30px 10px;
 	height:380px;
 }
-
+.click-hint {
+	display:inline-block;
+	position:absolute;
+	right:-16px;
+	top:-22px;
+	padding:4px 8px;
+	background-color:brown;
+	border-radius:4px;
+	font-size: 12px;
+	line-height: 1em;
+}
+.arrow-down {
+	position:absolute;
+	left:calc(50% - 5px);
+	bottom:-5px;
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid brown;
+}
 /* toc */
 .toc-container {
 	display:flex;

@@ -1466,3 +1466,29 @@ a.cat-bullet.active {
   	90% {background-color: #BE1E2D;}
 	100% {background-color: #BE1E2D;}
 }
+.legend {
+	display: flex;
+	flex-wrap:nowrap;
+	align-items: center;
+	justify-content: center;
+	font-size:18px;
+	color:#999999;
+}
+.legend-dot-box {
+	display:flex;
+	align-items: center;
+	padding:0 0 0 20px;
+}
+.legend-dot {
+	display: inline-block;
+	width:20px;
+	height: 20px;
+	border-radius:10px;
+	margin:0 5px 0 20px;
+}
+.dot-low {
+	background-color: #49b956;
+}
+.dot-high {
+	background-color: #c42f3b;
+}

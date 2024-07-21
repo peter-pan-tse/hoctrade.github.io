@@ -130,7 +130,60 @@ ul.cover-toc li {
 	line-height: 1.25em;
 	text-align: justify;
 }
-
+/* intro */
+.intro-howto-box {
+	display:flex;
+	justify-content: space-between;
+	align-items: stretch;
+	margin:40px 0;
+}
+.intro-howto-item {
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	width:30%;
+}
+.intro-info-box {
+	display:flex;
+	position:relative;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: stretch;
+	flex-wrap: wrap;
+	width:calc(100% - 80px);
+	padding:20px 40px;
+	margin:40px 0;
+	background-color: #F3F7FE;
+	border-radius:20px;
+	box-shadow: 5px 5px 10px rgba(0,0,0,0.25);
+}
+.intro-info-box-1 {
+	display:inline-block;
+	text-align: center;
+	padding: 20px;
+	width:calc(100% - 40px);
+	border-bottom:1px solid #CCCCCC;
+}
+.intro-info-box-2 {
+	display:inline-block;
+	text-align: center;
+	padding: 20px;
+	width:calc(30% - 40px);
+}
+.intro-text-box {
+	display:block;
+	width:70%;
+	margin:80px 0;
+	position:relative;
+	padding-left:30%;
+}
+.intro-text-box > strong {
+	font-size:20px;
+}
+.intro-icon {
+	position:absolute;
+}
 /* 8-point */
 .dashboard-container {
 	display:flex;
