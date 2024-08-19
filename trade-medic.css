@@ -775,3 +775,131 @@ a.btn-top-info span {
 		width:calc(100% - 10px);
 	}
 }
+a.btn-intro {
+	position:absolute;
+	right:60px;
+	top:14px;
+	height:24px;
+	background-color:#FFFFFF;
+	border-radius: 12px;
+	line-height: 24px;
+	padding:0 12px;
+	transition: all ease 0.3s;
+	cursor: pointer;
+}
+@media only screen and (max-width: 540px) {
+	a.btn-intro {
+		top:8px;
+		right:20px;
+		font-weight: bold;
+	}
+}
+a.btn-intro:hover {
+	color:#FFFFFF;
+	background-color:#06AFC9;
+}
+/* intro */
+.intro-howto-box {
+	display:flex;
+	justify-content: space-between;
+	align-items: stretch;
+	margin:40px 0;
+}
+.intro-howto-item {
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	width:30%;
+}
+@media only screen and (max-width: 540px) {
+	.intro-howto-box {
+		display:flex;
+		flex-direction: column;
+	}
+	.intro-howto-item {
+		width:100%;
+		margin-bottom:40px;
+	}
+}
+.intro-info-box {
+	display:flex;
+	position:relative;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: stretch;
+	flex-wrap: wrap;
+	width:calc(100% - 80px);
+	padding:20px 40px;
+	margin:40px 0;
+	background-color: #F3F7FE;
+	border-radius:20px;
+	box-shadow: 5px 5px 10px rgba(0,0,0,0.25);
+}
+.intro-info-box-1 {
+	display:inline-block;
+	text-align: center;
+	padding: 20px;
+	width:calc(100% - 40px);
+	border-bottom:1px solid #CCCCCC;
+}
+.intro-info-box-2 {
+	display:inline-block;
+	text-align: center;
+	padding: 20px;
+	width:calc(30% - 40px);
+}
+@media only screen and (max-width: 540px) {
+	.intro-info-box {
+		width:calc(100% - 40px);
+		padding:20px;
+	}
+	.intro-info-box-2 {
+		display:flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 10px;
+		width:calc(30% - 20px);
+	}
+}
+.intro-text-box {
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	width:100%;
+	margin:40px 0;
+	position:relative;
+}
+.intro-text-box > strong {
+	font-size:20px;
+}
+.intro-icon {
+	width:30%;
+}
+.intro-text {
+	width:60%;
+}
+@media only screen and (max-width: 540px) {
+	.intro-text-box {
+		flex-direction: column;
+		margin:60px 0;
+	}
+	.intro-icon {
+		width:100%;
+	}
+	.intro-text {
+		width:100%;
+	}
+}
+h1.modal-intro-head-text {
+	position:absolute;
+	left:20px;
+	top:20px;
+	margin: 0;
+}
+@media only screen and (max-width: 920px) {
+	h1.modal-intro-head-text {
+		position:relative;
+		margin: 100px 0 0 0;
+	}
+}

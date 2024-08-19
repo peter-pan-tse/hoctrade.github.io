@@ -214,3 +214,6 @@
 		min-height:calc(100vw - 120px);
 	}
 }
+.modal-body h2, .modal-body h3 {
+	line-height: 1.25em;
+}

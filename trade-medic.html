@@ -43,9 +43,15 @@
 		.tablet {
 			display:block;
 		}
+		.mobile {
+			display:none;
+		}
 	}
 	@media only screen and (max-width: 540px) {
 		.desktop {
+			display:none;
+		}
+		.tablet {
 			display:none;
 		}
 		.mobile {
@@ -284,13 +290,18 @@
 	
 	<!-- main content area -->
 	<!-- breadcrumb -->
-	<div class="breadcrumb"><div>Dashboard / <span class="active">Trade medic</span></div></div>
+	<div class="breadcrumb">
+		<div>Dashboard / <span class="active">Trade medic</span></div>
+		<div class="mobile"><a class="btn-intro" id="modalintrom">Introduction to report</a></div>
+	</div>
 	<!-- breadcrumb ended -->
 	<!--<div style="height:20px;"></div> -->
 	<div class="main-content-container">
 		<div class="general-info-header">
 			<div style="font-size:larger;"><span class="ht-medbox"></span> Your trade medic report</div>
-			<a class="btn-info" id="modalinfo" style="position:absolute; top:10px; right:10px;"><span class="ht-info"></span></a>
+			<a class="btn-info" id="" style="position:absolute; top:10px; right:10px;"><span class="ht-info"></span></a>
+			<div class="desktop"><a class="btn-intro" id="modalintrod">Introduction to report</a></div>
+			<div class="tablet"><a class="btn-intro" id="modalintrot">Introduction to report</a></div>
 		</div>
 		<!-- top 3 -->
 		<div class="medic-report-section" style="background-color:#0d6b75; height:50px;">
@@ -1697,7 +1708,75 @@
 		<p class="disclaimer">HIGH RISK WARNING: Foreign exchange and other CFD trading carries a high level of risk and may not be suitable for everyone. The usage of leverage creates additional risk and loss exposure. Your investment objectives, experience level and risk tolerance have to be taken into consideration before you decide to trade foreign exchange or other CFD products. You could lose some or all of your entire investment. Do not invest money that you cannot afford to lose and always use an appropriate risk management. It’s important to educate yourself on the risks associated with foreign exchange trading, and seek professional advice from an independent financial or tax advisor in case of any questions. Any data and information is provided ‘as is’ solely for informational purposes, and is not intended for trading purposes or advice. Past performance, which are presented on this website or you find somewhere else, is not indicative of future results.</p>
 	</div>
 	
-	<!-- The Modal -->
+	<!-- The Modal intro -->
+	<div id="modalIntroBox" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content" style="padding: 70px 0 20px 0;">
+			<div class="modal-header">
+				<!--<h1 class="modal-intro-head-text">Introduction to TradeMedic report</h1>-->
+				<span class="close"><span class="ht-cross"></span></span>
+			</div>
+			<div class="modal-body">
+				<!-- intro content start -->
+				<br>
+				<h2>Personalized insights to empower your trading</h2>
+				<div class="intro-howto-box">
+					<div class="intro-howto-item">
+						<img src="img/tm-report-intro-1.png" width="150" /><h3 style="margin-bottom:5px;">Input</h3>Your trading history &amp; external market data
+					</div>
+					<div class="intro-howto-item">
+						<img src="img/tm-report-intro-2.png" width="150" /><h3 style="margin-bottom:5px;">Analysis</h3>Smart algorithms identify patterns
+					</div>
+					<div class="intro-howto-item">
+						<img src="img/tm-report-intro-3a.png" width="150" /><h3 style="margin-bottom:5px;">Output</h3>Reveal personalized improvement potentials
+					</div>
+				</div>
+				<div class="intro-info-box">
+					<div class="intro-info-box-1"><strong>This report is based on</strong></div>
+					<div class="intro-info-box-2">ID<br><strong>4729503</strong></div>
+					<div class="intro-info-box-2">Trading history<br><strong>154 days</strong></div>
+					<div class="intro-info-box-2">Trades analyzed<br><strong>584</strong></div>
+				</div>
+				<h3 style="font-size:24px; margin:60px 0 40px;">What you will find in this report</h3>
+				<div class="intro-text-box">
+					<div class="intro-icon">
+						<img src="img/tm-feature-pic-1.png" class="img-responsive" />
+					</div>
+					<div class="intro-text">
+						<strong>8-point area assessment</strong><br><br>Discover which trading areas show improvement potentials, analysing timing, strategy, behavioral biases, risk, and more!
+					</div>
+				</div>
+				<div class="intro-text-box">
+					<div class="intro-icon">
+						<img src="img/tm-feature-pic-2.png" class="img-responsive" />
+					</div>
+					<div class="intro-text">
+						<strong>Top 4 opportunities for improvement</strong><br><br>Check your specific Top4 opportunities for improvement scored by their performance effect on your past trading.
+					</div>
+				</div>
+				<div class="intro-text-box">
+					<div class="intro-icon">
+						<img src="img/tm-feature-pic-3.png" class="img-responsive" />
+					</div>
+					<div class="intro-text">
+						<strong>Full trading &amp; risk management report</strong><br><br>Gain a holistic overview through a list of dozens of behavioral patterns &amp; risk scores applied to your trading.
+					</div>
+				</div>
+				<div class="intro-text-box">
+					<div class="intro-icon">
+						<img src="img/tm-feature-pic-4.png" class="img-responsive" />
+					</div>
+					<div class="intro-text">
+						<strong>In-depth issue &amp; risk insights</strong><br><br>Deep-dive into the details of your particular behaviors with personalized insights, charts, and explanations.
+					</div>
+				</div>
+				<!-- intro content end -->
+			</div>
+		</div>
+	</div>
+	<!-- the modal end -->
+	
+	<!-- The Modal info -->
 	<div id="modalInfoBox" class="modal">
 		<!-- Modal content -->
 		<!-- content 1 -->
@@ -1762,6 +1841,7 @@
 
 </body>
 	<script src="modal-medic.js" language="javascript"></script>
+	<script src="modal-medic-intro.js" language="javascript"></script>
 	<script>
 		var acc = document.getElementsByClassName("accordion");
 		var i;
