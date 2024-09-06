@@ -3,6 +3,7 @@
 html {
 	scroll-behavior: smooth;
 	background-color:#e6e6e6;
+	overflow-x:hidden;
 }
 body {
 	font-family: 'Noto Sans';
@@ -14,10 +15,21 @@ body {
 	background-color:#e6e6e6;
 	overflow-x:hidden;
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 920px) {
 	body {
 		font-size:16px;
 		line-height:1.15em;
+	}
+	img {
+		transform: scale(0.8);
+	}
+}
+@media only screen and (max-width: 540px) {
+	body {
+		font-size:14px;
+	}
+	img {
+		transform: scale(0.5);
 	}
 }
 a {
@@ -49,17 +61,31 @@ h3 {
 	color:#027192;
 	margin:0 0 10px 0;
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 920px) {
 	h1 {
-		font-size:24px;
-		line-height:1.15em;
+		font-size:40px;
+		line-height:1.25em;
 	}
 	h2 {
+		font-size:24px;
+		line-height: 1.25em;
+	}
+	h3 {
 		font-size:20px;
 		line-height: 1.15em;
 	}
-	h3 {
+}
+@media only screen and (max-width: 540px) {
+	h1 {
+		font-size:24px;
+		line-height:1.25em;
+	}
+	h2 {
 		font-size:16px;
+		line-height: 1.15em;
+	}
+	h3 {
+		font-size:14px;
 		line-height: 1.15em;
 	}
 }
@@ -99,6 +125,26 @@ h3 {
 	width:auto;
 	height:100px;
 }
+@media only screen and (max-width: 920px) {
+	.header {
+		padding:40px 40px 10px 40px;
+		width:calc(100vw - 80px);
+		height:auto;
+	}
+	.logo img {
+		transform: scale(1);
+		height:80px;
+	}
+}
+@media only screen and (max-width: 540px) {
+	.header {
+		padding:30px 20px 10px 20px;
+		width:calc(100vw - 40px);
+	}
+	.logo img {
+		height:50px;
+	}
+}
 a.btn-sandbox {
 	display:inline-block;
 	text-align:center;
@@ -119,10 +165,21 @@ a.btn-sandbox:hover {
 	transform: scale(1.1);
 }
 @media only screen and (max-width: 920px) {
-
+	a.btn-sandbox {
+		margin-right:-20px;
+		transform: scale(0.8);
+	}
+	a.btn-sandbox:hover {
+		transform: scale(0.9);
+	}
 }
 @media only screen and (max-width: 540px) {
-
+	a.btn-sandbox {
+		transform: scale(0.5);
+	}
+	a.btn-sandbox:hover {
+		transform: scale(0.5);
+	}
 }
 .theme-box {
 	display:flex;
@@ -149,6 +206,40 @@ a.btn-sandbox:hover {
 	color:#00deff;
 	font-size:36px;
 }
+@media only screen and (max-width: 920px) {
+	.theme-box {
+		margin-top:120px;
+		height:calc(100vh - 120px);
+	}
+	.theme-headline {
+		padding:0 40px;
+		max-width:calc(100% - 80px);
+	}
+	.theme-headline h1 {
+		font-size:48px;
+	}
+	.theme-headline h2 {
+		font-size:30px;
+	}
+}
+@media only screen and (max-width: 540px) {
+	.theme-box {
+		margin-top:99px;
+		height:calc(100vh - 99px);
+	}
+	.theme-headline {
+		padding:0 20px;
+		max-width:calc(100% - 40px);
+	}
+	.theme-headline h1 {
+		font-size:24px;
+		line-height: 1.25em;
+	}
+	.theme-headline h2 {
+		font-size:16px;
+		line-height: 1.15em;
+	}
+}
 /* infinite slider */
 @keyframes scroll {
 	0% {
@@ -159,7 +250,7 @@ a.btn-sandbox:hover {
 	}
 }
 .slider {
-	overflow: visible;
+	overflow-X: hidden;
 	position: absolute;
 	bottom: 40px;
 	width: 100%;
@@ -178,6 +269,31 @@ a.btn-sandbox:hover {
 	width:250px;
 	height:auto;
 }
+@media only screen and (max-width: 920px) {
+	.slider .slide img {
+		transform: scale(1);
+	}
+}
+@media only screen and (max-width: 540px) {
+	@keyframes scroll {
+		0% {
+			transform: translateX(0 + 50vw);
+		}
+		100% {
+			transform: translateX(calc(-180px * 35 + 100vw));
+		}
+	}
+	.slider .slide-track {
+		width:calc(180px * 35);
+	}
+	.slider .slide {
+		width:180px;
+	}
+	.slider .slide img {
+		width:180px;
+		transform: scale(1);
+	}
+}
 /* infinite slider */
 /* the outer most block width 100%, apply background colors to this block */
 .module-block {
@@ -187,17 +303,26 @@ a.btn-sandbox:hover {
 	padding:100px 0;
 }
 .main-container {
-	display:block;
 	position:relative;
 	margin: 0 auto;
 	padding: 0 60px;
+	width:calc(100% - 120px);
 	max-width: 1280px;
 }
 @media only screen and (max-width: 920px) {
-
+	.main-container {
+		width:calc(100% - 80px);
+		padding: 0 40px;
+	}
 }
 @media only screen and (max-width: 540px) {
-
+	.module-block {
+		padding:40px 0;
+	}
+	.main-container {
+		width:calc(100% - 40px);
+		padding: 0 20px;
+	}
 }
 /* intro animation */
 .intro-wrapper {
@@ -214,6 +339,15 @@ a.btn-sandbox:hover {
 	text-align:center;
 	width:30%;
 	opacity:0;
+}
+@media only screen and (max-width: 540px) {
+	.intro-step1, .intro-step2, .intro-step3 {
+		width:32%;
+	}
+	.intro-step1 img, .intro-step2 img, .intro-step3 img {
+		width:80px;
+		transform: scale(1);
+	}
 }
 .intro-step1-animation, .intro-step2-animation, .intro-step3-animation {
 	animation-duration:2s;
@@ -260,6 +394,18 @@ a.btn-sandbox:hover {
 	width:100%;
 	padding:20px 0;
 }
+.feature-item-mobile {
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	width:100%;
+	padding:30px 0;
+}
+.feature-item-mobile img {
+	width:80%;
+	transform: scale(1);
+}
 .feature-step1, .feature-step3, .feature-step5, .feature-step7, .feature-step9 {
 	display:flex;
 	align-items:center;
@@ -298,6 +444,12 @@ a.btn-sandbox:hover {
 }
 /* feature animation end */
 /* how animation */
+@media only screen and (max-width: 920px) {
+	.grey-icons img {
+		height:50px;
+		transform: scale(1);
+	}
+}
 .how-item-1, .how-item-2 {
 	display:flex;
 	justify-content:space-between;
@@ -317,6 +469,22 @@ a.btn-sandbox:hover {
 	margin:0;
 	padding:0;
 }
+@media only screen and (max-width: 540px) {
+	.how-item-1, .how-item-2 {
+		justify-content:center;
+		align-items:center;
+		margin:0px;
+	}
+	.how-item-1 {
+		flex-direction:column;
+	}
+	.how-item-2 {
+		flex-direction:column;
+	}
+	.how-wrapper1, .how-wrapper2, .how-wrapper3, .how-wrapper4 {
+		width:100%;
+	}
+}
 .how-step1, .how-step2, .how-step3, .how-step4 {
 	display:flex;
 	position:relative;
@@ -331,6 +499,25 @@ a.btn-sandbox:hover {
 	height:calc(100% - 80px);
 	box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
 	opacity:0;
+}
+@media only screen and (max-width: 920px) {
+	.how-step1 img.how-icon, .how-step2 img.how-icon, .how-step3 img.how-icon, .how-step4 img.how-icon {
+		width:200px;
+		transform: scale(1);
+	}
+}
+@media only screen and (max-width: 540px) {
+	.how-step1, .how-step2, .how-step3, .how-step4 {
+		border-radius:20px;
+		padding:20px;
+		width:calc(100% - 40px);
+		height:calc(100% - 40px);
+		margin-bottom:40px;
+	}
+	.how-step1 img.how-icon, .how-step2 img.how-icon, .how-step3 img.how-icon, .how-step4 img.how-icon {
+		width:160px;
+		transform: scale(1);
+	}
 }
 .how-step2a, .how-step3a, .how-step4a {
 	position:absolute;
@@ -348,6 +535,34 @@ a.btn-sandbox:hover {
 	transform:rotate(180deg);
 	top:150px;
 	right:-50px;
+}
+@media only screen and (max-width: 920px) {
+	.how-step2a {
+		top:90px;
+		left:-60px;
+	}
+	.how-step3a {
+		top:-62px;
+	}
+	.how-step4a {
+		top:90px;
+		right:-60px;
+	}
+}
+@media only screen and (max-width: 540px) {
+	.how-step2a {
+		transform:rotate(90deg);
+		top:-65px;
+		left:calc(50% - 50px);
+	}
+	.how-step3a {
+		top:-65px;
+	}
+	.how-step4a {
+		transform:rotate(90deg);
+		top:-65px;
+		right:calc(50% - 50px);
+	}
 }
 .how-step1-animation, .how-step2-animation, .how-step3-animation, .how-step4-animation {
 	animation-duration:4s;
@@ -378,13 +593,31 @@ a.btn-sandbox:hover {
 	100% {transform: translateX(0px); opacity: 1;}
 }
 @keyframes how-step3 {
-	40%   {transform: translateY(-50px); opacity: 0;}
-	80%   {transform: translateY(0px); opacity: 1;}
+	30%   {transform: translateY(-50px); opacity: 0;}
+	70%   {transform: translateY(0px); opacity: 1;}
 	100%  {transform: translateY(0px); opacity: 1;}
 }
 @keyframes how-step4 {
-	60%  {transform: translateX(50px); opacity: 0;}
+	50%  {transform: translateX(50px); opacity: 0;}
+	90% {transform: translateX(0px); opacity: 1;}
 	100% {transform: translateX(0px); opacity: 1;}
+}
+@media only screen and (max-width: 540px) {
+	@keyframes how-step2 {
+		0%  {transform: translateY(-50px); opacity: 0;}
+		40%  {transform: translateY(0px); opacity: 1;}
+		100% {transform: translateY(0px); opacity: 1;}
+	}
+	@keyframes how-step3 {
+		0%   {transform: translateY(-50px); opacity: 0;}
+		40%   {transform: translateY(0px); opacity: 1;}
+		100%  {transform: translateY(0px); opacity: 1;}
+	}
+	@keyframes how-step4 {
+		0%  {transform: translateY(-50px); opacity: 0;}
+		40% {transform: translateY(0px); opacity: 1;}
+		100% {transform: translateY(0px); opacity: 1;}
+	}
 }
 /* how animation end */
 .benefit-bullet {
@@ -401,6 +634,16 @@ a.btn-sandbox:hover {
 	margin-bottom:40px;
 	border-radius:30px;
 }
+@media only screen and (max-width: 540px) {
+	.benefit-bullet {
+		font-size:18px;
+		line-height:40px;;
+		height:40px;
+		padding:0 20px;
+		margin-bottom:20px;
+		border-radius:20px;
+	}
+}
 .trader-theme-box {
 	display:block;
 	position:relative;
@@ -409,7 +652,14 @@ a.btn-sandbox:hover {
 	height:calc(75vh - 200px);
 	background-image:linear-gradient(to bottom, transparent, transparent, transparent, #f2f2f2), url("img/tm-theme-02.png");
 	background-size: cover;
+	background-position: bottom, top center;
 	background-repeat: no-repeat;
+}
+@media only screen and (max-width: 540px) {
+	.trader-theme-box {
+		padding:40px 0;
+		height:calc(40vh - 80px);
+	}
 }
 .benefit-box {
 	display:flex;
@@ -427,6 +677,16 @@ a.btn-sandbox:hover {
 	width:40%;
 	margin:20px 0 40px 0;
 }
+@media only screen and (max-width: 540px) {
+	.trader-item {
+		width:100%;
+		margin:10px 0 20px 0;
+	}
+	.trader-item img {
+		width:80px;
+		transform: scale(1);
+	}
+}
 .broker-theme-box {
 	display:block;
 	position:relative;
@@ -435,7 +695,14 @@ a.btn-sandbox:hover {
 	height:calc(75vh - 200px);
 	background-image:linear-gradient(to bottom, transparent, transparent, transparent, #033c45), url("img/tm-theme-03.png");
 	background-size: cover;
+	background-position: bottom, top center;
 	background-repeat: no-repeat;
+}
+@media only screen and (max-width: 540px) {
+	.broker-theme-box {
+		padding:40px 0;
+		height:calc(40vh - 80px);
+	}
 }
 .broker-item {
 	display:flex;
@@ -445,6 +712,16 @@ a.btn-sandbox:hover {
 	width:40%;
 	margin:20px 0 40px 0;
 	color:#ffffff;
+}
+@media only screen and (max-width: 540px) {
+	.broker-item {
+		width:100%;
+		margin:10px 0 20px 0;
+	}
+	.broker-item img {
+		width:80px;
+		transform: scale(1);
+	}
 }
 .broker-item h3 {
 	color:#00deff;
@@ -464,6 +741,15 @@ a.btn-sandbox:hover {
 	text-align:center;
 	width:30%;
 	opacity:0;
+}
+@media only screen and (max-width: 540px) {
+	.success-step1, .success-step2, .success-step3 {
+		width:32%;
+	}
+	.success-step1 img, .success-step2 img, .success-step3 img {
+		width:80px;
+		transform: scale(1);
+	}
 }
 .success-step1-animation, .success-step2-animation, .success-step3-animation {
 	animation-duration:2s;
@@ -514,11 +800,32 @@ input.general, input.name, select {
 	padding:0 40px;
 	margin-bottom:60px;
 }
+@media only screen and (max-width: 920px) {
+	input.general, input.name, select {
+		font-size:16px;
+	}
+}
 input.general {
 	width:calc(100% - 82px);
 }
 input.name {
 	width:calc(50% - 102px);
+}
+@media only screen and (max-width: 540px) {
+	input.general, input.name, select {
+		height:38px;
+		font-size:14px;
+		border-radius:20px;
+		line-height:38px;
+		padding:0 20px;
+		margin-bottom:20px;
+	}
+	input.general {
+		width:calc(100% - 42px);
+	}
+	input.name {
+		width:calc(50% - 48px);
+	}
 }
 select {
 	width:100%;
@@ -560,6 +867,28 @@ select.classic:focus {
   border-color: transparent;
   outline: 0;
 }
+@media only screen and (max-width: 540px) {
+	select.classic {
+	  background-position:
+		calc(100% - 20px) calc(1em + 5px),
+		calc(100% - 15px) calc(1em + 5px),
+		100% 0;
+	  background-size:
+		5px 5px,
+		5px 5px,
+		2.5em 2.5em;
+	}
+	select.classic:focus {
+	  background-position:
+		calc(100% - 15px) calc(1em + 5px),
+		calc(100% - 20px) calc(1em + 5px),
+		100% 0;
+	  background-size:
+		5px 5px,
+		5px 5px,
+		2.5em 2.5em;
+	}
+}
 textarea {
 	width:100%;
 	padding: 15px 40px;
@@ -573,6 +902,21 @@ textarea {
 	resize: none;
 	margin-bottom:60px;
 }
+@media only screen and (max-width: 920px) {
+	textarea {
+		font-size: 16px;
+		line-height: 1.25em;
+	}
+}
+@media only screen and (max-width: 540px) {
+	textarea {
+		font-size: 14px;
+		line-height: 1.15em;
+		padding: 8px 20px;
+		margin-bottom:20px;
+		border-radius: 20px;
+	}
+}
 ::placeholder {
   color:#b3b3b3;
 }
@@ -580,6 +924,11 @@ textarea {
 	display:block;
 	width:100%;
 	margin-bottom:20px;
+}
+@media only screen and (max-width: 540px) {
+	.field-name {
+		margin-bottom:10px;
+	}
 }
 a.btn-submit {
 	display:inline-block;
@@ -596,8 +945,15 @@ a.btn-submit {
 	transition:all ease 0.3s;
 	cursor: pointer;
 }
+@media only screen and (max-width: 920px) {
+	a.btn-submit {
+		transform: scale(0.8);
+	}
+}
 @media only screen and (max-width: 540px) {
-
+	a.btn-submit {
+		transform: scale(0.65);
+	}
 }
 a.btn-submit:hover{
 	color:#FFFFFF;
@@ -615,16 +971,25 @@ a.btn-submit:hover{
 	padding:60px 100px;
 	width:calc(100vw - 200px);
 }
+@media only screen and (max-width: 920px) {
+	.footer {
+		padding:40px 40px;
+		width:calc(100vw - 80px);
+	}
+}
+@media only screen and (max-width: 540px) {
+	.footer {
+		padding:10px;
+		width:calc(100vw - 20px);
+		color:#047F92;
+		font-size: 12px;
+	}
+}
 .footer > .footer-copy > span.ht-logo {
 	display:inline-block;
 	font-size:24px;
 	vertical-align: middle;
 	margin-right: 5px;
-}
-@media only screen and (max-width: 540px) {
-	.footer > .footer-copy > span.ht-logo {
-		display:none;
-	}
 }
 .footer a {
 	color:#047F92;
@@ -637,7 +1002,10 @@ a.btn-submit:hover{
 	margin:0 0 10px 0;
 }
 @media only screen and (max-width: 540px) {
-	
+	.footer-copy, .footer-links, .footer-social {
+		display:block;
+		text-align: center;
+	}
 }
 .footer a.social {
 	color:#047F92;
