@@ -223,7 +223,7 @@ a.btn-sandbox span {
 		max-width:calc(100% - 80px);
 	}
 	.theme-headline h1 {
-		font-size:48px;
+		font-size:44px;
 	}
 	.theme-headline h2 {
 		font-size:30px;
@@ -240,7 +240,7 @@ a.btn-sandbox span {
 		max-width:calc(100% - 40px);
 	}
 	.theme-headline h1 {
-		font-size:24px;
+		font-size:21px;
 		line-height: 1.25em;
 	}
 	.theme-headline h2 {
