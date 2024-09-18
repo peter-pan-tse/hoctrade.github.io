@@ -201,7 +201,7 @@ a.btn-sandbox span {
 	background-size: cover;
 }
 .theme-headline {
-	margin:100px auto 0 auto;
+	margin:90px auto 0 auto;
 	padding:0 60px;
 	max-width:1280px;
 }
@@ -260,7 +260,7 @@ a.btn-sandbox span {
 .slider {
 	overflow-X: hidden;
 	position: absolute;
-	bottom: 40px;
+	bottom: 20px;
 	width: 100%;
 }
 .slider .slide-track {
