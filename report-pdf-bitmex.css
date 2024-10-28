@@ -324,6 +324,7 @@ ul.cover-toc li {
 	color:#ffffff;
 	font-weight:bold;
 	line-height: 1em;
+	opacity: 0.6;
 }
 .top-report-box-body {
 	display:flex;
