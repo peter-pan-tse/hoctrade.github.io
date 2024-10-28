@@ -616,23 +616,4 @@
 	<!-- feature animate end -->
 	<script src="animateViewport.js" language="javascript"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<!-- back to top -->
-	<script>
-		//appear
-		const observerreveal = new IntersectionObserver(entries => {
-		  entries.forEach(entry => {
-			  const totopreveal = entry.target.querySelector('.btn-top')
-			  
-			if (entry.isIntersecting) {
-			    totopreveal.classList.add('btn-top-reveal-animation');
-			  return; // if we added the class, exit the function
-			}
-			  /* We're not intersecting, so remove the class! 
-			  introstep1.classList.remove('intro-step1-animation');
-			  introstep2.classList.remove('intro-step2-animation');
-			  introstep3.classList.remove('intro-step3-animation');*/
-		  });
-		});
-		observerreveal.observe(document.querySelector('.video-container'));
-	</script>
 </html>
