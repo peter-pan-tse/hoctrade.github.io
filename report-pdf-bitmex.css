@@ -25,6 +25,7 @@
 	border-width: 0 1px 1px 1px;
 	border-style: dashed;
 	border-color: #dddddd;
+	background: linear-gradient(#181467 6%, #ffffff 6%);
 }
 .cover-content {
 	display:flex;
@@ -56,7 +57,7 @@
     text-align: center;
     justify-content: center;
     align-items: center;
-    color: #06243D;
+    color: #181467;
     font-size: 18px;
     font-weight: bold;
 	border-radius:8px;
@@ -65,7 +66,7 @@
 	background-color:#06243D; /* color match to the corporate color of the logo */
 }
 .num-patch {
-	background-color:#F3F7FE; /* color match to the corporate color of the logo */
+	background-color:#e01b00; /* color match to the corporate color of the logo */
 	position:absolute;
 	top:20px;
 	right:100px;
@@ -397,7 +398,7 @@ ul.medic-report li {
 	transition: all 0.3s ease;
 	border-bottom:1px dotted #cccccc;
 	line-height: 1.25em;
-	padding:20px 0;
+	padding:10px 0;
 }
 .column-issue, .column-severity, .column-effect, .column-info, .column-risk-ico, .column-risk, .column-improve, .column-trade, .column-percent {
 	display:flex;
@@ -493,10 +494,13 @@ div.sev-bar-dot {
 	border-radius:16px;
 }
 .sev-bar-po {
-    background: linear-gradient(90deg, #666666 4%, #105bff 96%);
+    background: linear-gradient(90deg, #105bff 4%, #666666 96%);
 }
 .sev-bar-ng {
-    background: linear-gradient(90deg, #ff0402 4%, #666666 96%);
+    background: linear-gradient(90deg, #666666 4%, #ff0402 96%);
+}
+.sev-bar-all {
+    background: linear-gradient(90deg, #105bff 4%, #666666 46%, #666666 54%, #ff0402 96%);
 }
 div.sev-bar-dot-top {
 	position:absolute;
@@ -648,19 +652,31 @@ a.btn-top-info span {
 }
 .report-chart-container {
 	display:flex;
-	justify-content: space-between;
+	justify-content:space-between;
+	align-items: flex-start;
 }
 .report-chart-box {
 	display:flex;
 	flex-direction:column;
-	width:calc(45% - 30px);
+	width:calc(35% - 20px);
 	position:relative;
 }
 .report-chart-txt-box {
 	display:flex;
-	flex-direction:column;
-	width:calc(52% - 30px);
+	flex-direction:row;
+	flex-wrap: wrap;
+	justify-content:space-between;
+	align-items: flex-start;
+	width:calc(65% - 20px);
 	position:relative;
+}
+.report-chart-txt-box-item {
+	display:inline-block;
+	width:calc(50% - 15px);
+}
+.trade-id {
+	color:#999999;
+	font-style: italic;
 }
 .legend-container {
     display: flex;
@@ -676,10 +692,10 @@ a.btn-top-info span {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    margin: 0 10px 10px;
-	font-size:12px;
+    margin: 0 5px 5px;
+	font-size:11px;
 	line-height: 1.25em;
-	width:calc(20% - 20px);
+	width:calc(20% - 10px);
 	text-align: center;
 }
 
