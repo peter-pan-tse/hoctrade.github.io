@@ -308,10 +308,10 @@ ul.cover-toc li {
 .top-report-box-header {
 	display:flex;
 	flex-direction:row;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
     min-height: 40px;
-    padding: 20px 40px 10px 40px;
+    padding: 20px 20px 10px 60px;
     font-size: 18px;
 	line-height: 1.15em;
     font-weight: bold;
@@ -524,8 +524,8 @@ ul.medic-report li {
 	height:16px;
 	border:2px solid #ffffff;
 	border-radius:10px;
-	background: rgb(38,255,0);
-    background: linear-gradient(90deg, #105bff 4%, #999999 46%, #999999 54%, #ff0402 96%);
+	/*background: rgb(38,255,0);
+    background: linear-gradient(90deg, #105bff 4%, #999999 46%, #999999 54%, #ff0402 96%);*/
 }
 div.sev-bar-dot {
 	position:absolute;
@@ -540,7 +540,7 @@ div.sev-bar-dot {
 	z-index: 801;
 }
 .severity-text {
-	font-size:24px;
+	font-size:20px;
 	line-height: 1.25em;
 	font-weight: normal;
 	margin:20px 0 10px;
@@ -565,7 +565,7 @@ div.sev-bar-dot {
 	border-radius:16px;
 }
 .sev-bar-po {
-    background: linear-gradient(90deg, #105bff 4%, #999999 96%);
+    background: linear-gradient(90deg, #999999 4%, #105bff 96%);
 }
 .sev-bar-ng {
     background: linear-gradient(90deg, #999999 4%, #ff0402 96%);
