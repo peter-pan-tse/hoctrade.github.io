@@ -82,7 +82,7 @@
 .page-logo {
 	position:absolute;
 	right:100px;
-	bottom:20px;
+	bottom:10px;
 }
 ul.cover-toc {
 	position:absolute;
@@ -125,10 +125,10 @@ ul.cover-toc li {
 .general-disclaimer {
 	position:absolute;
 	bottom:0px;
-	padding:0 450px 30px 0;
+	padding:0 450px 20px 0;
 	color:#999999;
-	font-size:14px;
-	line-height: 1.25em;
+	font-size:12px;
+	line-height: 1.15em;
 	text-align: justify;
 }
 /* intro */
@@ -407,7 +407,7 @@ ul.medic-report li {
 	align-items:center;
 }
 .column-issue {
-	width:calc(25% - 20px);
+	width:calc(27% - 20px);
 	text-align: left;
 }
 .column-severity {
@@ -624,7 +624,7 @@ a.btn-top-info span {
 	flex-wrap: wrap;
 	justify-content:center;
 	align-items:stretch;
-	padding:0 0 40px 0;
+	padding:0 0 20px 0;
 }
 
 .detail-info-box-1, .detail-info-box-2, .detail-info-box-3, .detail-info-box-4 {
@@ -729,21 +729,27 @@ a.btn-top-info span {
 .report-chart-box {
 	display:flex;
 	flex-direction:column;
-	width:calc(35% - 20px);
+	width:calc(55% - 20px);
 	position:relative;
+	font-size:14px;
+	line-height: 1.25em;
 }
 .report-chart-txt-box {
 	display:flex;
-	flex-direction:row;
-	flex-wrap: wrap;
-	justify-content:space-between;
+	flex-direction:column;
 	align-items: flex-start;
-	width:calc(65% - 20px);
+	width:calc(45% - 20px);
 	position:relative;
+	font-size:14px;
+	line-height: 1.25em;
 }
 .report-chart-txt-box-item {
-	display:inline-block;
-	width:calc(50% - 15px);
+	display:block;
+	width:calc(100% - 40px);
+	margin:16px 0;
+	padding:20px;
+	border-radius:20px;
+	background-color: #F3F7FE;
 }
 .trade-id {
 	color:#999999;
@@ -768,8 +774,11 @@ a.btn-top-info span {
 	line-height: 1.25em;
 	width:calc(20% - 10px);
 	text-align: center;
+	line-height: 1.15em;
 }
-
+.legend-item > img {
+	margin-bottom: 4px;
+}
 /* faq */
 p.faq {
 	margin:20px 0 60px;

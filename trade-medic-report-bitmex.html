@@ -522,7 +522,7 @@
 		<!-- strengths -->
 		<ul class="medic-report">
 					<li style="border-bottom:4px solid #cccccc;">
-						<div class="column-issue"><strong>Strength</strong></div>
+						<div class="column-issue"><span class="ht-up-chart" style="font-size:48px; vertical-align:bottom;"></span> <strong>Strength</strong></div>
 						<div class="column-severity"><strong>Power</strong></div>
 						<div class="column-effect"><strong>Performance effect</strong></div>
 					</li>
@@ -591,7 +591,7 @@
 		<!-- improvements -->
 		<ul class="medic-report">
 					<li style="border-bottom:4px solid #cccccc;">
-						<div class="column-issue"><strong>Improvement Potential</strong></div>
+						<div class="column-issue"><span class="ht-down-chart" style="font-size:48px; vertical-align:bottom;"></span> <strong>Improvement Potential</strong></div>
 						<div class="column-severity"><strong>Severity</strong></div>
 						<div class="column-effect"><strong>Performance effect</strong></div>
 					</li>
@@ -673,7 +673,7 @@
 		<h2>Detect potential risk management protection mechanisms</h2>
 		<ul class="medic-report">
 			<li style="border-bottom:4px solid #cccccc;">
-				<div class="column-issue"><strong>Risk area</strong></div>
+				<div class="column-issue"><span class="ht-alert-chart" style="font-size:48px; vertical-align:bottom;"></span> <strong>Risk Area</strong></div>
 				<div class="column-risk-ico"></div>
 				<div class="column-risk"></div>
 			</li>
@@ -720,7 +720,7 @@
 		</ul>
 		<ul class="medic-report">
 			<li style="border-bottom:4px solid #cccccc;">
-				<div class="column-issue"><strong>Futher observations</strong></div>
+				<div class="column-issue"><span class="ht-search" style="font-size:36px; vertical-align:bottom;"></span> &nbsp;<strong>Futher Observations</strong></div>
 				<div class="column-risk-ico"></div>
 				<div class="column-risk"></div>
 			</li>
@@ -925,14 +925,79 @@
 	</div>
 	<!-- page ended-->
 	
-	<!-- detailed issue report start -->
+	<!-- detailed report start -->
+	
+	<!-- page -->
+	<a id="i12"></a>
+	<div class="a4-page">
+		<div class="num-patch-logo"><img src="img/bitmex-inside.png" /></div>
+		<div class="num-patch">8</div>
+		<h1>Strength Details</h1>
+		<div class="detail-info-container">
+			<div class="detail-info-box-1">
+				<h3>Issue</h3>
+				<h2>Extending loss trades</h2>
+			</div>
+			<div class="detail-info-box-2">
+				<h3>Area</h3>
+				<h2 style="padding-left:60px;"><span class="ht-error-trade"></span> Trade execution</h2>
+			</div>
+			<div class="detail-info-box-3">
+				<h3>Performance effect</h3>
+				<h2 class="text-po">7,808 USD</h2>
+			</div>
+			<div class="detail-info-box-4">
+				<h3>Power</h3>
+				<div class="sev-bar-top sev-bar-po" style="width:75%;">
+					<div class="sev-bar-dot-top" style="left:calc(100% - 32px);"></div>
+				</div>
+				<div class="severity-level text-po">100%</div>
+			</div>
+			<div class="detail-info-box-5 gear-1">
+				<div style="padding-left:90px;"><span class="ht-check"></span> Goog job. You have <strong>added your profit by 7,808 USD by not extending SL level while you were in loss</strong>.</div>
+			</div>
+		</div>
+		<h3>Explanation</h3>
+		<p>Extending loss trades describes the behavior of adding risk to a loss trade instead of cutting your losses and moving on. Many traders struggle to cut their losses early, thereby incurring large losses with single trades.<strong> This human behavioral tendency can well be explained by Nobel Price winning Prospect Theory.</strong></p>
+		
+		<div class="report-chart-container">
+			<div class="report-chart-box">
+				<h3 style="display:block; width:100%; border-bottom: 1px solid #cccccc; padding:0 0 10px 0;"><span class="ht-bar-chart" style="font-size:40px; vertical-align: middle;"></span>Your trading activity: Output chart</h3>
+				<img class="img-responsive" src="img/chart-i12.png" />
+				<p>The performance effect is derived by comparing your trade outcome in which you adjusted your Stop Loss (SL) further away from entry price while the trade was in loss vs. <strong>the simulated trade outcome if you would have not done this.</strong></p>
+				<!--<br><strong>Chart legend</strong>-->
+				<div class="legend-container">
+					<div class="legend-item"><img src="legend-profit.svg" height="20" />Profit</div>
+					<div class="legend-item"><img src="legend-loss.svg" height="20" />Loss</div>
+					<div class="legend-item"><img src="legend-not-so-significant.svg" height="20" />Limited significance</div>
+					<div class="legend-item"><img src="legend-insignificant.svg" height="20" />Insignificant</div>
+				</div>
+			</div>
+			<div class="report-chart-txt-box">
+				<h3 style="display:block; width:100%; border-bottom: 1px solid #cccccc; padding:0 0 10px 0;"><span class="ht-clipboard" style="font-size:40px; vertical-align: middle;"></span>Review your trades</h3>
+				<div class="report-chart-txt-box-item">
+					<strong>Most severe</strong><br>
+					<span class="trade-id">Trade ID: 3439530205</span><br><br>
+					For example, on "(datetime - May 11th 14:15pm)" you opened a "Symbol" "direction (long vs. short) trade after you've already opened "count of previous trades" on that day, indicating you were overtrading. This trade made you a loss of "profit trade" "currency". 
+				</div>
+				<div class="report-chart-txt-box-item">
+					<strong>Most recent</strong><br>
+					<span class="trade-id">Trade ID: 3439530209</span><br><br>
+					Most recently, you opened a "Symbol" "direction" trade on "datetime", while you had already performed "count of previous trades trades" trades that day. This trade led to a loss of "profit trade" "currency". 
+				</div>
+			</div>
+		</div>
+		<div class="general-disclaimer">DISCLAIMER: The TradeMedic report, an automatically generated third-party AI tool offered to BitMEX clients, provides general information purposes only and should not be interpreted as personalized trading or investment advice.</div>
+		<div class="page-logo"><img src="img/hoc-trade-logo-green-pdf.png" width="240" /></div>
+	</div>
+	<!-- page ended-->
 	
 	<!-- page -->
 	<a id="i01"></a>
 	<div class="a4-page">
 		<div class="num-patch-logo"><img src="img/bitmex-inside.png" /></div>
-		<div class="num-patch">8</div>
-		<h1>Issue details</h1>
+		<div class="num-patch">14</div>
+		<h1>Improvement Potential Details</h1>
 		<div class="detail-info-container">
 			<div class="detail-info-box-1">
 				<h3>Issue</h3>
@@ -948,7 +1013,7 @@
 			</div>
 			<div class="detail-info-box-4">
 				<h3>Severity</h3>
-				<div class="sev-bar-top sev-bar-all" style="width:75%;">
+				<div class="sev-bar-top sev-bar-ng" style="width:75%;">
 					<div class="sev-bar-dot-top" style="left:calc(100% - 32px);"></div>
 				</div>
 				<div class="severity-level text-ng">100%</div>
@@ -957,27 +1022,24 @@
 				<div style="padding-left:90px;"><span class="ht-alert"></span> If you would have had <strong>less Rushed entries, specifically opening your trades 10m later, your overall performance would benefit by 7,808 USD</strong>. You seem to be rushing into your trades, while waiting slightly longer with the trade entry could boost your overall profits.</div>
 			</div>
 		</div>
-		<div class="explanation-box">
-			<h2>Explanation</h2>
-			<p>Rushed entries describes an early entry into a trade in which the exact price point has not been reached yet. </p>
-			<p>Especially reversal traders may be negatively affected by impatient trade entries as the full reversal has not yet developed, however they tend to <strong>feel FOMO (fear of missing out) to the trade set-up</strong> they have been patiently waiting for. Thereby, they <strong>achieve a less ideal entry price.</strong></p>
-		</div>
-		<h2>Your trading activity: Output chart</h2>
+		<h3>Explanation</h3>
+		<p>Rushed entries describes an early entry into a trade in which the exact price point has not been reached yet. </p>
+		<p>Especially reversal traders may be negatively affected by impatient trade entries as the full reversal has not yet developed, however they tend to <strong>feel FOMO (fear of missing out) to the trade set-up</strong> they have been patiently waiting for. Thereby, they <strong>achieve a less ideal entry price.</strong></p>
+
 		<div class="report-chart-container">
 			<div class="report-chart-box">
+				<h3 style="display:block; width:100%; border-bottom: 1px solid #cccccc; padding:0 0 10px 0;"><span class="ht-bar-chart" style="font-size:40px; vertical-align: middle;"></span>Your trading activity: Output chart</h3>
 				<img class="img-responsive" src="img/chart-i01.png" />
-				<br><strong>Chart legend</strong>
+				<p>Your performance effect is derived by comparing your actual profits vs. the simulated profits if you would enter the trade slightly later.</p>
 				<div class="legend-container">
-					<div class="legend-item"><img src="legend-benchmark.svg" height="20" /><br>Benchmark</div>
-					<div class="legend-item"><img src="legend-profit.svg" height="20" /><br>Profit</div>
-					<div class="legend-item"><img src="legend-loss.svg" height="20" /><br>Loss</div>
-					<div class="legend-item"><img src="legend-not-so-significant.svg" height="20" /><br>Limited significance</div>
-					<div class="legend-item"><img src="legend-insignificant.svg" height="20" /><br>Insignificant</div>
+					<div class="legend-item"><img src="legend-benchmark.svg" height="20" />Benchmark</div>
+					<div class="legend-item"><img src="legend-profit.svg" height="20" />Profit</div>
+					<div class="legend-item"><img src="legend-loss.svg" height="20" />Loss</div>
+					<div class="legend-item"><img src="legend-not-so-significant.svg" height="20" />Limited significance</div>
+					<div class="legend-item"><img src="legend-insignificant.svg" height="20" />Insignificant</div>
 				</div>
 			</div>
 			<div class="report-chart-txt-box">
-				<p>Your performance effect is derived by comparing your actual profits vs. the simulated profits if you would enter the trade slightly later.</p>
-				<p>For details, please refer to your personal output chart.</p>
 				<h3 style="display:block; width:100%; border-bottom: 1px solid #cccccc; padding:0 0 10px 0;"><span class="ht-clipboard" style="font-size:40px; vertical-align: middle;"></span>Review your trades</h3>
 				<div class="report-chart-txt-box-item">
 					<strong>Most severe</strong><br>
@@ -1000,8 +1062,8 @@
 	<a id="i06"></a>
 	<div class="a4-page">
 		<div class="num-patch-logo"><img src="img/bitmex-inside.png" /></div>
-		<div class="num-patch">12</div>
-		<h1>Issue details</h1>
+		<div class="num-patch">19</div>
+		<h1>Improvement Potential Details</h1>
 		<div class="detail-info-container">
 			<div class="detail-info-box-1">
 				<h3>Issue</h3>
@@ -1017,8 +1079,8 @@
 			</div>
 			<div class="detail-info-box-4">
 				<h3>Severity</h3>
-				<div class="sev-bar-top sev-bar-all" style="width:75%;">
-					<div class="sev-bar-dot-top" style="left:calc(50% - 16px);"></div>
+				<div class="sev-bar-top sev-bar-ng" style="width:75%;">
+					<div class="sev-bar-dot-top" style="left:calc(0%);"></div>
 				</div>
 				<div class="severity-level text-nu">0%</div>
 			</div>
@@ -1026,164 +1088,23 @@
 				<div style="padding-left:90px;"><span class="ht-alert"></span> It appears your <strong>trade exits are slightly late, which cost you 0 USD. Closing your trade on average -1m earlier</strong> would have optimized this result. This number represents an average on both profit and loss taking. If mostly closing trades with TP or SL, review your target levels.</div>
 			</div>
 		</div>
-		<div class="explanation-box">
-			<h2>Explanation</h2>
-			<p>Late trade exits describes the behavior of being slightly anxious when closing a trade.</p>
-			<p>Some traders tend <strong>to wait for an unfavorable price reversal in their profit- and / or loss-taking</strong>, thereby limiting their profits or growing their losses.</p>
-		</div>
-		<h2>Your trading activity: Output chart</h2>
+		<h3>Explanation</h3>
+		<p>Late trade exits describes the behavior of being slightly anxious when closing a trade.</p>
+		<p>Some traders tend <strong>to wait for an unfavorable price reversal in their profit- and / or loss-taking</strong>, thereby limiting their profits or growing their losses.</p>
 		<div class="report-chart-container">
 			<div class="report-chart-box">
+				<h3 style="display:block; width:100%; border-bottom: 1px solid #cccccc; padding:0 0 10px 0;"><span class="ht-bar-chart" style="font-size:40px; vertical-align: middle;"></span>Your trading activity: Output chart</h3>
 				<img class="img-responsive" src="img/chart-i06.png" />
-				<br><strong>Chart legend</strong>
+				<p>Your performance effect is derived by comparing your actual profits vs. the simulated profits if you would exit the trade slightly earlier.<br><br>Please be cautious: With earlier trade exits you have less information available, potentially exiting trades you otherwise wouldn't have.</p>
 				<div class="legend-container">
-					<div class="legend-item"><img src="legend-benchmark.svg" height="20" /><br>Benchmark</div>
-					<div class="legend-item"><img src="legend-profit.svg" height="20" /><br>Profit</div>
-					<div class="legend-item"><img src="legend-loss.svg" height="20" /><br>Loss</div>
-					<div class="legend-item"><img src="legend-not-so-significant.svg" height="20" /><br>Limited significance</div>
-					<div class="legend-item"><img src="legend-insignificant.svg" height="20" /><br>Insignificant</div>
+					<div class="legend-item"><img src="legend-benchmark.svg" height="20" />Benchmark</div>
+					<div class="legend-item"><img src="legend-profit.svg" height="20" />Profit</div>
+					<div class="legend-item"><img src="legend-loss.svg" height="20" />Loss</div>
+					<div class="legend-item"><img src="legend-not-so-significant.svg" height="20" />Limited significance</div>
+					<div class="legend-item"><img src="legend-insignificant.svg" height="20" />Insignificant</div>
 				</div>
 			</div>
 			<div class="report-chart-txt-box">
-				<p>Your performance effect is derived by comparing your actual profits vs. the simulated profits if you would exit the trade slightly earlier.</p>
-				<p>For details, please refer to your personal output chart.</p>
-				<p>Please be cautious: With earlier trade exits you have less information available, potentially exiting trades you otherwise wouldn't have.</p>
-				<h3 style="display:block; width:100%; border-bottom: 1px solid #cccccc; padding:0 0 10px 0;"><span class="ht-clipboard" style="font-size:40px; vertical-align: middle;"></span>Review your trades</h3>
-				<div class="report-chart-txt-box-item">
-					<strong>Most severe</strong><br>
-					<span class="trade-id">Trade ID: 3439530205</span><br><br>
-					For example, on "(datetime - May 11th 14:15pm)" you opened a "Symbol" "direction (long vs. short) trade after you've already opened "count of previous trades" on that day, indicating you were overtrading. This trade made you a loss of "profit trade" "currency". 
-				</div>
-				<div class="report-chart-txt-box-item">
-					<strong>Most recent</strong><br>
-					<span class="trade-id">Trade ID: 3439530209</span><br><br>
-					Most recently, you opened a "Symbol" "direction" trade on "datetime", while you had already performed "count of previous trades trades" trades that day. This trade led to a loss of "profit trade" "currency". 
-				</div>
-			</div>
-		</div>
-		<div class="general-disclaimer">DISCLAIMER: The TradeMedic report, an automatically generated third-party AI tool offered to BitMEX clients, provides general information purposes only and should not be interpreted as personalized trading or investment advice.</div>
-		<div class="page-logo"><img src="img/hoc-trade-logo-green-pdf.png" width="240" /></div>
-	</div>
-	<!-- page ended-->
-	
-	<!-- page -->
-	<a id="i08"></a>
-	<div class="a4-page">
-		<div class="num-patch-logo"><img src="img/bitmex-inside.png" /></div>
-		<div class="num-patch">14</div>
-		<h1>Issue details</h1>
-		<div class="detail-info-container">
-			<div class="detail-info-box-1">
-				<h3>Issue</h3>
-				<h2>Trade without break</h2>
-			</div>
-			<div class="detail-info-box-2">
-				<h3>Area</h3>
-				<h2 style="padding-left:60px;"><span class="ht-error-stimulation"></span> Over-stimulation</h2>
-			</div>
-			<div class="detail-info-box-3">
-				<h3>Performance effect</h3>
-				<h2 class="text-po">3,844 USD</h2>
-			</div>
-			<div class="detail-info-box-4">
-				<h3>Power</h3>
-				<div class="sev-bar-top sev-bar-all" style="width:75%;">
-					<div class="sev-bar-dot-top" style="left:calc(30% - 10px);"></div>
-				</div>
-				<div class="severity-level text-po">30%</div>
-			</div>
-			<div class="detail-info-box-5 gear-1">
-				<div style="padding-left:90px;"><span class="ht-check"></span> <strong>Good job, taking sufficient breaks in between trades credit you 3,844 USD</strong>. Taking longer break between your trades may further positively impact your performance.</div>
-			</div>
-		</div>
-		<div class="explanation-box">
-			<h2>Explanation</h2>
-			<p>Trade without break describes the behavior to have no or only very short breaks in between your trades.</p>
-			<p>Trade preparation and review take a lot of time for traders, and oftentimes traders have to wait patiently for their right trading set-ups. Trades without or only brief breaks are an <strong>indicator for impatience, taking non-ideal set-ups, and missing preparation, oftentimes leading to a worse outcome.</strong></p>
-		</div>
-		<h2>Your trading activity: Output chart</h2>
-		<div class="report-chart-container">
-			<div class="report-chart-box">
-				<img class="img-responsive" src="img/chart-i08.png" />
-				<br><strong>Chart legend</strong>
-				<div class="legend-container">
-					<div class="legend-item"><img src="legend-benchmark.svg" height="20" /><br>Benchmark</div>
-					<div class="legend-item"><img src="legend-profit.svg" height="20" /><br>Profit</div>
-					<div class="legend-item"><img src="legend-loss.svg" height="20" /><br>Loss</div>
-					<div class="legend-item"><img src="legend-not-so-significant.svg" height="20" /><br>Limited significance</div>
-					<div class="legend-item"><img src="legend-insignificant.svg" height="20" /><br>Insignificant</div>
-				</div>
-			</div>
-			<div class="report-chart-txt-box">
-				<p>Your performance effect is derived by measuring your trade profit depending on the break length before the trade.</p>
-				<p>For details, please refer to your personal output chart.</p>
-				<h3 style="display:block; width:100%; border-bottom: 1px solid #cccccc; padding:0 0 10px 0;"><span class="ht-clipboard" style="font-size:40px; vertical-align: middle;"></span>Review your trades</h3>
-				<div class="report-chart-txt-box-item">
-					<strong>Most severe</strong><br>
-					<span class="trade-id">Trade ID: 3439530205</span><br><br>
-					For example, on "(datetime - May 11th 14:15pm)" you opened a "Symbol" "direction (long vs. short) trade after you've already opened "count of previous trades" on that day, indicating you were overtrading. This trade made you a loss of "profit trade" "currency". 
-				</div>
-				<div class="report-chart-txt-box-item">
-					<strong>Most recent</strong><br>
-					<span class="trade-id">Trade ID: 3439530209</span><br><br>
-					Most recently, you opened a "Symbol" "direction" trade on "datetime", while you had already performed "count of previous trades trades" trades that day. This trade led to a loss of "profit trade" "currency". 
-				</div>
-			</div>
-		</div>
-		<div class="general-disclaimer">DISCLAIMER: The TradeMedic report, an automatically generated third-party AI tool offered to BitMEX clients, provides general information purposes only and should not be interpreted as personalized trading or investment advice.</div>
-		<div class="page-logo"><img src="img/hoc-trade-logo-green-pdf.png" width="240" /></div>
-	</div>
-	<!-- page ended-->
-	
-	<!-- page -->
-	<a id="i12"></a>
-	<div class="a4-page">
-		<div class="num-patch-logo"><img src="img/bitmex-inside.png" /></div>
-		<div class="num-patch">18</div>
-		<h1>Issue details</h1>
-		<div class="detail-info-container">
-			<div class="detail-info-box-1">
-				<h3>Issue</h3>
-				<h2>Extending loss trades</h2>
-			</div>
-			<div class="detail-info-box-2">
-				<h3>Area</h3>
-				<h2 style="padding-left:60px;"><span class="ht-error-trade"></span> Trade execution</h2>
-			</div>
-			<div class="detail-info-box-3">
-				<h3>Performance effect</h3>
-				<h2 class="text-po">7,808 USD</h2>
-			</div>
-			<div class="detail-info-box-4">
-				<h3>Power</h3>
-				<div class="sev-bar-top sev-bar-all" style="width:75%;">
-					<div class="sev-bar-dot-top" style="left:calc(0%);"></div>
-				</div>
-				<div class="severity-level text-po">100%</div>
-			</div>
-			<div class="detail-info-box-5 gear-1">
-				<div style="padding-left:90px;"><span class="ht-check"></span> Goog job. You have <strong>added your profit by 7,808 USD by not extending SL level while you were in loss</strong>.</div>
-			</div>
-		</div>
-		<div class="explanation-box">
-			<h2>Explanation</h2>
-			<p>Extending loss trades describes the behavior of adding risk to a loss trade instead of cutting your losses and moving on. Many traders struggle to cut their losses early, thereby incurring large losses with single trades.<strong> This human behavioral tendency can well be explained by Nobel Price winning Prospect Theory.</strong></p>
-		</div>
-		<h2>Your trading activity: Output chart</h2>
-		<div class="report-chart-container">
-			<div class="report-chart-box">
-				<img class="img-responsive" src="img/chart-i12.png" />
-				<br><strong>Chart legend</strong>
-				<div class="legend-container">
-					<div class="legend-item"><img src="legend-profit.svg" height="20" /><br>Profit</div>
-					<div class="legend-item"><img src="legend-loss.svg" height="20" /><br>Loss</div>
-					<div class="legend-item"><img src="legend-not-so-significant.svg" height="20" /><br>Limited significance</div>
-					<div class="legend-item"><img src="legend-insignificant.svg" height="20" /><br>Insignificant</div>
-				</div>
-			</div>
-			<div class="report-chart-txt-box">
-				<p>The performance effect is derived by comparing your trade outcome in which you adjusted your Stop Loss (SL) further away from entry price while the trade was in loss vs. <strong>the simulated trade outcome if you would have not done this.</strong></p>
-				<p>For details, please refer to your personal output chart.</p>
 				<h3 style="display:block; width:100%; border-bottom: 1px solid #cccccc; padding:0 0 10px 0;"><span class="ht-clipboard" style="font-size:40px; vertical-align: middle;"></span>Review your trades</h3>
 				<div class="report-chart-txt-box-item">
 					<strong>Most severe</strong><br>
@@ -1207,7 +1128,7 @@
 	<a id="r01"></a>
 	<div class="a4-page">
 		<div class="num-patch-logo"><img src="img/bitmex-inside.png" /></div>
-		<div class="num-patch">19</div>
+		<div class="num-patch">20</div>
 		<h1>Risk details</h1>
 		<div class="detail-info-container">
 			<div class="detail-info-box-1">
@@ -1255,7 +1176,7 @@
 	<a id="r02"></a>
 	<div class="a4-page">
 		<div class="num-patch-logo"><img src="img/bitmex-inside.png" /></div>
-		<div class="num-patch">20</div>
+		<div class="num-patch">21</div>
 		<h1>Risk details</h1>
 		<div class="detail-info-container">
 			<div class="detail-info-box-1">
@@ -1303,7 +1224,7 @@
 	<a id="r03"></a>
 	<div class="a4-page">
 		<div class="num-patch-logo"><img src="img/bitmex-inside.png" /> </div>
-		<div class="num-patch">21</div>
+		<div class="num-patch">22</div>
 		<h1>Risk details</h1>
 		<div class="detail-info-container">
 			<div class="detail-info-box-1">
@@ -1350,7 +1271,7 @@
 	<a id="r04"></a>
 	<div class="a4-page">
 		<div class="num-patch-logo"><img src="img/bitmex-inside.png" /></div>
-		<div class="num-patch">22</div>
+		<div class="num-patch">23</div>
 		<h1>Risk details</h1>
 		<div class="detail-info-container">
 			<div class="detail-info-box-1">
@@ -1398,7 +1319,7 @@
 	<a id="r05"></a>
 	<div class="a4-page">
 		<div class="num-patch-logo"><img src="img/bitmex-inside.png" /></div>
-		<div class="num-patch">23</div>
+		<div class="num-patch">24</div>
 		<h1>Risk details</h1>
 		<div class="detail-info-container">
 			<div class="detail-info-box-1">
@@ -1448,7 +1369,7 @@
 	<a id="faq"></a>
 	<div class="a4-page">
 		<div class="num-patch-logo"><img src="img/bitmex-inside.png" /></div>
-		<div class="num-patch">24</div>
+		<div class="num-patch">25</div>
 		<h1>FAQ</h1>
 		
 		<p class="faq">
@@ -1490,7 +1411,7 @@
 	<!-- page -->
 	<div class="a4-page">
 		<div class="num-patch-logo"><img src="img/bitmex-inside.png" /></div>
-		<div class="num-patch">25</div>
+		<div class="num-patch">26</div>
 		<h1>Disclaimer</h1>
 		
 		<p class="end-disclaimer"><strong>HIGH RISK WARNING:</strong> Foreign exchange and other CFD trading carries a high level of risk and may not be suitable for everyone. The usage of leverage creates additional risk and loss exposure. Your investment objectives, experience level and risk tolerance have to be taken into consideration before you decide to trade foreign exchange or other CFD products. You could lose some or all of your entire investment. Do not invest money that you cannot afford to lose and always use an appropriate risk management. It’s important to educate yourself on the risks associated with foreign exchange trading, and seek professional advice from an independent financial or tax advisor in case of any questions. Any data and information is provided ‘as is’ solely for informational purposes, and is not intended for trading purposes or advice. Past performance, which are presented on this website or you find somewhere else such as this report, is not indicative of future results.</p>
