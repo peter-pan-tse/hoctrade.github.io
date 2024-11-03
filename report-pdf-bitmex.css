@@ -400,7 +400,7 @@ ul.medic-report li {
 	line-height: 1.25em;
 	padding:10px 0;
 }
-.column-issue, .column-time-issue, .column-severity, .column-effect, .column-info, .column-risk-ico, .column-risk, .column-improve, .column-trade, .column-percent {
+.column-issue, .column-time-issue, .column-time-issue-2, .column-severity, .column-effect, .column-info, .column-risk-ico, .column-risk, .column-improve, .column-trade, .column-percent {
 	display:flex;
 	position:relative;
 	padding: 13px 10px;
@@ -465,6 +465,32 @@ ul.medic-report li {
 	width:calc(15% - 20px);
 	align-items: center;
 	text-align: center;
+}
+.column-time-issue-2 {
+	width:calc(100% - 640px);
+	text-align: left;
+}
+.column-time-title-2 {
+	display:flex;
+	position:relative;
+	padding: 18px 10px;
+	width:140px;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.column-time-2 {
+	display:flex;
+	position:relative;
+	margin:10px;
+	height:140px;
+	width:140px;
+	border-radius:20px;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color:#ffffff;
+	font-weight:bold;
 }
 .column-time-po {
 	justify-content:flex-end;
