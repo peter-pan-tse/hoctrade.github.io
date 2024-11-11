@@ -111,7 +111,7 @@ ul.cover-toc li {
 	padding: 20px 50px;
 	font-size:18px;
 	line-height: 2em;
-	background-color:#FF0402; /* color match to the corporate color of the logo */
+	background-color:#E11B00; /* color match to the corporate color of the logo */
 	color:#ffffff; /* black or white depends on the background color */
 }
 .cover-disclaimer {
@@ -227,31 +227,31 @@ ul.cover-toc li {
 	left:calc(50% - 15px);
 }
 .gear-1 {
-	background-color:#105bff;
+	background-color:#181467;
 }
 .gear-2 {
-	background-color:#3f6de0;
+	background-color:#322f6e;
 }
 .gear-3 {
-	background-color:#647fc5;
+	background-color:#55537d;
 }
 .gear-4 {
-	background-color:#828dad;
+	background-color:#75748a;
 }
 .gear-5 {
 	background-color:#999999;
 }
 .gear-6 {
-	background-color:#ab8885;
+	background-color:#a77f79;
 }
 .gear-7 {
-	background-color:#c66a65;
+	background-color:#b16a60;
 }
 .gear-8 {
-	background-color:#e04a43;
+	background-color:#bd5445;
 }
 .gear-9 {
-	background-color:#ff0402;
+	background-color:#E11B00;
 }
 
 /* top 3 */
@@ -302,7 +302,7 @@ ul.cover-toc li {
 	text-decoration:none;
 }
 .top-report-box-5 > a:hover {
-	color:#ff0402;
+	color:#E11B00;
 	text-decoration:underline;
 }
 .top-report-box-header {
@@ -551,7 +551,7 @@ ul.medic-report li {
 	border:2px solid #ffffff;
 	border-radius:10px;
 	/*background: rgb(38,255,0);
-    background: linear-gradient(90deg, #105bff 4%, #999999 46%, #999999 54%, #ff0402 96%);*/
+    background: linear-gradient(90deg, #181467 4%, #999999 46%, #999999 54%, #E11B00 96%);*/
 }
 div.sev-bar-dot {
 	position:absolute;
@@ -591,13 +591,13 @@ div.sev-bar-dot {
 	border-radius:16px;
 }
 .sev-bar-po {
-    background: linear-gradient(90deg, #999999 4%, #105bff 96%);
+    background: linear-gradient(90deg, #999999 4%, #181467 96%);
 }
 .sev-bar-ng {
-    background: linear-gradient(90deg, #999999 4%, #ff0402 96%);
+    background: linear-gradient(90deg, #999999 4%, #E11B00 96%);
 }
 .sev-bar-all {
-    background: linear-gradient(90deg, #105bff 4%, #999999 46%, #999999 54%, #ff0402 96%);
+    background: linear-gradient(90deg, #181467 4%, #999999 46%, #999999 54%, #E11B00 96%);
 }
 div.sev-bar-dot-top {
 	position:absolute;
@@ -615,7 +615,7 @@ a.btn-top-info {
 	align-items:center;
 	height:36px;
 	line-height: 36px;
-	background-color:#105bff;
+	background-color:#181467;
 	color:#ffffff;
 	font-weight:normal;
 	padding:0 20px;
@@ -626,7 +626,7 @@ a.btn-top-info {
 	text-decoration:none;
 }
 a.btn-top-info:hover {
-	background-color:#FF0402;
+	background-color:#E11B00;
 }
 a.btn-top-info span {
 	font-size:24px;
@@ -635,11 +635,11 @@ a.btn-top-info span {
 
 .risk-ico-po {
 	font-size:36px;
-	color:#105bff;
+	color:#181467;
 }
 .risk-ico-ng {
 	font-size:36px;
-	color:#FF0402;
+	color:#E11B00;
 }
 
 /* detailed report */
@@ -702,10 +702,10 @@ a.btn-top-info span {
 	color:#ffffff;
 }
 .bg-ng {
-	background-color:#FF0402;
+	background-color:#E11B00;
 }
 .bg-po {
-	background-color:#105bff;
+	background-color:#181467;
 }
 .detail-info-box-1 h3, .detail-info-box-2 h3, .detail-info-box-3 h3, .detail-info-box-4 h3, .detail-info-box-5 h3 {
 	font-size:18px;
