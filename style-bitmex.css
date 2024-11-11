@@ -1,9 +1,13 @@
 ﻿@charset "UTF-8";
 /* CSS Document */
- /* @font-face {
-   
- src: url("fonts/PlusJakartaSans-VariableFont_wght.ttf");
-}*/
+ @font-face {
+   font-family: Dela-Gothic;
+ src: url("fonts/DelaGothicOne-Regular.ttf");
+}
+@font-face {
+	font-family: Akira;
+	src:url("fonts/Akira Expanded Demo.otf");
+}
 body {
 	font-family: Inter, Helvetica, Arial, sans-serif;
 	line-height:1.5em;
@@ -927,10 +931,10 @@ ul.password-format li span {
 	background-color:#999999;
 }
 .text-po {
-	color:#105bff;
+	color:#181467;
 }
 .text-ng {
-	color:#FF0402;
+	color:#E11B00;
 }
 .text-nu {
 	color:#999999;
@@ -1492,8 +1496,8 @@ a.cat-bullet.active {
 	margin:0 5px 0 20px;
 }
 .dot-low {
-	background-color: #105bff;
+	background-color: #181467;
 }
 .dot-high {
-	background-color: #ff0402;
+	background-color: #E11B00;
 }
