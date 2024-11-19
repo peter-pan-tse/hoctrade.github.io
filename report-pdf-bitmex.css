@@ -86,7 +86,7 @@
 }
 ul.cover-toc {
 	position:absolute;
-	bottom:300px;
+	bottom:280px;
 	left:15px;
 	padding:0px 100px;
 	width:50%;
@@ -133,15 +133,16 @@ ul.cover-toc li {
 .cover-disclaimer {
 	position:absolute;
 	bottom:0px;
-	padding:50px 100px 100px 100px;
+	padding:50px 450px 100px 100px;
 	color:#ffffff;
 	font-size:14px;
+	line-height: 1.5em;
 	text-align: justify;
 }
 .general-disclaimer {
 	position:absolute;
 	bottom:0px;
-	padding:0 450px 20px 0;
+	padding:0 400px 20px 0;
 	color:#999999;
 	font-size:12px;
 	line-height: 1.15em;
@@ -186,7 +187,7 @@ ul.cover-toc li {
 	display:inline-block;
 	text-align: center;
 	padding: 20px;
-	width:calc(30% - 40px);
+	width:calc(50% - 40px);
 }
 .intro-text-box {
 	display:block;
