@@ -105,7 +105,7 @@ ul.cover-toc li {
 }
 .cover-info-box-inner {
 	position:relative;
-	width:240px;
+	width:200px;
 	height:100px;
 	display:flex;
 	justify-content: center;
@@ -386,20 +386,17 @@ ul.cover-toc li {
 	padding:20px;
 }
 .toc-column h3 {
-	font-size: 18px;
+	font-size: 20px;
 	font-weight:bold;
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 }
 ul.toc {
 	list-style: none;
 	padding:0 0 0 15px;
-	display: flex;
-	flex-direction: column;
 }
 ul.toc li {
 	list-style-image: url("img/triangle-bullet-bitmex.png");
-	padding:0 0 10px 0;
-	font-size:16px;
+	padding:0 0 30px 0;
 }
 
 /* full report list */
@@ -418,13 +415,12 @@ ul.medic-report li {
 	transition: all 0.3s ease;
 	border-bottom:1px dotted #cccccc;
 	line-height: 1.25em;
-	padding:0px;
-	font-size:16px;
+	padding:10px 0;
 }
 .column-issue, .column-time-issue, .column-time-issue-2, .column-severity, .column-effect, .column-info, .column-risk-ico, .column-risk, .column-improve, .column-trade, .column-percent {
 	display:flex;
 	position:relative;
-	padding: 10px 10px;
+	padding: 13px 10px;
 	align-items:center;
 }
 .column-issue {
@@ -445,7 +441,7 @@ ul.medic-report li {
 	justify-content:flex-end;
 }
 .column-risk {
-	width:calc(48% - 20px);
+	width:calc(38% - 20px);
 	text-align: left;
 }
 .column-issue-item {
@@ -568,7 +564,7 @@ ul.medic-report li {
 	display:inline-block;
 	position:relative;
 	width:100%;
-	height:12px;
+	height:16px;
 	border:2px solid #ffffff;
 	border-radius:10px;
 	/*background: rgb(38,255,0);
@@ -576,8 +572,8 @@ ul.medic-report li {
 }
 div.sev-bar-dot {
 	position:absolute;
-	width:12px;
-	height:12px;
+	width:16px;
+	height:16px;
 	top:-4px;
 	padding:0;
 	margin:0;
@@ -1071,15 +1067,4 @@ p.center-score-s {
 	line-height: 32px;
 	padding: 0;
 	background-color:#ffffff;
-}
-
-a.toc {
-	position:fixed;
-	bottom:10px;
-	right:10px;
-	height:20px;
-	width:20px;
-	border-radius:50%;
-	background-color: transparent;
-	cursor: pointer;
 }
