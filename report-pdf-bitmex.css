@@ -105,7 +105,7 @@ ul.cover-toc li {
 }
 .cover-info-box-inner {
 	position:relative;
-	width:200px;
+	width:240px;
 	height:100px;
 	display:flex;
 	justify-content: center;
@@ -388,7 +388,7 @@ ul.cover-toc li {
 .toc-column h3 {
 	font-size: 20px;
 	font-weight:bold;
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 }
 ul.toc {
 	list-style: none;
@@ -396,7 +396,7 @@ ul.toc {
 }
 ul.toc li {
 	list-style-image: url("img/triangle-bullet-bitmex.png");
-	padding:0 0 30px 0;
+	padding:0 0 10px 0;
 }
 
 /* full report list */
@@ -415,12 +415,12 @@ ul.medic-report li {
 	transition: all 0.3s ease;
 	border-bottom:1px dotted #cccccc;
 	line-height: 1.25em;
-	padding:10px 0;
+	padding:9px 0;
 }
 .column-issue, .column-time-issue, .column-time-issue-2, .column-severity, .column-effect, .column-info, .column-risk-ico, .column-risk, .column-improve, .column-trade, .column-percent {
 	display:flex;
 	position:relative;
-	padding: 13px 10px;
+	padding: 0px 10px;
 	align-items:center;
 }
 .column-issue {
