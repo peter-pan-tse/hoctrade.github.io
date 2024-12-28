@@ -18,6 +18,11 @@ body {
 	padding:0;
 	color:#132A4A;
 }
+@media only screen and (max-width: 920px) {
+	body {
+		font-size:16px;
+	}
+}
 @media only screen and (max-width: 540px) {
 	body {
 		font-size:14px;
@@ -998,13 +1003,13 @@ div.sev-bar-dot {
 }
 @media only screen and (max-width: 920px) {
 	.severity-text {
-		font-size:18px;
+		font-size:16px;
 	}
 	.perf-effect-text {
-		font-size:32px;
+		font-size:28px;
 	}
 	.perf-effect-text span {
-		font-size:18px;
+		font-size:16px;
 	}
 }
 .sev-bar-top-po {
@@ -1085,7 +1090,7 @@ a.btn-top-info span {
     min-height: 80px;
     padding: 30px 100px 30px 40px;
 	margin:20px 0 0 0;
-    font-size: 18px;
+    font-size: 22px;
 	width:calc(100%);
 	border:none;
 	border-radius:5px;
@@ -1114,7 +1119,7 @@ a.btn-top-info span {
 	border-radius:0 0 5px 5px;
 }
 p.faq {
-	font-size: 18px;
+	font-size: 22px;
 	line-height: 1.75em;
 	color:#132A4A;
     margin: 0px 100px 30px 40px;
