@@ -1192,7 +1192,7 @@
 	</div>
 	<!--performance over time -->
 	<div class="main-content-container">
-		<h1>Performance Over Time</h1>
+		<h1 style="position:relative;">Performance Over Time<a class="btn-info" id="modalinfo4" style="position:absolute; right:0px;"><span class="ht-info"></span><div class="click-hint" style="top:-35px; right:-10px;">Click here<div class="arrow-down"></div></div></a></h1>
 		<ul class="pot-report">
 			<li style="border-bottom:4px solid #cccccc; padding-bottom:0; height:80px;">
 				<div class="column-time-issue"><strong>Your Strengths</strong></div>
@@ -1457,13 +1457,14 @@
 					</div>
 					<div class="report-chart-container">
 						<div class="report-chart-box">
-							<h2>Your Trading Activity: Output Chart</h2>
+							<h2><span class="ht-bar-chart" style="font-size:40px; vertical-align: middle;"></span>Your Trading Activity: Output Chart</h2>
 							<img class="img-responsive" src="img/chart-i04.png" />
 							<p>The performance effect is derived by <strong>simulating the profit of your manually closed profit trades in case you did nothing</strong> and let it reach your original TP or SL. The result is compared to your actual profit for those trades.</p>
 							<p>For details, please refer to your personal output chart.</p>
+							<br><br>
 						</div>
 						<div class="report-chart-txt-box">
-							<h2>Review your trades</h2>
+							<h2><span class="ht-clipboard" style="font-size:40px; vertical-align: middle;"></span>Review your trades</h2>
 							<div class="report-chart-txt-box-item">
 								<strong>Top performed</strong><br>
 								<span class="trade-id">Trade ID: 3439530205</span><br><br>
@@ -1533,13 +1534,14 @@
 					</div>
 					<div class="report-chart-container">
 						<div class="report-chart-box">
-							<h2>Your Trading Activity: Output Chart</h2>
+							<h2><span class="ht-bar-chart" style="font-size:40px; vertical-align: middle;"></span>Your Trading Activity: Output Chart</h2>
 							<img class="img-responsive" src="img/chart-i03.png" />
 							<p>The effect of over trading on your trading result is derived by measuring your performance depending on the number of trades you performed during a day. A large number of trades during a day may indicate over trading.</p>
 							<p>For details, please refer to your personal output chart.</p>
+							<br><br>
 						</div>
 						<div class="report-chart-txt-box">
-							<h2>Review your trades</h2>
+							<h2><span class="ht-clipboard" style="font-size:40px; vertical-align: middle;"></span>Review your trades</h2>
 							<div class="report-chart-txt-box-item">
 								<strong>Most severe</strong><br>
 								<span class="trade-id">Trade ID: 3439530205</span><br><br>
@@ -1597,7 +1599,7 @@
 					</div>
 					<div class="report-chart-container">
 						<div class="report-chart-box">
-							<h2>Your Trading Activity: Output Chart</h2>
+							<h2><span class="ht-bar-chart" style="font-size:40px; vertical-align: middle;"></span>Your Trading Activity: Output Chart</h2>
 							<img class="img-responsive" src="img/chart-r02.png" />
 						</div>
 						<div class="report-chart-txt-box">
@@ -1618,6 +1620,25 @@
 		</div>
 	</div>
 	<!-- modal 3 end -->
+	
+	<!-- modal 4 -->
+	<div id="modalInfoBox4" class="modal">
+		<!-- Modal content -->
+		<!-- content 1 -->
+		<div class="modal-content">
+			<div class="modal-header">
+				<span class="close4"><span class="ht-close-thin"></span></span>
+			</div>
+			<div class="modal-body">
+				<div class="alert-details-box-tm">
+					<p>The Performance Over Time chart displays the effect of your Top Strengths and Improvement Potentials over the timeframes of all-time since account inception, 12 months, 3 months, and 1 months.</p>
+					<p>The selected Strengths and Improvement Potentials represent the most impactful ones since account inception, with colors showing the relative power or severity within the timeframe shown. The numbers indicate the performance effect detected within the timeframe.</p>
+					<p>Note that the performance effects shown are not mutually exclusive or collectively exhaustive (MECE).</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- modal 4 end -->
 
 </body>
 <script>
@@ -1669,7 +1690,7 @@
 
 	// When the user clicks anywhere outside of the modal, close it
 	window.onclick = function(event) {
-		if (event.target == modal) {
+		if (event.target == modal2) {
 			modal2.style.display = "none";
 		}
 	}
@@ -1696,8 +1717,35 @@
 
 	// When the user clicks anywhere outside of the modal, close it
 	window.onclick = function(event) {
-		if (event.target == modal) {
+		if (event.target == modal3) {
 			modal3.style.display = "none";
+		}
+	}
+</script>
+<script>
+	// Get the modal
+	var modal4 = document.getElementById("modalInfoBox4");
+
+	// Get the button that opens the modal
+	var btn4 = document.getElementById("modalinfo4");
+
+	// Get the <span> element that closes the modal
+	var span4 = document.getElementsByClassName("close4")[0];
+
+	// When the user clicks the button, open the modal 
+	btn4.onclick = function() {
+		modal4.style.display = "block";
+	}
+
+	// When the user clicks on <span> (x), close the modal
+	span4.onclick = function() {
+		modal4.style.display = "none";
+	}
+
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+		if (event.target == modal4) {
+			modal4.style.display = "none";
 		}
 	}
 </script>

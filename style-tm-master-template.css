@@ -1975,27 +1975,27 @@ ul.medic-report li:nth-child(odd) p.center-score-s:hover, ul.medic-report li:nth
 /* Add Animation */
 @-webkit-keyframes slideIn {
 	from {top: 0px; opacity: 0} 
-	to {top: 0px; opacity: 1}
+	to {top: 50px; opacity: 1}
 }
 
 @keyframes slideIn {
 	from {top: 0px; opacity: 0} 
-	to {top: 0px; opacity: 1}
+	to {top: 50px; opacity: 1}
 }
 
 @-webkit-keyframes fadeIn {
-	from {opacity: 0} 
-	to {opacity: 1}
+	from {top: 0px; opacity: 0} 
+	to {top: 0px; opacity: 1}
 }
 
 @keyframes fadeIn {
-	from {opacity: 0} 
-	to {opacity: 1}
+	from {top: 0px; opacity: 0} 
+	to {top: 0px; opacity: 1}
 }
 @media only screen and (max-width: 920px) {
 	@-webkit-keyframes slideIn {
-		from {bottom: -100vh; opacity: 0} 
-		to {bottom: 0px; opacity: 1}
+		from {bottom: -100vh; opacity: 0;} 
+		to {bottom: 0px; opacity: 1;}
 	}
 
 	@keyframes slideIn {
@@ -2019,7 +2019,7 @@ ul.medic-report li:nth-child(odd) p.center-score-s:hover, ul.medic-report li:nth
 	text-decoration: none;
 	transition: all 0.3s ease;
 }
-.close1, .close2, .close3 {
+.close1, .close2, .close3, .close4 {
 	position:absolute;
 	display:flex;
 	width:36px;
@@ -2057,7 +2057,7 @@ ul.medic-report li:nth-child(odd) p.center-score-s:hover, ul.medic-report li:nth
 		transition: none;
 		box-shadow: 2px 2px 10px rgba(0,0,0,0.0);
 	}*/
-	.close1, .close2, .close3 {
+	.close1, .close2, .close3, .close4 {
 		width:28px;
 		height:28px;
 		top:20px;
@@ -2068,12 +2068,12 @@ ul.medic-report li:nth-child(odd) p.center-score-s:hover, ul.medic-report li:nth
 	}
 }
 @media only screen and (max-width: 540px) {
-	.close1, .close2, .close3 {
+	.close1, .close2, .close3, .close4 {
 		top:10px;
 		right:10px;
 	}
 }
-.close1:hover, .close1:focus, .close2:hover, .close2:focus, .close3:hover, .close3:focus, .back:hover, .back:focus {
+.close1:hover, .close1:focus, .close2:hover, .close2:focus, .close3:hover, .close3:focus, .close4:hover, .close4:focus, .back:hover, .back:focus {
 	color: #F5F7F4;
 	background-color:#000000;
 	cursor: pointer;
@@ -2730,8 +2730,8 @@ ul.pot-report li {
     border-bottom: 1px dotted #cccccc;
 	font-size: 22px;
     line-height: 1.25em;
-    padding: 30px 0;
-	height:100px;
+    padding: 20px 0;
+	height:80px;
 }
 @media only screen and (max-width: 920px) {
 	ul.pot-report li {
@@ -2783,23 +2783,29 @@ ul.pot-report li {
     width: calc(15% - 20px);
     align-items: center;
     text-align: center;
+	transition:all ease 0.3s;
+}
+.column-time:hover{
+	transform: scale(1.15);
 }
 .column-time-po {
     justify-content: flex-end;
     flex-direction: column;
-    margin-bottom: -30px;
+    margin-bottom: -20px;
+	transform-origin: center bottom;
 }
 .column-time-ng {
     justify-content: flex-end;
     flex-direction: column-reverse;
-    margin-top: -30px;
+    margin-top: -20px;
+	transform-origin: center top;
 }
 .time-num {
     display: flex;
     width: 100%;
     justify-content: center;
     text-align: center;
-    margin: 10px 0;
+    margin: 2px 0;
 }
 .time-bar-po {
     border-radius: 5px 5px 0 0;
