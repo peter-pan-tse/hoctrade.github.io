@@ -1,0 +1,778 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="style-XS.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+<!-- Editable favicon -->
+<link rel="icon" href="https://www.xs.com/Favicon.png">
+<!-- Editable page title -->
+<title>TradeMedic | XS.com</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+	$(function(){
+		$('.open-btn').on('click', function(){
+			$(this).toggleClass('close-btn')
+		});
+	});
+</script>
+</head>
+<body>
+	<!--header and menu -->
+	<div class="logo-bar">
+		<div class="logo">
+			<img src="img/logo-xs.png" />
+		</div>
+		<div class="session-box">
+			<div>
+				<div class="session-text" style="font-size:20px; font-weight:medium;">Account ID 583957294</div>
+				<div class="session-text" style="font-size:14px; margin-bottom: 0;">Last updated Jan-15-2025</div>
+			</div>
+			<div class="refreah-counter">LIVE <span class="pulsating-circle"></span>&nbsp;</div>
+		</div>
+	</div>
+	<div class="header">
+		<h1>Monitor, Review and Strengthen your Trading Performance</h1>
+		<h2>Access your TradeMedic Report Anytime from Anywhere</h2>
+		<div class="disclaimer">
+			DISCLAIMER: Please be cautious interpreting the presented information and always do your own research. None of the information provided should be considered financial advice, it may have errors, it is not mutually exclusive nor collectively exhaustive, and we cannot in any way be held liable for any losses or influences of those information on your trading.
+		</div>
+	</div>
+	<!-- main content area -->
+	<!--<div style="height:20px;"></div> -->
+	<div class="main-content-container">
+		<h1 style="margin-bottom:20px;">Your TradeMedic Report</h1>
+		<div style="display:flex; align-items:center; margin-bottom:1em;"><span class="ht-star" style="margin-right:5px;"></span> TOP 4 Critical Issues</div>
+		<!-- top 4 -->
+		<div class="medic-report-top">
+			<!-- -->
+			<div class="top-report-box">
+				<div class="top-report-box-header">Cut Profits Early</div>
+				<div class="top-report-box-body">
+					<div class="severity-text">Severity: 100%</div>
+					<div class="sev-bar-top">
+						<div class="sev-bar-top-grey" style="width:0%;"></div>
+						<div class="sev-bar-dot-top severity-level-9" style="left:calc(100% - 30px);"></div>
+					</div>
+					<div class="perf-effect-text">
+						<span>Performance Effect</span><div class="text-nu">-7,070 USD</div>
+					</div>
+					<div>
+						<a class="btn-top-info" id="modalinfo1"><span class="ht-info"></span> Further Details</a>
+					</div>
+				</div>
+			</div>
+			<!-- -->
+			<div class="top-report-box">
+				<div class="top-report-box-header">Revenge Trading</div>
+				<div class="top-report-box-body">
+					<div class="severity-text">Severity: 80%</div>
+					<div class="sev-bar-top">
+						<div class="sev-bar-top-grey" style="width:calc(20% + 24px);"></div>
+						<div class="sev-bar-dot-top severity-level-8" style="left:calc(80% - 24px);"></div>
+					</div>
+					<div class="perf-effect-text">
+						<span>Performance Effect</span><div class="text-nu">-5,281 USD</div>
+					</div>
+					<div>
+						<a class="btn-top-info" id=""><span class="ht-info"></span> Further Details</a>
+					</div>
+				</div>
+			</div>
+			<!-- -->
+			<div class="top-report-box">
+				<div class="top-report-box-header">Late Trade Entry</div>
+				<div class="top-report-box-body">
+					<div class="severity-text">Severity: 75%</div>
+					<div class="sev-bar-top">
+						<div class="sev-bar-top-grey" style="width:calc(25% + 22.5px);"></div>
+						<div class="sev-bar-dot-top severity-level-7" style="left:calc(75% - 22.5px);"></div>
+					</div>
+					<div class="perf-effect-text">
+						<span>Performance Effect</span><div class="text-nu">-4,992 USD</div>
+					</div>
+					<div>
+						<a class="btn-top-info" id=""><span class="ht-info"></span> Further Details</a>
+					</div>
+				</div>
+			</div>
+			<!-- -->
+			<div class="top-report-box">
+				<div class="top-report-box-header">Overtrading</div>
+				<div class="top-report-box-body">
+					<div class="severity-text">Severity: 65%</div>
+					<div class="sev-bar-top">
+						<div class="sev-bar-top-grey" style="width:calc(35% + 19.5px);"></div>
+						<div class="sev-bar-dot-top severity-level-6" style="left:calc(65% - 19.5px);"></div>
+					</div>
+					<div class="perf-effect-text">
+						<span>Performance Effect</span><div class="text-nu">-4,225 USD</div>
+					</div>
+					<div>
+						<a class="btn-top-info" id=""><span class="ht-info"></span> Further Details</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		<!-- 8-point assessment -->
+		<div class="main-content-container" style="background-color:#F7F8FB;">
+			<h1>Discover Your Trading Issues</h1>
+			<div class="speedometer-footer">
+				<div>
+					Severity: <span style="display:inline-block; width:16px; height:16px; border-radius:8px; margin:-3px 5px 0 10px; background-color:#01337F; vertical-align: middle;"></span><span style="color:#01337F;">Low</span> <span style="display:inline-block; width:16px; height:16px; border-radius:8px; margin:-3px 5px 0 10px; background-color:#eb008b; vertical-align: middle;"></span><span style="color:#eb008b;">High</span>
+				</div>
+			</div>
+			<div class="speedometer-body">
+					<div class="speedometer-item">
+						<img class="speedometer-dial" src="img/speedometer-dial-xs.png" />
+						<div class="speedometer-hand gear-2 hand-behavioral"></div>
+						<div class="gear-dot"></div>
+						Behavioural Errors
+					</div>
+					<div class="speedometer-item">
+						<img class="speedometer-dial" src="img/speedometer-dial-xs.png" />
+						<div class="speedometer-hand gear-7 hand-emotion"></div>
+						<div class="gear-dot"></div>
+						Emotional Errors
+					</div>
+					<div class="speedometer-item">
+						<img class="speedometer-dial" src="img/speedometer-dial-xs.png" />
+						<div class="speedometer-hand gear-5 hand-strategic"></div>
+						<div class="gear-dot"></div>
+						Strategic Errors
+					</div>
+					<div class="speedometer-item">
+						<img class="speedometer-dial" src="img/speedometer-dial-xs.png" />
+						<div class="speedometer-hand gear-4 hand-trade"></div>
+						<div class="gear-dot"></div>
+						Trade Execution
+					</div>
+					<div class="speedometer-item">
+						<img class="speedometer-dial" src="img/speedometer-dial-xs.png" />
+						<div class="speedometer-hand gear-1 hand-accuracy"></div>
+						<div class="gear-dot"></div>
+						Stop Accuracy
+					</div>
+					<div class="speedometer-item">
+						<img class="speedometer-dial" src="img/speedometer-dial-xs.png" />
+						<div class="speedometer-hand gear-6 hand-timing"></div>
+						<div class="gear-dot"></div>
+						Trade Timing
+					</div>
+					<div class="speedometer-item">
+						<img class="speedometer-dial" src="img/speedometer-dial-xs.png" />
+						<div class="speedometer-hand gear-9 hand-risk"></div>
+						<div class="gear-dot"></div>
+						Risk Management
+					</div>
+					<div class="speedometer-item">
+						<img class="speedometer-dial" src="img/speedometer-dial-xs.png" />
+						<div class="speedometer-hand gear-7 hand-stimulation"></div>
+						<div class="gear-dot"></div>
+						Over-stimulation
+					</div>
+				</div>
+		</div>
+	<!-- full report -->
+	<div class="main-content-container">
+		<h1>Full Report</h1>
+		<ul class="medic-report">
+			<div class="desktop">
+				<li style="padding-bottom:30px;">
+					<div class="column-issue"><strong>Issue</strong></div>
+					<div class="column-severity"><strong>Severity</strong></div>
+					<div class="column-effect"><strong>Performance Effect</strong></div>
+					<div class="column-info"><strong>Further Details</strong></div>
+				</li>
+			</div>
+			<div class="tablet">
+				<li style="padding-bottom:30px;">
+					<div class="column-issue"><strong>Issue</strong></div>
+					<div class="column-severity"><strong>Severity</strong></div>
+					<div class="column-effect"><strong>Performance Effect</strong></div>
+					<div class="column-info"><strong>Further Details</strong></div>
+				</li>
+			</div>
+			<div class="mobile">
+				<li style="padding-bottom:10px;">
+					<div class="column-issue"><strong>Issue</strong></div>
+					<div class="column-severity"><strong>Severity</strong></div>
+					<div class="column-effect"><strong>Performance</strong></div>
+					<div class="column-info"></div>
+				</li>
+			</div>
+					
+					<!---->
+					<li>
+						<div class="column-issue">Catch a Falling Knife</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-grey" style="width:40%;"></div>
+								<div class="sev-bar-dot severity-level-6" style="left:60%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-ng">-3,900 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Anxious Trade Exits</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-grey" style="width:48%;"></div>
+								<div class="sev-bar-dot severity-level-5" style="left:52%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-ng">-3,380 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">News Trading</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-grey" style="width:56%;"></div>
+								<div class="sev-bar-dot severity-level-4" style="left:44%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-ng">-2,860 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Fail to Cut Losses</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-grey" style="width:65%;"></div>
+								<div class="sev-bar-dot severity-level-3" style="left:35%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-ng">-2,275 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Fighting the Trend</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-grey" style="width:70%;"></div>
+								<div class="sev-bar-dot severity-level-3" style="left:30%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-ng">-1,950 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Weekend Trading</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-grey" style="width:75%;"></div>
+								<div class="sev-bar-dot severity-level-2" style="left:25%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-ng">-1,625 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Distracted Trading</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-grey" style="width:75%;"></div>
+								<div class="sev-bar-dot severity-level-2" style="left:25%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-ng">-1,625 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Doubling Down</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-grey" style="width:75%;"></div>
+								<div class="sev-bar-dot severity-level-2" style="left:25%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-ng">-1,625 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Over-optimism</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-grey" style="width:80%;"></div>
+								<div class="sev-bar-dot severity-level-2" style="left:20%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-ng">-1,300 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Failed De-risking</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-grey" style="width:83%;"></div>
+								<div class="sev-bar-dot severity-level-2" style="left:17%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-ng">-1,105 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Impatient Entries</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-grey" style="width:85%;"></div>
+								<div class="sev-bar-dot severity-level-2" style="left:15%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-ng">-923 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Trade without Break</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-grey" style="width:89%;"></div>
+								<div class="sev-bar-dot severity-level-2" style="left:11%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-ng">-715 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Over-complexity</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-grey" style="width:91%;"></div>
+								<div class="sev-bar-dot severity-level-1" style="left:9%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-ng">-585 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Impatient Exits</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-grey" style="width:95%;"></div>
+								<div class="sev-bar-dot severity-level-1" style="left:5%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-ng">-325 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Too Tight Stops</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-grey" style="width:98%;"></div>
+								<div class="sev-bar-dot severity-level-1" style="left:2%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-ng">-130 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Too Wide Stops</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-grey" style="width:100%;"></div>
+								<div class="sev-bar-dot severity-level-1" style="left:0%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-po">0 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Emotional Trading</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-grey" style="width:100%;"></div>
+								<div class="sev-bar-dot severity-level-1" style="left:0%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-po">0 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Anxious Trade Entries</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-grey" style="width:100%;"></div>
+								<div class="sev-bar-dot severity-level-1" style="left:0%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-po">0 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Inefficient Hedging</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-grey" style="width:100%;"></div>
+								<div class="sev-bar-dot severity-level-1" style="left:0%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-po">0 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Fail to Call it a Day</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-grey" style="width:100%;"></div>
+								<div class="sev-bar-dot severity-level-1" style="left:0%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-po">0 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Blindly Follow Momentum</div>
+						<div class="column-severity">
+							<div class="sev-bar">
+								<div class="sev-bar-grey" style="width:100%;"></div>
+								<div class="sev-bar-dot severity-level-1" style="left:0%;"></div>
+							</div>
+						</div>
+						<div class="column-effect"><span class="text-po">0 USD</span></div>
+						<div class="column-info">
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+				</ul>
+	</div>
+	<!-- risk report -->
+	<div class="main-content-container" style="background-color:#F7F8FB;">
+		<h1>Risk Report</h1>
+		<ul class="medic-report">
+			<div class="desktop">
+				<li style="padding-bottom:30px;">
+					<div class="column-issue"><strong>Risk Area</strong></div>
+					<div class="column-risk-ico"></div>
+					<div class="column-risk"></div>
+					<div class="column-info"><strong>Further Details</strong></div>
+				</li>
+			</div>
+			<div class="tablet">
+				<li style="padding-bottom:30px;">
+					<div class="column-issue"><strong>Risk Area</strong></div>
+					<div class="column-risk-ico"></div>
+					<div class="column-risk"></div>
+					<div class="column-info"><strong>Further Details</strong></div>
+				</li>
+			</div>
+			<div class="mobile">
+				<li style="padding-bottom:10px;">
+					<div class="column-issue"><strong>Risk Area</strong></div>
+					<div class="column-risk-ico"></div>
+					<div class="column-risk"></div>
+					<div class="column-info"></div>
+				</li>
+			</div>
+					
+					<!---->
+					<li>
+						<div class="column-issue">Emotional Loss Streak</div>
+						<div class="column-risk-ico">
+							<div class="risk-ico-ng"><span class="ht-alert"></span></div>
+						</div>
+						<div class="column-risk">Warning: On average, you increase your risk per trade by 1,523.12% after 4-5 consecutive losses.</div>
+						<div class="column-info">
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">All-in Trades</div>
+						<div class="column-risk-ico">
+							<div class="risk-ico-po"><span class="ht-check"></span></div>
+						</div>
+						<div class="column-risk">Good job! You do not have any recent all-in trades.</div>
+						<div class="column-info">
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Trade Without SL</div>
+						<div class="column-risk-ico">
+							<div class="risk-ico-ng"><span class="ht-alert"></span></div>
+						</div>
+						<div class="column-risk">Warning: Only 19% of your trades had a Stop Loss!</div>
+						<div class="column-info">
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Excessive Risk Taking</div>
+						<div class="column-risk-ico">
+							<div class="risk-ico-po"><span class="ht-check"></span></div>
+						</div>
+						<div class="column-risk">Good job! You seem to be managing your risk per trade.</div>
+						<div class="column-info">
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+					<!---->
+					<li>
+						<div class="column-issue">Reward Risk Imbalance</div>
+						<div class="column-risk-ico">
+							<div class="risk-ico-ng"><span class="ht-alert"></span></div>
+						</div>
+						<div class="column-risk">Warning: On average, you lose more in a losing trade than you gain in a winning trade.</div>
+						<div class="column-info">
+							<a class="btn-info" id="" style="position:absolute; right:0px;"><span class="ht-info"></span></a>
+						</div>
+					</li>
+				</ul>
+	</div>
+	<!--FAQ -->
+	<div class="main-content-container">
+		<h1>TradeMedic FAQ</h1>  	
+		<!-- accordion -->
+		<button class="accordion">
+			<div><strong>How are the results of this TradeMedic Report generated?</strong></div>
+			<a class="btn-open"><span class="ht-arrow-thin"></span></a>
+		</button>
+		<div class="panel">
+			<p class="faq">
+				The results are fully automatically generated based on your historic trades. Smart algorithms analyse your trades, identify patterns &amp; behaviours, interpret them, and derive the quantified effects shown in the report.
+			</p>
+		</div>
+		<!-- accordion end -->
+		<!-- accordion -->
+		<button class="accordion">
+			<div><strong>Can I view the charts in different timeframes and dimensions?</strong></div>
+			<a class="btn-open"><span class="ht-arrow-thin"></span></a>
+		</button>
+		<div class="panel">
+			<p class="faq">
+				Yes, you can view the charts in custom timeframes for more recent performances, alter between Pip &amp; Return to derive position sizing effects, analyse number of trades, significances, benchmarks, risk effects, and more. These additional insights are available through XS.
+			</p>
+		</div>
+		<!-- accordion end -->
+		<!-- accordion -->
+		<button class="accordion">
+			<div><strong>Can I receive alerts if I perform trades that show issues?</strong></div>
+			<a class="btn-open"><span class="ht-arrow-thin"></span></a>
+		</button>
+		<div class="panel">
+			<p class="faq">
+				Yes, XS enables real-time alerts in case you exhibit trading actions indicative of behavioural errors in one of your trading issues. Moreover, you can receive alerts in case risk management related actions are identified. All alerts can be customized based on your preferences.
+			</p>
+		</div>
+		<!-- accordion end -->
+		<!-- accordion -->
+		<button class="accordion">
+			<div><strong>Are the TradeMedic Reports also available for other platforms aside from MetaTrader 4?</strong></div>
+			<a class="btn-open"><span class="ht-arrow-thin"></span></a>
+		</button>
+		<div class="panel">
+			<p class="faq">
+				Currently, the Trade Medic reports are only available for MetaTrader 4 users. However, we are already working on integrating additional trading platforms frequently used by traders. Stay tuned for more integrations.
+			</p>
+		</div>
+		<!-- accordion end -->
+		<!-- accordion -->
+		<button class="accordion">
+			<div><strong>Are there additional analytics available?</strong></div>
+			<a class="btn-open"><span class="ht-arrow-thin"></span></a>
+		</button>
+		<div class="panel">
+			<p class="faq">
+				There are many more charts available that outline trading behaviours, strategies, etc. Moreover, advanced statistics, tracking tools, and in-depth explanations &amp; videos on root causes of behaviours are available. These additional resources can be found on XS.
+			</p>
+		</div>
+		<!-- accordion end -->
+		<!-- accordion -->
+		<button class="accordion">
+			<div><strong>Why do I receive this report?</strong></div>
+			<a class="btn-open"><span class="ht-arrow-thin"></span></a>
+		</button>
+		<div class="panel">
+			<p class="faq">
+				This report has been generated as a service by XS. To inquire about the eligibility to receive this and future reports, please contact XS.
+			</p>
+		</div>
+		<!-- accordion end -->
+		<p class="faq-footer">For further questions, please refer to our FAQ page <a href="#">here</a>.</p>
+		<!--footer-->
+		<div class="footer">
+			<p class="footer-disclaimer">HIGH RISK WARNING: Foreign exchange and other CFD trading carries a high level of risk and may not be suitable for everyone. The usage of leverage creates additional risk and loss exposure. Your investment objectives, experience level and risk tolerance have to be taken into consideration before you decide to trade foreign exchange or other CFD products. You could lose some or all of your entire investment. Do not invest money that you cannot afford to lose and always use an appropriate risk management. It’s important to educate yourself on the risks associated with foreign exchange trading, and seek professional advice from an independent financial or tax advisor in case of any questions. Any data and information is provided ‘as is’ solely for informational purposes, and is not intended for trading purposes or advice. Past performance, which are presented on this website or you find somewhere else, is not indicative of future results.</p>
+		</div>
+	</div>
+		
+	<!-- main content area end -->
+	
+	<!-- The Modal -->
+	<div id="modalInfoBox" class="modal">
+		<!-- Modal content -->
+		<!-- content 1 -->
+		<div class="modal-content">
+			<div class="modal-header">
+				<span class="close"><span class="ht-close-thin"></span></span>
+			</div>
+			<div class="modal-body">
+				<div class="alert-details-box-tm">
+					
+					<div class="detail-info-container">
+						<div class="detail-info-box-1">
+							<h2>Issue</h2>
+							<h3>Cut Profits Early</h3>
+						</div>
+						<div class="detail-info-box-2">
+							<h2>Area</h2>
+							<h3>Trade Execution</h3>
+						</div>
+						<div class="detail-info-box-3">
+							<h2>Performance Effect</h2>
+							<h3>-7,070 USD</h3>
+						</div>
+						<div class="detail-info-box-4">
+							<h2>Severity</h2>
+							<div class="sev-bar-top" style="width:calc(100% - 80px);">
+								<div class="sev-bar-dot-top severity-level-9" style="left:calc(100% - 30px);"></div>
+							</div>
+							<div class="severity-level">100%</div>
+						</div>
+						<div class="detail-info-box-5 text-ng -ng">
+							<div class="alert-msg-box"><span class="ht-alert"></span> <strong>You could have made an additional profit of 7,070 USD if not manually closing your trades in profit</strong>. Those trades made you a profit of <strong>7,833 USD</strong>, however just keeping them with their existing SL &amp; TP, the profit would have been <strong>14,093 USD</strong>. Consider to let such trades develop.</div>
+						</div>
+					</div>
+					<div class="explanation-box">
+						<h2>Explanation</h2>
+						<p>Cutting profits early describes the behaviour of closing your trade in profit before it reaches your Take Profit (TP) level.</p>
+						<p>Traders tend to close their winning trades early in fear of losing their unrealized gains, a <strong>human tendency closely connected to loss aversion and well described in Nobel Prize winning Prospect Theory.</strong></p>
+					</div>
+					<h2>Your Trading Activity: Output Chart</h2>
+					<div class="report-chart-container">
+						<div class="report-chart-box">
+							<img class="img-responsive" src="img/chart-i02.png" />
+						</div>
+						<div class="report-chart-txt-box">
+							<p>The performance effect is derived by <strong>simulating the profit of your manually closed profit trades in case you did nothing</strong> and let it reach your original TP or SL. The result is compared to your actual profit for those trades.</p>
+							<p>For details, please refer to your personal output chart.</p>
+							<h4>Further information</h4>
+							<ul class="toc">
+								<li><a href="#" target="_blank">Prospect Theory</a></li>
+								<li><a href="#" target="_blank">Pessimism Bias</a></li>
+								<li><a href="#" target="_blank">Loss Aversion</a></li>
+							</ul>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- the modal end -->
+
+</body>
+<script>
+	// Get the modal
+	var modal = document.getElementById("modalInfoBox");
+
+	// Get the button that opens the modal
+	var btn1 = document.getElementById("modalinfo1");
+
+	// Get the <span> element that closes the modal
+	var span = document.getElementsByClassName("close")[0];
+
+	// When the user clicks the button, open the modal 
+	btn1.onclick = function() {
+		modal.style.display = "block";
+	}
+
+	// When the user clicks on <span> (x), close the modal
+	span.onclick = function() {
+		modal.style.display = "none";
+	}
+
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+		}
+	}
+</script>
+<script>
+	var acc = document.getElementsByClassName("accordion");
+	var expand = document.getElementsByClassName("btn-open");
+	var i;
+
+	for (i = 0; i < acc.length; i++) {
+		acc[i].addEventListener("click", function() {
+			//this.classList.toggle("accordionheaderactive");
+			var panel = this.nextElementSibling;
+			if (panel.style.maxHeight) {
+				panel.style.maxHeight = null;
+			} else {
+				panel.style.maxHeight = panel.scrollHeight + "px";
+				//expand.transform.rotate(0deg);
+			} 
+		});
+	}
+</script>
+</html>
