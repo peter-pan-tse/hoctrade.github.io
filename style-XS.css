@@ -180,7 +180,7 @@ a.btn-info:hover {
 		height:calc(60vh - 80px);
 		max-height:calc(100vh - 80px);
 		width:calc(100% - 20px);
-		padding:40px 10px;
+		padding:0px 10px;
 	}
 }
 .header h1 {
@@ -193,14 +193,13 @@ a.btn-info:hover {
 @media only screen and (max-width: 920px) {
 	.header h1 {
 		font-size:32px;
+		margin:15% 10% 20px;
 	}
 }
 @media only screen and (max-width: 540px) {
 	.header h1 {
-		font-size:24px;
-	}
-	.header h2 {
-		font-size:18px;
+		font-size:20px;
+		margin:10% 10px;
 	}
 }
 .disclaimer {
@@ -771,7 +770,8 @@ ul.medic-report li {
 @media only screen and (max-width:540px) {
 	.column-issue, .column-severity, .column-effect, .column-info, .column-risk-ico, .column-risk {
 		padding: 10px 0px;
-		font-size:12px;
+		font-size:14px;
+		line-height: 1.15em;
 	}
 }
 .column-issue-area, .column-improvement, .column-donut {
