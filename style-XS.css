@@ -122,17 +122,17 @@ a.btn-info:hover {
 	text-align: center;
 	width: 100%;
 	margin:0;
-	padding:40px 0 20px;
+	padding:40px 0 0;
 }
 @media only screen and (max-width: 920px) {
 	.logo-bar {
-		padding:30px 0 20px;
+		padding:30px 0 0;
 	}
 }
 @media only screen and (max-width: 540px) {
 	.logo-bar {
 		width:calc(100% - 20px);
-		padding:30px 10px 10px;
+		padding:30px 10px 0;
 	}
 }
 .logo {
@@ -162,8 +162,7 @@ a.btn-info:hover {
 	align-items:center;
 	text-align: center;
 	width: 90%;
-	height:35vw;
-	min-height:600px;
+	height:calc(50vh);
 	margin:0;
 	padding:0 5%;
 	background-image: url(img/tm-xs-top-bg-1.jpg);
@@ -174,41 +173,39 @@ a.btn-info:hover {
 }
 @media only screen and (max-width: 920px) {
 	.header {
-		min-height:450px;
 		width:calc(100% - 80px);
 		padding:0 40px;
 	}
 }
 @media only screen and (max-width: 540px) {
 	.header {
-		height:calc(60vh - 80px);
-		max-height:calc(100vh - 80px);
 		width:calc(100% - 20px);
 		padding:0px 10px;
 	}
 }
 .header h1 {
+	position:absolute;
+	top:calc(25vh - 56px + 36px);
+	display:flex;
+	width:100%;
+	justify-content: center;
+	text-align: center;
 	font-weight: bold;
 	font-size:45px;  
 	line-height: 1.25em;
 	color:#F5F7F4;
-	margin:calc(17.5vw - 240px) 10% 0px;
-}
-@media only screen and (max-width: 1024px) {
-	.header h1 {
-		margin:80px 10% 0px;
-	}
+	margin:0 10%;
 }
 @media only screen and (max-width: 920px) {
 	.header h1 {
 		font-size:32px;
-		margin:70px 10% 0px;
+		top:calc(25vh - 40px + 10px);
 	}
 }
 @media only screen and (max-width: 540px) {
 	.header h1 {
 		font-size:22px;
-		margin:90px 10px 0px;
+		top:calc(25vh - 27.5px - 5.5px);
 	}
 }
 .disclaimer {
