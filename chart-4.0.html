@@ -1,0 +1,323 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="jquery-3.6.0.min.js" language="javascript"></script>
+<link href="https://fonts.googleapis.com/css?family=Noto Sans:400,700,900" rel="stylesheet">
+<link href="font.css" rel="stylesheet">
+<link href="chart-4.0.css" rel="stylesheet">
+<link rel="icon" href="favicon.svg">
+<title>Hoc-trade Charts</title>
+</head>
+
+<body>
+	<div class="chart-container">
+		
+		<div class="grid">
+			<div class="chart-block">
+				<div class="chart-header">
+					<h1>Break since last trade</h1>
+					<a class="btn-info" href="#"><span class="ht-info"></span></a>
+					<div class="btn-left">
+						<a class="btn-currency" href="#"><strong style="margin-right:25px;">USD/trade</strong> <span>USD total</span> <span>Pip/trade</span> <span>% Ret./trade</span></a>
+					</div>
+					<div class="btn-right">
+						<a class="btn-period" href="#"><strong style="margin-left:25px;">All time</strong> <span>1 month</span> <span>3 months</span> <span>1 year</span></a>
+					</div>
+				</div>
+				<div class="chart-box">
+					<div class="chart-column" style="height:calc(66.6% - 12px);">
+						<div class="chart-col-7"></div>
+						<div class="chart-col-7 col-po">
+							<div class="bar-chart po" style="height:51%;"></div>
+							<span class="benchmark-line" style="bottom:80%;"><span class="benchmark-dot"></span></span>
+						</div>
+						<div class="chart-col-7 col-po">
+							<div class="bar-chart nu-po" style="height:30%;"></div>
+							<span class="benchmark-line" style="bottom:75%;"><span class="benchmark-dot"></span></span>
+						</div>
+						<div class="chart-col-7 col-po">
+							<div class="bar-chart po insignificant" style="height:42%;"></div>
+							<span class="benchmark-line" style="bottom:68%;"><span class="benchmark-dot"></span></span>
+						</div>
+						<div class="chart-col-7 col-po">
+							<span class="benchmark-line" style="bottom:50%;"><span class="benchmark-dot"></span></span>
+						</div>
+						<div class="chart-col-7 col-po">
+							<span class="benchmark-line" style="bottom:24%;"><span class="benchmark-dot"></span></span>
+						</div>
+						<div class="chart-col-7 col-po" style="border-right:1px solid transparent;">
+							<span class="benchmark-line" style="bottom:11%;"><span class="benchmark-dot"></span></span>
+						</div>
+					</div>
+					<span class="chart-x-value" style="top:5%;">1000</span>
+					<span class="chart-x-value" style="top:33.3%">500</span>
+					<span class="chart-x-value" style="bottom:5%">-500</span>
+					<div class="chart-x-axis">
+						<div class="chart-col-7 col-nu" style="border-right:1px solid transparent;">
+							mins
+						</div>
+						<div class="chart-col-7 col-nu" style="border-right:1px solid transparent;">
+							30+
+						</div>
+						<div class="chart-col-7 col-nu" style="border-right:1px solid transparent;">
+							30-15
+						</div>
+						<div class="chart-col-7 col-nu" style="border-right:1px solid transparent;">
+							15-10
+						</div>
+						<div class="chart-col-7 col-nu" style="border-right:1px solid transparent;">
+							10-5
+						</div>
+						<div class="chart-col-7 col-nu" style="border-right:1px solid transparent;">
+							5-0
+						</div>
+						<div class="chart-col-7 col-nu" style="border-right:1px solid transparent;">
+							On-going
+						</div>
+					</div>
+					<div class="chart-column" style="height:calc(33% - 12px);">
+						<div class="chart-col-7"></div>
+						<div class="chart-col-7 col-ng"></div>
+						<div class="chart-col-7 col-ng"></div>
+						<div class="chart-col-7 col-ng"></div>
+						<div class="chart-col-7 col-ng">
+							<div class="bar-chart ng" style="height:8%;"></div>
+						</div>
+						<div class="chart-col-7 col-ng">
+							<div class="bar-chart ng insignificant" style="height:22%;"></div>
+						</div>
+						<div class="chart-col-7 col-ng" style="border-right:1px solid transparent;">
+							<div class="bar-chart ng" style="height:50%;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="grid">
+			<div class="chart-block">
+				<div class="chart-header">
+					<h1>Break since last trade</h1>
+					<a class="btn-info" href="#"><span class="ht-info"></span></a>
+					<div class="btn-left">
+						<a class="btn-currency" href="#"><strong style="margin-right:25px;">USD/trade</strong> <span>USD total</span> <span>Pip/trade</span> <span>% Ret./trade</span></a>
+					</div>
+					<div class="btn-right">
+						<a class="btn-period" href="#"><strong style="margin-left:25px;">All time</strong> <span>1 month</span> <span>3 months</span> <span>1 year</span></a>
+					</div>
+				</div>
+				<div class="chart-box">
+					<div class="item-detail-box" id="detail01">
+						<div>Return: <strong>+512 USD</strong></div><div>Trades: <strong>2</strong></div><span class="txt-benchmark">Benchmark: <strong>+865 USD</strong></span>
+					</div>
+					<div class="chart-column" style="height:calc(66.6% - 12px);">
+						<div class="chart-col-7"></div>
+						<div class="chart-col-7 col-po">
+							<div class="bar-chart po" style="height:51%;"></div>
+							<span class="benchmark-line" style="bottom:80%;"><span class="benchmark-dot"></span></span>
+							<div class="item-detail-line"></div>
+							<div class="spot-benchmark" style="bottom:calc(80% - 3px);"></div>
+							<div class="spot-actual" style="bottom:calc(51% - 4px);"></div>
+						</div>
+						<div class="chart-col-7 col-po">
+							<div class="bar-chart nu-po" style="height:30%;"></div>
+							<span class="benchmark-line" style="bottom:75%;"><span class="benchmark-dot"></span></span>
+						</div>
+						<div class="chart-col-7 col-po">
+							<div class="bar-chart po insignificant" style="height:42%;"></div>
+							<span class="benchmark-line" style="bottom:68%;"><span class="benchmark-dot"></span></span>
+						</div>
+						<div class="chart-col-7 col-po">
+							<span class="benchmark-line" style="bottom:50%;"><span class="benchmark-dot"></span></span>
+						</div>
+						<div class="chart-col-7 col-po">
+							<span class="benchmark-line" style="bottom:24%;"><span class="benchmark-dot"></span></span>
+						</div>
+						<div class="chart-col-7 col-po" style="border-right:1px solid transparent;">
+							<span class="benchmark-line" style="bottom:11%;"><span class="benchmark-dot"></span></span>
+						</div>
+					</div>
+					<span class="chart-x-value" style="top:5%;">1000</span>
+					<span class="chart-x-value" style="top:33.3%">500</span>
+					<span class="chart-x-value" style="bottom:5%">-500</span>
+					<div class="chart-x-axis">
+						<div class="chart-col-7 col-nu" style="border-right:1px solid transparent;">
+							mins
+						</div>
+						<div class="chart-col-7 col-nu" style="border-right:1px solid transparent;">
+							<span style="color:#047f92; font-weight:bold;">30+</span>
+						</div>
+						<div class="chart-col-7 col-nu" style="border-right:1px solid transparent;">
+							30-15
+						</div>
+						<div class="chart-col-7 col-nu" style="border-right:1px solid transparent;">
+							15-10
+						</div>
+						<div class="chart-col-7 col-nu" style="border-right:1px solid transparent;">
+							10-5
+						</div>
+						<div class="chart-col-7 col-nu" style="border-right:1px solid transparent;">
+							5-0
+						</div>
+						<div class="chart-col-7 col-nu" style="border-right:1px solid transparent;">
+							On-going
+						</div>
+					</div>
+					<div class="chart-column" style="height:calc(33% - 12px);">
+						<div class="chart-col-7"></div>
+						<div class="chart-col-7 col-ng">
+							<div class="item-detail-line"></div>
+						</div>
+						<div class="chart-col-7 col-ng"></div>
+						<div class="chart-col-7 col-ng"></div>
+						<div class="chart-col-7 col-ng">
+							<div class="bar-chart ng" style="height:8%;"></div>
+						</div>
+						<div class="chart-col-7 col-ng">
+							<div class="bar-chart ng insignificant" style="height:22%;"></div>
+						</div>
+						<div class="chart-col-7 col-ng" style="border-right:1px solid transparent;">
+							<div class="bar-chart ng" style="height:50%;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="grid">
+			<div class="chart-block-d">
+				<div class="chart-header-d">
+					<h1>Break since last trade</h1>
+					<a class="btn-info" href="#"><span class="ht-info"></span></a>
+					<div class="btn-left">
+						<a class="btn-currency-d" href="#"><strong style="margin-right:25px;">USD/trade</strong> <span>USD total</span> <span>Pip/trade</span> <span>% Ret./trade</span></a>
+					</div>
+					<div class="btn-right">
+						<a class="btn-period-d" href="#"><strong style="margin-left:25px;">All time</strong> <span>1 month</span> <span>3 months</span> <span>1 year</span></a>
+					</div>
+				</div>
+				<div class="chart-box">
+					<div class="chart-column" style="height:calc(66.6% - 12px);">
+						<div class="chart-col-7-d"></div>
+						<div class="chart-col-7-d col-po">
+							<div class="bar-chart po" style="height:51%;"></div>
+							<span class="benchmark-line" style="bottom:80%;"><span class="benchmark-dot"></span></span>
+						</div>
+						<div class="chart-col-7-d col-po">
+							<div class="bar-chart nu-po" style="height:30%;"></div>
+							<span class="benchmark-line" style="bottom:75%;"><span class="benchmark-dot"></span></span>
+						</div>
+						<div class="chart-col-7-d col-po">
+							<div class="bar-chart po insignificant" style="height:42%;"></div>
+							<span class="benchmark-line" style="bottom:68%;"><span class="benchmark-dot"></span></span>
+						</div>
+						<div class="chart-col-7-d col-po">
+							<span class="benchmark-line" style="bottom:50%;"><span class="benchmark-dot"></span></span>
+						</div>
+						<div class="chart-col-7-d col-po">
+							<span class="benchmark-line" style="bottom:24%;"><span class="benchmark-dot"></span></span>
+						</div>
+						<div class="chart-col-7-d col-po" style="border-right:1px solid transparent;">
+							<span class="benchmark-line" style="bottom:11%;"><span class="benchmark-dot"></span></span>
+						</div>
+					</div>
+					<span class="chart-x-value-d" style="top:5%;">1000</span>
+					<span class="chart-x-value-d" style="top:33.3%">500</span>
+					<span class="chart-x-value-d" style="bottom:5%">-500</span>
+					<div class="chart-x-axis-d">
+						<div class="chart-col-7-d col-nu" style="border-right:1px solid transparent;">
+							mins
+						</div>
+						<div class="chart-col-7-d col-nu" style="border-right:1px solid transparent;">
+							30+
+						</div>
+						<div class="chart-col-7-d col-nu" style="border-right:1px solid transparent;">
+							30-15
+						</div>
+						<div class="chart-col-7-d col-nu" style="border-right:1px solid transparent;">
+							15-10
+						</div>
+						<div class="chart-col-7-d col-nu" style="border-right:1px solid transparent;">
+							10-5
+						</div>
+						<div class="chart-col-7-d col-nu" style="border-right:1px solid transparent;">
+							5-0
+						</div>
+						<div class="chart-col-7-d col-nu" style="border-right:1px solid transparent;">
+							On-going
+						</div>
+					</div>
+					<div class="chart-column" style="height:calc(33% - 12px);">
+						<div class="chart-col-7-d"></div>
+						<div class="chart-col-7-d col-ng"></div>
+						<div class="chart-col-7-d col-ng"></div>
+						<div class="chart-col-7-d col-ng"></div>
+						<div class="chart-col-7-d col-ng">
+							<div class="bar-chart ng" style="height:8%;"></div>
+						</div>
+						<div class="chart-col-7-d col-ng">
+							<div class="bar-chart ng insignificant" style="height:22%;"></div>
+						</div>
+						<div class="chart-col-7-d col-ng" style="border-right:1px solid transparent;">
+							<div class="bar-chart ng" style="height:50%;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="grid">
+			<div class="chart-block">
+				<div class="chart-header">
+					<h1>% of positions with SL</h1>
+					<a class="btn-info" href="#"><span class="ht-info"></span></a>
+				</div>
+				<div class="chart-box-2">
+					<img src="img/line-chart.png" style="z-index:3;" />
+					<div class="chart-column" style="height:calc(88% - 12px);">
+						<div class="chart-col-5"></div>
+						<div class="chart-col-5"></div>
+						<div class="chart-col-5"></div>
+						<div class="chart-col-5"></div>
+						<div class="chart-col-5" style="border-right:1px solid transparent;">
+						</div>
+					</div>
+					<span class="chart-x-value" style="top:0%;">100%</span>
+					<span class="chart-x-value" style="top:20%">75%</span>
+					<span class="chart-x-value" style="top:40%">50%</span>
+					<span class="chart-x-value" style="top:60%">25%</span>
+					<span class="benchmark-line-long" style="top:20%"><span class="benchmark-line-label">Benchmark</span></span>
+					<span class="average-line-long" style="top:43%"><span class="average-line-label">Avg.</span></span>
+					<div class="chart-x-axis">
+						<div class="chart-col-5 col-nu" style="border-right:1px solid transparent;">
+							0m
+						</div>
+						<div class="chart-col-5 col-nu" style="border-right:1px solid transparent;">
+							3m
+						</div>
+						<div class="chart-col-5 col-nu" style="border-right:1px solid transparent;">
+							6m
+						</div>
+						<div class="chart-col-5 col-nu" style="border-right:1px solid transparent;">
+							9m
+						</div>
+						<div class="chart-col-5 col-nu" style="border-right:1px solid transparent;">
+							1yr
+						</div>
+					</div>
+					<div class="chart-column" style="height:calc(12% - 12px);">
+						<div class="chart-col-5"></div>
+						<div class="chart-col-5"></div>
+						<div class="chart-col-5"></div>
+						<div class="chart-col-5"></div>
+						<div class="chart-col-5" style="border-right:1px solid transparent;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</body>
+</html>
