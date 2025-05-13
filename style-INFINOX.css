@@ -64,7 +64,7 @@ h1, h2, h3 {
 }
 h1 {
 	font-size: 30px;
-	margin-bottom:40px;
+	margin-bottom:10px;
 }
 h2 {
 	font-size: 24px;
@@ -77,8 +77,11 @@ h3 {
 @media only screen and (max-width: 540px) {
 	h1 {
 		font-size: 24px;
-		margin-bottom:30px;
+		margin-bottom:10px;
 		text-align: left;
+	}
+	h2 {
+		font-size: 18px;
 	}
 }
 a {
@@ -161,8 +164,7 @@ a.btn-info:hover {
 	align-items:center;
 	text-align: left;
 	width: 85%;
-	height:50vh;
-	max-height:500px;
+	height:35vh;
 	margin:0;
 	padding:100px 7.5% 50px;
 	background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(24, 59, 68, 0.5)), url(img/about_banner_bg.webp);
@@ -181,7 +183,6 @@ a.btn-info:hover {
 }
 @media only screen and (max-width: 540px) {
 	.header {
-		height:calc(60vh - 80px);
 		max-height:calc(100vh - 80px);
 		width:calc(100% - 20px);
 		padding:40px 10px;
@@ -399,13 +400,22 @@ ul.langmenu-content li > a:hover {
 	}
 }
 .intro-box {
+	position:absolute;
+	right:7.5%;
 	display:flex;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	width:100%;
-	padding:20px 0;
-	background-color:#1e1e1e;
+	padding:0px;
+	z-index: 1;
+}
+@media only screen and (max-width: 920px) {
+	.intro-box {
+		position:relative;
+		padding:0 0 20px 0;
+		right:0;
+
+	}
 }
 a.btn-intro {
 	display:inline-block;
@@ -417,6 +427,7 @@ a.btn-intro {
 	text-decoration: none;
 	font-size:16px;
 	line-height:40px;
+	background-color:#1e1e1e;
 	cursor: pointer;
 	transition: all ease 0.3s;
 }
@@ -653,7 +664,14 @@ a.btn-intro:hover {
 	.speedometer-footer {
 		width:300px;
 		right:calc(50vw - 150px);
-		top:100px;
+		top:120px;
+	}
+}
+@media only screen and (max-width: 390px) {
+	.speedometer-footer {
+		width:300px;
+		right:calc(50vw - 150px);
+		top:170px;
 	}
 }
 .speedometer-item {
