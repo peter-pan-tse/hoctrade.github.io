@@ -51,9 +51,13 @@
 		</div>
 	</div>
 	<!-- main content area -->
+	<!-- introduction -->
+	<div class="intro-box">
+		<a class="btn-intro" id="modalinfo5">Introduction to report</a>
+	</div>
 	<!-- top 3 -->
 	<div class="main-content-container">
-		<h1 style="margin-bottom:20px;">Strengths &amp; Improvement Opportunities</h1>
+		<h1 style="margin-bottom:20px; position:relative;">Strengths &amp; Improvement Opportunities<a class="btn-info" id="" style="margin-left:10px;"><span class="ht-info"></span><!--<div class="click-hint">Click here<div class="arrow-down"></div></div>--></a></h1>
 		<br>
 		<!-- top 3 strengths -->
 		<div class="top-3-title"><span class="ht-check" style="color:#ffcd05;"></span> Your TOP 3 Strengths</div>
@@ -172,7 +176,7 @@
 
 	<!-- 8-point assessment -->
 	<div class="main-content-container" style="background-color:#F7F8FB;">
-			<h1>8-point Trading Area Assessment</h1>
+			<h1 style="position:relative;">8-point Trading Area Assessment<a class="btn-info" id="" style="margin-left:10px;"><span class="ht-info"></span><!--<div class="click-hint">Click here<div class="arrow-down"></div></div>--></a></h1>
 			<div class="speedometer-footer">
 				<div>
 					Severity: <span style="display:inline-block; width:16px; height:16px; border-radius:8px; margin:-3px 5px 0 10px; background-color:#036acd; vertical-align: middle;"></span><span style="color:#036acd;">Low</span> <span style="display:inline-block; width:16px; height:16px; border-radius:8px; margin:-3px 5px 0 10px; background-color:#d93c29; vertical-align: middle;"></span><span style="color:#d93c29;">High</span>
@@ -1207,7 +1211,7 @@
 	</div>
 	<!--performance over time -->
 	<div class="main-content-container">
-		<h1 style="position:relative;">Performance Over Time<a class="btn-info" id="modalinfo4" style="position:absolute; right:0px;"><span class="ht-info"></span><!--<div class="click-hint">Click here<div class="arrow-down"></div></div>--></a></h1>
+		<h1 style="position:relative;">Performance Over Time<a class="btn-info" id="modalinfo4" style="margin-left:10px;"><span class="ht-info"></span><!--<div class="click-hint">Click here<div class="arrow-down"></div></div>--></a></h1>
 		<ul class="pot-report">
 			<li style="border-bottom:4px solid #ffcd05; padding-bottom:0; height:80px;">
 				<div class="column-time-issue"><strong>Your Strengths</strong></div>
@@ -1654,6 +1658,63 @@
 		</div>
 	</div>
 	<!-- modal 4 end -->
+	
+	<!-- modal 5 -->
+	<div id="modalInfoBox5" class="modal">
+		<!-- Modal content -->
+		<!-- content 1 -->
+		<div class="modal-content">
+			<div class="modal-header">
+				<span class="close5"><span class="ht-close-thin"></span></span>
+			</div>
+			<div class="modal-body">
+				<h1 style="font-size:36px;">Introduction to report</h1>
+				<h2>Personalized Insights to Empower your Trading</h2>
+				<div class="intro-howto-box">
+					<div class="intro-howto-item">
+						<img src="img/tm-report-intro-1-infinox.png" /><strong>Input</strong>Your trading history<br>&amp; external market data
+					</div>
+					<div class="intro-howto-item">
+						<img src="img/tm-report-intro-2-infinox.png" /><strong>Analysis</strong>Smart algorithms<br>identify patterns
+					</div>
+					<div class="intro-howto-item">
+						<img src="img/tm-report-intro-3-infinox.png" /><strong>Output</strong>Reveal personalized<br>improvement potentials
+					</div>
+				</div>
+				<div class="intro-info-box">
+					<div class="intro-info-box-1"><h2>This Report is Based on</h2></div>
+					<div class="intro-info-box-2">ID<br><strong>4729503</strong></div>
+					<div class="intro-info-box-2">Trading history<br><strong>154 days</strong></div>
+					<div class="intro-info-box-2">Trades analyzed<br><strong>584</strong></div>
+				</div>
+				<br>
+				<h2>What you will Find in this Report</h2>
+				<div class="intro-feature-box">
+					<div class="intro-feature-item">
+						<img src="img/tm-feature-01-infinox.png" />
+						<strong>8-point Area Assessment</strong>
+						Discover which trading areas show improvement potentials, analysing timing, strategy, behavioral biases, risk, and more!
+					</div>
+					<div class="intro-feature-item">
+						<img src="img/tm-feature-02-infinox.png" />
+						<strong>Top 4 Opportunities for Improvement</strong>
+						Check your specific Top4 opportunities for improvement scored by their performance effect on your past trading.
+					</div>
+					<div class="intro-feature-item">
+						<img src="img/tm-feature-03-infinox.png" />
+						<strong>Full Trading &amp; Risk Management Report</strong>
+						Gain a holistic overview through a list of dozens of behavioral patterns &amp; risk scores applied to your trading.
+					</div>
+					<div class="intro-feature-item">
+						<img src="img/tm-feature-04-infinox.png" />
+						<strong>In-depth Issue &amp; Risk Insights</strong>
+						Deep-dive into the details of your particular behaviors with personalized insights, charts, and explanations.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- modal 5 end -->
 
 </body>
 <script>
@@ -1761,6 +1822,33 @@
 	window.onclick = function(event) {
 		if (event.target == modal4) {
 			modal4.style.display = "none";
+		}
+	}
+</script>
+	<script>
+	// Get the modal
+	var modal5 = document.getElementById("modalInfoBox5");
+
+	// Get the button that opens the modal
+	var btn5 = document.getElementById("modalinfo5");
+
+	// Get the <span> element that closes the modal
+	var span5 = document.getElementsByClassName("close5")[0];
+
+	// When the user clicks the button, open the modal 
+	btn5.onclick = function() {
+		modal5.style.display = "block";
+	}
+
+	// When the user clicks on <span> (x), close the modal
+	span5.onclick = function() {
+		modal5.style.display = "none";
+	}
+
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+		if (event.target == modal5) {
+			modal5.style.display = "none";
 		}
 	}
 </script>
