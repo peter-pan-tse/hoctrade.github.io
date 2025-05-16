@@ -36,7 +36,7 @@ src:url("https://use.typekit.net/af/3888dc/00000000000000007735e606/31/l?primer=
 font-display:auto;font-style:normal;font-weight:300;font-stretch:normal;
 }
 body {
-	font-family:"proxima-nova", sans-serif;
+	font-family:"proxima-nova";
 	font-size:18px;
 	line-height:1.25em;
 	margin:0;
@@ -57,7 +57,7 @@ body {
     color: #ffcd05;
 }
 h1, h2, h3 {
-	color:#132A4A;
+	color:#1e1e1e;
 	line-height: 1.25em;
 	font-weight: 300;
 	margin-top:0;
@@ -86,10 +86,12 @@ h3 {
 }
 a {
 	color:#ffcd05;
+	font-weight: 600;
+	text-decoration: none;
 	transition:all ease 0.3s;
 }
 a:hover, a:focus {
-	color:#F82F4A;
+	color:#ffcd05;
 }
 ul.toc {
 	display: flex;
@@ -165,6 +167,7 @@ a.btn-info:hover {
 	text-align: left;
 	width: 85%;
 	height:35vh;
+	min-height:450px;
 	margin:0;
 	padding:100px 7.5% 50px;
 	background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(24, 59, 68, 0.5)), url(img/about_banner_bg.webp);
@@ -176,7 +179,7 @@ a.btn-info:hover {
 @media only screen and (max-width: 920px) {
 	.header {
 		height:30vh;
-		max-height:auto;
+		min-height:auto;
 		width:calc(100% - 80px);
 		padding:40px;
 	}
@@ -417,24 +420,62 @@ ul.langmenu-content li > a:hover {
 
 	}
 }
-a.btn-intro {
-	display:inline-block;
-	height:40px;
-	padding:0 20px;
-	border:2px solid #ffcd05;
-	border-radius:6px;
-	color:#ffcd05;
-	text-decoration: none;
-	font-size:16px;
-	line-height:40px;
-	background-color:#1e1e1e;
-	cursor: pointer;
-	transition: all ease 0.3s;
+/*intro button */
+button {
+	font-family:"proxima-nova";
+  cursor: pointer; /* now added in my edit */
+  display: inline-block;
+	line-height:1.2;
+  padding:13px 30px;
+  border-radius: 6px;
+	border:none;
+  color: #1e1e1e;
+	font-weight:600;
+  font-size: 16px;
+  background-color: #ffcd05;
+  transition: color .3s;
+  position: relative; /* now changed in my edit */
+  z-index: 1; /* because text to be placed over the background */
+  overflow: hidden; /* because background of div not to be overflow from button. */
 }
-a.btn-intro:hover {
-	background-color:#ffcd05;
-	color:#1e1e1e;
+@media only screen and (max-width: 920px) {
+	button {
+	  padding:13px 20px;
+	}
 }
+
+.background {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* top-left and transform are for putting div in the middle of button.*/
+  background-image: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.05));
+  transition: .3s;
+  z-index: -1;
+  border-radius: 50%;
+}
+.center-corner {
+  background-position: 50% 50%;
+}
+
+.center-corner {
+  background-size: 0% 0%;
+}
+
+button:hover {
+  color: #1e1e1e;
+}
+
+button:hover .background {
+	 /* animation-name: btnhover;
+	animation-fill-mode: forwards;*/
+    width: 100%;
+    height: 500%; /* 150% and 500% because div completely to be fill the space of the button.*/
+}
+
+
 .general-info-box {
 	display:block;
 	margin:0 0 4px 0;
@@ -570,21 +611,21 @@ a.btn-intro:hover {
 	background-size:12px 12px;
 }
 .box-po {
-	background-color:#009245;
+	background-color:#17953f;
 }
 .box-ng {
-	background-color:#C1272D;
+	background-color:#d6253d;
 }
 .box-nu {
-	background-color:#999999;
+	background-color:#1e1e1e;
 }
 .text-po {
 	/*color:#009245;*/
-	color:#036acd;
+	color:#17953f;
 }
 .text-ng {
 	/*color:#C1272D;*/
-	color:#d93c29;
+	color:#d6253d;
 }
 .text-nu {
 	color:#1e1e1e;
@@ -1097,7 +1138,7 @@ ul.medic-report li {
 	width:80%;
 	height:18px;;
 	border-radius:9px;
-	background: linear-gradient(90deg, rgba(255, 205, 5, 1) 5%, rgba(197, 181, 52, 1) 25%, rgba(133, 156, 102, 1) 50%, rgba(58, 127, 162, 1) 75%, rgba(3, 106, 205, 1) 95%);
+	background: linear-gradient(90deg, rgba(255,205,5,1) 5%, rgba(145,173,30,1) 25%, rgba(86,175,28,1) 50%, rgba(27,176,75,1) 75%, rgba(23,149,63,1) 95%);
 }
 .sev-bar-ng {
 	display:inline-block;
@@ -1105,7 +1146,7 @@ ul.medic-report li {
 	width:80%;
 	height:18px;;
 	border-radius:9px;
-	background: linear-gradient(90deg, rgba(255, 205, 5, 1) 5%, rgba(246, 167, 11, 1) 25%, rgba(234, 126, 25, 1) 50%, rgba(225, 89, 33, 1) 75%, rgba(217, 60, 41, 1) 95%);
+	background: linear-gradient(90deg, rgba(255,205,5,1) 5%, rgba(244,108,49,1) 25%, rgba(247,77,49,1) 50%, rgba(248,47,74,1) 75%, rgba(214,37,61,1) 95%);
 }
 @media only screen and (max-width: 920px) {
 	.sev-bar-po, .sev-bar-ng {
@@ -1168,7 +1209,7 @@ div.sev-bar-dot {
 	width:80%;
 	height:28px;
 	border-radius:14px;
-	background: linear-gradient(90deg, rgba(255,205,5,1) 5%, rgba(197,181,52,1) 25%, rgba(133,156,102,1) 50%, rgba(58,127,162,1) 75%, rgba(3,106,205,1) 95%);
+	background: linear-gradient(90deg, rgba(255,205,5,1) 5%, rgba(145,173,30,1) 25%, rgba(86,175,28,1) 50%, rgba(27,176,75,1) 75%, rgba(23,149,63,1) 95%);
 }
 .sev-bar-top-ng {
 	display:inline-block;
@@ -1176,7 +1217,7 @@ div.sev-bar-dot {
 	width:80%;
 	height:28px;
 	border-radius:14px;
-	background: linear-gradient(90deg, rgba(255,205,5,1) 5%, rgba(246,167,11,1) 25%, rgba(234,126,25,1) 50%, rgba(225,89,33,1) 75%, rgba(217,60,41,1) 95%);
+	background: linear-gradient(90deg, rgba(255,205,5,1) 5%, rgba(244,108,49,1) 25%, rgba(247,77,49,1) 50%, rgba(248,47,74,1) 75%, rgba(214,37,61,1) 95%);
 }
 .sev-bar-top-grey {
 	display:inline-block;
@@ -1198,15 +1239,15 @@ div.sev-bar-dot-top {
 	box-shadow: 1px 1px 10px rgb(0 0 0 / 0.25);
 	z-index: 802;
 }
-.severity-level-1 {background-color:#036acd;}
-.severity-level-2 {background-color:#3a7fa2;}
-.severity-level-3 {background-color:#859c66;}
-.severity-level-4 {background-color:#c5b534;}
+.severity-level-1 {background-color:#17953f;}
+.severity-level-2 {background-color:#1bb04b;}
+.severity-level-3 {background-color:#56af1c;}
+.severity-level-4 {background-color:#91ad1e;}
 .severity-level-5 {background-color:#ffcd05;}
-.severity-level-6 {background-color:#f6a70b;}
-.severity-level-7 {background-color:#ea7e19;}
-.severity-level-8 {background-color:#e15921;}
-.severity-level-9 {background-color:#c53843;}
+.severity-level-6 {background-color:#f46c31;}
+.severity-level-7 {background-color:#f74d31;}
+.severity-level-8 {background-color:#f82f4a;}
+.severity-level-9 {background-color:#d6253d;}
 a.btn-top-info {
 	position: relative;
 	display:flex;
@@ -1277,7 +1318,7 @@ a.btn-top-info span {
 p.faq {
 	font-size: 22px;
 	line-height: 1.75em;
-	color:#132A4A;
+	color:#1e1e1e;
     margin: 0px 100px 30px 40px;
 }
 p.faq-footer {
@@ -1293,7 +1334,7 @@ p.faq-footer {
 	p.faq {
 		font-size: 14px;
 		line-height: 1.25em;
-		color:#132A4A;
+		color:#1e1e1e;
 		margin: 0px 10px 20px 10px;
 	}
 	p.faq-footer {
@@ -1309,7 +1350,7 @@ a.btn-open {
 	transform: rotate(-90deg);
 }	
 a.btn-open:hover {
-	color:#41B8EA;
+	color:#1e1e1e;
 }
 @media only screen and (max-width: 540px) {
 	a.btn-open {
@@ -1320,11 +1361,11 @@ a.btn-open:hover {
 }
 .risk-ico-po {
 	font-size:48px;
-	color:#036acd;
+	color:#17953f;
 }
 .risk-ico-ng {
 	font-size:48px;
-	color:#d93c29;
+	color:#d6253d;
 }
 .larger-font {
 	font-size: larger;
@@ -2973,10 +3014,11 @@ ul.pot-report li {
 .click-hint {
     display: inline-block;
     position: absolute;
+	color:#ffcd05;
     right: -16px;
     top: -25px;
     padding: 4px 8px;
-    background-color: orangered;
+    background-color: #1e1e1e;
     border-radius: 4px;
     font-size: 12px;
     line-height: 1em;
@@ -2989,7 +3031,7 @@ ul.pot-report li {
     height: 0;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-top: 5px solid orangered;
+    border-top: 5px solid #1e1e1e;
 }
 /* intro to report */
 .intro-howto-box {
