@@ -166,8 +166,7 @@ a.btn-info:hover {
 	align-items:center;
 	text-align: left;
 	width: 85%;
-	height:35vh;
-	min-height:450px;
+	height:480px;
 	margin:0;
 	padding:100px 7.5% 50px;
 	background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(24, 59, 68, 0.5)), url(img/about_banner_bg.webp);
@@ -178,7 +177,7 @@ a.btn-info:hover {
 }
 @media only screen and (max-width: 920px) {
 	.header {
-		height:30vh;
+		height:360px;
 		min-height:auto;
 		width:calc(100% - 80px);
 		padding:40px;
@@ -186,15 +185,7 @@ a.btn-info:hover {
 }
 @media only screen and (max-width: 540px) {
 	.header {
-		max-height:calc(100vh - 80px);
-		width:calc(100% - 20px);
-		padding:40px 10px;
-	}
-}
-@media only screen and (max-height: 800px) {
-	.header {
-		height:40vh;
-		max-height:calc(100vh - 80px);
+		height:280px;
 		width:calc(100% - 20px);
 		padding:40px 10px;
 	}
@@ -205,7 +196,7 @@ a.btn-info:hover {
 	color:#ffffff;
 	margin:0;
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1045px) {
 	.header h1 {
 		font-size:2.5em;
 	}
