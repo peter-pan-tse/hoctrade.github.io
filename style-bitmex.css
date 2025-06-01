@@ -8,6 +8,10 @@
 	font-family: Akira;
 	src:url("fonts/Akira Expanded Demo.otf");
 }
+html {
+    -webkit-print-color-adjust: exact;
+    -webkit-filter: opacity(1);
+}
 body {
 	font-family: Inter, Helvetica, Arial, sans-serif;
 	line-height:1.5em;
