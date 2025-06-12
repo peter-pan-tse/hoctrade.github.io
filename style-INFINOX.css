@@ -159,7 +159,7 @@ a.btn-info:hover {
 	}
 }
 /* header */
-.header {
+.header, .header-v1, .header-v2, .header-v3 {
 	position: relative;
 	display:flex;
 	justify-content:flex-start;
@@ -169,14 +169,25 @@ a.btn-info:hover {
 	height:480px;
 	margin:0;
 	padding:100px 7.5% 50px;
-	background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(24, 59, 68, 0.5)), url(img/about_banner_bg.webp);
 	background-position:center;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-color:#12223b;
 }
+.header {
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(24, 59, 68, 0.5)), url(img/about_banner_bg.webp);
+}
+.header-v1 {
+	background-image: url("img/infinox-V1.png");
+}
+.header-v2 {
+	background-image: url("img/infinox-V2.png");
+}
+.header-v3 {
+	background-image: url("img/infinox-V3.png");
+}
 @media only screen and (max-width: 920px) {
-	.header {
+	.header, .header-v1, .header-v2, .header-v3 {
 		height:360px;
 		min-height:auto;
 		width:calc(100% - 80px);
@@ -184,30 +195,30 @@ a.btn-info:hover {
 	}
 }
 @media only screen and (max-width: 540px) {
-	.header {
+	.header, .header-v1, .header-v2, .header-v3 {
 		height:280px;
 		width:calc(100% - 20px);
 		padding:40px 10px;
 	}
 }
-.header h1 {
+.header h1, .header-v1 h1, .header-v2 h1, .header-v3 h1 {
 	font-size:3.5em;  
 	line-height: 1.25em;
 	color:#ffffff;
 	margin:0;
 }
 @media only screen and (max-width: 1045px) {
-	.header h1 {
+	.header h1, .header-v1 h1, .header-v2 h1, .header-v3 h1 {
 		font-size:2.5em;
 	}
 }
 @media only screen and (max-width: 920px) {
-	.header h1 {
+	.header h1, .header-v1 h1, .header-v2 h1, .header-v3 h1 {
 		font-size:1.8em;
 	}
 }
 @media only screen and (max-width: 540px) {
-	.header h1 {
+	.header h1, .header-v1 h1, .header-v2 h1, .header-v3 h1 {
 		font-size:1.7em;
 	}
 }
