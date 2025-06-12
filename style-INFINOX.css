@@ -255,7 +255,7 @@ a.btn-info:hover {
 	display: block;
 	text-align: left;
 	position:absolute;
-	bottom:50px;
+	bottom:20px;
 	width:85%;
 	color:#CDD5E3;
 	font-size: 14px;
@@ -263,7 +263,7 @@ a.btn-info:hover {
 }
 @media only screen and (max-width: 920px) {
 	.disclaimer {
-		bottom:20px;
+		bottom:10px;
 		width:calc(100% - 80px);
 		font-size: 12px;
 		line-height: 1.25em;
