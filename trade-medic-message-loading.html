@@ -1,0 +1,157 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="style-tm-master-template.css" rel="stylesheet">
+<!-- Editable favicon -->
+<link rel="icon" href="favicon.svg">
+<!-- Editable page title -->
+<title>TradeMedic</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+	$(function(){
+		$('.open-btn').on('click', function(){
+			$(this).toggleClass('close-btn')
+		});
+	});
+</script>
+<style>
+	html, body {
+		background-color: #eeeeee;
+	}
+	.header-message {
+		display: block;
+		width:calc(85%);
+		margin:0;
+	}
+	.logo-message {
+		padding: 40px 0 0 0;
+		margin: 0;
+	}
+		.logo-message > img {
+		width: 320px;
+	}
+	@media only screen and (max-width: 920px) {
+		.logo-message > img {
+			width: 280px;
+		}
+	}
+	@media only screen and (max-width: 540px) {
+		.logo-message > img {
+			width: 180px;
+		}
+	}
+	.main-content-container {
+		position:relative; 
+		width:calc(100% - 15%); 
+		height:100vh; 
+		padding:0px 7.5%;
+	}
+	@media only screen and (max-width: 540px) {
+		.main-content-container {
+			position:relative; 
+			width:calc(100% - 20px); 
+			height:100vh; 
+			padding:0px 10px;
+		}
+	}
+	.message-container {
+		position: relative;
+		display: flex;
+		width:100%;
+		height:70%;
+		justify-content: center;
+		align-items: center;
+	}
+	@media only screen and (max-width: 1280px) {
+		.message-container {
+			height:60%;
+		}
+	}
+	@media only screen and (max-width: 540px) {
+		.message-container {
+			height:50%;
+		}
+	}
+	.message-box {
+		position: relative;
+		display:flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width:calc(50% - 80px);
+		padding:40px;
+		background-color: #ffffff;
+		border-radius: 20px;
+		box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+	}
+	@media only screen and (max-width: 920px) {
+		.message-box {
+			width:calc(60% - 80px);
+		}
+	}
+	@media only screen and (max-width: 540px) {
+		.message-box {
+			width:calc(100% - 100px);
+			border-radius: 12px;
+		}
+	}
+	.footer {
+		position:absolute;
+		bottom:0px;
+		width:85%;
+		border-top: 1px solid #cccccc;
+		color:#cccccc;
+	}
+	@media only screen and (max-width: 540px) {
+		.footer {
+			position: relative;
+			width: calc(100% - 20px);
+			margin:20px 0;
+		}
+		.footer p.footer-disclaimer {
+			margin-top: 10px;
+		}
+	}
+	.loader {
+		width: 48px;
+		height: 48px;
+		border: 5px solid #027192;
+		border-bottom-color: #FFFFFF;
+		border-radius: 50%;
+		display: inline-block;
+		box-sizing: border-box;
+		animation: rotation 2s linear infinite;
+    }
+
+    @keyframes rotation {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+    }
+</style>
+</head>
+<body>
+	<div class="main-content-container">
+		<div class="header-message">
+			<div class="logo-message">
+				<img src="img/tm-logo-blue.png" />
+			</div>
+		</div>
+		<div class="message-container">
+			<div class="message-box">
+				<div style="padding:40px 0 0 0;"><span class="loader"></span></div>
+				<p>ONE MOMENT PLEASE, DATA LOADING</p>
+			</div>
+		</div>
+		<!--footer-->
+		<div class="footer">
+			<p class="footer-disclaimer">HIGH RISK WARNING: Foreign exchange and other CFD trading carries a high level of risk and may not be suitable for everyone. The usage of leverage creates additional risk and loss exposure. Your investment objectives, experience level and risk tolerance have to be taken into consideration before you decide to trade foreign exchange or other CFD products. You could lose some or all of your entire investment. Do not invest money that you cannot afford to lose and always use an appropriate risk management. It’s important to educate yourself on the risks associated with foreign exchange trading, and seek professional advice from an independent financial or tax advisor in case of any questions. Any data and information is provided ‘as is’ solely for informational purposes, and is not intended for trading purposes or advice. Past performance, which are presented on this website or you find somewhere else, is not indicative of future results.</p>
+		</div>
+	</div>
+</body>
+</html>
