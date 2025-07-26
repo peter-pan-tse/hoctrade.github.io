@@ -160,8 +160,10 @@ a.btn-info:hover {
 .header h1 {
 	font-size:3vw;  
 	line-height: 1.25em;
+	font-weight:400;
 	color:#ffffff;
 	margin:0;
+	text-shadow: 2px 2px 5px rgba(0,0,0,1);
 }
 /*@media only screen and (max-width: 1045px) {
 	.header h1, .header-v1 h1, .header-v2 h1, .header-v3 h1 {
