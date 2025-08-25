@@ -297,7 +297,7 @@ ul.cover-toc li {
 }
  h1.top3-2 {
 	font-size:24px;
-	margin: 20px 0;
+	margin: 20px 0 40px 0;
 	 text-align: center;
 }
 .top-report-box-1, .top-report-box-2, .top-report-box-3 {
@@ -321,12 +321,12 @@ ul.cover-toc li {
 	position:relative;
 	flex-direction: column;
 	align-items: stretch;
-	margin:20px 10px 30px 10px;
-	padding-top:50px;
+	margin:20px 10px 20px 10px;
+	padding-top:10px;
 	border-radius:20px;
 	box-shadow: 5px 5px 10px rgba(0,0,0,0.25);
 	width:calc(100% - 40px);
-	height:300px;
+	height:auto;
 }
 .top-report-box-6 {
 	display:flex;
@@ -334,11 +334,11 @@ ul.cover-toc li {
 	flex-direction: column;
 	align-items: stretch;
 	margin:20px 10px 10px 10px;
-	padding-top:50px;
+	padding-top:10px;
 	border-radius:20px;
 	box-shadow: 5px 5px 10px rgba(0,0,0,0.25);
 	width:calc(50% - 40px);
-	height:250px;
+	height:auto;
 }
 .top-report-gap {
 	width:30px;
@@ -354,7 +354,7 @@ ul.cover-toc li {
 	position:relative;
 	text-align:center;
 	/*width:calc(100% - 20px);*/
-	margin:80px 10px 10px 10px;
+	margin:100px 10px 10px 10px;
 	padding:20px;
 	background-color: #F3F7FE;
 	border-radius:20px;
@@ -386,8 +386,7 @@ ul.cover-toc li {
 	flex-direction:row;
 	justify-content: center;
 	align-items: center;
-    min-height: 40px;
-    padding: 20px 20px 10px 20px;
+    padding: 10px 20px;
     font-size: 18px;
 	line-height: 1.15em;
     font-weight: bold;
@@ -404,14 +403,14 @@ ul.cover-toc li {
 	opacity: 0.6;
 }
 .top-reporter-box-num-2 {
-	position:absolute;
-	top:10px;
-	left:20px;
+	position:relative;
+	text-align: center;
+	padding:10px 0;
 	font-size:30px;
 	color:#ffffff;
 	font-weight:bold;
 	line-height: 1em;
-	opacity: 0.6;
+	opacity: 1;
 }
 .top-report-box-body {
 	display:flex;
@@ -427,7 +426,7 @@ ul.cover-toc li {
 	justify-content: space-around;
 	align-items:center;
     padding:0px 10px 20px 10px;
-	height:300px;
+	height:220px;
 }
 .click-hint {
 	display:inline-block;
@@ -687,7 +686,7 @@ div.sev-bar-dot {
 	line-height:1.25em;
 	text-align: center;
 	/*border:1px solid dodgerblue;*/
-	margin-bottom:20px;
+	margin-bottom:10px;
 }
 .perf-effect-compare-text-ng {
 	dispaly:block;
@@ -699,7 +698,7 @@ div.sev-bar-dot {
 	line-height:1.25em;
 	text-align: center;
 	/*border:1px solid magenta;*/
-	margin-bottom:20px;
+	margin-bottom:10px;
 }
 .sev-bar-top {
 	display:inline-block;
