@@ -681,24 +681,24 @@ div.sev-bar-dot {
 	dispaly:block;
 	padding:4px 8px;
 	border-radius: 6px;
-	color:#ffffff;
+	color:dodgerblue;
 	font-size:12px;
 	font-weight:bold;
 	line-height:1.25em;
 	text-align: center;
-	background-color:dodgerblue;
+	/*border:1px solid dodgerblue;*/
 	margin-bottom:20px;
 }
 .perf-effect-compare-text-ng {
 	dispaly:block;
 	padding:4px 8px;
 	border-radius: 6px;
-	color:#ffffff;
+	color:magenta;
 	font-size:12px;
 	font-weight:bold;
 	line-height:1.25em;
 	text-align: center;
-	background-color:magenta;
+	/*border:1px solid magenta;*/
 	margin-bottom:20px;
 }
 .sev-bar-top {
