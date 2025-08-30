@@ -299,6 +299,7 @@ ul.cover-toc li {
 	font-size:24px;
 	margin: 20px 0 40px 0;
 	 text-align: center;
+	 color:#101921;
 }
 .top-report-box-1, .top-report-box-2, .top-report-box-3 {
 	display:flex;
@@ -426,7 +427,7 @@ ul.cover-toc li {
 	justify-content: space-around;
 	align-items:center;
     padding:0px 10px 20px 10px;
-	height:220px;
+	height:180px;
 }
 .click-hint {
 	display:inline-block;
@@ -680,10 +681,10 @@ div.sev-bar-dot {
 	dispaly:block;
 	padding:4px 8px;
 	border-radius: 6px;
-	color:dodgerblue;
+	color:#181467;
 	font-size:12px;
 	font-weight:bold;
-	line-height:1.25em;
+	line-height:1.5em;
 	text-align: center;
 	/*border:1px solid dodgerblue;*/
 	margin-bottom:10px;
@@ -692,10 +693,10 @@ div.sev-bar-dot {
 	dispaly:block;
 	padding:4px 8px;
 	border-radius: 6px;
-	color:magenta;
+	color:#E11B00;
 	font-size:12px;
 	font-weight:bold;
-	line-height:1.25em;
+	line-height:1.5em;
 	text-align: center;
 	/*border:1px solid magenta;*/
 	margin-bottom:10px;
