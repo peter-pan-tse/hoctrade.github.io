@@ -427,7 +427,7 @@ ul.cover-toc li {
 	justify-content: space-around;
 	align-items:center;
     padding:0px 10px 20px 10px;
-	height:180px;
+	height:220px;
 }
 .click-hint {
 	display:inline-block;
@@ -681,7 +681,7 @@ div.sev-bar-dot {
 	dispaly:block;
 	padding:4px 8px;
 	border-radius: 6px;
-	color:#181467;
+	color:dodgerblue;
 	font-size:12px;
 	font-weight:bold;
 	line-height:1.5em;
@@ -693,7 +693,7 @@ div.sev-bar-dot {
 	dispaly:block;
 	padding:4px 8px;
 	border-radius: 6px;
-	color:#E11B00;
+	color:magenta;
 	font-size:12px;
 	font-weight:bold;
 	line-height:1.5em;
