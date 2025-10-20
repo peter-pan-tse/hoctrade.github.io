@@ -884,7 +884,7 @@ a.btn-sandbox span {
 .benefit-h1 {
 	color:#ffffff; 
 	text-align:left; 
-	text-shadow:0 0 5px rgba(21, 229, 170, 1.0); 
+	text-shadow:3px 3px 5px rgba(0, 0, 0, 1.0);
 	font-size:5vh; 
 	line-height:1em;
 }
