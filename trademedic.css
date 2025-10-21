@@ -246,12 +246,12 @@ a.btn-sandbox span {
 .theme-headline h1 {
 	color:#ffffff;
 	font-size:6vh;
-	text-shadow:0 0 5px rgba(21, 229, 170, 1.0);
+	text-shadow: 0px 0px 5px rgba(0,0,0,1);
 }
 .theme-headline h2 {
 	color:#00deff;
 	font-size:4vh;
-	text-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+	text-shadow: 0px 0px 5px rgba(0,0,0,1);
 }
 @media only screen and (max-width: 1024px) {
 	.theme-box {
