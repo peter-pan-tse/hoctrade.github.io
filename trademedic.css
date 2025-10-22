@@ -868,7 +868,7 @@ a.btn-sandbox span {
 	color:#ffffff;
 	text-decoration:none;
 	padding:0 0 30px 0;
-	margin-bottom:30px;
+	margin-bottom:0px;
 	line-height: 1em;
 	font-weight:normal;
 }
@@ -898,10 +898,10 @@ a.btn-sandbox span {
 	position:relative;
 	width:100vw;
 	padding:100px 0;
-	height:calc(75vh - 200px);
+	height:calc(40vh);
 	background-image:linear-gradient(to bottom, transparent, transparent, transparent, #06afc9), url("img/tm-theme-02.png");
 	background-size: cover;
-	background-position: bottom, top center;
+	background-position: bottom, center;
 	background-repeat: no-repeat;
 	background-color:#06afc9;
 }
@@ -942,10 +942,10 @@ a.btn-sandbox span {
 	position:relative;
 	width:100vw;
 	padding:100px 0;
-	height:calc(75vh - 200px);
+	height:calc(40vh);
 	background-image:linear-gradient(to bottom, transparent, transparent, transparent, #033c45), url("img/tm-theme-03.png");
 	background-size: cover;
-	background-position: bottom, top center;
+	background-position: bottom, center;
 	background-repeat: no-repeat;
 }
 @media only screen and (max-width: 540px) {
