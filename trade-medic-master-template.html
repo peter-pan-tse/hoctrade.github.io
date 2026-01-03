@@ -1982,7 +1982,7 @@ button.aisummary:hover {
 
     <!-- Fixed header -->
     <div id="modalaisHeader">
-      <h1>AI Summary</h1>
+      <h1>Your Personal TradeMedic AI Summary</h1>
     </div>
 
     <!-- Scrollable body -->
@@ -2024,6 +2024,10 @@ button.aisummary:hover {
           More simulated remote content keeps arriving. The modalais must scroll
           vertically while preserving the header position.
         </p>
+		<p></p>
+		<p style="color:#bbbbbb; font-size:12px; font-style: italic; line-height: 1.25em;">
+		  Disclaimer: The AI can make mistakes. Check important information. None of the information provided should be considered financial advice. Trading involves high risk and you may lose your whole capital. Understand the risks before you trade and do not risk more than you can afford to lose.  
+		</p>
       </div>
     </div>
   </div>
@@ -2200,12 +2204,17 @@ let hasLoadedOnce = false;
 /* TIMING */
 const WORD_BASE = 90;
 const WORD_JITTER = 80;
-const BLOCK_BASE_PAUSE = 500;
-const BLOCK_JITTER = 400;
-const INITIAL_PAUSE = 500;
+const BLOCK_BASE_PAUSE = 250;
+const BLOCK_JITTER = 200;
+const INITIAL_PAUSE = 250;
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 const randomDelay = (base, jitter) => base + Math.random() * jitter;
+	
+/* SPEED CONTROL */
+let revealStartTime = 0;
+const SPEEDUP_AFTER = 3000; // 3s
+const SPEED_MULTIPLIER = 0.1; // 10× faster
 
 /* Ellipsis */
 const ellipsis = document.createElement("span");
@@ -2288,8 +2297,20 @@ async function revealBlock(block, isFirst, hasNext) {
     const speedFactor = 0.3 + 0.7 * (1 - progress); 
     // starts near 1.0, ends at ~0.3 (faster)
 
-    const delay = Math.max(20, randomDelay(WORD_BASE, WORD_JITTER) * speedFactor);
+    const elapsed = performance.now() - revealStartTime;
+
+    // after 3s → 10× faster
+    const timeSpeedFactor = elapsed > SPEEDUP_AFTER ? SPEED_MULTIPLIER : 1;
+
+    const delay = Math.max(
+      10,
+      randomDelay(WORD_BASE, WORD_JITTER) *
+        speedFactor *
+        timeSpeedFactor
+    );
+
     await sleep(delay);
+
   }
 
   // Show dots only if more content
@@ -2323,6 +2344,8 @@ async function openmodalais() {
   }
 
   closeBtn.disabled = true;
+
+  revealStartTime = performance.now(); // ⬅ mark animation start
   resetForAnimation();
   await startReveal();
 
