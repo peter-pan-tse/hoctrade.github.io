@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="style-tm-master-template.css" rel="stylesheet">
+<link href="style-ai-summary.css" rel="stylesheet">
 <!-- Editable favicon -->
 <link rel="icon" href="favicon.svg">
 <!-- Editable page title -->
@@ -16,204 +17,6 @@
 		});
 	});
 </script>
-<style>
-/* Overlay */
-#modalaisOverlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.4s ease;
-  z-index: 999;
-}
-
-#modalaisOverlay.visible {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* modalais */
-/* modalais (desktop) */
-#modalais {
-  background: #F7F8FB;
-  width: 75vw;
-  height: 75vh;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-#modalaisHeader {
-  flex-shrink: 0;
-  padding: 40px 32px 0 32px;
-	border-radius: 20px 20px 0 0;
-  background: #F7F8FB;
-  z-index: 1;
-	color:#132A4A;
-}
-#modalaisHeader h1 {
-	margin:0px;	
-}
-
-#modalaisBody {
-  flex: 1;
-  overflow-y: auto;
-  overflow-x: hidden;
-  padding: 24px 32px 32px;
-}
-
-
-/* Hide content blocks initially (reveal-safe) */
-#content > * {
-  visibility: hidden;
-}
-
-@media (max-width: 540px) {
-  #modalaisOverlay {
-    align-items: flex-end; /* anchor to bottom */
-  }
-
-  #modalais {
-    width: 100vw;
-    height: 80vh; 
-    max-height: 80vh;
-    border-radius: 5px 5px 0 0;
-
-    /* slide-up setup */
-    transform: translateY(100%);
-    transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1);
-  }
-
-  /* slide-up when visible */
-  #modalaisOverlay.visible #modalais {
-    transform: translateY(0);
-  }
-
-  #modalaisHeader {
-    padding: 40px 20px 0 20px;
-  }
-
-  #modalaisBody {
-    padding: 20px;
-  }
-}
-
-/* Close button */
-#closemodalais {
- position:absolute;
-	display:flex;
-	width:36px;
-	height:36px;
-	top:-18px;
-	right:-18px;
-	justify-content: center;
-	align-items: center;
-	text-align:center;
-	background-color:#FFFFFF;
-	border-radius:24px;
-	margin:0;
-	color: #132A4A;
-	font-size: 24px;
-	line-height:36px;
-	text-decoration: none;
-	transition: all 0.3s ease;
-	box-shadow: 2px 2px 10px rgba(0,0,0,0.25);
-	cursor:pointer;
-	border:none;
-  z-index: 10; /* ensure always visible */
-}
-#closemodalais:hover {
-	color: #F5F7F4;
-	background-color:#000000;	
-}
-@media (max-width:540px) {
-	#closemodalais {
-		width:28px;
-		height:28px;
-		top:10px;
-		right:10px;
-		border-radius:14px;
-		font-size: 20px;
-		line-height:28px;
-	}
-}
-
-#closemodalais:disabled {
-  opacity: 0.3;
-  cursor: not-allowed;
-}
-
-
-/* Hide blocks initially */
-#content > * {
-  visibility: hidden;
-}
-
-/* Word animation */
-.word {
-  opacity: 0;
-  display: inline-block;
-  transform: translateY(10px);
-}
-
-.word.visible {
-  opacity: 1;
-  transform: translateY(0);
-  transition:
-    opacity 0.25s ease,
-    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-/* Ellipsis */
-.ellipsis {
-  display: inline-block;
-  margin-left: 2px;
-  font-weight: bold;
-	color:#06afc9;
-}
-
-.ellipsis::after {
-  content: "";
-  animation: dots 1.5s steps(4, end) infinite;
-}
-
-@keyframes dots {
-  0%   { content: ""; }
-  25%  { content: "."; }
-  50%  { content: ".."; }
-  75%  { content: "..."; }
-}
-button.aisummary {
-	position:fixed;
-	top:0px;
-	right:20px;
-	font-family:"Helvetica Neue", Helvetica, Arial, "sans-serif";
-	font-size: 16px;
-	background-color: #06afc9;
-	color:#ffffff;
-	height:40px;
-	padding:0 20px;
-	border: none;
-	border-radius:0 0 10px 10px;
-	z-index: 100;
-	transition: all ease 0.3s;
-	cursor: pointer;
-}
-button.aisummary:hover {
-	background-color: #000000;	
-}
-@media (max-width: 540px) {
-	button.aisummary {
-		transform: scale(0.6);
-		top:-10px;
-		right:-20px;
-	}	
-}
-</style>
 </head>
 <body>
 	<!--header and menu -->
@@ -1983,49 +1786,41 @@ button.aisummary:hover {
     <!-- Fixed header -->
     <div id="modalaisHeader">
       <h1>Your Personal TradeMedic AI Summary</h1>
+	  <div class="summary-btn-box"><a href="#" class="btn-full-report">Go to full TradeMedic report</a></div>
     </div>
 
     <!-- Scrollable body -->
     <div id="modalaisBody">
       <div id="content">
-        <p>
-          This is a long paragraph simulating content streamed from a remote
-          server. It continues to grow as more data arrives, requiring the
-          user to scroll vertically to read everything.
-        </p>
-
-        <p>
-          Additional paragraphs reinforce the scrolling behavior. The header
-          remains fixed at the top to maintain context while reading large
-          amounts of text.
-        </p>
-
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </p>
-
-        <p>
-          Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-          cupidatat non proident, sunt in culpa qui officia deserunt mollit
-          anim id est laborum.
-        </p>
-
-        <!-- Duplicate paragraphs to force scroll -->
-        <p>
-          This paragraph exists purely to ensure vertical overflow and test
-          scrolling behavior inside the modalais container.
-        </p>
-
-        <p>
-          More simulated remote content keeps arriving. The modalais must scroll
-          vertically while preserving the header position.
-        </p>
-		<p></p>
-		<p style="color:#bbbbbb; font-size:12px; font-style: italic; line-height: 1.25em;">
+		  <p><strong>Your personal trading insights from last month</strong></p>
+		  <div class="summary-box">
+		  	<div class="summary-item-1">
+			  <strong>Trading activity:</strong>
+				<p>During the last month, you performed <strong>184</strong> trades<br>Mostly trading <strong>XAUUSD</strong> with <strong>81</strong> trades</p>
+			</div>
+			<div class="summary-item-2">
+				<strong>Your strongest symbol</strong>
+			  <p><strong style="font-size:48px;">EURUSD</strong><br>with a profit of<br><strong style="font-size:32px; line-height: 1.25em;">5,394 USD</strong><br>in 54 trades</p>
+			</div>
+			<div class="summary-item-3">
+				<strong>your weakest symbol</strong>
+			  <p><strong style="font-size:48px;">SP500</strong><br>with a loss of<br><strong style="font-size:32px; line-height: 1.25em;">-3.581 USD</strong><br>in 31 trades</p>
+			</div>
+		  </div>
+		<div style="height:20px;"></div>
+		<p><strong>When did you perform strong?</strong></p>
+        <p> You performed especially strong when <strong class="highlight-text">trading along the current market momentum</strong>. In 42 trades you performed when the market momentum matched your trade direction at entry time, you've made a <strong class="highlight-text">profit of 4,399 USD</strong>, significantly outperforming your other trades.</p>
+		<p>Learn more about trading momentum and how it can benefit you as a trader in this video <a href="#">HERE</a>!</p>
+		<div style="height:1px;"></div>
+		<p><strong>What could be improved?</strong></p>
+        <p>It appears you've been <strong class="highlight-text">manually closing trades early in profit</strong> and thereby <strong class="highlight-text">missed an additional profit of 2,983 USD</strong>. For the 24 trades you manually closed in profit, you made a profit of 3,295 USD, while simply keeping the trades with their existing SL &amp; TP, you'd have made a profit of 6,278 USD.</p>
+		<p>Learn more why many traders cut their profits early and how to improve in this video <a href="#">HERE</a>!</p>
+		<div style="height:1px;"></div>
+		<p><strong>How did you develop over time?</strong></p>
+        <p>Looking at your personal trading recap previous month, you have shown a strong performance when <strong class="highlight-text">being selective with trades</strong>, leading to a profit of 1,889 USD when keeping your daily trades at less than 8. However, in the last month you only had 32 trades that fit this strength, and you only made a profit of 573 USD with these trades.</p>
+        <p>On the improvement side, you have <strong class="highlight-text">successfully mitigated the impact of rushed trade entries</strong>. In the last month, a 3 min later entry would have increased your performance by 411 USD, while the month before you had an improvement potential of 2,948 USD.</p>
+		<div style="height:20px;"></div>
+		<p style="color:#cccccc; font-size:12px; font-style: italic; line-height: 1.25em;">
 		  Disclaimer: The AI can make mistakes. Check important information. None of the information provided should be considered financial advice. Trading involves high risk and you may lose your whole capital. Understand the risks before you trade and do not risk more than you can afford to lose.  
 		</p>
       </div>
@@ -2188,185 +1983,5 @@ button.aisummary:hover {
 		});
 	}
 </script>
-	
-<script>
-const modalaisOverlay = document.getElementById("modalaisOverlay");
-const closeBtn = document.getElementById("closemodalais");
-const openBtn = document.getElementById("openmodalais");
-
-const content = document.querySelector("#content");
-const blocks = Array.from(content.children);
-const modalais_DELAY = 500; // ⬅ delay before modalais appears
-
-/* STATE */
-let hasLoadedOnce = false;
-
-/* TIMING */
-const WORD_BASE = 90;
-const WORD_JITTER = 80;
-const BLOCK_BASE_PAUSE = 250;
-const BLOCK_JITTER = 200;
-const INITIAL_PAUSE = 250;
-
-const sleep = ms => new Promise(r => setTimeout(r, ms));
-const randomDelay = (base, jitter) => base + Math.random() * jitter;
-	
-/* SPEED CONTROL */
-let revealStartTime = 0;
-const SPEEDUP_AFTER = 3000; // 3s
-const SPEED_MULTIPLIER = 0.1; // 10× faster
-
-/* Ellipsis */
-const ellipsis = document.createElement("span");
-ellipsis.className = "ellipsis";
-
-function attachEllipsisTo(word) {
-  if (word) word.appendChild(ellipsis);
-}
-
-function removeEllipsis() {
-  ellipsis.remove();
-}
-
-/* Word splitting */
-function splitIntoWords(element) {
-  const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT);
-  const textNodes = [];
-
-  while (walker.nextNode()) textNodes.push(walker.currentNode);
-
-  textNodes.forEach(node => {
-    const parts = node.textContent.split(/(\s+)/);
-    const fragment = document.createDocumentFragment();
-
-    parts.forEach(part => {
-      if (part.trim() === "") {
-        fragment.appendChild(document.createTextNode(part));
-      } else {
-        const span = document.createElement("span");
-        span.className = "word";
-        span.textContent = part;
-        fragment.appendChild(span);
-      }
-    });
-
-    node.replaceWith(fragment);
-  });
-}
-
-/* Reset for animated run */
-function resetForAnimation() {
-  removeEllipsis();
-  blocks.forEach(block => {
-    block.style.visibility = "hidden";
-    block.innerHTML = block.textContent;
-  });
-}
-
-/* Instantly show all content */
-function showAllImmediately() {
-  removeEllipsis();
-  blocks.forEach(block => {
-    block.style.visibility = "visible";
-  });
-}
-
-/* Reveal logic */
-async function revealBlock(block, isFirst, hasNext) {
-  block.style.visibility = "visible";
-  splitIntoWords(block);
-
-  const words = Array.from(block.querySelectorAll(".word"));
-
-  if (isFirst && words.length) {
-    attachEllipsisTo(words[0]);
-    await sleep(INITIAL_PAUSE);
-    removeEllipsis();
-  }
-
-  let lastWord = null;
-
-  for (let i = 0; i < words.length; i++) {
-    const word = words[i];
-
-    word.classList.add("visible");
-    lastWord = word;
-
-    // 🔹 Accelerate as more words revealed
-    const progress = (i + 1) / words.length; // 0 -> 1
-    const speedFactor = 0.3 + 0.7 * (1 - progress); 
-    // starts near 1.0, ends at ~0.3 (faster)
-
-    const elapsed = performance.now() - revealStartTime;
-
-    // after 3s → 10× faster
-    const timeSpeedFactor = elapsed > SPEEDUP_AFTER ? SPEED_MULTIPLIER : 1;
-
-    const delay = Math.max(
-      10,
-      randomDelay(WORD_BASE, WORD_JITTER) *
-        speedFactor *
-        timeSpeedFactor
-    );
-
-    await sleep(delay);
-
-  }
-
-  // Show dots only if more content
-  if (hasNext && lastWord) {
-    attachEllipsisTo(lastWord);
-    await sleep(randomDelay(BLOCK_BASE_PAUSE, BLOCK_JITTER));
-    removeEllipsis();
-  }
-}
-
-async function startReveal() {
-  for (let i = 0; i < blocks.length; i++) {
-    await revealBlock(blocks[i], i === 0, i < blocks.length - 1);
-  }
-}
-
-/* modalais open logic */
-async function openmodalais() {
-  // ⏸ delay before modalais appears
-  await sleep(modalais_DELAY);
-
-  modalaisOverlay.classList.add("visible");
-
-  // wait for fade-in to complete
-  await sleep(400);
-
-  if (hasLoadedOnce) {
-    showAllImmediately();
-    closeBtn.disabled = false;
-    return;
-  }
-
-  closeBtn.disabled = true;
-
-  revealStartTime = performance.now(); // ⬅ mark animation start
-  resetForAnimation();
-  await startReveal();
-
-  hasLoadedOnce = true;
-  closeBtn.disabled = false;
-}
-
-/* modalais close */
-closeBtn.onclick = async () => {
-  modalaisOverlay.classList.remove("visible");
-
-  // wait for slide-down animation on mobile
-  await sleep(450);
-};
-
-
-/* Button click now works */
-openBtn.onclick = openmodalais;
-
-/* Auto-open on first page load */
-window.addEventListener("load", openmodalais);
-</script>
-	
+<script src="ai-summary.js"></script>
 </html>
