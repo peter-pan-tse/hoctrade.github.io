@@ -3002,3 +3002,50 @@ ul.pot-report li {
     border-right: 5px solid transparent;
     border-top: 5px solid orangered;
 }
+.time-span-box {
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	align-items:center;
+	padding:0 0 30px 0;
+}
+a.btn-time-span {
+	display:flex;
+	align-item:center;
+	height:40px;
+	padding:0 20px;
+	color:#ffffff;
+	font-size:16px;
+	line-height:40px;
+	cursor: pointer;
+	transition:all ease 0.3s;
+	text-decoration: none;
+}
+a.btn-time-span:hover {
+	background:#000000;
+}
+.active {
+	background-color: #06afc9;
+}
+.non-active {
+	background: #cccccc;
+}
+.first-child {
+	border-radius:10px 0 0 10px;
+}
+.last-child {
+	border-radius:0 10px 10px 0;
+}
+@media only screen and (max-width: 540px) {
+	a.btn-time-span {
+		height:30px;
+		font-size:12px;
+		line-height:30px;
+	}
+	.first-child {
+		border-radius:5px 0 0 5px;
+	}
+	.last-child {
+		border-radius:0 5px 5px 0;
+	}
+}
