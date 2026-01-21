@@ -59,7 +59,18 @@
   padding:0px 32px 32px 32px;
 }
 
+#modalaisBody a {
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
 
+#modalaisBody a:hover {
+  text-decoration-thickness: 2px;
+}
+#modalaisBody a .word {
+  display: inline;
+}
 /* Hide content blocks initially (reveal-safe) */
 #content > * {
   visibility: hidden;
@@ -201,9 +212,9 @@ button.aisummary:hover {
 }
 @media (max-width: 540px) {
 	button.aisummary {
-		transform: scale(0.6);
+		transform: scale(0.8);
 		top:-10px;
-		right:-20px;
+		right:0px;
 	}	
 }
 /* Generic reveal for elements (images, divs, etc.) */
@@ -293,7 +304,7 @@ button.aisummary:hover {
 }
 .highlight-text {
 	color:#06afc9;
-	border-bottom:1px dotted #06afc9;
+	/*border-bottom:1px dotted #06afc9;*/
 }
 a.btn-full-report {
 	display:inline-block;
