@@ -3,6 +3,7 @@
 ========================== */
 const modalaisOverlay = document.getElementById("modalaisOverlay");
 const closeBtn = document.getElementById("closemodalais");
+const closeBtn2 = document.getElementById("closemodalais2");
 const openBtn = document.getElementById("openmodalais");
 
 const content = document.getElementById("content");
@@ -207,6 +208,9 @@ async function openmodalais() {
 closeBtn.onclick = async () => {
   modalaisOverlay.classList.remove("visible");
   await sleep(450);
+};
+closeBtn2.onclick = async () => {
+  modalaisOverlay.classList.remove("visible");
 };
 
 /* ==========================
