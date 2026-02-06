@@ -1278,3 +1278,88 @@ span.disclaimer {
 	font-size:12px;
 	line-height:1.25em;
 }
+/* sandbox */
+.content-block-l {
+	display:inline-block;
+	margin:20px 20px 0px 10px;
+	width:calc(60% - 40px);
+}
+.content-block-r {
+	display:inline-block;
+	vertical-align: top;
+	margin:20px 0px 20px 20px;
+	width:calc(40% - 20px);
+}
+@media only screen and (max-width: 920px) {
+	.content-block-l {
+		margin:20px 10px;
+		width:calc(100% - 20px);
+	}
+	.content-block-r {
+		margin:20px 10px;
+		width:calc(100% - 20px);
+		text-align: center;
+	}
+	.content-block-r img {
+		max-width:75%;
+	}
+}
+.content-block-w {
+	display:inline-block;
+	margin:0;
+	width:100%;
+}
+input.sandbox-input {
+	display:block;
+	width:calc(70% - 40px);
+	padding:10px 20px;
+	background-color:#FFFFFF;
+	border-radius:10px;
+	border: 1px solid #b3b3b3;
+	font-size:18px;
+	font-weight: normal;
+}
+@media only screen and (max-width: 540px) {
+	input.sandbox-input {
+		width:calc(100% - 40px);
+		padding:4px 10px;
+		font-size:14px;
+		border-radius:5px;
+	}
+}
+/* Create a custom checkbox */
+.checkmark {
+	height: 16px;
+	width: 16px;
+	background-color: #999999;
+	border-radius:2px;
+}
+/* On mouse-over, add a background color */
+.container:hover input ~ .checkmark {
+	background-color: #06AFC9;
+}
+/* When the checkbox is checked, add a blue background */
+.check-box input:checked ~ .checkmark {
+	background-color: #047F92;
+}
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+/* Show the checkmark when checked */
+.check-box input:checked ~ .checkmark:after {
+	display: block;
+}
+/* Style the checkmark/indicator */
+.check-box .checkmark:after {
+	left: 0px;
+	top: 0px;
+	width: 16px;
+	height: 16px;
+	background-image:url("check-white.svg");
+	background-position:center;
+	background-repeat: no-repeat;
+	background-size:12px 12px;
+}
