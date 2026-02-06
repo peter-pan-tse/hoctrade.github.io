@@ -10,6 +10,7 @@
 	<link href="burger-menu-ht-landing.css" rel="stylesheet">
 	<link href="modal-theme.css" rel="stylesheet">
 	<link href="slideshow.css" rel="stylesheet">
+	<link href="event-carousel.css" rel="stylesheet">
 	<link rel="icon" href="img/favicon.svg">
 	<title>hoc-trade</title>
 	<!-- write your code here -->
@@ -204,6 +205,51 @@
 					<div class="slide1-bottom-text">Data-driven</div>
 					<div class="slide1-bottom-line"></div>
 					<div class="slide1-bottom-text">Fully-automated</div>
+				</div>
+			</div>
+			
+			<!-- event -->
+			<div class="general-container" style="padding-bottom:400px; position: relative;">
+				<h1>We are pushing borders in Fintech and AI</h1>
+				<div class="logo-carousel" style="position:absolute; bottom:0px; left:0px;">
+				  <div class="logo-slider" id="slider">
+
+					<div class="logo-card">
+					  <img src="img/event-logo-01.png">
+					  <div>
+						<div class="logo-sub"><strong>SuperAI</strong><br>Finalist Genesis Startup Competition</div>
+					  </div>
+					</div>
+
+					<div class="logo-card">
+					  <img src="img/event-logo-02.png">
+					  <div>
+						<div class="logo-sub"><strong>Hong Kong Fintech Week</strong><br>Semi-finalist AI vertical</div>
+					  </div>
+					</div>
+
+					<div class="logo-card">
+					  <img src="img/event-logo-03.png">
+					  <div>
+						<div class="logo-sub">Featured by<br><strong>TradeInformer</strong></div>
+					  </div>
+					</div>
+
+					<div class="logo-card">
+					  <img src="img/event-logo-04.png">
+					  <div>
+						<div class="logo-sub">Featured by<br><strong>FinanceFeeds</strong></div>
+					  </div>
+					</div>
+
+					<div class="logo-card">
+					  <img src="img/event-logo-05.png">
+					  <div>
+						<div class="logo-sub">Featured by<br><strong>Fintech Finance News</strong></div>
+					  </div>
+					</div>
+
+				  </div>
 				</div>
 			</div>
 
@@ -628,6 +674,67 @@
 			  $(this).removeClass('ht-mute');
 			}
 		});
+	</script>
+	<script>
+		const slider=document.getElementById("slider");
+		const container=document.querySelector(".logo-carousel");
+
+		const originals=[...slider.children];
+
+		let offset=0;
+		let speed=0.5;
+		let raf;
+
+		function stop(){
+		  cancelAnimationFrame(raf);
+		}
+
+		function animate(){
+
+		  offset-=speed;
+		  slider.style.transform=`translateX(${offset}px)`;
+
+		  const first=slider.firstElementChild;
+		  const gap=parseFloat(getComputedStyle(slider).gap)||0;
+
+		  if(first.getBoundingClientRect().right<0){
+			const w=first.offsetWidth+gap;
+			slider.appendChild(first);
+			offset+=w;
+		  }
+
+		  raf=requestAnimationFrame(animate);
+		}
+
+		function setup(){
+
+		  stop();
+
+		  slider.style.transform="translateX(0)";
+		  slider.innerHTML="";
+		  originals.forEach(el=>slider.appendChild(el.cloneNode(true)));
+
+		  const width=slider.scrollWidth;
+
+		  if(width<=container.clientWidth){
+			slider.style.justifyContent="center";
+			return;
+		  }
+
+		  originals.forEach(el=>{
+			slider.appendChild(el.cloneNode(true));
+		  });
+
+		  offset=0;
+		  animate();
+		}
+
+		window.addEventListener("load",setup);
+
+		new ResizeObserver(()=>{
+		  clearTimeout(window.__timer);
+		  window.__timer=setTimeout(setup,120);
+		}).observe(container);
 	</script>
 	<script src="modal-theme.js" language="javascript"></script>
 	<script src="slide1.js" language="javascript"></script>

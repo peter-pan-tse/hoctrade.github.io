@@ -1,0 +1,47 @@
+﻿@charset "UTF-8";
+/* CSS Document */
+/* CONTAINER */
+.logo-carousel{
+  width:100vw;
+  overflow:visible;
+  display:flex;
+  justify-content:center;
+  padding:40px 0;
+}
+
+/* TRACK */
+.logo-slider{
+  display:flex;
+  gap:60px;
+  width:max-content;
+  align-items:center;
+  will-change:transform;
+}
+
+/* CARD ITEMS */
+.logo-card{
+  display:flex;
+	flex-direction: column;
+	justify-content: flex-start;
+  align-items:center;
+	text-align: center;
+  gap:10px;
+  padding:20px;
+  background:#ffffff;
+  border-radius:20px;
+	width:240px;
+	height:240px;
+}
+
+/* example image */
+.logo-card img{
+  height:120px;
+	padding-bottom:20px;
+}
+
+/* example text */
+
+.logo-sub{
+  font-size:16px;
+	line-height: 1.5em;
+}

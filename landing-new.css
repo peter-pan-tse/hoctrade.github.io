@@ -238,13 +238,13 @@ a.btn-explainer > span {
 	display:block;
 	position:relative;
 	padding:160px 5vw 0 5vw;
-	height:calc(100vh - 160px);
+	/*height:calc(100vh - 160px);*/
 }
 .general-container-slide2 {
 	display:block;
 	position:relative;
 	padding:160px 0 0 5vw;
-	height:calc(100vh - 160px);
+	/*height:calc(100vh - 160px);*/
 }
 @media only screen and (max-width: 920px) {
 	.general-container {
@@ -258,14 +258,14 @@ a.btn-explainer > span {
 	.general-container {
 		padding:90px 20px 110px 20px;
 		height:auto;
-		height: calc(100vh - 200px);
-		/*border-top:4px solid #cccccc;*/
+		/*height: calc(100vh - 200px);
+		border-top:4px solid #cccccc;*/
 	}
 	.general-container-slide2 {
 		padding:90px 20px 110px 20px;
 		height:auto;
-		min-height: calc(100vh - 200px);
-		/*border-top:4px solid #cccccc;*/
+		/*min-height: calc(100vh - 200px);
+		border-top:4px solid #cccccc;*/
 	}
 }
 
@@ -484,7 +484,7 @@ a.btn-explainer > span {
 	flex-direction:row;
 	justify-content: space-between;
 	background-color: #ffffff;
-	height:50vh;
+	height:40vh;
 }
 .tab-content-problem, .tab-content-solution {
 	display:flex;
